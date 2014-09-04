@@ -125,7 +125,7 @@ This repository mirrors [Apple's iOS samples](https://developer.apple.com/librar
 eos
 readme_header.rstrip!
 readme = samples_data.map do |e|
-  "| [#{e[:name]}](#{e[:url]}) | #{e[:topic]}#{e[:subtopic].empty? ? '' : '<br/>(' + e[:subtopic] + ')'} | #{e[:framework]} | #{e[:description]} |"
+  "| [<sup>#{e[:name]}</sup>](#{e[:url]}) | <sup>#{e[:topic]}</sup>#{e[:subtopic].empty? ? '' : '<br/><sup>(' + e[:subtopic] + ')</sup>'} | <sup>#{e[:framework]}</sup> | <sup>#{e[:description]}</sup> |"
 end.join("\n")
 File.open(File.join(dest_dir, 'README.md'), 'w') {|f| f.write("#{readme_header}\n#{readme}") }
 
