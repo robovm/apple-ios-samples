@@ -1,0 +1,392 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1B20FB721730464600A5485F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B36D9D217303DC60009E717 /* AudioToolbox.framework */; };
+		1B20FB731730464F00A5485F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B36D9D017303DB90009E717 /* AVFoundation.framework */; };
+		1B20FB761730611E00A5485F /* Delay.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1B20FB751730611E00A5485F /* Delay.mm */; };
+		1B36D9CC17303A490009E717 /* CAUITransportButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B36D9C917303A490009E717 /* CAUITransportButton.m */; };
+		1B36D9CD17303A490009E717 /* CAUITransportView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1B36D9CB17303A490009E717 /* CAUITransportView.mm */; };
+		1B53D11C1728A49300AA27CA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B53D11B1728A49300AA27CA /* UIKit.framework */; };
+		1B53D11E1728A49300AA27CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B53D11D1728A49300AA27CA /* Foundation.framework */; };
+		1B53D1201728A49300AA27CA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B53D11F1728A49300AA27CA /* CoreGraphics.framework */; };
+		1B53D1281728A49300AA27CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B53D1271728A49300AA27CA /* main.m */; };
+		1B53D12C1728A49300AA27CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B53D12B1728A49300AA27CA /* AppDelegate.m */; };
+		1B53D12E1728A49300AA27CA /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B53D12D1728A49300AA27CA /* Default.png */; };
+		1B53D1301728A49300AA27CA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B53D12F1728A49300AA27CA /* Default@2x.png */; };
+		1B53D1321728A49300AA27CA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B53D1311728A49300AA27CA /* Default-568h@2x.png */; };
+		1B53D13D1728A49300AA27CA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B53D13C1728A49300AA27CA /* ViewController.m */; };
+		1B53D1401728A49300AA27CA /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B53D13E1728A49300AA27CA /* ViewController_iPhone.xib */; };
+		1B53D14E1728BEF700AA27CA /* InterAppAudioDelay.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 1B53D14D1728BEF700AA27CA /* InterAppAudioDelay.entitlements */; };
+		1B6F223917443606006CC61B /* NodeIcon~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B6F223517443606006CC61B /* NodeIcon~iphone.png */; };
+		1B6F223B17443606006CC61B /* NodeIcon@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B6F223717443606006CC61B /* NodeIcon@2x~iphone.png */; };
+		2B5D865517FF9B9800762AF1 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2B5D865417FF9B9800762AF1 /* ReadMe.txt */; };
+		303E475617454B2D00BAD817 /* CAUIRoundedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 303E475517454B2D00BAD817 /* CAUIRoundedView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1B20FB741730611E00A5485F /* Delay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Delay.h; sourceTree = "<group>"; };
+		1B20FB751730611E00A5485F /* Delay.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Delay.mm; sourceTree = "<group>"; };
+		1B36D9C817303A490009E717 /* CAUITransportButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CAUITransportButton.h; path = UI/CAUITransportButton.h; sourceTree = "<group>"; };
+		1B36D9C917303A490009E717 /* CAUITransportButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CAUITransportButton.m; path = UI/CAUITransportButton.m; sourceTree = "<group>"; };
+		1B36D9CA17303A490009E717 /* CAUITransportView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CAUITransportView.h; path = UI/CAUITransportView.h; sourceTree = "<group>"; };
+		1B36D9CB17303A490009E717 /* CAUITransportView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = CAUITransportView.mm; path = UI/CAUITransportView.mm; sourceTree = "<group>"; };
+		1B36D9D017303DB90009E717 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		1B36D9D217303DC60009E717 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		1B53D1181728A49300AA27CA /* IAA Delay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IAA Delay.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B53D11B1728A49300AA27CA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1B53D11D1728A49300AA27CA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1B53D11F1728A49300AA27CA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1B53D1231728A49300AA27CA /* InterAppAudioDelay-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "InterAppAudioDelay-Info.plist"; sourceTree = "<group>"; };
+		1B53D1271728A49300AA27CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1B53D1291728A49300AA27CA /* InterAppAudioDelay-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InterAppAudioDelay-Prefix.pch"; sourceTree = "<group>"; };
+		1B53D12A1728A49300AA27CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1B53D12B1728A49300AA27CA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1B53D12D1728A49300AA27CA /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Default.png; sourceTree = "<group>"; };
+		1B53D12F1728A49300AA27CA /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/Default@2x.png"; sourceTree = "<group>"; };
+		1B53D1311728A49300AA27CA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Default-568h@2x.png"; sourceTree = "<group>"; };
+		1B53D13B1728A49300AA27CA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1B53D13C1728A49300AA27CA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1B53D13F1728A49300AA27CA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		1B53D14D1728BEF700AA27CA /* InterAppAudioDelay.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = InterAppAudioDelay.entitlements; sourceTree = "<group>"; };
+		1B6F223517443606006CC61B /* NodeIcon~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "NodeIcon~iphone.png"; path = "InterAppAudioDelay/Resources/NodeIcon~iphone.png"; sourceTree = SOURCE_ROOT; };
+		1B6F223717443606006CC61B /* NodeIcon@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "NodeIcon@2x~iphone.png"; path = "InterAppAudioDelay/Resources/NodeIcon@2x~iphone.png"; sourceTree = SOURCE_ROOT; };
+		2B5D865417FF9B9800762AF1 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		303E475417454B2D00BAD817 /* CAUIRoundedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CAUIRoundedView.h; path = UI/CAUIRoundedView.h; sourceTree = "<group>"; };
+		303E475517454B2D00BAD817 /* CAUIRoundedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CAUIRoundedView.m; path = UI/CAUIRoundedView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1B53D1151728A49300AA27CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B20FB731730464F00A5485F /* AVFoundation.framework in Frameworks */,
+				1B20FB721730464600A5485F /* AudioToolbox.framework in Frameworks */,
+				1B53D1201728A49300AA27CA /* CoreGraphics.framework in Frameworks */,
+				1B53D11C1728A49300AA27CA /* UIKit.framework in Frameworks */,
+				1B53D11E1728A49300AA27CA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1B20FB7717306BA500A5485F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1B6F223517443606006CC61B /* NodeIcon~iphone.png */,
+				1B6F223717443606006CC61B /* NodeIcon@2x~iphone.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		1B36D9C717303A150009E717 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				1B36D9C817303A490009E717 /* CAUITransportButton.h */,
+				1B36D9C917303A490009E717 /* CAUITransportButton.m */,
+				1B36D9CA17303A490009E717 /* CAUITransportView.h */,
+				1B36D9CB17303A490009E717 /* CAUITransportView.mm */,
+				303E475417454B2D00BAD817 /* CAUIRoundedView.h */,
+				303E475517454B2D00BAD817 /* CAUIRoundedView.m */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		1B53D10F1728A49300AA27CA = {
+			isa = PBXGroup;
+			children = (
+				2B5D865417FF9B9800762AF1 /* ReadMe.txt */,
+				1B53D1211728A49300AA27CA /* InterAppAudioDelay */,
+				1B53D11A1728A49300AA27CA /* Frameworks */,
+				1B53D1191728A49300AA27CA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1B53D1191728A49300AA27CA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1B53D1181728A49300AA27CA /* IAA Delay.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1B53D11A1728A49300AA27CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1B36D9D217303DC60009E717 /* AudioToolbox.framework */,
+				1B36D9D017303DB90009E717 /* AVFoundation.framework */,
+				1B53D11B1728A49300AA27CA /* UIKit.framework */,
+				1B53D11D1728A49300AA27CA /* Foundation.framework */,
+				1B53D11F1728A49300AA27CA /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1B53D1211728A49300AA27CA /* InterAppAudioDelay */ = {
+			isa = PBXGroup;
+			children = (
+				1B20FB741730611E00A5485F /* Delay.h */,
+				1B20FB751730611E00A5485F /* Delay.mm */,
+				1B53D12A1728A49300AA27CA /* AppDelegate.h */,
+				1B53D12B1728A49300AA27CA /* AppDelegate.m */,
+				1B53D13B1728A49300AA27CA /* ViewController.h */,
+				1B53D13C1728A49300AA27CA /* ViewController.m */,
+				1B53D13E1728A49300AA27CA /* ViewController_iPhone.xib */,
+				1B36D9C717303A150009E717 /* UI */,
+				1B53D1221728A49300AA27CA /* Supporting Files */,
+				1B20FB7717306BA500A5485F /* Resources */,
+			);
+			path = InterAppAudioDelay;
+			sourceTree = "<group>";
+		};
+		1B53D1221728A49300AA27CA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1B53D14D1728BEF700AA27CA /* InterAppAudioDelay.entitlements */,
+				1B53D1231728A49300AA27CA /* InterAppAudioDelay-Info.plist */,
+				1B53D1271728A49300AA27CA /* main.m */,
+				1B53D1291728A49300AA27CA /* InterAppAudioDelay-Prefix.pch */,
+				1B53D12D1728A49300AA27CA /* Default.png */,
+				1B53D12F1728A49300AA27CA /* Default@2x.png */,
+				1B53D1311728A49300AA27CA /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1B53D1171728A49300AA27CA /* InterAppAudioDelay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B53D1461728A49300AA27CA /* Build configuration list for PBXNativeTarget "InterAppAudioDelay" */;
+			buildPhases = (
+				1B53D1141728A49300AA27CA /* Sources */,
+				1B53D1151728A49300AA27CA /* Frameworks */,
+				1B53D1161728A49300AA27CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InterAppAudioDelay;
+			productName = InterAppAudioDelay;
+			productReference = 1B53D1181728A49300AA27CA /* IAA Delay.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1B53D1101728A49300AA27CA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Harry Tormey";
+			};
+			buildConfigurationList = 1B53D1131728A49300AA27CA /* Build configuration list for PBXProject "InterAppAudioDelay" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1B53D10F1728A49300AA27CA;
+			productRefGroup = 1B53D1191728A49300AA27CA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1B53D1171728A49300AA27CA /* InterAppAudioDelay */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1B53D1161728A49300AA27CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B6F223917443606006CC61B /* NodeIcon~iphone.png in Resources */,
+				1B53D1401728A49300AA27CA /* ViewController_iPhone.xib in Resources */,
+				1B53D14E1728BEF700AA27CA /* InterAppAudioDelay.entitlements in Resources */,
+				1B53D1301728A49300AA27CA /* Default@2x.png in Resources */,
+				1B53D1321728A49300AA27CA /* Default-568h@2x.png in Resources */,
+				1B6F223B17443606006CC61B /* NodeIcon@2x~iphone.png in Resources */,
+				2B5D865517FF9B9800762AF1 /* ReadMe.txt in Resources */,
+				1B53D12E1728A49300AA27CA /* Default.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1B53D1141728A49300AA27CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B53D13D1728A49300AA27CA /* ViewController.m in Sources */,
+				1B53D12C1728A49300AA27CA /* AppDelegate.m in Sources */,
+				303E475617454B2D00BAD817 /* CAUIRoundedView.m in Sources */,
+				1B53D1281728A49300AA27CA /* main.m in Sources */,
+				1B20FB761730611E00A5485F /* Delay.mm in Sources */,
+				1B36D9CC17303A490009E717 /* CAUITransportButton.m in Sources */,
+				1B36D9CD17303A490009E717 /* CAUITransportView.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1B53D13E1728A49300AA27CA /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1B53D13F1728A49300AA27CA /* en */,
+			);
+			name = ViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1B53D1441728A49300AA27CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1B53D1451728A49300AA27CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1B53D1471728A49300AA27CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = InterAppAudioDelay/InterAppAudioDelay.entitlements;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "InterAppAudioDelay/InterAppAudioDelay-Prefix.pch";
+				INFOPLIST_FILE = "InterAppAudioDelay/InterAppAudioDelay-Info.plist";
+				PRODUCT_NAME = "IAA Delay";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1B53D1481728A49300AA27CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = InterAppAudioDelay/InterAppAudioDelay.entitlements;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "InterAppAudioDelay/InterAppAudioDelay-Prefix.pch";
+				INFOPLIST_FILE = "InterAppAudioDelay/InterAppAudioDelay-Info.plist";
+				PRODUCT_NAME = "IAA Delay";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1B53D1131728A49300AA27CA /* Build configuration list for PBXProject "InterAppAudioDelay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B53D1441728A49300AA27CA /* Debug */,
+				1B53D1451728A49300AA27CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1B53D1461728A49300AA27CA /* Build configuration list for PBXNativeTarget "InterAppAudioDelay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B53D1471728A49300AA27CA /* Debug */,
+				1B53D1481728A49300AA27CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1B53D1101728A49300AA27CA /* Project object */;
+}

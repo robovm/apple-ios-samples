@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="RCy-kz-6hC">
+    <dependencies>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <development version="4600" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller - Earthquakes-->
+        <scene sceneID="tPB-S4-29y">
+            <objects>
+                <tableViewController id="bgk-ma-1v4" customClass="APLViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="64" sectionHeaderHeight="22" sectionFooterHeight="22" id="iT0-6h-jIs">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EarthquakeCellID" rowHeight="64" id="rsd-sm-y9a" customClass="APLEarthquakeTableViewCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="64"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="63"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="5.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Scc-u1-Jfp">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="s6z-JE-vIP"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qnM-3y-idh">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="90" id="Evu-jo-dlj"/>
+                                                <constraint firstAttribute="height" constant="43" id="XEM-Uv-7ay"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmR-Mf-tuE">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="7jZ-PD-fTU"/>
+                                                <constraint firstAttribute="width" constant="240" id="MJR-6k-G9f"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aJq-la-aig">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="200" id="wkN-u4-wN9"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="aJq-la-aig" firstAttribute="leading" secondItem="rsd-sm-y9a" secondAttribute="leading" constant="14" type="user" id="Ey0-qF-1ci"/>
+                                    <constraint firstItem="fmR-Mf-tuE" firstAttribute="top" secondItem="aJq-la-aig" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="HYA-rb-BYj"/>
+                                    <constraint firstItem="Scc-u1-Jfp" firstAttribute="leading" secondItem="qnM-3y-idh" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="KRU-f4-1Gr"/>
+                                    <constraint firstItem="fmR-Mf-tuE" firstAttribute="leading" secondItem="rsd-sm-y9a" secondAttribute="leading" constant="14" type="user" id="cBz-rR-jo6"/>
+                                    <constraint firstItem="aJq-la-aig" firstAttribute="top" secondItem="rsd-sm-y9a" secondAttribute="top" constant="9" id="dNb-hB-phZ"/>
+                                    <constraint firstItem="qnM-3y-idh" firstAttribute="centerY" secondItem="Scc-u1-Jfp" secondAttribute="centerY" type="default" id="ewK-ON-equ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Scc-u1-Jfp" secondAttribute="trailing" constant="14" type="user" id="f4T-eE-P6q"/>
+                                    <constraint firstAttribute="centerY" secondItem="Scc-u1-Jfp" secondAttribute="centerY" type="user" id="rWh-DY-yOq"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dateLabel" destination="fmR-Mf-tuE" id="5Zm-lP-0MB"/>
+                                    <outlet property="locationLabel" destination="aJq-la-aig" id="c9h-W3-fro"/>
+                                    <outlet property="magnitudeImage" destination="qnM-3y-idh" id="NPl-IH-iQK"/>
+                                    <outlet property="magnitudeLabel" destination="Scc-u1-Jfp" id="yGq-9G-Wei"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Earthquakes" id="zqR-XK-zGL"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mkg-gX-scK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="664" y="-396"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KtV-gH-LjH">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="RCy-kz-6hC" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ua8-rS-k3K">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="bgk-ma-1v4" kind="relationship" relationship="rootViewController" id="dxn-w8-lpU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l4I-WI-Qxh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130" y="-396"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="APLEarthquakeTableViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/APLEarthquakeTableViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="locationLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="magnitudeImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="magnitudeLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="APLViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/APLViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

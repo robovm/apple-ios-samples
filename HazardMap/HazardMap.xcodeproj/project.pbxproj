@@ -1,0 +1,406 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1A2D2271118E4AA800142450 /* compactgrid.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A2D2265118E450500142450 /* compactgrid.c */; };
+		1A2D22A4118E4E7300142450 /* UShazard.20081229.pga.5pc50.bin in Resources */ = {isa = PBXBuildFile; fileRef = 1A2D22A3118E4E7300142450 /* UShazard.20081229.pga.5pc50.bin */; };
+		1A316F2C118B8DD00091CC7B /* HazardMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A316F2B118B8DD00091CC7B /* HazardMap.m */; };
+		1A316F64118BB0390091CC7B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A316F63118BB0390091CC7B /* MapKit.framework */; };
+		1A316F81118BB04C0091CC7B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A316F80118BB04C0091CC7B /* CoreLocation.framework */; };
+		1D3623260D0F684500981E51 /* HazardMapAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* HazardMapAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		28D7ACF80DDB3853001CB0EB /* HazardMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* HazardMapViewController.m */; };
+		53831D011822FF800025F6CF /* HazardMapOverlayRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 53831D001822FF800025F6CF /* HazardMapOverlayRenderer.m */; };
+		53A716EB17D7D6DE00412F5F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 53A716E817D7D6DE00412F5F /* Default-568h@2x.png */; };
+		53A716EC17D7D6DE00412F5F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 53A716E917D7D6DE00412F5F /* Default.png */; };
+		53A716ED17D7D6DE00412F5F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 53A716EA17D7D6DE00412F5F /* Default@2x.png */; };
+		53FCD85B17D8E1FA00F38A72 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53FCD85917D8E1FA00F38A72 /* Storyboard.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1A2D2265118E450500142450 /* compactgrid.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = compactgrid.c; sourceTree = "<group>"; };
+		1A2D226D118E4A7600142450 /* compactgrid */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = compactgrid; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A2D22A3118E4E7300142450 /* UShazard.20081229.pga.5pc50.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = UShazard.20081229.pga.5pc50.bin; sourceTree = "<group>"; };
+		1A316F2A118B8DD00091CC7B /* HazardMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HazardMap.h; sourceTree = "<group>"; };
+		1A316F2B118B8DD00091CC7B /* HazardMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HazardMap.m; sourceTree = "<group>"; };
+		1A316F63118BB0390091CC7B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		1A316F80118BB04C0091CC7B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* HazardMapAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HazardMapAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* HazardMapAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HazardMapAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* HazardMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HazardMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		28D7ACF60DDB3853001CB0EB /* HazardMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HazardMapViewController.h; sourceTree = "<group>"; };
+		28D7ACF70DDB3853001CB0EB /* HazardMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HazardMapViewController.m; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* HazardMap_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HazardMap_Prefix.pch; sourceTree = "<group>"; };
+		53831CFF1822FF800025F6CF /* HazardMapOverlayRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HazardMapOverlayRenderer.h; sourceTree = "<group>"; };
+		53831D001822FF800025F6CF /* HazardMapOverlayRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HazardMapOverlayRenderer.m; sourceTree = "<group>"; };
+		53A716E817D7D6DE00412F5F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		53A716E917D7D6DE00412F5F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		53A716EA17D7D6DE00412F5F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		53FCD85A17D8E1FA00F38A72 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Storyboard.storyboard; sourceTree = "<group>"; };
+		53FD493C11F61F2A00222043 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* HazardMap-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "HazardMap-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1A2D226B118E4A7600142450 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
+				1A316F64118BB0390091CC7B /* MapKit.framework in Frameworks */,
+				1A316F81118BB04C0091CC7B /* CoreLocation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1D3623240D0F684500981E51 /* HazardMapAppDelegate.h */,
+				1D3623250D0F684500981E51 /* HazardMapAppDelegate.m */,
+				28D7ACF60DDB3853001CB0EB /* HazardMapViewController.h */,
+				28D7ACF70DDB3853001CB0EB /* HazardMapViewController.m */,
+				1A316F29118B8DC30091CC7B /* Overlay */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* HazardMap.app */,
+				1A2D226D118E4A7600142450 /* compactgrid */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1A316F29118B8DC30091CC7B /* Overlay */ = {
+			isa = PBXGroup;
+			children = (
+				1A316F2A118B8DD00091CC7B /* HazardMap.h */,
+				1A316F2B118B8DD00091CC7B /* HazardMap.m */,
+				53831CFF1822FF800025F6CF /* HazardMapOverlayRenderer.h */,
+				53831D001822FF800025F6CF /* HazardMapOverlayRenderer.m */,
+			);
+			name = Overlay;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				53FD493C11F61F2A00222043 /* ReadMe.txt */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* HazardMap_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+				1A2D2265118E450500142450 /* compactgrid.c */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				53FCD85917D8E1FA00F38A72 /* Storyboard.storyboard */,
+				53ACD36111F6408700EA03E3 /* images */,
+				1A2D22A3118E4E7300142450 /* UShazard.20081229.pga.5pc50.bin */,
+				8D1107310486CEB800E47090 /* HazardMap-Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A316F80118BB04C0091CC7B /* CoreLocation.framework */,
+				1A316F63118BB0390091CC7B /* MapKit.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		53ACD36111F6408700EA03E3 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				53A716E817D7D6DE00412F5F /* Default-568h@2x.png */,
+				53A716E917D7D6DE00412F5F /* Default.png */,
+				53A716EA17D7D6DE00412F5F /* Default@2x.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1A2D226C118E4A7600142450 /* compactgrid */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A2D2287118E4B3700142450 /* Build configuration list for PBXNativeTarget "compactgrid" */;
+			buildPhases = (
+				1A2D226A118E4A7600142450 /* Sources */,
+				1A2D226B118E4A7600142450 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = compactgrid;
+			productName = compactgrid;
+			productReference = 1A2D226D118E4A7600142450 /* compactgrid */;
+			productType = "com.apple.product-type.tool";
+		};
+		1D6058900D05DD3D006BFB54 /* HazardMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "HazardMap" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HazardMap;
+			productName = HazardMap;
+			productReference = 1D6058910D05DD3D006BFB54 /* HazardMap.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "HazardMap" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* HazardMap */,
+				1A2D226C118E4A7600142450 /* compactgrid */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A2D22A4118E4E7300142450 /* UShazard.20081229.pga.5pc50.bin in Resources */,
+				53A716EB17D7D6DE00412F5F /* Default-568h@2x.png in Resources */,
+				53A716EC17D7D6DE00412F5F /* Default.png in Resources */,
+				53A716ED17D7D6DE00412F5F /* Default@2x.png in Resources */,
+				53FCD85B17D8E1FA00F38A72 /* Storyboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1A2D226A118E4A7600142450 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A2D2271118E4AA800142450 /* compactgrid.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* HazardMapAppDelegate.m in Sources */,
+				53831D011822FF800025F6CF /* HazardMapOverlayRenderer.m in Sources */,
+				28D7ACF80DDB3853001CB0EB /* HazardMapViewController.m in Sources */,
+				1A316F2C118B8DD00091CC7B /* HazardMap.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		53FCD85917D8E1FA00F38A72 /* Storyboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53FCD85A17D8E1FA00F38A72 /* en */,
+			);
+			name = Storyboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1A2D226F118E4A7700142450 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = compactgrid;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1A2D2270118E4A7700142450 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = compactgrid;
+				SDKROOT = macosx;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = HazardMap_Prefix.pch;
+				INFOPLIST_FILE = "HazardMap-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = HazardMap;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = HazardMap_Prefix.pch;
+				INFOPLIST_FILE = "HazardMap-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = HazardMap;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1A2D2287118E4B3700142450 /* Build configuration list for PBXNativeTarget "compactgrid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A2D226F118E4A7700142450 /* Debug */,
+				1A2D2270118E4A7700142450 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "HazardMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "HazardMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

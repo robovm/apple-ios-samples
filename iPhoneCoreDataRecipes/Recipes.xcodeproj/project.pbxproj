@@ -1,0 +1,437 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		184FEA3E0DEF6D4D00887625 /* WeightConverterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184FEA3A0DEF6D4D00887625 /* WeightConverterViewController.m */; };
+		184FEA3F0DEF6D4D00887625 /* TemperatureConverterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184FEA3B0DEF6D4D00887625 /* TemperatureConverterViewController.m */; };
+		1D3623260D0F684500981E51 /* RecipesAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* RecipesAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		280CEB6C0E38093400021185 /* ImperialPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 280CEB690E38093400021185 /* ImperialPickerController.m */; };
+		280CEB6D0E38093400021185 /* MetricPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 280CEB6B0E38093400021185 /* MetricPickerController.m */; };
+		28172EA70FC612370081FF0D /* RecipeAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D8E9410DE7A5FC0045AF3C /* RecipeAddViewController.m */; };
+		282FFCBB0FC8AAB500A28FE2 /* Recipes.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 282FFCBA0FC8AAB500A28FE2 /* Recipes.sqlite */; };
+		283EA3640DEE388300DBD352 /* RecipeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 283EA3630DEE388300DBD352 /* RecipeTableViewCell.m */; };
+		2858E6570FC63C2500DEACE0 /* RecipeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180F09150DCA9C0500D424D6 /* RecipeDetailViewController.m */; };
+		2858E65E0FC63FEB00DEACE0 /* RecipePhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A0E6150DE92A470087803E /* RecipePhotoViewController.m */; };
+		2858E66B0FC6404C00DEACE0 /* InstructionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 286DD99F0DE747BF005EF016 /* InstructionsViewController.m */; };
+		2858E6C00FC6464700DEACE0 /* TypeSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 286DDA6E0DE77039005EF016 /* TypeSelectionViewController.m */; };
+		2858E70B0FC6583300DEACE0 /* Ingredient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2858E70A0FC6583300DEACE0 /* Ingredient.m */; };
+		2858E7430FC65DDE00DEACE0 /* IngredientDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 966D0AFB0DF4CB4D0054F11F /* IngredientDetailViewController.m */; };
+		2858E7790FC6625400DEACE0 /* EditingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2858E7780FC6625400DEACE0 /* EditingTableViewCell.m */; };
+		28963B450DFC7F5F005CC955 /* TemperatureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28963B440DFC7F5F005CC955 /* TemperatureCell.m */; };
+		28963B800DFC8214005CC955 /* TemperatureData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28963B7F0DFC8214005CC955 /* TemperatureData.plist */; };
+		28B35EC40FC5DCD100ED0C40 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B35EC30FC5DCD100ED0C40 /* CoreData.framework */; };
+		28B35EC60FC5DCD100ED0C40 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B35EC50FC5DCD100ED0C40 /* CoreGraphics.framework */; };
+		28B35EC80FC5DCD100ED0C40 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B35EC70FC5DCD100ED0C40 /* Foundation.framework */; };
+		28B35FB70FC5E10C00ED0C40 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B35EC90FC5DCD100ED0C40 /* UIKit.framework */; };
+		28D3D9AD0FC33C27000F9EF1 /* Recipes.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 28D3D9AC0FC33C27000F9EF1 /* Recipes.xcdatamodel */; };
+		28FCBE7A0DE69516007A15C7 /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FCBE790DE69516007A15C7 /* Recipe.m */; };
+		28FCBF0C0DE6A6C6007A15C7 /* RecipeListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FCBF0B0DE6A6C6007A15C7 /* RecipeListTableViewController.m */; };
+		53506710188075A9003726E2 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5350670E188075A9003726E2 /* Storyboard.storyboard */; };
+		53757D0C18AC306A0080EA8D /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53757D0B18AC306A0080EA8D /* Media.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		180F09140DCA9C0500D424D6 /* RecipeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeDetailViewController.h; sourceTree = "<group>"; };
+		180F09150DCA9C0500D424D6 /* RecipeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeDetailViewController.m; sourceTree = "<group>"; };
+		184FEA390DEF6D4D00887625 /* WeightConverterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeightConverterViewController.h; path = Classes/WeightConverterViewController.h; sourceTree = "<group>"; };
+		184FEA3A0DEF6D4D00887625 /* WeightConverterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeightConverterViewController.m; path = Classes/WeightConverterViewController.m; sourceTree = "<group>"; };
+		184FEA3B0DEF6D4D00887625 /* TemperatureConverterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TemperatureConverterViewController.m; path = Classes/TemperatureConverterViewController.m; sourceTree = "<group>"; };
+		184FEA3C0DEF6D4D00887625 /* TemperatureConverterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TemperatureConverterViewController.h; path = Classes/TemperatureConverterViewController.h; sourceTree = "<group>"; };
+		1D3623240D0F684500981E51 /* RecipesAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecipesAppDelegate.h; path = Classes/RecipesAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* RecipesAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecipesAppDelegate.m; path = Classes/RecipesAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* Recipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		280CEB680E38093400021185 /* ImperialPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImperialPickerController.h; path = Classes/ImperialPickerController.h; sourceTree = "<group>"; };
+		280CEB690E38093400021185 /* ImperialPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImperialPickerController.m; path = Classes/ImperialPickerController.m; sourceTree = "<group>"; };
+		280CEB6A0E38093400021185 /* MetricPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MetricPickerController.h; path = Classes/MetricPickerController.h; sourceTree = "<group>"; };
+		280CEB6B0E38093400021185 /* MetricPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MetricPickerController.m; path = Classes/MetricPickerController.m; sourceTree = "<group>"; };
+		282FFCBA0FC8AAB500A28FE2 /* Recipes.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = Recipes.sqlite; path = RecipeData/Recipes.sqlite; sourceTree = "<group>"; };
+		283EA3620DEE388300DBD352 /* RecipeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecipeTableViewCell.h; path = Classes/RecipeTableViewCell.h; sourceTree = "<group>"; };
+		283EA3630DEE388300DBD352 /* RecipeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecipeTableViewCell.m; path = Classes/RecipeTableViewCell.m; sourceTree = "<group>"; };
+		2858E7090FC6583300DEACE0 /* Ingredient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Ingredient.h; path = Classes/Ingredient.h; sourceTree = "<group>"; };
+		2858E70A0FC6583300DEACE0 /* Ingredient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Ingredient.m; path = Classes/Ingredient.m; sourceTree = "<group>"; };
+		2858E7770FC6625400DEACE0 /* EditingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditingTableViewCell.h; path = Classes/EditingTableViewCell.h; sourceTree = "<group>"; };
+		2858E7780FC6625400DEACE0 /* EditingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditingTableViewCell.m; path = Classes/EditingTableViewCell.m; sourceTree = "<group>"; };
+		286DD99E0DE747BF005EF016 /* InstructionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstructionsViewController.h; sourceTree = "<group>"; };
+		286DD99F0DE747BF005EF016 /* InstructionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstructionsViewController.m; sourceTree = "<group>"; };
+		286DDA6D0DE77039005EF016 /* TypeSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeSelectionViewController.h; sourceTree = "<group>"; };
+		286DDA6E0DE77039005EF016 /* TypeSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypeSelectionViewController.m; sourceTree = "<group>"; };
+		28963B430DFC7F5F005CC955 /* TemperatureCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TemperatureCell.h; path = Classes/TemperatureCell.h; sourceTree = "<group>"; };
+		28963B440DFC7F5F005CC955 /* TemperatureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TemperatureCell.m; path = Classes/TemperatureCell.m; sourceTree = "<group>"; };
+		28963B7F0DFC8214005CC955 /* TemperatureData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = TemperatureData.plist; path = RecipeData/TemperatureData.plist; sourceTree = "<group>"; };
+		28B35EC30FC5DCD100ED0C40 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		28B35EC50FC5DCD100ED0C40 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		28B35EC70FC5DCD100ED0C40 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		28B35EC90FC5DCD100ED0C40 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		28CB440A0DF7129800C7BCF9 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		28D3D9AC0FC33C27000F9EF1 /* Recipes.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = Recipes.xcdatamodel; sourceTree = "<group>"; };
+		28FCBE780DE69516007A15C7 /* Recipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Recipe.h; path = Classes/Recipe.h; sourceTree = "<group>"; };
+		28FCBE790DE69516007A15C7 /* Recipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Recipe.m; path = Classes/Recipe.m; sourceTree = "<group>"; };
+		28FCBF0A0DE6A6C6007A15C7 /* RecipeListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeListTableViewController.h; sourceTree = "<group>"; };
+		28FCBF0B0DE6A6C6007A15C7 /* RecipeListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeListTableViewController.m; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* Recipes_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recipes_Prefix.pch; sourceTree = "<group>"; };
+		5350670F188075A9003726E2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Storyboard.storyboard; sourceTree = "<group>"; };
+		53757D0B18AC306A0080EA8D /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		69A0E6140DE92A470087803E /* RecipePhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipePhotoViewController.h; sourceTree = "<group>"; };
+		69A0E6150DE92A470087803E /* RecipePhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipePhotoViewController.m; sourceTree = "<group>"; };
+		69D8E9400DE7A5FC0045AF3C /* RecipeAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeAddViewController.h; sourceTree = "<group>"; };
+		69D8E9410DE7A5FC0045AF3C /* RecipeAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeAddViewController.m; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		966D0AFA0DF4CB4D0054F11F /* IngredientDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IngredientDetailViewController.h; sourceTree = "<group>"; };
+		966D0AFB0DF4CB4D0054F11F /* IngredientDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IngredientDetailViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28B35EC40FC5DCD100ED0C40 /* CoreData.framework in Frameworks */,
+				28B35EC60FC5DCD100ED0C40 /* CoreGraphics.framework in Frameworks */,
+				28B35EC80FC5DCD100ED0C40 /* Foundation.framework in Frameworks */,
+				28B35FB70FC5E10C00ED0C40 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Recipe View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				28FCBF0A0DE6A6C6007A15C7 /* RecipeListTableViewController.h */,
+				28FCBF0B0DE6A6C6007A15C7 /* RecipeListTableViewController.m */,
+				180F09140DCA9C0500D424D6 /* RecipeDetailViewController.h */,
+				180F09150DCA9C0500D424D6 /* RecipeDetailViewController.m */,
+				69D8E9400DE7A5FC0045AF3C /* RecipeAddViewController.h */,
+				69D8E9410DE7A5FC0045AF3C /* RecipeAddViewController.m */,
+				966D0AFA0DF4CB4D0054F11F /* IngredientDetailViewController.h */,
+				966D0AFB0DF4CB4D0054F11F /* IngredientDetailViewController.m */,
+				286DDA6D0DE77039005EF016 /* TypeSelectionViewController.h */,
+				286DDA6E0DE77039005EF016 /* TypeSelectionViewController.m */,
+				286DD99E0DE747BF005EF016 /* InstructionsViewController.h */,
+				286DD99F0DE747BF005EF016 /* InstructionsViewController.m */,
+				69A0E6140DE92A470087803E /* RecipePhotoViewController.h */,
+				69A0E6150DE92A470087803E /* RecipePhotoViewController.m */,
+			);
+			name = "Recipe View Controllers";
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* Recipes.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		286DDA180DE761A2005EF016 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				1D3623240D0F684500981E51 /* RecipesAppDelegate.h */,
+				1D3623250D0F684500981E51 /* RecipesAppDelegate.m */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		28E87BED0DF21E0D00EE412E /* Converter View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				184FEA3C0DEF6D4D00887625 /* TemperatureConverterViewController.h */,
+				184FEA3B0DEF6D4D00887625 /* TemperatureConverterViewController.m */,
+				184FEA390DEF6D4D00887625 /* WeightConverterViewController.h */,
+				184FEA3A0DEF6D4D00887625 /* WeightConverterViewController.m */,
+				280CEB680E38093400021185 /* ImperialPickerController.h */,
+				280CEB690E38093400021185 /* ImperialPickerController.m */,
+				280CEB6A0E38093400021185 /* MetricPickerController.h */,
+				280CEB6B0E38093400021185 /* MetricPickerController.m */,
+			);
+			name = "Converter View Controllers";
+			sourceTree = "<group>";
+		};
+		28EDDE6E0E043EF10085763B /* Application Resources */ = {
+			isa = PBXGroup;
+			children = (
+				282FFCBA0FC8AAB500A28FE2 /* Recipes.sqlite */,
+				28963B7F0DFC8214005CC955 /* TemperatureData.plist */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				5350670E188075A9003726E2 /* Storyboard.storyboard */,
+				53757D0B18AC306A0080EA8D /* Media.xcassets */,
+			);
+			name = "Application Resources";
+			sourceTree = "<group>";
+		};
+		28FCBE8F0DE69AD4007A15C7 /* Model and Model Classes */ = {
+			isa = PBXGroup;
+			children = (
+				28D3D9AC0FC33C27000F9EF1 /* Recipes.xcdatamodel */,
+				28FCBE780DE69516007A15C7 /* Recipe.h */,
+				28FCBE790DE69516007A15C7 /* Recipe.m */,
+				2858E7090FC6583300DEACE0 /* Ingredient.h */,
+				2858E70A0FC6583300DEACE0 /* Ingredient.m */,
+			);
+			name = "Model and Model Classes";
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				28CB440A0DF7129800C7BCF9 /* ReadMe.txt */,
+				286DDA180DE761A2005EF016 /* Application */,
+				28FCBE8F0DE69AD4007A15C7 /* Model and Model Classes */,
+				080E96DDFE201D6D7F000001 /* Recipe View Controllers */,
+				28E87BED0DF21E0D00EE412E /* Converter View Controllers */,
+				966654DF0DED0F0D009F55E3 /* Table Cells */,
+				28EDDE6E0E043EF10085763B /* Application Resources */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* Recipes_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				28B35EC30FC5DCD100ED0C40 /* CoreData.framework */,
+				28B35EC50FC5DCD100ED0C40 /* CoreGraphics.framework */,
+				28B35EC70FC5DCD100ED0C40 /* Foundation.framework */,
+				28B35EC90FC5DCD100ED0C40 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		966654DF0DED0F0D009F55E3 /* Table Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2858E7770FC6625400DEACE0 /* EditingTableViewCell.h */,
+				2858E7780FC6625400DEACE0 /* EditingTableViewCell.m */,
+				283EA3620DEE388300DBD352 /* RecipeTableViewCell.h */,
+				283EA3630DEE388300DBD352 /* RecipeTableViewCell.m */,
+				28963B430DFC7F5F005CC955 /* TemperatureCell.h */,
+				28963B440DFC7F5F005CC955 /* TemperatureCell.m */,
+			);
+			name = "Table Cells";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* Recipes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Recipes" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Recipes;
+			productName = ChocolateCake;
+			productReference = 1D6058910D05DD3D006BFB54 /* Recipes.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Recipes" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* Recipes */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28963B800DFC8214005CC955 /* TemperatureData.plist in Resources */,
+				282FFCBB0FC8AAB500A28FE2 /* Recipes.sqlite in Resources */,
+				53757D0C18AC306A0080EA8D /* Media.xcassets in Resources */,
+				53506710188075A9003726E2 /* Storyboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* RecipesAppDelegate.m in Sources */,
+				28FCBE7A0DE69516007A15C7 /* Recipe.m in Sources */,
+				28FCBF0C0DE6A6C6007A15C7 /* RecipeListTableViewController.m in Sources */,
+				283EA3640DEE388300DBD352 /* RecipeTableViewCell.m in Sources */,
+				184FEA3E0DEF6D4D00887625 /* WeightConverterViewController.m in Sources */,
+				184FEA3F0DEF6D4D00887625 /* TemperatureConverterViewController.m in Sources */,
+				28963B450DFC7F5F005CC955 /* TemperatureCell.m in Sources */,
+				280CEB6C0E38093400021185 /* ImperialPickerController.m in Sources */,
+				280CEB6D0E38093400021185 /* MetricPickerController.m in Sources */,
+				28D3D9AD0FC33C27000F9EF1 /* Recipes.xcdatamodel in Sources */,
+				28172EA70FC612370081FF0D /* RecipeAddViewController.m in Sources */,
+				2858E6570FC63C2500DEACE0 /* RecipeDetailViewController.m in Sources */,
+				2858E65E0FC63FEB00DEACE0 /* RecipePhotoViewController.m in Sources */,
+				2858E66B0FC6404C00DEACE0 /* InstructionsViewController.m in Sources */,
+				2858E6C00FC6464700DEACE0 /* TypeSelectionViewController.m in Sources */,
+				2858E70B0FC6583300DEACE0 /* Ingredient.m in Sources */,
+				2858E7430FC65DDE00DEACE0 /* IngredientDetailViewController.m in Sources */,
+				2858E7790FC6625400DEACE0 /* EditingTableViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5350670E188075A9003726E2 /* Storyboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5350670F188075A9003726E2 /* en */,
+			);
+			name = Storyboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Recipes_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = Recipes;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Recipes_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = Recipes;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PREBINDING = NO;
+				RUN_CLANG_STATIC_ANALYZER = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Recipes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Recipes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

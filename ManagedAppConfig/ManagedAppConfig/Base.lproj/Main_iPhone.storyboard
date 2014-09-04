@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13A594b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="APLViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ekw-ei-U8d"/>
+                        <viewControllerLayoutGuide type="bottom" id="0SC-2Q-Oop"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="URL:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="94O-hw-kZ1">
+                                <rect key="frame" x="20" y="30" width="39" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="39" id="Eqb-fK-vMs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlP-bJ-SEA">
+                                <rect key="frame" x="67" y="30" width="195" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Success:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ivn-K6-f8E">
+                                <rect key="frame" x="20" y="58" width="67" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNb-68-rq6">
+                                <rect key="frame" x="95" y="58" width="10" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Failure:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pbc-my-Lxz">
+                                <rect key="frame" x="113" y="58" width="53" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgG-bn-Kkc">
+                                <rect key="frame" x="175" y="58" width="10" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lvz-CZ-ahD">
+                                <rect key="frame" x="20" y="86" width="280" height="435"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="HGR-VD-jPb"/>
+                                </connections>
+                            </webView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cloud Document Sync" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0zD-jf-Veq">
+                                <rect key="frame" x="20" y="535" width="164" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1lD-Pl-6I6">
+                                <rect key="frame" x="251" y="529" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3xK-hf-FZb">
+                                <rect key="frame" x="270" y="24" width="30" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="3UF-KZ-eqE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <state key="normal" title="Go">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="go:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="MPN-p7-dlE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="94O-hw-kZ1" firstAttribute="baseline" secondItem="dlP-bJ-SEA" secondAttribute="baseline" id="2EM-ug-xYL"/>
+                            <constraint firstItem="Ivn-K6-f8E" firstAttribute="top" secondItem="94O-hw-kZ1" secondAttribute="bottom" constant="8" symbolic="YES" id="5lo-Yu-Pcu"/>
+                            <constraint firstItem="Lvz-CZ-ahD" firstAttribute="leading" secondItem="0zD-jf-Veq" secondAttribute="leading" id="7FH-lv-5IS"/>
+                            <constraint firstItem="Lvz-CZ-ahD" firstAttribute="top" secondItem="Ivn-K6-f8E" secondAttribute="bottom" constant="8" symbolic="YES" id="FEX-BW-kuw"/>
+                            <constraint firstItem="Ivn-K6-f8E" firstAttribute="baseline" secondItem="cNb-68-rq6" secondAttribute="baseline" id="GBM-GF-maH"/>
+                            <constraint firstItem="94O-hw-kZ1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="H6Z-mq-VEb"/>
+                            <constraint firstItem="Lvz-CZ-ahD" firstAttribute="trailing" secondItem="1lD-Pl-6I6" secondAttribute="trailing" id="IAh-Yv-HGi"/>
+                            <constraint firstItem="3xK-hf-FZb" firstAttribute="baseline" secondItem="dlP-bJ-SEA" secondAttribute="baseline" id="JXo-Pm-nNk"/>
+                            <constraint firstItem="3xK-hf-FZb" firstAttribute="top" secondItem="Ekw-ei-U8d" secondAttribute="bottom" constant="4" id="MwU-PS-eq0"/>
+                            <constraint firstItem="dlP-bJ-SEA" firstAttribute="leading" secondItem="94O-hw-kZ1" secondAttribute="trailing" constant="8" symbolic="YES" id="R3L-NR-NNW"/>
+                            <constraint firstItem="lgG-bn-Kkc" firstAttribute="leading" secondItem="Pbc-my-Lxz" secondAttribute="trailing" constant="9" id="RDq-CC-qUi"/>
+                            <constraint firstItem="0zD-jf-Veq" firstAttribute="centerY" secondItem="1lD-Pl-6I6" secondAttribute="centerY" id="Xsh-xZ-ifb"/>
+                            <constraint firstItem="3xK-hf-FZb" firstAttribute="leading" secondItem="dlP-bJ-SEA" secondAttribute="trailing" constant="8" symbolic="YES" id="Z1p-5v-SEP"/>
+                            <constraint firstItem="94O-hw-kZ1" firstAttribute="top" secondItem="dlP-bJ-SEA" secondAttribute="top" id="Z7O-A7-PvR"/>
+                            <constraint firstItem="Lvz-CZ-ahD" firstAttribute="leading" secondItem="Ivn-K6-f8E" secondAttribute="leading" id="Zh0-sy-Srr"/>
+                            <constraint firstItem="Pbc-my-Lxz" firstAttribute="leading" secondItem="cNb-68-rq6" secondAttribute="trailing" constant="8" symbolic="YES" id="aiI-ha-93F"/>
+                            <constraint firstItem="lgG-bn-Kkc" firstAttribute="baseline" secondItem="Pbc-my-Lxz" secondAttribute="baseline" id="dcq-sX-8az"/>
+                            <constraint firstItem="cNb-68-rq6" firstAttribute="leading" secondItem="Ivn-K6-f8E" secondAttribute="trailing" constant="8" symbolic="YES" id="nZy-Kv-LCD"/>
+                            <constraint firstItem="0SC-2Q-Oop" firstAttribute="top" secondItem="1lD-Pl-6I6" secondAttribute="bottom" constant="8" id="odK-VT-W79"/>
+                            <constraint firstItem="1lD-Pl-6I6" firstAttribute="top" secondItem="Lvz-CZ-ahD" secondAttribute="bottom" constant="8" symbolic="YES" id="rcN-hW-aiU"/>
+                            <constraint firstItem="Lvz-CZ-ahD" firstAttribute="trailing" secondItem="3xK-hf-FZb" secondAttribute="trailing" id="uhq-2i-VkH"/>
+                            <constraint firstAttribute="trailing" secondItem="3xK-hf-FZb" secondAttribute="trailing" constant="20" symbolic="YES" id="yMX-Ls-cb6"/>
+                            <constraint firstItem="Pbc-my-Lxz" firstAttribute="baseline" secondItem="cNb-68-rq6" secondAttribute="baseline" id="yX7-zS-vFQ"/>
+                            <constraint firstItem="94O-hw-kZ1" firstAttribute="leading" secondItem="Ivn-K6-f8E" secondAttribute="leading" id="zMU-3V-Ykq"/>
+                        </constraints>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <connections>
+                        <outlet property="cloudDocumentSyncEnabledSwitch" destination="1lD-Pl-6I6" id="KQS-iM-1AG"/>
+                        <outlet property="failureUILabel" destination="lgG-bn-Kkc" id="Wbs-vs-m3Y"/>
+                        <outlet property="serverURLUILabel" destination="dlP-bJ-SEA" id="o2k-po-UCt"/>
+                        <outlet property="successUILabel" destination="cNb-68-rq6" id="m8V-Sa-dHe"/>
+                        <outlet property="webView" destination="Lvz-CZ-ahD" id="e1S-Mp-ZMS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<album QPhotoXMLVersion="1.0b4" name="Broken Attributes" date="2010-08-16T13:12:36Z" author="© 2010 Apple Inc. All Rights Reserved." authorURL="http://developer.apple.com">
+  <photo name="Correct" date="2010-08-16T10:46:33Z" id="13955766067916300168">
+    <image kind="image" srcURL="images/IMG_0125.JPG"></image>
+    <image kind="thumbnail" srcURL="thumbnails/IMG_0125.jpg"></image>
+  </photo>
+  <photo name="Duplicate ID" date="2010-08-16T10:46:33Z" id="13955766067916300168">
+    <image kind="image" srcURL="images/IMG_0125.JPG"></image>
+    <image kind="thumbnail" srcURL="thumbnails/IMG_0125.jpg"></image>
+  </photo>
+  <photo name="Missing ID" date="2010-08-16T10:47:30Z">
+    <image kind="image" srcURL="images/IMG_0127.jpg"></image>
+    <image kind="thumbnail" srcURL="thumbnails/IMG_0127.jpg"></image>
+  </photo>
+  <photo name="Missing Date" id="13955766067916300169">
+    <image kind="image" srcURL="images/IMG_0125.JPG"></image>
+    <image kind="thumbnail" srcURL="thumbnails/IMG_0125.jpg"></image>
+  </photo>
+  <photo date="2010-08-16T10:46:33Z" id="13955766067916300170">
+    <image kind="image" srcURL="images/IMG_0125.JPG"></image>
+    <image kind="thumbnail" srcURL="thumbnails/IMG_0125.jpg"></image>
+  </photo>
+  <photo name="Missing Thumbnail" date="2010-08-16T10:46:33Z" id="13955766067916300171">
+    <image kind="image" srcURL="images/IMG_0125.JPG"></image>
+  </photo>
+  <photo name="Missing Photo" date="2010-08-16T10:46:33Z" id="13955766067916300172">
+    <image kind="thumbnail" srcURL="thumbnails/IMG_0125.jpg"></image>
+  </photo>
+  <photo name="Missing Both" date="2010-08-16T10:46:33Z" id="13955766067916300173">
+  </photo>
+  <photo name="Missing Kinds" date="2010-08-16T10:46:33Z" id="13955766067916300174">
+    <image srcURL="images/IMG_0125.JPG"></image>
+    <image srcURL="thumbnails/IMG_0125.jpg"></image>
+  </photo>
+  <photo name="Missing Thumbnail URL" date="2010-08-16T10:46:33Z" id="13955766067916300175">
+    <image kind="image" srcURL="images/IMG_0125.JPG"></image>
+    <image kind="thumbnail"></image>
+  </photo>
+  <photo name="Missing Photo URL" date="2010-08-16T10:46:33Z" id="13955766067916300176">
+    <image kind="image"></image>
+    <image kind="thumbnail" srcURL="thumbnails/IMG_0125.jpg"></image>
+  </photo>
+  <image kind="image" srcURL="images/IMG_0125.JPG"></image>
+  <photo name="Other Nested" date="2010-08-16T10:46:33Z" id="13955766067916300177">
+    <image kind="image" srcURL="images/IMG_0125.JPG"></image>
+    <image kind="thumbnail" srcURL="thumbnails/IMG_0125.jpg"></image>
+    <photo name="Inner Nested" date="2010-08-16T10:46:33Z" id="13955766067916300178">
+      <photo name="Expected" date="2010-08-16T10:46:33Z" id="13955766067916300179">
+        <image kind="image" srcURL="images/IMG_0125.JPG"></image>
+        <image kind="thumbnail" srcURL="thumbnails/IMG_0125.jpg"></image>
+      </photo>
+      <image kind="image" srcURL="images/IMG_0125.JPG"></image>
+      <image kind="thumbnail" srcURL="thumbnails/IMG_0125.jpg"></image>
+    </photo>
+  </photo>
+  <photo name="Bogus Date" date="2010-08-16T10:46:33+0000" id="13955766067916300180">
+    <image kind="image" srcURL="images/IMG_0125.JPG"></image>
+    <image kind="thumbnail" srcURL="thumbnails/IMG_0125.jpg"></image>
+  </photo>
+  <photo name="Bogus Date 2" date="xxx" id="13955766067916300181">
+    <image kind="image" srcURL="images/IMG_0125.JPG"></image>
+    <image kind="thumbnail" srcURL="thumbnails/IMG_0125.jpg"></image>
+  </photo>
+  <photo name="Bogus Date 3" date="Thu, 16 Sep 2010 07:04:51 -0700" id="13955766067916300182">
+    <image kind="image" srcURL="images/IMG_0125.JPG"></image>
+    <image kind="thumbnail" srcURL="thumbnails/IMG_0125.jpg"></image>
+  </photo>
+  <photo name="Bogus Date 4" date="" id="13955766067916300183">
+    <image kind="image" srcURL="images/IMG_0125.JPG"></image>
+    <image kind="thumbnail" srcURL="thumbnails/IMG_0125.jpg"></image>
+  </photo>
+  <photo name="Bogus ID" date="2010-08-16T10:46:33Z" id="">
+    <image kind="image" srcURL="images/IMG_0125.JPG"></image>
+    <image kind="thumbnail" srcURL="thumbnails/IMG_0125.jpg"></image>
+  </photo>
+  <photo name="" date="2010-08-16T10:46:33Z" id="13955766067916300185">
+    <image kind="image" srcURL="images/IMG_0125.JPG"></image>
+    <image kind="thumbnail" srcURL="thumbnails/IMG_0125.jpg"></image>
+  </photo>
+  <photo name="Empty Thumbnail URL" date="2010-08-16T10:46:33Z" id="13955766067916300186">
+    <image kind="image" srcURL="images/IMG_0125.JPG"></image>
+    <image kind="thumbnail" srcURL=""></image>
+  </photo>
+  <photo name="Empty Photo URL" date="2010-08-16T10:46:33Z" id="13955766067916300187">
+    <image kind="image" srcURL=""></image>
+    <image kind="thumbnail" srcURL="thumbnails/IMG_0125.jpg"></image>
+  </photo>
+  <photo name="Bogus Thumbnail URL" date="2010-08-16T10:46:33Z" id="13955766067916300188">
+    <image kind="image" srcURL="images/IMG_0125.JPG"></image>
+    <image kind="thumbnail" srcURL="thumbnails/ IMG_0125.jpg"></image>
+  </photo>
+  <photo name="Bogus Photo URL" date="2010-08-16T10:46:33Z" id="13955766067916300189">
+    <image kind="image" srcURL="images/ IMG_0125.JPG"></image>
+    <image kind="thumbnail" srcURL="thumbnails/IMG_0125.jpg"></image>
+  </photo>
+</album>

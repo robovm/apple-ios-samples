@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.21" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.13"/>
+    </dependencies>
+    <scenes>
+        <!--My View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="MyViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="o4z-OE-ZgG"/>
+                        <viewControllerLayoutGuide type="bottom" id="5VX-L8-Hel"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="570"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scene" translatesAutoresizingMaskIntoConstraints="NO" id="G1O-4l-82b">
+                                <rect key="frame" x="0.0" y="20" width="320" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="OsG-Sh-FNj"/>
+                                    <constraint firstAttribute="height" constant="180" id="q1L-pS-bTx"/>
+                                </constraints>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="-20" maxX="0.0" maxY="40"/>
+                            </imageView>
+                            <imageView autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lx5-xz-rCe">
+                                <rect key="frame" x="0.0" y="199" width="320" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="JA2-P6-t8T"/>
+                                </constraints>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="-20" maxX="0.0" maxY="40"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" ambiguous="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="fnu-JD-Qms">
+                                <rect key="frame" x="0.0" y="490" width="320" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="7E8-dR-sAJ"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="ivy-TJ-IUS"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="wOu-Zt-0xp"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="fnu-JD-Qms" firstAttribute="leading" secondItem="Lx5-xz-rCe" secondAttribute="leading" id="Awi-Ya-MNX"/>
+                            <constraint firstItem="fnu-JD-Qms" firstAttribute="trailing" secondItem="Lx5-xz-rCe" secondAttribute="trailing" id="Qrd-rH-Ksc"/>
+                            <constraint firstAttribute="bottom" secondItem="fnu-JD-Qms" secondAttribute="bottom" id="Vao-0m-IOq"/>
+                            <constraint firstItem="Lx5-xz-rCe" firstAttribute="trailing" secondItem="G1O-4l-82b" secondAttribute="trailing" id="cC0-Bi-YC9"/>
+                            <constraint firstItem="G1O-4l-82b" firstAttribute="top" secondItem="o4z-OE-ZgG" secondAttribute="bottom" id="dgx-dh-AHC"/>
+                            <constraint firstItem="Lx5-xz-rCe" firstAttribute="leading" secondItem="G1O-4l-82b" secondAttribute="leading" id="fUb-nC-ckb"/>
+                            <constraint firstItem="Lx5-xz-rCe" firstAttribute="top" secondItem="o4z-OE-ZgG" secondAttribute="bottom" constant="179" id="fpf-ms-o5Y"/>
+                            <constraint firstItem="Lx5-xz-rCe" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="ihb-NJ-lCz"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="320" height="570"/>
+                    <connections>
+                        <outlet property="imageView" destination="G1O-4l-82b" id="8F1-Qp-Pte"/>
+                        <outlet property="reflectionView" destination="Lx5-xz-rCe" id="DjT-xP-mIl"/>
+                        <outlet property="reflectionViewHeightConstraint" destination="JA2-P6-t8T" id="aZc-Rh-agY"/>
+                        <outlet property="slidersTableView" destination="fnu-JD-Qms" id="2f6-Dw-UsS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-112" y="216"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="scene" width="432" height="324"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

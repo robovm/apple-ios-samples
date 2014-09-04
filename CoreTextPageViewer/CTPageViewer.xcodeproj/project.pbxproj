@@ -1,0 +1,438 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		2810251A110029DB00635146 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = 28102519110029DB00635146 /* ReadMe.txt */; };
+		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		28D7ACF80DDB3853001CB0EB /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* RootViewController.m */; };
+		2B148BAB1283527F00B9CE29 /* Acknowledgements.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2B148BAA1283527F00B9CE29 /* Acknowledgements.txt */; };
+		2BB98DD61225E705007570C0 /* TextAccessibilityElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB98DD51225E705007570C0 /* TextAccessibilityElement.m */; };
+		2BB98DD91225E714007570C0 /* CoreTextScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB98DD81225E714007570C0 /* CoreTextScrollView.m */; };
+		2BB98DDC1225E728007570C0 /* AttributedStringDoc.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB98DDB1225E728007570C0 /* AttributedStringDoc.m */; };
+		2BB98F3612285EC4007570C0 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BB98F2F12285EC4007570C0 /* Icon-72.png */; };
+		2BB98F3712285EC4007570C0 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BB98F3012285EC4007570C0 /* Icon-Small-50.png */; };
+		2BB98F3812285EC4007570C0 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BB98F3112285EC4007570C0 /* Icon-Small.png */; };
+		2BB98F3912285EC4007570C0 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BB98F3212285EC4007570C0 /* Icon-Small@2x.png */; };
+		2BB98F3A12285EC4007570C0 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BB98F3312285EC4007570C0 /* Icon.png */; };
+		2BB98F3B12285EC4007570C0 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BB98F3412285EC4007570C0 /* Icon@2x.png */; };
+		2BB98F3C12285EC4007570C0 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 2BB98F3512285EC4007570C0 /* iTunesArtwork */; };
+		2BB98F4112285EE8007570C0 /* VeraMoBd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BB98F3D12285EE8007570C0 /* VeraMoBd.ttf */; };
+		2BB98F4212285EE8007570C0 /* VeraMoBI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BB98F3E12285EE8007570C0 /* VeraMoBI.ttf */; };
+		2BB98F4312285EE8007570C0 /* VeraMoIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BB98F3F12285EE8007570C0 /* VeraMoIt.ttf */; };
+		2BB98F4412285EE8007570C0 /* VeraMono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BB98F4012285EE8007570C0 /* VeraMono.ttf */; };
+		2BB98FB0122866C9007570C0 /* Credits.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2BB98FA8122866C9007570C0 /* Credits.xml */; };
+		2BB98FB1122866C9007570C0 /* Features.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2BB98FA9122866C9007570C0 /* Features.xml */; };
+		2BB98FB2122866C9007570C0 /* FrameDrawing.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2BB98FAA122866C9007570C0 /* FrameDrawing.xml */; };
+		2BB98FB3122866C9007570C0 /* NSAttributedString Reference.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2BB98FAB122866C9007570C0 /* NSAttributedString Reference.xml */; };
+		2BB98FB4122866C9007570C0 /* ReadMe.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2BB98FAC122866C9007570C0 /* ReadMe.xml */; };
+		2BB98FB5122866C9007570C0 /* Splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BB98FAD122866C9007570C0 /* Splash.png */; };
+		2BB98FB6122866C9007570C0 /* Splash.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2BB98FAE122866C9007570C0 /* Splash.xml */; };
+		2BB98FB7122866C9007570C0 /* US Founding Docs.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2BB98FAF122866C9007570C0 /* US Founding Docs.xml */; };
+		5D2509D011AC482D00570690 /* SamplesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2509CF11AC482D00570690 /* SamplesController.m */; };
+		5D250B3E11AC739200570690 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D250B3D11AC739200570690 /* CoreText.framework */; };
+		5D250B9711AC7BFA00570690 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D250B9611AC7BFA00570690 /* QuartzCore.framework */; };
+		5D741A6611ADBC580046F5BE /* FontFamsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D741A5A11ADBC310046F5BE /* FontFamsController.m */; };
+		AFE80BC21888BEDC0029023C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFE80BC01888BEDC0029023C /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* CTPageViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CTPageViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		28102519110029DB00635146 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		28D7ACF60DDB3853001CB0EB /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootViewController.h; path = Classes/RootViewController.h; sourceTree = "<group>"; };
+		28D7ACF70DDB3853001CB0EB /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootViewController.m; path = Classes/RootViewController.m; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2B148BAA1283527F00B9CE29 /* Acknowledgements.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Acknowledgements.txt; sourceTree = "<group>"; };
+		2BB98DD41225E6FC007570C0 /* TextAccessibilityElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextAccessibilityElement.h; sourceTree = "<group>"; };
+		2BB98DD51225E705007570C0 /* TextAccessibilityElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextAccessibilityElement.m; sourceTree = "<group>"; };
+		2BB98DD71225E70D007570C0 /* CoreTextScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreTextScrollView.h; sourceTree = "<group>"; };
+		2BB98DD81225E714007570C0 /* CoreTextScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreTextScrollView.m; sourceTree = "<group>"; };
+		2BB98DDA1225E71F007570C0 /* AttributedStringDoc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttributedStringDoc.h; sourceTree = "<group>"; };
+		2BB98DDB1225E728007570C0 /* AttributedStringDoc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttributedStringDoc.m; sourceTree = "<group>"; };
+		2BB98F2F12285EC4007570C0 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "Resources/Icon-72.png"; sourceTree = "<group>"; };
+		2BB98F3012285EC4007570C0 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50.png"; path = "Resources/Icon-Small-50.png"; sourceTree = "<group>"; };
+		2BB98F3112285EC4007570C0 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "Resources/Icon-Small.png"; sourceTree = "<group>"; };
+		2BB98F3212285EC4007570C0 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "Resources/Icon-Small@2x.png"; sourceTree = "<group>"; };
+		2BB98F3312285EC4007570C0 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Resources/Icon.png; sourceTree = "<group>"; };
+		2BB98F3412285EC4007570C0 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Resources/Icon@2x.png"; sourceTree = "<group>"; };
+		2BB98F3512285EC4007570C0 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; name = iTunesArtwork; path = Resources/iTunesArtwork; sourceTree = "<group>"; };
+		2BB98F3D12285EE8007570C0 /* VeraMoBd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = VeraMoBd.ttf; path = Resources/Fonts/VeraMoBd.ttf; sourceTree = "<group>"; };
+		2BB98F3E12285EE8007570C0 /* VeraMoBI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = VeraMoBI.ttf; path = Resources/Fonts/VeraMoBI.ttf; sourceTree = "<group>"; };
+		2BB98F3F12285EE8007570C0 /* VeraMoIt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = VeraMoIt.ttf; path = Resources/Fonts/VeraMoIt.ttf; sourceTree = "<group>"; };
+		2BB98F4012285EE8007570C0 /* VeraMono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = VeraMono.ttf; path = Resources/Fonts/VeraMono.ttf; sourceTree = "<group>"; };
+		2BB98FA8122866C9007570C0 /* Credits.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Credits.xml; path = Resources/Credits.xml; sourceTree = "<group>"; };
+		2BB98FA9122866C9007570C0 /* Features.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Features.xml; path = Resources/Features.xml; sourceTree = "<group>"; };
+		2BB98FAA122866C9007570C0 /* FrameDrawing.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = FrameDrawing.xml; path = Resources/FrameDrawing.xml; sourceTree = "<group>"; };
+		2BB98FAB122866C9007570C0 /* NSAttributedString Reference.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "NSAttributedString Reference.xml"; path = "Resources/NSAttributedString Reference.xml"; sourceTree = "<group>"; };
+		2BB98FAC122866C9007570C0 /* ReadMe.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = ReadMe.xml; path = Resources/ReadMe.xml; sourceTree = "<group>"; };
+		2BB98FAD122866C9007570C0 /* Splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Splash.png; path = Resources/Splash.png; sourceTree = "<group>"; };
+		2BB98FAE122866C9007570C0 /* Splash.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Splash.xml; path = Resources/Splash.xml; sourceTree = "<group>"; };
+		2BB98FAF122866C9007570C0 /* US Founding Docs.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "US Founding Docs.xml"; path = "Resources/US Founding Docs.xml"; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* CTPageViewer_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPageViewer_Prefix.pch; sourceTree = "<group>"; };
+		5D2509CE11AC482D00570690 /* SamplesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SamplesController.h; path = Classes/SamplesController.h; sourceTree = "<group>"; };
+		5D2509CF11AC482D00570690 /* SamplesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SamplesController.m; path = Classes/SamplesController.m; sourceTree = "<group>"; };
+		5D250B3D11AC739200570690 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		5D250B9611AC7BFA00570690 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		5D741A5911ADBC310046F5BE /* FontFamsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FontFamsController.h; path = Classes/FontFamsController.h; sourceTree = "<group>"; };
+		5D741A5A11ADBC310046F5BE /* FontFamsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FontFamsController.m; path = Classes/FontFamsController.m; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* CTPageViewer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CTPageViewer-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		AFE80BC11888BEDC0029023C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = Resources/en.lproj/Main.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
+				5D250B3E11AC739200570690 /* CoreText.framework in Frameworks */,
+				5D250B9711AC7BFA00570690 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Text Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2BB98DDA1225E71F007570C0 /* AttributedStringDoc.h */,
+				2BB98DDB1225E728007570C0 /* AttributedStringDoc.m */,
+				2BB98DD71225E70D007570C0 /* CoreTextScrollView.h */,
+				2BB98DD81225E714007570C0 /* CoreTextScrollView.m */,
+				2BB98DD41225E6FC007570C0 /* TextAccessibilityElement.h */,
+				2BB98DD51225E705007570C0 /* TextAccessibilityElement.m */,
+			);
+			name = "Text Classes";
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* CTPageViewer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				2B148BAA1283527F00B9CE29 /* Acknowledgements.txt */,
+				28102519110029DB00635146 /* ReadMe.txt */,
+				1D3623240D0F684500981E51 /* AppDelegate.h */,
+				1D3623250D0F684500981E51 /* AppDelegate.m */,
+				28D7ACF60DDB3853001CB0EB /* RootViewController.h */,
+				28D7ACF70DDB3853001CB0EB /* RootViewController.m */,
+				5D6947DD11ADBB4F0082A91B /* Popup Controllers */,
+				080E96DDFE201D6D7F000001 /* Text Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* CTPageViewer_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AFE80BC01888BEDC0029023C /* Main.storyboard */,
+				2BB98F2E12285EB0007570C0 /* Images */,
+				5D23151311AD78490007D8DD /* AttributedStringDocs */,
+				5D23150411AD77F80007D8DD /* Fonts */,
+				8D1107310486CEB800E47090 /* CTPageViewer-Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5D250B9611AC7BFA00570690 /* QuartzCore.framework */,
+				5D250B3D11AC739200570690 /* CoreText.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2BB98F2E12285EB0007570C0 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				2BB98F2F12285EC4007570C0 /* Icon-72.png */,
+				2BB98F3012285EC4007570C0 /* Icon-Small-50.png */,
+				2BB98F3112285EC4007570C0 /* Icon-Small.png */,
+				2BB98F3212285EC4007570C0 /* Icon-Small@2x.png */,
+				2BB98F3312285EC4007570C0 /* Icon.png */,
+				2BB98F3412285EC4007570C0 /* Icon@2x.png */,
+				2BB98F3512285EC4007570C0 /* iTunesArtwork */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		5D23150411AD77F80007D8DD /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2BB98F3D12285EE8007570C0 /* VeraMoBd.ttf */,
+				2BB98F3E12285EE8007570C0 /* VeraMoBI.ttf */,
+				2BB98F3F12285EE8007570C0 /* VeraMoIt.ttf */,
+				2BB98F4012285EE8007570C0 /* VeraMono.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		5D23151311AD78490007D8DD /* AttributedStringDocs */ = {
+			isa = PBXGroup;
+			children = (
+				2BB98FA8122866C9007570C0 /* Credits.xml */,
+				2BB98FA9122866C9007570C0 /* Features.xml */,
+				2BB98FAA122866C9007570C0 /* FrameDrawing.xml */,
+				2BB98FAB122866C9007570C0 /* NSAttributedString Reference.xml */,
+				2BB98FAC122866C9007570C0 /* ReadMe.xml */,
+				2BB98FAD122866C9007570C0 /* Splash.png */,
+				2BB98FAE122866C9007570C0 /* Splash.xml */,
+				2BB98FAF122866C9007570C0 /* US Founding Docs.xml */,
+			);
+			name = AttributedStringDocs;
+			sourceTree = "<group>";
+		};
+		5D6947DD11ADBB4F0082A91B /* Popup Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5D2509CE11AC482D00570690 /* SamplesController.h */,
+				5D2509CF11AC482D00570690 /* SamplesController.m */,
+				5D741A5911ADBC310046F5BE /* FontFamsController.h */,
+				5D741A5A11ADBC310046F5BE /* FontFamsController.m */,
+			);
+			name = "Popup Controllers";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* CTPageViewer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "CTPageViewer" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CTPageViewer;
+			productName = CTPageViewer;
+			productReference = 1D6058910D05DD3D006BFB54 /* CTPageViewer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "CTPageViewer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* CTPageViewer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2810251A110029DB00635146 /* ReadMe.txt in Resources */,
+				2BB98F3612285EC4007570C0 /* Icon-72.png in Resources */,
+				2BB98F3712285EC4007570C0 /* Icon-Small-50.png in Resources */,
+				2BB98F3812285EC4007570C0 /* Icon-Small.png in Resources */,
+				2BB98F3912285EC4007570C0 /* Icon-Small@2x.png in Resources */,
+				2BB98F3A12285EC4007570C0 /* Icon.png in Resources */,
+				2BB98F3B12285EC4007570C0 /* Icon@2x.png in Resources */,
+				AFE80BC21888BEDC0029023C /* Main.storyboard in Resources */,
+				2BB98F3C12285EC4007570C0 /* iTunesArtwork in Resources */,
+				2BB98F4112285EE8007570C0 /* VeraMoBd.ttf in Resources */,
+				2BB98F4212285EE8007570C0 /* VeraMoBI.ttf in Resources */,
+				2BB98F4312285EE8007570C0 /* VeraMoIt.ttf in Resources */,
+				2BB98F4412285EE8007570C0 /* VeraMono.ttf in Resources */,
+				2BB98FB0122866C9007570C0 /* Credits.xml in Resources */,
+				2BB98FB1122866C9007570C0 /* Features.xml in Resources */,
+				2BB98FB2122866C9007570C0 /* FrameDrawing.xml in Resources */,
+				2BB98FB3122866C9007570C0 /* NSAttributedString Reference.xml in Resources */,
+				2BB98FB4122866C9007570C0 /* ReadMe.xml in Resources */,
+				2BB98FB5122866C9007570C0 /* Splash.png in Resources */,
+				2BB98FB6122866C9007570C0 /* Splash.xml in Resources */,
+				2BB98FB7122866C9007570C0 /* US Founding Docs.xml in Resources */,
+				2B148BAB1283527F00B9CE29 /* Acknowledgements.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
+				28D7ACF80DDB3853001CB0EB /* RootViewController.m in Sources */,
+				5D2509D011AC482D00570690 /* SamplesController.m in Sources */,
+				5D741A6611ADBC580046F5BE /* FontFamsController.m in Sources */,
+				2BB98DD61225E705007570C0 /* TextAccessibilityElement.m in Sources */,
+				2BB98DD91225E714007570C0 /* CoreTextScrollView.m in Sources */,
+				2BB98DDC1225E728007570C0 /* AttributedStringDoc.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AFE80BC01888BEDC0029023C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AFE80BC11888BEDC0029023C /* en */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CTPageViewer_Prefix.pch;
+				INFOPLIST_FILE = "CTPageViewer-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = CTPageViewer;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CTPageViewer_Prefix.pch;
+				INFOPLIST_FILE = "CTPageViewer-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = CTPageViewer;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "-D__IPHONE_OS_VERSION_MIN_REQUIRED=030200";
+				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				OTHER_CFLAGS = "-D__IPHONE_OS_VERSION_MIN_REQUIRED=030200";
+				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+				STRIP_INSTALLED_PRODUCT = NO;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "CTPageViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "CTPageViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

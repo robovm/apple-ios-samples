@@ -1,0 +1,488 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1B210B591709F2AF0019F719 /* InterAppAudioHost.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 1B210B581709F2AF0019F719 /* InterAppAudioHost.entitlements */; };
+		1B4A739516E5B6B800F0E16E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B4A739416E5B6B800F0E16E /* UIKit.framework */; };
+		1B4A739716E5B6B800F0E16E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B4A739616E5B6B800F0E16E /* Foundation.framework */; };
+		1B4A739916E5B6B800F0E16E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B4A739816E5B6B800F0E16E /* CoreGraphics.framework */; };
+		1B4A73A116E5B6B800F0E16E /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1B4A73A016E5B6B800F0E16E /* main.mm */; };
+		1B4A73A516E5B6B800F0E16E /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1B4A73A416E5B6B800F0E16E /* AppDelegate.mm */; };
+		1B4A73AE16E5B6B800F0E16E /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B4A73AC16E5B6B800F0E16E /* MainStoryboard_iPhone.storyboard */; };
+		1B4A73B416E5B6B800F0E16E /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1B4A73B316E5B6B800F0E16E /* ViewController.mm */; };
+		1B4A73BB16E5B74600F0E16E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B4A73BA16E5B74600F0E16E /* AudioToolbox.framework */; };
+		1B4A73BD16E5B75700F0E16E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B4A73BC16E5B75700F0E16E /* AVFoundation.framework */; };
+		1BB51D7F16F3ECD6007297E5 /* AudioEngine.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1BB51D7D16F3E49D007297E5 /* AudioEngine.mm */; };
+		1BE4A45D171DF49B00E7653F /* CAStreamBasicDescription.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1BE4A45B171DF49B00E7653F /* CAStreamBasicDescription.cpp */; };
+		1BE4A460171DF4E700E7653F /* CADebugMacros.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1BE4A45E171DF4E700E7653F /* CADebugMacros.cpp */; };
+		1BE4A463171DF51700E7653F /* CADebugPrintf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1BE4A461171DF51700E7653F /* CADebugPrintf.cpp */; };
+		2B4183D117F520FE00569901 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B9A98BF17276BE100A4C74C /* QuartzCore.framework */; };
+		309A5CAD175D45F000238F87 /* AddIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 309A5CA4175D45EF00238F87 /* AddIcon.png */; };
+		309A5CAE175D45F000238F87 /* AddIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 309A5CA5175D45EF00238F87 /* AddIcon@2x.png */; };
+		309A5CAF175D45F000238F87 /* CloseIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 309A5CA6175D45EF00238F87 /* CloseIcon.pdf */; };
+		309A5CB0175D45F000238F87 /* CloseIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 309A5CA7175D45EF00238F87 /* CloseIcon.png */; };
+		309A5CB1175D45F000238F87 /* CloseIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 309A5CA8175D45EF00238F87 /* CloseIcon@2x.png */; };
+		309A5CB3175D45F000238F87 /* HostIcon@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 309A5CAA175D45EF00238F87 /* HostIcon@2x~iphone.png */; };
+		309A5CB5175D45F000238F87 /* HostIcon~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 309A5CAC175D45EF00238F87 /* HostIcon~iphone.png */; };
+		309A5CB9175D461E00238F87 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 309A5CB6175D461E00238F87 /* Default-568h@2x.png */; };
+		309A5CBA175D461E00238F87 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 309A5CB7175D461E00238F87 /* Default.png */; };
+		309A5CBB175D461E00238F87 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 309A5CB8175D461E00238F87 /* Default@2x.png */; };
+		309A5CCD175D465800238F87 /* CAUIKeyboardView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 309A5CBE175D465800238F87 /* CAUIKeyboardView.mm */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		309A5CCE175D465800238F87 /* CAUITransportButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 309A5CC0175D465800238F87 /* CAUITransportButton.m */; };
+		309A5CCF175D465800238F87 /* CAUITransportSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 309A5CC2175D465800238F87 /* CAUITransportSlider.m */; };
+		309A5CD0175D465800238F87 /* CAUITransportView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 309A5CC4175D465800238F87 /* CAUITransportView.mm */; };
+		309A5CD1175D465800238F87 /* KeyBoardViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 309A5CC6175D465800238F87 /* KeyBoardViewController.mm */; };
+		309A5CD2175D465800238F87 /* PublishedEffectsViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 309A5CC8175D465800238F87 /* PublishedEffectsViewController.mm */; };
+		309A5CD3175D465800238F87 /* PublishInstrumentsViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 309A5CCA175D465800238F87 /* PublishInstrumentsViewController.mm */; };
+		309A5CD4175D465800238F87 /* UIRemoteAudioUnitButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 309A5CCC175D465800238F87 /* UIRemoteAudioUnitButton.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1B210B581709F2AF0019F719 /* InterAppAudioHost.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = InterAppAudioHost.entitlements; sourceTree = "<group>"; };
+		1B4A739116E5B6B800F0E16E /* IAA Host.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IAA Host.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B4A739416E5B6B800F0E16E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1B4A739616E5B6B800F0E16E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1B4A739816E5B6B800F0E16E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1B4A739C16E5B6B800F0E16E /* InterAppAudioHost-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "InterAppAudioHost-Info.plist"; sourceTree = "<group>"; };
+		1B4A73A016E5B6B800F0E16E /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		1B4A73A216E5B6B800F0E16E /* InterAppAudioHost-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InterAppAudioHost-Prefix.pch"; sourceTree = "<group>"; };
+		1B4A73A316E5B6B800F0E16E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1B4A73A416E5B6B800F0E16E /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
+		1B4A73AD16E5B6B800F0E16E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		1B4A73B216E5B6B800F0E16E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1B4A73B316E5B6B800F0E16E /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		1B4A73BA16E5B74600F0E16E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		1B4A73BC16E5B75700F0E16E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		1B9A98BF17276BE100A4C74C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		1BB51D7C16F3E49D007297E5 /* AudioEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioEngine.h; sourceTree = "<group>"; };
+		1BB51D7D16F3E49D007297E5 /* AudioEngine.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AudioEngine.mm; sourceTree = "<group>"; };
+		1BE4A45A171DF09F00E7653F /* CAAudioUnitOutputCapturer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAAudioUnitOutputCapturer.h; sourceTree = "<group>"; };
+		1BE4A45B171DF49B00E7653F /* CAStreamBasicDescription.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CAStreamBasicDescription.cpp; sourceTree = "<group>"; };
+		1BE4A45C171DF49B00E7653F /* CAStreamBasicDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAStreamBasicDescription.h; sourceTree = "<group>"; };
+		1BE4A45E171DF4E700E7653F /* CADebugMacros.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CADebugMacros.cpp; sourceTree = "<group>"; };
+		1BE4A45F171DF4E700E7653F /* CADebugMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CADebugMacros.h; sourceTree = "<group>"; };
+		1BE4A461171DF51700E7653F /* CADebugPrintf.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CADebugPrintf.cpp; sourceTree = "<group>"; };
+		1BE4A462171DF51700E7653F /* CADebugPrintf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CADebugPrintf.h; sourceTree = "<group>"; };
+		1BE4A464171DF59400E7653F /* CAMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAMath.h; sourceTree = "<group>"; };
+		282E41C617615B1C00F005BD /* ReadMe.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		309A5CA4175D45EF00238F87 /* AddIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AddIcon.png; sourceTree = "<group>"; };
+		309A5CA5175D45EF00238F87 /* AddIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AddIcon@2x.png"; sourceTree = "<group>"; };
+		309A5CA6175D45EF00238F87 /* CloseIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = CloseIcon.pdf; sourceTree = "<group>"; };
+		309A5CA7175D45EF00238F87 /* CloseIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseIcon.png; sourceTree = "<group>"; };
+		309A5CA8175D45EF00238F87 /* CloseIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CloseIcon@2x.png"; sourceTree = "<group>"; };
+		309A5CAA175D45EF00238F87 /* HostIcon@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HostIcon@2x~iphone.png"; sourceTree = "<group>"; };
+		309A5CAC175D45EF00238F87 /* HostIcon~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HostIcon~iphone.png"; sourceTree = "<group>"; };
+		309A5CB6175D461E00238F87 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		309A5CB7175D461E00238F87 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		309A5CB8175D461E00238F87 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		309A5CBD175D465800238F87 /* CAUIKeyboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAUIKeyboardView.h; sourceTree = "<group>"; };
+		309A5CBE175D465800238F87 /* CAUIKeyboardView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CAUIKeyboardView.mm; sourceTree = "<group>"; };
+		309A5CBF175D465800238F87 /* CAUITransportButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAUITransportButton.h; sourceTree = "<group>"; };
+		309A5CC0175D465800238F87 /* CAUITransportButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAUITransportButton.m; sourceTree = "<group>"; };
+		309A5CC1175D465800238F87 /* CAUITransportSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAUITransportSlider.h; sourceTree = "<group>"; };
+		309A5CC2175D465800238F87 /* CAUITransportSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAUITransportSlider.m; sourceTree = "<group>"; };
+		309A5CC3175D465800238F87 /* CAUITransportView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAUITransportView.h; sourceTree = "<group>"; };
+		309A5CC4175D465800238F87 /* CAUITransportView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CAUITransportView.mm; sourceTree = "<group>"; };
+		309A5CC5175D465800238F87 /* KeyBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyBoardViewController.h; sourceTree = "<group>"; };
+		309A5CC6175D465800238F87 /* KeyBoardViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KeyBoardViewController.mm; sourceTree = "<group>"; };
+		309A5CC7175D465800238F87 /* PublishedEffectsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublishedEffectsViewController.h; sourceTree = "<group>"; };
+		309A5CC8175D465800238F87 /* PublishedEffectsViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PublishedEffectsViewController.mm; sourceTree = "<group>"; };
+		309A5CC9175D465800238F87 /* PublishInstrumentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublishInstrumentsViewController.h; sourceTree = "<group>"; };
+		309A5CCA175D465800238F87 /* PublishInstrumentsViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PublishInstrumentsViewController.mm; sourceTree = "<group>"; };
+		309A5CCB175D465800238F87 /* UIRemoteAudioUnitButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIRemoteAudioUnitButton.h; sourceTree = "<group>"; };
+		309A5CCC175D465800238F87 /* UIRemoteAudioUnitButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIRemoteAudioUnitButton.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1B4A738E16E5B6B800F0E16E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B4183D117F520FE00569901 /* QuartzCore.framework in Frameworks */,
+				1B4A73BD16E5B75700F0E16E /* AVFoundation.framework in Frameworks */,
+				1B4A73BB16E5B74600F0E16E /* AudioToolbox.framework in Frameworks */,
+				1B4A739916E5B6B800F0E16E /* CoreGraphics.framework in Frameworks */,
+				1B4A739516E5B6B800F0E16E /* UIKit.framework in Frameworks */,
+				1B4A739716E5B6B800F0E16E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1B4A738816E5B6B800F0E16E = {
+			isa = PBXGroup;
+			children = (
+				282E41C617615B1C00F005BD /* ReadMe.txt */,
+				1B4A739A16E5B6B800F0E16E /* InterAppAudioHost */,
+				1B4A739316E5B6B800F0E16E /* Frameworks */,
+				1B4A739216E5B6B800F0E16E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1B4A739216E5B6B800F0E16E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1B4A739116E5B6B800F0E16E /* IAA Host.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1B4A739316E5B6B800F0E16E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1B9A98BF17276BE100A4C74C /* QuartzCore.framework */,
+				1B4A73BC16E5B75700F0E16E /* AVFoundation.framework */,
+				1B4A73BA16E5B74600F0E16E /* AudioToolbox.framework */,
+				1B4A739416E5B6B800F0E16E /* UIKit.framework */,
+				1B4A739616E5B6B800F0E16E /* Foundation.framework */,
+				1B4A739816E5B6B800F0E16E /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1B4A739A16E5B6B800F0E16E /* InterAppAudioHost */ = {
+			isa = PBXGroup;
+			children = (
+				1B53D38A16E670A80009C567 /* Classes */,
+				1B4A73A316E5B6B800F0E16E /* AppDelegate.h */,
+				1B4A73A416E5B6B800F0E16E /* AppDelegate.mm */,
+				1B4A73B216E5B6B800F0E16E /* ViewController.h */,
+				1B4A73B316E5B6B800F0E16E /* ViewController.mm */,
+				309A5CA3175D45EF00238F87 /* Resources */,
+				1B4A739B16E5B6B800F0E16E /* Supporting Files */,
+			);
+			path = InterAppAudioHost;
+			sourceTree = "<group>";
+		};
+		1B4A739B16E5B6B800F0E16E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1B4A73AC16E5B6B800F0E16E /* MainStoryboard_iPhone.storyboard */,
+				1B210B581709F2AF0019F719 /* InterAppAudioHost.entitlements */,
+				1B4A739C16E5B6B800F0E16E /* InterAppAudioHost-Info.plist */,
+				1B4A73A016E5B6B800F0E16E /* main.mm */,
+				1B4A73A216E5B6B800F0E16E /* InterAppAudioHost-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1B53D38916E66EC30009C567 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				1BE4A464171DF59400E7653F /* CAMath.h */,
+				1BE4A461171DF51700E7653F /* CADebugPrintf.cpp */,
+				1BE4A462171DF51700E7653F /* CADebugPrintf.h */,
+				1BE4A45E171DF4E700E7653F /* CADebugMacros.cpp */,
+				1BE4A45F171DF4E700E7653F /* CADebugMacros.h */,
+				1BE4A45B171DF49B00E7653F /* CAStreamBasicDescription.cpp */,
+				1BE4A45C171DF49B00E7653F /* CAStreamBasicDescription.h */,
+				1BE4A45A171DF09F00E7653F /* CAAudioUnitOutputCapturer.h */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		1B53D38A16E670A80009C567 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				309A5CBC175D465800238F87 /* UI */,
+				1B53D38916E66EC30009C567 /* Utilities */,
+				1BB51D7C16F3E49D007297E5 /* AudioEngine.h */,
+				1BB51D7D16F3E49D007297E5 /* AudioEngine.mm */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		309A5CA3175D45EF00238F87 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				309A5CA4175D45EF00238F87 /* AddIcon.png */,
+				309A5CA5175D45EF00238F87 /* AddIcon@2x.png */,
+				309A5CA6175D45EF00238F87 /* CloseIcon.pdf */,
+				309A5CA7175D45EF00238F87 /* CloseIcon.png */,
+				309A5CA8175D45EF00238F87 /* CloseIcon@2x.png */,
+				309A5CAA175D45EF00238F87 /* HostIcon@2x~iphone.png */,
+				309A5CAC175D45EF00238F87 /* HostIcon~iphone.png */,
+				309A5CB6175D461E00238F87 /* Default-568h@2x.png */,
+				309A5CB7175D461E00238F87 /* Default.png */,
+				309A5CB8175D461E00238F87 /* Default@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		309A5CBC175D465800238F87 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				309A5CBD175D465800238F87 /* CAUIKeyboardView.h */,
+				309A5CBE175D465800238F87 /* CAUIKeyboardView.mm */,
+				309A5CBF175D465800238F87 /* CAUITransportButton.h */,
+				309A5CC0175D465800238F87 /* CAUITransportButton.m */,
+				309A5CC1175D465800238F87 /* CAUITransportSlider.h */,
+				309A5CC2175D465800238F87 /* CAUITransportSlider.m */,
+				309A5CC3175D465800238F87 /* CAUITransportView.h */,
+				309A5CC4175D465800238F87 /* CAUITransportView.mm */,
+				309A5CC5175D465800238F87 /* KeyBoardViewController.h */,
+				309A5CC6175D465800238F87 /* KeyBoardViewController.mm */,
+				309A5CC7175D465800238F87 /* PublishedEffectsViewController.h */,
+				309A5CC8175D465800238F87 /* PublishedEffectsViewController.mm */,
+				309A5CC9175D465800238F87 /* PublishInstrumentsViewController.h */,
+				309A5CCA175D465800238F87 /* PublishInstrumentsViewController.mm */,
+				309A5CCB175D465800238F87 /* UIRemoteAudioUnitButton.h */,
+				309A5CCC175D465800238F87 /* UIRemoteAudioUnitButton.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1B4A739016E5B6B800F0E16E /* InterAppAudioHost */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B4A73B716E5B6B800F0E16E /* Build configuration list for PBXNativeTarget "InterAppAudioHost" */;
+			buildPhases = (
+				1B4A738D16E5B6B800F0E16E /* Sources */,
+				1B4A738E16E5B6B800F0E16E /* Frameworks */,
+				1B4A738F16E5B6B800F0E16E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InterAppAudioHost;
+			productName = InterAppAudioHost;
+			productReference = 1B4A739116E5B6B800F0E16E /* IAA Host.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1B4A738916E5B6B800F0E16E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "";
+				TargetAttributes = {
+					1B4A739016E5B6B800F0E16E = {
+						SystemCapabilities = {
+							com.apple.InterAppAudio = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 1B4A738C16E5B6B800F0E16E /* Build configuration list for PBXProject "InterAppAudioHost" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1B4A738816E5B6B800F0E16E;
+			productRefGroup = 1B4A739216E5B6B800F0E16E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1B4A739016E5B6B800F0E16E /* InterAppAudioHost */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1B4A738F16E5B6B800F0E16E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B4A73AE16E5B6B800F0E16E /* MainStoryboard_iPhone.storyboard in Resources */,
+				309A5CAF175D45F000238F87 /* CloseIcon.pdf in Resources */,
+				309A5CAE175D45F000238F87 /* AddIcon@2x.png in Resources */,
+				309A5CB5175D45F000238F87 /* HostIcon~iphone.png in Resources */,
+				309A5CBB175D461E00238F87 /* Default@2x.png in Resources */,
+				309A5CB9175D461E00238F87 /* Default-568h@2x.png in Resources */,
+				1B210B591709F2AF0019F719 /* InterAppAudioHost.entitlements in Resources */,
+				309A5CAD175D45F000238F87 /* AddIcon.png in Resources */,
+				309A5CB0175D45F000238F87 /* CloseIcon.png in Resources */,
+				309A5CB1175D45F000238F87 /* CloseIcon@2x.png in Resources */,
+				309A5CB3175D45F000238F87 /* HostIcon@2x~iphone.png in Resources */,
+				309A5CBA175D461E00238F87 /* Default.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1B4A738D16E5B6B800F0E16E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BE4A45D171DF49B00E7653F /* CAStreamBasicDescription.cpp in Sources */,
+				1BB51D7F16F3ECD6007297E5 /* AudioEngine.mm in Sources */,
+				309A5CCE175D465800238F87 /* CAUITransportButton.m in Sources */,
+				1B4A73B416E5B6B800F0E16E /* ViewController.mm in Sources */,
+				309A5CD3175D465800238F87 /* PublishInstrumentsViewController.mm in Sources */,
+				309A5CD4175D465800238F87 /* UIRemoteAudioUnitButton.m in Sources */,
+				1B4A73A516E5B6B800F0E16E /* AppDelegate.mm in Sources */,
+				309A5CD2175D465800238F87 /* PublishedEffectsViewController.mm in Sources */,
+				1BE4A463171DF51700E7653F /* CADebugPrintf.cpp in Sources */,
+				1BE4A460171DF4E700E7653F /* CADebugMacros.cpp in Sources */,
+				309A5CD1175D465800238F87 /* KeyBoardViewController.mm in Sources */,
+				309A5CD0175D465800238F87 /* CAUITransportView.mm in Sources */,
+				1B4A73A116E5B6B800F0E16E /* main.mm in Sources */,
+				309A5CCD175D465800238F87 /* CAUIKeyboardView.mm in Sources */,
+				309A5CCF175D465800238F87 /* CAUITransportSlider.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1B4A73AC16E5B6B800F0E16E /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1B4A73AD16E5B6B800F0E16E /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1B4A73B516E5B6B800F0E16E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_STATIC_ANALYZER_MODE = deep;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1B4A73B616E5B6B800F0E16E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_STATIC_ANALYZER_MODE = deep;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = NO;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1B4A73B816E5B6B800F0E16E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = InterAppAudioHost/InterAppAudioHost.entitlements;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "InterAppAudioHost/InterAppAudioHost-Prefix.pch";
+				INFOPLIST_FILE = "InterAppAudioHost/InterAppAudioHost-Info.plist";
+				OTHER_CFLAGS = "";
+				PRODUCT_NAME = "IAA Host";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1B4A73B916E5B6B800F0E16E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = InterAppAudioHost/InterAppAudioHost.entitlements;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "InterAppAudioHost/InterAppAudioHost-Prefix.pch";
+				INFOPLIST_FILE = "InterAppAudioHost/InterAppAudioHost-Info.plist";
+				OTHER_CFLAGS = "";
+				PRODUCT_NAME = "IAA Host";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1B4A738C16E5B6B800F0E16E /* Build configuration list for PBXProject "InterAppAudioHost" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B4A73B516E5B6B800F0E16E /* Debug */,
+				1B4A73B616E5B6B800F0E16E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1B4A73B716E5B6B800F0E16E /* Build configuration list for PBXNativeTarget "InterAppAudioHost" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B4A73B816E5B6B800F0E16E /* Debug */,
+				1B4A73B916E5B6B800F0E16E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1B4A738916E5B6B800F0E16E /* Project object */;
+}

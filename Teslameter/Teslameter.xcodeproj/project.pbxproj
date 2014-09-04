@@ -1,0 +1,304 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B44A17411CA971200B24959 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B44A17311CA971200B24959 /* CoreGraphics.framework */; };
+		2B44A17611CA971200B24959 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B44A17511CA971200B24959 /* CoreLocation.framework */; };
+		2B44A17811CA971200B24959 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B44A17711CA971200B24959 /* Foundation.framework */; };
+		2B44A17A11CA971200B24959 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B44A17911CA971200B24959 /* UIKit.framework */; };
+		5316DDB319A53A64004579AF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5316DDB219A53A64004579AF /* Images.xcassets */; };
+		5316DDBA19A53AF6004579AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5316DDB519A53AF6004579AF /* AppDelegate.m */; };
+		5316DDBB19A53AF6004579AF /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5316DDB719A53AF6004579AF /* GraphView.m */; };
+		5316DDBC19A53AF6004579AF /* TeslameterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5316DDB919A53AF6004579AF /* TeslameterViewController.m */; };
+		5316DDC719A53B1A004579AF /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 5316DDC619A53B1A004579AF /* Background.png */; };
+		5316DDC919A53C6A004579AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5316DDC819A53C6A004579AF /* main.m */; };
+		5316DE5419A5405A004579AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5316DE5219A5405A004579AF /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D6058910D05DD3D006BFB54 /* Teslameter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Teslameter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B44A17311CA971200B24959 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2B44A17511CA971200B24959 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		2B44A17711CA971200B24959 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2B44A17911CA971200B24959 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		30385B690FFC024D006C2CD2 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		5316DDB219A53A64004579AF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Teslameter/Images.xcassets; sourceTree = "<group>"; };
+		5316DDB419A53AF6004579AF /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Teslameter/Classes/AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		5316DDB519A53AF6004579AF /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Teslameter/Classes/AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		5316DDB619A53AF6004579AF /* GraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GraphView.h; path = Teslameter/Classes/GraphView.h; sourceTree = SOURCE_ROOT; };
+		5316DDB719A53AF6004579AF /* GraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GraphView.m; path = Teslameter/Classes/GraphView.m; sourceTree = SOURCE_ROOT; };
+		5316DDB819A53AF6004579AF /* TeslameterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TeslameterViewController.h; path = Teslameter/Classes/TeslameterViewController.h; sourceTree = SOURCE_ROOT; };
+		5316DDB919A53AF6004579AF /* TeslameterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TeslameterViewController.m; path = Teslameter/Classes/TeslameterViewController.m; sourceTree = SOURCE_ROOT; };
+		5316DDBD19A53AFE004579AF /* Teslameter_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Teslameter_Prefix.pch; path = Teslameter/Teslameter_Prefix.pch; sourceTree = "<group>"; };
+		5316DDBE19A53AFE004579AF /* Teslameter-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Teslameter-Info.plist"; path = "Teslameter/Teslameter-Info.plist"; sourceTree = "<group>"; };
+		5316DDC619A53B1A004579AF /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Background.png; path = Teslameter/Resources/Background.png; sourceTree = "<group>"; };
+		5316DDC819A53C6A004579AF /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Teslameter/main.m; sourceTree = "<group>"; };
+		5316DE5319A5405A004579AF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = Teslameter/Resources/en.lproj/Main.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B44A17411CA971200B24959 /* CoreGraphics.framework in Frameworks */,
+				2B44A17611CA971200B24959 /* CoreLocation.framework in Frameworks */,
+				2B44A17811CA971200B24959 /* Foundation.framework in Frameworks */,
+				2B44A17A11CA971200B24959 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5316DDB419A53AF6004579AF /* AppDelegate.h */,
+				5316DDB519A53AF6004579AF /* AppDelegate.m */,
+				5316DDB819A53AF6004579AF /* TeslameterViewController.h */,
+				5316DDB919A53AF6004579AF /* TeslameterViewController.m */,
+				5316DDB619A53AF6004579AF /* GraphView.h */,
+				5316DDB719A53AF6004579AF /* GraphView.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* Teslameter.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				30385B690FFC024D006C2CD2 /* ReadMe.txt */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5316DDC819A53C6A004579AF /* main.m */,
+				5316DDB219A53A64004579AF /* Images.xcassets */,
+				5316DDBE19A53AFE004579AF /* Teslameter-Info.plist */,
+				5316DE5219A5405A004579AF /* Main.storyboard */,
+				5316DDBD19A53AFE004579AF /* Teslameter_Prefix.pch */,
+				5316DDC619A53B1A004579AF /* Background.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B44A17311CA971200B24959 /* CoreGraphics.framework */,
+				2B44A17511CA971200B24959 /* CoreLocation.framework */,
+				2B44A17711CA971200B24959 /* Foundation.framework */,
+				2B44A17911CA971200B24959 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* Teslameter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Teslameter" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Teslameter;
+			productName = Teslameter;
+			productReference = 1D6058910D05DD3D006BFB54 /* Teslameter.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Teslameter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* Teslameter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5316DDB319A53A64004579AF /* Images.xcassets in Resources */,
+				5316DE5419A5405A004579AF /* Main.storyboard in Resources */,
+				5316DDC719A53B1A004579AF /* Background.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5316DDBB19A53AF6004579AF /* GraphView.m in Sources */,
+				5316DDBA19A53AF6004579AF /* AppDelegate.m in Sources */,
+				5316DDC919A53C6A004579AF /* main.m in Sources */,
+				5316DDBC19A53AF6004579AF /* TeslameterViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5316DE5219A5405A004579AF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5316DE5319A5405A004579AF /* en */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Teslameter/Teslameter_Prefix.pch;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				INFOPLIST_FILE = "Teslameter/Teslameter-Info.plist";
+				PRODUCT_NAME = Teslameter;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Teslameter/Teslameter_Prefix.pch;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				INFOPLIST_FILE = "Teslameter/Teslameter-Info.plist";
+				PRODUCT_NAME = Teslameter;
+				RUN_CLANG_STATIC_ANALYZER = NO;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Teslameter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Teslameter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

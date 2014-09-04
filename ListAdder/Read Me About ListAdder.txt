@@ -1,0 +1,64 @@
+Read Me About ListAdder
+=================
+1.0
+
+This samples demonstrates the technique of thread confinement using NSOperation.  It was written to support Technote TN2109 "Simple and Reliable Threading with NSOperation".
+
+ListAdder requires iPhone OS 3.1.3, although the underlying will work on all versions of iOS and on Mac OS X 10.5 and later.
+
+Packing List
+------------
+The sample contains the following items:
+
+o Read Me About ListAdder.txt -- This file.
+
+o ListAdder.xcodeproj -- An Xcode project for the sample.
+
+o main.m, Info.plist, images, MainWindow.xib, and AppDelegate.[hm] -- Uninteresting boilerplate code.
+
+o ListAdderViewController.[hm] -- A view controller for the main view.
+
+o AdderOperation.[hm] -- The NSOperation subclass that does the asynchronous add.  Together with ListAdderViewController this represents the interesting part of the code.
+
+o NumberPickerController.[hm] -- A view controller that lets the user choose a number to add to the list.
+
+o OptionsController.[hm] -- A view controller that lets the user change various debugging options.
+
+Building the Sample
+-------------------
+The sample was built using Xcode 3.2.3 on Mac OS X 10.6.4 with the iOS 4.0 SDK.  You should be able to just open the project and choose Build from the Build menu.
+
+Using the Sample
+----------------
+Upon running the sample you are presented with a list of numbers.  You can tap the plus button to add a number to the list.  You can tap one of the minus buttons to remove items from the list.  Whenever you change the list the application kicks off an async operation to update the total being displayed.  This operation is artifically slowed down to help test various edge cases.
+
+You can tap the Minimum button to set the list of items to a single entry or, if the list is already a single entry, tap the Defaults button to set it back to the default list.  This is useful when testing various edge cases.  You can also tap the Options button to enable various testing options:
+
+o "Retain, Not Copy" -- If you enable this option AdderOperation retains, rather than copying, the incoming list of numbers.  If you do this and then tap the Defaults/Minimum button rapidly, the application will crash as the main thread mutates the list that's being operated on by the thread running the AdderOperation.
+
+o "Allow Stale" -- If you enable this option ListAdderViewController does not check whether a completed operation is still relevant, meaning that, if you make changes in rapid succession, you see stale results in the user interface.
+
+o "Use Threads Directly" -- If you enable this option ListAdderViewController will use a thread rather than an NSOperation to update the total.  This allows us the code to demonstrate the various problems that crop up when using threads rather than operations.
+
+o "Apply Results From Thread" -- If you enable this option ListAdderViewController will commit the results directly from its secondary thread rather than bouncing back to the main thread.  Needless to say, that generally ends badly.
+
+IMPORTANT: Because this sample was written to support Technote TN2109, it demonstrates various techniques that are incorrect.  Such code is either never executed (and commented as such) or executed conditionally based on the debugging options listed above.  If you enable these options, the code will do the wrong thing and, beyond that, it may crash.  Specifically, in the Debug build it may trip an assert, while in the Release build it's likely to crash in more subtle ways.
+
+How it Works
+------------
+This sample was created to support TN 2109 "Simple and Reliable Threading with NSOperation".  You should read that technote to learn more about this code.
+
+Credits and Version History
+---------------------------
+If you find any problems with this sample, please file a bug against it.
+
+<http://developer.apple.com/bugreporter/>
+
+1.0 (Aug 2010) was the first shipping version.
+
+Share and Enjoy
+
+Apple Developer Technical Support
+Core OS/Hardware
+
+24 Aug 2010

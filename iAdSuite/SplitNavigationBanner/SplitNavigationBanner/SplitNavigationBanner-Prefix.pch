@@ -1,0 +1,16 @@
+//
+// Prefix header for all source files of the 'SplitViewBanner' target in the 'SplitViewBanner' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_6_0
+#warning "This project uses features only available in iOS SDK 6.0 and later."
+#elif __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_5_0
+#error "This project requires features only available in iOS 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif

@@ -1,0 +1,755 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1719A26613D67961004919FD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1785896213D65FEA00B74C20 /* Cocoa.framework */; };
+		1719A27313D67961004919FD /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1719A17B13D66F38004919FD /* SenTestingKit.framework */; };
+		1719A27413D67962004919FD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1785896213D65FEA00B74C20 /* Cocoa.framework */; };
+		1719A27713D67962004919FD /* libCalculator-Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1719A26513D67961004919FD /* libCalculator-Mac.a */; };
+		1719A28D13D67A4E004919FD /* libCalculator-Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1719A26513D67961004919FD /* libCalculator-Mac.a */; };
+		174D742614874E0D0072FE0E /* Calculator.h in Headers */ = {isa = PBXBuildFile; fileRef = 174D742414874E0D0072FE0E /* Calculator.h */; };
+		174D742714874E0D0072FE0E /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 174D742514874E0D0072FE0E /* Calculator.m */; };
+		174D742914874E430072FE0E /* CalculatorLogicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 174D742814874E430072FE0E /* CalculatorLogicTests.m */; };
+		175E61770D931524005300FF /* CalcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 175E61750D931524005300FF /* CalcViewController.m */; };
+		176B088813D9F01100A44995 /* CalcAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 176B088713D9F01100A44995 /* CalcAppDelegate.m */; };
+		1785896313D65FEA00B74C20 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1785896213D65FEA00B74C20 /* Cocoa.framework */; };
+		1785896713D6608C00B74C20 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 1785896813D6608C00B74C20 /* MainMenu.nib */; };
+		17EBFC7813D918A80055FBF7 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1719A17B13D66F38004919FD /* SenTestingKit.framework */; };
+		17EBFC7913D918A80055FBF7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1785896213D65FEA00B74C20 /* Cocoa.framework */; };
+		17EBFC8113D918A80055FBF7 /* CalcTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 17EBFC8013D918A80055FBF7 /* CalcTests.h */; };
+		17EBFC8313D918A80055FBF7 /* CalcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17EBFC8213D918A80055FBF7 /* CalcTests.m */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1719A27513D67962004919FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1719A26413D67961004919FD;
+			remoteInfo = "Calculator-MacOS";
+		};
+		1719A28E13D67C3F004919FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1719A26413D67961004919FD;
+			remoteInfo = "Calculator-MacOS";
+		};
+		1794A35B13D9DBF200555D8C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D1107260486CEB800E47090;
+			remoteInfo = MacOS_Calc;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1719A16C13D66F38004919FD /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		1719A16D13D66F38004919FD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		1719A16E13D66F38004919FD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1719A17B13D66F38004919FD /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		1719A26513D67961004919FD /* libCalculator-Mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libCalculator-Mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1719A26913D67961004919FD /* Calculator-Mac-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Calculator-Mac-Prefix.pch"; sourceTree = "<group>"; };
+		1719A27213D67961004919FD /* Calculator-Mac_LogicTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Calculator-Mac_LogicTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1719A27A13D67962004919FD /* Calculator-Mac_LogicTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Calculator-Mac_LogicTests-Info.plist"; sourceTree = "<group>"; };
+		174D742414874E0D0072FE0E /* Calculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Calculator.h; path = ../../Shared/Calculator.h; sourceTree = "<group>"; };
+		174D742514874E0D0072FE0E /* Calculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Calculator.m; path = ../../Shared/Calculator.m; sourceTree = "<group>"; };
+		174D742814874E430072FE0E /* CalculatorLogicTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CalculatorLogicTests.m; path = ../../Shared/CalculatorLogicTests.m; sourceTree = "<group>"; };
+		175E61750D931524005300FF /* CalcViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalcViewController.m; sourceTree = "<group>"; };
+		175E61760D931524005300FF /* CalcViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalcViewController.h; sourceTree = "<group>"; };
+		176B088613D9F01100A44995 /* CalcAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalcAppDelegate.h; sourceTree = "<group>"; };
+		176B088713D9F01100A44995 /* CalcAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalcAppDelegate.m; sourceTree = "<group>"; };
+		1785896213D65FEA00B74C20 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		1785896813D6608C00B74C20 /* MainMenu.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = MainMenu.nib; sourceTree = "<group>"; };
+		17EBFC7713D918A80055FBF7 /* Mac_Calc_ApplicationTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Mac_Calc_ApplicationTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		17EBFC7C13D918A80055FBF7 /* Calc_ApplicationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Calc_ApplicationTests-Info.plist"; sourceTree = "<group>"; };
+		17EBFC8013D918A80055FBF7 /* CalcTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalcTests.h; sourceTree = "<group>"; };
+		17EBFC8213D918A80055FBF7 /* CalcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalcTests.m; sourceTree = "<group>"; };
+		17EBFC8413D918A80055FBF7 /* Calc_ApplicationTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Calc_ApplicationTests-Prefix.pch"; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* Calc_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Calc_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Calc-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Calc-Info.plist"; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* Calc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calc.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1719A26213D67961004919FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1719A26613D67961004919FD /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1719A26E13D67961004919FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1719A27313D67961004919FD /* SenTestingKit.framework in Frameworks */,
+				1719A27413D67962004919FD /* Cocoa.framework in Frameworks */,
+				1719A27713D67962004919FD /* libCalculator-Mac.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17EBFC7313D918A80055FBF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17EBFC7813D918A80055FBF7 /* SenTestingKit.framework in Frameworks */,
+				17EBFC7913D918A80055FBF7 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1719A28D13D67A4E004919FD /* libCalculator-Mac.a in Frameworks */,
+				1785896313D65FEA00B74C20 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1719A16B13D66F38004919FD /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1719A16C13D66F38004919FD /* AppKit.framework */,
+				1719A16D13D66F38004919FD /* CoreData.framework */,
+				1719A16E13D66F38004919FD /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		1719A26713D67961004919FD /* Calculator-Mac */ = {
+			isa = PBXGroup;
+			children = (
+				174D742414874E0D0072FE0E /* Calculator.h */,
+				174D742514874E0D0072FE0E /* Calculator.m */,
+				1719A26813D67961004919FD /* Supporting Files */,
+			);
+			path = "Calculator-Mac";
+			sourceTree = "<group>";
+		};
+		1719A26813D67961004919FD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1719A26913D67961004919FD /* Calculator-Mac-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1719A27813D67962004919FD /* Calculator-Mac_LogicTests */ = {
+			isa = PBXGroup;
+			children = (
+				174D742814874E430072FE0E /* CalculatorLogicTests.m */,
+				1719A27913D67962004919FD /* Supporting Files */,
+			);
+			path = "Calculator-Mac_LogicTests";
+			sourceTree = "<group>";
+		};
+		1719A27913D67962004919FD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1719A27A13D67962004919FD /* Calculator-Mac_LogicTests-Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1785896913D660F300B74C20 /* Mac_Calc */ = {
+			isa = PBXGroup;
+			children = (
+				176B088613D9F01100A44995 /* CalcAppDelegate.h */,
+				176B088713D9F01100A44995 /* CalcAppDelegate.m */,
+				175E61760D931524005300FF /* CalcViewController.h */,
+				175E61750D931524005300FF /* CalcViewController.m */,
+				1785896813D6608C00B74C20 /* MainMenu.nib */,
+				1785896A13D6612900B74C20 /* Supporting Files */,
+			);
+			path = Mac_Calc;
+			sourceTree = "<group>";
+		};
+		1785896A13D6612900B74C20 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* Calc_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+				8D1107310486CEB800E47090 /* Calc-Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		17EBFC7A13D918A80055FBF7 /* Mac_Calc_ApplicationTests */ = {
+			isa = PBXGroup;
+			children = (
+				17EBFC8013D918A80055FBF7 /* CalcTests.h */,
+				17EBFC8213D918A80055FBF7 /* CalcTests.m */,
+				17EBFC7B13D918A80055FBF7 /* Supporting Files */,
+			);
+			path = Mac_Calc_ApplicationTests;
+			sourceTree = "<group>";
+		};
+		17EBFC7B13D918A80055FBF7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				17EBFC7C13D918A80055FBF7 /* Calc_ApplicationTests-Info.plist */,
+				17EBFC8413D918A80055FBF7 /* Calc_ApplicationTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* Calc.app */,
+				1719A26513D67961004919FD /* libCalculator-Mac.a */,
+				1719A27213D67961004919FD /* Calculator-Mac_LogicTests.octest */,
+				17EBFC7713D918A80055FBF7 /* Mac_Calc_ApplicationTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* SciCalc */ = {
+			isa = PBXGroup;
+			children = (
+				1785896913D660F300B74C20 /* Mac_Calc */,
+				17EBFC7A13D918A80055FBF7 /* Mac_Calc_ApplicationTests */,
+				1719A26713D67961004919FD /* Calculator-Mac */,
+				1719A27813D67962004919FD /* Calculator-Mac_LogicTests */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = SciCalc;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1785896213D65FEA00B74C20 /* Cocoa.framework */,
+				1719A17B13D66F38004919FD /* SenTestingKit.framework */,
+				1719A16B13D66F38004919FD /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1719A26313D67961004919FD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				174D742614874E0D0072FE0E /* Calculator.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1719A26413D67961004919FD /* Calculator-Mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1719A28213D67962004919FD /* Build configuration list for PBXNativeTarget "Calculator-Mac" */;
+			buildPhases = (
+				1719A26113D67961004919FD /* Sources */,
+				1719A26213D67961004919FD /* Frameworks */,
+				1719A26313D67961004919FD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Calculator-Mac";
+			productName = "Calculator-MacOS";
+			productReference = 1719A26513D67961004919FD /* libCalculator-Mac.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		1719A27113D67961004919FD /* Calculator-Mac_LogicTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1719A28513D67962004919FD /* Build configuration list for PBXNativeTarget "Calculator-Mac_LogicTests" */;
+			buildPhases = (
+				1719A26D13D67961004919FD /* Sources */,
+				1719A26E13D67961004919FD /* Frameworks */,
+				1719A26F13D67961004919FD /* Resources */,
+				1719A27013D67961004919FD /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1719A27613D67962004919FD /* PBXTargetDependency */,
+			);
+			name = "Calculator-Mac_LogicTests";
+			productName = "Calculator-MacOSTests";
+			productReference = 1719A27213D67961004919FD /* Calculator-Mac_LogicTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		17EBFC7613D918A80055FBF7 /* Mac_Calc_ApplicationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17EBFC8713D918A80055FBF7 /* Build configuration list for PBXNativeTarget "Mac_Calc_ApplicationTests" */;
+			buildPhases = (
+				17EBFC7213D918A80055FBF7 /* Sources */,
+				17EBFC7313D918A80055FBF7 /* Frameworks */,
+				17EBFC7413D918A80055FBF7 /* Resources */,
+				17EBFC7513D918A80055FBF7 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1794A35C13D9DBF200555D8C /* PBXTargetDependency */,
+			);
+			name = Mac_Calc_ApplicationTests;
+			productName = MacOS_CalcTests;
+			productReference = 17EBFC7713D918A80055FBF7 /* Mac_Calc_ApplicationTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		8D1107260486CEB800E47090 /* Mac_Calc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Mac_Calc" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1719A28F13D67C3F004919FD /* PBXTargetDependency */,
+			);
+			name = Mac_Calc;
+			productInstallPath = "$(HOME)/Applications";
+			productName = SciCalc;
+			productReference = 8D1107320486CEB800E47090 /* Calc.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Mac_Calc" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* SciCalc */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* Mac_Calc */,
+				17EBFC7613D918A80055FBF7 /* Mac_Calc_ApplicationTests */,
+				1719A26413D67961004919FD /* Calculator-Mac */,
+				1719A27113D67961004919FD /* Calculator-Mac_LogicTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1719A26F13D67961004919FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17EBFC7413D918A80055FBF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17EBFC8113D918A80055FBF7 /* CalcTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1785896713D6608C00B74C20 /* MainMenu.nib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1719A27013D67961004919FD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		17EBFC7513D918A80055FBF7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1719A26113D67961004919FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				174D742714874E0D0072FE0E /* Calculator.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1719A26D13D67961004919FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				174D742914874E430072FE0E /* CalculatorLogicTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17EBFC7213D918A80055FBF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17EBFC8313D918A80055FBF7 /* CalcTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				175E61770D931524005300FF /* CalcViewController.m in Sources */,
+				176B088813D9F01100A44995 /* CalcAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1719A27613D67962004919FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1719A26413D67961004919FD /* Calculator-Mac */;
+			targetProxy = 1719A27513D67962004919FD /* PBXContainerItemProxy */;
+		};
+		1719A28F13D67C3F004919FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1719A26413D67961004919FD /* Calculator-Mac */;
+			targetProxy = 1719A28E13D67C3F004919FD /* PBXContainerItemProxy */;
+		};
+		1794A35C13D9DBF200555D8C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D1107260486CEB800E47090 /* Mac_Calc */;
+			targetProxy = 1794A35B13D9DBF200555D8C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1719A28313D67962004919FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Calculator-Mac/Calculator-Mac-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1719A28413D67962004919FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Calculator-Mac/Calculator-Mac-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		1719A28613D67962004919FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Calculator-Mac/Calculator-Mac-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				INFOPLIST_FILE = "Calculator-Mac_LogicTests/Calculator-Mac_LogicTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		1719A28713D67962004919FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Calculator-Mac/Calculator-Mac-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				INFOPLIST_FILE = "Calculator-Mac_LogicTests/Calculator-Mac_LogicTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		17EBFC8513D918A80055FBF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Calc.app//Contents/MacOS/Calc";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Mac_Calc_ApplicationTests/Calc_ApplicationTests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				INFOPLIST_FILE = "Mac_Calc_ApplicationTests/Calc_ApplicationTests-Info.plist";
+				PRODUCT_NAME = Mac_Calc_ApplicationTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		17EBFC8613D918A80055FBF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Calc.app//Contents/MacOS/Calc";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Mac_Calc_ApplicationTests/Calc_ApplicationTests-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				INFOPLIST_FILE = "Mac_Calc_ApplicationTests/Calc_ApplicationTests-Info.plist";
+				PRODUCT_NAME = Mac_Calc_ApplicationTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_DIR)/Library/Frameworks";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Mac_Calc/Calc_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				"HEADER_SEARCH_PATHS[arch=i386]" = (
+					My,
+					"32-bit",
+					search,
+					path,
+				);
+				"HEADER_SEARCH_PATHS[arch=x86_64]" = (
+					My,
+					"64-bit",
+					search,
+					path,
+				);
+				INFOPLIST_FILE = "Mac_Calc/Calc-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = Calc;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_DIR)/Library/Frameworks";
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Mac_Calc/Calc_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				"HEADER_SEARCH_PATHS[arch=i386]" = (
+					My,
+					"32-bit",
+					search,
+					path,
+				);
+				"HEADER_SEARCH_PATHS[arch=x86_64]" = (
+					My,
+					"64-bit",
+					search,
+					path,
+				);
+				INFOPLIST_FILE = "Mac_Calc/Calc-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = Calc;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1719A28213D67962004919FD /* Build configuration list for PBXNativeTarget "Calculator-Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1719A28313D67962004919FD /* Debug */,
+				1719A28413D67962004919FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1719A28513D67962004919FD /* Build configuration list for PBXNativeTarget "Calculator-Mac_LogicTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1719A28613D67962004919FD /* Debug */,
+				1719A28713D67962004919FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17EBFC8713D918A80055FBF7 /* Build configuration list for PBXNativeTarget "Mac_Calc_ApplicationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17EBFC8513D918A80055FBF7 /* Debug */,
+				17EBFC8613D918A80055FBF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Mac_Calc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Mac_Calc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

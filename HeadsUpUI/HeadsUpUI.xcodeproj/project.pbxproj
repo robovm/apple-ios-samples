@@ -1,0 +1,355 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623EC0D0F72F000981E51 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3623EB0D0F72F000981E51 /* CoreGraphics.framework */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		53095FF40D9C4D1A00F143AD /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53095FF00D9C4D1A00F143AD /* RootViewController.m */; };
+		53095FF50D9C4D1A00F143AD /* HeadsUpUIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 53095FF30D9C4D1A00F143AD /* HeadsUpUIAppDelegate.m */; };
+		5309602E0D9C4E0800F143AD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5309602D0D9C4E0800F143AD /* QuartzCore.framework */; };
+		53F8DE130E2690F700AC932A /* RightPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 53F8DE110E2690F700AC932A /* RightPressed.png */; };
+		53F8DE140E2690F700AC932A /* LeftPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 53F8DE120E2690F700AC932A /* LeftPressed.png */; };
+		53FBD3A20E1D667B00DD2A76 /* HoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53FBD3A10E1D667B00DD2A76 /* HoverView.m */; };
+		53FBD5380E1D700100DD2A76 /* Left.png in Resources */ = {isa = PBXBuildFile; fileRef = 53FBD5340E1D700100DD2A76 /* Left.png */; };
+		53FBD5390E1D700100DD2A76 /* Right.png in Resources */ = {isa = PBXBuildFile; fileRef = 53FBD5350E1D700100DD2A76 /* Right.png */; };
+		D02C45B7173B0A2F00A1D255 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D02C45B9173B0A2F00A1D255 /* MainStoryboard.storyboard */; };
+		D02C45BC173B0A7D00A1D255 /* HoverView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D02C45BE173B0A7D00A1D255 /* HoverView.xib */; };
+		D053429C173DAA8700F9681D /* Left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0534298173DAA8700F9681D /* Left@2x.png */; };
+		D053429D173DAA8700F9681D /* LeftPressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0534299173DAA8700F9681D /* LeftPressed@2x.png */; };
+		D053429E173DAA8700F9681D /* Right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D053429A173DAA8700F9681D /* Right@2x.png */; };
+		D053429F173DAA8700F9681D /* RightPressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D053429B173DAA8700F9681D /* RightPressed@2x.png */; };
+		D05342A4173DABEE00F9681D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D05342A1173DABEE00F9681D /* Default-568h@2x.png */; };
+		D05342A5173DABEE00F9681D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D05342A2173DABEE00F9681D /* Default.png */; };
+		D05342A6173DABEE00F9681D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D05342A3173DABEE00F9681D /* Default@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623EB0D0F72F000981E51 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1D6058910D05DD3D006BFB54 /* HeadsUpUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeadsUpUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		53095FEF0D9C4D0500F143AD /* HeadsUpUI_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadsUpUI_Prefix.pch; sourceTree = "<group>"; };
+		53095FF00D9C4D1A00F143AD /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		53095FF10D9C4D1A00F143AD /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		53095FF20D9C4D1A00F143AD /* HeadsUpUIAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadsUpUIAppDelegate.h; sourceTree = "<group>"; };
+		53095FF30D9C4D1A00F143AD /* HeadsUpUIAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadsUpUIAppDelegate.m; sourceTree = "<group>"; };
+		5309602D0D9C4E0800F143AD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		539AAA6F0E510059002ABC36 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		53F8DE110E2690F700AC932A /* RightPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RightPressed.png; path = images/RightPressed.png; sourceTree = "<group>"; };
+		53F8DE120E2690F700AC932A /* LeftPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LeftPressed.png; path = images/LeftPressed.png; sourceTree = "<group>"; };
+		53FBD3A00E1D667B00DD2A76 /* HoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HoverView.h; sourceTree = "<group>"; };
+		53FBD3A10E1D667B00DD2A76 /* HoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HoverView.m; sourceTree = "<group>"; };
+		53FBD5340E1D700100DD2A76 /* Left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Left.png; path = images/Left.png; sourceTree = "<group>"; };
+		53FBD5350E1D700100DD2A76 /* Right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Right.png; path = images/Right.png; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* HeadsUpUI-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "HeadsUpUI-Info.plist"; sourceTree = "<group>"; };
+		D02C45B8173B0A2F00A1D255 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		D02C45BD173B0A7D00A1D255 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HoverView.xib; sourceTree = "<group>"; };
+		D0534298173DAA8700F9681D /* Left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Left@2x.png"; path = "images/Left@2x.png"; sourceTree = "<group>"; };
+		D0534299173DAA8700F9681D /* LeftPressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "LeftPressed@2x.png"; path = "images/LeftPressed@2x.png"; sourceTree = "<group>"; };
+		D053429A173DAA8700F9681D /* Right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Right@2x.png"; path = "images/Right@2x.png"; sourceTree = "<group>"; };
+		D053429B173DAA8700F9681D /* RightPressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "RightPressed@2x.png"; path = "images/RightPressed@2x.png"; sourceTree = "<group>"; };
+		D05342A1173DABEE00F9681D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "images/Default-568h@2x.png"; sourceTree = "<group>"; };
+		D05342A2173DABEE00F9681D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = images/Default.png; sourceTree = "<group>"; };
+		D05342A3173DABEE00F9681D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "images/Default@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				1D3623EC0D0F72F000981E51 /* CoreGraphics.framework in Frameworks */,
+				5309602E0D9C4E0800F143AD /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* HeadsUpUI.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				539AAA6F0E510059002ABC36 /* ReadMe.txt */,
+				53AF8AEC0D9C50B700726DBA /* HeadsUpUI */,
+				D05342A0173DAA8F00F9681D /* Images */,
+				29B97317FDCFA39411CA2CEA /* Supporting Files */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D05342A1173DABEE00F9681D /* Default-568h@2x.png */,
+				D05342A3173DABEE00F9681D /* Default@2x.png */,
+				D05342A2173DABEE00F9681D /* Default.png */,
+				8D1107310486CEB800E47090 /* HeadsUpUI-Info.plist */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+				53095FEF0D9C4D0500F143AD /* HeadsUpUI_Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5309602D0D9C4E0800F143AD /* QuartzCore.framework */,
+				1D3623EB0D0F72F000981E51 /* CoreGraphics.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		53AF8AEC0D9C50B700726DBA /* HeadsUpUI */ = {
+			isa = PBXGroup;
+			children = (
+				53095FF20D9C4D1A00F143AD /* HeadsUpUIAppDelegate.h */,
+				53095FF30D9C4D1A00F143AD /* HeadsUpUIAppDelegate.m */,
+				D02C45B9173B0A2F00A1D255 /* MainStoryboard.storyboard */,
+				53095FF10D9C4D1A00F143AD /* RootViewController.h */,
+				53095FF00D9C4D1A00F143AD /* RootViewController.m */,
+				D02C45BE173B0A7D00A1D255 /* HoverView.xib */,
+				53FBD3A00E1D667B00DD2A76 /* HoverView.h */,
+				53FBD3A10E1D667B00DD2A76 /* HoverView.m */,
+			);
+			name = HeadsUpUI;
+			sourceTree = "<group>";
+		};
+		D05342A0173DAA8F00F9681D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				D0534298173DAA8700F9681D /* Left@2x.png */,
+				53FBD5340E1D700100DD2A76 /* Left.png */,
+				D0534299173DAA8700F9681D /* LeftPressed@2x.png */,
+				53F8DE120E2690F700AC932A /* LeftPressed.png */,
+				D053429A173DAA8700F9681D /* Right@2x.png */,
+				53FBD5350E1D700100DD2A76 /* Right.png */,
+				D053429B173DAA8700F9681D /* RightPressed@2x.png */,
+				53F8DE110E2690F700AC932A /* RightPressed.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* HeadsUpUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "HeadsUpUI" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HeadsUpUI;
+			productName = IBTest;
+			productReference = 1D6058910D05DD3D006BFB54 /* HeadsUpUI.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "HeadsUpUI" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* HeadsUpUI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53FBD5380E1D700100DD2A76 /* Left.png in Resources */,
+				53FBD5390E1D700100DD2A76 /* Right.png in Resources */,
+				53F8DE130E2690F700AC932A /* RightPressed.png in Resources */,
+				53F8DE140E2690F700AC932A /* LeftPressed.png in Resources */,
+				D02C45B7173B0A2F00A1D255 /* MainStoryboard.storyboard in Resources */,
+				D02C45BC173B0A7D00A1D255 /* HoverView.xib in Resources */,
+				D053429C173DAA8700F9681D /* Left@2x.png in Resources */,
+				D053429D173DAA8700F9681D /* LeftPressed@2x.png in Resources */,
+				D053429E173DAA8700F9681D /* Right@2x.png in Resources */,
+				D053429F173DAA8700F9681D /* RightPressed@2x.png in Resources */,
+				D05342A4173DABEE00F9681D /* Default-568h@2x.png in Resources */,
+				D05342A5173DABEE00F9681D /* Default.png in Resources */,
+				D05342A6173DABEE00F9681D /* Default@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				53095FF40D9C4D1A00F143AD /* RootViewController.m in Sources */,
+				53095FF50D9C4D1A00F143AD /* HeadsUpUIAppDelegate.m in Sources */,
+				53FBD3A20E1D667B00DD2A76 /* HoverView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D02C45B9173B0A2F00A1D255 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D02C45B8173B0A2F00A1D255 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		D02C45BE173B0A7D00A1D255 /* HoverView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D02C45BD173B0A7D00A1D255 /* en */,
+			);
+			name = HoverView.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = HeadsUpUI_Prefix.pch;
+				INFOPLIST_FILE = "HeadsUpUI-Info.plist";
+				PRODUCT_NAME = HeadsUpUI;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = HeadsUpUI_Prefix.pch;
+				INFOPLIST_FILE = "HeadsUpUI-Info.plist";
+				PRODUCT_NAME = HeadsUpUI;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				ONLY_ACTIVE_ARCH = YES;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "HeadsUpUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "HeadsUpUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

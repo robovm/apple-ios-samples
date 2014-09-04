@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4471.1" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2C1-Pe-LLQ">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3697.3"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="82z-lG-Wll">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2C1-Pe-LLQ" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="m5D-CV-5Vh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pFI-Tr-2QK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="491" y="-45"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="t7p-yH-tXQ">
+            <objects>
+                <viewController storyboardIdentifier="detailVC" id="Blf-uo-e93" customClass="APLDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nwW-WM-9Tf"/>
+                        <viewControllerLayoutGuide type="bottom" id="DCE-tD-6hE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="o8t-mM-LAQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F87-Pl-EaI">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="F87-Pl-EaI" firstAttribute="bottom" secondItem="o8t-mM-LAQ" secondAttribute="bottom" id="0oq-vE-94y"/>
+                            <constraint firstItem="F87-Pl-EaI" firstAttribute="top" secondItem="o8t-mM-LAQ" secondAttribute="top" id="9eD-hJ-aSM"/>
+                            <constraint firstItem="F87-Pl-EaI" firstAttribute="leading" secondItem="o8t-mM-LAQ" secondAttribute="leading" id="EUp-Hu-KTW"/>
+                            <constraint firstItem="F87-Pl-EaI" firstAttribute="trailing" secondItem="o8t-mM-LAQ" secondAttribute="trailing" id="qVs-mB-cAy"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="imageView" destination="F87-Pl-EaI" id="vma-ky-kfj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ct-LO-LhH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="929" y="-45"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

@@ -1,0 +1,363 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EB0629F7196B3BAC00F73A79 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB0629F6196B3BAC00F73A79 /* Foundation.framework */; };
+		EB0629F9196B3BAC00F73A79 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB0629F8196B3BAC00F73A79 /* CoreGraphics.framework */; };
+		EB0629FB196B3BAC00F73A79 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB0629FA196B3BAC00F73A79 /* UIKit.framework */; };
+		EB062A01196B3BAC00F73A79 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EB0629FF196B3BAC00F73A79 /* InfoPlist.strings */; };
+		EB062A03196B3BAC00F73A79 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB062A02196B3BAC00F73A79 /* main.m */; };
+		EB062A07196B3BAC00F73A79 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB062A06196B3BAC00F73A79 /* AppDelegate.m */; };
+		EB062A09196B3BAC00F73A79 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB062A08196B3BAC00F73A79 /* Images.xcassets */; };
+		EBD87A271975B319007E5E98 /* iOSInAppPurchases.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBD87A291975B319007E5E98 /* iOSInAppPurchases.storyboard */; };
+		EBF30CFC196B4DB60055AF16 /* iOSProductsList.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF30CFB196B4DB60055AF16 /* iOSProductsList.m */; };
+		EBF30CFF196B4DC00055AF16 /* iOSPurchasesList.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF30CFE196B4DC00055AF16 /* iOSPurchasesList.m */; };
+		EBF30D06196B4DC80055AF16 /* MyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF30D01196B4DC80055AF16 /* MyModel.m */; };
+		EBF30D07196B4DC80055AF16 /* ParentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF30D03196B4DC80055AF16 /* ParentViewController.m */; };
+		EBF30D08196B4DC80055AF16 /* PaymentTransactionDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF30D05196B4DC80055AF16 /* PaymentTransactionDetails.m */; };
+		EBF30D0D196B4DD50055AF16 /* StoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF30D0A196B4DD50055AF16 /* StoreManager.m */; };
+		EBF30D0E196B4DD50055AF16 /* StoreObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF30D0C196B4DD50055AF16 /* StoreObserver.m */; };
+		EBF30D10196B4DE20055AF16 /* ProductIds.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBF30D0F196B4DE20055AF16 /* ProductIds.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A35BDE2D196E613F00917A3A /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		EB0629F3196B3BAC00F73A79 /* iOSInAppPurchases.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSInAppPurchases.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB0629F6196B3BAC00F73A79 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EB0629F8196B3BAC00F73A79 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EB0629FA196B3BAC00F73A79 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EB0629FE196B3BAC00F73A79 /* iOSInAppPurchases-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOSInAppPurchases-Info.plist"; sourceTree = "<group>"; };
+		EB062A00196B3BAC00F73A79 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EB062A02196B3BAC00F73A79 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EB062A04196B3BAC00F73A79 /* iOSInAppPurchases-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSInAppPurchases-Prefix.pch"; sourceTree = "<group>"; };
+		EB062A05196B3BAC00F73A79 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EB062A06196B3BAC00F73A79 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EB062A08196B3BAC00F73A79 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EBD87A281975B319007E5E98 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/iOSInAppPurchases.storyboard; sourceTree = "<group>"; };
+		EBF30CFA196B4DB60055AF16 /* iOSProductsList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iOSProductsList.h; sourceTree = "<group>"; };
+		EBF30CFB196B4DB60055AF16 /* iOSProductsList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iOSProductsList.m; sourceTree = "<group>"; };
+		EBF30CFD196B4DC00055AF16 /* iOSPurchasesList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iOSPurchasesList.h; sourceTree = "<group>"; };
+		EBF30CFE196B4DC00055AF16 /* iOSPurchasesList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iOSPurchasesList.m; sourceTree = "<group>"; };
+		EBF30D00196B4DC80055AF16 /* MyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyModel.h; sourceTree = "<group>"; };
+		EBF30D01196B4DC80055AF16 /* MyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyModel.m; sourceTree = "<group>"; };
+		EBF30D02196B4DC80055AF16 /* ParentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParentViewController.h; sourceTree = "<group>"; };
+		EBF30D03196B4DC80055AF16 /* ParentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParentViewController.m; sourceTree = "<group>"; };
+		EBF30D04196B4DC80055AF16 /* PaymentTransactionDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentTransactionDetails.h; sourceTree = "<group>"; };
+		EBF30D05196B4DC80055AF16 /* PaymentTransactionDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentTransactionDetails.m; sourceTree = "<group>"; };
+		EBF30D09196B4DD50055AF16 /* StoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreManager.h; sourceTree = "<group>"; };
+		EBF30D0A196B4DD50055AF16 /* StoreManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreManager.m; sourceTree = "<group>"; };
+		EBF30D0B196B4DD50055AF16 /* StoreObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreObserver.h; sourceTree = "<group>"; };
+		EBF30D0C196B4DD50055AF16 /* StoreObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreObserver.m; sourceTree = "<group>"; };
+		EBF30D0F196B4DE20055AF16 /* ProductIds.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ProductIds.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EB0629F0196B3BAC00F73A79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB0629F9196B3BAC00F73A79 /* CoreGraphics.framework in Frameworks */,
+				EB0629FB196B3BAC00F73A79 /* UIKit.framework in Frameworks */,
+				EB0629F7196B3BAC00F73A79 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EB0629EA196B3BAC00F73A79 = {
+			isa = PBXGroup;
+			children = (
+				A35BDE2D196E613F00917A3A /* ReadMe.txt */,
+				EB0629FC196B3BAC00F73A79 /* iOSInAppPurchases */,
+				EB0629F5196B3BAC00F73A79 /* Frameworks */,
+				EB0629F4196B3BAC00F73A79 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EB0629F4196B3BAC00F73A79 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EB0629F3196B3BAC00F73A79 /* iOSInAppPurchases.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EB0629F5196B3BAC00F73A79 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB0629F6196B3BAC00F73A79 /* Foundation.framework */,
+				EB0629F8196B3BAC00F73A79 /* CoreGraphics.framework */,
+				EB0629FA196B3BAC00F73A79 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EB0629FC196B3BAC00F73A79 /* iOSInAppPurchases */ = {
+			isa = PBXGroup;
+			children = (
+				EB062A05196B3BAC00F73A79 /* AppDelegate.h */,
+				EB062A06196B3BAC00F73A79 /* AppDelegate.m */,
+				EBF30CFA196B4DB60055AF16 /* iOSProductsList.h */,
+				EBF30CFB196B4DB60055AF16 /* iOSProductsList.m */,
+				EBF30CFD196B4DC00055AF16 /* iOSPurchasesList.h */,
+				EBF30CFE196B4DC00055AF16 /* iOSPurchasesList.m */,
+				EBF30D00196B4DC80055AF16 /* MyModel.h */,
+				EBF30D01196B4DC80055AF16 /* MyModel.m */,
+				EBF30D02196B4DC80055AF16 /* ParentViewController.h */,
+				EBF30D03196B4DC80055AF16 /* ParentViewController.m */,
+				EBF30D04196B4DC80055AF16 /* PaymentTransactionDetails.h */,
+				EBF30D05196B4DC80055AF16 /* PaymentTransactionDetails.m */,
+				EBF30D09196B4DD50055AF16 /* StoreManager.h */,
+				EBF30D0A196B4DD50055AF16 /* StoreManager.m */,
+				EBF30D0B196B4DD50055AF16 /* StoreObserver.h */,
+				EBF30D0C196B4DD50055AF16 /* StoreObserver.m */,
+				EB062A08196B3BAC00F73A79 /* Images.xcassets */,
+				EB0629FD196B3BAC00F73A79 /* Supporting Files */,
+			);
+			path = iOSInAppPurchases;
+			sourceTree = "<group>";
+		};
+		EB0629FD196B3BAC00F73A79 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EBD87A291975B319007E5E98 /* iOSInAppPurchases.storyboard */,
+				EBF30D0F196B4DE20055AF16 /* ProductIds.plist */,
+				EB0629FE196B3BAC00F73A79 /* iOSInAppPurchases-Info.plist */,
+				EB0629FF196B3BAC00F73A79 /* InfoPlist.strings */,
+				EB062A02196B3BAC00F73A79 /* main.m */,
+				EB062A04196B3BAC00F73A79 /* iOSInAppPurchases-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EB0629F2196B3BAC00F73A79 /* iOSInAppPurchases */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB062A1F196B3BAC00F73A79 /* Build configuration list for PBXNativeTarget "iOSInAppPurchases" */;
+			buildPhases = (
+				EB0629EF196B3BAC00F73A79 /* Sources */,
+				EB0629F0196B3BAC00F73A79 /* Frameworks */,
+				EB0629F1196B3BAC00F73A79 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iOSInAppPurchases;
+			productName = iOSInAppPurchases;
+			productReference = EB0629F3196B3BAC00F73A79 /* iOSInAppPurchases.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EB0629EB196B3BAC00F73A79 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
+			buildConfigurationList = EB0629EE196B3BAC00F73A79 /* Build configuration list for PBXProject "iOSInAppPurchases" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EB0629EA196B3BAC00F73A79;
+			productRefGroup = EB0629F4196B3BAC00F73A79 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EB0629F2196B3BAC00F73A79 /* iOSInAppPurchases */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EB0629F1196B3BAC00F73A79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBD87A271975B319007E5E98 /* iOSInAppPurchases.storyboard in Resources */,
+				EB062A01196B3BAC00F73A79 /* InfoPlist.strings in Resources */,
+				EB062A09196B3BAC00F73A79 /* Images.xcassets in Resources */,
+				EBF30D10196B4DE20055AF16 /* ProductIds.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EB0629EF196B3BAC00F73A79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBF30D08196B4DC80055AF16 /* PaymentTransactionDetails.m in Sources */,
+				EBF30D0D196B4DD50055AF16 /* StoreManager.m in Sources */,
+				EBF30CFC196B4DB60055AF16 /* iOSProductsList.m in Sources */,
+				EBF30D0E196B4DD50055AF16 /* StoreObserver.m in Sources */,
+				EBF30D06196B4DC80055AF16 /* MyModel.m in Sources */,
+				EBF30D07196B4DC80055AF16 /* ParentViewController.m in Sources */,
+				EB062A07196B3BAC00F73A79 /* AppDelegate.m in Sources */,
+				EBF30CFF196B4DC00055AF16 /* iOSPurchasesList.m in Sources */,
+				EB062A03196B3BAC00F73A79 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EB0629FF196B3BAC00F73A79 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB062A00196B3BAC00F73A79 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EBD87A291975B319007E5E98 /* iOSInAppPurchases.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBD87A281975B319007E5E98 /* en */,
+			);
+			name = iOSInAppPurchases.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EB062A1D196B3BAC00F73A79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EB062A1E196B3BAC00F73A79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EB062A20196B3BAC00F73A79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOSInAppPurchases/iOSInAppPurchases-Prefix.pch";
+				INFOPLIST_FILE = "iOSInAppPurchases/iOSInAppPurchases-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EB062A21196B3BAC00F73A79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOSInAppPurchases/iOSInAppPurchases-Prefix.pch";
+				INFOPLIST_FILE = "iOSInAppPurchases/iOSInAppPurchases-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EB0629EE196B3BAC00F73A79 /* Build configuration list for PBXProject "iOSInAppPurchases" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB062A1D196B3BAC00F73A79 /* Debug */,
+				EB062A1E196B3BAC00F73A79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB062A1F196B3BAC00F73A79 /* Build configuration list for PBXNativeTarget "iOSInAppPurchases" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB062A20196B3BAC00F73A79 /* Debug */,
+				EB062A21196B3BAC00F73A79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EB0629EB196B3BAC00F73A79 /* Project object */;
+}

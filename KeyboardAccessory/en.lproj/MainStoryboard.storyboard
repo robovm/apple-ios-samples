@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="yr2-zs-g0b">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="SCu-Qe-Aj3">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="yr2-zs-g0b" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kl5-Lp-hyH">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="21h-aQ-oe2" kind="relationship" relationship="rootViewController" id="xq9-c1-v1a"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uak-GR-IRR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-266" y="27"/>
+        </scene>
+        <!--ViewController-->
+        <scene sceneID="tgH-Pp-ngw">
+            <objects>
+                <viewController id="21h-aQ-oe2" userLabel="ViewController" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aGp-RM-Ql4"/>
+                        <viewControllerLayoutGuide type="bottom" id="bsp-ZN-4H2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Lyn-3j-O8y">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nPC-4D-yvP">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="21h-aQ-oe2" id="DYL-zM-anJ"/>
+                                </connections>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bsp-ZN-4H2" firstAttribute="top" secondItem="nPC-4D-yvP" secondAttribute="bottom" id="2kG-FR-dsg"/>
+                            <constraint firstItem="nPC-4D-yvP" firstAttribute="top" secondItem="aGp-RM-Ql4" secondAttribute="bottom" id="MMn-l4-uJb"/>
+                            <constraint firstItem="nPC-4D-yvP" firstAttribute="leading" secondItem="Lyn-3j-O8y" secondAttribute="leading" id="Pqp-9v-K7z"/>
+                            <constraint firstAttribute="trailing" secondItem="nPC-4D-yvP" secondAttribute="trailing" id="Ywg-Xh-paQ"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" title="Keyboard Accessory" id="o7S-yp-1ZA"/>
+                    <connections>
+                        <outlet property="accessoryView" destination="MBa-c3-BOG" id="Zly-qV-qjQ"/>
+                        <outlet property="constraintToAdjust" destination="2kG-FR-dsg" id="tfQ-iK-9zx"/>
+                        <outlet property="doneButton" destination="THl-Ox-Adk" id="jKU-ea-Sya"/>
+                        <outlet property="editButton" destination="wUW-db-CSX" id="yta-sz-G28"/>
+                        <outlet property="textView" destination="nPC-4D-yvP" id="2ah-By-d26"/>
+                        <outlet property="view" destination="Lyn-3j-O8y" id="HpD-Bu-tCs"/>
+                    </connections>
+                </viewController>
+                <barButtonItem systemItem="done" id="THl-Ox-Adk" userLabel="Done Button">
+                    <connections>
+                        <action selector="doneAction:" destination="21h-aQ-oe2" id="s7a-13-lxz"/>
+                    </connections>
+                </barButtonItem>
+                <barButtonItem systemItem="edit" id="wUW-db-CSX" userLabel="Edit Button">
+                    <connections>
+                        <action selector="editAction:" destination="21h-aQ-oe2" id="Esc-UD-yMO"/>
+                    </connections>
+                </barButtonItem>
+                <view contentMode="scaleToFill" id="MBa-c3-BOG" userLabel="AccessoryView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0u-v6-Tcs">
+                            <rect key="frame" x="139" y="10" width="44" height="28"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="Tap Me">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="tappedMe:" destination="21h-aQ-oe2" eventType="touchUpInside" id="XIH-vk-pvc"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.07360357646" blue="0.049651254790000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="centerX" secondItem="W0u-v6-Tcs" secondAttribute="centerX" constant="-0.5" id="HXi-fg-r4D" userLabel="Center X Alignment - AccessoryView - Button - Tap Me"/>
+                        <constraint firstAttribute="centerY" secondItem="W0u-v6-Tcs" secondAttribute="centerY" constant="0.5" id="NNh-gF-BtS" userLabel="Center Y Alignment - AccessoryView - Button - Tap Me"/>
+                    </constraints>
+                </view>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7wO-iv-a9E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="237" y="27"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

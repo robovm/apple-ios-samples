@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="CrX-JI-5mM">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--TeslameterViewController-->
+        <scene sceneID="58u-1D-MtD">
+            <objects>
+                <viewController storyboardIdentifier="TeslameterViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CrX-JI-5mM" userLabel="TeslameterViewController" customClass="TeslameterViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TJL-31-dvV"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wsr-Bg-EHt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Dim-F1-SPb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jxp-VP-lg9">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="egR-9g-BDr">
+                                        <rect key="frame" x="0.0" y="44" width="320" height="460"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <imageView opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="center" fixedFrame="YES" image="Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="10I-Ez-9Mq">
+                                                <rect key="frame" x="0.0" y="-20" width="320" height="480"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" text="--.-" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="fo0-3d-ON0">
+                                                <rect key="frame" x="20" y="20" width="280" height="124"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="96"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="0.0" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="7jh-FE-e0r">
+                                                <rect key="frame" x="20" y="386" width="71" height="33"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="0.0" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="0Yc-G0-1Hv">
+                                                <rect key="frame" x="120" y="386" width="74" height="33"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                                <color key="textColor" red="0.14139545000000001" green="0.77173913000000005" blue="0.012271814000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="0.0" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="lXI-YJ-4ic">
+                                                <rect key="frame" x="224" y="387" width="75" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                                <color key="textColor" red="0.077163397999999994" green="0.065879940999999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Se-eq-dXn" customClass="GraphView">
+                                                <rect key="frame" x="17" y="199" width="286" height="134"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.010869563" green="0.010869563" blue="0.010869563" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="320" id="diB-0H-cGp"/>
+                                            <constraint firstAttribute="height" constant="460" id="rS9-Ut-kOW"/>
+                                        </constraints>
+                                        <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="egR-9g-BDr" secondAttribute="centerX" id="3HH-nB-fk5"/>
+                                    <constraint firstAttribute="centerY" secondItem="egR-9g-BDr" secondAttribute="centerY" id="Y04-Bc-MiJ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Wsr-Bg-EHt" firstAttribute="top" secondItem="Jxp-VP-lg9" secondAttribute="bottom" id="E7y-NP-g9v"/>
+                            <constraint firstAttribute="trailing" secondItem="Jxp-VP-lg9" secondAttribute="trailing" id="Kr5-yh-JpX"/>
+                            <constraint firstItem="Jxp-VP-lg9" firstAttribute="leading" secondItem="Dim-F1-SPb" secondAttribute="leading" id="P7Y-6Y-kHh"/>
+                            <constraint firstItem="Jxp-VP-lg9" firstAttribute="top" secondItem="TJL-31-dvV" secondAttribute="bottom" id="XZo-b5-iFU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="graphView" destination="6Se-eq-dXn" id="dME-a8-iYf"/>
+                        <outlet property="magnitudeLabel" destination="fo0-3d-ON0" id="MT9-GW-bbc"/>
+                        <outlet property="view" destination="Dim-F1-SPb" id="dtu-In-FYe"/>
+                        <outlet property="xLabel" destination="7jh-FE-e0r" id="Buo-3V-8xz"/>
+                        <outlet property="yLabel" destination="0Yc-G0-1Hv" id="n2P-Qu-S2k"/>
+                        <outlet property="zLabel" destination="lXI-YJ-4ic" id="79p-Lq-YPH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FHC-0t-HiW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="144" y="85"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background.png" width="320" height="480"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

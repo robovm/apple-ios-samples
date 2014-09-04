@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="4488.2" systemVersion="13A538f" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <development version="4600" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3715.3"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="APLViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ci-rG-4W9" userLabel="Player View" customClass="APLPlayerView">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="548"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackTranslucent" translatesAutoresizingMaskIntoConstraints="NO" id="w3O-nU-IbS">
+                                        <rect key="frame" x="0.0" y="504" width="768" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                        <items>
+                                            <barButtonItem style="plain" systemItem="play" id="tdC-tQ-N0S">
+                                                <connections>
+                                                    <action selector="togglePlayPause:" destination="BYZ-38-t0r" id="nAk-SQ-Jon"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem style="plain" id="7XK-Re-dF5">
+                                                <slider key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="ycx-pg-dKp">
+                                                    <rect key="frame" x="42" y="5" width="669" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="beginScrubbing:" destination="BYZ-38-t0r" eventType="touchDown" id="xvY-yO-36J"/>
+                                                        <action selector="endScrubbing:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GYe-nz-lrR"/>
+                                                        <action selector="endScrubbing:" destination="BYZ-38-t0r" eventType="touchCancel" id="yIA-zm-5Ou"/>
+                                                        <action selector="endScrubbing:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="zwd-8x-ac9"/>
+                                                        <action selector="scrub:" destination="BYZ-38-t0r" eventType="valueChanged" id="FmR-Bf-7Ip"/>
+                                                    </connections>
+                                                </slider>
+                                            </barButtonItem>
+                                        </items>
+                                    </toolbar>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="--:--" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0D-LA-ZKr">
+                                        <rect key="frame" x="716" y="515" width="52" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="52" id="b1b-J2-VeK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="r0D-LA-ZKr" firstAttribute="trailing" secondItem="w3O-nU-IbS" secondAttribute="trailing" type="default" id="5wa-vL-sTv"/>
+                                    <constraint firstItem="w3O-nU-IbS" firstAttribute="bottom" secondItem="4ci-rG-4W9" secondAttribute="bottom" type="default" id="G0b-JR-qIn"/>
+                                    <constraint firstAttribute="trailing" secondItem="r0D-LA-ZKr" secondAttribute="trailing" type="default" id="Q3i-xX-zlF"/>
+                                    <constraint firstItem="w3O-nU-IbS" firstAttribute="leading" secondItem="4ci-rG-4W9" secondAttribute="leading" type="default" id="QNh-26-HyN"/>
+                                    <constraint firstItem="r0D-LA-ZKr" firstAttribute="top" secondItem="4ci-rG-4W9" secondAttribute="top" constant="515" id="kjD-lK-BDJ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Di6-xO-c3b" userLabel="Composition Debug View" customClass="APLCompositionDebugView">
+                                <rect key="frame" x="0.0" y="548" width="768" height="476"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Di6-xO-c3b" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" type="default" id="AB9-gS-IaK"/>
+                            <constraint firstItem="4ci-rG-4W9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" type="default" id="E7N-J3-DP2"/>
+                            <constraint firstItem="Di6-xO-c3b" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" type="default" id="KSP-BX-vCP"/>
+                            <constraint firstItem="Di6-xO-c3b" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" type="default" id="Oae-GG-1XK"/>
+                            <constraint firstItem="4ci-rG-4W9" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" type="default" id="PCa-Gi-1Hp"/>
+                            <constraint firstItem="Di6-xO-c3b" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="548" id="QXd-Wi-rcX"/>
+                            <constraint firstItem="4ci-rG-4W9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" type="default" id="lYC-U3-EBf"/>
+                            <constraint firstAttribute="bottom" secondItem="4ci-rG-4W9" secondAttribute="bottom" constant="476" id="mv9-ps-xbX"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="compositionDebugView" destination="Di6-xO-c3b" id="lVe-FO-dwI"/>
+                        <outlet property="currentTimeLabel" destination="r0D-LA-ZKr" id="oV5-fn-7kc"/>
+                        <outlet property="playPauseButton" destination="tdC-tQ-N0S" id="DLE-FE-EtK"/>
+                        <outlet property="playerView" destination="4ci-rG-4W9" id="RZF-IE-RjI"/>
+                        <outlet property="scrubber" destination="ycx-pg-dKp" id="Iaq-P5-qLa"/>
+                        <outlet property="toolbar" destination="w3O-nU-IbS" id="62B-ut-88B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="APLCompositionDebugView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/APLCompositionDebugView.h"/>
+        </class>
+        <class className="APLPlayerView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/APLPlayerView.h"/>
+        </class>
+        <class className="APLViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/APLViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="beginScrubbing:"/>
+                <relationship kind="action" name="endScrubbing:"/>
+                <relationship kind="action" name="scrub:"/>
+                <relationship kind="action" name="togglePlayPause:"/>
+                <relationship kind="outlet" name="compositionDebugView" candidateClass="APLCompositionDebugView"/>
+                <relationship kind="outlet" name="currentTimeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="playPauseButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="playerView" candidateClass="APLPlayerView"/>
+                <relationship kind="outlet" name="scrubber" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="toolbar" candidateClass="UIToolbar"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackOpaque"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

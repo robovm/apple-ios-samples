@@ -1,0 +1,46 @@
+<meta name = "viewport" content = "width = device-width">
+
+<h4 align="left">Audio Queue Offline Render Test Sample</h4>
+
+<p>Demonstrates the use of the AudioQueueOfflineRender API. All the relevant code is
+in the file aqofflinerender.cpp. Touching the "Start" button simply calls
+DoAQOfflineRender() producing LPCM output buffers from an ALAC encoded source file.
+These buffers are then written to a .caf file which is played back after rendering using
+AVAudioPlayer to confirm success.<p>
+
+<hr align="center">
+
+<p>Audio Queue Services provides a straightforward, low overhead way to record
+and play audio in iPhone OS and Mac OS X. It is the recommended technology
+to use for adding basic recording or playback features to your iPhone OS or
+Mac OS X application.</p>
+
+<p>Offline rendering with an audio queue output allows applications to render
+audio to a buffer instead of directly to an output device. This is
+especially useful with the iPhone OS, since the Audio Converter and Extended
+Audio File APIs do not currently (up to iPhone OS 2.2.x) support
+decompressing AAC, ALAC or MP3 encoded audio to LPCM if further processing
+is desired.</p>
+
+<p>If you need to generate buffers of LPCM data from AAC, ALAC or MP3 encoded
+audio, using audio queue offline rendering is the recommended approach.</p>
+
+<p>Audio Queue Services lets you record and play audio in any of the following
+formats:</p>
+<ul>
+<li> Linear PCM.</li>
+<li> Any compressed format supported natively on the Apple platform you are
+developing for.</li>
+<li> Any other format for which a user has an installed codec.</li>
+</ul>
+
+<p>Audio Queue Services is high level. It lets your application use hardware
+recording and playback devices (such as microphones and loudspeakers)
+without knowledge of the hardware interface. It also lets you use
+sophisticated codecs without knowledge of how the codecs work.
+At the same time, Audio Queue Services supports some advanced features. It
+provides fine-grained timing control to support scheduled playback and
+synchronization, for example synchronizing playback of multiple audio
+queues.</p>
+<br>
+<br>

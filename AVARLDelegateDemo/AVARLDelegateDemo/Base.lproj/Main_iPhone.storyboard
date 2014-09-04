@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4508" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <development version="5000" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3737"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="APLViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LJw-uN-KTy"/>
+                        <viewControllerLayoutGuide type="bottom" id="gbS-64-4dg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS" customClass="APLPlayerView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9QE-8x-aiF">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Pause" style="plain" id="kql-oH-PnR">
+                                        <connections>
+                                            <action selector="issuePause:" destination="vXZ-lx-hvc" id="Yte-kK-X2c"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Play" style="plain" id="zhw-bY-kxM">
+                                        <connections>
+                                            <action selector="issuePlay:" destination="vXZ-lx-hvc" id="vLp-DW-dy0"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9QE-8x-aiF" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="pty-0j-GXe"/>
+                            <constraint firstAttribute="bottom" secondItem="9QE-8x-aiF" secondAttribute="bottom" id="sBX-sp-XbF"/>
+                            <constraint firstAttribute="trailing" secondItem="9QE-8x-aiF" secondAttribute="trailing" id="tIs-ct-W3s"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <connections>
+                        <outlet property="pauseButton" destination="kql-oH-PnR" id="VLE-Qe-GWG"/>
+                        <outlet property="playButton" destination="zhw-bY-kxM" id="slu-8u-rDp"/>
+                        <outlet property="playView" destination="kh9-bI-dsS" id="plY-mV-U1B"/>
+                        <outlet property="toolbar" destination="9QE-8x-aiF" id="DlX-EM-cSo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

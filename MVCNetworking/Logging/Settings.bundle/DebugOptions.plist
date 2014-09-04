@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PreferenceSpecifiers</key>
+	<array>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>Photos</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
+			<string>Clear Setup</string>
+			<key>Key</key>
+			<string>applicationClearSetup</string>
+			<key>DefaultValue</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
+			<string>Clear Cache</string>
+			<key>Key</key>
+			<string>galleryClearCache</string>
+			<key>DefaultValue</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
+			<string>Sync on Activate</string>
+			<key>Key</key>
+			<string>gallerySyncOnActivate</string>
+			<key>DefaultValue</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>Operation Delay</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSSliderSpecifier</string>
+			<key>Title</key>
+			<string>Operation Delay</string>
+			<key>Key</key>
+			<string>operationDelay</string>
+			<key>DefaultValue</key>
+			<real>0</real>
+			<key>MinimumValue</key>
+			<real>0</real>
+			<key>MaximumValue</key>
+			<integer>11</integer>
+			<key>MinimumValueImage</key>
+			<string>Zero.png</string>
+			<key>MaximumValueImage</key>
+			<string>Eleven.png</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>Network Errors</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>Force Errors</string>
+			<key>Key</key>
+			<string>networkErrorRate</string>
+			<key>DefaultValue</key>
+			<real>0</real>
+			<key>Values</key>
+			<array>
+				<string>0</string>
+				<string>1</string>
+				<string>2</string>
+				<string>3</string>
+				<string>10</string>
+			</array>
+			<key>Titles</key>
+			<array>
+				<string>Never</string>
+				<string>Every request</string>
+				<string>Every other request</string>
+				<string>Every third request</string>
+				<string>Every ten requests</string>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>

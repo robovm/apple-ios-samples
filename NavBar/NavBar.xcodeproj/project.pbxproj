@@ -1,0 +1,389 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623EC0D0F72F000981E51 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3623EB0D0F72F000981E51 /* CoreGraphics.framework */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		531F16A90D6367A3003D33FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 531F16990D6367A3003D33FB /* AppDelegate.m */; };
+		531F16AB0D6367A3003D33FB /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 531F16A20D6367A3003D33FB /* MainViewController.m */; };
+		537204DE0DC28C310048CDA2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 537204DA0DC28C310048CDA2 /* Localizable.strings */; };
+		53D090D90FA2391E00BB0543 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		D071C29518D8D30A00D694E3 /* ExtendedNavBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = D071C29418D8D30A00D694E3 /* ExtendedNavBarView.m */; };
+		D08E1C7F1901AB380078A3CD /* CustomBackButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D08E1C7E1901AB380078A3CD /* CustomBackButtonViewController.m */; };
+		D08E1C821901B8000078A3CD /* CustomBackButtonDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D08E1C811901B8000078A3CD /* CustomBackButtonDetailViewController.m */; };
+		D08E1C851901CCD20078A3CD /* CustomBackButtonNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = D08E1C841901CCD20078A3CD /* CustomBackButtonNavController.m */; };
+		D0B26FB718F8A92600DE72C7 /* CustomAppearanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B26FB618F8A92600DE72C7 /* CustomAppearanceViewController.m */; };
+		D0BE49A918F7163E00626F06 /* Cities.json in Resources */ = {isa = PBXBuildFile; fileRef = D0BE49A818F7163E00626F06 /* Cities.json */; };
+		D0DA720218CC3E9A00440207 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0DA720418CC3E9A00440207 /* Main.storyboard */; };
+		D0DA720618CC3F0600440207 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0DA720518CC3F0600440207 /* Images.xcassets */; };
+		D0DA720818CC3F6500440207 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DA720718CC3F6500440207 /* QuartzCore.framework */; };
+		D0DA720C18CC67E300440207 /* ExtendedNavBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DA720B18CC67E300440207 /* ExtendedNavBarViewController.m */; };
+		D0DA721118CD01BB00440207 /* CustomRightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DA721018CD01BB00440207 /* CustomRightViewController.m */; };
+		D0DA721818CD1D4B00440207 /* CustomTitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DA721718CD1D4B00440207 /* CustomTitleViewController.m */; };
+		D0DA721C18CD2A4700440207 /* NavigationPromptViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DA721B18CD2A4700440207 /* NavigationPromptViewController.m */; };
+		D0DA721F18CD3DEC00440207 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DA721E18CD3DEC00440207 /* NavigationController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623EB0D0F72F000981E51 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1D6058910D05DD3D006BFB54 /* NavBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		531F16910D63677B003D33FB /* NavBar-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NavBar-Prefix.pch"; sourceTree = "<group>"; };
+		531F16940D6367A3003D33FB /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		531F16990D6367A3003D33FB /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		531F16A20D6367A3003D33FB /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		531F16A40D6367A3003D33FB /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		537204DB0DC28C310048CDA2 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		539C376E0DB8003400A5E2BB /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; wrapsLines = 1; };
+		8D1107310486CEB800E47090 /* NavBar-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "NavBar-Info.plist"; sourceTree = "<group>"; };
+		D071C29318D8D30A00D694E3 /* ExtendedNavBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtendedNavBarView.h; sourceTree = "<group>"; };
+		D071C29418D8D30A00D694E3 /* ExtendedNavBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtendedNavBarView.m; sourceTree = "<group>"; };
+		D08E1C7D1901AB380078A3CD /* CustomBackButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomBackButtonViewController.h; sourceTree = "<group>"; };
+		D08E1C7E1901AB380078A3CD /* CustomBackButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomBackButtonViewController.m; sourceTree = "<group>"; };
+		D08E1C801901B8000078A3CD /* CustomBackButtonDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomBackButtonDetailViewController.h; sourceTree = "<group>"; };
+		D08E1C811901B8000078A3CD /* CustomBackButtonDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomBackButtonDetailViewController.m; sourceTree = "<group>"; };
+		D08E1C831901CCD20078A3CD /* CustomBackButtonNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomBackButtonNavController.h; sourceTree = "<group>"; };
+		D08E1C841901CCD20078A3CD /* CustomBackButtonNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomBackButtonNavController.m; sourceTree = "<group>"; };
+		D0B26FB518F8A92600DE72C7 /* CustomAppearanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAppearanceViewController.h; sourceTree = "<group>"; };
+		D0B26FB618F8A92600DE72C7 /* CustomAppearanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAppearanceViewController.m; sourceTree = "<group>"; };
+		D0BE49A818F7163E00626F06 /* Cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Cities.json; sourceTree = "<group>"; };
+		D0DA720318CC3E9A00440207 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D0DA720518CC3F0600440207 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D0DA720718CC3F6500440207 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D0DA720A18CC67E300440207 /* ExtendedNavBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtendedNavBarViewController.h; sourceTree = "<group>"; };
+		D0DA720B18CC67E300440207 /* ExtendedNavBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtendedNavBarViewController.m; sourceTree = "<group>"; };
+		D0DA720F18CD01BB00440207 /* CustomRightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomRightViewController.h; sourceTree = "<group>"; };
+		D0DA721018CD01BB00440207 /* CustomRightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomRightViewController.m; sourceTree = "<group>"; };
+		D0DA721618CD1D4B00440207 /* CustomTitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTitleViewController.h; sourceTree = "<group>"; };
+		D0DA721718CD1D4B00440207 /* CustomTitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTitleViewController.m; sourceTree = "<group>"; };
+		D0DA721A18CD2A4700440207 /* NavigationPromptViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationPromptViewController.h; sourceTree = "<group>"; };
+		D0DA721B18CD2A4700440207 /* NavigationPromptViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationPromptViewController.m; sourceTree = "<group>"; };
+		D0DA721D18CD3DEC00440207 /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
+		D0DA721E18CD3DEC00440207 /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0DA720818CC3F6500440207 /* QuartzCore.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				1D3623EC0D0F72F000981E51 /* CoreGraphics.framework in Frameworks */,
+				53D090D90FA2391E00BB0543 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* NavBar.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* Toolbar */ = {
+			isa = PBXGroup;
+			children = (
+				539C376E0DB8003400A5E2BB /* ReadMe.txt */,
+				29B97315FDCFA39411CA2CEA /* Classes */,
+				29B97317FDCFA39411CA2CEA /* Supporting Files */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = Toolbar;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				531F16A40D6367A3003D33FB /* AppDelegate.h */,
+				531F16990D6367A3003D33FB /* AppDelegate.m */,
+				D0DA720418CC3E9A00440207 /* Main.storyboard */,
+				D0DA721D18CD3DEC00440207 /* NavigationController.h */,
+				D0DA721E18CD3DEC00440207 /* NavigationController.m */,
+				531F16940D6367A3003D33FB /* MainViewController.h */,
+				531F16A20D6367A3003D33FB /* MainViewController.m */,
+				D0DA720E18CD014900440207 /* CustomRightView */,
+				D0DA721518CD1D0700440207 /* CustomTitleView */,
+				D0DA721918CD2A1600440207 /* NavigationPrompt */,
+				D0DA720918CC46BB00440207 /* ExtendedNavBar */,
+				D0B26FB418F8A8DC00DE72C7 /* CustomAppearance */,
+				D08E1C7C1901A65A0078A3CD /* CustomBackButton */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D0BE49A818F7163E00626F06 /* Cities.json */,
+				8D1107310486CEB800E47090 /* NavBar-Info.plist */,
+				531F16910D63677B003D33FB /* NavBar-Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+				D0DA720518CC3F0600440207 /* Images.xcassets */,
+				537204DA0DC28C310048CDA2 /* Localizable.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D0DA720718CC3F6500440207 /* QuartzCore.framework */,
+				1D3623EB0D0F72F000981E51 /* CoreGraphics.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D08E1C7C1901A65A0078A3CD /* CustomBackButton */ = {
+			isa = PBXGroup;
+			children = (
+				D08E1C831901CCD20078A3CD /* CustomBackButtonNavController.h */,
+				D08E1C841901CCD20078A3CD /* CustomBackButtonNavController.m */,
+				D08E1C801901B8000078A3CD /* CustomBackButtonDetailViewController.h */,
+				D08E1C811901B8000078A3CD /* CustomBackButtonDetailViewController.m */,
+				D08E1C7D1901AB380078A3CD /* CustomBackButtonViewController.h */,
+				D08E1C7E1901AB380078A3CD /* CustomBackButtonViewController.m */,
+			);
+			path = CustomBackButton;
+			sourceTree = "<group>";
+		};
+		D0B26FB418F8A8DC00DE72C7 /* CustomAppearance */ = {
+			isa = PBXGroup;
+			children = (
+				D0B26FB518F8A92600DE72C7 /* CustomAppearanceViewController.h */,
+				D0B26FB618F8A92600DE72C7 /* CustomAppearanceViewController.m */,
+			);
+			path = CustomAppearance;
+			sourceTree = "<group>";
+		};
+		D0DA720918CC46BB00440207 /* ExtendedNavBar */ = {
+			isa = PBXGroup;
+			children = (
+				D071C29318D8D30A00D694E3 /* ExtendedNavBarView.h */,
+				D071C29418D8D30A00D694E3 /* ExtendedNavBarView.m */,
+				D0DA720A18CC67E300440207 /* ExtendedNavBarViewController.h */,
+				D0DA720B18CC67E300440207 /* ExtendedNavBarViewController.m */,
+			);
+			path = ExtendedNavBar;
+			sourceTree = "<group>";
+		};
+		D0DA720E18CD014900440207 /* CustomRightView */ = {
+			isa = PBXGroup;
+			children = (
+				D0DA720F18CD01BB00440207 /* CustomRightViewController.h */,
+				D0DA721018CD01BB00440207 /* CustomRightViewController.m */,
+			);
+			path = CustomRightView;
+			sourceTree = "<group>";
+		};
+		D0DA721518CD1D0700440207 /* CustomTitleView */ = {
+			isa = PBXGroup;
+			children = (
+				D0DA721618CD1D4B00440207 /* CustomTitleViewController.h */,
+				D0DA721718CD1D4B00440207 /* CustomTitleViewController.m */,
+			);
+			path = CustomTitleView;
+			sourceTree = "<group>";
+		};
+		D0DA721918CD2A1600440207 /* NavigationPrompt */ = {
+			isa = PBXGroup;
+			children = (
+				D0DA721A18CD2A4700440207 /* NavigationPromptViewController.h */,
+				D0DA721B18CD2A4700440207 /* NavigationPromptViewController.m */,
+			);
+			path = NavigationPrompt;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* NavBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "NavBar" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NavBar;
+			productName = foo;
+			productReference = 1D6058910D05DD3D006BFB54 /* NavBar.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "NavBar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+				Base,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* Toolbar */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* NavBar */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0DA720218CC3E9A00440207 /* Main.storyboard in Resources */,
+				D0DA720618CC3F0600440207 /* Images.xcassets in Resources */,
+				D0BE49A918F7163E00626F06 /* Cities.json in Resources */,
+				537204DE0DC28C310048CDA2 /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				D071C29518D8D30A00D694E3 /* ExtendedNavBarView.m in Sources */,
+				D0B26FB718F8A92600DE72C7 /* CustomAppearanceViewController.m in Sources */,
+				D0DA721118CD01BB00440207 /* CustomRightViewController.m in Sources */,
+				D08E1C7F1901AB380078A3CD /* CustomBackButtonViewController.m in Sources */,
+				531F16A90D6367A3003D33FB /* AppDelegate.m in Sources */,
+				D0DA721F18CD3DEC00440207 /* NavigationController.m in Sources */,
+				D08E1C821901B8000078A3CD /* CustomBackButtonDetailViewController.m in Sources */,
+				D0DA720C18CC67E300440207 /* ExtendedNavBarViewController.m in Sources */,
+				531F16AB0D6367A3003D33FB /* MainViewController.m in Sources */,
+				D08E1C851901CCD20078A3CD /* CustomBackButtonNavController.m in Sources */,
+				D0DA721C18CD2A4700440207 /* NavigationPromptViewController.m in Sources */,
+				D0DA721818CD1D4B00440207 /* CustomTitleViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		537204DA0DC28C310048CDA2 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				537204DB0DC28C310048CDA2 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		D0DA720418CC3E9A00440207 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0DA720318CC3E9A00440207 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Navbar-Prefix.pch";
+				INFOPLIST_FILE = "NavBar-Info.plist";
+				PRODUCT_NAME = NavBar;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Navbar-Prefix.pch";
+				INFOPLIST_FILE = "NavBar-Info.plist";
+				PRODUCT_NAME = NavBar;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "NavBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "NavBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

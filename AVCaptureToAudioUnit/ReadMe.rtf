@@ -1,0 +1,138 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1138\cocoasubrtf510
+\readonlydoc1{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Geneva;\f2\fnil\fcharset0 Monaco;
+\f3\fnil\fcharset0 ProFont;}
+{\colortbl;\red255\green255\blue255;\red28\green0\blue207;}
+\margl1440\margr1440\vieww23080\viewh25180\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\b\fs24 \cf0 Project Description
+\b0 \
+\
+
+\f1\fs20 AVCaptureToAudioUnit is an iOS sample that demonstrates how to use the \CocoaLigature0 CMSampleBufferRefs\CocoaLigature1  vended by AVFoundation's capture \CocoaLigature0 AVCaptureAudioDataOutput\CocoaLigature1  object with various CoreAudio APIs. The built application uses a \CocoaLigature0 AVCaptureSession\CocoaLigature1  with a \CocoaLigature0 AVCaptureAudioDataOutput\CocoaLigature1  to capture audio from the default system input device, applies an effect to that audio using a simple delay effect AudioUnit and writes the modified audio to a file using the CoreAudio ExtAudioFile API.\
+\pard\tx480\pardeftab480\pardirnatural
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 The \CocoaLigature0 CaptureSessionController\CocoaLigature1  class is responsible for setting up and running the \CocoaLigature0 AVCaptureSession\CocoaLigature1  and for passing the captured audio buffers to the CoreAudio AudioUnit and ExtAudioFile. The \CocoaLigature0 applicationDidFinishLaunching\CocoaLigature1  method is responsible for setting up and running the \CocoaLigature0 AVCaptureSession\CocoaLigature1 , while the \CocoaLigature0 captureOutput:didOutputSampleBuffer:fromConnection: \CocoaLigature1 passes the captured audio data through the AudioUnit via AudioUnitRender into the file using ExtAudioFileWriteAsync when recording.\
+\
+CoreMedia provides two convenience methods to easily use the captured audio data with CoreAudio APIs. The \CocoaLigature0 CMSampleBufferGetAudioBufferListWithRetainedBlockBuffer \CocoaLigature1 API \CocoaLigature0 fills in an AudioBufferList with the data from the CMSampleBuffer, and returns a CMBlockBuffer which references (and manages the lifetime of) the data in that AudioBufferList. \CocoaLigature1 This  \CocoaLigature0 AudioBufferList \CocoaLigature1 can be used directly by AudioUnits and other CoreAudio objects. The \CocoaLigature0 CMSampleBufferGetNumSamples API\CocoaLigature1  returns the number of frames of audio contained within the sample buffer, a value that can also be passed directly to CoreAudio APIs.\
+\
+Because CoreAudio AudioUnits process audio data using a "pull" model, but \CocoaLigature0 the AVCaptureAudioDataOutput object\CocoaLigature1  "pushes" audio sample buffers onto a client in real time, the captured buffers must be sent though the AudioUnit via an AudioUnit render callback which requests input audio data each time \CocoaLigature0 AudioUnitRender\CocoaLigature1  is called to retrieve output audio data. Every time \CocoaLigature0 captureOutput:didOutputSampleBuffer:fromConnection: \CocoaLigature1 receives a new sample buffer, it gets and stores the buffer as the Input AudioBufferList  (so that the render callback\CocoaLigature0  \CocoaLigature1 can access it), and then immediately calls \CocoaLigature0 AudioUnitRender \CocoaLigature1 which synchronously pulls the stored input buffer list through the AudioUnit via the render callback. The output data is available in the output AudioBufferList passed to AudioUnitRender. This output buffer list may be passed to ExtAudioFile for final format conversion and writing to the file.
+\f0\fs24 \
+\
+
+\b Related Information\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b0\fs20 \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f1 \cf0 This sample makes use of a few helper classes from the "Core Audio Utility Classes" to manage AudioStreamBasicDescriptions, AudioBufferList structures and so on. These classes are extremely helpful and allow for code simplification (and less typing). For example, setting the Canonical Audio Unit Format for OS X is reduced to the code shown in Listing 1, replacing code similar to Listing 2 which is more prone to errors not to mention requiring more typing. On iOS the same code would return the canonical 8.24 fixed audio format.\
+\
+Creating an AudioBufferList suitable for the output of an audio unit render call is simplified to one line of code using \CocoaLigature0 AUOutputBL \CocoaLigature1 as shown in Listing 3. This replaces the small chunk of code in Listing 4 almost everyone gets wrong at least the first time (do you know why you need the -1 in the calloc line 
+\f2\fs18 \CocoaLigature0 (currentInputASBD.mChannelsPerFrame - \cf2 1\cf0 )
+\f1\fs20 \CocoaLigature1 ? No? Take a look at how AudioBufferList is defined paying attention to the the AudioBuffer array). Using offsetof makes calculating the structure size easier but it's still a bunch of code compared to the \CocoaLigature0 AUOutputBL object you can just use\CocoaLigature1 . \CocoaLigature0 AUOutputBL also lets you choose to allocate or not allocate mData's allowing you to manage data buffers depending on your needs with very little work.\
+\
+All you need to do to use this object is to call the AUOutputBL instance Prepare method before AudioUnitRender and you're done. Tip: Passing in NULL mData's for rendering output from an audio unit will avoid an extra memory copy.\
+\
+W\CocoaLigature1 hen \CocoaLigature0 using the CoreMedia API CMSampleBufferGetAudioBufferListWithRetainedBlockBuffer, using CAAudioBufferList comes in handy. The aforementioned API (the one with the longish name) requires a correctly sized client allocated AudioBufferList to be passed in along with the size of the allocation. If the size is wrong you may get the dreaded kFigSampleBufferError_ArrayTooSmall returned (well, that's what the header says but it's actually kCMSampleBufferError_ArrayTooSmall) and null buffers. By using CAAudioBufferList you get some simple calls that make working with this core media sample buffer API much easier. Examples are shown in Listing 5.\
+\
+Investigate the Core Audio Utility Classes, there is a wealth of proven Core Audio code available there which makes working with Core Audio much easier and much faster with less typing.\
+\CocoaLigature1 \
+
+\f0\b\fs24 Listing 1: Setting Canonical Format using CAStreamBasicDescription helper\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f2\b0\fs18 \cf0 \
+\pard\tx560\pardeftab560\pardirnatural
+\cf0 \CocoaLigature0 CAStreamBasicDescription canonicalAUFormat;\
+canonicalAUFormat.SetAUCanonical(nChannels, false); // does not set sampleRate\
+canonicalAUFormat.mSampleRate = sampleRate;\CocoaLigature1 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\b\fs24 \cf0 Listing 2: Manually filling in the structure\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f2\b0\fs18 \cf0 \
+\pard\tx560\pardeftab560\pardirnatural
+\cf0 \CocoaLigature0 AudioStreamBasicDescription canonicalAUASBD;\
+\pard\tx480\pardeftab480\pardirnatural
+\cf0 memset(&canonicalAUASBD, 0, sizeof(AudioStreamBasicDescription));\
+\pard\tx560\pardeftab560\pardirnatural
+\cf0 canonicalAUASBD.mSampleRate = sampleRate;\
+canonicalAUASBD.mFormatID = kAudioFormatLinearPCM;\
+canonicalAUASBD.mFormatFlags = kAudioFormatFlagIsFloat | kAudioFormatFlagIsPacked | kAudioFormatFlagIsNonInterleaved;\
+canonicalAUASBD.mChannelsPerFrame = nChannels;\
+canonicalAUASBD.mFramesPerPacket = 1;\
+canonicalAUASBD.mBytesPerFrame = SizeOf32(AudioUnitSampleType);\
+canonicalAUASBD.mBytesPerPacket = SizeOf32(AudioUnitSampleType);\
+canonicalAUASBD.mBitsPerChannel = 8 * SizeOf32(AudioUnitSampleType);\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\b\fs24 \cf0 \CocoaLigature1 Listing 3: Allocating an AudioBufferList for render output using AUOutputBL helper
+\f2\b0\fs18 \CocoaLigature0 \
+\pard\tx560\pardeftab560\pardirnatural
+\cf0 \
+outputBufferList = new AUOutputBL(outputFormatASBD, numberOfFrames);\
+\
+// call Prepare on the AUOutputBL object each time before render\
+outputBufferList->Prepare(numberOfFrames);\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\b\fs24 \cf0 \CocoaLigature1 Listing 4: Manually allocating the structure
+\f2\b0\fs18 \CocoaLigature0 \
+\pard\tx560\pardeftab560\pardirnatural
+\cf0 \
+AudioBufferList *outputABL = (AudioBufferList *)calloc(1, sizeof(*outputABL) + (currentInputASBD.mChannelsPerFrame - 1)*sizeof(outputABL->mBuffers[0]));\
+outputABL->mNumberBuffers = currentFormatASBD.mChannelsPerFrame;\
+for (UInt32 channelIndex = 0; channelIndex < currentFormatASBD.mChannelsPerFrame; channelIndex++) \{\
+	UInt32 dataSize = numberOfFrames * currentFormatASBD.mBytesPerFrame;\
+	outputABL->mBuffers[channelIndex].mDataByteSize = dataSize;\
+	outputABL->mBuffers[channelIndex].mData = malloc(dataSize); // allocate mData depending on usage\
+	outputABL->mBuffers[channelIndex].mNumberChannels = 1;\
+\}\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f1\fs20 \cf0 \CocoaLigature1 Or for fans of 
+\f2\fs18 \CocoaLigature0 offsetof\
+\pard\tx560\pardeftab560\pardirnatural
+\cf0 \
+AudioBufferList *outputABL;\
+\pard\tx480\pardeftab480\pardirnatural
+\cf0 UInt8 numberOfBuffers = 2;\
+UInt32 theSize = offsetof(AudioBufferList, mBuffers[0]) + (sizeof(AudioBuffer) * numberOfBuffers);\
+\pard\tx560\pardeftab560\pardirnatural
+\cf0 outputABL = (AudioBufferList *)calloc(theSize);\
+outputABL->mNumberBuffers = numberOfBuffers;\
+for (UInt32 channelIndex = 0; channelIndex < numberOfBuffers; channelIndex++) \{\
+	UInt32 dataSize = numberOfFrames * currentFormatASBD.mBytesPerFrame;\
+	outputABL->mBuffers[channelIndex].mDataByteSize = dataSize;\
+	outputABL->mBuffers[channelIndex].mData = malloc(dataSize);\
+	outputABL->mBuffers[channelIndex].mNumberChannels = 1;\
+\}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\b\fs24 \cf0 \CocoaLigature1 \
+Listing 5: Some basic uses of the CAAudioBufferList helper\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f2\b0\fs18 \cf0 // allocate\
+\pard\tx560\pardeftab560\pardirnatural
+\cf0 \CocoaLigature0 AudioBufferList *myBufferList = CAAudioBufferList::Create(numberOfChannels);\
+\
+// how big?\
+size_t theSize = 
+\f3 CAAudioBufferList::CalculateByteSize(
+\f2 numberOfChannels
+\f3 );
+\f2 \
+\
+// free\
+\pard\tx480\pardeftab480\pardirnatural
+\cf0 CAAudioBufferList::Destroy(myBufferList);\
+}

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="QFm-q1-QnG">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Group View Controller - Groups-->
+        <scene sceneID="RFo-G6-dY3">
+            <objects>
+                <tableViewController id="kkJ-UJ-UIV" customClass="GroupViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="hhM-K1-Bo7">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="groupCell" id="B9N-PB-GxB">
+                                <rect key="frame" x="0.0" y="46" width="320" height="46"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="kkJ-UJ-UIV" id="V0u-i3-0Ys"/>
+                            <outlet property="delegate" destination="kkJ-UJ-UIV" id="QbR-gO-ZwO"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Groups" id="SUd-He-AQG">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="add" id="1yS-Cv-RTy">
+                            <connections>
+                                <segue destination="6Ua-LK-BWX" kind="modal" identifier="showAddViewController" id="8A3-Ru-eVP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addButton" destination="1yS-Cv-RTy" id="9x4-nh-tmv"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sN3-vm-nek" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="389" y="-675"/>
+        </scene>
+        <!--Add Group View Controller-->
+        <scene sceneID="Aam-KU-vC3">
+            <objects>
+                <viewController id="6Ua-LK-BWX" customClass="AddGroupViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L4B-ie-lDB">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V4o-I9-m4t">
+                                <items>
+                                    <navigationItem title="Add Group" id="5K4-Es-7wG">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="KON-NM-gRL">
+                                            <connections>
+                                                <segue destination="v7S-vs-gB9" kind="unwind" identifier="cancelInput" unwindAction="cancel:" id="xmc-JC-0Mk"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="fqB-7u-ok2">
+                                            <connections>
+                                                <segue destination="v7S-vs-gB9" kind="unwind" identifier="returnInput" unwindAction="done:" id="WvZ-5S-5SE"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Group Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QEQ-jG-3bg">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RYY-2n-c5B">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="Jxf-O0-aqT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="6Ua-LK-BWX" id="MYw-R2-RgL"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="V4o-I9-m4t" firstAttribute="leading" secondItem="L4B-ie-lDB" secondAttribute="leading" type="default" id="7oW-28-jWE"/>
+                            <constraint firstItem="V4o-I9-m4t" firstAttribute="trailing" secondItem="L4B-ie-lDB" secondAttribute="trailing" type="default" id="SLh-6A-z40"/>
+                            <constraint firstItem="RYY-2n-c5B" firstAttribute="leading" secondItem="QEQ-jG-3bg" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="YBh-dJ-wd7"/>
+                            <constraint firstItem="RYY-2n-c5B" firstAttribute="baseline" secondItem="QEQ-jG-3bg" secondAttribute="baseline" type="default" id="nN8-9Z-EkW"/>
+                            <constraint firstItem="QEQ-jG-3bg" firstAttribute="leading" secondItem="L4B-ie-lDB" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="tK7-kS-cDR"/>
+                            <constraint firstItem="RYY-2n-c5B" firstAttribute="top" secondItem="L4B-ie-lDB" secondAttribute="top" constant="80" id="x32-Jl-h4N"/>
+                            <constraint firstItem="V4o-I9-m4t" firstAttribute="top" secondItem="L4B-ie-lDB" secondAttribute="top" type="default" id="yii-pb-8JV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myTextField" destination="RYY-2n-c5B" id="n9T-Vm-hCw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xdo-E8-EEi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="v7S-vs-gB9" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="902" y="-675"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rMs-fd-CwO">
+            <objects>
+                <navigationController id="QFm-q1-QnG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oAD-Zc-u6H">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kkJ-UJ-UIV" kind="relationship" relationship="rootViewController" id="ddM-m7-5hg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="igJ-an-JcV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-121" y="-675"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="AddGroupViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddGroupViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="myTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="GroupViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GroupViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="addButton" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

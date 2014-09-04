@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="APLViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9vh-EH-bsi"/>
+                        <viewControllerLayoutGuide type="bottom" id="5qa-9H-Atj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NdV-Zd-9qD">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CdY-P1-iWP">
+                                <rect key="frame" x="20" y="540" width="280" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" white="1" alpha="0.90000000000000002" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="NdV-Zd-9qD" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="6q8-Jm-wJo"/>
+                            <constraint firstItem="NdV-Zd-9qD" firstAttribute="bottom" secondItem="kh9-bI-dsS" secondAttribute="bottom" id="Gws-xV-sYo"/>
+                            <constraint firstItem="NdV-Zd-9qD" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailing" id="Kqs-9y-tgA"/>
+                            <constraint firstItem="NdV-Zd-9qD" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailing" id="V6e-EA-irs"/>
+                            <constraint firstAttribute="trailing" secondItem="CdY-P1-iWP" secondAttribute="trailing" constant="20" id="VKw-mj-BNi"/>
+                            <constraint firstItem="NdV-Zd-9qD" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="gA5-db-up7"/>
+                            <constraint firstItem="5qa-9H-Atj" firstAttribute="top" secondItem="CdY-P1-iWP" secondAttribute="bottom" constant="8" id="nmE-Ou-WRn"/>
+                            <constraint firstItem="NdV-Zd-9qD" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="qJK-od-z3y"/>
+                            <constraint firstItem="NdV-Zd-9qD" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="vLb-60-yby"/>
+                            <constraint firstItem="CdY-P1-iWP" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="z5S-pO-UgM"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="wV8-Km-vnh" appends="YES" id="OX1-Lp-U0e"/>
+                            <outletCollection property="gestureRecognizers" destination="wV8-Km-vnh" appends="YES" id="Z6A-Nb-r4h"/>
+                        </connections>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <connections>
+                        <outlet property="effectLabel" destination="CdY-P1-iWP" id="5T9-Cf-EZ2"/>
+                        <outlet property="imageView" destination="NdV-Zd-9qD" id="v15-Df-aEM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="wV8-Km-vnh">
+                    <connections>
+                        <action selector="nextEffect:" destination="vXZ-lx-hvc" id="OaM-TX-fB3"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="140" y="34"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

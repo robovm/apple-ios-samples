@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="WmC-ip-Ohc">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="aer-OY-Whr">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="WmC-ip-Ohc" customClass="NavigationController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aBH-UR-CKH">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="jen-xY-IxC" kind="relationship" relationship="rootViewController" id="ZsA-70-sPo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aHK-Zh-V1H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-146" y="43"/>
+        </scene>
+        <!--Landscape View Controller-->
+        <scene sceneID="iep-Eh-v7d">
+            <objects>
+                <viewController id="ZEw-xB-K1t" customClass="LandscapeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pOQ-UL-16y"/>
+                        <viewControllerLayoutGuide type="bottom" id="28x-P2-zxf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6Jn-ZH-d2Q">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Landscape" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00H-MH-xe9">
+                                <rect key="frame" x="324" y="343" width="377" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="72"/>
+                                <color key="textColor" red="0.80000000999999998" green="0.80000000999999998" blue="0.80000000999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="00H-MH-xe9" secondAttribute="centerY" id="8dv-cp-AUr"/>
+                            <constraint firstAttribute="centerX" secondItem="00H-MH-xe9" secondAttribute="centerX" id="9fl-MC-5wg"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AAg-g5-M4e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1852" y="171"/>
+        </scene>
+        <!--Portrait View Controller - Alternate View Controllers-->
+        <scene sceneID="w1c-37-Ret">
+            <objects>
+                <viewController id="jen-xY-IxC" customClass="PortraitViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fQa-Cm-TK3"/>
+                        <viewControllerLayoutGuide type="bottom" id="kpE-aB-Y5g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6Wm-IO-s2K">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Portrait" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4i8-Cb-dfS">
+                                <rect key="frame" x="256" y="471" width="257" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="72"/>
+                                <color key="textColor" red="0.60000001999999997" green="0.60000001999999997" blue="0.60000001999999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.7725490196" green="0.80000000000000004" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="4i8-Cb-dfS" secondAttribute="centerX" id="8cO-49-xhv"/>
+                            <constraint firstAttribute="centerY" secondItem="4i8-Cb-dfS" secondAttribute="centerY" id="DJ7-me-Dwr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Alternate View Controllers" id="pgA-6P-zFE"/>
+                    <connections>
+                        <segue destination="ZEw-xB-K1t" kind="modal" identifier="PresentLandscapeViewControllerSegue" modalTransitionStyle="crossDissolve" id="aiI-8F-UrZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lb5-Hd-xBV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="842" y="43"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

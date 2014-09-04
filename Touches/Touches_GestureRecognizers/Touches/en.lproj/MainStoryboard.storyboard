@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="4431.1" systemVersion="13A459" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="NHr-KJ-ICC">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3465.2"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Pfr-e1-hGl">
+            <objects>
+                <viewController id="NHr-KJ-ICC" customClass="APLViewController" sceneMemberID="viewController">
+                    <view key="view" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" id="vGz-ZS-KZD">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.89999997615814209" contentMode="center" image="CyanSquare.png" id="Fmv-Pm-0kF">
+                                <rect key="frame" x="110" y="190" width="100" height="80"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="e3P-id-kAG" appends="YES" id="2Bs-Zk-Xos"/>
+                                    <outletCollection property="gestureRecognizers" destination="9xw-aN-Fpy" appends="YES" id="APc-em-SMe"/>
+                                    <outletCollection property="gestureRecognizers" destination="2Ub-C2-yjl" appends="YES" id="sqZ-1Y-zdt"/>
+                                    <outletCollection property="gestureRecognizers" destination="Gjg-9d-Sgi" appends="YES" id="2hY-dO-L61"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.89999997615814209" contentMode="center" image="MagentaSquare.png" id="adL-Ye-7Hk">
+                                <rect key="frame" x="210" y="290" width="100" height="80"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="SEx-8b-32P" appends="YES" id="9ug-mb-nGR"/>
+                                    <outletCollection property="gestureRecognizers" destination="PO9-zY-60e" appends="YES" id="UNw-Hf-uzn"/>
+                                    <outletCollection property="gestureRecognizers" destination="d30-aO-wuY" appends="YES" id="RYs-tX-jCS"/>
+                                    <outletCollection property="gestureRecognizers" destination="5gM-Dh-xQ5" appends="YES" id="XSy-ZG-I0A"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.89999997615814209" contentMode="center" image="YellowSquare.png" id="uR1-qa-5GM">
+                                <rect key="frame" x="10" y="90" width="100" height="80"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="hxM-kt-3EU" appends="YES" id="Ayt-DF-MHJ"/>
+                                    <outletCollection property="gestureRecognizers" destination="YSe-lf-qwN" appends="YES" id="UFR-GG-9ez"/>
+                                    <outletCollection property="gestureRecognizers" destination="gcc-Pq-PFL" appends="YES" id="SBA-AX-1Iy"/>
+                                    <outletCollection property="gestureRecognizers" destination="AOo-q7-ZxF" appends="YES" id="aOB-q1-7jf"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="&quot;Touches&quot; shows use of" textAlignment="center" lineBreakMode="wordWrap" minimumFontSize="10" id="MZH-4A-IJ4">
+                                <rect key="frame" x="10" y="24" width="300" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="UIGestureRecognizers to move pieces." textAlignment="center" lineBreakMode="wordWrap" minimumFontSize="10" id="n4s-ai-Y9o">
+                                <rect key="frame" x="10" y="45" width="300" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="firstPieceView" destination="uR1-qa-5GM" id="Tod-Ce-fto"/>
+                        <outlet property="secondPieceView" destination="Fmv-Pm-0kF" id="J6K-4Y-fNO"/>
+                        <outlet property="thirdPieceView" destination="adL-Ye-7Hk" id="lSi-vo-nsx"/>
+                        <outlet property="view" destination="vGz-ZS-KZD" id="Vsr-8g-KxC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tc3-Hd-HYj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <rotationGestureRecognizer id="hxM-kt-3EU" userLabel="Yellow Rotation Gesture Recognizer">
+                    <connections>
+                        <action selector="rotatePiece:" destination="NHr-KJ-ICC" id="G4r-Tu-FCm"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <rotationGestureRecognizer id="e3P-id-kAG" userLabel="Blue Rotation Gesture Recognizer">
+                    <connections>
+                        <action selector="rotatePiece:" destination="NHr-KJ-ICC" id="8XH-6V-e1a"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <rotationGestureRecognizer id="SEx-8b-32P" userLabel="Pink Rotation Gesture Recognizer">
+                    <connections>
+                        <action selector="rotatePiece:" destination="NHr-KJ-ICC" id="S2d-Wk-p7F"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <pinchGestureRecognizer id="YSe-lf-qwN" userLabel="Yellow Pinch Gesture Recognizer">
+                    <connections>
+                        <action selector="scalePiece:" destination="NHr-KJ-ICC" id="bC7-vd-Sng"/>
+                        <outlet property="delegate" destination="NHr-KJ-ICC" id="Fui-oy-pNm"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <pinchGestureRecognizer id="9xw-aN-Fpy" userLabel="Blue Pinch Gesture Recognizer">
+                    <connections>
+                        <action selector="scalePiece:" destination="NHr-KJ-ICC" id="4ie-YV-nEW"/>
+                        <outlet property="delegate" destination="NHr-KJ-ICC" id="JkH-JM-iUG"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <pinchGestureRecognizer id="PO9-zY-60e" userLabel="Pink Pinch Gesture Recognizer">
+                    <connections>
+                        <action selector="scalePiece:" destination="NHr-KJ-ICC" id="fkp-9u-81V"/>
+                        <outlet property="delegate" destination="NHr-KJ-ICC" id="h0W-ed-2mT"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" maximumNumberOfTouches="2" id="gcc-Pq-PFL" userLabel="Yellow Pan Gesture Recognizer">
+                    <connections>
+                        <action selector="panPiece:" destination="NHr-KJ-ICC" id="ojZ-p9-XZh"/>
+                        <outlet property="delegate" destination="NHr-KJ-ICC" id="0ac-gf-ab8"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" maximumNumberOfTouches="2" id="2Ub-C2-yjl" userLabel="Blue Pan Gesture Recognizer">
+                    <connections>
+                        <action selector="panPiece:" destination="NHr-KJ-ICC" id="MVy-fk-BWC"/>
+                        <outlet property="delegate" destination="NHr-KJ-ICC" id="8wi-YU-jLS"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" maximumNumberOfTouches="2" id="d30-aO-wuY" userLabel="Pink Pan Gesture Recognizer">
+                    <connections>
+                        <action selector="panPiece:" destination="NHr-KJ-ICC" id="vms-zS-Q9k"/>
+                        <outlet property="delegate" destination="NHr-KJ-ICC" id="JW1-gk-ERe"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="AOo-q7-ZxF" userLabel="Yellow Long Press Gesture Recognizer">
+                    <connections>
+                        <action selector="showResetMenu:" destination="NHr-KJ-ICC" id="6Iw-RF-1s2"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Gjg-9d-Sgi" userLabel="Blue Long Press Gesture Recognizer">
+                    <connections>
+                        <action selector="showResetMenu:" destination="NHr-KJ-ICC" id="k2N-kd-60Q"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="5gM-Dh-xQ5" userLabel="Pink Long Press Gesture Recognizer">
+                    <connections>
+                        <action selector="showResetMenu:" destination="NHr-KJ-ICC" id="wdn-iw-ggk"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="119" y="129"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CyanSquare.png" width="100" height="100"/>
+        <image name="MagentaSquare.png" width="100" height="100"/>
+        <image name="YellowSquare.png" width="100" height="100"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

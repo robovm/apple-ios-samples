@@ -1,0 +1,317 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		28DD4759175C2F84007B658A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28DD4758175C2F84007B658A /* Foundation.framework */; };
+		28DD475B175C2F84007B658A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28DD475A175C2F84007B658A /* CoreGraphics.framework */; };
+		28DD475D175C2F84007B658A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28DD475C175C2F84007B658A /* UIKit.framework */; };
+		28DD4763175C2F84007B658A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 28DD4761175C2F84007B658A /* InfoPlist.strings */; };
+		28DD4765175C2F84007B658A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DD4764175C2F84007B658A /* main.m */; };
+		28DD4769175C2F84007B658A /* APLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DD4768175C2F84007B658A /* APLAppDelegate.m */; };
+		28DD476C175C2F84007B658A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28DD476A175C2F84007B658A /* Main.storyboard */; };
+		28DD476F175C2F84007B658A /* APLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DD476E175C2F84007B658A /* APLViewController.m */; };
+		28DD4771175C2F84007B658A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28DD4770175C2F84007B658A /* Images.xcassets */; };
+		D00FDE5E17B41EC80063BC71 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00FDE5D17B41EC80063BC71 /* Accelerate.framework */; };
+		D00FDE6117B444750063BC71 /* UIImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = D00FDE6017B444750063BC71 /* UIImageEffects.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		28DD4755175C2F84007B658A /* UIImageEffects.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIImageEffects.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		28DD4758175C2F84007B658A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		28DD475A175C2F84007B658A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		28DD475C175C2F84007B658A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		28DD4760175C2F84007B658A /* UIImageEffects-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UIImageEffects-Info.plist"; sourceTree = "<group>"; };
+		28DD4762175C2F84007B658A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		28DD4764175C2F84007B658A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		28DD4766175C2F84007B658A /* UIImageEffects-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageEffects-Prefix.pch"; sourceTree = "<group>"; };
+		28DD4767175C2F84007B658A /* APLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APLAppDelegate.h; sourceTree = "<group>"; };
+		28DD4768175C2F84007B658A /* APLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APLAppDelegate.m; sourceTree = "<group>"; };
+		28DD476B175C2F84007B658A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		28DD476D175C2F84007B658A /* APLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APLViewController.h; sourceTree = "<group>"; };
+		28DD476E175C2F84007B658A /* APLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APLViewController.m; sourceTree = "<group>"; };
+		28DD4770175C2F84007B658A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		28DD4792175C2FDA007B658A /* ReadMe.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		D00FDE5D17B41EC80063BC71 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		D00FDE5F17B444750063BC71 /* UIImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageEffects.h; sourceTree = "<group>"; };
+		D00FDE6017B444750063BC71 /* UIImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageEffects.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		28DD4752175C2F84007B658A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D00FDE5E17B41EC80063BC71 /* Accelerate.framework in Frameworks */,
+				28DD475B175C2F84007B658A /* CoreGraphics.framework in Frameworks */,
+				28DD475D175C2F84007B658A /* UIKit.framework in Frameworks */,
+				28DD4759175C2F84007B658A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		28DD474C175C2F84007B658A = {
+			isa = PBXGroup;
+			children = (
+				28DD4792175C2FDA007B658A /* ReadMe.txt */,
+				28DD475E175C2F84007B658A /* UIImageEffects */,
+				28DD4757175C2F84007B658A /* Frameworks */,
+				28DD4756175C2F84007B658A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		28DD4756175C2F84007B658A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				28DD4755175C2F84007B658A /* UIImageEffects.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		28DD4757175C2F84007B658A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D00FDE5D17B41EC80063BC71 /* Accelerate.framework */,
+				28DD4758175C2F84007B658A /* Foundation.framework */,
+				28DD475A175C2F84007B658A /* CoreGraphics.framework */,
+				28DD475C175C2F84007B658A /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		28DD475E175C2F84007B658A /* UIImageEffects */ = {
+			isa = PBXGroup;
+			children = (
+				D00FDE5F17B444750063BC71 /* UIImageEffects.h */,
+				D00FDE6017B444750063BC71 /* UIImageEffects.m */,
+				28DD476D175C2F84007B658A /* APLViewController.h */,
+				28DD476E175C2F84007B658A /* APLViewController.m */,
+				28DD476A175C2F84007B658A /* Main.storyboard */,
+				28DD4767175C2F84007B658A /* APLAppDelegate.h */,
+				28DD4768175C2F84007B658A /* APLAppDelegate.m */,
+				28DD4770175C2F84007B658A /* Images.xcassets */,
+				28DD475F175C2F84007B658A /* Supporting Files */,
+			);
+			path = UIImageEffects;
+			sourceTree = "<group>";
+		};
+		28DD475F175C2F84007B658A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				28DD4760175C2F84007B658A /* UIImageEffects-Info.plist */,
+				28DD4761175C2F84007B658A /* InfoPlist.strings */,
+				28DD4764175C2F84007B658A /* main.m */,
+				28DD4766175C2F84007B658A /* UIImageEffects-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		28DD4754175C2F84007B658A /* UIImageEffects */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28DD4787175C2F84007B658A /* Build configuration list for PBXNativeTarget "UIImageEffects" */;
+			buildPhases = (
+				28DD4751175C2F84007B658A /* Sources */,
+				28DD4752175C2F84007B658A /* Frameworks */,
+				28DD4753175C2F84007B658A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UIImageEffects;
+			productName = UIImageEffects;
+			productReference = 28DD4755175C2F84007B658A /* UIImageEffects.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		28DD474D175C2F84007B658A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = APL;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Apple, Inc.";
+			};
+			buildConfigurationList = 28DD4750175C2F84007B658A /* Build configuration list for PBXProject "UIImageEffects" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 28DD474C175C2F84007B658A;
+			productRefGroup = 28DD4756175C2F84007B658A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				28DD4754175C2F84007B658A /* UIImageEffects */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		28DD4753175C2F84007B658A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28DD4771175C2F84007B658A /* Images.xcassets in Resources */,
+				28DD4763175C2F84007B658A /* InfoPlist.strings in Resources */,
+				28DD476C175C2F84007B658A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		28DD4751175C2F84007B658A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28DD4769175C2F84007B658A /* APLAppDelegate.m in Sources */,
+				28DD476F175C2F84007B658A /* APLViewController.m in Sources */,
+				D00FDE6117B444750063BC71 /* UIImageEffects.m in Sources */,
+				28DD4765175C2F84007B658A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		28DD4761175C2F84007B658A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				28DD4762175C2F84007B658A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		28DD476A175C2F84007B658A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				28DD476B175C2F84007B658A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		28DD4785175C2F84007B658A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		28DD4786175C2F84007B658A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		28DD4788175C2F84007B658A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UIImageEffects/UIImageEffects-Prefix.pch";
+				INFOPLIST_FILE = "UIImageEffects/UIImageEffects-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		28DD4789175C2F84007B658A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UIImageEffects/UIImageEffects-Prefix.pch";
+				INFOPLIST_FILE = "UIImageEffects/UIImageEffects-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		28DD4750175C2F84007B658A /* Build configuration list for PBXProject "UIImageEffects" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28DD4785175C2F84007B658A /* Debug */,
+				28DD4786175C2F84007B658A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28DD4787175C2F84007B658A /* Build configuration list for PBXNativeTarget "UIImageEffects" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28DD4788175C2F84007B658A /* Debug */,
+				28DD4789175C2F84007B658A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 28DD474D175C2F84007B658A /* Project object */;
+}

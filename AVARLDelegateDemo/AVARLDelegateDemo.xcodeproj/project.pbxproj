@@ -1,0 +1,358 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		818C077D17878453009AAE7E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 818C077C17878453009AAE7E /* Foundation.framework */; };
+		818C077F17878453009AAE7E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 818C077E17878453009AAE7E /* CoreGraphics.framework */; };
+		818C078117878453009AAE7E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 818C078017878453009AAE7E /* UIKit.framework */; };
+		818C078717878453009AAE7E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 818C078517878453009AAE7E /* InfoPlist.strings */; };
+		818C078917878453009AAE7E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 818C078817878453009AAE7E /* main.m */; };
+		818C078D17878453009AAE7E /* APLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 818C078C17878453009AAE7E /* APLAppDelegate.m */; };
+		818C079017878453009AAE7E /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 818C078E17878453009AAE7E /* Main_iPhone.storyboard */; };
+		818C079617878453009AAE7E /* APLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 818C079517878453009AAE7E /* APLViewController.m */; };
+		818C079817878453009AAE7E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 818C079717878453009AAE7E /* Images.xcassets */; };
+		818C07B617878490009AAE7E /* APLPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 818C07B517878490009AAE7E /* APLPlayerView.m */; };
+		818C07B91787A416009AAE7E /* APLCustomAVARLDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 818C07B81787A416009AAE7E /* APLCustomAVARLDelegate.m */; };
+		81AADD4F17CFE1F2005CC181 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81AADD4E17CFE1F2005CC181 /* ReadMe.txt */; };
+		81EC194417CFC07F008BA722 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81EC194217CFC07F008BA722 /* Main_iPad.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		818C077917878453009AAE7E /* AVARLDelegateDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVARLDelegateDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		818C077C17878453009AAE7E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		818C077E17878453009AAE7E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		818C078017878453009AAE7E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		818C078417878453009AAE7E /* AVARLDelegateDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AVARLDelegateDemo-Info.plist"; sourceTree = "<group>"; };
+		818C078617878453009AAE7E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		818C078817878453009AAE7E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		818C078A17878453009AAE7E /* AVARLDelegateDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AVARLDelegateDemo-Prefix.pch"; sourceTree = "<group>"; };
+		818C078B17878453009AAE7E /* APLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APLAppDelegate.h; sourceTree = "<group>"; };
+		818C078C17878453009AAE7E /* APLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APLAppDelegate.m; sourceTree = "<group>"; };
+		818C078F17878453009AAE7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		818C079417878453009AAE7E /* APLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APLViewController.h; sourceTree = "<group>"; };
+		818C079517878453009AAE7E /* APLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APLViewController.m; sourceTree = "<group>"; };
+		818C079717878453009AAE7E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		818C07B417878490009AAE7E /* APLPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLPlayerView.h; sourceTree = "<group>"; };
+		818C07B517878490009AAE7E /* APLPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLPlayerView.m; sourceTree = "<group>"; };
+		818C07B71787A416009AAE7E /* APLCustomAVARLDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLCustomAVARLDelegate.h; sourceTree = "<group>"; };
+		818C07B81787A416009AAE7E /* APLCustomAVARLDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLCustomAVARLDelegate.m; sourceTree = "<group>"; };
+		81AADD4E17CFE1F2005CC181 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = SOURCE_ROOT; };
+		81EC194317CFC07F008BA722 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		818C077617878453009AAE7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				818C077F17878453009AAE7E /* CoreGraphics.framework in Frameworks */,
+				818C078117878453009AAE7E /* UIKit.framework in Frameworks */,
+				818C077D17878453009AAE7E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		818C077017878453009AAE7E = {
+			isa = PBXGroup;
+			children = (
+				818C078217878453009AAE7E /* AVARLDelegateDemo */,
+				818C077B17878453009AAE7E /* Frameworks */,
+				818C077A17878453009AAE7E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		818C077A17878453009AAE7E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				818C077917878453009AAE7E /* AVARLDelegateDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		818C077B17878453009AAE7E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				818C077C17878453009AAE7E /* Foundation.framework */,
+				818C077E17878453009AAE7E /* CoreGraphics.framework */,
+				818C078017878453009AAE7E /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		818C078217878453009AAE7E /* AVARLDelegateDemo */ = {
+			isa = PBXGroup;
+			children = (
+				81AADD4E17CFE1F2005CC181 /* ReadMe.txt */,
+				818C07B417878490009AAE7E /* APLPlayerView.h */,
+				818C07B517878490009AAE7E /* APLPlayerView.m */,
+				818C078B17878453009AAE7E /* APLAppDelegate.h */,
+				818C078C17878453009AAE7E /* APLAppDelegate.m */,
+				818C078E17878453009AAE7E /* Main_iPhone.storyboard */,
+				81EC194217CFC07F008BA722 /* Main_iPad.storyboard */,
+				818C079417878453009AAE7E /* APLViewController.h */,
+				818C079517878453009AAE7E /* APLViewController.m */,
+				818C07B71787A416009AAE7E /* APLCustomAVARLDelegate.h */,
+				818C07B81787A416009AAE7E /* APLCustomAVARLDelegate.m */,
+				818C079717878453009AAE7E /* Images.xcassets */,
+				818C078317878453009AAE7E /* Supporting Files */,
+			);
+			path = AVARLDelegateDemo;
+			sourceTree = "<group>";
+		};
+		818C078317878453009AAE7E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				818C078417878453009AAE7E /* AVARLDelegateDemo-Info.plist */,
+				818C078517878453009AAE7E /* InfoPlist.strings */,
+				818C078817878453009AAE7E /* main.m */,
+				818C078A17878453009AAE7E /* AVARLDelegateDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		818C077817878453009AAE7E /* AVARLDelegateDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 818C07AE17878454009AAE7E /* Build configuration list for PBXNativeTarget "AVARLDelegateDemo" */;
+			buildPhases = (
+				818C077517878453009AAE7E /* Sources */,
+				818C077617878453009AAE7E /* Frameworks */,
+				818C077717878453009AAE7E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AVARLDelegateDemo;
+			productName = AVARLDelegateDemo;
+			productReference = 818C077917878453009AAE7E /* AVARLDelegateDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		818C077117878453009AAE7E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = rajiv;
+			};
+			buildConfigurationList = 818C077417878453009AAE7E /* Build configuration list for PBXProject "AVARLDelegateDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 818C077017878453009AAE7E;
+			productRefGroup = 818C077A17878453009AAE7E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				818C077817878453009AAE7E /* AVARLDelegateDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		818C077717878453009AAE7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				818C079817878453009AAE7E /* Images.xcassets in Resources */,
+				81EC194417CFC07F008BA722 /* Main_iPad.storyboard in Resources */,
+				818C079017878453009AAE7E /* Main_iPhone.storyboard in Resources */,
+				81AADD4F17CFE1F2005CC181 /* ReadMe.txt in Resources */,
+				818C078717878453009AAE7E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		818C077517878453009AAE7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				818C079617878453009AAE7E /* APLViewController.m in Sources */,
+				818C078D17878453009AAE7E /* APLAppDelegate.m in Sources */,
+				818C07B91787A416009AAE7E /* APLCustomAVARLDelegate.m in Sources */,
+				818C07B617878490009AAE7E /* APLPlayerView.m in Sources */,
+				818C078917878453009AAE7E /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		818C078517878453009AAE7E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				818C078617878453009AAE7E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		818C078E17878453009AAE7E /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				818C078F17878453009AAE7E /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		81EC194217CFC07F008BA722 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				81EC194317CFC07F008BA722 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		818C07AC17878454009AAE7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		818C07AD17878454009AAE7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		818C07AF17878454009AAE7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AVARLDelegateDemo/AVARLDelegateDemo-Prefix.pch";
+				INFOPLIST_FILE = "AVARLDelegateDemo/AVARLDelegateDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		818C07B017878454009AAE7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AVARLDelegateDemo/AVARLDelegateDemo-Prefix.pch";
+				INFOPLIST_FILE = "AVARLDelegateDemo/AVARLDelegateDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		818C077417878453009AAE7E /* Build configuration list for PBXProject "AVARLDelegateDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				818C07AC17878454009AAE7E /* Debug */,
+				818C07AD17878454009AAE7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		818C07AE17878454009AAE7E /* Build configuration list for PBXNativeTarget "AVARLDelegateDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				818C07AF17878454009AAE7E /* Debug */,
+				818C07B017878454009AAE7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 818C077117878453009AAE7E /* Project object */;
+}

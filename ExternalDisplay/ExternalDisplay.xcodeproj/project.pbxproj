@@ -1,0 +1,347 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
+		BF4D64EE17E26D250016570D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF4D64ED17E26D250016570D /* Images.xcassets */; };
+		BFCC908417E3B1D0003A1F89 /* ExternalDisplayAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFCC907F17E3B1D0003A1F89 /* ExternalDisplayAppDelegate.m */; };
+		BFCC908517E3B1D0003A1F89 /* ExternalDisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFCC908117E3B1D0003A1F89 /* ExternalDisplayViewController.m */; };
+		BFCC908617E3B1D0003A1F89 /* PresoModeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFCC908317E3B1D0003A1F89 /* PresoModeViewController.m */; };
+		BFCC909217E3B434003A1F89 /* ExternalDisplayViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFCC908817E3B434003A1F89 /* ExternalDisplayViewController_iPad.xib */; };
+		BFCC909317E3B434003A1F89 /* ExternalDisplayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFCC908A17E3B434003A1F89 /* ExternalDisplayViewController.xib */; };
+		BFCC909417E3B434003A1F89 /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFCC908C17E3B434003A1F89 /* MainWindow_iPad.xib */; };
+		BFCC909517E3B434003A1F89 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFCC908E17E3B434003A1F89 /* MainWindow.xib */; };
+		BFCC909617E3B434003A1F89 /* PresoModeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFCC909017E3B434003A1F89 /* PresoModeViewController.xib */; };
+		BFCC909917E3B468003A1F89 /* ScreenOne.png in Resources */ = {isa = PBXBuildFile; fileRef = BFCC909717E3B468003A1F89 /* ScreenOne.png */; };
+		BFCC909A17E3B468003A1F89 /* ScreenTwo.png in Resources */ = {isa = PBXBuildFile; fileRef = BFCC909817E3B468003A1F89 /* ScreenTwo.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D6058910D05DD3D006BFB54 /* ExternalDisplay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExternalDisplay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		28A0AAE50D9B0CCF005BE974 /* ExternalDisplay_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExternalDisplay_Prefix.pch; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* ExternalDisplay-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ExternalDisplay-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		BF4D64ED17E26D250016570D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BFCC6FE617E3BA5F002A2E3D /* ReadMe.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		BFCC907E17E3B1D0003A1F89 /* ExternalDisplayAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExternalDisplayAppDelegate.h; sourceTree = "<group>"; };
+		BFCC907F17E3B1D0003A1F89 /* ExternalDisplayAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExternalDisplayAppDelegate.m; sourceTree = "<group>"; };
+		BFCC908017E3B1D0003A1F89 /* ExternalDisplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExternalDisplayViewController.h; sourceTree = "<group>"; };
+		BFCC908117E3B1D0003A1F89 /* ExternalDisplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExternalDisplayViewController.m; sourceTree = "<group>"; };
+		BFCC908217E3B1D0003A1F89 /* PresoModeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresoModeViewController.h; sourceTree = "<group>"; };
+		BFCC908317E3B1D0003A1F89 /* PresoModeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresoModeViewController.m; sourceTree = "<group>"; };
+		BFCC908917E3B434003A1F89 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ExternalDisplayViewController_iPad.xib; sourceTree = "<group>"; };
+		BFCC908B17E3B434003A1F89 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ExternalDisplayViewController.xib; sourceTree = "<group>"; };
+		BFCC908D17E3B434003A1F89 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainWindow_iPad.xib; sourceTree = "<group>"; };
+		BFCC908F17E3B434003A1F89 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		BFCC909117E3B434003A1F89 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/PresoModeViewController.xib; sourceTree = "<group>"; };
+		BFCC909717E3B468003A1F89 /* ScreenOne.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ScreenOne.png; path = ExternalDisplay/images/ScreenOne.png; sourceTree = SOURCE_ROOT; };
+		BFCC909817E3B468003A1F89 /* ScreenTwo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ScreenTwo.png; path = ExternalDisplay/images/ScreenTwo.png; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* ExternalDisplay */ = {
+			isa = PBXGroup;
+			children = (
+				BFCC907E17E3B1D0003A1F89 /* ExternalDisplayAppDelegate.h */,
+				BFCC907F17E3B1D0003A1F89 /* ExternalDisplayAppDelegate.m */,
+				BFCC908017E3B1D0003A1F89 /* ExternalDisplayViewController.h */,
+				BFCC908117E3B1D0003A1F89 /* ExternalDisplayViewController.m */,
+				BFCC908217E3B1D0003A1F89 /* PresoModeViewController.h */,
+				BFCC908317E3B1D0003A1F89 /* PresoModeViewController.m */,
+				BFCC908C17E3B434003A1F89 /* MainWindow_iPad.xib */,
+				BFCC908E17E3B434003A1F89 /* MainWindow.xib */,
+				BFCC908817E3B434003A1F89 /* ExternalDisplayViewController_iPad.xib */,
+				BFCC908A17E3B434003A1F89 /* ExternalDisplayViewController.xib */,
+				BFCC909017E3B434003A1F89 /* PresoModeViewController.xib */,
+				BF4D64ED17E26D250016570D /* Images.xcassets */,
+				BF8991041253DA51008489AA /* images */,
+				BFCC908717E3B348003A1F89 /* Supporting Files */,
+			);
+			path = ExternalDisplay;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* ExternalDisplay.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				BFCC6FE617E3BA5F002A2E3D /* ReadMe.txt */,
+				080E96DDFE201D6D7F000001 /* ExternalDisplay */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF8991041253DA51008489AA /* images */ = {
+			isa = PBXGroup;
+			children = (
+				BFCC909717E3B468003A1F89 /* ScreenOne.png */,
+				BFCC909817E3B468003A1F89 /* ScreenTwo.png */,
+			);
+			name = images;
+			path = ../images;
+			sourceTree = "<group>";
+		};
+		BFCC908717E3B348003A1F89 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107310486CEB800E47090 /* ExternalDisplay-Info.plist */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+				28A0AAE50D9B0CCF005BE974 /* ExternalDisplay_Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* ExternalDisplay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "ExternalDisplay" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ExternalDisplay;
+			productName = ExternalDisplay;
+			productReference = 1D6058910D05DD3D006BFB54 /* ExternalDisplay.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "ExternalDisplay" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* ExternalDisplay */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFCC909517E3B434003A1F89 /* MainWindow.xib in Resources */,
+				BFCC909617E3B434003A1F89 /* PresoModeViewController.xib in Resources */,
+				BFCC909A17E3B468003A1F89 /* ScreenTwo.png in Resources */,
+				BFCC909417E3B434003A1F89 /* MainWindow_iPad.xib in Resources */,
+				BFCC909217E3B434003A1F89 /* ExternalDisplayViewController_iPad.xib in Resources */,
+				BFCC909917E3B468003A1F89 /* ScreenOne.png in Resources */,
+				BF4D64EE17E26D250016570D /* Images.xcassets in Resources */,
+				BFCC909317E3B434003A1F89 /* ExternalDisplayViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFCC908517E3B1D0003A1F89 /* ExternalDisplayViewController.m in Sources */,
+				BFCC908617E3B1D0003A1F89 /* PresoModeViewController.m in Sources */,
+				BFCC908417E3B1D0003A1F89 /* ExternalDisplayAppDelegate.m in Sources */,
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BFCC908817E3B434003A1F89 /* ExternalDisplayViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFCC908917E3B434003A1F89 /* English */,
+			);
+			name = ExternalDisplayViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		BFCC908A17E3B434003A1F89 /* ExternalDisplayViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFCC908B17E3B434003A1F89 /* English */,
+			);
+			name = ExternalDisplayViewController.xib;
+			sourceTree = "<group>";
+		};
+		BFCC908C17E3B434003A1F89 /* MainWindow_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFCC908D17E3B434003A1F89 /* English */,
+			);
+			name = MainWindow_iPad.xib;
+			sourceTree = "<group>";
+		};
+		BFCC908E17E3B434003A1F89 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFCC908F17E3B434003A1F89 /* English */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		BFCC909017E3B434003A1F89 /* PresoModeViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFCC909117E3B434003A1F89 /* English */,
+			);
+			name = PresoModeViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ExternalDisplay/ExternalDisplay_Prefix.pch;
+				INFOPLIST_FILE = "ExternalDisplay/ExternalDisplay-Info.plist";
+				PRODUCT_NAME = ExternalDisplay;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ExternalDisplay/ExternalDisplay_Prefix.pch;
+				INFOPLIST_FILE = "ExternalDisplay/ExternalDisplay-Info.plist";
+				PRODUCT_NAME = ExternalDisplay;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "ExternalDisplay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "ExternalDisplay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

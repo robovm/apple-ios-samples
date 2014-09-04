@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="gXc-kW-eQc">
+    <dependencies>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <development version="4600" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller - Products-->
+        <scene sceneID="dTt-Ns-E5g">
+            <objects>
+                <tableViewController storyboardIdentifier="ProductsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dwf-zE-NEX" customClass="APLViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" restorationIdentifier="TableView" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="bUn-Oh-YIe">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" restorationIdentifier="SearchBar" id="oG1-xt-R2b">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <scopeButtonTitles>
+                                <string>All</string>
+                                <string>Device</string>
+                                <string>Desktop</string>
+                                <string>Portable</string>
+                            </scopeButtonTitles>
+                            <connections>
+                                <outlet property="delegate" destination="dwf-zE-NEX" id="xPQ-WJ-jm7"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellIdentifier" textLabel="HXF-Zo-fzo" detailTextLabel="R7t-Mj-vZJ" rowHeight="44" style="IBUITableViewCellStyleValue1" id="re7-bo-7vh">
+                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HXF-Zo-fzo">
+                                            <rect key="frame" x="10" y="11" width="35" height="21"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="R7t-Mj-vZJ">
+                                            <rect key="frame" x="246" y="11" width="44" height="21"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.2196078431372549" green="0.32941176470588235" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <segue destination="hxa-az-OXA" kind="push" identifier="pushDetailView" id="4kP-Di-2wV"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Products" id="hED-VJ-XNV"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="bJt-dK-cVW" id="egQ-R4-LRX"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Ak-OW-r6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="bJt-dK-cVW">
+                    <connections>
+                        <outlet property="delegate" destination="dwf-zE-NEX" id="0Xg-Ir-6dB"/>
+                        <outlet property="searchBar" destination="oG1-xt-R2b" id="8QX-Kg-kdK"/>
+                        <outlet property="searchContentsController" destination="dwf-zE-NEX" id="yGx-wf-HtI"/>
+                        <outlet property="searchResultsDataSource" destination="dwf-zE-NEX" id="kx6-0A-9Jb"/>
+                        <outlet property="searchResultsDelegate" destination="dwf-zE-NEX" id="fDn-ma-YXp"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="193" y="244"/>
+        </scene>
+        <!--APLDetailViewController-->
+        <scene sceneID="F7E-LD-2At">
+            <objects>
+                <viewController storyboardIdentifier="DetailView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hxa-az-OXA" userLabel="APLDetailViewController" customClass="APLDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GVr-wi-mFv">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7iI-ca-lYx">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="4ah-dU-1PC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.82047193880000002" green="0.82047193880000002" blue="0.82047193880000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="7iI-ca-lYx" firstAttribute="leading" secondItem="GVr-wi-mFv" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="1AM-R9-uUa"/>
+                            <constraint firstAttribute="trailing" secondItem="7iI-ca-lYx" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="RFj-Ff-pbb"/>
+                            <constraint firstItem="7iI-ca-lYx" firstAttribute="top" secondItem="GVr-wi-mFv" secondAttribute="top" constant="20" symbolic="YES" type="default" id="U15-wb-ygp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="AOZ-to-cmf"/>
+                    <connections>
+                        <outlet property="productInfoLabel" destination="7iI-ca-lYx" id="PaU-lM-7ok"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6z2-GP-bac" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="702" y="244"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PPA-IN-OxV">
+            <objects>
+                <navigationController storyboardIdentifier="MainNavigationController" definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gXc-kW-eQc" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="B0E-Gz-2UC">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="dwf-zE-NEX" kind="relationship" relationship="rootViewController" id="cKp-eU-bJ0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bd6-Ps-7uI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-341" y="244"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="APLDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/APLDetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="productInfoLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="APLViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/APLViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

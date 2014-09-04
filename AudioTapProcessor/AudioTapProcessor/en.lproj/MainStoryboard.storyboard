@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="2">
+    <dependencies>
+        <development version="4600" defaultVersion="4200" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="4">
+            <objects>
+                <viewController id="2" customClass="MYViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5">
+                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="nP9-QO-5ZL" customClass="MYPlayerView">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="962"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view opaque="NO" contentMode="scaleToFill" id="w5C-3p-K2k" customClass="MYVolumeUnitMeterView">
+                                <rect key="frame" x="0.0" y="837" width="300" height="125"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </view>
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" image="PlaybackControlsBarShadow" id="DdV-es-Y7w">
+                                <rect key="frame" x="300" y="837" width="168" height="125"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            </imageView>
+                            <view opaque="NO" contentMode="scaleToFill" id="OYx-b7-hz9" customClass="MYVolumeUnitMeterView">
+                                <rect key="frame" x="468" y="837" width="300" height="125"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="GdI-XV-arv" customClass="MYGradientView">
+                                <rect key="frame" x="0.0" y="962" width="768" height="42"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="LGw-M0-SLo">
+                                        <rect key="frame" x="15" y="6" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="" image="PlayButton">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="togglePlayPause:" destination="2" eventType="touchUpInside" id="Gne-v8-n7d"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="6p0-kN-364">
+                                        <rect key="frame" x="723" y="6" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="" image="SettingsButton">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="r2J-FC-ni4" kind="popover" identifier="ShowSettingsSegue" popoverAnchorView="6p0-kN-364" id="kjO-Tq-BfS">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="-00:00:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="2nu-QD-fd0">
+                                        <rect key="frame" x="48" y="13" width="53" height="15"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="pDr-ps-P6P">
+                                        <rect key="frame" x="107" y="9" width="556" height="23"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                        <color key="minimumTrackTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="maximumTrackTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="seekToTime:" destination="2" eventType="valueChanged" id="rNS-0w-veB"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="-00:00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="NA0-DS-tZQ">
+                                        <rect key="frame" x="669" y="13" width="53" height="15"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="currentTimeSlider" destination="pDr-ps-P6P" id="keU-GJ-Uhb"/>
+                        <outlet property="elapsedTimeLabel" destination="2nu-QD-fd0" id="HRD-3D-kdk"/>
+                        <outlet property="leftChannelVolumeUnitMeterView" destination="w5C-3p-K2k" id="gvF-aE-JQs"/>
+                        <outlet property="playPauseButton" destination="LGw-M0-SLo" id="VPf-uW-nlj"/>
+                        <outlet property="playerView" destination="nP9-QO-5ZL" id="QRX-3v-hox"/>
+                        <outlet property="remainingTimeLabel" destination="NA0-DS-tZQ" id="R14-WO-uiX"/>
+                        <outlet property="rightChannelVolumeUnitMeterView" destination="OYx-b7-hz9" id="hqP-wV-CyL"/>
+                        <outlet property="settingsPopoverButton" destination="6p0-kN-364" id="eTF-UR-eBO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-357" y="52"/>
+        </scene>
+        <!--Settings View Controller - Bandpass Filter-->
+        <scene sceneID="e0q-h0-LEM">
+            <objects>
+                <tableViewController id="mhm-ab-wZg" customClass="MYSettingsViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="HDp-bL-xWR">
+                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="X7Z-zx-3wM">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="9Ys-hf-1ke">
+                                        <rect key="frame" x="0.0" y="30" width="768" height="46"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="45" y="1" width="678" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="fwY-KX-3QX">
+                                                    <rect key="frame" x="591" y="9" width="79" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="updateEnabledSwitchValue:" destination="mhm-ab-wZg" eventType="valueChanged" id="pwK-fY-3c5"/>
+                                                    </connections>
+                                                </switch>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Enabled" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="W0z-AL-je5">
+                                                    <rect key="frame" x="10" y="12" width="67" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Center Frequency" footerTitle="Global, Hz, 20->(SampleRate/2), 5000" id="Xd6-aZ-eg9">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="fdF-sX-rd1">
+                                        <rect key="frame" x="0.0" y="120" width="768" height="46"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="45" y="1" width="678" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="hUN-7l-ai3">
+                                                    <rect key="frame" x="9" y="11" width="660" height="23"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="updateCenterFrequencySliderValue:" destination="mhm-ab-wZg" eventType="valueChanged" id="bwY-Hs-zqH"/>
+                                                    </connections>
+                                                </slider>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Bandwidth" footerTitle="Global, Cents, 100->12000, 600" id="KEe-aZ-QZa">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="4aU-sx-3us">
+                                        <rect key="frame" x="0.0" y="241" width="768" height="46"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="45" y="1" width="678" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="V19-Ah-gNb">
+                                                    <rect key="frame" x="9" y="11" width="660" height="23"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="updateBandwidthSliderSliderValue:" destination="mhm-ab-wZg" eventType="valueChanged" id="JsQ-8f-vKz"/>
+                                                    </connections>
+                                                </slider>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="mhm-ab-wZg" id="MWU-2t-Qni"/>
+                            <outlet property="delegate" destination="mhm-ab-wZg" id="bcR-2b-7MF"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Bandpass Filter" id="8Sp-4T-W9G"/>
+                    <value key="contentSizeForViewInPopover" type="size" width="320" height="324"/>
+                    <connections>
+                        <outlet property="bandwidthSlider" destination="V19-Ah-gNb" id="yTc-VZ-Orz"/>
+                        <outlet property="centerFrequencySlider" destination="hUN-7l-ai3" id="ZAQ-zg-Vb1"/>
+                        <outlet property="enabledSwitch" destination="fwY-KX-3QX" id="C5s-LQ-DX9"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Ep-ef-FQy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1511" y="52"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VoN-tn-SRu">
+            <objects>
+                <navigationController id="r2J-FC-ni4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LGm-CE-8Xe">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mhm-ab-wZg" kind="relationship" relationship="rootViewController" id="7z1-iJ-Wef"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dp3-4Z-6Qv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="571" y="52"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="PlayButton" width="16" height="16"/>
+        <image name="PlaybackControlsBarShadow" width="16" height="16"/>
+        <image name="SettingsButton" width="16" height="16"/>
+    </resources>
+    <classes>
+        <class className="MYGradientView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MYGradientView.h"/>
+        </class>
+        <class className="MYPlayerView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MYPlayerView.h"/>
+        </class>
+        <class className="MYSettingsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MYSettingsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="updateBandwidthSliderSliderValue:"/>
+                <relationship kind="action" name="updateCenterFrequencySliderValue:"/>
+                <relationship kind="action" name="updateEnabledSwitchValue:"/>
+                <relationship kind="outlet" name="bandwidthSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="centerFrequencySlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="enabledSwitch" candidateClass="UISwitch"/>
+            </relationships>
+        </class>
+        <class className="MYViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MYViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="seekToTime:"/>
+                <relationship kind="action" name="togglePlayPause:"/>
+                <relationship kind="outlet" name="currentTimeSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="elapsedTimeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="leftChannelVolumeUnitMeterView" candidateClass="MYVolumeUnitMeterView"/>
+                <relationship kind="outlet" name="playPauseButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="playerView" candidateClass="MYPlayerView"/>
+                <relationship kind="outlet" name="remainingTimeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="rightChannelVolumeUnitMeterView" candidateClass="MYVolumeUnitMeterView"/>
+                <relationship kind="outlet" name="settingsPopoverButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="MYVolumeUnitMeterView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MYVolumeUnitMeterView.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

@@ -1,0 +1,468 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB006519137DA81E00DD90CF /* NewMetadataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB006518137DA81D00DD90CF /* NewMetadataViewController.m */; };
+		FB00651C137DAB2B00DD90CF /* CommonMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = FB00651B137DAB2A00DD90CF /* CommonMetadata.m */; };
+		FB1D001413843AFF00F533D5 /* ExportView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB1D001313843AFF00F533D5 /* ExportView.xib */; };
+		FB25D6D113749894003C4383 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB25D6D013749894003C4383 /* AVFoundation.framework */; };
+		FB25D6E21374A0A2003C4383 /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB25D6E01374A0A2003C4383 /* MainWindow-iPad.xib */; };
+		FB25D7131374A56D003C4383 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB25D7121374A56D003C4383 /* CoreMedia.framework */; };
+		FB25D72213786591003C4383 /* PresetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB25D72113786591003C4383 /* PresetViewController.m */; };
+		FB25D72513786A05003C4383 /* FileTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB25D72413786A05003C4383 /* FileTypeViewController.m */; };
+		FB30CA0F1398468700D76157 /* Browser-ErrorLoading.png in Resources */ = {isa = PBXBuildFile; fileRef = FB30CA0E1398468700D76157 /* Browser-ErrorLoading.png */; };
+		FB424F5B1378C29100FE62BF /* VideoLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = FB424F5A1378C29100FE62BF /* VideoLibrary.m */; };
+		FB424F5E1378C34B00FE62BF /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB424F5D1378C34B00FE62BF /* MediaPlayer.framework */; };
+		FB424F631378C5F500FE62BF /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB424F621378C5F500FE62BF /* AssetsLibrary.framework */; };
+		FB424F971379DEFA00FE62BF /* AssetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB424F961379DEFA00FE62BF /* AssetViewController.m */; };
+		FB9A175413835DBD0031E4D8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB9A175213835DBD0031E4D8 /* Localizable.strings */; };
+		FBA6565C13D54600009D653C /* NewMetadataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBA6565B13D54600009D653C /* NewMetadataView.xib */; };
+		FBA6566513D54A29009D653C /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = FBA6566413D54A28009D653C /* ReadMe.txt */; };
+		FBA6566713D5509A009D653C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBA6566613D5509A009D653C /* CoreLocation.framework */; };
+		FBC0964713746CEB0012D716 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBC0964613746CEB0012D716 /* UIKit.framework */; };
+		FBC0964913746CEB0012D716 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBC0964813746CEB0012D716 /* Foundation.framework */; };
+		FBC0964B13746CEB0012D716 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBC0964A13746CEB0012D716 /* CoreGraphics.framework */; };
+		FBC0965113746CEB0012D716 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FBC0964F13746CEB0012D716 /* InfoPlist.strings */; };
+		FBC0965313746CEB0012D716 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC0965213746CEB0012D716 /* main.m */; };
+		FBC0965713746CEB0012D716 /* AVMovieExporterAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC0965613746CEB0012D716 /* AVMovieExporterAppDelegate.m */; };
+		FBC0965A13746CEB0012D716 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBC0965813746CEB0012D716 /* MainWindow.xib */; };
+		FBC0965D13746CEB0012D716 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC0965C13746CEB0012D716 /* RootViewController.m */; };
+		FBC0966013746CEB0012D716 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBC0965E13746CEB0012D716 /* RootViewController.xib */; };
+		FBC2D04B13841E3900671B50 /* ExportProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC2D04A13841E3900671B50 /* ExportProgressViewController.m */; };
+		FBFFFD511379F68300E93D0E /* Sydney-iPhone.m4v in Resources */ = {isa = PBXBuildFile; fileRef = FBFFFD501379F68300E93D0E /* Sydney-iPhone.m4v */; };
+		FBFFFD531379F98300E93D0E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBFFFD521379F98300E93D0E /* MobileCoreServices.framework */; };
+		FBFFFD58137A0F8E00E93D0E /* TrackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFFFD57137A0F8E00E93D0E /* TrackViewController.m */; };
+		FBFFFD5B137A12EC00E93D0E /* MetadataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFFFD5A137A12EC00E93D0E /* MetadataViewController.m */; };
+		FBFFFD5E137B263500E93D0E /* AssetItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFFFD5D137B263500E93D0E /* AssetItem.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FB006517137DA81D00DD90CF /* NewMetadataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewMetadataViewController.h; sourceTree = "<group>"; };
+		FB006518137DA81D00DD90CF /* NewMetadataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewMetadataViewController.m; sourceTree = "<group>"; };
+		FB00651A137DAB2A00DD90CF /* CommonMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonMetadata.h; sourceTree = "<group>"; };
+		FB00651B137DAB2A00DD90CF /* CommonMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonMetadata.m; sourceTree = "<group>"; };
+		FB1D001313843AFF00F533D5 /* ExportView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExportView.xib; sourceTree = "<group>"; };
+		FB25D6D013749894003C4383 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		FB25D6E11374A0A2003C4383 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "iPad/en.lproj/MainWindow-iPad.xib"; sourceTree = "<group>"; };
+		FB25D7121374A56D003C4383 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		FB25D72013786591003C4383 /* PresetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresetViewController.h; sourceTree = "<group>"; };
+		FB25D72113786591003C4383 /* PresetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresetViewController.m; sourceTree = "<group>"; };
+		FB25D72313786A05003C4383 /* FileTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileTypeViewController.h; sourceTree = "<group>"; };
+		FB25D72413786A05003C4383 /* FileTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileTypeViewController.m; sourceTree = "<group>"; };
+		FB30CA0E1398468700D76157 /* Browser-ErrorLoading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Browser-ErrorLoading.png"; sourceTree = "<group>"; };
+		FB424F591378C29100FE62BF /* VideoLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoLibrary.h; sourceTree = "<group>"; };
+		FB424F5A1378C29100FE62BF /* VideoLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoLibrary.m; sourceTree = "<group>"; };
+		FB424F5D1378C34B00FE62BF /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		FB424F621378C5F500FE62BF /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		FB424F951379DEFA00FE62BF /* AssetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetViewController.h; sourceTree = "<group>"; };
+		FB424F961379DEFA00FE62BF /* AssetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetViewController.m; sourceTree = "<group>"; };
+		FB9A175313835DBD0031E4D8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FBA6565B13D54600009D653C /* NewMetadataView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewMetadataView.xib; sourceTree = "<group>"; };
+		FBA6566413D54A28009D653C /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = SOURCE_ROOT; };
+		FBA6566613D5509A009D653C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		FBC0964213746CEB0012D716 /* AVMovieExporter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVMovieExporter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBC0964613746CEB0012D716 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FBC0964813746CEB0012D716 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FBC0964A13746CEB0012D716 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FBC0964E13746CEB0012D716 /* AVMovieExporter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AVMovieExporter-Info.plist"; sourceTree = "<group>"; };
+		FBC0965013746CEB0012D716 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FBC0965213746CEB0012D716 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FBC0965413746CEB0012D716 /* AVMovieExporter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AVMovieExporter-Prefix.pch"; sourceTree = "<group>"; };
+		FBC0965513746CEB0012D716 /* AVMovieExporterAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVMovieExporterAppDelegate.h; sourceTree = "<group>"; };
+		FBC0965613746CEB0012D716 /* AVMovieExporterAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVMovieExporterAppDelegate.m; sourceTree = "<group>"; };
+		FBC0965913746CEB0012D716 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		FBC0965B13746CEB0012D716 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		FBC0965C13746CEB0012D716 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		FBC0965F13746CEB0012D716 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
+		FBC2D04913841E3900671B50 /* ExportProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExportProgressViewController.h; sourceTree = "<group>"; };
+		FBC2D04A13841E3900671B50 /* ExportProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExportProgressViewController.m; sourceTree = "<group>"; };
+		FBFFFD501379F68300E93D0E /* Sydney-iPhone.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sydney-iPhone.m4v"; sourceTree = "<group>"; };
+		FBFFFD521379F98300E93D0E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		FBFFFD56137A0F8E00E93D0E /* TrackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackViewController.h; sourceTree = "<group>"; };
+		FBFFFD57137A0F8E00E93D0E /* TrackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackViewController.m; sourceTree = "<group>"; };
+		FBFFFD59137A12EC00E93D0E /* MetadataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetadataViewController.h; sourceTree = "<group>"; };
+		FBFFFD5A137A12EC00E93D0E /* MetadataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetadataViewController.m; sourceTree = "<group>"; };
+		FBFFFD5C137B263500E93D0E /* AssetItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetItem.h; sourceTree = "<group>"; };
+		FBFFFD5D137B263500E93D0E /* AssetItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetItem.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FBC0963F13746CEB0012D716 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBC0964713746CEB0012D716 /* UIKit.framework in Frameworks */,
+				FBC0964913746CEB0012D716 /* Foundation.framework in Frameworks */,
+				FBC0964B13746CEB0012D716 /* CoreGraphics.framework in Frameworks */,
+				FB25D6D113749894003C4383 /* AVFoundation.framework in Frameworks */,
+				FB25D7131374A56D003C4383 /* CoreMedia.framework in Frameworks */,
+				FB424F5E1378C34B00FE62BF /* MediaPlayer.framework in Frameworks */,
+				FB424F631378C5F500FE62BF /* AssetsLibrary.framework in Frameworks */,
+				FBFFFD531379F98300E93D0E /* MobileCoreServices.framework in Frameworks */,
+				FBA6566713D5509A009D653C /* CoreLocation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB006512137DA5B600DD90CF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FB1D001313843AFF00F533D5 /* ExportView.xib */,
+				FBC0965E13746CEB0012D716 /* RootViewController.xib */,
+				FBC0965813746CEB0012D716 /* MainWindow.xib */,
+				FBA6565B13D54600009D653C /* NewMetadataView.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		FB25D6DF1374A0A1003C4383 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				FB25D6E01374A0A2003C4383 /* MainWindow-iPad.xib */,
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
+		FB25D71D137861F0003C4383 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FBC0965B13746CEB0012D716 /* RootViewController.h */,
+				FBC0965C13746CEB0012D716 /* RootViewController.m */,
+				FB25D72013786591003C4383 /* PresetViewController.h */,
+				FB25D72113786591003C4383 /* PresetViewController.m */,
+				FB25D72313786A05003C4383 /* FileTypeViewController.h */,
+				FB25D72413786A05003C4383 /* FileTypeViewController.m */,
+				FB424F951379DEFA00FE62BF /* AssetViewController.h */,
+				FB424F961379DEFA00FE62BF /* AssetViewController.m */,
+				FBFFFD56137A0F8E00E93D0E /* TrackViewController.h */,
+				FBFFFD57137A0F8E00E93D0E /* TrackViewController.m */,
+				FBFFFD59137A12EC00E93D0E /* MetadataViewController.h */,
+				FBFFFD5A137A12EC00E93D0E /* MetadataViewController.m */,
+				FB006517137DA81D00DD90CF /* NewMetadataViewController.h */,
+				FB006518137DA81D00DD90CF /* NewMetadataViewController.m */,
+				FBC2D04913841E3900671B50 /* ExportProgressViewController.h */,
+				FBC2D04A13841E3900671B50 /* ExportProgressViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		FB25D71F13786203003C4383 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FB424F591378C29100FE62BF /* VideoLibrary.h */,
+				FB424F5A1378C29100FE62BF /* VideoLibrary.m */,
+				FBFFFD5C137B263500E93D0E /* AssetItem.h */,
+				FBFFFD5D137B263500E93D0E /* AssetItem.m */,
+				FB00651A137DAB2A00DD90CF /* CommonMetadata.h */,
+				FB00651B137DAB2A00DD90CF /* CommonMetadata.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		FBC0963713746CEB0012D716 = {
+			isa = PBXGroup;
+			children = (
+				FBC0964C13746CEB0012D716 /* AVMovieExporter */,
+				FBC0964513746CEB0012D716 /* Frameworks */,
+				FBC0964313746CEB0012D716 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FBC0964313746CEB0012D716 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FBC0964213746CEB0012D716 /* AVMovieExporter.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FBC0964513746CEB0012D716 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FBA6566613D5509A009D653C /* CoreLocation.framework */,
+				FBFFFD521379F98300E93D0E /* MobileCoreServices.framework */,
+				FB424F621378C5F500FE62BF /* AssetsLibrary.framework */,
+				FB424F5D1378C34B00FE62BF /* MediaPlayer.framework */,
+				FB25D7121374A56D003C4383 /* CoreMedia.framework */,
+				FB25D6D013749894003C4383 /* AVFoundation.framework */,
+				FBC0964613746CEB0012D716 /* UIKit.framework */,
+				FBC0964813746CEB0012D716 /* Foundation.framework */,
+				FBC0964A13746CEB0012D716 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FBC0964C13746CEB0012D716 /* AVMovieExporter */ = {
+			isa = PBXGroup;
+			children = (
+				FBA6566413D54A28009D653C /* ReadMe.txt */,
+				FB006512137DA5B600DD90CF /* Views */,
+				FB25D71F13786203003C4383 /* Models */,
+				FB25D71D137861F0003C4383 /* Controllers */,
+				FB25D6DF1374A0A1003C4383 /* iPad */,
+				FBC0965513746CEB0012D716 /* AVMovieExporterAppDelegate.h */,
+				FBC0965613746CEB0012D716 /* AVMovieExporterAppDelegate.m */,
+				FBC0964D13746CEB0012D716 /* Supporting Files */,
+			);
+			path = AVMovieExporter;
+			sourceTree = "<group>";
+		};
+		FBC0964D13746CEB0012D716 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB30CA0E1398468700D76157 /* Browser-ErrorLoading.png */,
+				FB9A175213835DBD0031E4D8 /* Localizable.strings */,
+				FBFFFD501379F68300E93D0E /* Sydney-iPhone.m4v */,
+				FBC0964E13746CEB0012D716 /* AVMovieExporter-Info.plist */,
+				FBC0964F13746CEB0012D716 /* InfoPlist.strings */,
+				FBC0965213746CEB0012D716 /* main.m */,
+				FBC0965413746CEB0012D716 /* AVMovieExporter-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FBC0964113746CEB0012D716 /* AVMovieExporter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FBC0966313746CEB0012D716 /* Build configuration list for PBXNativeTarget "AVMovieExporter" */;
+			buildPhases = (
+				FBC0963E13746CEB0012D716 /* Sources */,
+				FBC0963F13746CEB0012D716 /* Frameworks */,
+				FBC0964013746CEB0012D716 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AVMovieExporter;
+			productName = AVMovieExporter;
+			productReference = FBC0964213746CEB0012D716 /* AVMovieExporter.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FBC0963913746CEB0012D716 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = FBC0963C13746CEB0012D716 /* Build configuration list for PBXProject "AVMovieExporter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FBC0963713746CEB0012D716;
+			productRefGroup = FBC0964313746CEB0012D716 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FBC0964113746CEB0012D716 /* AVMovieExporter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FBC0964013746CEB0012D716 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBC0965113746CEB0012D716 /* InfoPlist.strings in Resources */,
+				FBC0965A13746CEB0012D716 /* MainWindow.xib in Resources */,
+				FBC0966013746CEB0012D716 /* RootViewController.xib in Resources */,
+				FB25D6E21374A0A2003C4383 /* MainWindow-iPad.xib in Resources */,
+				FBFFFD511379F68300E93D0E /* Sydney-iPhone.m4v in Resources */,
+				FB9A175413835DBD0031E4D8 /* Localizable.strings in Resources */,
+				FB1D001413843AFF00F533D5 /* ExportView.xib in Resources */,
+				FB30CA0F1398468700D76157 /* Browser-ErrorLoading.png in Resources */,
+				FBA6565C13D54600009D653C /* NewMetadataView.xib in Resources */,
+				FBA6566513D54A29009D653C /* ReadMe.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FBC0963E13746CEB0012D716 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBC0965313746CEB0012D716 /* main.m in Sources */,
+				FBC0965713746CEB0012D716 /* AVMovieExporterAppDelegate.m in Sources */,
+				FBC0965D13746CEB0012D716 /* RootViewController.m in Sources */,
+				FB25D72213786591003C4383 /* PresetViewController.m in Sources */,
+				FB25D72513786A05003C4383 /* FileTypeViewController.m in Sources */,
+				FB424F5B1378C29100FE62BF /* VideoLibrary.m in Sources */,
+				FB424F971379DEFA00FE62BF /* AssetViewController.m in Sources */,
+				FBFFFD58137A0F8E00E93D0E /* TrackViewController.m in Sources */,
+				FBFFFD5B137A12EC00E93D0E /* MetadataViewController.m in Sources */,
+				FBFFFD5E137B263500E93D0E /* AssetItem.m in Sources */,
+				FB006519137DA81E00DD90CF /* NewMetadataViewController.m in Sources */,
+				FB00651C137DAB2B00DD90CF /* CommonMetadata.m in Sources */,
+				FBC2D04B13841E3900671B50 /* ExportProgressViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FB25D6E01374A0A2003C4383 /* MainWindow-iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB25D6E11374A0A2003C4383 /* en */,
+			);
+			name = "MainWindow-iPad.xib";
+			sourceTree = "<group>";
+		};
+		FB9A175213835DBD0031E4D8 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB9A175313835DBD0031E4D8 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		FBC0964F13746CEB0012D716 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FBC0965013746CEB0012D716 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FBC0965813746CEB0012D716 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FBC0965913746CEB0012D716 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		FBC0965E13746CEB0012D716 /* RootViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FBC0965F13746CEB0012D716 /* en */,
+			);
+			name = RootViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FBC0966113746CEB0012D716 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FBC0966213746CEB0012D716 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FBC0966413746CEB0012D716 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AVMovieExporter/AVMovieExporter-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "AVMovieExporter/AVMovieExporter-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FBC0966513746CEB0012D716 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AVMovieExporter/AVMovieExporter-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "AVMovieExporter/AVMovieExporter-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FBC0963C13746CEB0012D716 /* Build configuration list for PBXProject "AVMovieExporter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBC0966113746CEB0012D716 /* Debug */,
+				FBC0966213746CEB0012D716 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FBC0966313746CEB0012D716 /* Build configuration list for PBXNativeTarget "AVMovieExporter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBC0966413746CEB0012D716 /* Debug */,
+				FBC0966513746CEB0012D716 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FBC0963913746CEB0012D716 /* Project object */;
+}

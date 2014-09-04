@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4471.1" systemVersion="13A521" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="JbH-Fy-SsE">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3697.3"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="APLViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GFg-Ws-Iic"/>
+                        <viewControllerLayoutGuide type="bottom" id="kgM-gA-0tS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gf1-Ld-p56">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="s7H-Hb-sPz">
+                                <rect key="frame" x="85" y="251" width="150" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="s7H-Hb-sPz" secondAttribute="trailing" constant="85" id="2RD-mt-TPz"/>
+                            <constraint firstItem="gf1-Ld-p56" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="4yg-Ic-0c7"/>
+                            <constraint firstAttribute="trailing" secondItem="gf1-Ld-p56" secondAttribute="trailing" id="8iD-zg-YpJ"/>
+                            <constraint firstItem="s7H-Hb-sPz" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="D6u-Ae-kPB"/>
+                            <constraint firstItem="gf1-Ld-p56" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="I22-HN-hMd"/>
+                            <constraint firstItem="s7H-Hb-sPz" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="85" id="MgE-oH-ivX"/>
+                            <constraint firstAttribute="bottom" secondItem="gf1-Ld-p56" secondAttribute="bottom" id="tj5-96-J1y"/>
+                            <constraint firstItem="s7H-Hb-sPz" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="uNA-o0-iTU"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" id="v3f-Zg-lNA">
+                        <barButtonItem key="rightBarButtonItem" title="Start" id="fhz-nI-jS4">
+                            <connections>
+                                <action selector="start:" destination="vXZ-lx-hvc" id="ObZ-bx-23q"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="gf1-Ld-p56" id="g8G-CU-Xuc"/>
+                        <outlet property="progressView" destination="s7H-Hb-sPz" id="1w4-0W-JM3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="359" y="-289"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="H82-nK-AbP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JbH-Fy-SsE" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sIz-me-aLz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="yJq-V9-KdY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bpn-19-0HH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-107" y="-289"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

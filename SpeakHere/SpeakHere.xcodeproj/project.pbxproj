@@ -1,0 +1,440 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* SpeakHereAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* SpeakHereAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		2899E5220DE3E06400AC0155 /* SpeakHereViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* SpeakHereViewController.xib */; };
+		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		28D7ACF80DDB3853001CB0EB /* SpeakHereViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* SpeakHereViewController.m */; };
+		2B3FF7FF15ABA19400D09510 /* CAStreamBasicDescription.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3DD8A15AB896400B0B61B /* CAStreamBasicDescription.cpp */; };
+		2BC3DD8E15AB896400B0B61B /* CADebugMacros.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3DD8715AB896400B0B61B /* CADebugMacros.cpp */; };
+		2BC3DD9015AB896400B0B61B /* CAXException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3DD8C15AB896400B0B61B /* CAXException.cpp */; };
+		2BC3DD9215AB8AA100B0B61B /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC3DD9115AB8AA100B0B61B /* CoreAudio.framework */; };
+		AFC29B3C11D568A1006F150F /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC29B3511D568A1006F150F /* Icon-72.png */; };
+		AFC29B3D11D568A1006F150F /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC29B3611D568A1006F150F /* Icon-Small-50.png */; };
+		AFC29B3E11D568A1006F150F /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC29B3711D568A1006F150F /* Icon-Small.png */; };
+		AFC29B3F11D568A1006F150F /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC29B3811D568A1006F150F /* Icon-Small@2x.png */; };
+		AFC29B4011D568A1006F150F /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC29B3911D568A1006F150F /* Icon.png */; };
+		AFC29B4111D568A1006F150F /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC29B3A11D568A1006F150F /* Icon@2x.png */; };
+		AFC29B4211D568A1006F150F /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = AFC29B3B11D568A1006F150F /* iTunesArtwork */; };
+		F76949C70F40F2AC006C6FBF /* SpeakHereController.mm in Sources */ = {isa = PBXBuildFile; fileRef = F76949C60F40F2AC006C6FBF /* SpeakHereController.mm */; };
+		F76949CE0F40F2E1006C6FBF /* speaker_grill.png in Resources */ = {isa = PBXBuildFile; fileRef = F76949C80F40F2E1006C6FBF /* speaker_grill.png */; };
+		F76949CF0F40F2E1006C6FBF /* soundbar_plate_mono.png in Resources */ = {isa = PBXBuildFile; fileRef = F76949CA0F40F2E1006C6FBF /* soundbar_plate_mono.png */; };
+		F76949D00F40F2E1006C6FBF /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F76949CC0F40F2E1006C6FBF /* icon.png */; };
+		F76949D80F40F2F8006C6FBF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F76949D70F40F2F8006C6FBF /* Default.png */; };
+		F76949E80F40F32A006C6FBF /* AQLevelMeter.mm in Sources */ = {isa = PBXBuildFile; fileRef = F76949DB0F40F32A006C6FBF /* AQLevelMeter.mm */; };
+		F76949E90F40F32A006C6FBF /* GLLevelMeter.m in Sources */ = {isa = PBXBuildFile; fileRef = F76949DD0F40F32A006C6FBF /* GLLevelMeter.m */; };
+		F76949EA0F40F32A006C6FBF /* LevelMeter.m in Sources */ = {isa = PBXBuildFile; fileRef = F76949DF0F40F32A006C6FBF /* LevelMeter.m */; };
+		F76949F30F40F34D006C6FBF /* AQPlayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = F76949EF0F40F34D006C6FBF /* AQPlayer.mm */; };
+		F76949F40F40F34D006C6FBF /* AQRecorder.mm in Sources */ = {isa = PBXBuildFile; fileRef = F76949F00F40F34D006C6FBF /* AQRecorder.mm */; };
+		F76949FA0F40F40B006C6FBF /* MeterTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F76949F90F40F40B006C6FBF /* MeterTable.cpp */; };
+		F7694A4F0F40F82A006C6FBF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7694A4C0F40F82A006C6FBF /* AudioToolbox.framework */; };
+		F7694A500F40F82A006C6FBF /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7694A4D0F40F82A006C6FBF /* CoreFoundation.framework */; };
+		F7694A510F40F82A006C6FBF /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7694A4E0F40F82A006C6FBF /* OpenGLES.framework */; };
+		F7694A5A0F40F844006C6FBF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7694A590F40F844006C6FBF /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* SpeakHereAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeakHereAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* SpeakHereAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeakHereAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* SpeakHere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeakHere.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2899E5210DE3E06400AC0155 /* SpeakHereViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpeakHereViewController.xib; sourceTree = "<group>"; };
+		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		28D7ACF60DDB3853001CB0EB /* SpeakHereViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeakHereViewController.h; sourceTree = "<group>"; };
+		28D7ACF70DDB3853001CB0EB /* SpeakHereViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeakHereViewController.m; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2BC3DD8715AB896400B0B61B /* CADebugMacros.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CADebugMacros.cpp; sourceTree = "<group>"; };
+		2BC3DD8815AB896400B0B61B /* CADebugMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CADebugMacros.h; sourceTree = "<group>"; };
+		2BC3DD8915AB896400B0B61B /* CAMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAMath.h; sourceTree = "<group>"; };
+		2BC3DD8A15AB896400B0B61B /* CAStreamBasicDescription.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CAStreamBasicDescription.cpp; sourceTree = "<group>"; };
+		2BC3DD8B15AB896400B0B61B /* CAStreamBasicDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAStreamBasicDescription.h; sourceTree = "<group>"; };
+		2BC3DD8C15AB896400B0B61B /* CAXException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CAXException.cpp; sourceTree = "<group>"; };
+		2BC3DD8D15AB896400B0B61B /* CAXException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAXException.h; sourceTree = "<group>"; };
+		2BC3DD9115AB8AA100B0B61B /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		32CA4F630368D1EE00C91783 /* SpeakHere_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeakHere_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		AFC29B3511D568A1006F150F /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "Images/Icon-72.png"; sourceTree = "<group>"; };
+		AFC29B3611D568A1006F150F /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50.png"; path = "Images/Icon-Small-50.png"; sourceTree = "<group>"; };
+		AFC29B3711D568A1006F150F /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "Images/Icon-Small.png"; sourceTree = "<group>"; };
+		AFC29B3811D568A1006F150F /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "Images/Icon-Small@2x.png"; sourceTree = "<group>"; };
+		AFC29B3911D568A1006F150F /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Images/Icon.png; sourceTree = "<group>"; };
+		AFC29B3A11D568A1006F150F /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Images/Icon@2x.png"; sourceTree = "<group>"; };
+		AFC29B3B11D568A1006F150F /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; name = iTunesArtwork; path = Images/iTunesArtwork; sourceTree = "<group>"; };
+		F73FE19D0F743C1900F0F3CC /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		F76949C50F40F2AC006C6FBF /* SpeakHereController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeakHereController.h; sourceTree = "<group>"; };
+		F76949C60F40F2AC006C6FBF /* SpeakHereController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SpeakHereController.mm; sourceTree = "<group>"; };
+		F76949C90F40F2E1006C6FBF /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = en.lproj/speaker_grill.png; sourceTree = "<group>"; };
+		F76949CB0F40F2E1006C6FBF /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = en.lproj/soundbar_plate_mono.png; sourceTree = "<group>"; };
+		F76949CD0F40F2E1006C6FBF /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = en.lproj/icon.png; sourceTree = "<group>"; };
+		F76949D70F40F2F8006C6FBF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		F76949DA0F40F32A006C6FBF /* AQLevelMeter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQLevelMeter.h; sourceTree = "<group>"; };
+		F76949DB0F40F32A006C6FBF /* AQLevelMeter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AQLevelMeter.mm; sourceTree = "<group>"; };
+		F76949DC0F40F32A006C6FBF /* GLLevelMeter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLLevelMeter.h; sourceTree = "<group>"; };
+		F76949DD0F40F32A006C6FBF /* GLLevelMeter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLLevelMeter.m; sourceTree = "<group>"; };
+		F76949DE0F40F32A006C6FBF /* LevelMeter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelMeter.h; sourceTree = "<group>"; };
+		F76949DF0F40F32A006C6FBF /* LevelMeter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelMeter.m; sourceTree = "<group>"; };
+		F76949EF0F40F34D006C6FBF /* AQPlayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AQPlayer.mm; sourceTree = "<group>"; };
+		F76949F00F40F34D006C6FBF /* AQRecorder.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AQRecorder.mm; sourceTree = "<group>"; };
+		F76949F10F40F34D006C6FBF /* AQRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQRecorder.h; sourceTree = "<group>"; };
+		F76949F20F40F34D006C6FBF /* AQPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQPlayer.h; sourceTree = "<group>"; };
+		F76949F80F40F40B006C6FBF /* MeterTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeterTable.h; path = Classes/MeterTable.h; sourceTree = "<group>"; };
+		F76949F90F40F40B006C6FBF /* MeterTable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MeterTable.cpp; path = Classes/MeterTable.cpp; sourceTree = "<group>"; };
+		F7694A4C0F40F82A006C6FBF /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		F7694A4D0F40F82A006C6FBF /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		F7694A4E0F40F82A006C6FBF /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		F7694A590F40F844006C6FBF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
+				F7694A4F0F40F82A006C6FBF /* AudioToolbox.framework in Frameworks */,
+				F7694A500F40F82A006C6FBF /* CoreFoundation.framework in Frameworks */,
+				F7694A510F40F82A006C6FBF /* OpenGLES.framework in Frameworks */,
+				F7694A5A0F40F844006C6FBF /* QuartzCore.framework in Frameworks */,
+				2BC3DD9215AB8AA100B0B61B /* CoreAudio.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F76949EE0F40F337006C6FBF /* Play & Record */,
+				F76949C50F40F2AC006C6FBF /* SpeakHereController.h */,
+				F76949C60F40F2AC006C6FBF /* SpeakHereController.mm */,
+				1D3623240D0F684500981E51 /* SpeakHereAppDelegate.h */,
+				1D3623250D0F684500981E51 /* SpeakHereAppDelegate.m */,
+				28D7ACF60DDB3853001CB0EB /* SpeakHereViewController.h */,
+				28D7ACF70DDB3853001CB0EB /* SpeakHereViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* SpeakHere.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				F73FE19D0F743C1900F0F3CC /* ReadMe.txt */,
+				F76949D90F40F32A006C6FBF /* AudioViews */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				2BC3DD8615AB896400B0B61B /* PublicUtility */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F76949F80F40F40B006C6FBF /* MeterTable.h */,
+				F76949F90F40F40B006C6FBF /* MeterTable.cpp */,
+				32CA4F630368D1EE00C91783 /* SpeakHere_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AFC29B3511D568A1006F150F /* Icon-72.png */,
+				AFC29B3611D568A1006F150F /* Icon-Small-50.png */,
+				AFC29B3711D568A1006F150F /* Icon-Small.png */,
+				AFC29B3811D568A1006F150F /* Icon-Small@2x.png */,
+				AFC29B3911D568A1006F150F /* Icon.png */,
+				AFC29B3A11D568A1006F150F /* Icon@2x.png */,
+				AFC29B3B11D568A1006F150F /* iTunesArtwork */,
+				F76949D70F40F2F8006C6FBF /* Default.png */,
+				F76949C80F40F2E1006C6FBF /* speaker_grill.png */,
+				F76949CA0F40F2E1006C6FBF /* soundbar_plate_mono.png */,
+				F76949CC0F40F2E1006C6FBF /* icon.png */,
+				2899E5210DE3E06400AC0155 /* SpeakHereViewController.xib */,
+				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2BC3DD9115AB8AA100B0B61B /* CoreAudio.framework */,
+				F7694A4C0F40F82A006C6FBF /* AudioToolbox.framework */,
+				F7694A4D0F40F82A006C6FBF /* CoreFoundation.framework */,
+				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				F7694A4E0F40F82A006C6FBF /* OpenGLES.framework */,
+				F7694A590F40F844006C6FBF /* QuartzCore.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2BC3DD8615AB896400B0B61B /* PublicUtility */ = {
+			isa = PBXGroup;
+			children = (
+				2BC3DD8715AB896400B0B61B /* CADebugMacros.cpp */,
+				2BC3DD8815AB896400B0B61B /* CADebugMacros.h */,
+				2BC3DD8915AB896400B0B61B /* CAMath.h */,
+				2BC3DD8A15AB896400B0B61B /* CAStreamBasicDescription.cpp */,
+				2BC3DD8B15AB896400B0B61B /* CAStreamBasicDescription.h */,
+				2BC3DD8C15AB896400B0B61B /* CAXException.cpp */,
+				2BC3DD8D15AB896400B0B61B /* CAXException.h */,
+			);
+			path = PublicUtility;
+			sourceTree = "<group>";
+		};
+		F76949D90F40F32A006C6FBF /* AudioViews */ = {
+			isa = PBXGroup;
+			children = (
+				F76949DA0F40F32A006C6FBF /* AQLevelMeter.h */,
+				F76949DB0F40F32A006C6FBF /* AQLevelMeter.mm */,
+				F76949DC0F40F32A006C6FBF /* GLLevelMeter.h */,
+				F76949DD0F40F32A006C6FBF /* GLLevelMeter.m */,
+				F76949DE0F40F32A006C6FBF /* LevelMeter.h */,
+				F76949DF0F40F32A006C6FBF /* LevelMeter.m */,
+			);
+			path = AudioViews;
+			sourceTree = "<group>";
+		};
+		F76949EE0F40F337006C6FBF /* Play & Record */ = {
+			isa = PBXGroup;
+			children = (
+				F76949EF0F40F34D006C6FBF /* AQPlayer.mm */,
+				F76949F00F40F34D006C6FBF /* AQRecorder.mm */,
+				F76949F10F40F34D006C6FBF /* AQRecorder.h */,
+				F76949F20F40F34D006C6FBF /* AQPlayer.h */,
+			);
+			name = "Play & Record";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* SpeakHere */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "SpeakHere" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpeakHere;
+			productName = SpeakHere;
+			productReference = 1D6058910D05DD3D006BFB54 /* SpeakHere.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "SpeakHere" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* SpeakHere */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
+				2899E5220DE3E06400AC0155 /* SpeakHereViewController.xib in Resources */,
+				F76949CE0F40F2E1006C6FBF /* speaker_grill.png in Resources */,
+				F76949CF0F40F2E1006C6FBF /* soundbar_plate_mono.png in Resources */,
+				F76949D00F40F2E1006C6FBF /* icon.png in Resources */,
+				F76949D80F40F2F8006C6FBF /* Default.png in Resources */,
+				AFC29B3C11D568A1006F150F /* Icon-72.png in Resources */,
+				AFC29B3D11D568A1006F150F /* Icon-Small-50.png in Resources */,
+				AFC29B3E11D568A1006F150F /* Icon-Small.png in Resources */,
+				AFC29B3F11D568A1006F150F /* Icon-Small@2x.png in Resources */,
+				AFC29B4011D568A1006F150F /* Icon.png in Resources */,
+				AFC29B4111D568A1006F150F /* Icon@2x.png in Resources */,
+				AFC29B4211D568A1006F150F /* iTunesArtwork in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* SpeakHereAppDelegate.m in Sources */,
+				28D7ACF80DDB3853001CB0EB /* SpeakHereViewController.m in Sources */,
+				F76949C70F40F2AC006C6FBF /* SpeakHereController.mm in Sources */,
+				F76949E80F40F32A006C6FBF /* AQLevelMeter.mm in Sources */,
+				F76949E90F40F32A006C6FBF /* GLLevelMeter.m in Sources */,
+				F76949EA0F40F32A006C6FBF /* LevelMeter.m in Sources */,
+				F76949F30F40F34D006C6FBF /* AQPlayer.mm in Sources */,
+				F76949F40F40F34D006C6FBF /* AQRecorder.mm in Sources */,
+				F76949FA0F40F40B006C6FBF /* MeterTable.cpp in Sources */,
+				2BC3DD8E15AB896400B0B61B /* CADebugMacros.cpp in Sources */,
+				2BC3DD9015AB896400B0B61B /* CAXException.cpp in Sources */,
+				2B3FF7FF15ABA19400D09510 /* CAStreamBasicDescription.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F76949C80F40F2E1006C6FBF /* speaker_grill.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F76949C90F40F2E1006C6FBF /* en */,
+			);
+			name = speaker_grill.png;
+			sourceTree = "<group>";
+		};
+		F76949CA0F40F2E1006C6FBF /* soundbar_plate_mono.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F76949CB0F40F2E1006C6FBF /* en */,
+			);
+			name = soundbar_plate_mono.png;
+			sourceTree = "<group>";
+		};
+		F76949CC0F40F2E1006C6FBF /* icon.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F76949CD0F40F2E1006C6FBF /* en */,
+			);
+			name = icon.png;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = SpeakHere_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = SpeakHere;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = SpeakHere_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = SpeakHere;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "SpeakHere" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "SpeakHere" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

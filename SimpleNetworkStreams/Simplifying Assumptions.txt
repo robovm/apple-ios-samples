@@ -1,0 +1,114 @@
+Simplifying Assumptions
+=======================
+
+Networking is hard.  To create a sufficiently simple sample, I had to make a number of simplifying assumptions.  This document describes those assumptions and provide hints on how you would modify this sample code for production purposes.
+
+Code Structure
+--------------
+I structured the code to make it easy to understand, rather than to maximize maintainability and flexibility.  Specifically:
+
+o The networking code (in some senses the 'model') is embedded directly in the controller code.
+
+o There's lots of redundant code in the controllers.
+
+In a real application you would probably separate the networking code out into a 'model' class that's used by each of the controllers.  I didn't do this because I wanted folks to be able to get a good understanding of the overall structure by looking at just one source file.
+
+Asynchrony
+----------
+Networking is inherently asynchronous, and NSOperation is a good way to manage the asynchrony in a network app.  For more information on this, see Technote 2109 "Simple and Reliable Threading with NSOperation" (and its associated ListAdder sample code) and the LinkedImageFetcher sample code.
+
+<https://developer.apple.com/library/ios/#technotes/tn2109/_index.html>
+
+<https://developer.apple.com/library/ios/#samplecode/ListAdder/>
+
+<https://developer.apple.com/library/mac/#samplecode/LinkedImageFetcher/>
+
+Security
+--------
+This sample pays no attention to security issues, which is totally unrealistic.  Whenever you create production networking software you have to worry about security.  There are many potential problems, including:
+
+o authentication -- Authentication is how you decide who's talking to you at the other end of the network connection.  In many cases, but not always, authentication is tightly bound to authorization (discussed next).  Most people understand that a network server must authenticate its clients; it's less obvious that a network client should authenticate its server.  Without this mutual authentication, you might leak sensitive user data to an impostor server.
+
+o authorization -- Authorization is how you decide whether a particular entity is allowed to do some action.  For example, a simple picture sharing server might allow all users to download and only some users to upload.
+
+A common practice for iOS developers is to implement authentication and authorization via pairing.  The user must take some action to pair two computers, after which they can communicate without further user interaction.
+
+There is no direct support for pairing in the iOS SDK, although you can use various APIs (like NSStream's TLS (see below) support and various Security framework APIs) to implement it yourself.
+
+o privacy -- You must assume that malicious users are looking at every piece of data you transfer over the network.  If you ever transfer /any/ data that might be considered personal in the least way, you must ensure that this data is encrypted on the wire.
+
+In general I recommend that you err on the side of caution and consider all user data to be personal.  This is because data that /you/ might not consider especially sensitive might be very sensitive in certain contexts.  For example, if you're implementing a remote control application for a home media server, you might not consider the names of the tracks to be sensitive, but it's not hard to imagine a scenario where a user might.
+
+Your primary weapon for maintaining privacy is TLS (Transport Layer Security, aka SSL, or the Secure Sockets Layer).  This is directly supported by NSStream, which makes it easy to add on-the-wire encryption to the code from this sample.  The biggest problem, and the reason why this sample does not use TLS, is the issue of identity management.  The Security framework provides some APIs for identity management, but they are not really sufficient for the type of peer-to-peer networking demonstrated by this sample.
+
+o malicious attack -- Whenever you communicate on the public Internet you open yourself up to malicious attack.  In the worst-case scenario an attacker can craft a packet that causes your application to execute arbitrary code, at which point the attacker can take over the machine on which you're running and turn it into a zombie.  You must carefully check all data that you receive from the network to prevent this.
+
+One specific form of malicious attack is denial of service.  This sample makes no attempt to protect itself from denial of service attacks.  For example, the server currently only supports a single connection and does not implement any timeouts on that connection, so an attacker could prevent any useful work from being done by simply opening a connection to the server and never closing it.
+
+Performance
+-----------
+This sample was designed for simplicity, not performance.  If performance is a serious concern, you have some work to do.  Some obvious things that are likely to improve performance include:
+
+o increasing the buffer size -- The code currently uses 32 KB buffers for both send and receive.  That's probably way too small.
+
+o buffer allocation -- To simplify the code I allocate my transfer buffer as an instance variable (for sending) or on the stack (for receiving).  That's less than ideal, especially as the buffer size gets larger.  You should allocate the buffer on the heap.
+
+o file system I/O -- The code makes no attempt to optimize its use of the file system.  For high-speed networking, especially on the Mac, the performance of file system I/O is as important as the performance of the network I/O.  Also, you would want to overlap network and file system I/O to prevent bubbles in the network 'pipeline'.
+
+o threading -- The code currently uses NSStreams asynchronously on the main thread.  You could probably reduce latency, and hence improve performance, by running the NSStreams on a separate thread.
+
+Before doing any of these things, make sure you actually measure where the performance bottlenecks are in your specific product.
+
+Service Discovery
+-----------------
+The code currently uses a hard-wired Bonjour service name.  This is clearly bogus (for a start, it means you can only run one server on the network at any given time), but it does allow the sample to mostly ignore Bonjour and focus on NSStream.
+
+A production sample would either use Bonjour service discovery as illustrated by the BonjourWeb sample code, or connect to a globally accessible server via its DNS name (you can create such streams using CFStreamCreatePairWithSocketToHost, as shown in QA1652 "Using NSStreams For A TCP Connection Without NSHost").
+
+<https://developer.apple.com/library/ios/#samplecode/BonjourWeb/>
+
+<https://developer.apple.com/library/ios/#qa/qa1652/_index.html>
+
+Multiple Connections
+--------------------
+To keep things simple the server components of this sample only support a single connection at any given time.  This is likely to be insufficient for your needs.  A real server would typically have some sort of connection object that's instantiated to run a specific connection.  For an example of this, see the RemoteCurrency sample code.
+
+<https://developer.apple.com/library/mac/#samplecode/RemoteCurrency/>
+
+Reliability
+-----------
+The sample is reliable within the bounds set by its design.  However, many of those bounds are only appropriate for sample code, not for production code that is to be widely deployed.  Specifically:
+
+o The protocol used by this sample is trivial.  To send a file, we connect and send data until all of the data is sent.  To receive a file, we connect and then receive data until we get an end-of-file.  This is not appropriate for production code because there's no way to verify that all of the data has been received.  Production code would need to implement some protocol over raw TCP to convey that information.  For example, you could prepend a simple header that includes metadata about the file being transferred.
+
+o TCP is supposed to deliver data reliably.  However, that does not always happen (especially in a world of middleboxes).  Production code should use some sort of end-to-end checksum to ensure that the data has arrived intact.
+
+Note: The PictureSharing sample code shows one way to handle this issue and the previous one.
+
+<https://developer.apple.com/library/mac/#samplecode/PictureSharing/>
+
+o The sample makes no attempt to warn the user when networking is impossible, something that iOS applications are expected to do.  For example, if the device is in Airplane mode, off-device networking is impossible and you should probably tell the user that.
+
+IPv6
+----
+The client components of this sample should work just fine over IPv6.  The server components are currently IPv4 only.  Adding support for IPv6 in the server components would be relatively; the RemoteCurrency sample code shows the way.
+
+<https://developer.apple.com/library/mac/#samplecode/RemoteCurrency/>
+
+Bluetooth
+---------
+Due to changes in the underlying OS, this sample no longer supports transfers over Bluetooth.  See QA1753 "Bonjour over Bluetooth on iOS 5.0" (and its associated DNSSDObjects sample code) for the details.
+
+<https://developer.apple.com/library/ios/#qa/qa1753/_index.html>
+
+<https://developer.apple.com/library/mac/#samplecode/DNSSDObjects/>
+
+Putting It All Together
+-----------------------
+For an example of how to put all of this together into a (more-or-less) production quality app, take a look at the MVCNetworking sample code.
+
+<https://developer.apple.com/library/ios/#samplecode/MVCNetworking/>
+
+And for an introduction to the overall problem of networking, watch WWDC 2010 presentation, "Network Apps for iPhone OS", part 1 and 2 (sessions 207 and 208).
+
+<http://developer.apple.com/videos/wwdc/2010/>

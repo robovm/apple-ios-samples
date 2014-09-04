@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Untitled</title>
+	<meta name="generator" content="BBEdit 8.7" />
+    <style type="text/css">
+div {
+    width: 300px
+}
+p.command {
+    font-family: monospace
+}
+span.file {
+    font-family: monospace
+}
+    </style>
+</head>
+<body>
+<div>
+<p>
+You can test the SimpleNetworkStreams application is one of three ways:
+
+</p>
+
+<ul>
+	<li>Local loopback using the built-in clients and servers.</li>
+
+	<li>Device-to-Device using the built-in clients and servers.</li>
+
+	<li>Device-to-Mac using some command line tricks.</li>
+</ul>
+
+<p>
+The first two mechanisms need no detailed explanation: just use the application's GUI to start the servers and run the clients.  The last approach warrants a little explanation.
+</p>
+
+<p>
+You can test the clients by running dummy servers on the Mac.  To run a dummy receive server, you will need two Terminal windows.  In the first, run the following command to advertise the service:
+</p>
+
+<p class="command">
+dns-sd -R \<br />
+Test _x-SNSUpload._tcp. "" \<br />
+12345
+</p>
+
+<p>
+In the second, run the following command to provide the service:
+</p>
+
+<p class="command">
+nc -l 12345 &gt; tmp.png
+</p>
+
+<p>
+Every time the client sends a file, the contents will be placed in <span class="file">tmp.png</span> (which you can view with Preview) and you will have to re-run the service.
+</p>
+
+<p>
+To run a dummy send server on the Mac, you will need two Terminal windows.  In the first, run the following command to advertise the service:
+</p>
+
+<p class="command">
+dns-sd -R \<br />
+Test _x-SNSDownload._tcp. "" \<br />
+12346
+</p>
+
+<p>
+In the second, run the following command to provide the service:
+</p>
+
+<p class="command">
+nc -l 12346 &lt; image.png
+</p>
+
+<p>
+where <span class="file">image.png</span> is the path to an existing image file.  Every time the client receives the file, you will have to re-run the service.
+</p>
+
+<p>
+You can also test the servers by running dummy clients on the Mac.  To run a dummy send client, you must first determine the address and port on which the server is listening.  You can do this with the following commands:
+</p>
+
+<p class="command">
+dns-sd -L \<br />
+Test _x-SNSUpload._tcp. local.
+</p>
+
+<p>
+This will print the DNS name and port of the server.  You can then send a file to that server with the following command:
+</p>
+
+<p class="command">
+nc guy-smiley.local. 56483 \<br />
+&lt; image.png
+</p>
+
+<p>
+where <span class="file">guy-smiley.local.</span> is the DNS name of the server, <span class="file">56483</span> is the port number, and <span class="file">image.png</span> is the path to an existing image file.
+</p>
+
+<p>
+Similarly, you can test the send server by running a dummy receive client on the Mac.  To do this, you must first determine the address and port on which the server is listening.  You can do this with the following commands:
+</p>
+
+<p class="command">
+dns-sd -L \<br />
+Test _x-SNSDownload._tcp. local.
+</p>
+
+<p>
+This will print the DNS name and port of the server.  You can then receive a file from that server with the following command:
+</p>
+
+<p class="command">
+nc guy-smiley.local. 56482 \<br />
+&gt; tmp.png
+</p>
+
+<p>
+where <span class="file">guy-smiley.local.</span> is the DNS name of the server and <span class="file">56482</span> is the port number.  The file will be placed in <span class="file">tmp.png</span>, which you can view with Preview.
+</p>
+
+</div>
+</body>
+</html>

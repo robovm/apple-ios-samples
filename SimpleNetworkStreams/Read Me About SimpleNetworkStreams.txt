@@ -1,0 +1,88 @@
+Read Me About SimpleNetworkStreams
+==================================
+1.3
+
+SimpleNetworkStreams shows how to do simple networking using the NSStream API.  The goal of this sample is very limited: it does not demonstrate everything you need to implement a fully fledged networking product (more on this below), rather, it focuses on using the NSStream API to move a realistic amount of data across the network.
+
+SimpleNetworkStreams requires iOS 4.3 or later, although the core networking code should work on all versions of iOS and Mac OS X.
+
+Packing List
+------------
+The sample contains the following items:
+
+o Read Me About SimpleNetworkStreams.txt -- This file.
+
+o Simplifying Assumptions.txt -- More documentation.
+
+o SimpleNetworkStreams.xcodeproj -- An Xcode project for the sample.
+
+o Resources -- The project nib, images, and so on.
+
+o Ancillary Code -- A directory full of code that's not directly relevant to the main function of this sample.
+
+o SendController.[hm] -- A view controller that sends files.
+
+o ReceiveController.[hm] -- A view controller that receives files.
+
+o ReceiveServerController.[hm] -- A view controller that implements a server to receive files.
+
+o SendServerController.[hm] -- A view controller that implements a server to send files.
+
+Using the Sample
+----------------
+You can test the sample with one device (using loopback), one simulator (using loopback), two devices, two simulators (on different machines), a device and a simulator, a device and the Mac command line, and a simulator and the Mac command line.  All devices and simulators must be on the same Wi-Fi network.
+
+Testing with the GUI is simple:
+
+1. Run the program on one device (or simulator).
+
+2. Switch to the "Receive Server" tab and tap Start.
+
+IMPORTANT: If the server fails to start with the message "Registration failed", it's likely that another copy of the server is running on the same network.  For more information about this limitation, see "Simplifying Assumptions" below.
+
+3. Switch to the "Send Server" tab and tap Start.
+
+4. If you're using another device (or simulator), run the program on that.
+
+5. Switch to the "Send" tab and tap one of the images to send.
+
+6. Switch to the "Receive" tab and tap Receive to receive an image.
+
+If you want to test against the Mac command line, switch to the Info tab for instructions.
+
+The program has four built-in test images with exponentially increasing size.  Transferring the first image, shown at the top left, will be very quick.  Transferring the last image, shown at the bottom right, will be very slow (a thousand times slower!).  This allows you to test various things that you couldn't test otherwise, like the Stop and Cancel buttons.  See -[NetworkManager pathForTestImage:] for more information on how these large images are created.
+
+Building the Sample
+-------------------
+The sample was built using Xcode 4.3.2 on Mac OS X 10.7.3 with iOS SDK 5.1.  You should be able to just open the project and choose Build from the Program menu.  The resulting program should be compatible with all devices running iOS 4.3 and later, although the bulk of my testing was done with an iPhone 4S running iOS 5.1.
+
+How it Works
+------------
+The sample is a very simple application of the NSStream API for networking.  Each view controller is a self-contained networking example.  The client view controllers (SendController and ReceiveController) create an NSNetService for a hard-coded Bonjour service name, then create an NSOutputStream or NSInputStream from that net service, then schedule that stream for asynchronous operations.  The bulk of the interesting code is in the -startSend/startReceive and -stream:handleEvent: methods.
+
+The server view controllers (ReceiveServerController and SendServerController) are a little more complex.  They create a listening TCP socket, wrap that socket in a CFSocket, and then register it with Bonjour using NSNetService.  When a connection arrives, they wrap the connection's socket in an NSStream and then schedule that stream for asynchronous operations.  The bulk of the interesting code is in the -startServer, startSend/startReceive, and -stream:handleEvent: methods.
+
+Simplifying Assumptions
+-----------------------
+To make this sample easy to understand I made a number of simplifying assumptions.  If you're creating a real application, you should read the "Simplifying Assumptions.txt" document to see which of these assumptions might affect your application, and for pointers on how to turn this sample code into production-quality code.
+
+Credits and Version History
+---------------------------
+If you find any problems with this sample, please file a bug against it.
+
+<http://developer.apple.com/bugreporter/>
+
+1.0 (May 2009) was the first shipping version.
+
+1.1 (Sep 2009) implemented some cosmetic changes to bring it in line with other, similar samples.
+
+1.2 (Jun 2010) was an update for iOS 4.0.
+
+1.3 (Apr 2012) was a significant update whose main goal was to adopt the latest tools and techniques (most notably, ARC).
+
+Share and Enjoy
+
+Apple Developer Technical Support
+Core OS/Hardware
+
+19 Apr 2012

@@ -1,0 +1,314 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		72F508CF1399CC2A003DFA1F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72F508CE1399CC2A003DFA1F /* UIKit.framework */; };
+		72F508D11399CC2A003DFA1F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72F508D01399CC2A003DFA1F /* Foundation.framework */; };
+		72F508D31399CC2A003DFA1F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72F508D21399CC2A003DFA1F /* CoreGraphics.framework */; };
+		72F508D91399CC2A003DFA1F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 72F508D71399CC2A003DFA1F /* InfoPlist.strings */; };
+		72F508DB1399CC2A003DFA1F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F508DA1399CC2A003DFA1F /* main.m */; };
+		72F508DF1399CC2A003DFA1F /* StopNGoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F508DE1399CC2A003DFA1F /* StopNGoAppDelegate.m */; };
+		72F508E21399CC2A003DFA1F /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72F508E01399CC2A003DFA1F /* MainStoryboard_iPhone.storyboard */; };
+		72F508E51399CC2A003DFA1F /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72F508E31399CC2A003DFA1F /* MainStoryboard_iPad.storyboard */; };
+		72F508E71399CC2A003DFA1F /* StopNGoViewController.h in Resources */ = {isa = PBXBuildFile; fileRef = 72F508E61399CC2A003DFA1F /* StopNGoViewController.h */; };
+		72F508E91399CC2A003DFA1F /* StopNGoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F508E81399CC2A003DFA1F /* StopNGoViewController.m */; };
+		72F509361399DD83003DFA1F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72F509351399DD83003DFA1F /* AVFoundation.framework */; };
+		72F509381399DD88003DFA1F /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72F509371399DD88003DFA1F /* AssetsLibrary.framework */; };
+		72F5093A1399DD9C003DFA1F /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72F509391399DD9C003DFA1F /* CoreMedia.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		72F508CA1399CC2A003DFA1F /* StopNGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StopNGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		72F508CE1399CC2A003DFA1F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		72F508D01399CC2A003DFA1F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		72F508D21399CC2A003DFA1F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		72F508D61399CC2A003DFA1F /* StopNGo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StopNGo-Info.plist"; sourceTree = "<group>"; };
+		72F508D81399CC2A003DFA1F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		72F508DA1399CC2A003DFA1F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		72F508DC1399CC2A003DFA1F /* StopNGo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StopNGo-Prefix.pch"; sourceTree = "<group>"; };
+		72F508DD1399CC2A003DFA1F /* StopNGoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StopNGoAppDelegate.h; sourceTree = "<group>"; };
+		72F508DE1399CC2A003DFA1F /* StopNGoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StopNGoAppDelegate.m; sourceTree = "<group>"; };
+		72F508E11399CC2A003DFA1F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		72F508E41399CC2A003DFA1F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		72F508E61399CC2A003DFA1F /* StopNGoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StopNGoViewController.h; sourceTree = "<group>"; };
+		72F508E81399CC2A003DFA1F /* StopNGoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StopNGoViewController.m; sourceTree = "<group>"; };
+		72F509351399DD83003DFA1F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		72F509371399DD88003DFA1F /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		72F509391399DD9C003DFA1F /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		72F508C71399CC2A003DFA1F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72F5093A1399DD9C003DFA1F /* CoreMedia.framework in Frameworks */,
+				72F509381399DD88003DFA1F /* AssetsLibrary.framework in Frameworks */,
+				72F509361399DD83003DFA1F /* AVFoundation.framework in Frameworks */,
+				72F508CF1399CC2A003DFA1F /* UIKit.framework in Frameworks */,
+				72F508D11399CC2A003DFA1F /* Foundation.framework in Frameworks */,
+				72F508D31399CC2A003DFA1F /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		72F508BF1399CC2A003DFA1F = {
+			isa = PBXGroup;
+			children = (
+				72F508D41399CC2A003DFA1F /* StopNGo */,
+				72F508CD1399CC2A003DFA1F /* Frameworks */,
+				72F508CB1399CC2A003DFA1F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		72F508CB1399CC2A003DFA1F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				72F508CA1399CC2A003DFA1F /* StopNGo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		72F508CD1399CC2A003DFA1F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				72F509391399DD9C003DFA1F /* CoreMedia.framework */,
+				72F509371399DD88003DFA1F /* AssetsLibrary.framework */,
+				72F509351399DD83003DFA1F /* AVFoundation.framework */,
+				72F508CE1399CC2A003DFA1F /* UIKit.framework */,
+				72F508D01399CC2A003DFA1F /* Foundation.framework */,
+				72F508D21399CC2A003DFA1F /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		72F508D41399CC2A003DFA1F /* StopNGo */ = {
+			isa = PBXGroup;
+			children = (
+				72F508DD1399CC2A003DFA1F /* StopNGoAppDelegate.h */,
+				72F508DE1399CC2A003DFA1F /* StopNGoAppDelegate.m */,
+				72F508E01399CC2A003DFA1F /* MainStoryboard_iPhone.storyboard */,
+				72F508E31399CC2A003DFA1F /* MainStoryboard_iPad.storyboard */,
+				72F508E61399CC2A003DFA1F /* StopNGoViewController.h */,
+				72F508E81399CC2A003DFA1F /* StopNGoViewController.m */,
+				72F508D51399CC2A003DFA1F /* Supporting Files */,
+			);
+			path = StopNGo;
+			sourceTree = "<group>";
+		};
+		72F508D51399CC2A003DFA1F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				72F508D61399CC2A003DFA1F /* StopNGo-Info.plist */,
+				72F508D71399CC2A003DFA1F /* InfoPlist.strings */,
+				72F508DA1399CC2A003DFA1F /* main.m */,
+				72F508DC1399CC2A003DFA1F /* StopNGo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		72F508C91399CC2A003DFA1F /* StopNGo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72F508EC1399CC2A003DFA1F /* Build configuration list for PBXNativeTarget "StopNGo" */;
+			buildPhases = (
+				72F508C61399CC2A003DFA1F /* Sources */,
+				72F508C71399CC2A003DFA1F /* Frameworks */,
+				72F508C81399CC2A003DFA1F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StopNGo;
+			productName = StopNGo;
+			productReference = 72F508CA1399CC2A003DFA1F /* StopNGo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		72F508C11399CC2A003DFA1F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 72F508C41399CC2A003DFA1F /* Build configuration list for PBXProject "StopNGo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 72F508BF1399CC2A003DFA1F;
+			productRefGroup = 72F508CB1399CC2A003DFA1F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				72F508C91399CC2A003DFA1F /* StopNGo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		72F508C81399CC2A003DFA1F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72F508D91399CC2A003DFA1F /* InfoPlist.strings in Resources */,
+				72F508E21399CC2A003DFA1F /* MainStoryboard_iPhone.storyboard in Resources */,
+				72F508E51399CC2A003DFA1F /* MainStoryboard_iPad.storyboard in Resources */,
+				72F508E71399CC2A003DFA1F /* StopNGoViewController.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		72F508C61399CC2A003DFA1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72F508DB1399CC2A003DFA1F /* main.m in Sources */,
+				72F508DF1399CC2A003DFA1F /* StopNGoAppDelegate.m in Sources */,
+				72F508E91399CC2A003DFA1F /* StopNGoViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		72F508D71399CC2A003DFA1F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				72F508D81399CC2A003DFA1F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		72F508E01399CC2A003DFA1F /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				72F508E11399CC2A003DFA1F /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		72F508E31399CC2A003DFA1F /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				72F508E41399CC2A003DFA1F /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		72F508EA1399CC2A003DFA1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		72F508EB1399CC2A003DFA1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		72F508ED1399CC2A003DFA1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StopNGo/StopNGo-Prefix.pch";
+				INFOPLIST_FILE = "StopNGo/StopNGo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		72F508EE1399CC2A003DFA1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StopNGo/StopNGo-Prefix.pch";
+				INFOPLIST_FILE = "StopNGo/StopNGo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		72F508C41399CC2A003DFA1F /* Build configuration list for PBXProject "StopNGo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72F508EA1399CC2A003DFA1F /* Debug */,
+				72F508EB1399CC2A003DFA1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		72F508EC1399CC2A003DFA1F /* Build configuration list for PBXNativeTarget "StopNGo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72F508ED1399CC2A003DFA1F /* Debug */,
+				72F508EE1399CC2A003DFA1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 72F508C11399CC2A003DFA1F /* Project object */;
+}

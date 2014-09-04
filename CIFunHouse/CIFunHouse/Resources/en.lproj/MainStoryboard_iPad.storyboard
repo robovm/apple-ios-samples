@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="4431.4" systemVersion="12D78" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="2">
+    <dependencies>
+        <development version="4600" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3658.3"/>
+    </dependencies>
+    <scenes>
+        <!--FHView Controller-->
+        <scene sceneID="4">
+            <objects>
+                <viewController wantsFullScreenLayout="YES" id="2" userLabel="FHView Controller" customClass="FHViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackOpaque" id="iCR-hp-8Rn">
+                                <rect key="frame" x="0.0" y="980" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <barButtonItem title="Record" id="bPh-II-VCA">
+                                        <connections>
+                                            <action selector="recordStopAction:event:" destination="2" id="vsz-sG-hgH"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="IdL-aa-znh"/>
+                                    <barButtonItem title="Framerate" style="plain" id="wgp-8M-ceF">
+                                        <attributedString key="userComments">
+                                            <fragment content="gdf">
+                                                <attributes>
+                                                    <font key="NSFont" metaFont="toolTip"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="yYl-9M-KkV"/>
+                                    <barButtonItem title="Settings" id="ZFu-cf-dY6">
+                                        <connections>
+                                            <action selector="settingsAction:event:" destination="2" id="Wuf-T3-oqC"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="30" style="plain" systemItem="fixedSpace" id="O9U-8c-gS6"/>
+                                    <barButtonItem title="Filters" id="xar-20-4mo">
+                                        <connections>
+                                            <action selector="filtersAction:event:" destination="2" id="PmP-Ti-dng"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="filtersButton" destination="xar-20-4mo" id="ajk-CK-8mZ"/>
+                        <outlet property="fpsLabel" destination="wgp-8M-ceF" id="lSx-RJ-ck0"/>
+                        <outlet property="recordStopButton" destination="bPh-II-VCA" id="gHt-YE-pQo"/>
+                        <outlet property="toolbar" destination="iCR-hp-8Rn" id="vWD-4e-2Q4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <nil key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

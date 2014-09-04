@@ -1,0 +1,406 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		28216C970DB411BC00E5133A /* GetLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28216C960DB411BC00E5133A /* GetLocationViewController.m */; };
+		288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765070DF74369002DB57D /* CoreGraphics.framework */; };
+		308C9F970FB0DF430082C99D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 308C9F950FB0DF430082C99D /* Localizable.strings */; };
+		308C9FD50FB0E2B40082C99D /* TrackLocationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 308C9FCB0FB0E2B40082C99D /* TrackLocationView.xib */; };
+		308C9FD60FB0E2B40082C99D /* TrackLocationSetupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 308C9FCD0FB0E2B40082C99D /* TrackLocationSetupView.xib */; };
+		308C9FD70FB0E2B40082C99D /* GetLocationSetupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 308C9FCF0FB0E2B40082C99D /* GetLocationSetupView.xib */; };
+		308C9FD80FB0E2B40082C99D /* GetLocationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 308C9FD10FB0E2B40082C99D /* GetLocationView.xib */; };
+		308C9FD90FB0E2B40082C99D /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 308C9FD30FB0E2B40082C99D /* MainWindow.xib */; };
+		308CA1F80FB2504E0082C99D /* LocationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 308CA1F70FB2504E0082C99D /* LocationDetailViewController.m */; };
+		308CA2990FB25A390082C99D /* CLLocation (Strings).m in Sources */ = {isa = PBXBuildFile; fileRef = 308CA2980FB25A390082C99D /* CLLocation (Strings).m */; };
+		30AE77890FB091FC000B9BFA /* TrackLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AE77880FB091FC000B9BFA /* TrackLocationViewController.m */; };
+		30AE778D0FB0924C000B9BFA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30AE778C0FB0924C000B9BFA /* CoreLocation.framework */; };
+		30AE77B20FB093C9000B9BFA /* SetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AE77B10FB093C9000B9BFA /* SetupViewController.m */; };
+		30E6E8FA0FB4B4B600B1F677 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = 30E6E8F90FB4B4B600B1F677 /* ReadMe.txt */; };
+		CB6C7D5911D5492C00AC7FA8 /* bullseye.png in Resources */ = {isa = PBXBuildFile; fileRef = CB6C7D5011D5492C00AC7FA8 /* bullseye.png */; };
+		CB6C7D5A11D5492C00AC7FA8 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CB6C7D5111D5492C00AC7FA8 /* Default.png */; };
+		CB6C7D5B11D5492C00AC7FA8 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = CB6C7D5211D5492C00AC7FA8 /* Icon-72.png */; };
+		CB6C7D5C11D5492C00AC7FA8 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = CB6C7D5311D5492C00AC7FA8 /* Icon-Small-50.png */; };
+		CB6C7D5D11D5492C00AC7FA8 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = CB6C7D5411D5492C00AC7FA8 /* Icon-Small.png */; };
+		CB6C7D5E11D5492C00AC7FA8 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB6C7D5511D5492C00AC7FA8 /* Icon-Small@2x.png */; };
+		CB6C7D5F11D5492C00AC7FA8 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CB6C7D5611D5492C00AC7FA8 /* Icon.png */; };
+		CB6C7D6011D5492C00AC7FA8 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB6C7D5711D5492C00AC7FA8 /* Icon@2x.png */; };
+		CB6C7D6111D5492C00AC7FA8 /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = CB6C7D5811D5492C00AC7FA8 /* pin.png */; };
+		CB6C7D6311D5493400AC7FA8 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = CB6C7D6211D5493400AC7FA8 /* iTunesArtwork */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* LocateMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocateMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		28216C950DB411BC00E5133A /* GetLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetLocationViewController.h; sourceTree = "<group>"; };
+		28216C960DB411BC00E5133A /* GetLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetLocationViewController.m; sourceTree = "<group>"; };
+		288765070DF74369002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		28A0AB4B0D9B1048005BE974 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		308C9F960FB0DF430082C99D /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		308C9FCC0FB0E2B40082C99D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TrackLocationView.xib; sourceTree = "<group>"; };
+		308C9FCE0FB0E2B40082C99D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TrackLocationSetupView.xib; sourceTree = "<group>"; };
+		308C9FD00FB0E2B40082C99D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/GetLocationSetupView.xib; sourceTree = "<group>"; };
+		308C9FD20FB0E2B40082C99D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/GetLocationView.xib; sourceTree = "<group>"; };
+		308C9FD40FB0E2B40082C99D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		308CA1F60FB2504E0082C99D /* LocationDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationDetailViewController.h; sourceTree = "<group>"; };
+		308CA1F70FB2504E0082C99D /* LocationDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationDetailViewController.m; sourceTree = "<group>"; };
+		308CA2970FB25A390082C99D /* CLLocation (Strings).h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation (Strings).h"; sourceTree = "<group>"; };
+		308CA2980FB25A390082C99D /* CLLocation (Strings).m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation (Strings).m"; sourceTree = "<group>"; };
+		30AE77870FB091FC000B9BFA /* TrackLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackLocationViewController.h; sourceTree = "<group>"; };
+		30AE77880FB091FC000B9BFA /* TrackLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackLocationViewController.m; sourceTree = "<group>"; };
+		30AE778C0FB0924C000B9BFA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		30AE77B00FB093C9000B9BFA /* SetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupViewController.h; sourceTree = "<group>"; };
+		30AE77B10FB093C9000B9BFA /* SetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupViewController.m; sourceTree = "<group>"; };
+		30E6E8F90FB4B4B600B1F677 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		CB6C7D5011D5492C00AC7FA8 /* bullseye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bullseye.png; sourceTree = "<group>"; };
+		CB6C7D5111D5492C00AC7FA8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		CB6C7D5211D5492C00AC7FA8 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		CB6C7D5311D5492C00AC7FA8 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		CB6C7D5411D5492C00AC7FA8 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		CB6C7D5511D5492C00AC7FA8 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		CB6C7D5611D5492C00AC7FA8 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		CB6C7D5711D5492C00AC7FA8 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		CB6C7D5811D5492C00AC7FA8 /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin.png; sourceTree = "<group>"; };
+		CB6C7D6211D5493400AC7FA8 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */,
+				30AE778D0FB0924C000B9BFA /* CoreLocation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1D3623240D0F684500981E51 /* AppDelegate.h */,
+				1D3623250D0F684500981E51 /* AppDelegate.m */,
+				28216C950DB411BC00E5133A /* GetLocationViewController.h */,
+				28216C960DB411BC00E5133A /* GetLocationViewController.m */,
+				30AE77870FB091FC000B9BFA /* TrackLocationViewController.h */,
+				30AE77880FB091FC000B9BFA /* TrackLocationViewController.m */,
+				30AE77B00FB093C9000B9BFA /* SetupViewController.h */,
+				30AE77B10FB093C9000B9BFA /* SetupViewController.m */,
+				308CA1F60FB2504E0082C99D /* LocationDetailViewController.h */,
+				308CA1F70FB2504E0082C99D /* LocationDetailViewController.m */,
+				308CA2970FB25A390082C99D /* CLLocation (Strings).h */,
+				308CA2980FB25A390082C99D /* CLLocation (Strings).m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* LocateMe.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* LocateMe */ = {
+			isa = PBXGroup;
+			children = (
+				30E6E8F90FB4B4B600B1F677 /* ReadMe.txt */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = LocateMe;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				28A0AB4B0D9B1048005BE974 /* Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CB6C7D4F11D5492C00AC7FA8 /* images */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				308C9F950FB0DF430082C99D /* Localizable.strings */,
+				308C9FD30FB0E2B40082C99D /* MainWindow.xib */,
+				308C9FD10FB0E2B40082C99D /* GetLocationView.xib */,
+				308C9FCF0FB0E2B40082C99D /* GetLocationSetupView.xib */,
+				308C9FCB0FB0E2B40082C99D /* TrackLocationView.xib */,
+				308C9FCD0FB0E2B40082C99D /* TrackLocationSetupView.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765070DF74369002DB57D /* CoreGraphics.framework */,
+				30AE778C0FB0924C000B9BFA /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB6C7D4F11D5492C00AC7FA8 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				CB6C7D6211D5493400AC7FA8 /* iTunesArtwork */,
+				CB6C7D5011D5492C00AC7FA8 /* bullseye.png */,
+				CB6C7D5111D5492C00AC7FA8 /* Default.png */,
+				CB6C7D5211D5492C00AC7FA8 /* Icon-72.png */,
+				CB6C7D5311D5492C00AC7FA8 /* Icon-Small-50.png */,
+				CB6C7D5411D5492C00AC7FA8 /* Icon-Small.png */,
+				CB6C7D5511D5492C00AC7FA8 /* Icon-Small@2x.png */,
+				CB6C7D5611D5492C00AC7FA8 /* Icon.png */,
+				CB6C7D5711D5492C00AC7FA8 /* Icon@2x.png */,
+				CB6C7D5811D5492C00AC7FA8 /* pin.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* LocateMe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "LocateMe" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LocateMe;
+			productName = LocateMe;
+			productReference = 1D6058910D05DD3D006BFB54 /* LocateMe.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "LocateMe" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* LocateMe */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* LocateMe */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				308C9F970FB0DF430082C99D /* Localizable.strings in Resources */,
+				308C9FD50FB0E2B40082C99D /* TrackLocationView.xib in Resources */,
+				308C9FD60FB0E2B40082C99D /* TrackLocationSetupView.xib in Resources */,
+				308C9FD70FB0E2B40082C99D /* GetLocationSetupView.xib in Resources */,
+				308C9FD80FB0E2B40082C99D /* GetLocationView.xib in Resources */,
+				308C9FD90FB0E2B40082C99D /* MainWindow.xib in Resources */,
+				30E6E8FA0FB4B4B600B1F677 /* ReadMe.txt in Resources */,
+				CB6C7D5911D5492C00AC7FA8 /* bullseye.png in Resources */,
+				CB6C7D5A11D5492C00AC7FA8 /* Default.png in Resources */,
+				CB6C7D5B11D5492C00AC7FA8 /* Icon-72.png in Resources */,
+				CB6C7D5C11D5492C00AC7FA8 /* Icon-Small-50.png in Resources */,
+				CB6C7D5D11D5492C00AC7FA8 /* Icon-Small.png in Resources */,
+				CB6C7D5E11D5492C00AC7FA8 /* Icon-Small@2x.png in Resources */,
+				CB6C7D5F11D5492C00AC7FA8 /* Icon.png in Resources */,
+				CB6C7D6011D5492C00AC7FA8 /* Icon@2x.png in Resources */,
+				CB6C7D6111D5492C00AC7FA8 /* pin.png in Resources */,
+				CB6C7D6311D5493400AC7FA8 /* iTunesArtwork in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
+				28216C970DB411BC00E5133A /* GetLocationViewController.m in Sources */,
+				30AE77890FB091FC000B9BFA /* TrackLocationViewController.m in Sources */,
+				30AE77B20FB093C9000B9BFA /* SetupViewController.m in Sources */,
+				308CA1F80FB2504E0082C99D /* LocationDetailViewController.m in Sources */,
+				308CA2990FB25A390082C99D /* CLLocation (Strings).m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		308C9F950FB0DF430082C99D /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				308C9F960FB0DF430082C99D /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		308C9FCB0FB0E2B40082C99D /* TrackLocationView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				308C9FCC0FB0E2B40082C99D /* en */,
+			);
+			name = TrackLocationView.xib;
+			sourceTree = "<group>";
+		};
+		308C9FCD0FB0E2B40082C99D /* TrackLocationSetupView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				308C9FCE0FB0E2B40082C99D /* en */,
+			);
+			name = TrackLocationSetupView.xib;
+			sourceTree = "<group>";
+		};
+		308C9FCF0FB0E2B40082C99D /* GetLocationSetupView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				308C9FD00FB0E2B40082C99D /* en */,
+			);
+			name = GetLocationSetupView.xib;
+			sourceTree = "<group>";
+		};
+		308C9FD10FB0E2B40082C99D /* GetLocationView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				308C9FD20FB0E2B40082C99D /* en */,
+			);
+			name = GetLocationView.xib;
+			sourceTree = "<group>";
+		};
+		308C9FD30FB0E2B40082C99D /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				308C9FD40FB0E2B40082C99D /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = LocateMe;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = LocateMe;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos4.0;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				PREBINDING = NO;
+				SDKROOT = iphoneos4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "LocateMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "LocateMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

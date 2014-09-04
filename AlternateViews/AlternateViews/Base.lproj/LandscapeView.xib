@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
+            <connections>
+                <outlet property="landscapeView" destination="tFI-nM-gUk" id="BNF-Mu-PbU"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="tFI-nM-gUk" customClass="LandscapeView">
+            <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hGO-Q4-Kde" userLabel="Top Layout Guide">
+                    <rect key="frame" x="0.0" y="0.0" width="568" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.023573720190000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="GYL-Hf-cFh"/>
+                    </constraints>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2nC-7F-H24" userLabel="Bottom Layout Guide">
+                    <rect key="frame" x="0.0" y="300" width="568" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.023573720190000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="KvT-k0-3VW"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Landscape" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9OI-LQ-B8X">
+                    <rect key="frame" x="96" y="119" width="377" height="83"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="72"/>
+                    <color key="textColor" red="0.80000000999999998" green="0.80000000999999998" blue="0.80000000999999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="centerY" secondItem="9OI-LQ-B8X" secondAttribute="centerY" id="Dah-no-bbc"/>
+                <constraint firstAttribute="bottom" secondItem="2nC-7F-H24" secondAttribute="bottom" id="Kvw-co-5jB"/>
+                <constraint firstAttribute="trailing" secondItem="hGO-Q4-Kde" secondAttribute="trailing" id="Mv4-S5-ejD"/>
+                <constraint firstAttribute="trailing" secondItem="2nC-7F-H24" secondAttribute="trailing" id="Q31-cl-xfE"/>
+                <constraint firstItem="hGO-Q4-Kde" firstAttribute="leading" secondItem="tFI-nM-gUk" secondAttribute="leading" id="Ww3-6F-UUm"/>
+                <constraint firstAttribute="centerX" secondItem="9OI-LQ-B8X" secondAttribute="centerX" id="Y0u-zW-5mX"/>
+                <constraint firstItem="2nC-7F-H24" firstAttribute="leading" secondItem="tFI-nM-gUk" secondAttribute="leading" id="jFX-Kq-4hK"/>
+                <constraint firstItem="hGO-Q4-Kde" firstAttribute="top" secondItem="tFI-nM-gUk" secondAttribute="top" id="qMO-2I-vec"/>
+            </constraints>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <connections>
+                <outlet property="bottomLayoutGuideHeightConstraint" destination="KvT-k0-3VW" id="OIJ-kO-xft"/>
+                <outlet property="topLayoutGuideHeightConstraint" destination="GYL-Hf-cFh" id="Cah-ux-fcn"/>
+            </connections>
+        </view>
+    </objects>
+</document>

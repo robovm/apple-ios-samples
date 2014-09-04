@@ -1,0 +1,111 @@
+Read Me About SimpleURLConnections
+==================================
+1.2
+
+SimpleURLConnections shows how to do simple networking using the NSURLConnection API.  The goal of this sample is very limited: it does not demonstrate everything you need to implement a fully fledged networking product (more on this below), rather, its goal is to demonstrate simple uses of the NSURLConnection API.
+
+SimpleURLConnections requires iOS 5.0 or later, although the core networking code should also work on all versions of iOS and Mac OS X 10.4 and later.
+
+Packing List
+------------
+The sample contains the following items:
+
+o Read Me About SimpleURLConnections.txt -- This file.
+o SimpleURLConnections.xcodeproj -- An Xcode project for the sample.
+o Resources -- The project nib, images, and so on.
+o Ancillary Code -- A directory full of code that's not directly relevant to the main function of this sample.
+o GetController.[hm] -- A view controller that downloads files via GET.
+o PutController.[hm] -- A view controller that uploads files via PUT.
+o PostController.[hm] -- A view controller that uploads files via POST.
+o ImageReceiveServer.py -- A Python HTTP server for testing purposes.
+
+Using the Sample
+----------------
+You can test the GET functionality very easily:
+
+1. Run the program on a device or simulator.
+
+2. Switch to the GET tab.
+
+3. Either leave the URL as the default, or edit it to be the URL of an image you want to display.
+
+3. Tap the Get button
+
+The program will download the image and display it on screen.
+
+Testing the send functionality is a bit trickier.  You will need a server that accepts HTTP PUT and POST requests for image files.  If you have such a server, make note of its URL and skip ahead.  If not, you can run the enclosed (very simple, for testing purposes only) Python server included with the sample.  To do this:
+
+1. In Terminal, change into the SimpleURLConnections directory.  For example:
+
+$ cd ~/Downloads/SimpleURLConnections
+
+2. Run the server:
+
+$ ./ImageReceiveServer.py
+
+Any images that are uploaded will be placed in a newly-created "images" directory.  When you're done with the server, you can type ^C to quit it.
+
+WARNING: "ImageReceiveServer.py" was designed for testing purposes only.  It has not been audited for security.  You must not run it on a hostile network, such as the public Internet.
+
+Once you know the URL of your server, you can use the following steps to test the PUT code:
+
+1. Run the program on a device or simulator.
+
+2. Switch to the PUT tab.
+
+3. Enter the URL of your upload server.  If you're running in the simulator and you're running the server on the same Mac, you can just stick with the default URL.
+
+4. Tap one of the image buttons to start a send.
+
+You can use the POST tab to test the POST code in exactly the same way.
+
+The program has four built-in test images with exponentially increasing size.  Transferring the first image, shown at the top left, will be very quick.  Transferring the last image, shown at the bottom right, will be very slow (a thousand times slower!).  This allows you to test various things that you couldn't test otherwise, like the Cancel button.  See -[NetworkManager pathForTestImage:] for more information on how these large images are created.
+
+Building the Sample
+-------------------
+The sample was built using Xcode 4.3.1 on Mac OS X 10.7.5 with iOS SDK 5.1.  You should be able to just open the project and choose Build from the Product menu.  The resulting program should be compatible with all devices running iOS 5.0 and later.  The bulk of my testing was done with an iPod touch (fourth generation) running iPhone OS 5.0.
+
+How It Works
+------------
+The sample is a very simple application of the NSURLConnection API for HTTP networking.  Each view controller is a mostly self-contained networking example.  The GetController creates an NSURLConnection for the specified URL; the connection is run asynchronously via the runloop.  The bulk of the interesting code is in the -startReceive and the various NSURLConnection delegate callback methods.
+
+In the case of the PutController, the most interesting code is in -startSend:.  This creates a URL from the user-supplied text, appends the name of the image file we're uploading, and then creates an NSMutableURLRequest from that.  It configures the request with the correct HTTP method, headers, and body.  Finally, it runs the connection in the standard way.
+
+For the POST case things get a little trickier.  In many respects the PostController is similar to the PutController.  The key difference is that, when you do an HTTP POST, the HTTP message body does not just contain the file data.  Rather, it contains some structured content, with the file data appearing in the middle of the message body.  Effectively this means that the body of an HTTP POST has a header, the file data, and then a trailer.  This makes things tricky because NSURLConnection requires that the body be represented by either an NSData or an NSStream.  The file we're uploading is way too big for an NSData, so that's not an option.  Using an NSStream for the upload is tricky because there's no easy way to create an NSStream that holds some data (the header), then the contents of a file, then some more data (the trailer).
+
+I resolve this problem by creating a bound pair of streams, using the read stream for the HTTP body, and then generating the HTTP body contents on the fly by writing it to the write stream.  The interesting code is in +createBoundInputStream:outputStream:bufferSize: and -[PostController stream:handleEvent:].
+
+Simplifying Assumptions
+-----------------------
+To keep this code simple, I've made a number of simplifying assumptions:
+
+o I've structured the code to make it easy to understand, rather than to maximize maintainability and flexibility.  Specifically:
+
+- The various controller classes share a lot of common code which should be factored out.  I left this duplicated code in place because I wanted folks to be able to get a good understanding of the overall structure by looking at just one source file.
+
+- I do all my networking at the controller layer.  This is acceptable in very limited circumstances, but most real applications should do their networking at the model layer.  I explain why in my WWDC 2010 presentation, "Network Apps for iPhone OS", part 1 and 2 (sessions 207 and 208).
+
+<http://developer.apple.com/videos/wwdc/2010/>
+
+o This sample pays no attention to security issues.  A real application may need to worry about security issues like authorization and privacy.  It would not be hard to extend this sample to be secure because iOS's HTTP APIs provide good support for standard HTTP security measures (authentication and HTTPS, that is, HTTP over TLS).
+
+o There are a number of places where I choose simplicity over performance.  For example, in the GetController, I write the received data directly to the file rather than buffering up data to maximize disk throughput, and I make no attempt to overlap network and file I/O.  If you have a performance sensitive application you should measure your performance and optimize appropriately.
+
+o I made no attempt to scale incoming images to fit the device's screen; this is a networking sample, not a graphics sample!
+
+Credits and Version History
+---------------------------
+If you find any problems with this sample, please file a bug against it.
+
+<http://developer.apple.com/bugreporter/>
+
+1.0 (Sep 2009) was the first shipping version.
+
+1.1 (Jun 2010) updated the sample for iOS 4.0.
+
+1.2 (Mar 2012) was a significant update whose main goal was to adopt the latest tools and techniques (most notably, ARC).  It also disabled the bound pair workaround that was necessary prior to iOS 5.
+
+Share and Enjoy
+
+Apple Developer Technical Support
+Core OS/Hardware

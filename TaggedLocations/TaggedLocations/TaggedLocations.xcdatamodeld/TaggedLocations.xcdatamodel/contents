@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="13A431h" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="APLEvent" representedClassName="APLEvent" syncable="YES">
+        <attribute name="creationDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <relationship name="tags" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="APLTag" inverseName="events" inverseEntity="APLTag" syncable="YES"/>
+    </entity>
+    <entity name="APLTag" representedClassName="APLTag" syncable="YES">
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <relationship name="events" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="APLEvent" inverseName="tags" inverseEntity="APLEvent" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="APLEvent" positionX="160" positionY="192" width="128" height="120"/>
+        <element name="APLTag" positionX="160" positionY="192" width="128" height="75"/>
+    </elements>
+</model>

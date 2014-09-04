@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="RLD-s9-jk7">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <development version="4600" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller - Quotations-->
+        <scene sceneID="12">
+            <objects>
+                <tableViewController id="6" customClass="APLTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="7">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="QuoteCellIdentifier" rowHeight="88" id="8" customClass="APLQuoteCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="88"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="87"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Act, Scene" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="16">
+                                            <rect key="frame" x="256" y="13" width="52" height="13"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="13" type="user" id="Nzp-Ne-tLQ"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="10"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="751" text="Character" lineBreakMode="tailTruncation" numberOfLines="2" minimumFontSize="10" preferredMaxLayoutWidth="236" translatesAutoresizingMaskIntoConstraints="NO" id="18">
+                                            <rect key="frame" x="12" y="12" width="236" height="15"/>
+                                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17" customClass="APLHighlightingTextView">
+                                            <rect key="frame" x="12" y="35" width="296" height="47"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="18" firstAttribute="top" secondItem="8" secondAttribute="top" constant="12" type="user" id="4Gi-uF-Rvx"/>
+                                    <constraint firstItem="16" firstAttribute="trailing" secondItem="17" secondAttribute="trailing" type="user" id="4lv-B6-OPf"/>
+                                    <constraint firstItem="18" firstAttribute="leading" secondItem="17" secondAttribute="leading" type="user" id="AVU-mH-Hsd"/>
+                                    <constraint firstItem="16" firstAttribute="baseline" secondItem="18" secondAttribute="baseline" type="user" id="Een-lY-Jq2"/>
+                                    <constraint firstItem="16" firstAttribute="leading" secondItem="18" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="M0L-FR-njx"/>
+                                    <constraint firstItem="17" firstAttribute="top" secondItem="18" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="Uc0-gg-qRs"/>
+                                    <constraint firstAttribute="trailing" secondItem="17" secondAttribute="trailing" constant="12" type="user" id="auJ-jC-hdZ"/>
+                                    <constraint firstItem="18" firstAttribute="leading" secondItem="8" secondAttribute="leading" constant="12" type="user" id="feU-Wo-jHf"/>
+                                    <constraint firstAttribute="bottom" secondItem="17" secondAttribute="bottom" constant="6" type="user" id="raA-VA-qtb"/>
+                                    <constraint firstItem="18" firstAttribute="centerY" secondItem="16" secondAttribute="centerY" type="user" id="tLZ-bz-Gvu"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="actAndSceneLabel" destination="16" id="19"/>
+                                    <outlet property="characterLabel" destination="18" id="21"/>
+                                    <outlet property="quotationTextView" destination="17" id="20"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6" id="10"/>
+                            <outlet property="delegate" destination="6" id="9"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Quotations" id="49p-a2-ATa"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="11" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="815" y="81"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qlX-yM-spu">
+            <objects>
+                <navigationController id="RLD-s9-jk7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="u3J-fk-pkY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6" kind="relationship" relationship="rootViewController" id="tDJ-Ow-Hv3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RYo-iO-w7G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="300" y="81"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="xJk-HC-ETo">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <scenes>
+        <!--HazardMapViewController-->
+        <scene sceneID="gzs-d0-zaW">
+            <objects>
+                <viewController id="xJk-HC-ETo" userLabel="HazardMapViewController" customClass="HazardMapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fQM-Qx-uWi"/>
+                        <viewControllerLayoutGuide type="bottom" id="TXe-JB-fsi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KRt-P1-IxH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="NrG-2I-Rgi">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <connections>
+                                    <outlet property="delegate" destination="xJk-HC-ETo" id="yqu-C7-VdN"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NrG-2I-Rgi" firstAttribute="leading" secondItem="KRt-P1-IxH" secondAttribute="leading" id="2Gc-ow-OFr"/>
+                            <constraint firstItem="NrG-2I-Rgi" firstAttribute="trailing" secondItem="KRt-P1-IxH" secondAttribute="trailing" id="OJN-GL-LQR"/>
+                            <constraint firstItem="NrG-2I-Rgi" firstAttribute="bottom" secondItem="KRt-P1-IxH" secondAttribute="bottom" id="QLE-v4-gt8"/>
+                            <constraint firstItem="NrG-2I-Rgi" firstAttribute="top" secondItem="KRt-P1-IxH" secondAttribute="top" id="j1a-K0-V97"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="map" destination="NrG-2I-Rgi" id="IRE-Oh-a9W"/>
+                        <outlet property="view" destination="KRt-P1-IxH" id="IEw-8U-Tye"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W3A-QW-z81" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="127" y="38"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Anchor Install</title>
+    <script type="text/javascript">
+
+function didStartInstall()
+{
+    var e
+    
+    e = document.getElementById("installSpinner")
+    e.style.display = "inline"
+
+    e = document.getElementById("installText")
+    e.innerText = "Installing..."
+    
+    e = document.getElementById("installButton")
+    e.parentNode.removeChild(e)
+}
+
+function didFinishInstall()
+{
+    var e
+    
+    e = document.getElementById("installSpinner")
+    e.style.display = "none"
+
+    e = document.getElementById("installText")
+    e.innerText = "Installed!"
+}
+
+    </script>
+</head>
+<body>
+<h1>Anchor Install</h1>
+<p>
+URL: %@
+</p>
+<form name="input" action="%@" method="put">
+<img id="installSpinner" src="spinner.gif" alt="Install Spinner" style="display:none" />
+<span id="installText"></span>
+<input id="installButton" type="submit" value="Install" />
+</form>
+</body>
+</html>

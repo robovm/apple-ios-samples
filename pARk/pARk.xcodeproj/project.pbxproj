@@ -1,0 +1,350 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B6EEA6D13F47D0E00D239C2 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2B6EEA6C13F47D0E00D239C2 /* ReadMe.txt */; };
+		8357D9EB138836520060FADB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8357D9EA138836520060FADB /* UIKit.framework */; };
+		8357D9ED138836520060FADB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8357D9EC138836520060FADB /* Foundation.framework */; };
+		8357D9EF138836520060FADB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8357D9EE138836520060FADB /* CoreGraphics.framework */; };
+		8357D9F5138836520060FADB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8357D9F3138836520060FADB /* InfoPlist.strings */; };
+		8357D9F7138836520060FADB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8357D9F6138836520060FADB /* main.m */; };
+		8357D9FB138836520060FADB /* pARkAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8357D9FA138836520060FADB /* pARkAppDelegate.m */; };
+		8357D9FD138836520060FADB /* pARkViewController.h in Resources */ = {isa = PBXBuildFile; fileRef = 8357D9FC138836520060FADB /* pARkViewController.h */; };
+		8357D9FF138836520060FADB /* pARkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8357D9FE138836520060FADB /* pARkViewController.m */; };
+		8357DA02138836520060FADB /* pARkViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8357DA00138836520060FADB /* pARkViewController_iPhone.xib */; };
+		8357DA05138836520060FADB /* pARkViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8357DA03138836520060FADB /* pARkViewController_iPad.xib */; };
+		836EC94A138838A200F196BC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 836EC948138838A200F196BC /* AVFoundation.framework */; };
+		836EC94B138838A200F196BC /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 836EC949138838A200F196BC /* CoreMotion.framework */; };
+		836EC94D138838BD00F196BC /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 836EC94C138838BD00F196BC /* AssetsLibrary.framework */; };
+		836EC95013897C7A00F196BC /* ARView.m in Sources */ = {isa = PBXBuildFile; fileRef = 836EC94F13897C7A00F196BC /* ARView.m */; };
+		836EC9611389805700F196BC /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 836EC9601389805700F196BC /* OpenGLES.framework */; };
+		836EC9631389807000F196BC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 836EC9621389807000F196BC /* QuartzCore.framework */; };
+		836EC9651389842500F196BC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 836EC9641389842500F196BC /* CoreLocation.framework */; };
+		836EC99C1389C08400F196BC /* PlaceOfInterest.m in Sources */ = {isa = PBXBuildFile; fileRef = 836EC99B1389C08300F196BC /* PlaceOfInterest.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2B6EEA6C13F47D0E00D239C2 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		8357D9E6138836520060FADB /* pARk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pARk.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8357D9EA138836520060FADB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8357D9EC138836520060FADB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8357D9EE138836520060FADB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8357D9F2138836520060FADB /* pARk-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "pARk-Info.plist"; sourceTree = "<group>"; };
+		8357D9F4138836520060FADB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8357D9F6138836520060FADB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8357D9F8138836520060FADB /* pARk-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "pARk-Prefix.pch"; sourceTree = "<group>"; };
+		8357D9F9138836520060FADB /* pARkAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pARkAppDelegate.h; sourceTree = "<group>"; };
+		8357D9FA138836520060FADB /* pARkAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = pARkAppDelegate.m; sourceTree = "<group>"; };
+		8357D9FC138836520060FADB /* pARkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pARkViewController.h; sourceTree = "<group>"; };
+		8357D9FE138836520060FADB /* pARkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = pARkViewController.m; sourceTree = "<group>"; };
+		8357DA01138836520060FADB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/pARkViewController_iPhone.xib; sourceTree = "<group>"; };
+		8357DA04138836520060FADB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/pARkViewController_iPad.xib; sourceTree = "<group>"; };
+		836EC948138838A200F196BC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.Internal.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		836EC949138838A200F196BC /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.Internal.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
+		836EC94C138838BD00F196BC /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.Internal.sdk/System/Library/Frameworks/AssetsLibrary.framework; sourceTree = DEVELOPER_DIR; };
+		836EC94E13897C7A00F196BC /* ARView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARView.h; sourceTree = "<group>"; };
+		836EC94F13897C7A00F196BC /* ARView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARView.m; sourceTree = "<group>"; };
+		836EC9601389805700F196BC /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.Internal.sdk/System/Library/Frameworks/OpenGLES.framework; sourceTree = DEVELOPER_DIR; };
+		836EC9621389807000F196BC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.Internal.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		836EC9641389842500F196BC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.Internal.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
+		836EC99A1389C08300F196BC /* PlaceOfInterest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceOfInterest.h; sourceTree = "<group>"; };
+		836EC99B1389C08300F196BC /* PlaceOfInterest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceOfInterest.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8357D9E3138836520060FADB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				836EC9651389842500F196BC /* CoreLocation.framework in Frameworks */,
+				836EC9631389807000F196BC /* QuartzCore.framework in Frameworks */,
+				836EC9611389805700F196BC /* OpenGLES.framework in Frameworks */,
+				836EC94D138838BD00F196BC /* AssetsLibrary.framework in Frameworks */,
+				836EC94A138838A200F196BC /* AVFoundation.framework in Frameworks */,
+				836EC94B138838A200F196BC /* CoreMotion.framework in Frameworks */,
+				8357D9EB138836520060FADB /* UIKit.framework in Frameworks */,
+				8357D9ED138836520060FADB /* Foundation.framework in Frameworks */,
+				8357D9EF138836520060FADB /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8357D9DB138836520060FADB = {
+			isa = PBXGroup;
+			children = (
+				2B6EEA6C13F47D0E00D239C2 /* ReadMe.txt */,
+				8357D9F0138836520060FADB /* pARk */,
+				8357D9E9138836520060FADB /* Frameworks */,
+				8357D9E7138836520060FADB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8357D9E7138836520060FADB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8357D9E6138836520060FADB /* pARk.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8357D9E9138836520060FADB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				836EC9641389842500F196BC /* CoreLocation.framework */,
+				836EC9621389807000F196BC /* QuartzCore.framework */,
+				836EC9601389805700F196BC /* OpenGLES.framework */,
+				836EC94C138838BD00F196BC /* AssetsLibrary.framework */,
+				836EC948138838A200F196BC /* AVFoundation.framework */,
+				836EC949138838A200F196BC /* CoreMotion.framework */,
+				8357D9EA138836520060FADB /* UIKit.framework */,
+				8357D9EC138836520060FADB /* Foundation.framework */,
+				8357D9EE138836520060FADB /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8357D9F0138836520060FADB /* pARk */ = {
+			isa = PBXGroup;
+			children = (
+				836EC94E13897C7A00F196BC /* ARView.h */,
+				836EC94F13897C7A00F196BC /* ARView.m */,
+				836EC99A1389C08300F196BC /* PlaceOfInterest.h */,
+				836EC99B1389C08300F196BC /* PlaceOfInterest.m */,
+				8357D9FC138836520060FADB /* pARkViewController.h */,
+				8357D9FE138836520060FADB /* pARkViewController.m */,
+				8357D9F9138836520060FADB /* pARkAppDelegate.h */,
+				8357D9FA138836520060FADB /* pARkAppDelegate.m */,
+				8357DA00138836520060FADB /* pARkViewController_iPhone.xib */,
+				8357DA03138836520060FADB /* pARkViewController_iPad.xib */,
+				8357D9F1138836520060FADB /* Supporting Files */,
+			);
+			path = pARk;
+			sourceTree = "<group>";
+		};
+		8357D9F1138836520060FADB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8357D9F2138836520060FADB /* pARk-Info.plist */,
+				8357D9F3138836520060FADB /* InfoPlist.strings */,
+				8357D9F6138836520060FADB /* main.m */,
+				8357D9F8138836520060FADB /* pARk-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8357D9E5138836520060FADB /* pARk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8357DA08138836520060FADB /* Build configuration list for PBXNativeTarget "pARk" */;
+			buildPhases = (
+				8357D9E2138836520060FADB /* Sources */,
+				8357D9E3138836520060FADB /* Frameworks */,
+				8357D9E4138836520060FADB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = pARk;
+			productName = pARk;
+			productReference = 8357D9E6138836520060FADB /* pARk.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8357D9DD138836520060FADB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 8357D9E0138836520060FADB /* Build configuration list for PBXProject "pARk" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8357D9DB138836520060FADB;
+			productRefGroup = 8357D9E7138836520060FADB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8357D9E5138836520060FADB /* pARk */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8357D9E4138836520060FADB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8357D9F5138836520060FADB /* InfoPlist.strings in Resources */,
+				8357D9FD138836520060FADB /* pARkViewController.h in Resources */,
+				8357DA02138836520060FADB /* pARkViewController_iPhone.xib in Resources */,
+				8357DA05138836520060FADB /* pARkViewController_iPad.xib in Resources */,
+				2B6EEA6D13F47D0E00D239C2 /* ReadMe.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8357D9E2138836520060FADB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8357D9F7138836520060FADB /* main.m in Sources */,
+				8357D9FB138836520060FADB /* pARkAppDelegate.m in Sources */,
+				8357D9FF138836520060FADB /* pARkViewController.m in Sources */,
+				836EC95013897C7A00F196BC /* ARView.m in Sources */,
+				836EC99C1389C08400F196BC /* PlaceOfInterest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8357D9F3138836520060FADB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8357D9F4138836520060FADB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8357DA00138836520060FADB /* pARkViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8357DA01138836520060FADB /* en */,
+			);
+			name = pARkViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		8357DA03138836520060FADB /* pARkViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8357DA04138836520060FADB /* en */,
+			);
+			name = pARkViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8357DA06138836520060FADB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-fobjc-arr";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8357DA07138836520060FADB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8357DA09138836520060FADB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_OBJCPP_ARC_ABI = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "pARk/pARk-Prefix.pch";
+				INFOPLIST_FILE = "pARk/pARk-Info.plist";
+				OTHER_CFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8357DA0A138836520060FADB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_OBJCPP_ARC_ABI = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "pARk/pARk-Prefix.pch";
+				INFOPLIST_FILE = "pARk/pARk-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8357D9E0138836520060FADB /* Build configuration list for PBXProject "pARk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8357DA06138836520060FADB /* Debug */,
+				8357DA07138836520060FADB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8357DA08138836520060FADB /* Build configuration list for PBXNativeTarget "pARk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8357DA09138836520060FADB /* Debug */,
+				8357DA0A138836520060FADB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8357D9DD138836520060FADB /* Project object */;
+}

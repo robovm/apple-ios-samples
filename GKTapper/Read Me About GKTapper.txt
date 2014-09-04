@@ -1,0 +1,52 @@
+Read Me About GKTapper
+===========================================================================
+GKTapper is a sample application that shows how to support GameCenter
+Leaderboards and Achievements. It also demonstrates using
+GKLeaderboardViewController and GKAchievementViewController to display this
+data.
+
+IMPORTANT: When adding support for Game Center to an application, it is not
+enough to simply add the necessary code to your application.  You will also
+need to configure your app in iTunes Connect to match your desired
+configuration.  For example, the file "Classes/AppSpecificValues.h" contains
+a number of constants that are configured to match the App ID configured in
+iTunes Connect.  Without this configuration, the GKTapper sample would not
+function.  If you run into any issues with Game Center be sure that you
+confirm that your applications configuration matches you iTunes Connect
+configuration.
+
+===========================================================================
+BUILD REQUIREMENTS:
+
+This project was built with Xcode 3.2.4 and iOS SDK 4.1
+
+===========================================================================
+RUNTIME REQUIREMENTS:
+
+The project requires iOS 4.1 and a GameCenter account to run.
+
+===========================================================================
+PACKAGING LIST:
+- Read Me About GKRTapper.txt -- This file.
+- GKTapper.xcodeproj --  Xcode project for this sample. 
+- Resources -- The project nib, images, and so on.
+- Classes/AppSpecificValues.h -- Header file that contains all of the iTunes
+	Connect constants for this project.  See this file for more details
+	regarding iTunes Connect configuration.
+- Classes/GameCenterManager.[h,m] -- Class containing most of the GameCenter
+	code.  Shows how to update Leaderboards and Achievements.
+- Classes/TapperController.[h,m] -- Controller class for the project. 
+	Contains all UI code, drives GameCenterManager, and also shows how to use
+	GKLeaderboardViewController and GKAchievementViewController.
+- Ancillary Code -- A directory full of code that's not directly relevant to
+	the main function of this sample.
+
+===========================================================================
+CHANGES FROM PREVIOUS VERSIONS:
+
+1.0: (Aug 2010) First shipping version.
+1.1: (Nov 2010) Fixed bug in how the "submitAchievement:" method handles the
+	"earnedAchievementCache".
+
+===========================================================================
+Copyright (C) 2010 Apple Inc. All rights reserved.

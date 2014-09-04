@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailPopoverViewController">
+            <connections>
+                <outlet property="numberDetail" destination="118" id="121"/>
+                <outlet property="numberImage" destination="117" id="120"/>
+                <outlet property="numberLabel" destination="119" id="122"/>
+                <outlet property="view" destination="104" id="116"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="104">
+            <rect key="frame" x="0.0" y="0.0" width="512" height="618"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="117">
+                    <rect key="frame" x="20" y="56" width="472" height="423"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="118">
+                    <rect key="frame" x="20" y="487" width="472" height="111"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="111" id="ana-et-eMQ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="119">
+                    <rect key="frame" x="20" y="15" width="472" height="37"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="37" id="aRz-H1-BlE"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="36"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.73979592319999998" green="0.73979592319999998" blue="0.73979592319999998" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="117" firstAttribute="top" secondItem="119" secondAttribute="bottom" constant="4" id="Abz-W6-iAT"/>
+                <constraint firstAttribute="bottom" secondItem="118" secondAttribute="bottom" constant="20" id="Foo-CI-CFf"/>
+                <constraint firstItem="119" firstAttribute="top" secondItem="104" secondAttribute="top" constant="15" id="Hf1-WR-j6s"/>
+                <constraint firstItem="117" firstAttribute="leading" secondItem="104" secondAttribute="leading" constant="20" id="Ite-HM-13j"/>
+                <constraint firstAttribute="trailing" secondItem="118" secondAttribute="trailing" constant="20" id="PlE-OV-Xym"/>
+                <constraint firstItem="119" firstAttribute="leading" secondItem="104" secondAttribute="leading" constant="20" id="YsO-ou-VV7"/>
+                <constraint firstAttribute="trailing" secondItem="119" secondAttribute="trailing" constant="20" id="dv7-ez-G7o"/>
+                <constraint firstAttribute="trailing" secondItem="117" secondAttribute="trailing" constant="20" id="i2N-6C-pTc"/>
+                <constraint firstItem="118" firstAttribute="leading" secondItem="104" secondAttribute="leading" constant="20" id="pO6-d6-sKe"/>
+                <constraint firstItem="118" firstAttribute="top" secondItem="117" secondAttribute="bottom" constant="8" id="wt5-t0-VCP"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

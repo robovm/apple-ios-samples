@@ -1,0 +1,148 @@
+Read Me About SimpleFTPSample
+=============================
+1.4
+
+SimpleFTPSample shows how to do simple FTP transfers using the NSURLConnection and CFFTPStream APIs.
+
+SimpleFTPSample requires iOS 5.1 or later, although the core networking code should work on any version of iOS and any recent version of OS X.
+
+WARNING
+-------
+Anonymous FTP is an acceptable way to download publicly-visible files.  However, you should avoid any other use of FTP like the plague.  Specifically, authenticated FTP will send your user's password in plaintext on the wire.  This is not acceptable on the modern Internet.  Moreover, all forms of FTP send the data in the clear, which is not appropriate for any user data.
+
+Packing List
+------------
+The sample contains the following items:
+
+o Read Me About SimpleFTPSample.txt -- This file.
+
+o SimpleFTPSample.xcodeproj -- An Xcode project for the sample.
+
+o Resources -- The project nib, images, and so on.
+
+o Ancillary Code -- A directory full of code that's not directly relevant to the main function of this sample.
+
+o URLGetController.[hm] -- A view controller that downloads files via NSURLConnection's FTP support.
+
+o GetController.[hm] -- A view controller that downloads files via CFFTPStream.
+
+o ListController.[hm] -- A view controller that lists directories via CFFTPStream.
+
+o PutController.[hm] -- A view controller that uploads files via CFFTPStream.
+
+o CreateDirController.[hm] -- A view controller that creates directories via CFFTPStream.
+
+Using the Sample
+----------------
+You can test the get functionality very easily:
+
+1. Run the program on a device or simulator.
+
+2. Switch to the appropriate tab (URL Get or Get).
+
+3. Either leave the URL as the default, or edit it to be the URL of an image you want to display.
+
+4. Tap the Get button
+
+The program will download the image and display it on screen.
+
+You can test the list functionality in much the same way.
+
+Testing the put and create directory functionality is a bit trickier.  You will need access to a writeable area on an FTP server.  Historically the easiest way to get this was to enable FTP access on your Mac but, starting with OS X 10.7, this is no longer supported.  Alas, you're on your own on this front.
+
+Once you know the URL of your FTP server, you can use the following steps to test the put code:
+
+1. Run the program on a device or simulator.
+
+2. Switch to the Put tab.
+
+3. Enter the URL of your upload server.  If you're running in the simulator and you're running the server on the same Mac, you can just stick with the default URL.
+
+4. Enter your user name and password into the corresponding fields.
+
+5. Tap one of the image buttons to start a send.
+
+The program has four built-in test images with exponentially increasing size.  Transferring the first image, shown at the top left, will be very quick.  Transferring the last image, shown at the bottom right, will be very slow (a thousand times slower!).  This allows you to test various things that you couldn't test otherwise, like the Cancel button.  See -[NetworkManager pathForTestImage:] for more information on how these large images are created.
+
+IMPORTANT: This code creates larger images on the simulator than it does on the device because the goal is to create a meaningful workload and the simulator runs networking code much faster.
+
+You can use the Create Dir tab to test the directory creation code in a similar way:
+
+1. Run the program on a device or simulator.
+
+2. Switch to the Create Dir tab.
+
+3. Enter the URL of your upload server.  If you're running in the simulator and you're running the server on the same Mac, you can just stick with the default URL.
+
+4. Enter your user name and password into the corresponding fields.
+
+5. Enter the name of the directory to create, or leave the default value in place.
+
+6. Tap Create to create the directory on the server.
+
+Building the Sample
+-------------------
+The sample was built using Xcode 4.6.1 on OS X 10.8.3 with iOS 6.1 SDK.  You should be able to just open the project and choose Build from the Build menu.  The resulting program should be compatible with all devices running iOS 5.1 and later.  The bulk of my testing was done with an iPhone 4S running iOS 6.1.3.
+
+How It Works
+------------
+The sample uses two different APIs for FTP operations:
+
+o NSURLConnection -- The URL Get tab uses this API for simple FTP downloads.  This is managed by the URLGetController class.
+
+o CFFTPStream -- The other tabs use this API for more complicated FTP operations, including get (GetController), put (PutController), listing a directory (ListController), and creating a directory (CreateDirController).
+
+Within the URLGetController the most interesting methods are -startReceive and the various NSURLConnection delegate callback methods (-connection:xxx).
+
+Within the other controllers the most interesting methods are -startReceive and -stream:handleEvent: (the NSStream delegate callback).  Also, you should look at the -parseListData method in the ListController.
+
+CFFTPStream Limitations
+-----------------------
+CFFTPStream is a high-level API that provides basic FTP functionality.  It is not a full-feature FTP client API.  As such, it does not support all FTP features.  For example:
+
+o FTPS (that is, FTP over TLS)
+o deleting items [1]
+o renaming items
+o other, less common FTP commands
+o custom FTP commands
+
+Also, CFFTPStream's directory parsing code (that is, the CFFTPCreateParsedResourceListing routine) is not very sophisticated.  It can only handle the directory format produced by common UNIX-based FTP servers.
+
+[1] Although it is possible to delete files using the old, but still functional, CFURLDestroyResource.
+
+Simplifying Assumptions
+-----------------------
+To keep this code simple, I've made a number of simplifying assumptions:
+
+o I've structured the code to make it easy to understand, rather than to maximise maintainability and flexibility.  Specifically, the various controller classes share a lot of common code which should be factored out.  I left this duplicated code in place because I wanted folks to be able to get a good understanding of the overall structure by looking at just one source file.
+
+o I do not support authenticated FTP on the URL Get and Get tabs.  There's no reason why I couldn't do this, I just wanted to keep that code as simple as possible.
+
+o There are a number of places where I choose simplicity over performance.  For example, in the GetController, I write the received data directly to the file rather than buffering up data to maximise disk throughput, and I make no attempt to overlap network and file I/O.  If you have a performance sensitive application you should measure your performance and optimise appropriately.
+
+o I made no attempt to scale incoming images to fit the device's screen; this is a networking sample, not a graphics sample!
+
+o I do not store the user name and password in the keychain.  Again, this is a networking sample, not a security sample.
+
+Credits and Version History
+---------------------------
+If you find any problems with this sample, please file a bug against it.
+
+<http://developer.apple.com/bugreporter/>
+
+1.0 (Sep 2009) was the first shipping version.
+
+1.1 (Jan 2010) added code that demonstrates how to reinterpret the names in an FTP listing using a different encoding. Also fixed a couple of minor bugs in the ListControllers table handling.
+
+1.2 (Jul 2010) was an update for iOS 4.0.
+
+1.3 (Aug 2012) was an update to adopt the latest tools and techniques (most notably, ARC).
+
+1.4 (Mar 2013) was an update to fix a bug that caused an incompatibility with iOS 6 (r. 13171568), along with other minor changes including (r. 12478239).
+
+Share and Enjoy.
+
+Apple Developer Technical Support
+Core OS/Hardware
+
+26 Mar 2013

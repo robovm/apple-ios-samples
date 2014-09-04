@@ -1,0 +1,401 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF5EBEA91533F4A500C2EF88 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5EBEA81533F4A500C2EF88 /* UIKit.framework */; };
+		EF5EBEAB1533F4A500C2EF88 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5EBEAA1533F4A500C2EF88 /* Foundation.framework */; };
+		EF5EBEAD1533F4A500C2EF88 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5EBEAC1533F4A500C2EF88 /* CoreGraphics.framework */; };
+		EF5EBEB31533F4A500C2EF88 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EF5EBEB11533F4A500C2EF88 /* InfoPlist.strings */; };
+		EF5EBEB51533F4A500C2EF88 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5EBEB41533F4A500C2EF88 /* main.m */; };
+		EF5EBEB91533F4A500C2EF88 /* AVSEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5EBEB81533F4A500C2EF88 /* AVSEAppDelegate.m */; };
+		EF5EBEBC1533F4A500C2EF88 /* AVSEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5EBEBB1533F4A500C2EF88 /* AVSEViewController.m */; };
+		EF5EBEC21533F4A500C2EF88 /* AVSEViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF5EBEC01533F4A500C2EF88 /* AVSEViewController_iPad.xib */; };
+		EF69952F153BF9F00075301C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF69952E153BF9F00075301C /* AVFoundation.framework */; };
+		EF8272F81550AA13007D261B /* Music.m4a in Resources */ = {isa = PBXBuildFile; fileRef = EF8272F51550AA13007D261B /* Music.m4a */; };
+		EF8273051550B2E9007D261B /* Movie.m4v in Resources */ = {isa = PBXBuildFile; fileRef = EF8273041550B2E9007D261B /* Movie.m4v */; };
+		EF9B8D02154609280045B76E /* AVSECommand.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9B8D01154609280045B76E /* AVSECommand.m */; };
+		EF9B8D05154609DF0045B76E /* AVSETrimCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9B8D04154609DF0045B76E /* AVSETrimCommand.m */; };
+		EF9B8D0815460A2C0045B76E /* AVSERotateCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9B8D0715460A2C0045B76E /* AVSERotateCommand.m */; };
+		EF9B8D0B15460A750045B76E /* AVSECropCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9B8D0A15460A750045B76E /* AVSECropCommand.m */; };
+		EF9B8D0E15460AB10045B76E /* AVSEAddMusicCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9B8D0D15460AB10045B76E /* AVSEAddMusicCommand.m */; };
+		EF9B8D1115460AF20045B76E /* AVSEAddWatermarkCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9B8D1015460AF20045B76E /* AVSEAddWatermarkCommand.m */; };
+		EF9B8D1415460BA30045B76E /* AVSEExportCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9B8D1315460BA20045B76E /* AVSEExportCommand.m */; };
+		EF9B8D18154615400045B76E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF9B8D17154615400045B76E /* QuartzCore.framework */; };
+		EF9B8D1A154615530045B76E /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF9B8D19154615530045B76E /* CoreMedia.framework */; };
+		EF9B8D23154626F90045B76E /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF9B8D22154626F90045B76E /* AssetsLibrary.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		72C51BE517C43EC7009B306C /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		EF5EBEA41533F4A500C2EF88 /* AVSimpleEditoriOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVSimpleEditoriOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF5EBEA81533F4A500C2EF88 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EF5EBEAA1533F4A500C2EF88 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EF5EBEAC1533F4A500C2EF88 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EF5EBEB01533F4A500C2EF88 /* AVSimpleEditoriOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AVSimpleEditoriOS-Info.plist"; sourceTree = "<group>"; };
+		EF5EBEB21533F4A500C2EF88 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EF5EBEB41533F4A500C2EF88 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EF5EBEB61533F4A500C2EF88 /* AVSimpleEditoriOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AVSimpleEditoriOS-Prefix.pch"; sourceTree = "<group>"; };
+		EF5EBEB71533F4A500C2EF88 /* AVSEAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVSEAppDelegate.h; sourceTree = "<group>"; };
+		EF5EBEB81533F4A500C2EF88 /* AVSEAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVSEAppDelegate.m; sourceTree = "<group>"; };
+		EF5EBEBA1533F4A500C2EF88 /* AVSEViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVSEViewController.h; sourceTree = "<group>"; };
+		EF5EBEBB1533F4A500C2EF88 /* AVSEViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVSEViewController.m; sourceTree = "<group>"; };
+		EF5EBEC11533F4A500C2EF88 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/AVSEViewController_iPad.xib; sourceTree = "<group>"; };
+		EF69952E153BF9F00075301C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		EF8272F61550AA13007D261B /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/Music.m4a; sourceTree = "<group>"; };
+		EF8273041550B2E9007D261B /* Movie.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = Movie.m4v; sourceTree = "<group>"; };
+		EF9B8D00154609270045B76E /* AVSECommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVSECommand.h; sourceTree = "<group>"; };
+		EF9B8D01154609280045B76E /* AVSECommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVSECommand.m; sourceTree = "<group>"; };
+		EF9B8D03154609DF0045B76E /* AVSETrimCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVSETrimCommand.h; sourceTree = "<group>"; };
+		EF9B8D04154609DF0045B76E /* AVSETrimCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVSETrimCommand.m; sourceTree = "<group>"; };
+		EF9B8D0615460A2C0045B76E /* AVSERotateCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVSERotateCommand.h; sourceTree = "<group>"; };
+		EF9B8D0715460A2C0045B76E /* AVSERotateCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVSERotateCommand.m; sourceTree = "<group>"; };
+		EF9B8D0915460A750045B76E /* AVSECropCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVSECropCommand.h; sourceTree = "<group>"; };
+		EF9B8D0A15460A750045B76E /* AVSECropCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVSECropCommand.m; sourceTree = "<group>"; };
+		EF9B8D0C15460AB00045B76E /* AVSEAddMusicCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVSEAddMusicCommand.h; sourceTree = "<group>"; };
+		EF9B8D0D15460AB10045B76E /* AVSEAddMusicCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVSEAddMusicCommand.m; sourceTree = "<group>"; };
+		EF9B8D0F15460AF20045B76E /* AVSEAddWatermarkCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVSEAddWatermarkCommand.h; sourceTree = "<group>"; };
+		EF9B8D1015460AF20045B76E /* AVSEAddWatermarkCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVSEAddWatermarkCommand.m; sourceTree = "<group>"; };
+		EF9B8D1215460BA20045B76E /* AVSEExportCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVSEExportCommand.h; sourceTree = "<group>"; };
+		EF9B8D1315460BA20045B76E /* AVSEExportCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVSEExportCommand.m; sourceTree = "<group>"; };
+		EF9B8D17154615400045B76E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		EF9B8D19154615530045B76E /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		EF9B8D22154626F90045B76E /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF5EBEA11533F4A500C2EF88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF9B8D23154626F90045B76E /* AssetsLibrary.framework in Frameworks */,
+				EF9B8D1A154615530045B76E /* CoreMedia.framework in Frameworks */,
+				EF9B8D18154615400045B76E /* QuartzCore.framework in Frameworks */,
+				EF69952F153BF9F00075301C /* AVFoundation.framework in Frameworks */,
+				EF5EBEA91533F4A500C2EF88 /* UIKit.framework in Frameworks */,
+				EF5EBEAB1533F4A500C2EF88 /* Foundation.framework in Frameworks */,
+				EF5EBEAD1533F4A500C2EF88 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF3027781547E1E9006FFA46 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				EF9B8D00154609270045B76E /* AVSECommand.h */,
+				EF9B8D01154609280045B76E /* AVSECommand.m */,
+				EF9B8D03154609DF0045B76E /* AVSETrimCommand.h */,
+				EF9B8D04154609DF0045B76E /* AVSETrimCommand.m */,
+				EF9B8D0615460A2C0045B76E /* AVSERotateCommand.h */,
+				EF9B8D0715460A2C0045B76E /* AVSERotateCommand.m */,
+				EF9B8D0915460A750045B76E /* AVSECropCommand.h */,
+				EF9B8D0A15460A750045B76E /* AVSECropCommand.m */,
+				EF9B8D0C15460AB00045B76E /* AVSEAddMusicCommand.h */,
+				EF9B8D0D15460AB10045B76E /* AVSEAddMusicCommand.m */,
+				EF9B8D0F15460AF20045B76E /* AVSEAddWatermarkCommand.h */,
+				EF9B8D1015460AF20045B76E /* AVSEAddWatermarkCommand.m */,
+				EF9B8D1215460BA20045B76E /* AVSEExportCommand.h */,
+				EF9B8D1315460BA20045B76E /* AVSEExportCommand.m */,
+			);
+			name = Tools;
+			sourceTree = "<group>";
+		};
+		EF5EBE991533F4A400C2EF88 = {
+			isa = PBXGroup;
+			children = (
+				72C51BE517C43EC7009B306C /* README.txt */,
+				EF5EBEAE1533F4A500C2EF88 /* AVSimpleEditor */,
+				EF5EBEA71533F4A500C2EF88 /* Frameworks */,
+				EF5EBEA51533F4A500C2EF88 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF5EBEA51533F4A500C2EF88 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF5EBEA41533F4A500C2EF88 /* AVSimpleEditoriOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF5EBEA71533F4A500C2EF88 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF9B8D22154626F90045B76E /* AssetsLibrary.framework */,
+				EF9B8D19154615530045B76E /* CoreMedia.framework */,
+				EF9B8D17154615400045B76E /* QuartzCore.framework */,
+				EF69952E153BF9F00075301C /* AVFoundation.framework */,
+				EF5EBEA81533F4A500C2EF88 /* UIKit.framework */,
+				EF5EBEAA1533F4A500C2EF88 /* Foundation.framework */,
+				EF5EBEAC1533F4A500C2EF88 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF5EBEAE1533F4A500C2EF88 /* AVSimpleEditor */ = {
+			isa = PBXGroup;
+			children = (
+				EF5EBEB71533F4A500C2EF88 /* AVSEAppDelegate.h */,
+				EF5EBEB81533F4A500C2EF88 /* AVSEAppDelegate.m */,
+				EF3027781547E1E9006FFA46 /* Tools */,
+				EF5EBEBA1533F4A500C2EF88 /* AVSEViewController.h */,
+				EF5EBEBB1533F4A500C2EF88 /* AVSEViewController.m */,
+				EF5EBEAF1533F4A500C2EF88 /* Supporting Files */,
+			);
+			path = AVSimpleEditor;
+			sourceTree = "<group>";
+		};
+		EF5EBEAF1533F4A500C2EF88 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EF8273041550B2E9007D261B /* Movie.m4v */,
+				EF8272F51550AA13007D261B /* Music.m4a */,
+				EF5EBEC01533F4A500C2EF88 /* AVSEViewController_iPad.xib */,
+				EF5EBEB01533F4A500C2EF88 /* AVSimpleEditoriOS-Info.plist */,
+				EF5EBEB11533F4A500C2EF88 /* InfoPlist.strings */,
+				EF5EBEB41533F4A500C2EF88 /* main.m */,
+				EF5EBEB61533F4A500C2EF88 /* AVSimpleEditoriOS-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF5EBEA31533F4A500C2EF88 /* AVSimpleEditoriOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF5EBEC51533F4A500C2EF88 /* Build configuration list for PBXNativeTarget "AVSimpleEditoriOS" */;
+			buildPhases = (
+				EF5EBEA01533F4A500C2EF88 /* Sources */,
+				EF5EBEA11533F4A500C2EF88 /* Frameworks */,
+				EF5EBEA21533F4A500C2EF88 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AVSimpleEditoriOS;
+			productName = AVSimpleEditor;
+			productReference = EF5EBEA41533F4A500C2EF88 /* AVSimpleEditoriOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF5EBE9B1533F4A400C2EF88 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = AVSE;
+				LastUpgradeCheck = 0460;
+			};
+			buildConfigurationList = EF5EBE9E1533F4A400C2EF88 /* Build configuration list for PBXProject "AVSimpleEditoriOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EF5EBE991533F4A400C2EF88;
+			productRefGroup = EF5EBEA51533F4A500C2EF88 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF5EBEA31533F4A500C2EF88 /* AVSimpleEditoriOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF5EBEA21533F4A500C2EF88 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF5EBEB31533F4A500C2EF88 /* InfoPlist.strings in Resources */,
+				EF5EBEC21533F4A500C2EF88 /* AVSEViewController_iPad.xib in Resources */,
+				EF8272F81550AA13007D261B /* Music.m4a in Resources */,
+				EF8273051550B2E9007D261B /* Movie.m4v in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF5EBEA01533F4A500C2EF88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF5EBEB51533F4A500C2EF88 /* main.m in Sources */,
+				EF5EBEB91533F4A500C2EF88 /* AVSEAppDelegate.m in Sources */,
+				EF5EBEBC1533F4A500C2EF88 /* AVSEViewController.m in Sources */,
+				EF9B8D02154609280045B76E /* AVSECommand.m in Sources */,
+				EF9B8D05154609DF0045B76E /* AVSETrimCommand.m in Sources */,
+				EF9B8D0815460A2C0045B76E /* AVSERotateCommand.m in Sources */,
+				EF9B8D0B15460A750045B76E /* AVSECropCommand.m in Sources */,
+				EF9B8D0E15460AB10045B76E /* AVSEAddMusicCommand.m in Sources */,
+				EF9B8D1115460AF20045B76E /* AVSEAddWatermarkCommand.m in Sources */,
+				EF9B8D1415460BA30045B76E /* AVSEExportCommand.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EF5EBEB11533F4A500C2EF88 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF5EBEB21533F4A500C2EF88 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EF5EBEC01533F4A500C2EF88 /* AVSEViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF5EBEC11533F4A500C2EF88 /* en */,
+			);
+			name = AVSEViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		EF8272F51550AA13007D261B /* Music.m4a */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF8272F61550AA13007D261B /* en */,
+			);
+			name = Music.m4a;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF5EBEC31533F4A500C2EF88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EF5EBEC41533F4A500C2EF88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF5EBEC61533F4A500C2EF88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AVSimpleEditor/AVSimpleEditoriOS-Prefix.pch";
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				INFOPLIST_FILE = "AVSimpleEditor/AVSimpleEditoriOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = AVSimpleEditoriOS;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EF5EBEC71533F4A500C2EF88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AVSimpleEditor/AVSimpleEditoriOS-Prefix.pch";
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				INFOPLIST_FILE = "AVSimpleEditor/AVSimpleEditoriOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = AVSimpleEditoriOS;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF5EBE9E1533F4A400C2EF88 /* Build configuration list for PBXProject "AVSimpleEditoriOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF5EBEC31533F4A500C2EF88 /* Debug */,
+				EF5EBEC41533F4A500C2EF88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF5EBEC51533F4A500C2EF88 /* Build configuration list for PBXNativeTarget "AVSimpleEditoriOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF5EBEC61533F4A500C2EF88 /* Debug */,
+				EF5EBEC71533F4A500C2EF88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF5EBE9B1533F4A400C2EF88 /* Project object */;
+}

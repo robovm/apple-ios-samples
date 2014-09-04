@@ -1,0 +1,16 @@
+//
+// Prefix header for all source files of the 'InterAppAudioDelay' target in the 'InterAppAudioDelay' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_7_0
+    #warning "This project uses features only available in iOS SDK 7.0 and later."
+#endif
+
+#define DELAY_ENGINE ((AppDelegate *)[UIApplication sharedApplication].delegate).delay
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif

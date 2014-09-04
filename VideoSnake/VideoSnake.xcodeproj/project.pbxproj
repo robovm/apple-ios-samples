@@ -1,0 +1,479 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1B81139B1589642F00635C77 /* PhoneIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B81139A1589642F00635C77 /* PhoneIcon.png */; };
+		1B81139D1589643A00635C77 /* PhoneIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B81139C1589643A00635C77 /* PhoneIcon@2x.png */; };
+		1B8113A11589647F00635C77 /* PadIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B8113A01589647F00635C77 /* PadIcon.png */; };
+		1B8113A31589648300635C77 /* PadIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B8113A21589648300635C77 /* PadIcon@2x.png */; };
+		261910B7160BD78F00929860 /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 261910B6160BD78F00929860 /* Default-568h@2x~iphone.png */; };
+		265E755A17177999000756EE /* videoSnake.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 262D247F1717784F000E1DBA /* videoSnake.fsh */; };
+		265E755B17177999000756EE /* videoSnake.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 262D24801717784F000E1DBA /* videoSnake.vsh */; };
+		269351C1156CB42100512474 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269351C0156CB42100512474 /* CoreMotion.framework */; };
+		281FB47F176694640071511D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 281FB47D176694640071511D /* Main.storyboard */; };
+		28365599139FE71B00D09100 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = 28365598139FE71B00D09100 /* ReadMe.txt */; };
+		6F096BFA157ED5110075E328 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F096BF9157ED5110075E328 /* ImageIO.framework */; };
+		6F90DDDA1395CAAA00125BDA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F90DDD91395CAAA00125BDA /* UIKit.framework */; };
+		6F90DDDC1395CAAA00125BDA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F90DDDB1395CAAA00125BDA /* Foundation.framework */; };
+		6F90DDDE1395CAAA00125BDA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F90DDDD1395CAAA00125BDA /* CoreGraphics.framework */; };
+		6F90DDE41395CAAA00125BDA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6F90DDE21395CAAA00125BDA /* InfoPlist.strings */; };
+		6F90DDE61395CAAA00125BDA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F90DDE51395CAAA00125BDA /* main.m */; };
+		6F90DDEA1395CAAA00125BDA /* VideoSnakeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F90DDE91395CAAA00125BDA /* VideoSnakeAppDelegate.m */; };
+		6F90DDEC1395CAAA00125BDA /* VideoSnakeViewController.h in Resources */ = {isa = PBXBuildFile; fileRef = 6F90DDEB1395CAAA00125BDA /* VideoSnakeViewController.h */; };
+		6F90DDEE1395CAAA00125BDA /* VideoSnakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F90DDED1395CAAA00125BDA /* VideoSnakeViewController.m */; };
+		6F90DDFF1395CCB600125BDA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F90DDFE1395CCB600125BDA /* AVFoundation.framework */; };
+		6F90DE011395CCBE00125BDA /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F90DE001395CCBE00125BDA /* AssetsLibrary.framework */; };
+		6F90DE051395CCD100125BDA /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F90DE041395CCD100125BDA /* OpenGLES.framework */; };
+		6F90DE071395CCE000125BDA /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F90DE061395CCE000125BDA /* CoreVideo.framework */; };
+		6F90DE091395CCEA00125BDA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F90DE081395CCEA00125BDA /* QuartzCore.framework */; };
+		6F90DE0B1395CCF500125BDA /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F90DE0A1395CCF500125BDA /* CoreMedia.framework */; };
+		6F90DE141395CD9C00125BDA /* VideoSnakeSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F90DE0F1395CD9C00125BDA /* VideoSnakeSessionManager.m */; };
+		6FE5A735160BAC8000F6DB2B /* VideoSnakeOpenGLRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE5A734160BAC8000F6DB2B /* VideoSnakeOpenGLRenderer.m */; };
+		6FF11C8D16A8779D00E14D71 /* MotionSynchronizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF11C8816A8779D00E14D71 /* MotionSynchronizer.m */; };
+		6FF11C8E16A8779D00E14D71 /* MovieRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF11C8A16A8779D00E14D71 /* MovieRecorder.m */; };
+		6FF11C8F16A8779D00E14D71 /* OpenGLPixelBufferView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF11C8C16A8779D00E14D71 /* OpenGLPixelBufferView.m */; };
+		6FF11C9516A877B100E14D71 /* matrix.c in Sources */ = {isa = PBXBuildFile; fileRef = 6FF11C9116A877B100E14D71 /* matrix.c */; };
+		6FF11C9616A877B100E14D71 /* ShaderUtilities.c in Sources */ = {isa = PBXBuildFile; fileRef = 6FF11C9316A877B100E14D71 /* ShaderUtilities.c */; };
+		7214DBCE182AEF8900EA3F99 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7214DBCD182AEF8900EA3F99 /* Images.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1B81139A1589642F00635C77 /* PhoneIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PhoneIcon.png; path = ../Resources/PhoneIcon.png; sourceTree = "<group>"; };
+		1B81139C1589643A00635C77 /* PhoneIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "PhoneIcon@2x.png"; path = "../Resources/PhoneIcon@2x.png"; sourceTree = "<group>"; };
+		1B8113A01589647F00635C77 /* PadIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PadIcon.png; path = ../Resources/PadIcon.png; sourceTree = "<group>"; };
+		1B8113A21589648300635C77 /* PadIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "PadIcon@2x.png"; path = "../Resources/PadIcon@2x.png"; sourceTree = "<group>"; };
+		261910B6160BD78F00929860 /* Default-568h@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x~iphone.png"; path = "../Resources/Default-568h@2x~iphone.png"; sourceTree = "<group>"; };
+		262D247F1717784F000E1DBA /* videoSnake.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = videoSnake.fsh; path = Resources/Shaders/videoSnake.fsh; sourceTree = SOURCE_ROOT; };
+		262D24801717784F000E1DBA /* videoSnake.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = videoSnake.vsh; path = Resources/Shaders/videoSnake.vsh; sourceTree = SOURCE_ROOT; };
+		269351C0156CB42100512474 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		281FB47E176694640071511D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = Resources/en.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
+		28365598139FE71B00D09100 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		6F096BF9157ED5110075E328 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		6F90DDD51395CAAA00125BDA /* VideoSnake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoSnake.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F90DDD91395CAAA00125BDA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6F90DDDB1395CAAA00125BDA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6F90DDDD1395CAAA00125BDA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6F90DDE11395CAAA00125BDA /* VideoSnake-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "VideoSnake-Info.plist"; path = "../VideoSnake-Info.plist"; sourceTree = "<group>"; };
+		6F90DDE31395CAAA00125BDA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6F90DDE51395CAAA00125BDA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../main.m; sourceTree = "<group>"; };
+		6F90DDE71395CAAA00125BDA /* VideoSnake-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "VideoSnake-Prefix.pch"; path = "../VideoSnake-Prefix.pch"; sourceTree = "<group>"; };
+		6F90DDE81395CAAA00125BDA /* VideoSnakeAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoSnakeAppDelegate.h; sourceTree = "<group>"; };
+		6F90DDE91395CAAA00125BDA /* VideoSnakeAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoSnakeAppDelegate.m; sourceTree = "<group>"; };
+		6F90DDEB1395CAAA00125BDA /* VideoSnakeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoSnakeViewController.h; sourceTree = "<group>"; };
+		6F90DDED1395CAAA00125BDA /* VideoSnakeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoSnakeViewController.m; sourceTree = "<group>"; };
+		6F90DDFE1395CCB600125BDA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		6F90DE001395CCBE00125BDA /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		6F90DE041395CCD100125BDA /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		6F90DE061395CCE000125BDA /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		6F90DE081395CCEA00125BDA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		6F90DE0A1395CCF500125BDA /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		6F90DE0E1395CD9C00125BDA /* VideoSnakeSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoSnakeSessionManager.h; sourceTree = "<group>"; };
+		6F90DE0F1395CD9C00125BDA /* VideoSnakeSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoSnakeSessionManager.m; sourceTree = "<group>"; };
+		6FE5A733160BAC8000F6DB2B /* VideoSnakeOpenGLRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoSnakeOpenGLRenderer.h; sourceTree = "<group>"; };
+		6FE5A734160BAC8000F6DB2B /* VideoSnakeOpenGLRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoSnakeOpenGLRenderer.m; sourceTree = "<group>"; };
+		6FF11C8716A8779D00E14D71 /* MotionSynchronizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MotionSynchronizer.h; path = Utilities/MotionSynchronizer.h; sourceTree = "<group>"; };
+		6FF11C8816A8779D00E14D71 /* MotionSynchronizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MotionSynchronizer.m; path = Utilities/MotionSynchronizer.m; sourceTree = "<group>"; };
+		6FF11C8916A8779D00E14D71 /* MovieRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieRecorder.h; path = Utilities/MovieRecorder.h; sourceTree = "<group>"; };
+		6FF11C8A16A8779D00E14D71 /* MovieRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieRecorder.m; path = Utilities/MovieRecorder.m; sourceTree = "<group>"; };
+		6FF11C8B16A8779D00E14D71 /* OpenGLPixelBufferView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenGLPixelBufferView.h; path = Utilities/OpenGLPixelBufferView.h; sourceTree = "<group>"; };
+		6FF11C8C16A8779D00E14D71 /* OpenGLPixelBufferView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenGLPixelBufferView.m; path = Utilities/OpenGLPixelBufferView.m; sourceTree = "<group>"; };
+		6FF11C9116A877B100E14D71 /* matrix.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = matrix.c; path = Utilities/GL/matrix.c; sourceTree = "<group>"; };
+		6FF11C9216A877B100E14D71 /* matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = matrix.h; path = Utilities/GL/matrix.h; sourceTree = "<group>"; };
+		6FF11C9316A877B100E14D71 /* ShaderUtilities.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ShaderUtilities.c; path = Utilities/GL/ShaderUtilities.c; sourceTree = "<group>"; };
+		6FF11C9416A877B100E14D71 /* ShaderUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShaderUtilities.h; path = Utilities/GL/ShaderUtilities.h; sourceTree = "<group>"; };
+		7214DBC6182AEC4800EA3F99 /* PadIcon@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "PadIcon@1x.png"; path = "../Resources/PadIcon@1x.png"; sourceTree = "<group>"; };
+		7214DBC7182AEC7E00EA3F99 /* PhoneIcon@2x-Spotlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "PhoneIcon@2x-Spotlight.png"; path = "../Resources/PhoneIcon@2x-Spotlight.png"; sourceTree = "<group>"; };
+		7214DBC8182AEC9000EA3F99 /* PadIcon@1x-Spotlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "PadIcon@1x-Spotlight.png"; path = "../Resources/PadIcon@1x-Spotlight.png"; sourceTree = "<group>"; };
+		7214DBC9182AEC9B00EA3F99 /* PadIcon@2x-Spotlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "PadIcon@2x-Spotlight.png"; path = "../Resources/PadIcon@2x-Spotlight.png"; sourceTree = "<group>"; };
+		7214DBCA182AECB600EA3F99 /* PhoneIcon@2xSettings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "PhoneIcon@2xSettings.png"; path = "../Resources/PhoneIcon@2xSettings.png"; sourceTree = "<group>"; };
+		7214DBCB182AECC100EA3F99 /* PadIcon@1x-Settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "PadIcon@1x-Settings.png"; path = "../Resources/PadIcon@1x-Settings.png"; sourceTree = "<group>"; };
+		7214DBCC182AECCD00EA3F99 /* PadIcon@2x-Settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "PadIcon@2x-Settings.png"; path = "../Resources/PadIcon@2x-Settings.png"; sourceTree = "<group>"; };
+		7214DBCD182AEF8900EA3F99 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Resources/Images.xcassets; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6F90DDD21395CAAA00125BDA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F096BFA157ED5110075E328 /* ImageIO.framework in Frameworks */,
+				269351C1156CB42100512474 /* CoreMotion.framework in Frameworks */,
+				6F90DE0B1395CCF500125BDA /* CoreMedia.framework in Frameworks */,
+				6F90DE091395CCEA00125BDA /* QuartzCore.framework in Frameworks */,
+				6F90DE071395CCE000125BDA /* CoreVideo.framework in Frameworks */,
+				6F90DDDE1395CAAA00125BDA /* CoreGraphics.framework in Frameworks */,
+				6F90DE051395CCD100125BDA /* OpenGLES.framework in Frameworks */,
+				6F90DE011395CCBE00125BDA /* AssetsLibrary.framework in Frameworks */,
+				6F90DDFF1395CCB600125BDA /* AVFoundation.framework in Frameworks */,
+				6F90DDDA1395CAAA00125BDA /* UIKit.framework in Frameworks */,
+				6F90DDDC1395CAAA00125BDA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		262D247E17177837000E1DBA /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				262D247F1717784F000E1DBA /* videoSnake.fsh */,
+				262D24801717784F000E1DBA /* videoSnake.vsh */,
+			);
+			name = Shaders;
+			sourceTree = "<group>";
+		};
+		6F90DDCA1395CAAA00125BDA = {
+			isa = PBXGroup;
+			children = (
+				28365598139FE71B00D09100 /* ReadMe.txt */,
+				6F90DDDF1395CAAA00125BDA /* Classes */,
+				6FF11C8616A8778500E14D71 /* Utilities */,
+				AF052D151422BCEA00CD2D66 /* Other Sources */,
+				6F90DDE01395CAAA00125BDA /* Resources */,
+				6F90DDD81395CAAA00125BDA /* Frameworks */,
+				6F90DDD61395CAAA00125BDA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6F90DDD61395CAAA00125BDA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6F90DDD51395CAAA00125BDA /* VideoSnake.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6F90DDD81395CAAA00125BDA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6F90DE001395CCBE00125BDA /* AssetsLibrary.framework */,
+				6F90DDFE1395CCB600125BDA /* AVFoundation.framework */,
+				6F90DDDD1395CAAA00125BDA /* CoreGraphics.framework */,
+				6F90DE0A1395CCF500125BDA /* CoreMedia.framework */,
+				269351C0156CB42100512474 /* CoreMotion.framework */,
+				6F90DE061395CCE000125BDA /* CoreVideo.framework */,
+				6F90DDDB1395CAAA00125BDA /* Foundation.framework */,
+				6F096BF9157ED5110075E328 /* ImageIO.framework */,
+				6F90DE041395CCD100125BDA /* OpenGLES.framework */,
+				6F90DE081395CCEA00125BDA /* QuartzCore.framework */,
+				6F90DDD91395CAAA00125BDA /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6F90DDDF1395CAAA00125BDA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				6F90DDEB1395CAAA00125BDA /* VideoSnakeViewController.h */,
+				6F90DDED1395CAAA00125BDA /* VideoSnakeViewController.m */,
+				6F90DE0E1395CD9C00125BDA /* VideoSnakeSessionManager.h */,
+				6F90DE0F1395CD9C00125BDA /* VideoSnakeSessionManager.m */,
+				6FE5A733160BAC8000F6DB2B /* VideoSnakeOpenGLRenderer.h */,
+				6FE5A734160BAC8000F6DB2B /* VideoSnakeOpenGLRenderer.m */,
+				6F90DDE81395CAAA00125BDA /* VideoSnakeAppDelegate.h */,
+				6F90DDE91395CAAA00125BDA /* VideoSnakeAppDelegate.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		6F90DDE01395CAAA00125BDA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7214DBCD182AEF8900EA3F99 /* Images.xcassets */,
+				281FB47D176694640071511D /* Main.storyboard */,
+				262D247E17177837000E1DBA /* Shaders */,
+				6F90DDE11395CAAA00125BDA /* VideoSnake-Info.plist */,
+				6F90DDE21395CAAA00125BDA /* InfoPlist.strings */,
+				261910B6160BD78F00929860 /* Default-568h@2x~iphone.png */,
+				7214DBCC182AECCD00EA3F99 /* PadIcon@2x-Settings.png */,
+				7214DBCB182AECC100EA3F99 /* PadIcon@1x-Settings.png */,
+				7214DBCA182AECB600EA3F99 /* PhoneIcon@2xSettings.png */,
+				7214DBC9182AEC9B00EA3F99 /* PadIcon@2x-Spotlight.png */,
+				7214DBC8182AEC9000EA3F99 /* PadIcon@1x-Spotlight.png */,
+				7214DBC7182AEC7E00EA3F99 /* PhoneIcon@2x-Spotlight.png */,
+				7214DBC6182AEC4800EA3F99 /* PadIcon@1x.png */,
+				1B8113A21589648300635C77 /* PadIcon@2x.png */,
+				1B8113A01589647F00635C77 /* PadIcon.png */,
+				1B81139C1589643A00635C77 /* PhoneIcon@2x.png */,
+				1B81139A1589642F00635C77 /* PhoneIcon.png */,
+			);
+			name = Resources;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		6FF11C8616A8778500E14D71 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				6FF11C8716A8779D00E14D71 /* MotionSynchronizer.h */,
+				6FF11C8816A8779D00E14D71 /* MotionSynchronizer.m */,
+				6FF11C8916A8779D00E14D71 /* MovieRecorder.h */,
+				6FF11C8A16A8779D00E14D71 /* MovieRecorder.m */,
+				6FF11C8B16A8779D00E14D71 /* OpenGLPixelBufferView.h */,
+				6FF11C8C16A8779D00E14D71 /* OpenGLPixelBufferView.m */,
+				6FF11C9016A877A100E14D71 /* GL */,
+			);
+			name = Utilities;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		6FF11C9016A877A100E14D71 /* GL */ = {
+			isa = PBXGroup;
+			children = (
+				6FF11C9116A877B100E14D71 /* matrix.c */,
+				6FF11C9216A877B100E14D71 /* matrix.h */,
+				6FF11C9316A877B100E14D71 /* ShaderUtilities.c */,
+				6FF11C9416A877B100E14D71 /* ShaderUtilities.h */,
+			);
+			name = GL;
+			sourceTree = "<group>";
+		};
+		AF052D151422BCEA00CD2D66 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				6F90DDE51395CAAA00125BDA /* main.m */,
+				6F90DDE71395CAAA00125BDA /* VideoSnake-Prefix.pch */,
+			);
+			name = "Other Sources";
+			path = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6F90DDD41395CAAA00125BDA /* VideoSnake */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6F90DDF71395CAAA00125BDA /* Build configuration list for PBXNativeTarget "VideoSnake" */;
+			buildPhases = (
+				6F90DDD11395CAAA00125BDA /* Sources */,
+				6F90DDD21395CAAA00125BDA /* Frameworks */,
+				6F90DDD31395CAAA00125BDA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VideoSnake;
+			productName = VideoSnake;
+			productReference = 6F90DDD51395CAAA00125BDA /* VideoSnake.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6F90DDCC1395CAAA00125BDA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+			};
+			buildConfigurationList = 6F90DDCF1395CAAA00125BDA /* Build configuration list for PBXProject "VideoSnake" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6F90DDCA1395CAAA00125BDA;
+			productRefGroup = 6F90DDD61395CAAA00125BDA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6F90DDD41395CAAA00125BDA /* VideoSnake */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6F90DDD31395CAAA00125BDA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				265E755A17177999000756EE /* videoSnake.fsh in Resources */,
+				265E755B17177999000756EE /* videoSnake.vsh in Resources */,
+				6F90DDE41395CAAA00125BDA /* InfoPlist.strings in Resources */,
+				281FB47F176694640071511D /* Main.storyboard in Resources */,
+				6F90DDEC1395CAAA00125BDA /* VideoSnakeViewController.h in Resources */,
+				28365599139FE71B00D09100 /* ReadMe.txt in Resources */,
+				1B81139B1589642F00635C77 /* PhoneIcon.png in Resources */,
+				1B81139D1589643A00635C77 /* PhoneIcon@2x.png in Resources */,
+				1B8113A11589647F00635C77 /* PadIcon.png in Resources */,
+				7214DBCE182AEF8900EA3F99 /* Images.xcassets in Resources */,
+				1B8113A31589648300635C77 /* PadIcon@2x.png in Resources */,
+				261910B7160BD78F00929860 /* Default-568h@2x~iphone.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6F90DDD11395CAAA00125BDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F90DDE61395CAAA00125BDA /* main.m in Sources */,
+				6F90DDEA1395CAAA00125BDA /* VideoSnakeAppDelegate.m in Sources */,
+				6F90DDEE1395CAAA00125BDA /* VideoSnakeViewController.m in Sources */,
+				6F90DE141395CD9C00125BDA /* VideoSnakeSessionManager.m in Sources */,
+				6FE5A735160BAC8000F6DB2B /* VideoSnakeOpenGLRenderer.m in Sources */,
+				6FF11C8D16A8779D00E14D71 /* MotionSynchronizer.m in Sources */,
+				6FF11C8E16A8779D00E14D71 /* MovieRecorder.m in Sources */,
+				6FF11C8F16A8779D00E14D71 /* OpenGLPixelBufferView.m in Sources */,
+				6FF11C9516A877B100E14D71 /* matrix.c in Sources */,
+				6FF11C9616A877B100E14D71 /* ShaderUtilities.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		281FB47D176694640071511D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				281FB47E176694640071511D /* en */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6F90DDE21395CAAA00125BDA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6F90DDE31395CAAA00125BDA /* en */,
+			);
+			name = InfoPlist.strings;
+			path = ../Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6F90DDF51395CAAA00125BDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6F90DDF61395CAAA00125BDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6F90DDF81395CAAA00125BDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VideoSnake-Prefix.pch";
+				INFOPLIST_FILE = "VideoSnake-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6F90DDF91395CAAA00125BDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VideoSnake-Prefix.pch";
+				INFOPLIST_FILE = "VideoSnake-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6F90DDCF1395CAAA00125BDA /* Build configuration list for PBXProject "VideoSnake" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F90DDF51395CAAA00125BDA /* Debug */,
+				6F90DDF61395CAAA00125BDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6F90DDF71395CAAA00125BDA /* Build configuration list for PBXNativeTarget "VideoSnake" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F90DDF81395CAAA00125BDA /* Debug */,
+				6F90DDF91395CAAA00125BDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6F90DDCC1395CAAA00125BDA /* Project object */;
+}

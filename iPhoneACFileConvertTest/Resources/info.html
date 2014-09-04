@@ -1,0 +1,37 @@
+<meta name = "viewport" content = "width = device-width">
+
+<h4 align="left">Audio Converter File Converter Test</h4>
+
+<p>iPhoneACFileConvertTest demonstrates the use of the Audio Converter APIs to
+convert from a PCM audio format in an .aif file to a compressed format in a .caf file
+and will support AAC encode on appropriate hardware such as the iPhone 3GS. 
+</p>
+
+<p>All the relevant code is in the file AudioConverterFileConvert.cpp.</p>
+
+<p>Touching the "Convert" button calls the function DoConvertFile() producing an output.caf
+file using the encoding and sample rate chosen in the UI.</p>
+
+<p>The output.caf file is then played back after conversion using AVAudioPlayer to confirm success and
+Audio format information for both the sournce and output file is displayed.</p>
+
+<p>Interruption handling during audio processing (conversion) is also demonstrated.<p>
+
+<hr align="center">
+
+<p>Audio converter objects convert between various linear PCM audio formats.
+They can also convert between linear PCM and compressed formats.</p>
+
+<p>Supported transformations include the following:</p>
+<ul>
+
+<li>PCM bit depth</li>
+<li>PCM sample rate</li>
+<li>PCM fixed point to and from PCM integer</li>
+<li>PCM interleaved to and from PCM deinterleaved</li>
+<li>PCM to and from compressed formats</li>
+</ul>
+
+<p>A single Audio Converter may perform more than one of the listed transformations.</p>
+<br>
+<br>

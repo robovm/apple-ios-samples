@@ -1,0 +1,331 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B9182535148D762600D6064E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9182534148D762600D6064E /* UIKit.framework */; };
+		B9182537148D762600D6064E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9182536148D762600D6064E /* Foundation.framework */; };
+		B9182539148D762600D6064E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9182538148D762600D6064E /* CoreGraphics.framework */; };
+		B918253F148D762600D6064E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B918253D148D762600D6064E /* InfoPlist.strings */; };
+		B9182541148D762600D6064E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B9182540148D762600D6064E /* main.m */; };
+		B9182545148D762600D6064E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9182544148D762600D6064E /* AppDelegate.m */; };
+		B9182548148D762600D6064E /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9182546148D762600D6064E /* MainStoryboard.storyboard */; };
+		B918254B148D762600D6064E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B918254A148D762600D6064E /* ViewController.m */; };
+		B9182557148D79D600D6064E /* LeDiscovery.m in Sources */ = {isa = PBXBuildFile; fileRef = B9182554148D79D600D6064E /* LeDiscovery.m */; };
+		B9182558148D79D600D6064E /* LeTemperatureAlarmService.m in Sources */ = {isa = PBXBuildFile; fileRef = B9182556148D79D600D6064E /* LeTemperatureAlarmService.m */; };
+		B928B13F14A117DE0060D635 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B928B13E14A117DE0060D635 /* CoreBluetooth.framework */; };
+		B9ADCFD51497DA600098522D /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = B9ADCFD41497DA600098522D /* ReadMe.txt */; };
+		B9C383731491694000CFD0B5 /* Icon-114.png in Resources */ = {isa = PBXBuildFile; fileRef = B9C383721491694000CFD0B5 /* Icon-114.png */; };
+		B9C383761491694300CFD0B5 /* Icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = B9C383751491694300CFD0B5 /* Icon-57.png */; };
+		B9C383781491694800CFD0B5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9C383771491694800CFD0B5 /* Default@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B9182530148D762600D6064E /* TemperatureSensor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TemperatureSensor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9182534148D762600D6064E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B9182536148D762600D6064E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B9182538148D762600D6064E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B918253C148D762600D6064E /* TemperatureSensor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TemperatureSensor-Info.plist"; sourceTree = "<group>"; };
+		B918253E148D762600D6064E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B9182540148D762600D6064E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B9182542148D762600D6064E /* TemperatureSensor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TemperatureSensor-Prefix.pch"; sourceTree = "<group>"; };
+		B9182543148D762600D6064E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B9182544148D762600D6064E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B9182547148D762600D6064E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		B9182549148D762600D6064E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B918254A148D762600D6064E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B9182553148D79D600D6064E /* LeDiscovery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeDiscovery.h; sourceTree = "<group>"; };
+		B9182554148D79D600D6064E /* LeDiscovery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeDiscovery.m; sourceTree = "<group>"; };
+		B9182555148D79D600D6064E /* LeTemperatureAlarmService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeTemperatureAlarmService.h; sourceTree = "<group>"; };
+		B9182556148D79D600D6064E /* LeTemperatureAlarmService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeTemperatureAlarmService.m; sourceTree = "<group>"; };
+		B9182559148D7E1A00D6064E /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.1.Internal.sdk/System/Library/Frameworks/CoreBluetooth.framework; sourceTree = DEVELOPER_DIR; };
+		B928B13E14A117DE0060D635 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/System/Library/Frameworks/CoreBluetooth.framework; sourceTree = DEVELOPER_DIR; };
+		B9ADCFD41497DA600098522D /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		B9C383721491694000CFD0B5 /* Icon-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-114.png"; path = "../Icon-114.png"; sourceTree = "<group>"; };
+		B9C383751491694300CFD0B5 /* Icon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-57.png"; path = "../Icon-57.png"; sourceTree = "<group>"; };
+		B9C383771491694800CFD0B5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B918252D148D762600D6064E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B928B13F14A117DE0060D635 /* CoreBluetooth.framework in Frameworks */,
+				B9182535148D762600D6064E /* UIKit.framework in Frameworks */,
+				B9182537148D762600D6064E /* Foundation.framework in Frameworks */,
+				B9182539148D762600D6064E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B9182525148D762500D6064E = {
+			isa = PBXGroup;
+			children = (
+				B9ADCFD41497DA600098522D /* ReadMe.txt */,
+				B918253A148D762600D6064E /* TemperatureSensor */,
+				B9182533148D762600D6064E /* Frameworks */,
+				B9182531148D762600D6064E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B9182531148D762600D6064E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B9182530148D762600D6064E /* TemperatureSensor.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B9182533148D762600D6064E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B928B13E14A117DE0060D635 /* CoreBluetooth.framework */,
+				B9182559148D7E1A00D6064E /* CoreBluetooth.framework */,
+				B9182534148D762600D6064E /* UIKit.framework */,
+				B9182536148D762600D6064E /* Foundation.framework */,
+				B9182538148D762600D6064E /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B918253A148D762600D6064E /* TemperatureSensor */ = {
+			isa = PBXGroup;
+			children = (
+				B9182552148D79B900D6064E /* LE */,
+				B9182543148D762600D6064E /* AppDelegate.h */,
+				B9182544148D762600D6064E /* AppDelegate.m */,
+				B9182546148D762600D6064E /* MainStoryboard.storyboard */,
+				B9182549148D762600D6064E /* ViewController.h */,
+				B918254A148D762600D6064E /* ViewController.m */,
+				B918253B148D762600D6064E /* Supporting Files */,
+			);
+			path = TemperatureSensor;
+			sourceTree = "<group>";
+		};
+		B918253B148D762600D6064E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B9C383771491694800CFD0B5 /* Default@2x.png */,
+				B9C383751491694300CFD0B5 /* Icon-57.png */,
+				B9C383721491694000CFD0B5 /* Icon-114.png */,
+				B918253C148D762600D6064E /* TemperatureSensor-Info.plist */,
+				B918253D148D762600D6064E /* InfoPlist.strings */,
+				B9182540148D762600D6064E /* main.m */,
+				B9182542148D762600D6064E /* TemperatureSensor-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B9182552148D79B900D6064E /* LE */ = {
+			isa = PBXGroup;
+			children = (
+				B9182553148D79D600D6064E /* LeDiscovery.h */,
+				B9182554148D79D600D6064E /* LeDiscovery.m */,
+				B9182555148D79D600D6064E /* LeTemperatureAlarmService.h */,
+				B9182556148D79D600D6064E /* LeTemperatureAlarmService.m */,
+			);
+			name = LE;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B918252F148D762600D6064E /* TemperatureSensor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B918254E148D762600D6064E /* Build configuration list for PBXNativeTarget "TemperatureSensor" */;
+			buildPhases = (
+				B918252C148D762600D6064E /* Sources */,
+				B918252D148D762600D6064E /* Frameworks */,
+				B918252E148D762600D6064E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TemperatureSensor;
+			productName = TemperatureSensor;
+			productReference = B9182530148D762600D6064E /* TemperatureSensor.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B9182527148D762500D6064E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Apple Inc.";
+			};
+			buildConfigurationList = B918252A148D762500D6064E /* Build configuration list for PBXProject "TemperatureSensor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B9182525148D762500D6064E;
+			productRefGroup = B9182531148D762600D6064E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B918252F148D762600D6064E /* TemperatureSensor */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B918252E148D762600D6064E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B918253F148D762600D6064E /* InfoPlist.strings in Resources */,
+				B9182548148D762600D6064E /* MainStoryboard.storyboard in Resources */,
+				B9C383731491694000CFD0B5 /* Icon-114.png in Resources */,
+				B9C383761491694300CFD0B5 /* Icon-57.png in Resources */,
+				B9C383781491694800CFD0B5 /* Default@2x.png in Resources */,
+				B9ADCFD51497DA600098522D /* ReadMe.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B918252C148D762600D6064E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9182541148D762600D6064E /* main.m in Sources */,
+				B9182545148D762600D6064E /* AppDelegate.m in Sources */,
+				B918254B148D762600D6064E /* ViewController.m in Sources */,
+				B9182557148D79D600D6064E /* LeDiscovery.m in Sources */,
+				B9182558148D79D600D6064E /* LeTemperatureAlarmService.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B918253D148D762600D6064E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B918253E148D762600D6064E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B9182546148D762600D6064E /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B9182547148D762600D6064E /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B918254C148D762600D6064E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B918254D148D762600D6064E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B918254F148D762600D6064E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TemperatureSensor/TemperatureSensor-Prefix.pch";
+				INFOPLIST_FILE = "TemperatureSensor/TemperatureSensor-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B9182550148D762600D6064E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TemperatureSensor/TemperatureSensor-Prefix.pch";
+				INFOPLIST_FILE = "TemperatureSensor/TemperatureSensor-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B918252A148D762500D6064E /* Build configuration list for PBXProject "TemperatureSensor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B918254C148D762600D6064E /* Debug */,
+				B918254D148D762600D6064E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B918254E148D762600D6064E /* Build configuration list for PBXNativeTarget "TemperatureSensor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B918254F148D762600D6064E /* Debug */,
+				B9182550148D762600D6064E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B9182527148D762500D6064E /* Project object */;
+}

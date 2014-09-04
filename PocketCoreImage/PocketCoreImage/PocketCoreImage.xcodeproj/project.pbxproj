@@ -1,0 +1,335 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D003846713D644A700E14A63 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D003846613D644A700E14A63 /* CoreImage.framework */; };
+		D039A88413E0649300D54C22 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = D039A87E13E0649300D54C22 /* Icon-72.png */; };
+		D039A88513E0649300D54C22 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = D039A87F13E0649300D54C22 /* Icon-Small-50.png */; };
+		D039A88613E0649300D54C22 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = D039A88013E0649300D54C22 /* Icon-Small.png */; };
+		D039A88713E0649300D54C22 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D039A88113E0649300D54C22 /* Icon-Small@2x.png */; };
+		D039A88813E0649300D54C22 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D039A88213E0649300D54C22 /* Icon.png */; };
+		D039A88913E0649300D54C22 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D039A88313E0649300D54C22 /* Icon@2x.png */; };
+		D0420C1B13D4B69500B69459 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0420C1A13D4B69500B69459 /* UIKit.framework */; };
+		D0420C1D13D4B69500B69459 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0420C1C13D4B69500B69459 /* Foundation.framework */; };
+		D0420C1F13D4B69500B69459 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0420C1E13D4B69500B69459 /* CoreGraphics.framework */; };
+		D0420C2513D4B69500B69459 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0420C2313D4B69500B69459 /* InfoPlist.strings */; };
+		D0420C2713D4B69500B69459 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0420C2613D4B69500B69459 /* main.m */; };
+		D0420C2B13D4B69500B69459 /* PocketCoreImageAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0420C2A13D4B69500B69459 /* PocketCoreImageAppDelegate.m */; };
+		D0420C2E13D4B69500B69459 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0420C2C13D4B69500B69459 /* MainStoryboard.storyboard */; };
+		D0420C3113D4B69600B69459 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0420C3013D4B69600B69459 /* MainViewController.m */; };
+		D0420C3913D4B7AC00B69459 /* FilteredImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0420C3813D4B7AC00B69459 /* FilteredImageView.m */; };
+		D0C16E4413D798DD00424D40 /* FilterDetailCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C16E4313D798DD00424D40 /* FilterDetailCategory.m */; };
+		D0D9C42C13EC93DA001CD987 /* LakeDonPedro2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0D9C42B13EC93DA001CD987 /* LakeDonPedro2.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D003846613D644A700E14A63 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		D039A87E13E0649300D54C22 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "icons/Icon-72.png"; sourceTree = "<group>"; };
+		D039A87F13E0649300D54C22 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50.png"; path = "icons/Icon-Small-50.png"; sourceTree = "<group>"; };
+		D039A88013E0649300D54C22 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "icons/Icon-Small.png"; sourceTree = "<group>"; };
+		D039A88113E0649300D54C22 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "icons/Icon-Small@2x.png"; sourceTree = "<group>"; };
+		D039A88213E0649300D54C22 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = icons/Icon.png; sourceTree = "<group>"; };
+		D039A88313E0649300D54C22 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "icons/Icon@2x.png"; sourceTree = "<group>"; };
+		D0420C1613D4B69500B69459 /* PocketCoreImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketCoreImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0420C1A13D4B69500B69459 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D0420C1C13D4B69500B69459 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D0420C1E13D4B69500B69459 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D0420C2213D4B69500B69459 /* PocketCoreImage-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PocketCoreImage-Info.plist"; sourceTree = "<group>"; };
+		D0420C2413D4B69500B69459 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D0420C2613D4B69500B69459 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D0420C2813D4B69500B69459 /* PocketCoreImage-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PocketCoreImage-Prefix.pch"; sourceTree = "<group>"; };
+		D0420C2913D4B69500B69459 /* PocketCoreImageAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PocketCoreImageAppDelegate.h; sourceTree = "<group>"; };
+		D0420C2A13D4B69500B69459 /* PocketCoreImageAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PocketCoreImageAppDelegate.m; sourceTree = "<group>"; };
+		D0420C2D13D4B69500B69459 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		D0420C2F13D4B69500B69459 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		D0420C3013D4B69600B69459 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		D0420C3713D4B7AC00B69459 /* FilteredImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilteredImageView.h; sourceTree = "<group>"; };
+		D0420C3813D4B7AC00B69459 /* FilteredImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilteredImageView.m; sourceTree = "<group>"; };
+		D0C16E4313D798DD00424D40 /* FilterDetailCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterDetailCategory.m; sourceTree = "<group>"; };
+		D0CF503C13FEFECF00DBC7D8 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ReadMe.txt; path = ../ReadMe.txt; sourceTree = "<group>"; };
+		D0D9C42B13EC93DA001CD987 /* LakeDonPedro2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = LakeDonPedro2.jpg; path = images/LakeDonPedro2.jpg; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D0420C1313D4B69500B69459 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D003846713D644A700E14A63 /* CoreImage.framework in Frameworks */,
+				D0420C1B13D4B69500B69459 /* UIKit.framework in Frameworks */,
+				D0420C1D13D4B69500B69459 /* Foundation.framework in Frameworks */,
+				D0420C1F13D4B69500B69459 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D0420C0B13D4B69500B69459 = {
+			isa = PBXGroup;
+			children = (
+				D0CF503C13FEFECF00DBC7D8 /* ReadMe.txt */,
+				D0420C2013D4B69500B69459 /* PocketCoreImage */,
+				D0420C1913D4B69500B69459 /* Frameworks */,
+				D0420C1713D4B69500B69459 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D0420C1713D4B69500B69459 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D0420C1613D4B69500B69459 /* PocketCoreImage.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D0420C1913D4B69500B69459 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D003846613D644A700E14A63 /* CoreImage.framework */,
+				D0420C1A13D4B69500B69459 /* UIKit.framework */,
+				D0420C1C13D4B69500B69459 /* Foundation.framework */,
+				D0420C1E13D4B69500B69459 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D0420C2013D4B69500B69459 /* PocketCoreImage */ = {
+			isa = PBXGroup;
+			children = (
+				D0420C2913D4B69500B69459 /* PocketCoreImageAppDelegate.h */,
+				D0420C2A13D4B69500B69459 /* PocketCoreImageAppDelegate.m */,
+				D0420C2C13D4B69500B69459 /* MainStoryboard.storyboard */,
+				D0420C2F13D4B69500B69459 /* MainViewController.h */,
+				D0420C3013D4B69600B69459 /* MainViewController.m */,
+				D0C16E4313D798DD00424D40 /* FilterDetailCategory.m */,
+				D0420C3713D4B7AC00B69459 /* FilteredImageView.h */,
+				D0420C3813D4B7AC00B69459 /* FilteredImageView.m */,
+				D0420C2113D4B69500B69459 /* Supporting Files */,
+			);
+			path = PocketCoreImage;
+			sourceTree = "<group>";
+		};
+		D0420C2113D4B69500B69459 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D0D9C42B13EC93DA001CD987 /* LakeDonPedro2.jpg */,
+				D0420C3E13D4D01600B69459 /* Icons */,
+				D0420C2213D4B69500B69459 /* PocketCoreImage-Info.plist */,
+				D0420C2313D4B69500B69459 /* InfoPlist.strings */,
+				D0420C2613D4B69500B69459 /* main.m */,
+				D0420C2813D4B69500B69459 /* PocketCoreImage-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D0420C3E13D4D01600B69459 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				D039A87E13E0649300D54C22 /* Icon-72.png */,
+				D039A87F13E0649300D54C22 /* Icon-Small-50.png */,
+				D039A88013E0649300D54C22 /* Icon-Small.png */,
+				D039A88113E0649300D54C22 /* Icon-Small@2x.png */,
+				D039A88213E0649300D54C22 /* Icon.png */,
+				D039A88313E0649300D54C22 /* Icon@2x.png */,
+			);
+			name = Icons;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D0420C1513D4B69500B69459 /* PocketCoreImage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0420C3413D4B69600B69459 /* Build configuration list for PBXNativeTarget "PocketCoreImage" */;
+			buildPhases = (
+				D0420C1213D4B69500B69459 /* Sources */,
+				D0420C1313D4B69500B69459 /* Frameworks */,
+				D0420C1413D4B69500B69459 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PocketCoreImage;
+			productName = PocketCoreImage;
+			productReference = D0420C1613D4B69500B69459 /* PocketCoreImage.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D0420C0D13D4B69500B69459 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Apple, Inc";
+			};
+			buildConfigurationList = D0420C1013D4B69500B69459 /* Build configuration list for PBXProject "PocketCoreImage" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D0420C0B13D4B69500B69459;
+			productRefGroup = D0420C1713D4B69500B69459 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D0420C1513D4B69500B69459 /* PocketCoreImage */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D0420C1413D4B69500B69459 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0420C2513D4B69500B69459 /* InfoPlist.strings in Resources */,
+				D0420C2E13D4B69500B69459 /* MainStoryboard.storyboard in Resources */,
+				D039A88413E0649300D54C22 /* Icon-72.png in Resources */,
+				D039A88513E0649300D54C22 /* Icon-Small-50.png in Resources */,
+				D039A88613E0649300D54C22 /* Icon-Small.png in Resources */,
+				D039A88713E0649300D54C22 /* Icon-Small@2x.png in Resources */,
+				D039A88813E0649300D54C22 /* Icon.png in Resources */,
+				D039A88913E0649300D54C22 /* Icon@2x.png in Resources */,
+				D0D9C42C13EC93DA001CD987 /* LakeDonPedro2.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D0420C1213D4B69500B69459 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0420C2713D4B69500B69459 /* main.m in Sources */,
+				D0420C2B13D4B69500B69459 /* PocketCoreImageAppDelegate.m in Sources */,
+				D0420C3113D4B69600B69459 /* MainViewController.m in Sources */,
+				D0420C3913D4B7AC00B69459 /* FilteredImageView.m in Sources */,
+				D0C16E4413D798DD00424D40 /* FilterDetailCategory.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D0420C2313D4B69500B69459 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0420C2413D4B69500B69459 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D0420C2C13D4B69500B69459 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0420C2D13D4B69500B69459 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D0420C3213D4B69600B69459 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D0420C3313D4B69600B69459 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D0420C3513D4B69600B69459 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PocketCoreImage/PocketCoreImage-Prefix.pch";
+				INFOPLIST_FILE = "PocketCoreImage/PocketCoreImage-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D0420C3613D4B69600B69459 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PocketCoreImage/PocketCoreImage-Prefix.pch";
+				INFOPLIST_FILE = "PocketCoreImage/PocketCoreImage-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D0420C1013D4B69500B69459 /* Build configuration list for PBXProject "PocketCoreImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0420C3213D4B69600B69459 /* Debug */,
+				D0420C3313D4B69600B69459 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0420C3413D4B69600B69459 /* Build configuration list for PBXNativeTarget "PocketCoreImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0420C3513D4B69600B69459 /* Debug */,
+				D0420C3613D4B69600B69459 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D0420C0D13D4B69500B69459 /* Project object */;
+}

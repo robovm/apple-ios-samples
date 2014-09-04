@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4471.1" systemVersion="13A510d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Bhg-U3-cAb">
+    <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3697.3"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller - Time Zones-->
+        <scene sceneID="MDy-DF-J3r">
+            <objects>
+                <tableViewController id="xNC-Zt-Xxe" customClass="APLViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" id="YAt-Bj-7qR">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TimeZoneCell" rowHeight="70" id="g7p-T0-oE3" customClass="APLTimeZoneCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="70"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g7p-T0-oE3" id="NBQ-Za-4DR">
+                                    <rect key="frame" x="0.0" y="0.0" width="322" height="69"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DnF-HJ-wQo" customClass="APLTimeZoneView">
+                                            <rect key="frame" x="0.0" y="0.0" width="322" height="69"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="DnF-HJ-wQo" secondAttribute="bottom" id="8aN-N6-ix0"/>
+                                        <constraint firstItem="DnF-HJ-wQo" firstAttribute="top" secondItem="NBQ-Za-4DR" secondAttribute="top" id="KnV-Ij-j8U"/>
+                                        <constraint firstAttribute="trailing" secondItem="DnF-HJ-wQo" secondAttribute="trailing" id="LSh-hk-dSt"/>
+                                        <constraint firstItem="DnF-HJ-wQo" firstAttribute="leading" secondItem="NBQ-Za-4DR" secondAttribute="leading" id="jr4-No-7XG"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="timeZoneView" destination="DnF-HJ-wQo" id="lfl-FF-BiI"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" title="Time Zones" id="pkn-eu-xej"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hKt-Ti-IgM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133" y="149"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MZe-RN-qRW">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="Bhg-U3-cAb" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="72a-PI-VH2">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="xNC-Zt-Xxe" kind="relationship" relationship="rootViewController" id="wdD-hf-FvE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xe8-DA-QRx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-401" y="149"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

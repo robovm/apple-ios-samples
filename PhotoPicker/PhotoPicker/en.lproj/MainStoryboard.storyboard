@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="4431.4" systemVersion="13A476a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="gdu-5G-aKt">
+    <dependencies>
+        <deployment version="1536" identifier="iOS"/>
+        <development version="4600" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3465.2"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller - PhotoPicker-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="APLViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tb4-16-R6K">
+                                <rect key="frame" x="0.0" y="460" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="Photo Library" id="8s3-HW-Fm1">
+                                        <connections>
+                                            <action selector="showImagePickerForPhotoPicker:" destination="2" id="V8M-uu-FeV"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="F5A-sA-wKN"/>
+                                    <barButtonItem systemItem="camera" id="j6p-xq-OTQ">
+                                        <connections>
+                                            <action selector="showImagePickerForCamera:" destination="2" id="V6H-XD-A0E"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="fSE-YJ-a3V">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tb4-16-R6K" firstAttribute="top" secondItem="fSE-YJ-a3V" secondAttribute="bottom" type="default" id="07c-Fs-WvI"/>
+                            <constraint firstItem="fSE-YJ-a3V" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="6J4-cG-OmY"/>
+                            <constraint firstItem="tb4-16-R6K" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="6bY-MU-SOb"/>
+                            <constraint firstItem="tb4-16-R6K" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="9sC-x1-8bx"/>
+                            <constraint firstItem="tb4-16-R6K" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="TPT-yD-zOx"/>
+                            <constraint firstItem="fSE-YJ-a3V" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="e1s-O6-s4j"/>
+                            <constraint firstItem="fSE-YJ-a3V" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="zf6-JQ-4Ot"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="PhotoPicker" id="HHq-CI-LKg"/>
+                    <connections>
+                        <outlet property="imageView" destination="fSE-YJ-a3V" id="z8L-lc-WWU"/>
+                        <outlet property="toolBar" destination="tb4-16-R6K" id="s0c-xz-aMp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="589" y="116"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LAc-0J-sbd">
+            <objects>
+                <navigationController id="gdu-5G-aKt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fA8-F4-ghm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="7BT-C3-8Ga"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BQX-Qr-Ioe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="153" y="116"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="APLViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/APLViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="delayedTakePhoto:"/>
+                <relationship kind="action" name="done:"/>
+                <relationship kind="action" name="showImagePickerForCamera:"/>
+                <relationship kind="action" name="showImagePickerForPhotoPicker:"/>
+                <relationship kind="action" name="startTakingPicturesAtIntervals:"/>
+                <relationship kind="action" name="stopTakingPicturesAtIntervals:"/>
+                <relationship kind="action" name="takePhoto:"/>
+                <relationship kind="outlet" name="delayedPhotoButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="doneButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="overlayView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="startStopButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="takePictureButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="toolBar" candidateClass="UIToolbar"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

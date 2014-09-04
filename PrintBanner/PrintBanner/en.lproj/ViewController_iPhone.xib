@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <development version="5000" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
+            <connections>
+                <outlet property="colorSelection" destination="47" id="125"/>
+                <outlet property="fontSelection" destination="39" id="126"/>
+                <outlet property="printButton" destination="Xpb-GM-BCM" id="4oG-BC-J4r"/>
+                <outlet property="textField" destination="8" id="128"/>
+                <outlet property="view" destination="6" id="124"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="6">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8">
+                    <rect key="frame" x="20" y="49" width="280" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="39">
+                    <rect key="frame" x="8" y="116" width="304" height="29"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <segments>
+                        <segment title="Typed"/>
+                        <segment title="Script"/>
+                        <segment title="Courier"/>
+                        <segment title="Arial"/>
+                    </segments>
+                </segmentedControl>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="47">
+                    <rect key="frame" x="13" y="181" width="294" height="29"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <segments>
+                        <segment title="Black"/>
+                        <segment title="Orange"/>
+                        <segment title="Purple"/>
+                        <segment title="Red"/>
+                    </segments>
+                </segmentedControl>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Printed font:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81">
+                    <rect key="frame" x="20" y="87" width="108" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="108" id="CZc-v8-gca"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Printed color: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="85">
+                    <rect key="frame" x="20" y="152" width="118" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="118" id="wmh-ca-ZL0"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xpb-GM-BCM">
+                    <rect key="frame" x="125" y="217" width="70" height="36"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="L9d-SQ-9js"/>
+                        <constraint firstAttribute="height" constant="36" id="i48-EW-IG6"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="Print">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="print:" destination="-1" eventType="touchUpInside" id="IPo-rF-yAa"/>
+                    </connections>
+                </button>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Printed text: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4R-Bv-qQ8">
+                    <rect key="frame" x="20" y="20" width="99" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Xpb-GM-BCM" firstAttribute="top" secondItem="47" secondAttribute="bottom" constant="8" symbolic="YES" id="8fn-vx-8T3"/>
+                <constraint firstItem="8" firstAttribute="top" secondItem="6" secondAttribute="top" constant="49" id="A5j-4j-VZV"/>
+                <constraint firstItem="85" firstAttribute="top" secondItem="39" secondAttribute="bottom" constant="8" symbolic="YES" id="Ebc-n6-V1N"/>
+                <constraint firstItem="47" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="13" id="IBl-1K-LOL"/>
+                <constraint firstItem="8" firstAttribute="top" secondItem="E4R-Bv-qQ8" secondAttribute="bottom" constant="8" symbolic="YES" id="LLZ-hZ-z3q"/>
+                <constraint firstItem="47" firstAttribute="top" secondItem="85" secondAttribute="bottom" constant="8" symbolic="YES" id="Nwb-0v-eIC"/>
+                <constraint firstItem="39" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="8" id="PbN-kO-zrh"/>
+                <constraint firstItem="85" firstAttribute="leading" secondItem="81" secondAttribute="leading" id="TES-MR-EHk"/>
+                <constraint firstItem="81" firstAttribute="leading" secondItem="8" secondAttribute="leading" id="b8e-jg-hFz"/>
+                <constraint firstItem="39" firstAttribute="top" secondItem="81" secondAttribute="bottom" constant="8" symbolic="YES" id="flZ-sb-68w"/>
+                <constraint firstItem="E4R-Bv-qQ8" firstAttribute="leading" secondItem="8" secondAttribute="leading" id="g84-aK-4i0"/>
+                <constraint firstItem="81" firstAttribute="top" secondItem="8" secondAttribute="bottom" constant="8" symbolic="YES" id="kV0-cs-M57"/>
+                <constraint firstItem="47" firstAttribute="centerX" secondItem="39" secondAttribute="centerX" id="mve-HG-APT"/>
+                <constraint firstItem="85" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="20" symbolic="YES" id="pfx-7B-VrF"/>
+                <constraint firstItem="39" firstAttribute="centerX" secondItem="8" secondAttribute="centerX" id="smS-UK-y5Q"/>
+                <constraint firstItem="Xpb-GM-BCM" firstAttribute="centerX" secondItem="47" secondAttribute="centerX" id="xMq-iE-VIl"/>
+                <constraint firstItem="47" firstAttribute="centerX" secondItem="6" secondAttribute="centerX" id="zBx-Xo-QUa"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>

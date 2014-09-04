@@ -1,0 +1,462 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6403E6D51748500100BDFEC7 /* PhotoButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6403E6D41748500000BDFEC7 /* PhotoButton@2x.png */; };
+		64839C3F175519FF003E061F /* bubble-left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 64839C3B175519FF003E061F /* bubble-left@2x.png */; };
+		64839C41175519FF003E061F /* bubble-right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 64839C3D175519FF003E061F /* bubble-right@2x.png */; };
+		7A39F1DE17839810005F51B8 /* ImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A39F1DD17839810005F51B8 /* ImageView.m */; };
+		7A39F1E1178494E3005F51B8 /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A39F1E0178494E3005F51B8 /* ProgressView.m */; };
+		7A3DD78C17A716BD00A89D93 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A3DD78617A716BD00A89D93 /* Icon-Small-50.png */; };
+		7A3DD78D17A716BD00A89D93 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A3DD78717A716BD00A89D93 /* Icon-Small.png */; };
+		7A3DD78E17A716BD00A89D93 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A3DD78817A716BD00A89D93 /* Icon-Small@2x.png */; };
+		7A3DD78F17A716BD00A89D93 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A3DD78917A716BD00A89D93 /* Icon.png */; };
+		7A3DD79017A716BD00A89D93 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A3DD78A17A716BD00A89D93 /* Icon@2x.png */; };
+		7A3DD79117A716BD00A89D93 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A3DD78B17A716BD00A89D93 /* Icon-72.png */; };
+		7A3DD79317A716DD00A89D93 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A3DD79217A716DD00A89D93 /* Images.xcassets */; };
+		7A7695571746ED7E008A2DBF /* Transcript.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7695561746ED7E008A2DBF /* Transcript.m */; };
+		7A8A6E9A177BCFCC005E73B6 /* ProgressObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8A6E99177BCFCC005E73B6 /* ProgressObserver.m */; };
+		7A9322EE179DB37300A3F7E3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A9322ED179DB37300A3F7E3 /* Default-568h@2x.png */; };
+		7AE14A1E1778F3EE009C8532 /* MessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE14A1D1778F3EE009C8532 /* MessageView.m */; };
+		7AEDCFC5174695EA00947F1C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AEDCFC4174695EA00947F1C /* UIKit.framework */; };
+		7AEDCFC7174695EA00947F1C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AEDCFC6174695EA00947F1C /* Foundation.framework */; };
+		7AEDCFC9174695EA00947F1C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AEDCFC8174695EA00947F1C /* CoreGraphics.framework */; };
+		7AEDCFCF174695EA00947F1C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7AEDCFCD174695EA00947F1C /* InfoPlist.strings */; };
+		7AEDCFD1174695EA00947F1C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AEDCFD0174695EA00947F1C /* main.m */; };
+		7AEDCFD5174695EA00947F1C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AEDCFD4174695EA00947F1C /* AppDelegate.m */; };
+		7AEDCFD7174695EA00947F1C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AEDCFD6174695EA00947F1C /* Default.png */; };
+		7AEDCFD9174695EA00947F1C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AEDCFD8174695EA00947F1C /* Default@2x.png */; };
+		7AEDCFDD174695EA00947F1C /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AEDCFDC174695EA00947F1C /* Default-Portrait~ipad.png */; };
+		7AEDCFDF174695EA00947F1C /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AEDCFDE174695EA00947F1C /* Default-Portrait@2x~ipad.png */; };
+		7AEDCFE1174695EB00947F1C /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AEDCFE0174695EB00947F1C /* Default-Landscape~ipad.png */; };
+		7AEDCFE3174695EB00947F1C /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AEDCFE2174695EB00947F1C /* Default-Landscape@2x~ipad.png */; };
+		7AEDCFE6174695EB00947F1C /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AEDCFE4174695EB00947F1C /* MainStoryboard_iPhone.storyboard */; };
+		7AEDCFEC174695EB00947F1C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AEDCFEB174695EB00947F1C /* MainViewController.m */; };
+		7AEDCFF51746993000947F1C /* SessionContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AEDCFF41746993000947F1C /* SessionContainer.m */; };
+		7AEDCFFA1746BD0B00947F1C /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AEDCFF91746BD0B00947F1C /* SettingsViewController.m */; };
+		7AEDCFFF1746D5FB00947F1C /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AEDCFFE1746D5FB00947F1C /* MultipeerConnectivity.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6403E6D41748500000BDFEC7 /* PhotoButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PhotoButton@2x.png"; sourceTree = "<group>"; };
+		64839C3B175519FF003E061F /* bubble-left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubble-left@2x.png"; sourceTree = "<group>"; };
+		64839C3D175519FF003E061F /* bubble-right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubble-right@2x.png"; sourceTree = "<group>"; };
+		7A39F1DC17839810005F51B8 /* ImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageView.h; sourceTree = "<group>"; };
+		7A39F1DD17839810005F51B8 /* ImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageView.m; sourceTree = "<group>"; };
+		7A39F1DF178494E3005F51B8 /* ProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressView.h; sourceTree = "<group>"; };
+		7A39F1E0178494E3005F51B8 /* ProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressView.m; sourceTree = "<group>"; };
+		7A3DD78617A716BD00A89D93 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		7A3DD78717A716BD00A89D93 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		7A3DD78817A716BD00A89D93 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		7A3DD78917A716BD00A89D93 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		7A3DD78A17A716BD00A89D93 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		7A3DD78B17A716BD00A89D93 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		7A3DD79217A716DD00A89D93 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = MultipeerGroupChat/Images.xcassets; sourceTree = SOURCE_ROOT; };
+		7A7695551746ED7E008A2DBF /* Transcript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transcript.h; sourceTree = "<group>"; };
+		7A7695561746ED7E008A2DBF /* Transcript.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transcript.m; sourceTree = "<group>"; };
+		7A8A6E98177BCFCC005E73B6 /* ProgressObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressObserver.h; sourceTree = "<group>"; };
+		7A8A6E99177BCFCC005E73B6 /* ProgressObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressObserver.m; sourceTree = "<group>"; };
+		7A9322ED179DB37300A3F7E3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		7AE14A1C1778F3EE009C8532 /* MessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageView.h; sourceTree = "<group>"; };
+		7AE14A1D1778F3EE009C8532 /* MessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageView.m; sourceTree = "<group>"; };
+		7AEDCFC1174695EA00947F1C /* MultipeerGroupChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultipeerGroupChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AEDCFC4174695EA00947F1C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7AEDCFC6174695EA00947F1C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7AEDCFC8174695EA00947F1C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7AEDCFCC174695EA00947F1C /* MultipeerGroupChat-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MultipeerGroupChat-Info.plist"; sourceTree = "<group>"; };
+		7AEDCFCE174695EA00947F1C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7AEDCFD0174695EA00947F1C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7AEDCFD2174695EA00947F1C /* MultipeerGroupChat-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MultipeerGroupChat-Prefix.pch"; sourceTree = "<group>"; };
+		7AEDCFD3174695EA00947F1C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7AEDCFD4174695EA00947F1C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7AEDCFD6174695EA00947F1C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		7AEDCFD8174695EA00947F1C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		7AEDCFDC174695EA00947F1C /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
+		7AEDCFDE174695EA00947F1C /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
+		7AEDCFE0174695EB00947F1C /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
+		7AEDCFE2174695EB00947F1C /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
+		7AEDCFE5174695EB00947F1C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		7AEDCFEA174695EB00947F1C /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		7AEDCFEB174695EB00947F1C /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		7AEDCFF31746993000947F1C /* SessionContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionContainer.h; sourceTree = "<group>"; };
+		7AEDCFF41746993000947F1C /* SessionContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionContainer.m; sourceTree = "<group>"; };
+		7AEDCFF81746BD0B00947F1C /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		7AEDCFF91746BD0B00947F1C /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		7AEDCFFE1746D5FB00947F1C /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7AEDCFBE174695EA00947F1C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AEDCFFF1746D5FB00947F1C /* MultipeerConnectivity.framework in Frameworks */,
+				7AEDCFC9174695EA00947F1C /* CoreGraphics.framework in Frameworks */,
+				7AEDCFC5174695EA00947F1C /* UIKit.framework in Frameworks */,
+				7AEDCFC7174695EA00947F1C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7AEDCFB8174695EA00947F1C = {
+			isa = PBXGroup;
+			children = (
+				7AEDCFCA174695EA00947F1C /* MultipeerGroupChat */,
+				7AEDCFC3174695EA00947F1C /* Frameworks */,
+				7AEDCFC2174695EA00947F1C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7AEDCFC2174695EA00947F1C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7AEDCFC1174695EA00947F1C /* MultipeerGroupChat.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7AEDCFC3174695EA00947F1C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7AEDCFFE1746D5FB00947F1C /* MultipeerConnectivity.framework */,
+				7AEDCFC4174695EA00947F1C /* UIKit.framework */,
+				7AEDCFC6174695EA00947F1C /* Foundation.framework */,
+				7AEDCFC8174695EA00947F1C /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7AEDCFCA174695EA00947F1C /* MultipeerGroupChat */ = {
+			isa = PBXGroup;
+			children = (
+				7AEDCFF61746993800947F1C /* Model */,
+				7AEDCFF21746969600947F1C /* View */,
+				7AEDCFF71746BA6200947F1C /* Controller */,
+				7AEDCFD3174695EA00947F1C /* AppDelegate.h */,
+				7AEDCFD4174695EA00947F1C /* AppDelegate.m */,
+				7A3DD79217A716DD00A89D93 /* Images.xcassets */,
+				7AEDCFCB174695EA00947F1C /* Supporting Files */,
+			);
+			name = MultipeerGroupChat;
+			path = AdhocGroupChat;
+			sourceTree = "<group>";
+		};
+		7AEDCFCB174695EA00947F1C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7A3DD78617A716BD00A89D93 /* Icon-Small-50.png */,
+				7A3DD78717A716BD00A89D93 /* Icon-Small.png */,
+				7A3DD78817A716BD00A89D93 /* Icon-Small@2x.png */,
+				7A3DD78917A716BD00A89D93 /* Icon.png */,
+				7A3DD78A17A716BD00A89D93 /* Icon@2x.png */,
+				7A3DD78B17A716BD00A89D93 /* Icon-72.png */,
+				64839C3B175519FF003E061F /* bubble-left@2x.png */,
+				64839C3D175519FF003E061F /* bubble-right@2x.png */,
+				6403E6D41748500000BDFEC7 /* PhotoButton@2x.png */,
+				7AEDCFCC174695EA00947F1C /* MultipeerGroupChat-Info.plist */,
+				7AEDCFCD174695EA00947F1C /* InfoPlist.strings */,
+				7AEDCFD0174695EA00947F1C /* main.m */,
+				7AEDCFD2174695EA00947F1C /* MultipeerGroupChat-Prefix.pch */,
+				7AEDCFD6174695EA00947F1C /* Default.png */,
+				7AEDCFD8174695EA00947F1C /* Default@2x.png */,
+				7A9322ED179DB37300A3F7E3 /* Default-568h@2x.png */,
+				7AEDCFDC174695EA00947F1C /* Default-Portrait~ipad.png */,
+				7AEDCFDE174695EA00947F1C /* Default-Portrait@2x~ipad.png */,
+				7AEDCFE0174695EB00947F1C /* Default-Landscape~ipad.png */,
+				7AEDCFE2174695EB00947F1C /* Default-Landscape@2x~ipad.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7AEDCFF21746969600947F1C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7AEDCFE4174695EB00947F1C /* MainStoryboard_iPhone.storyboard */,
+				7AE14A1C1778F3EE009C8532 /* MessageView.h */,
+				7AE14A1D1778F3EE009C8532 /* MessageView.m */,
+				7A39F1DC17839810005F51B8 /* ImageView.h */,
+				7A39F1DD17839810005F51B8 /* ImageView.m */,
+				7A39F1DF178494E3005F51B8 /* ProgressView.h */,
+				7A39F1E0178494E3005F51B8 /* ProgressView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		7AEDCFF61746993800947F1C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7AEDCFF31746993000947F1C /* SessionContainer.h */,
+				7AEDCFF41746993000947F1C /* SessionContainer.m */,
+				7A7695551746ED7E008A2DBF /* Transcript.h */,
+				7A7695561746ED7E008A2DBF /* Transcript.m */,
+				7A8A6E98177BCFCC005E73B6 /* ProgressObserver.h */,
+				7A8A6E99177BCFCC005E73B6 /* ProgressObserver.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		7AEDCFF71746BA6200947F1C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7AEDCFEA174695EB00947F1C /* MainViewController.h */,
+				7AEDCFEB174695EB00947F1C /* MainViewController.m */,
+				7AEDCFF81746BD0B00947F1C /* SettingsViewController.h */,
+				7AEDCFF91746BD0B00947F1C /* SettingsViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7AEDCFC0174695EA00947F1C /* MultipeerGroupChat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7AEDCFEF174695EB00947F1C /* Build configuration list for PBXNativeTarget "MultipeerGroupChat" */;
+			buildPhases = (
+				7AEDCFBD174695EA00947F1C /* Sources */,
+				7AEDCFBE174695EA00947F1C /* Frameworks */,
+				7AEDCFBF174695EA00947F1C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MultipeerGroupChat;
+			productName = AdhocGroupChat;
+			productReference = 7AEDCFC1174695EA00947F1C /* MultipeerGroupChat.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7AEDCFB9174695EA00947F1C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = AGC;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Apple, Inc.";
+			};
+			buildConfigurationList = 7AEDCFBC174695EA00947F1C /* Build configuration list for PBXProject "MultipeerGroupChat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7AEDCFB8174695EA00947F1C;
+			productRefGroup = 7AEDCFC2174695EA00947F1C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7AEDCFC0174695EA00947F1C /* MultipeerGroupChat */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7AEDCFBF174695EA00947F1C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AEDCFE1174695EB00947F1C /* Default-Landscape~ipad.png in Resources */,
+				7AEDCFDF174695EA00947F1C /* Default-Portrait@2x~ipad.png in Resources */,
+				7AEDCFD9174695EA00947F1C /* Default@2x.png in Resources */,
+				7A3DD78E17A716BD00A89D93 /* Icon-Small@2x.png in Resources */,
+				7A3DD78F17A716BD00A89D93 /* Icon.png in Resources */,
+				64839C41175519FF003E061F /* bubble-right@2x.png in Resources */,
+				7AEDCFE3174695EB00947F1C /* Default-Landscape@2x~ipad.png in Resources */,
+				7A9322EE179DB37300A3F7E3 /* Default-568h@2x.png in Resources */,
+				7AEDCFDD174695EA00947F1C /* Default-Portrait~ipad.png in Resources */,
+				7AEDCFE6174695EB00947F1C /* MainStoryboard_iPhone.storyboard in Resources */,
+				7A3DD78D17A716BD00A89D93 /* Icon-Small.png in Resources */,
+				7A3DD79117A716BD00A89D93 /* Icon-72.png in Resources */,
+				7A3DD78C17A716BD00A89D93 /* Icon-Small-50.png in Resources */,
+				64839C3F175519FF003E061F /* bubble-left@2x.png in Resources */,
+				7A3DD79017A716BD00A89D93 /* Icon@2x.png in Resources */,
+				7A3DD79317A716DD00A89D93 /* Images.xcassets in Resources */,
+				7AEDCFCF174695EA00947F1C /* InfoPlist.strings in Resources */,
+				6403E6D51748500100BDFEC7 /* PhotoButton@2x.png in Resources */,
+				7AEDCFD7174695EA00947F1C /* Default.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7AEDCFBD174695EA00947F1C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A8A6E9A177BCFCC005E73B6 /* ProgressObserver.m in Sources */,
+				7A39F1E1178494E3005F51B8 /* ProgressView.m in Sources */,
+				7AEDCFD5174695EA00947F1C /* AppDelegate.m in Sources */,
+				7AEDCFD1174695EA00947F1C /* main.m in Sources */,
+				7AEDCFF51746993000947F1C /* SessionContainer.m in Sources */,
+				7AEDCFEC174695EB00947F1C /* MainViewController.m in Sources */,
+				7AE14A1E1778F3EE009C8532 /* MessageView.m in Sources */,
+				7AEDCFFA1746BD0B00947F1C /* SettingsViewController.m in Sources */,
+				7A39F1DE17839810005F51B8 /* ImageView.m in Sources */,
+				7A7695571746ED7E008A2DBF /* Transcript.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7AEDCFCD174695EA00947F1C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7AEDCFCE174695EA00947F1C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7AEDCFE4174695EB00947F1C /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7AEDCFE5174695EB00947F1C /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7AEDCFED174695EB00947F1C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7AEDCFEE174695EB00947F1C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7AEDCFF0174695EB00947F1C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AdhocGroupChat/MultipeerGroupChat-Prefix.pch";
+				INFOPLIST_FILE = "AdhocGroupChat/MultipeerGroupChat-Info.plist";
+				PRODUCT_NAME = MultipeerGroupChat;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7AEDCFF1174695EB00947F1C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AdhocGroupChat/MultipeerGroupChat-Prefix.pch";
+				INFOPLIST_FILE = "AdhocGroupChat/MultipeerGroupChat-Info.plist";
+				PRODUCT_NAME = MultipeerGroupChat;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7AEDCFBC174695EA00947F1C /* Build configuration list for PBXProject "MultipeerGroupChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7AEDCFED174695EB00947F1C /* Debug */,
+				7AEDCFEE174695EB00947F1C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7AEDCFEF174695EB00947F1C /* Build configuration list for PBXNativeTarget "MultipeerGroupChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7AEDCFF0174695EB00947F1C /* Debug */,
+				7AEDCFF1174695EB00947F1C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7AEDCFB9174695EA00947F1C /* Project object */;
+}

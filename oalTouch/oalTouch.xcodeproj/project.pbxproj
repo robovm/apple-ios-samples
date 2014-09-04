@@ -1,0 +1,374 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		18352A7211CFE5A30089BE2C /* background.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 18352A7011CFE5A30089BE2C /* background.m4a */; };
+		18352A7311CFE5A30089BE2C /* sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = 18352A7111CFE5A30089BE2C /* sound.caf */; };
+		18352A7D11CFE5AA0089BE2C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 18352A7411CFE5AA0089BE2C /* Default.png */; };
+		18352A7F11CFE5AA0089BE2C /* instructions.png in Resources */ = {isa = PBXBuildFile; fileRef = 18352A7611CFE5AA0089BE2C /* instructions.png */; };
+		18352A8011CFE5AA0089BE2C /* listener.png in Resources */ = {isa = PBXBuildFile; fileRef = 18352A7711CFE5AA0089BE2C /* listener.png */; };
+		18352A8111CFE5AA0089BE2C /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 18352A7811CFE5AA0089BE2C /* pause.png */; };
+		18352A8211CFE5AA0089BE2C /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 18352A7911CFE5AA0089BE2C /* play.png */; };
+		18352A8311CFE5AA0089BE2C /* speaker_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 18352A7A11CFE5AA0089BE2C /* speaker_off.png */; };
+		18352A8411CFE5AA0089BE2C /* speaker_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 18352A7B11CFE5AA0089BE2C /* speaker_on.png */; };
+		18352A8511CFE5AA0089BE2C /* stagebg.png in Resources */ = {isa = PBXBuildFile; fileRef = 18352A7C11CFE5AA0089BE2C /* stagebg.png */; };
+		18352A9911CFE75F0089BE2C /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18352A9711CFE75F0089BE2C /* MainWindow.xib */; };
+		18DA37AF11D5508E00975162 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DA37A811D5508E00975162 /* Icon-72.png */; };
+		18DA37B011D5508E00975162 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DA37A911D5508E00975162 /* Icon-Small-50.png */; };
+		18DA37B111D5508E00975162 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DA37AA11D5508E00975162 /* Icon-Small.png */; };
+		18DA37B211D5508E00975162 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DA37AB11D5508E00975162 /* Icon-Small@2x.png */; };
+		18DA37B411D5508E00975162 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DA37AD11D5508E00975162 /* Icon@2x.png */; };
+		18DA37B511D5508E00975162 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 18DA37AE11D5508E00975162 /* iTunesArtwork */; };
+		18DA37F811D5529300975162 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DA37F711D5529300975162 /* Icon.png */; };
+		1D3623260D0F684500981E51 /* oalTouchAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* oalTouchAppDelegate.m */; };
+		1D3623EC0D0F72F000981E51 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3623EB0D0F72F000981E51 /* CoreGraphics.framework */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		A192CEE10DDBB40300D03FCA /* oalSpatialView.m in Sources */ = {isa = PBXBuildFile; fileRef = A192CEE00DDBB40300D03FCA /* oalSpatialView.m */; };
+		A192CEE60DDBB43B00D03FCA /* oalPlayback.m in Sources */ = {isa = PBXBuildFile; fileRef = A192CEE50DDBB43B00D03FCA /* oalPlayback.m */; };
+		A192CF1A0DDBB6C900D03FCA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A192CF190DDBB6C900D03FCA /* AudioToolbox.framework */; };
+		A192CF1E0DDBB6D400D03FCA /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A192CF1D0DDBB6D400D03FCA /* OpenAL.framework */; };
+		A1E88B190DDCA844008449A6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E88B180DDCA844008449A6 /* QuartzCore.framework */; };
+		F78602FE0DF86FCD00A013EA /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F78602FD0DF86FCD00A013EA /* MediaPlayer.framework */; };
+		F79463430ED73BE70014B1E8 /* MyOpenALSupport.c in Sources */ = {isa = PBXBuildFile; fileRef = F79463420ED73BE70014B1E8 /* MyOpenALSupport.c */; };
+		F79D54850FC4B9A500350F08 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F79D54840FC4B9A500350F08 /* AVFoundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		18352A7011CFE5A30089BE2C /* background.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = background.m4a; sourceTree = "<group>"; };
+		18352A7111CFE5A30089BE2C /* sound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sound.caf; sourceTree = "<group>"; };
+		18352A7411CFE5AA0089BE2C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = images/Default.png; sourceTree = "<group>"; };
+		18352A7611CFE5AA0089BE2C /* instructions.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = instructions.png; path = images/instructions.png; sourceTree = "<group>"; };
+		18352A7711CFE5AA0089BE2C /* listener.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = listener.png; path = images/listener.png; sourceTree = "<group>"; };
+		18352A7811CFE5AA0089BE2C /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pause.png; path = images/pause.png; sourceTree = "<group>"; };
+		18352A7911CFE5AA0089BE2C /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = play.png; path = images/play.png; sourceTree = "<group>"; };
+		18352A7A11CFE5AA0089BE2C /* speaker_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = speaker_off.png; path = images/speaker_off.png; sourceTree = "<group>"; };
+		18352A7B11CFE5AA0089BE2C /* speaker_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = speaker_on.png; path = images/speaker_on.png; sourceTree = "<group>"; };
+		18352A7C11CFE5AA0089BE2C /* stagebg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stagebg.png; path = images/stagebg.png; sourceTree = "<group>"; };
+		18352A9811CFE75F0089BE2C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		18DA37A811D5508E00975162 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "images/Icon-72.png"; sourceTree = "<group>"; };
+		18DA37A911D5508E00975162 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50.png"; path = "images/Icon-Small-50.png"; sourceTree = "<group>"; };
+		18DA37AA11D5508E00975162 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "images/Icon-Small.png"; sourceTree = "<group>"; };
+		18DA37AB11D5508E00975162 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "images/Icon-Small@2x.png"; sourceTree = "<group>"; };
+		18DA37AD11D5508E00975162 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "images/Icon@2x.png"; sourceTree = "<group>"; };
+		18DA37AE11D5508E00975162 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; name = iTunesArtwork; path = images/iTunesArtwork; sourceTree = "<group>"; };
+		18DA37F711D5529300975162 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = images/Icon.png; sourceTree = "<group>"; };
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* oalTouchAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = oalTouchAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* oalTouchAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = oalTouchAppDelegate.m; sourceTree = "<group>"; };
+		1D3623EB0D0F72F000981E51 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1D6058910D05DD3D006BFB54 /* oalTouch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = oalTouch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* oalTouch_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = oalTouch_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A192CEDF0DDBB40300D03FCA /* oalSpatialView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = oalSpatialView.h; sourceTree = "<group>"; };
+		A192CEE00DDBB40300D03FCA /* oalSpatialView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = oalSpatialView.m; sourceTree = "<group>"; };
+		A192CEE40DDBB43B00D03FCA /* oalPlayback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = oalPlayback.h; sourceTree = "<group>"; };
+		A192CEE50DDBB43B00D03FCA /* oalPlayback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = oalPlayback.m; sourceTree = "<group>"; };
+		A192CF190DDBB6C900D03FCA /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		A192CF1D0DDBB6D400D03FCA /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		A192CF420DDBB97F00D03FCA /* MyOpenALSupport.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; path = MyOpenALSupport.h; sourceTree = "<group>"; };
+		A1E88B180DDCA844008449A6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F78602FD0DF86FCD00A013EA /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		F79463420ED73BE70014B1E8 /* MyOpenALSupport.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MyOpenALSupport.c; sourceTree = "<group>"; };
+		F79D54840FC4B9A500350F08 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				1D3623EC0D0F72F000981E51 /* CoreGraphics.framework in Frameworks */,
+				A192CF1A0DDBB6C900D03FCA /* AudioToolbox.framework in Frameworks */,
+				A192CF1E0DDBB6D400D03FCA /* OpenAL.framework in Frameworks */,
+				A1E88B190DDCA844008449A6 /* QuartzCore.framework in Frameworks */,
+				F78602FE0DF86FCD00A013EA /* MediaPlayer.framework in Frameworks */,
+				F79D54850FC4B9A500350F08 /* AVFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A192CF420DDBB97F00D03FCA /* MyOpenALSupport.h */,
+				F79463420ED73BE70014B1E8 /* MyOpenALSupport.c */,
+				A192CEE40DDBB43B00D03FCA /* oalPlayback.h */,
+				A192CEE50DDBB43B00D03FCA /* oalPlayback.m */,
+				A192CEDF0DDBB40300D03FCA /* oalSpatialView.h */,
+				A192CEE00DDBB40300D03FCA /* oalSpatialView.m */,
+				1D3623240D0F684500981E51 /* oalTouchAppDelegate.h */,
+				1D3623250D0F684500981E51 /* oalTouchAppDelegate.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* oalTouch.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* oalTouch_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				18DA37F711D5529300975162 /* Icon.png */,
+				18DA37A811D5508E00975162 /* Icon-72.png */,
+				18DA37A911D5508E00975162 /* Icon-Small-50.png */,
+				18DA37AA11D5508E00975162 /* Icon-Small.png */,
+				18DA37AB11D5508E00975162 /* Icon-Small@2x.png */,
+				18DA37AD11D5508E00975162 /* Icon@2x.png */,
+				18DA37AE11D5508E00975162 /* iTunesArtwork */,
+				18352A9711CFE75F0089BE2C /* MainWindow.xib */,
+				18352A7411CFE5AA0089BE2C /* Default.png */,
+				18352A7611CFE5AA0089BE2C /* instructions.png */,
+				18352A7711CFE5AA0089BE2C /* listener.png */,
+				18352A7811CFE5AA0089BE2C /* pause.png */,
+				18352A7911CFE5AA0089BE2C /* play.png */,
+				18352A7A11CFE5AA0089BE2C /* speaker_off.png */,
+				18352A7B11CFE5AA0089BE2C /* speaker_on.png */,
+				18352A7C11CFE5AA0089BE2C /* stagebg.png */,
+				F79D542A0FC4B27C00350F08 /* audio */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F79D54840FC4B9A500350F08 /* AVFoundation.framework */,
+				F78602FD0DF86FCD00A013EA /* MediaPlayer.framework */,
+				A1E88B180DDCA844008449A6 /* QuartzCore.framework */,
+				1D3623EB0D0F72F000981E51 /* CoreGraphics.framework */,
+				A192CF1D0DDBB6D400D03FCA /* OpenAL.framework */,
+				A192CF190DDBB6C900D03FCA /* AudioToolbox.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F79D542A0FC4B27C00350F08 /* audio */ = {
+			isa = PBXGroup;
+			children = (
+				18352A7011CFE5A30089BE2C /* background.m4a */,
+				18352A7111CFE5A30089BE2C /* sound.caf */,
+			);
+			name = audio;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* oalTouch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "oalTouch" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = oalTouch;
+			productName = oalTouch;
+			productReference = 1D6058910D05DD3D006BFB54 /* oalTouch.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "oalTouch" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* oalTouch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18352A7211CFE5A30089BE2C /* background.m4a in Resources */,
+				18352A7311CFE5A30089BE2C /* sound.caf in Resources */,
+				18352A7D11CFE5AA0089BE2C /* Default.png in Resources */,
+				18352A7F11CFE5AA0089BE2C /* instructions.png in Resources */,
+				18352A8011CFE5AA0089BE2C /* listener.png in Resources */,
+				18352A8111CFE5AA0089BE2C /* pause.png in Resources */,
+				18352A8211CFE5AA0089BE2C /* play.png in Resources */,
+				18352A8311CFE5AA0089BE2C /* speaker_off.png in Resources */,
+				18352A8411CFE5AA0089BE2C /* speaker_on.png in Resources */,
+				18352A8511CFE5AA0089BE2C /* stagebg.png in Resources */,
+				18352A9911CFE75F0089BE2C /* MainWindow.xib in Resources */,
+				18DA37AF11D5508E00975162 /* Icon-72.png in Resources */,
+				18DA37B011D5508E00975162 /* Icon-Small-50.png in Resources */,
+				18DA37B111D5508E00975162 /* Icon-Small.png in Resources */,
+				18DA37B211D5508E00975162 /* Icon-Small@2x.png in Resources */,
+				18DA37B411D5508E00975162 /* Icon@2x.png in Resources */,
+				18DA37B511D5508E00975162 /* iTunesArtwork in Resources */,
+				18DA37F811D5529300975162 /* Icon.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* oalTouchAppDelegate.m in Sources */,
+				A192CEE10DDBB40300D03FCA /* oalSpatialView.m in Sources */,
+				A192CEE60DDBB43B00D03FCA /* oalPlayback.m in Sources */,
+				F79463430ED73BE70014B1E8 /* MyOpenALSupport.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		18352A9711CFE75F0089BE2C /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18352A9811CFE75F0089BE2C /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = oalTouch_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = oalTouch;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = oalTouch_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = oalTouch;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos4.0;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				PREBINDING = NO;
+				SDKROOT = iphoneos4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "oalTouch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "oalTouch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

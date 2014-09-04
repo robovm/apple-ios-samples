@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3qJ-1T-Rwf">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="dV6-GP-bwO">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="3qJ-1T-Rwf" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="YBa-Ri-HOA">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="0fS-hb-Ydp" kind="relationship" relationship="viewControllers" id="U1l-2J-28x"/>
+                        <segue destination="Cnj-aI-tUn" kind="relationship" relationship="viewControllers" id="tvt-Yx-Ytv"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EoR-DM-rMd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-455" y="521"/>
+        </scene>
+        <!--Accessory View Controller - Accessory-->
+        <scene sceneID="65o-ez-jDI">
+            <objects>
+                <tableViewController id="HmR-gA-Jdh" customClass="AccessoryViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="k1P-Ha-y45">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StandardCell" textLabel="Cby-Wk-KaI" style="IBUITableViewCellStyleDefault" id="xeR-mv-ht6">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xeR-mv-ht6" id="g6p-U3-acn">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Cby-Wk-KaI">
+                                            <rect key="frame" x="15" y="0.0" width="290" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Accessory" id="EPP-Yf-dwW"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gtK-m1-1sa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="624" y="163"/>
+        </scene>
+        <!--Custom Accessory View Controller - Custom Accessory-->
+        <scene sceneID="dwg-5k-G6F">
+            <objects>
+                <tableViewController id="eAl-Q5-lSX" customClass="CustomAccessoryViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="9zm-Tm-XEi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CustomCell" id="MvW-nf-8L6" customClass="CustomCell">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MvW-nf-8L6" id="x2z-3l-wat">
+                                    <rect key="frame" x="0.0" y="0.0" width="253" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gNk-Kr-5wq" customClass="Checkbox">
+                                            <rect key="frame" x="14" y="0.0" width="25" height="43"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="25" id="Anx-AW-nOw"/>
+                                            </constraints>
+                                            <connections>
+                                                <action selector="checkBoxTapped:forEvent:" destination="eAl-Q5-lSX" eventType="valueChanged" id="WaY-ty-z50"/>
+                                            </connections>
+                                        </view>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qmu-0G-Uht">
+                                            <rect key="frame" x="47" y="1" width="40" height="42"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="gNk-Kr-5wq" firstAttribute="top" secondItem="x2z-3l-wat" secondAttribute="top" id="3Ju-SE-hUE"/>
+                                        <constraint firstItem="qmu-0G-Uht" firstAttribute="top" secondItem="x2z-3l-wat" secondAttribute="top" constant="1" id="PLj-EF-xWf"/>
+                                        <constraint firstAttribute="bottom" secondItem="gNk-Kr-5wq" secondAttribute="bottom" id="VsS-wO-ink"/>
+                                        <constraint firstItem="qmu-0G-Uht" firstAttribute="leading" secondItem="gNk-Kr-5wq" secondAttribute="trailing" constant="8" id="gBB-Ka-bWF"/>
+                                        <constraint firstAttribute="bottom" secondItem="qmu-0G-Uht" secondAttribute="bottom" id="r5T-ga-eN4"/>
+                                        <constraint firstItem="gNk-Kr-5wq" firstAttribute="leading" secondItem="x2z-3l-wat" secondAttribute="leading" constant="14" id="yT4-q4-zZo"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="checkBox" destination="gNk-Kr-5wq" id="xQq-1b-9Z2"/>
+                                    <outlet property="titleLabel" destination="qmu-0G-Uht" id="rpT-En-crn"/>
+                                    <segue destination="ldC-hw-zCh" kind="push" identifier="DetailViewSegue" trigger="accessoryAction" id="caK-ml-S3v"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Custom Accessory" id="TWS-2e-4oS"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ma0-MU-2Np" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="624" y="878"/>
+        </scene>
+        <!--Navigation Controller - Custom Accessory-->
+        <scene sceneID="KlU-yA-LjE">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="Cnj-aI-tUn" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Custom Accessory" image="CustomView" id="dsa-2D-JZa"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rfv-47-YLm">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="eAl-Q5-lSX" kind="relationship" relationship="rootViewController" id="g9k-Lr-aor"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nQm-5Q-Ybg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="90" y="878"/>
+        </scene>
+        <!--Navigation Controller - Accessory-->
+        <scene sceneID="tXn-Zz-qkO">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="0fS-hb-Ydp" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Accessory" image="AccessoryView" id="bce-3L-L3T"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cvz-Hx-6ab">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="HmR-gA-Jdh" kind="relationship" relationship="rootViewController" id="mIq-Uw-WuR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mv7-J7-iBe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="90" y="163"/>
+        </scene>
+        <!--Detail View Controller - Detail View Controller-->
+        <scene sceneID="05W-Dk-aAx">
+            <objects>
+                <viewController id="ldC-hw-zCh" customClass="DetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ae5-XW-3C9"/>
+                        <viewControllerLayoutGuide type="bottom" id="Crx-ds-FK0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="h76-IP-GE9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wf4-pL-mvL" customClass="Checkbox">
+                                <rect key="frame" x="20" y="72" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="BbL-kt-B5T"/>
+                                    <constraint firstAttribute="width" constant="30" id="guL-cP-Dsk"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="checkBoxAction:" destination="ldC-hw-zCh" eventType="valueChanged" id="c23-SY-Rnm"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIi-pF-prD">
+                                <rect key="frame" x="58" y="76" width="242" height="21"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Pts-dR-cfW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wf4-pL-mvL" firstAttribute="top" secondItem="ae5-XW-3C9" secondAttribute="bottom" constant="20" symbolic="YES" id="0r1-ud-JfR"/>
+                            <constraint firstItem="hIi-pF-prD" firstAttribute="leading" secondItem="wf4-pL-mvL" secondAttribute="trailing" constant="8" symbolic="YES" id="5kT-dU-z48"/>
+                            <constraint firstItem="hIi-pF-prD" firstAttribute="centerY" secondItem="wf4-pL-mvL" secondAttribute="centerY" constant="-0.5" id="7Vm-Lb-fd7"/>
+                            <constraint firstAttribute="trailing" secondItem="hIi-pF-prD" secondAttribute="trailing" constant="20" symbolic="YES" id="DiW-Pq-cgd"/>
+                            <constraint firstItem="wf4-pL-mvL" firstAttribute="leading" secondItem="h76-IP-GE9" secondAttribute="leading" constant="20" symbolic="YES" id="m6p-ld-ELu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Detail View Controller" id="Zqo-lX-E2l"/>
+                    <connections>
+                        <outlet property="checkbox" destination="wf4-pL-mvL" id="uCr-rO-f2w"/>
+                        <outlet property="itemTitle" destination="hIi-pF-prD" id="nOJ-91-5YB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="18W-uu-Jjx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1137" y="878"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="AccessoryView" width="48" height="23"/>
+        <image name="CustomView" width="48" height="23"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

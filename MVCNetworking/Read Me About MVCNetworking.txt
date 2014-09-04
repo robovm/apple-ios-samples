@@ -1,0 +1,287 @@
+Read Me About MVCNetworking
+===========================
+1.0
+
+MVCNetworking is a sample that shows how to create a network application using the Model-View-Controller design pattern.  Specifically, it displays a photo gallery by getting the gallery's XML description, thumbnails and photos from a web server, and uses Core Data to cache this information locally.
+
+MVCNetworking requires iOS 3.1.3 or later.
+
+Packing List
+------------
+The sample contains the following items:
+
+o Read Me About MVCNetworking.txt -- This document.
+
+o MVCNetworking.xcodeproj -- An Xcode project for the application.
+
+o MainWindow.xib -- The application's main NIB.
+
+o Info.plist -- The application's property list.
+
+o Images -- A directory containing all the images used by the sample.
+
+o TestGallery -- A photo gallery to test with.
+
+o main.m -- A standard main function.
+
+o AppDelegate.[hm] -- The application delegate.  This class isn't very big, but it controls the overall structure of the application.  For example, it's this class that remembers which gallery you're viewing.
+
+o Logging -- Good logging is vital to any network application.  This directory contains a simple but effective logging package, including a Settings bundle to enable and disable various log and debug options.
+
+o Networking -- This directory contains the networking classes used by the sample.
+
+o Model -- This directory contains the model objects for the sample, along with a Core Data model for those objects.  It also contains a number of non-networking NSOperation subclasses that are used by the model.
+
+o View Controllers -- This directory contains the classes that run the user interface.  These include two view controllers, and the associated NIBs and view classes.
+
+Building the Sample
+-------------------
+The sample was built using Xcode 3.2.4 from the iOS 4.1 SDK on Mac OS X 10.6.4.  You should be able to just open the project, choose your configuration from the Overview popup, and then choose Build from the Build menu.
+
+Using the Sample
+----------------
+The easiest way to test the sample is in the simulator.  To do this:
+
+1. On your Mac, copy the "TestGallery" directory to "/Library/WebServer/Documents/".
+
+2. In the Sharing panel of System Preferences, enable Web Sharing.
+
+3. Build the sample for the simulator and run it.
+
+4. In the simulator you will now see the Setup view.  Tap one of the pre-configured gallery URLs from the list and then tap Save.
+
+5. You will now see the photo gallery, which displays the thumbnail, name and date for each photo.
+
+6. If you tap on a cell it will display the photo details, that is, a large view of the photo that's scrollable and zoomable.
+
+Once you've verified the basic functionality in the simulator, it's time to test on a device.  You have two choices here:
+
+o If you are happy to rename your Mac, you can just change its name to "Worker" (in the Sharing panel of System Preferences).  When built for the device, the application is configured to connect to "worker.local." by default.
+
+o If that's not an option, you should edit the definition of HOSTNAME in -[SetupViewController initWithGalleryURLString:] to the .local name of your Mac.
+
+You can then run the app and choose a gallery just like you did on the simulator.
+
+Settings Bundle
+---------------
+The application includes a Settings bundle that lets you configure a world of logging and debugging facilities:
+
+o Logging > Enabled -- This is the master on/off switch for the logging.
+
+o Logging > Show View -- If you enable this option, the main view of the application profits a "Log" button.  You can tap this button to see the log (displayed by the QLogViewer class), which also lets you clear, copy, print (to stderr), and email the log.
+
+o Logging > Logging Options -- These options let you enable and disable logging within specific subsystems.
+
+o Debug > Debug Options > Clear Setup -- You can use this to reset the application's preferences.  This includes the current gallery, and the list of galleries shown in the Setup view.
+
+IMPORTANT: This preference only works on launch; on multitasking systems it is ignored when the application is resumed from the background.
+
+o Debug > Debug Options > Clear Cache -- You can use this to clear all information cached by the application (including the Core Data database that stores its view of the world, the thumbnails and the photos themselves).
+
+IMPORTANT: This preference only works on launch; on multitasking systems it is ignored when the application is resumed from the background.
+
+o Debug > Debug Options > Sync on Activate -- If you enable this option, the application will initiate a sync every time it's activated.  This, combined with iOS 4's multitasking, lets you test the syncing behaviour in odd situations (like when the log view is up).
+
+o Debug > Debug Options > Operation Delay -- You can use this option to artificially delay the completion of certain async operations (most notably the network and XML parsing operations).  This allows you to test things that are hard to test otherwise, such as cancellation.
+
+o Debug > Debug Options > Network Errors -- You can use this to simulate network errors, and thereby test how well the application handles them.
+
+High-Level Notes
+----------------
+This sample is quite complex.  Most sample code is designed to illustrate a single API or concept, which means it can be relatively small.  In contrast, this sample is designed to show how to structure a real application to deal with the real challenges of networking.  As such, it's hard to escape the complexity.  However, the sample is clearly structured, with the various components well isolated from one another, so it shouldn't be too hard to grok.
+
+Even at its current size there are still numerous features and enhancements that were omitted to prevent it from getting any bigger.  See "Sins of Omission" (below) for the details.
+
+For a tutorial introduction to the philosophy behind this sample, you should watch WWDC 2010 presentation, "Network Apps for iPhone OS", part 1 and 2 (session 207 and 208).
+
+<http://developer.apple.com/videos/wwdc/2010/>
+
+This sample follows the Model-View-Controller design pattern.  If you're not familiar with that pattern, you should read the extensive treatment in the "Cocoa Fundamentals Guide".
+
+<http://developer.apple.com/library/ios/#documentation/Cocoa/Conceptual/CocoaFundamentals/Introduction/Introduction.html>
+
+You might also want to watch the WWDC 2010 presentation Session 116 "Model-View-Controller for iPhone OS", which is a great introduction to MVC on iOS.
+
+<http://developer.apple.com/videos/wwdc/2010/>
+
+This sample makes extensive use of NSOperation.  If you're not familiar with NSOperation, you should check out the following resources:
+
+o "Concurrency Programming Guide"
+
+<http://developer.apple.com/library/ios/#documentation/General/Conceptual/ConcurrencyProgrammingGuide/Introduction/Introduction.html>
+
+o TN2109 "Simple and Reliable Threading with NSOperation" and its associated ListAdder sample code
+
+<http://developer.apple.com/library/ios/#technotes/tn2009/tn2109.html>
+<http://developer.apple.com/library/ios/#samplecode/ListAdder/>
+
+This sample makes extensive use of Key-Value Observing (KVO).  If you're not familiar with KVO, you should read the "Key-Value Observing Programming Guide".
+
+<http://developer.apple.com/library/ios/#documentation/Cocoa/Conceptual/KeyValueObserving/KeyValueObserving.html>
+
+How it Works - The Model
+------------------------
+The best place to start with understanding this sample is the model.  The model is based around the concept of a photo gallery.  Each photo gallery has a URL and a gallery cache.  The URL is the location of an XML file that lists the photos in the gallery, along with various attributes of those photos.  For example:
+
+    <photo name="Kids In A Box" date="2006-07-30T07:47:17Z" id="12345">
+        <image kind="image" srcURL="images/IMG_1282.JPG"</image>
+        <image kind="thumbnail" srcURL="thumbnails/IMG_1282.jpg"></image>
+    </photo>
+
+This XML element describes a single photo named "Kids In A Box", that was last modified on 30 Jul 2006 at 7:47:17 GMT and has the unique ID "12345" (this must be unique within the context of a specific gallery).  The photo has two different image elements:
+
+o <image kind="thumbnail" ...> -- this is the thumbnail
+o <image kind="image"     ...> -- this is the full size photo
+
+And for each image there is a "srcURL" attribute that specifies the location of the image resource (relative to the location of the XML itself).
+
+Within the application these concepts are represented by three main classes:
+
+o PhotoGallery represents the gallery itself.  This class has three main functions:
+
+- It remembers the gallery URL.
+
+- It tracks the gallery cache, creating it if necessary.  This cache includes a Core Data database and a directory that contains any downloaded full size photos.
+
+- It manages the syncing process.  When told to sync it starts a network operation (RetryingHTTPOperation) to get the XML and, once that completes, it starts a parser operation (GalleryParserOperation) to parse that XML.  When that's done it looks at the results, which represent the new state of the gallery, and syncs that to the current state.
+
+IMPORTANT: All of this syncing is done at the model level.  The view controllers just watch the model and adapt to any changes.
+
+o Photo represents a photo within a gallery.  It has properties like photoID, displayName, date, and so on.  It also has two properties that return images, thumbnailImage (the thumbnail) and photoImage (the full size image).
+
+Photo is a managed object that comes from the Core Data database associated with the gallery.
+
+Photo does not store the data for either the thumbnail or the full size photo.  The thumbnail data is stored in a separate Thumbnail object (there's an optional one-to-one relationship between Photo and Thumbnail) and the full size photo is stored in a file (Photo just stores the relative path to that file).
+
+o Thumbnail holds the data for a thumbnail.  Again, this is a managed object.  It is separated from the Photo class because its properties are large (the thumbnail's PNG representation) and, in general, it's a good idea to separate large objects from small objects within a Core Data database.
+
+Finally, there's one other critical class related to the model, namely PhotoGalleryContext.  This is an NSManagedObjectContext subclass that holds information about the photo gallery.  This allows managed objects, specifically the Photo objects, to get at gallery state, such as the gallery URL.
+
+How It Works - The Networking
+-----------------------------
+Below the model there is a whole raft of networking classes.  All networking is done via asynchronous NSOperation subclasses, each one tailored to its own specific role.  Beyond that there's a network manager singleton (an instance of NetworkManager) that owns the NSOperationQueues which execute these operations.  There are three operation queues, each with its own specific purpose:
+
+o queueForCPU -- This queue is used for CPU operations, like XML parsing and thumbnail resizes.  Its width (that is, its maxConcurrentOperationCount) is left at the default value (NSOperationQueueDefaultMaxConcurrentOperationCount), which means you get one operation in progress on a current iOS device.  This prevents the iOS device's single core being thrashed about trying to run multiple concurrent CPU intensive tasks.
+
+o queueForNetworkTransfers -- This queue is used for network transfer operations, that is, operations that are actively hitting the network.  This has a limited width (currently 4) which prevents the application flooding a specific server with dozens of simultaneous network requests.  The number of operations in this queue is used to determine the networkInUse property (see below).
+
+o queueForNetworkManagement -- This queue is used for network management operations, that is, networking operations that aren't actually hitting the network.  For example, reachability operations (QReachabilityOperation) go on this queue, as do the operations that manage the retry process for network requests (RetryingHTTPOperation).  This queue's width is unbounded.  Each operation is more-or-less permanently blocked, so it's OK to allow them to all run concurrently.
+
+IMPORTANT: This last point is only acceptable because all of the operations on this queue are concurrent operations, that is, operations that don't require NSOperationQueue to dedicate a thread to running them.  In fact, within this sample all operations (except those run on queueForCPU) are run loop based operations (subclasses of QRunLoopOperation).
+
+The network manager exports three methods (of the form -addXxxOperation:finishedTarget:action:), each of which runs an operation on one of the queues listed above.  These methods schedule the operation and, when it finishes (assuming it wasn't cancelled), call the specified action method on the specified target.  This makes it easy for high-level code to create simple state machines that start an operation and get called back when it's done.
+
+In order to minimise the load on the main thread (necessary for smooth scrolling within a large gallery on a slow device) the network manager creates a secondary thread (networkRunLoopThread) for all run loop operations.  This requires a bit of trickery when managing the above-mentioned target/action callbacks.  The network manager keeps track of the thread that added the operation and always calls the action method on that same thread.
+
+One final nice feature of the network manager is that it knows about all networking operations that are currently in flight.  It uses this information to update its networkInUse property, which the application delegate observes (via KVO) in order to maintain the network activity indicator.
+
+How It Works - Controllers and Views
+------------------------------------
+There are three main view controllers in the application:
+
+o PhotoGalleryViewController -- This table view controller subclass displays a list of photos, with their thumbnails, names and dates.  The core of this view controller is remarkably simple; it just uses an NSFetchedResultsController to get, sort and maintain the list of photos and then populates a table view based on that.  Beyond that, there are two additional wrinkles:
+
+- The view controller has a photoGallery properties that determines the gallery it will display.  This property is read/write, and is modified by the application delegate as the user changes between galleries.  Handling a change of galleries is a little tricky.  The controller uses KVO to do this; it simply observes its own photoGallery property and responds to changes from there.
+
+- The view controller maintains a toolbar at the bottom that display sync status from the underlying photo gallery, and includes a Refresh button that the user can tap to force a sync (or stop the sync if one is already in progress).
+
+Finally, the PhotoGalleryViewController uses a custom table view cell, PhotoCell, to actually display the photo.  This cell is passed a Photo object and uses KVO to automatically respond to changes in that object.
+
+o PhotoDetailViewController -- This displays a single photo in a view that the user can zoom and pan.  The code is fairly straightforward.  The biggest issue is that it has to respond to changes in the underlying Photo model object.  For example, if the full size photo hasn't been downloaded yet, it shows a label saying "Loading".  Also, the view controller has to handle the photo being deleted.  This can happen if a sync is running in the background and that sync discovers that this photo is no longer part of the gallery.  PhotoDetailViewController detects this and automatically pops itself off the navigation stack.
+
+PhotoDetailViewController uses a UIScrollView subclass (QImageScrollView) to display its image.  This approach, cribbed from the PhotoScroller sample code (see below), is required to centre a small photo in the middle of the scroll view rather than placing it at the top left.  It's simpler than other approaches (such as messing with the contentInset property) and it works well on all versions of iOS.
+
+o SetupViewController -- This is a very simple view controller that presents the user with a list of galleries and allows them to choose a gallery to display (or type in the URL of a custom gallery).  It has a delegate property which it calls when the user taps Save or Cancel.  The application delegate presents this view and acts as its delegate.  When the user taps Save to change gallery, the application delegate responds by disconnecting the PhotoGalleryViewController from the current photo gallery, creating a new photo gallery for the chosen URL, and connecting the PhotoGalleryViewController to that new photo gallery.
+
+Reusable Parts
+--------------
+The following classes were intended to be reused as is:
+
+o QLog and QLogView -- These classes represent a simple but effective logging package that you could integrate directly into your code.
+
+o QRunLoopOperation -- This is an abstract base class that makes it easy to implement run loop based concurrent NSOperations.
+
+o QHTTPOperation -- This is a concrete subclass of QRunLoopOperation that runs an HTTP request.
+
+o QReachabilityOperation -- This is a concrete subclass of QRunLoopOperation that runs a reachability test.
+
+Note: QRunLoopOperation and QHTTPOperation feature in other networking samples, including LinkedImageFetcher and PictureSharing.
+
+<http://developer.apple.com/mac/library/samplecode/LinkedImageFetcher/>
+<http://developer.apple.com/mac/library/samplecode/PictureSharing/>
+
+IMPORTANT: Just because these classes can be reused whole, doesn't preclude you from customising them to meet your specific needs.
+
+Other clasess are not directly reusable, but might make a useful starting point for an equivalent class in your application.  These include:
+
+o NetworkManager -- While the fine structure of this class is specific to this sample, it would be easy to adapt it for use in other contexts.
+
+o RetryingHTTPOperation -- This depends on NetworkManager, and thus can't be reused as is.  But, again, it would be easy to adapt to another context.
+
+o RecursiveDeleteOperation -- This is an NSOperation subclass that will delete a bunch of file system objects asynchronously.  It's very simple and you could definitely reuse it as is.  It also makes a great template for other asynchronous file system operations.  For example, it would be very straightforward to adapt this to copy a file system object.
+
+o MakeThumbnailOperation -- This operation shows how to do background image manipulation using Core Graphics.  Again, it would be easy to adapt this to other contexts.
+
+Caveats
+-------
+The sample continues to support iOS 3.1.3, mainly to allow performance testing on the oldest and slowest devices (specifically the original iPhone).
+
+The sample does not worry too much about memory consumption.  While the final code has no specific memory usage problems (for example, it runs just fine on limited memory devices, like the original iPhone), certain things could be done better:
+
+o The sample does not respond to memory warnings (beyond the responses built in to the system).  There are at least two places where this might be appropriate:
+
+  - the Photo objects should release their thumbnail images
+
+  - the Core Data object graph could be pruned
+
+o The PhotoDetailViewController could use memory much more efficiently.  This is discussed more below.
+
+Certain debugging preferences are only noticed at launch time, rather than when coming back from the background on multitasking systems.  Supporting these at resume time is a little tricky, and wasn't a priority because they are debugging options after all.
+
+The application does not save and restore the navigation controller state.  For example, if you're viewing a photo and then quit the application, on relaunch you'll be back at the gallery view.  This isn't a big deal; there are plenty of other samples that show how to do this.
+
+Scrolling performance on the original iPhone is less than ideal.  It's fine once everything is cached, but scrolling while downloading stutters a bit.  This was originally a lot worse, but various optimisations have improved it considerable.  Still, it could be better.  In contrast, scrolling on even a slightly faster CPU, such as the iPod touch (second generation), is quite acceptable.
+
+The photos in the "TestGallery" are of very poor quality because they have been compressed within an inch of their life in order to reduce the overall size of the sample.
+
+The QLog module does not currently have any code to limit the size of the log, something that's important for a production system.
+
+A bug in the iOS SDK 4.1 <rdar://problem/8386602> causes problems for simulator builds; the sample works around this with a conditional build setting that adds "__IPHONE_OS_VERSION_MIN_REQUIRED=30103" to the Preprocessor Macros build setting (GCC_PREPROCESSOR_DEFINITIONS) for simulator builds.  This will not be necessary for future iOS SDKs.
+
+Sins of Omission
+----------------
+This section describes the enhancements that were omitted in order to keep the sample at a reasonable size:
+
+o rotation -- The sample does not support rotation.  Supporting rotation would present a few challenges (mostly related to the PhotoDetailController), but overall it would be pretty easy.
+
+o iPad user interface -- The sample runs fine as an iPhone application on the iPad.  A proper iPad user interface would be cool but it also would present some UI challenges (specifically the layout of the PhotoGalleryViewController) and was thus omitted.
+
+o periodic sync -- The application only syncs the gallery at launch time, when you switch galleries, and when you tap the sync button.  A periodic sync would be easy, but it was extra code and the sample is big enough already.
+
+o resuming transfers -- The sample does not resume interrupted transfers, something that would be cool, especially when transferring large items, like the full size photo, over WWAN.  This would be easy to implement within the framework provided by the RetryingHTTPOperation class, but it's a specific technique that would be better suited to a more focused sample.
+
+o task completion -- It would be cool to use the task completion API to complete a large download after going into the background.  The sample doesn't do this because the code would be quite complex, and it would make it harder to support iOS 3.
+
+o authentication challenges -- The sample does not deal with HTTP authentication challenges.  You might think that's not necessary because the gallery is always hosted on a public site, but that's not the case.  Even if your application only accesses public resources, you still have to deal with HTTP authentication challenges because the user might be behind an authenticating proxy.  The sample doesn't do this because the code would make an already complex sample even more complex.  If you'd like to learn how to deal with HTTP authentication challenges in a coherent fashion, you should look at the AdvancedURLConnections sample code.
+
+<http://developer.apple.com/iphone/library/samplecode/AdvancedURLConnections/>
+
+o photo viewing -- The sample's photo viewing code (PhotoDetailViewController) gets the job done, but it is very naive.  This is, after all, a networking sample, not a graphics sample.  If you're looking for a good photo viewer, I suggest you check out WWDC 2010 Session 104 "Designing Apps with Scroll Views" and the associated PhotoScroller sample.
+
+<http://developer.apple.com/videos/wwdc/2010/>
+<http://developer.apple.com/iphone/library/samplecode/PhotoScroller/>
+
+Credits and Version History
+---------------------------
+If you find any problems with this sample, please file a bug against it.
+
+<http://developer.apple.com/bugreporter/>
+
+1.0 (Oct 2010) was the first shipping version.
+
+Share and Enjoy
+
+Apple Developer Technical Support
+Core OS/Hardware
+
+1 Oct 2010

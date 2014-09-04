@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D61" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="APLViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3" customClass="APLEAGLView">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackTranslucent" id="Mp6-jX-xON">
+                                <rect key="frame" x="0.0" y="276" width="568" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <barButtonItem title="Library" id="kqd-Sv-hM8">
+                                        <connections>
+                                            <action selector="loadMovieFromCameraRoll:" destination="2" id="3pt-Aq-dAX"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="6LE-LP-3T5"/>
+                                    <barButtonItem title="Luma" style="plain" id="qoL-R3-RbC"/>
+                                    <barButtonItem enabled="NO" style="plain" id="B7r-hO-ibT">
+                                        <slider key="customView" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" id="4RA-AY-JRN">
+                                            <rect key="frame" x="181" y="9" width="120" height="26"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <connections>
+                                                <action selector="updateLevels:" destination="2" eventType="valueChanged" id="9UF-OT-PhQ"/>
+                                            </connections>
+                                        </slider>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="YX8-1e-SPT"/>
+                                    <barButtonItem title="Chroma" style="plain" id="hsV-L3-i8s"/>
+                                    <barButtonItem enabled="NO" style="plain" id="8di-8V-VLx">
+                                        <slider key="customView" opaque="NO" tag="1" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" id="Coo-u5-j9O">
+                                            <rect key="frame" x="436" y="10" width="120" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <connections>
+                                                <action selector="updateLevels:" destination="2" eventType="valueChanged" id="Gda-5a-cf6"/>
+                                            </connections>
+                                        </slider>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <view hidden="YES" contentMode="scaleToFill" id="upF-BZ-1mS" userLabel="Current Time View">
+                                <rect key="frame" x="484" y="10" width="74" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BOA-gq-oBv">
+                                <rect key="frame" x="497" y="14" width="48" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="7HC-qd-h5L" appends="YES" id="ghr-Sq-yjb"/>
+                        </connections>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="chromaLevelSlider" destination="Coo-u5-j9O" id="f9r-Uh-ovu"/>
+                        <outlet property="currentTime" destination="BOA-gq-oBv" id="DQ8-sj-KFQ"/>
+                        <outlet property="lumaLevelSlider" destination="4RA-AY-JRN" id="WgO-WK-ave"/>
+                        <outlet property="playerView" destination="3" id="sBK-Fj-4TN"/>
+                        <outlet property="timeView" destination="upF-BZ-1mS" id="ZWy-hQ-WdU"/>
+                        <outlet property="toolbar" destination="Mp6-jX-xON" id="yDL-17-85o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="7HC-qd-h5L">
+                    <connections>
+                        <action selector="handleTapGesture:" destination="2" id="tZL-37-5PE"/>
+                        <outlet property="delegate" destination="2" id="YWv-qA-J3I"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <nil key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

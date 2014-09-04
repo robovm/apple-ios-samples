@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="KRN-cY-3Xd">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="GKp-ou-3tk">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="KRN-cY-3Xd" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9ce-qe-sQk">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="qNt-Y1-9qi" kind="relationship" relationship="rootViewController" id="nGa-7c-qeG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lsi-hj-9QE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="383" y="-489"/>
+        </scene>
+        <!--View Controller - Alternate Views-->
+        <scene sceneID="OxE-1L-Efu">
+            <objects>
+                <viewController id="qNt-Y1-9qi" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1jR-P4-ojW"/>
+                        <viewControllerLayoutGuide type="bottom" id="ORG-3F-tXV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8zZ-0C-7Go">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You should place your content in PortraitView~iPad.xib and LandscapeView~iPad.xib." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="657" translatesAutoresizingMaskIntoConstraints="NO" id="N1N-9k-sWD">
+                                <rect key="frame" x="56" y="502" width="657" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="N1N-9k-sWD" secondAttribute="centerX" id="LMy-Ei-Smv"/>
+                            <constraint firstAttribute="centerY" secondItem="N1N-9k-sWD" secondAttribute="centerY" id="PKa-zj-RgM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Alternate Views" id="WTz-kB-Zbm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qwf-NE-kDU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1387" y="-489"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

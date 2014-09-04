@@ -1,0 +1,332 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		188D3E9A0D6D207B0076AE1E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3623EB0D0F72F000981E51 /* CoreGraphics.framework */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		53EECF1917836AAF009DA96A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 53EECF1617836AAF009DA96A /* Default-568h@2x.png */; };
+		53EECF1A17836AAF009DA96A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 53EECF1717836AAF009DA96A /* Default.png */; };
+		53EECF1B17836AAF009DA96A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 53EECF1817836AAF009DA96A /* Default@2x.png */; };
+		53EECF2217836AB9009DA96A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53EECF1C17836AB9009DA96A /* Localizable.strings */; };
+		53EECF2317836AB9009DA96A /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53EECF1E17836AB9009DA96A /* MainViewController.xib */; };
+		53EECF2417836AB9009DA96A /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53EECF2017836AB9009DA96A /* MainWindow.xib */; };
+		53EECF2F17836AD0009DA96A /* AccelerometerFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EECF2817836AD0009DA96A /* AccelerometerFilter.m */; };
+		53EECF3017836AD0009DA96A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EECF2A17836AD0009DA96A /* AppDelegate.m */; };
+		53EECF3117836AD0009DA96A /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EECF2C17836AD0009DA96A /* GraphView.m */; };
+		53EECF3217836AD0009DA96A /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EECF2E17836AD0009DA96A /* MainViewController.m */; };
+		53EECF3517836AD7009DA96A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EECF3317836AD7009DA96A /* main.m */; };
+		63D21B500F93E74800361BAB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D21B4F0F93E74800361BAB /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		14D8295D0DB6E14B00198EC5 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623EB0D0F72F000981E51 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1D6058910D05DD3D006BFB54 /* AccelerometerGraph.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccelerometerGraph.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		53EECF1617836AAF009DA96A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "AccelerometerGraph/images/Default-568h@2x.png"; sourceTree = "<group>"; };
+		53EECF1717836AAF009DA96A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = AccelerometerGraph/images/Default.png; sourceTree = "<group>"; };
+		53EECF1817836AAF009DA96A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "AccelerometerGraph/images/Default@2x.png"; sourceTree = "<group>"; };
+		53EECF1D17836AB9009DA96A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = AccelerometerGraph/en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		53EECF1F17836AB9009DA96A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = AccelerometerGraph/en.lproj/MainViewController.xib; sourceTree = "<group>"; };
+		53EECF2117836AB9009DA96A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = AccelerometerGraph/en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		53EECF2517836ABE009DA96A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = AccelerometerGraph/Info.plist; sourceTree = "<group>"; };
+		53EECF2717836AD0009DA96A /* AccelerometerFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccelerometerFilter.h; path = AccelerometerGraph/AccelerometerFilter.h; sourceTree = "<group>"; };
+		53EECF2817836AD0009DA96A /* AccelerometerFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccelerometerFilter.m; path = AccelerometerGraph/AccelerometerFilter.m; sourceTree = "<group>"; };
+		53EECF2917836AD0009DA96A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = AccelerometerGraph/AppDelegate.h; sourceTree = "<group>"; };
+		53EECF2A17836AD0009DA96A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = AccelerometerGraph/AppDelegate.m; sourceTree = "<group>"; };
+		53EECF2B17836AD0009DA96A /* GraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GraphView.h; path = AccelerometerGraph/GraphView.h; sourceTree = "<group>"; };
+		53EECF2C17836AD0009DA96A /* GraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GraphView.m; path = AccelerometerGraph/GraphView.m; sourceTree = "<group>"; };
+		53EECF2D17836AD0009DA96A /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = AccelerometerGraph/MainViewController.h; sourceTree = "<group>"; };
+		53EECF2E17836AD0009DA96A /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = AccelerometerGraph/MainViewController.m; sourceTree = "<group>"; };
+		53EECF3317836AD7009DA96A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = AccelerometerGraph/main.m; sourceTree = "<group>"; };
+		53EECF3417836AD7009DA96A /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Prefix.pch; path = AccelerometerGraph/Prefix.pch; sourceTree = "<group>"; };
+		63D21B4F0F93E74800361BAB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				188D3E9A0D6D207B0076AE1E /* CoreGraphics.framework in Frameworks */,
+				63D21B500F93E74800361BAB /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* AccelerometerGraph.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				14D8295D0DB6E14B00198EC5 /* ReadMe.txt */,
+				2D500B1D0D5A766B00DBA0E3 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				53EECF3417836AD7009DA96A /* Prefix.pch */,
+				53EECF3317836AD7009DA96A /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				53EECF1C17836AB9009DA96A /* Localizable.strings */,
+				53EECF1E17836AB9009DA96A /* MainViewController.xib */,
+				53EECF2017836AB9009DA96A /* MainWindow.xib */,
+				53EECF1617836AAF009DA96A /* Default-568h@2x.png */,
+				53EECF1717836AAF009DA96A /* Default.png */,
+				53EECF1817836AAF009DA96A /* Default@2x.png */,
+				53EECF2517836ABE009DA96A /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				63D21B4F0F93E74800361BAB /* QuartzCore.framework */,
+				1D3623EB0D0F72F000981E51 /* CoreGraphics.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2D500B1D0D5A766B00DBA0E3 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				53EECF2917836AD0009DA96A /* AppDelegate.h */,
+				53EECF2A17836AD0009DA96A /* AppDelegate.m */,
+				53EECF2D17836AD0009DA96A /* MainViewController.h */,
+				53EECF2E17836AD0009DA96A /* MainViewController.m */,
+				53EECF2717836AD0009DA96A /* AccelerometerFilter.h */,
+				53EECF2817836AD0009DA96A /* AccelerometerFilter.m */,
+				53EECF2B17836AD0009DA96A /* GraphView.h */,
+				53EECF2C17836AD0009DA96A /* GraphView.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* AccelerometerGraph */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "AccelerometerGraph" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AccelerometerGraph;
+			productName = AccelerometerGraph;
+			productReference = 1D6058910D05DD3D006BFB54 /* AccelerometerGraph.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "AccelerometerGraph" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* AccelerometerGraph */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53EECF1917836AAF009DA96A /* Default-568h@2x.png in Resources */,
+				53EECF1A17836AAF009DA96A /* Default.png in Resources */,
+				53EECF1B17836AAF009DA96A /* Default@2x.png in Resources */,
+				53EECF2217836AB9009DA96A /* Localizable.strings in Resources */,
+				53EECF2317836AB9009DA96A /* MainViewController.xib in Resources */,
+				53EECF2417836AB9009DA96A /* MainWindow.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53EECF2F17836AD0009DA96A /* AccelerometerFilter.m in Sources */,
+				53EECF3017836AD0009DA96A /* AppDelegate.m in Sources */,
+				53EECF3117836AD0009DA96A /* GraphView.m in Sources */,
+				53EECF3217836AD0009DA96A /* MainViewController.m in Sources */,
+				53EECF3517836AD7009DA96A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		53EECF1C17836AB9009DA96A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53EECF1D17836AB9009DA96A /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		53EECF1E17836AB9009DA96A /* MainViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53EECF1F17836AB9009DA96A /* en */,
+			);
+			name = MainViewController.xib;
+			sourceTree = "<group>";
+		};
+		53EECF2017836AB9009DA96A /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53EECF2117836AB9009DA96A /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AccelerometerGraph/Prefix.pch;
+				INFOPLIST_FILE = "$(SRCROOT)/AccelerometerGraph/Info.plist";
+				PRODUCT_NAME = AccelerometerGraph;
+				SDKROOT = iphoneos;
+				WARNING_CFLAGS = "-Wall";
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AccelerometerGraph/Prefix.pch;
+				INFOPLIST_FILE = "$(SRCROOT)/AccelerometerGraph/Info.plist";
+				PRODUCT_NAME = AccelerometerGraph;
+				SDKROOT = iphoneos;
+				WARNING_CFLAGS = "-Wall";
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "AccelerometerGraph" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "AccelerometerGraph" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

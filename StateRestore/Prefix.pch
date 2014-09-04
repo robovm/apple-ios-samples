@@ -1,0 +1,16 @@
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+#endif
+
+#ifndef __IPHONE_6_0
+#warning "This project uses features only available in iOS SDK 6.0 and later."
+#endif
+
+// UIKit automatically finds view controllers for you in your storyboard,
+// but it you want to manually return view controllers yourself
+// (by adopting "UIViewControllerRestoration" protocol), use this build flag
+//
+//#define MANUALLY_CREATE_VC_FOR_RESTORATION
+
+

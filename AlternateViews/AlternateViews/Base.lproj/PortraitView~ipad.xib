@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
+            <connections>
+                <outlet property="portraitView" destination="F1f-9m-X0B" id="52J-Ta-BgC"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="F1f-9m-X0B" customClass="PortraitView">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9RW-2c-wp4" userLabel="Top Layout Guide">
+                    <rect key="frame" x="0.0" y="0.0" width="768" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="Tdj-15-5Pa"/>
+                    </constraints>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mcp-63-L12" userLabel="Bottom Layout Guide">
+                    <rect key="frame" x="0.0" y="1004" width="768" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="N98-lV-n7W"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Portrait (iPad)" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGm-VQ-G2S">
+                    <rect key="frame" x="146" y="470" width="477" height="83"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="72"/>
+                    <color key="textColor" red="0.60000001999999997" green="0.60000001999999997" blue="0.60000001999999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This label is pinned to the top layout guide" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EWR-jo-g1h">
+                    <rect key="frame" x="20" y="28" width="728" height="15"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This label is pinned to the bottom layout guide" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQ7-jo-yNT">
+                    <rect key="frame" x="20" y="981" width="728" height="15"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.7725490196" green="0.80000000000000004" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="9RW-2c-wp4" firstAttribute="leading" secondItem="F1f-9m-X0B" secondAttribute="leading" id="7TM-Py-TPX"/>
+                <constraint firstItem="EWR-jo-g1h" firstAttribute="top" secondItem="9RW-2c-wp4" secondAttribute="bottom" constant="8" id="8rN-06-fVb"/>
+                <constraint firstItem="uQ7-jo-yNT" firstAttribute="leading" secondItem="F1f-9m-X0B" secondAttribute="leading" constant="20" id="9t7-1x-VHT"/>
+                <constraint firstAttribute="trailing" secondItem="9RW-2c-wp4" secondAttribute="trailing" id="Hd5-47-MpQ"/>
+                <constraint firstAttribute="trailing" secondItem="uQ7-jo-yNT" secondAttribute="trailing" constant="20" id="Izk-Nk-ddA"/>
+                <constraint firstAttribute="centerX" secondItem="OGm-VQ-G2S" secondAttribute="centerX" id="J2X-N9-xPU"/>
+                <constraint firstItem="mcp-63-L12" firstAttribute="top" secondItem="uQ7-jo-yNT" secondAttribute="bottom" constant="8" id="RMX-Ih-dyo"/>
+                <constraint firstAttribute="trailing" secondItem="mcp-63-L12" secondAttribute="trailing" id="Yx4-tw-gze"/>
+                <constraint firstAttribute="centerY" secondItem="OGm-VQ-G2S" secondAttribute="centerY" id="a90-qN-chQ"/>
+                <constraint firstAttribute="bottom" secondItem="mcp-63-L12" secondAttribute="bottom" id="fuL-9f-CMb"/>
+                <constraint firstAttribute="trailing" secondItem="EWR-jo-g1h" secondAttribute="trailing" constant="20" id="k4p-Nj-ljD"/>
+                <constraint firstItem="mcp-63-L12" firstAttribute="leading" secondItem="F1f-9m-X0B" secondAttribute="leading" id="mE7-NT-THT"/>
+                <constraint firstItem="9RW-2c-wp4" firstAttribute="top" secondItem="F1f-9m-X0B" secondAttribute="top" id="q4t-d9-OG4"/>
+                <constraint firstItem="EWR-jo-g1h" firstAttribute="leading" secondItem="F1f-9m-X0B" secondAttribute="leading" constant="20" id="w0W-Nr-UpY"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bottomLayoutGuideHeightConstraint" destination="N98-lV-n7W" id="Wr0-lY-X5L"/>
+                <outlet property="topLayoutGuideHeightConstraint" destination="Tdj-15-5Pa" id="bAz-9H-7Mr"/>
+            </connections>
+        </view>
+    </objects>
+</document>

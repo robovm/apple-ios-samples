@@ -1,0 +1,400 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1B1ADC2F16F8B5F50036F957 /* Sampler.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1B1ADC2D16F8B0AB0036F957 /* Sampler.mm */; };
+		1B210B551709F2560019F719 /* InterAppAudioSampler.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 1B210B541709F2560019F719 /* InterAppAudioSampler.entitlements */; };
+		1B3B287D16E55A5000E83EC3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B3B287C16E55A5000E83EC3 /* UIKit.framework */; };
+		1B3B287F16E55A5000E83EC3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B3B287E16E55A5000E83EC3 /* Foundation.framework */; };
+		1B3B288116E55A5000E83EC3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B3B288016E55A5000E83EC3 /* CoreGraphics.framework */; };
+		1B3B288916E55A5000E83EC3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B3B288816E55A5000E83EC3 /* main.m */; };
+		1B3B288D16E55A5000E83EC3 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1B3B288C16E55A5000E83EC3 /* AppDelegate.mm */; };
+		1B3B289616E55A5000E83EC3 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B3B289416E55A5000E83EC3 /* MainStoryboard_iPhone.storyboard */; };
+		1B3B289C16E55A5000E83EC3 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1B3B289B16E55A5000E83EC3 /* ViewController.mm */; };
+		282E41C41761593A00F005BD /* Vibraphone.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 282E41C31761593A00F005BD /* Vibraphone.aupreset */; };
+		2B22CA9517F51EF700F750C5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B22CA9417F51EF700F750C5 /* AVFoundation.framework */; };
+		2B22CA9717F51F0200F750C5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B22CA9617F51F0200F750C5 /* QuartzCore.framework */; };
+		2B22CA9917F51F0A00F750C5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B22CA9817F51F0A00F750C5 /* AudioToolbox.framework */; };
+		30B95E49174BDF1B007343C3 /* CAUIKeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B95E41174BDF1B007343C3 /* CAUIKeyboardView.m */; };
+		30B95E4B174BDF1B007343C3 /* CAUITransportButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B95E45174BDF1B007343C3 /* CAUITransportButton.m */; };
+		30B95E4C174BDF1B007343C3 /* CAUITransportView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B95E47174BDF1B007343C3 /* CAUITransportView.m */; };
+		30B95E55174BE10D007343C3 /* SynthIcon@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 30B95E51174BE10D007343C3 /* SynthIcon@2x~iphone.png */; };
+		30B95E57174BE10D007343C3 /* SynthIcon~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 30B95E53174BE10D007343C3 /* SynthIcon~iphone.png */; };
+		30B95E5B174BE12F007343C3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30B95E58174BE12F007343C3 /* Default-568h@2x.png */; };
+		30B95E5C174BE12F007343C3 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 30B95E59174BE12F007343C3 /* Default.png */; };
+		30B95E5D174BE12F007343C3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30B95E5A174BE12F007343C3 /* Default@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1B1ADC2C16F8B0AB0036F957 /* Sampler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sampler.h; sourceTree = "<group>"; };
+		1B1ADC2D16F8B0AB0036F957 /* Sampler.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Sampler.mm; sourceTree = "<group>"; };
+		1B210B541709F2560019F719 /* InterAppAudioSampler.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = InterAppAudioSampler.entitlements; sourceTree = "<group>"; };
+		1B3B287916E55A5000E83EC3 /* IAA Sampler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IAA Sampler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B3B287C16E55A5000E83EC3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1B3B287E16E55A5000E83EC3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1B3B288016E55A5000E83EC3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1B3B288416E55A5000E83EC3 /* InterAppAudioSampler-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "InterAppAudioSampler-Info.plist"; sourceTree = "<group>"; };
+		1B3B288816E55A5000E83EC3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1B3B288A16E55A5000E83EC3 /* InterAppAudioSampler-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InterAppAudioSampler-Prefix.pch"; sourceTree = "<group>"; };
+		1B3B288B16E55A5000E83EC3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1B3B288C16E55A5000E83EC3 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
+		1B3B289516E55A5000E83EC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		1B3B289A16E55A5000E83EC3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1B3B289B16E55A5000E83EC3 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		282E41C31761593A00F005BD /* Vibraphone.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Vibraphone.aupreset; path = InterAppAudioSampler/Resources/Vibraphone.aupreset; sourceTree = "<group>"; };
+		282E41C517615A8900F005BD /* ReadMe.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		2B22CA9417F51EF700F750C5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		2B22CA9617F51F0200F750C5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		2B22CA9817F51F0A00F750C5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		30B95E40174BDF1B007343C3 /* CAUIKeyboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAUIKeyboardView.h; sourceTree = "<group>"; };
+		30B95E41174BDF1B007343C3 /* CAUIKeyboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAUIKeyboardView.m; sourceTree = "<group>"; };
+		30B95E44174BDF1B007343C3 /* CAUITransportButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAUITransportButton.h; sourceTree = "<group>"; };
+		30B95E45174BDF1B007343C3 /* CAUITransportButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAUITransportButton.m; sourceTree = "<group>"; };
+		30B95E46174BDF1B007343C3 /* CAUITransportView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAUITransportView.h; sourceTree = "<group>"; };
+		30B95E47174BDF1B007343C3 /* CAUITransportView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAUITransportView.m; sourceTree = "<group>"; };
+		30B95E51174BE10D007343C3 /* SynthIcon@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "SynthIcon@2x~iphone.png"; path = "InterAppAudioSampler/Resources/SynthIcon@2x~iphone.png"; sourceTree = "<group>"; };
+		30B95E53174BE10D007343C3 /* SynthIcon~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "SynthIcon~iphone.png"; path = "InterAppAudioSampler/Resources/SynthIcon~iphone.png"; sourceTree = "<group>"; };
+		30B95E58174BE12F007343C3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Default-568h@2x.png"; sourceTree = "<group>"; };
+		30B95E59174BE12F007343C3 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Default.png; sourceTree = "<group>"; };
+		30B95E5A174BE12F007343C3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/Default@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1B3B287616E55A5000E83EC3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B22CA9917F51F0A00F750C5 /* AudioToolbox.framework in Frameworks */,
+				2B22CA9717F51F0200F750C5 /* QuartzCore.framework in Frameworks */,
+				2B22CA9517F51EF700F750C5 /* AVFoundation.framework in Frameworks */,
+				1B3B288116E55A5000E83EC3 /* CoreGraphics.framework in Frameworks */,
+				1B3B287D16E55A5000E83EC3 /* UIKit.framework in Frameworks */,
+				1B3B287F16E55A5000E83EC3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1B3B287016E55A5000E83EC3 = {
+			isa = PBXGroup;
+			children = (
+				282E41C517615A8900F005BD /* ReadMe.txt */,
+				1B3B288216E55A5000E83EC3 /* InterAppAudioSampler */,
+				30B95E3D174BDF1B007343C3 /* UI */,
+				1B3B28A216E55E2600E83EC3 /* Resources */,
+				1B3B287B16E55A5000E83EC3 /* Frameworks */,
+				1B3B287A16E55A5000E83EC3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1B3B287A16E55A5000E83EC3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1B3B287916E55A5000E83EC3 /* IAA Sampler.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1B3B287B16E55A5000E83EC3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B22CA9817F51F0A00F750C5 /* AudioToolbox.framework */,
+				2B22CA9617F51F0200F750C5 /* QuartzCore.framework */,
+				2B22CA9417F51EF700F750C5 /* AVFoundation.framework */,
+				1B3B287C16E55A5000E83EC3 /* UIKit.framework */,
+				1B3B287E16E55A5000E83EC3 /* Foundation.framework */,
+				1B3B288016E55A5000E83EC3 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1B3B288216E55A5000E83EC3 /* InterAppAudioSampler */ = {
+			isa = PBXGroup;
+			children = (
+				1B1ADC2C16F8B0AB0036F957 /* Sampler.h */,
+				1B1ADC2D16F8B0AB0036F957 /* Sampler.mm */,
+				1B3B288B16E55A5000E83EC3 /* AppDelegate.h */,
+				1B3B288C16E55A5000E83EC3 /* AppDelegate.mm */,
+				1B3B289A16E55A5000E83EC3 /* ViewController.h */,
+				1B3B289B16E55A5000E83EC3 /* ViewController.mm */,
+				1B3B288316E55A5000E83EC3 /* Supporting Files */,
+			);
+			path = InterAppAudioSampler;
+			sourceTree = "<group>";
+		};
+		1B3B288316E55A5000E83EC3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1B3B289416E55A5000E83EC3 /* MainStoryboard_iPhone.storyboard */,
+				1B210B541709F2560019F719 /* InterAppAudioSampler.entitlements */,
+				1B3B288416E55A5000E83EC3 /* InterAppAudioSampler-Info.plist */,
+				1B3B288816E55A5000E83EC3 /* main.m */,
+				1B3B288A16E55A5000E83EC3 /* InterAppAudioSampler-Prefix.pch */,
+				30B95E58174BE12F007343C3 /* Default-568h@2x.png */,
+				30B95E59174BE12F007343C3 /* Default.png */,
+				30B95E5A174BE12F007343C3 /* Default@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1B3B28A216E55E2600E83EC3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				282E41C31761593A00F005BD /* Vibraphone.aupreset */,
+				30B95E51174BE10D007343C3 /* SynthIcon@2x~iphone.png */,
+				30B95E53174BE10D007343C3 /* SynthIcon~iphone.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		30B95E3D174BDF1B007343C3 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				30B95E40174BDF1B007343C3 /* CAUIKeyboardView.h */,
+				30B95E41174BDF1B007343C3 /* CAUIKeyboardView.m */,
+				30B95E44174BDF1B007343C3 /* CAUITransportButton.h */,
+				30B95E45174BDF1B007343C3 /* CAUITransportButton.m */,
+				30B95E46174BDF1B007343C3 /* CAUITransportView.h */,
+				30B95E47174BDF1B007343C3 /* CAUITransportView.m */,
+			);
+			name = UI;
+			path = InterAppAudioSampler/UI;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1B3B287816E55A5000E83EC3 /* InterAppAudioSampler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B3B289F16E55A5000E83EC3 /* Build configuration list for PBXNativeTarget "InterAppAudioSampler" */;
+			buildPhases = (
+				1B3B287516E55A5000E83EC3 /* Sources */,
+				1B3B287616E55A5000E83EC3 /* Frameworks */,
+				1B3B287716E55A5000E83EC3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InterAppAudioSampler;
+			productName = InterAppAudioSampler;
+			productReference = 1B3B287916E55A5000E83EC3 /* IAA Sampler.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1B3B287116E55A5000E83EC3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "";
+			};
+			buildConfigurationList = 1B3B287416E55A5000E83EC3 /* Build configuration list for PBXProject "InterAppAudioSampler" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1B3B287016E55A5000E83EC3;
+			productRefGroup = 1B3B287A16E55A5000E83EC3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1B3B287816E55A5000E83EC3 /* InterAppAudioSampler */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1B3B287716E55A5000E83EC3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B3B289616E55A5000E83EC3 /* MainStoryboard_iPhone.storyboard in Resources */,
+				30B95E55174BE10D007343C3 /* SynthIcon@2x~iphone.png in Resources */,
+				1B210B551709F2560019F719 /* InterAppAudioSampler.entitlements in Resources */,
+				282E41C41761593A00F005BD /* Vibraphone.aupreset in Resources */,
+				30B95E57174BE10D007343C3 /* SynthIcon~iphone.png in Resources */,
+				30B95E5B174BE12F007343C3 /* Default-568h@2x.png in Resources */,
+				30B95E5C174BE12F007343C3 /* Default.png in Resources */,
+				30B95E5D174BE12F007343C3 /* Default@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1B3B287516E55A5000E83EC3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B1ADC2F16F8B5F50036F957 /* Sampler.mm in Sources */,
+				30B95E4C174BDF1B007343C3 /* CAUITransportView.m in Sources */,
+				30B95E49174BDF1B007343C3 /* CAUIKeyboardView.m in Sources */,
+				1B3B289C16E55A5000E83EC3 /* ViewController.mm in Sources */,
+				1B3B288D16E55A5000E83EC3 /* AppDelegate.mm in Sources */,
+				30B95E4B174BDF1B007343C3 /* CAUITransportButton.m in Sources */,
+				1B3B288916E55A5000E83EC3 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1B3B289416E55A5000E83EC3 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1B3B289516E55A5000E83EC3 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1B3B289D16E55A5000E83EC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_OBJC_RETAIN_COUNT = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "armv7 armv7s arm64";
+			};
+			name = Debug;
+		};
+		1B3B289E16E55A5000E83EC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_OBJC_RETAIN_COUNT = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = NO;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv7 armv7s arm64";
+			};
+			name = Release;
+		};
+		1B3B28A016E55A5000E83EC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = InterAppAudioSampler/InterAppAudioSampler.entitlements;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "InterAppAudioSampler/InterAppAudioSampler-Prefix.pch";
+				INFOPLIST_FILE = "InterAppAudioSampler/InterAppAudioSampler-Info.plist";
+				OTHER_CFLAGS = (
+					"-DAPPSYSLOG",
+					"-DAPPDEBUG",
+				);
+				PRODUCT_NAME = "IAA Sampler";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1B3B28A116E55A5000E83EC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = InterAppAudioSampler/InterAppAudioSampler.entitlements;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "InterAppAudioSampler/InterAppAudioSampler-Prefix.pch";
+				INFOPLIST_FILE = "InterAppAudioSampler/InterAppAudioSampler-Info.plist";
+				OTHER_CFLAGS = (
+					"-DAPPSYSLOG",
+					"-DAPPDEBUG",
+				);
+				PRODUCT_NAME = "IAA Sampler";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1B3B287416E55A5000E83EC3 /* Build configuration list for PBXProject "InterAppAudioSampler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B3B289D16E55A5000E83EC3 /* Debug */,
+				1B3B289E16E55A5000E83EC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1B3B289F16E55A5000E83EC3 /* Build configuration list for PBXNativeTarget "InterAppAudioSampler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B3B28A016E55A5000E83EC3 /* Debug */,
+				1B3B28A116E55A5000E83EC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1B3B287116E55A5000E83EC3 /* Project object */;
+}
