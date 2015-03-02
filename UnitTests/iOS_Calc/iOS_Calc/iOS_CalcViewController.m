@@ -1,7 +1,7 @@
 /*
      File: iOS_CalcViewController.m
  Abstract: This file implements the CalcViewController class.
-  Version: 1.1
+  Version: 1.2
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
  Inc. ("Apple") in consideration of your agreement to the following
@@ -41,32 +41,33 @@
  STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
  POSSIBILITY OF SUCH DAMAGE.
  
- Copyright (C) 2012 Apple Inc. All Rights Reserved.
+ Copyright (C) 2014 Apple Inc. All Rights Reserved.
  
 */
 
+#import "Calculator.h"
 #import "iOS_CalcViewController.h"
 
+@interface iOS_CalcViewController ()
+@property (strong) Calculator *calculator;
 
-@implementation CalcViewController
+@end
 
-@synthesize displayField;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-   if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
-      calculator = [[Calculator alloc] init];
-   }
-   return self;
+@implementation iOS_CalcViewController
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+	// Do any additional setup after loading the view, typically from a nib.
+     self.calculator = [[Calculator alloc] init];
 }
 
-- (BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-   return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
 
-
-- (IBAction) press:(id)sender {
-   [calculator input:[sender titleForState:UIControlStateNormal]];
-   [displayField setText:[calculator displayValue]];
+- (IBAction)press:(id)sender
+{
+    [self.calculator input:[sender titleForState:UIControlStateNormal]];
+    [self.displayField setText:[self.calculator displayValue]];
 }
 
 @end

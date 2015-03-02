@@ -1,0 +1,447 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		433F558F1391F151004304E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 433F558E1391F151004304E6 /* UIKit.framework */; };
+		433F55911391F151004304E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 433F55901391F151004304E6 /* Foundation.framework */; };
+		433F55931391F151004304E6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 433F55921391F151004304E6 /* CoreGraphics.framework */; };
+		433F55991391F151004304E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 433F55971391F151004304E6 /* InfoPlist.strings */; };
+		433F559C1391F151004304E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 433F559B1391F151004304E6 /* main.m */; };
+		433F559F1391F152004304E6 /* PhotoMapAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 433F559E1391F152004304E6 /* PhotoMapAppDelegate.m */; };
+		433F55A51391F152004304E6 /* PhotoMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 433F55A41391F152004304E6 /* PhotoMapViewController.m */; };
+		433F55B41391F189004304E6 /* PhotoAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 433F55B31391F189004304E6 /* PhotoAnnotation.m */; };
+		433F574C1391F25D004304E6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 433F574B1391F25D004304E6 /* MapKit.framework */; };
+		433F574E1391F264004304E6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 433F574D1391F264004304E6 /* CoreLocation.framework */; };
+		433F57501391F269004304E6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 433F574F1391F269004304E6 /* QuartzCore.framework */; };
+		433F57521391F26F004304E6 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 433F57511391F26F004304E6 /* ImageIO.framework */; };
+		53053C9D19A2763900F038AE /* AlexOnWater.jpg in Copy Files */ = {isa = PBXBuildFile; fileRef = 53053C9019A2763300F038AE /* AlexOnWater.jpg */; };
+		53053C9E19A2763900F038AE /* CampSpot.jpg in Copy Files */ = {isa = PBXBuildFile; fileRef = 53053C9119A2763300F038AE /* CampSpot.jpg */; };
+		53053C9F19A2763900F038AE /* Forest.jpg in Copy Files */ = {isa = PBXBuildFile; fileRef = 53053C9219A2763300F038AE /* Forest.jpg */; };
+		53053CA019A2763900F038AE /* Headwaters.jpg in Copy Files */ = {isa = PBXBuildFile; fileRef = 53053C9319A2763300F038AE /* Headwaters.jpg */; };
+		53053CA119A2763900F038AE /* HeadwaterWaterfall.jpg in Copy Files */ = {isa = PBXBuildFile; fileRef = 53053C9419A2763300F038AE /* HeadwaterWaterfall.jpg */; };
+		53053CA219A2763900F038AE /* Island1.jpg in Copy Files */ = {isa = PBXBuildFile; fileRef = 53053C9519A2763300F038AE /* Island1.jpg */; };
+		53053CA319A2763900F038AE /* Island2.jpg in Copy Files */ = {isa = PBXBuildFile; fileRef = 53053C9619A2763300F038AE /* Island2.jpg */; };
+		53053CA419A2763900F038AE /* LakeSide.jpg in Copy Files */ = {isa = PBXBuildFile; fileRef = 53053C9719A2763300F038AE /* LakeSide.jpg */; };
+		53053CA519A2763900F038AE /* MountainSide.jpg in Copy Files */ = {isa = PBXBuildFile; fileRef = 53053C9819A2763300F038AE /* MountainSide.jpg */; };
+		53053CA619A2763900F038AE /* RockPenninsula.jpg in Copy Files */ = {isa = PBXBuildFile; fileRef = 53053C9919A2763300F038AE /* RockPenninsula.jpg */; };
+		53053CA719A2763900F038AE /* RockTree.jpg in Copy Files */ = {isa = PBXBuildFile; fileRef = 53053C9A19A2763300F038AE /* RockTree.jpg */; };
+		53053CA819A2763900F038AE /* Shaded.jpg in Copy Files */ = {isa = PBXBuildFile; fileRef = 53053C9B19A2763300F038AE /* Shaded.jpg */; };
+		53053CA919A2763900F038AE /* UpperLake.jpg in Copy Files */ = {isa = PBXBuildFile; fileRef = 53053C9C19A2763300F038AE /* UpperLake.jpg */; };
+		53A7D9B419A2A4B700C4F3A0 /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A7D9AF19A2A4B700C4F3A0 /* DataViewController.m */; };
+		53A7D9B519A2A4B700C4F3A0 /* ModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A7D9B119A2A4B700C4F3A0 /* ModelController.m */; };
+		53D2E36F19A2A61B000E7023 /* PhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53D2E36E19A2A61B000E7023 /* PhotosViewController.m */; };
+		53DF9986199543D000D6838C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53DF9985199543D000D6838C /* Images.xcassets */; };
+		53F2A6B1199A78DC00AA02B7 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53F2A6AF199A78DC00AA02B7 /* Storyboard.storyboard */; };
+		D900C2861395D968002E66A3 /* LoadingStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = D900C2851395D968002E66A3 /* LoadingStatus.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A4677CB5139829E9003451F8 /* Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = PhotoSet;
+			dstSubfolderSpec = 7;
+			files = (
+				53053C9D19A2763900F038AE /* AlexOnWater.jpg in Copy Files */,
+				53053C9E19A2763900F038AE /* CampSpot.jpg in Copy Files */,
+				53053C9F19A2763900F038AE /* Forest.jpg in Copy Files */,
+				53053CA019A2763900F038AE /* Headwaters.jpg in Copy Files */,
+				53053CA119A2763900F038AE /* HeadwaterWaterfall.jpg in Copy Files */,
+				53053CA219A2763900F038AE /* Island1.jpg in Copy Files */,
+				53053CA319A2763900F038AE /* Island2.jpg in Copy Files */,
+				53053CA419A2763900F038AE /* LakeSide.jpg in Copy Files */,
+				53053CA519A2763900F038AE /* MountainSide.jpg in Copy Files */,
+				53053CA619A2763900F038AE /* RockPenninsula.jpg in Copy Files */,
+				53053CA719A2763900F038AE /* RockTree.jpg in Copy Files */,
+				53053CA819A2763900F038AE /* Shaded.jpg in Copy Files */,
+				53053CA919A2763900F038AE /* UpperLake.jpg in Copy Files */,
+			);
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		433F558A1391F151004304E6 /* PhotoMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		433F558E1391F151004304E6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		433F55901391F151004304E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		433F55921391F151004304E6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		433F55961391F151004304E6 /* PhotoMap-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PhotoMap-Info.plist"; sourceTree = "<group>"; };
+		433F55981391F151004304E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		433F559A1391F151004304E6 /* PhotoMap-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhotoMap-Prefix.pch"; sourceTree = "<group>"; };
+		433F559B1391F151004304E6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		433F559D1391F152004304E6 /* PhotoMapAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoMapAppDelegate.h; sourceTree = "<group>"; };
+		433F559E1391F152004304E6 /* PhotoMapAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoMapAppDelegate.m; sourceTree = "<group>"; };
+		433F55A31391F152004304E6 /* PhotoMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoMapViewController.h; sourceTree = "<group>"; };
+		433F55A41391F152004304E6 /* PhotoMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoMapViewController.m; sourceTree = "<group>"; };
+		433F55B21391F189004304E6 /* PhotoAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoAnnotation.h; sourceTree = "<group>"; };
+		433F55B31391F189004304E6 /* PhotoAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoAnnotation.m; sourceTree = "<group>"; };
+		433F574B1391F25D004304E6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		433F574D1391F264004304E6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		433F574F1391F269004304E6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		433F57511391F26F004304E6 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		53053C9019A2763300F038AE /* AlexOnWater.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = AlexOnWater.jpg; path = PhotoMap/PhotoSet/AlexOnWater.jpg; sourceTree = SOURCE_ROOT; };
+		53053C9119A2763300F038AE /* CampSpot.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = CampSpot.jpg; path = PhotoMap/PhotoSet/CampSpot.jpg; sourceTree = SOURCE_ROOT; };
+		53053C9219A2763300F038AE /* Forest.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Forest.jpg; path = PhotoMap/PhotoSet/Forest.jpg; sourceTree = SOURCE_ROOT; };
+		53053C9319A2763300F038AE /* Headwaters.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Headwaters.jpg; path = PhotoMap/PhotoSet/Headwaters.jpg; sourceTree = SOURCE_ROOT; };
+		53053C9419A2763300F038AE /* HeadwaterWaterfall.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = HeadwaterWaterfall.jpg; path = PhotoMap/PhotoSet/HeadwaterWaterfall.jpg; sourceTree = SOURCE_ROOT; };
+		53053C9519A2763300F038AE /* Island1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Island1.jpg; path = PhotoMap/PhotoSet/Island1.jpg; sourceTree = SOURCE_ROOT; };
+		53053C9619A2763300F038AE /* Island2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Island2.jpg; path = PhotoMap/PhotoSet/Island2.jpg; sourceTree = SOURCE_ROOT; };
+		53053C9719A2763300F038AE /* LakeSide.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = LakeSide.jpg; path = PhotoMap/PhotoSet/LakeSide.jpg; sourceTree = SOURCE_ROOT; };
+		53053C9819A2763300F038AE /* MountainSide.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = MountainSide.jpg; path = PhotoMap/PhotoSet/MountainSide.jpg; sourceTree = SOURCE_ROOT; };
+		53053C9919A2763300F038AE /* RockPenninsula.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = RockPenninsula.jpg; path = PhotoMap/PhotoSet/RockPenninsula.jpg; sourceTree = SOURCE_ROOT; };
+		53053C9A19A2763300F038AE /* RockTree.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = RockTree.jpg; path = PhotoMap/PhotoSet/RockTree.jpg; sourceTree = SOURCE_ROOT; };
+		53053C9B19A2763300F038AE /* Shaded.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Shaded.jpg; path = PhotoMap/PhotoSet/Shaded.jpg; sourceTree = SOURCE_ROOT; };
+		53053C9C19A2763300F038AE /* UpperLake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = UpperLake.jpg; path = PhotoMap/PhotoSet/UpperLake.jpg; sourceTree = SOURCE_ROOT; };
+		53147D9219A3DA71004089A5 /* ReadMe.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		53A7D9AE19A2A4B700C4F3A0 /* DataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataViewController.h; sourceTree = "<group>"; };
+		53A7D9AF19A2A4B700C4F3A0 /* DataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataViewController.m; sourceTree = "<group>"; };
+		53A7D9B019A2A4B700C4F3A0 /* ModelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelController.h; sourceTree = "<group>"; };
+		53A7D9B119A2A4B700C4F3A0 /* ModelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelController.m; sourceTree = "<group>"; };
+		53D2E36D19A2A61B000E7023 /* PhotosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosViewController.h; sourceTree = "<group>"; };
+		53D2E36E19A2A61B000E7023 /* PhotosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosViewController.m; sourceTree = "<group>"; };
+		53DF9985199543D000D6838C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		53F2A6B0199A78DC00AA02B7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = PhotoMap/en.lproj/Storyboard.storyboard; sourceTree = "<group>"; };
+		D900C2841395D968002E66A3 /* LoadingStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingStatus.h; sourceTree = "<group>"; };
+		D900C2851395D968002E66A3 /* LoadingStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingStatus.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		433F55871391F151004304E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				433F57521391F26F004304E6 /* ImageIO.framework in Frameworks */,
+				433F57501391F269004304E6 /* QuartzCore.framework in Frameworks */,
+				433F574E1391F264004304E6 /* CoreLocation.framework in Frameworks */,
+				433F574C1391F25D004304E6 /* MapKit.framework in Frameworks */,
+				433F558F1391F151004304E6 /* UIKit.framework in Frameworks */,
+				433F55911391F151004304E6 /* Foundation.framework in Frameworks */,
+				433F55931391F151004304E6 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		433F557F1391F151004304E6 = {
+			isa = PBXGroup;
+			children = (
+				53147D9219A3DA71004089A5 /* ReadMe.txt */,
+				433F55941391F151004304E6 /* PhotoMap */,
+				433F55951391F151004304E6 /* Supporting Files */,
+				433F558D1391F151004304E6 /* Frameworks */,
+				433F558B1391F151004304E6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		433F558B1391F151004304E6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				433F558A1391F151004304E6 /* PhotoMap.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		433F558D1391F151004304E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				433F57511391F26F004304E6 /* ImageIO.framework */,
+				433F574F1391F269004304E6 /* QuartzCore.framework */,
+				433F574D1391F264004304E6 /* CoreLocation.framework */,
+				433F574B1391F25D004304E6 /* MapKit.framework */,
+				433F558E1391F151004304E6 /* UIKit.framework */,
+				433F55901391F151004304E6 /* Foundation.framework */,
+				433F55921391F151004304E6 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		433F55941391F151004304E6 /* PhotoMap */ = {
+			isa = PBXGroup;
+			children = (
+				433F559D1391F152004304E6 /* PhotoMapAppDelegate.h */,
+				433F559E1391F152004304E6 /* PhotoMapAppDelegate.m */,
+				433F55A31391F152004304E6 /* PhotoMapViewController.h */,
+				433F55A41391F152004304E6 /* PhotoMapViewController.m */,
+				433F55B21391F189004304E6 /* PhotoAnnotation.h */,
+				433F55B31391F189004304E6 /* PhotoAnnotation.m */,
+				D900C2841395D968002E66A3 /* LoadingStatus.h */,
+				D900C2851395D968002E66A3 /* LoadingStatus.m */,
+				53A7D9AD19A2A4B700C4F3A0 /* PhotosViewController */,
+				53DF9985199543D000D6838C /* Images.xcassets */,
+				53DF9A991995496F00D6838C /* LargePhotoSet */,
+			);
+			path = PhotoMap;
+			sourceTree = "<group>";
+		};
+		433F55951391F151004304E6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				433F559A1391F151004304E6 /* PhotoMap-Prefix.pch */,
+				433F559B1391F151004304E6 /* main.m */,
+				53F2A6AF199A78DC00AA02B7 /* Storyboard.storyboard */,
+				433F55961391F151004304E6 /* PhotoMap-Info.plist */,
+				433F55971391F151004304E6 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			path = PhotoMap;
+			sourceTree = "<group>";
+		};
+		53A7D9AD19A2A4B700C4F3A0 /* PhotosViewController */ = {
+			isa = PBXGroup;
+			children = (
+				53A7D9B019A2A4B700C4F3A0 /* ModelController.h */,
+				53A7D9B119A2A4B700C4F3A0 /* ModelController.m */,
+				53A7D9AE19A2A4B700C4F3A0 /* DataViewController.h */,
+				53A7D9AF19A2A4B700C4F3A0 /* DataViewController.m */,
+				53D2E36D19A2A61B000E7023 /* PhotosViewController.h */,
+				53D2E36E19A2A61B000E7023 /* PhotosViewController.m */,
+			);
+			path = PhotosViewController;
+			sourceTree = "<group>";
+		};
+		53DF9A991995496F00D6838C /* LargePhotoSet */ = {
+			isa = PBXGroup;
+			children = (
+				53053C9019A2763300F038AE /* AlexOnWater.jpg */,
+				53053C9119A2763300F038AE /* CampSpot.jpg */,
+				53053C9219A2763300F038AE /* Forest.jpg */,
+				53053C9319A2763300F038AE /* Headwaters.jpg */,
+				53053C9419A2763300F038AE /* HeadwaterWaterfall.jpg */,
+				53053C9519A2763300F038AE /* Island1.jpg */,
+				53053C9619A2763300F038AE /* Island2.jpg */,
+				53053C9719A2763300F038AE /* LakeSide.jpg */,
+				53053C9819A2763300F038AE /* MountainSide.jpg */,
+				53053C9919A2763300F038AE /* RockPenninsula.jpg */,
+				53053C9A19A2763300F038AE /* RockTree.jpg */,
+				53053C9B19A2763300F038AE /* Shaded.jpg */,
+				53053C9C19A2763300F038AE /* UpperLake.jpg */,
+			);
+			path = LargePhotoSet;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		433F55891391F151004304E6 /* PhotoMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 433F55AB1391F152004304E6 /* Build configuration list for PBXNativeTarget "PhotoMap" */;
+			buildPhases = (
+				433F55861391F151004304E6 /* Sources */,
+				433F55871391F151004304E6 /* Frameworks */,
+				433F55881391F151004304E6 /* Resources */,
+				A4677CB5139829E9003451F8 /* Copy Files */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PhotoMap;
+			productName = PhotoMap;
+			productReference = 433F558A1391F151004304E6 /* PhotoMap.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		433F55811391F151004304E6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Apple, Inc.";
+			};
+			buildConfigurationList = 433F55841391F151004304E6 /* Build configuration list for PBXProject "PhotoMap" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 433F557F1391F151004304E6;
+			productRefGroup = 433F558B1391F151004304E6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				433F55891391F151004304E6 /* PhotoMap */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		433F55881391F151004304E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				433F55991391F151004304E6 /* InfoPlist.strings in Resources */,
+				53F2A6B1199A78DC00AA02B7 /* Storyboard.storyboard in Resources */,
+				53DF9986199543D000D6838C /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		433F55861391F151004304E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53A7D9B519A2A4B700C4F3A0 /* ModelController.m in Sources */,
+				433F559C1391F151004304E6 /* main.m in Sources */,
+				433F559F1391F152004304E6 /* PhotoMapAppDelegate.m in Sources */,
+				433F55A51391F152004304E6 /* PhotoMapViewController.m in Sources */,
+				433F55B41391F189004304E6 /* PhotoAnnotation.m in Sources */,
+				53D2E36F19A2A61B000E7023 /* PhotosViewController.m in Sources */,
+				53A7D9B419A2A4B700C4F3A0 /* DataViewController.m in Sources */,
+				D900C2861395D968002E66A3 /* LoadingStatus.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		433F55971391F151004304E6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				433F55981391F151004304E6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		53F2A6AF199A78DC00AA02B7 /* Storyboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53F2A6B0199A78DC00AA02B7 /* en */,
+			);
+			name = Storyboard.storyboard;
+			path = ..;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		433F55A91391F152004304E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		433F55AA1391F152004304E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		433F55AC1391F152004304E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PhotoMap/PhotoMap-Prefix.pch";
+				INFOPLIST_FILE = "PhotoMap/PhotoMap-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		433F55AD1391F152004304E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PhotoMap/PhotoMap-Prefix.pch";
+				INFOPLIST_FILE = "PhotoMap/PhotoMap-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		433F55841391F151004304E6 /* Build configuration list for PBXProject "PhotoMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				433F55A91391F152004304E6 /* Debug */,
+				433F55AA1391F152004304E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		433F55AB1391F152004304E6 /* Build configuration list for PBXNativeTarget "PhotoMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				433F55AC1391F152004304E6 /* Debug */,
+				433F55AD1391F152004304E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 433F55811391F151004304E6 /* Project object */;
+}

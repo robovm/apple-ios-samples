@@ -1,7 +1,7 @@
 /*
      File: RootViewController.m
  Abstract: The view controller displays what each icon does on iOS.
-  Version: 1.2
+  Version: 1.3
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
  Inc. ("Apple") in consideration of your agreement to the following
@@ -68,8 +68,12 @@ NSString * const kIconCellHeight = @"kIconCellHeight";
     [super viewDidLoad];
     
     self.icons = @[
+                   @{kIconName: @"Icon-60@3x",
+                     kIconDescription: @"Home screen on iPhone 6 Plus",
+                     kIconCellHeight: @(60)},
+                   
                    @{kIconName: @"Icon-60@2x",
-                     kIconDescription: @"Home screen on iPhone/iPod Touch with retina display (iOS 7)",
+                     kIconDescription: @"Home screen on iPhone/iPod Touch with retina display (iOS 7+)",
                      kIconCellHeight: @(60)},
                    
                    @{kIconName: @"Icon-76",
@@ -77,7 +81,7 @@ NSString * const kIconCellHeight = @"kIconCellHeight";
                      kIconCellHeight: @(76)},
                    
                    @{kIconName: @"Icon-76@2x",
-                     kIconDescription: @"Home screen on iPad with retina display (iOS 7)",
+                     kIconDescription: @"Home screen on iPad with retina display (iOS 7+)",
                      kIconCellHeight: @(76)},
                    
                    @{kIconName: @"Icon-Small-40",
@@ -85,7 +89,11 @@ NSString * const kIconCellHeight = @"kIconCellHeight";
                      kIconCellHeight: @(40)},
                    
                    @{kIconName: @"Icon-Small-40@2x",
-                     kIconDescription: @"Spotlight on devices with retina display (iOS 7)",
+                     kIconDescription: @"Spotlight on devices with retina display (iOS 7+)",
+                     kIconCellHeight: @(40)},
+                   
+                   @{kIconName: @"Icon-Small-40@3x",
+                     kIconDescription: @"Spotlight on iPhone 6 Plus",
                      kIconCellHeight: @(40)},
                    
                    @{kIconName: @"Icon-Small",
@@ -95,6 +103,10 @@ NSString * const kIconCellHeight = @"kIconCellHeight";
                    @{kIconName: @"Icon-Small@2x",
                      kIconDescription: @"Spotlight on iPhone/iPod Touch with retina display (iOS 6.1 and earlier) and Settings on devices with retina display",
                      kIconCellHeight: @(75)},
+                   
+                   @{kIconName: @"Icon-Small@3x",
+                     kIconDescription: @"Settings on iPhone 6 Plus",
+                     kIconCellHeight: @(40)},
                    
                    @{kIconName: @"Icon",
                      kIconDescription: @"Home screen on iPhone/iPod touch (iOS 6.1 and earlier)",

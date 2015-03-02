@@ -2,7 +2,7 @@
 /*
      File: VideoSnakeSessionManager.m
  Abstract: The class that creates and manages the AVCaptureSession
-  Version: 2.1
+  Version: 2.2
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
  Inc. ("Apple") in consideration of your agreement to the following
@@ -42,7 +42,7 @@
  STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
  POSSIBILITY OF SUCH DAMAGE.
  
- Copyright (C) 2013 Apple Inc. All Rights Reserved.
+ Copyright (C) 2014 Apple Inc. All Rights Reserved.
  
  */
 
@@ -359,7 +359,6 @@ static CGFloat angleOffsetFromPortraitOrientationToOrientation(AVCaptureVideoOri
 	
 	/* Motion */
     [self.motionSynchronizer setMotionRate:frameRate * 2];
-	[self updateMotionSynchronizerSampleBufferClock];
 	
 	return;
 }
@@ -419,15 +418,6 @@ static CGFloat angleOffsetFromPortraitOrientationToOrientation(AVCaptureVideoOri
 - (void)handleRecoverableCaptureSessionRuntimeError:(NSError *)error
 {
 	if ( _running ) {
-		// This code works around a known issue in iOS where an audio CMClock becomes invalid when media services are reset
-		// Make sure there are no sbufs being concurrently appended to the motion synchronizer while we update its clock
-		
-		if ( error.code == AVErrorMediaServicesWereReset ) {
-			dispatch_sync( _videoDataOutputQueue, ^{
-				[self updateMotionSynchronizerSampleBufferClock];
-			});
-		}
-		
 		[_captureSession startRunning];
 	}
 }
@@ -479,6 +469,8 @@ static CGFloat angleOffsetFromPortraitOrientationToOrientation(AVCaptureVideoOri
 	
 	[self videoPipelineWillStartRunning];
 	
+	[self.motionSynchronizer setSampleBufferClock:_captureSession.masterClock];
+		
 	[self.motionSynchronizer start];
 	
 	self.videoDimensions = CMVideoFormatDescriptionGetDimensions( inputFormatDescription );
@@ -513,11 +505,6 @@ static CGFloat angleOffsetFromPortraitOrientationToOrientation(AVCaptureVideoOri
 			[self videoPipelineDidFinishRunning];
 		});
 	});
-}
-
-- (void)updateMotionSynchronizerSampleBufferClock
-{
-	[self.motionSynchronizer setSampleBufferClock:_captureSession.masterClock];
 }
 
 - (void)videoPipelineWillStartRunning

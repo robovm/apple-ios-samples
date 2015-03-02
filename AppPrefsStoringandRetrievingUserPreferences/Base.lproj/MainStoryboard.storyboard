@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.11" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="5dA-Xx-Rwr">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6190.4"/>
+    </dependencies>
+    <scenes>
+        <!--AppPrefs-->
+        <scene sceneID="Kd8-ds-AZh">
+            <objects>
+                <tableViewController id="Vre-UW-U5n" customClass="RootViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Nmy-u8-7ty">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NameCell" textLabel="luB-A2-S2h" style="IBUITableViewCellStyleDefault" id="KbY-qt-kZT">
+                                <rect key="frame" x="0.0" y="119" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KbY-qt-kZT" id="mYL-iN-GGF">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="luB-A2-S2h">
+                                            <rect key="frame" x="15" y="0.0" width="290" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Vre-UW-U5n" id="wQs-VM-Usk"/>
+                            <outlet property="delegate" destination="Vre-UW-U5n" id="j3u-qe-BZq"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="AppPrefs" id="YRT-qe-7s3">
+                        <barButtonItem key="leftBarButtonItem" title="Settings" id="7We-wT-BBl">
+                            <connections>
+                                <action selector="openApplicationSettings:" destination="Vre-UW-U5n" id="arL-9l-sFr"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" id="nL5-ZU-RUA">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="AFG-nk-GbY">
+                                <rect key="frame" x="282" y="11" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cng-tT-Roh" kind="modal" modalTransitionStyle="flipHorizontal" id="4lM-Ui-RJC"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Ok-d9-RBi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="216" y="13"/>
+        </scene>
+        <!--AppPrefs-->
+        <scene sceneID="uPE-mv-qeS">
+            <objects>
+                <viewController id="cng-tT-Roh" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JJB-yJ-KXI"/>
+                        <viewControllerLayoutGuide type="bottom" id="foM-fC-PhJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nXK-M2-ahv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOP-Cq-aW2">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">This sample demonstrates how to display your app's preferences or settings in the "Settings" system application.
+
+A settings bundle, included in the application’s bundle, contains the information needed by the Settings application to display your preferences and make it possible for the user to modify them. It then saves any configured values in the defaults database so that your application can retrieve them at runtime. 
+
+Open the "Settings" application to change these preference values.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5T-NK-Q7L">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="GQn-Ag-v21">
+                                        <barButtonItem key="leftBarButtonItem" style="done" systemItem="done" id="hos-rw-PRh">
+                                            <connections>
+                                                <segue destination="2r0-WN-0II" kind="unwind" unwindAction="unwindFromInfoScreen:" id="Gi8-8J-cHw"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WOP-Cq-aW2" firstAttribute="leading" secondItem="nXK-M2-ahv" secondAttribute="leading" id="AU7-6v-fMi"/>
+                            <constraint firstAttribute="trailing" secondItem="H5T-NK-Q7L" secondAttribute="trailing" id="IWW-I8-yDy"/>
+                            <constraint firstItem="foM-fC-PhJ" firstAttribute="top" secondItem="WOP-Cq-aW2" secondAttribute="bottom" id="JDj-vh-NFb"/>
+                            <constraint firstAttribute="trailing" secondItem="WOP-Cq-aW2" secondAttribute="trailing" id="XxM-kK-C9s"/>
+                            <constraint firstItem="H5T-NK-Q7L" firstAttribute="leading" secondItem="nXK-M2-ahv" secondAttribute="leading" id="hhm-qk-jXb"/>
+                            <constraint firstItem="H5T-NK-Q7L" firstAttribute="top" secondItem="JJB-yJ-KXI" secondAttribute="bottom" id="iZj-33-b9c"/>
+                            <constraint firstItem="WOP-Cq-aW2" firstAttribute="top" secondItem="H5T-NK-Q7L" secondAttribute="bottom" id="ltH-6e-IcJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="AppPrefs" id="hHN-UJ-tRv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7nV-Kv-C8w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="2r0-WN-0II" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="687" y="13"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="49l-f7-oEK">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="5dA-Xx-Rwr" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xha-rX-a4Q">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Vre-UW-U5n" kind="relationship" relationship="rootViewController" id="byr-C8-OIc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wSs-l3-Ios" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-219" y="13"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4">
+            <size key="portraitSize" width="320" height="568"/>
+            <size key="landscapeSize" width="568" height="320"/>
+        </simulatedScreenMetrics>
+    </simulatedMetricsContainer>
+</document>

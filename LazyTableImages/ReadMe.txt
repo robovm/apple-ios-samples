@@ -13,12 +13,12 @@ so the UI is more responsive.
 ===========================================================================
 BUILD REQUIREMENTS:
 
-iOS 6.0 SDK or later
+iOS 7.0 SDK or later
 
 ===========================================================================
 RUNTIME REQUIREMENTS:
 
-iOS 5.0 or later
+iOS 6.0 or later
 
 ===========================================================================
 PACKAGING LIST:
@@ -44,6 +44,12 @@ IconDownloader.{h/m}
 
 ===========================================================================
 CHANGES FROM PREVIOUS VERSIONS:
+
+Version 1.5
+- Changed deployment target to 6.0 for Auto Layout.
+- Now uses Xcode’s image assets.
+- Pending or current image downloads now cancelled on dealloc.
+- Ipdated to use modern Objective-C syntax.
 
 Version 1.4
 - Migrated to Storyboards and ARC.
@@ -71,4 +77,4 @@ Version 1.0
 - First version.
 
 ===========================================================================
-Copyright (C) 2013 Apple Inc. All rights reserved.
+Copyright (C) 2010-2014 Apple Inc. All rights reserved.

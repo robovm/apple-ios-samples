@@ -1,55 +1,49 @@
 /*
-    File:       AdderOperation.m
-
-    Contains:   Adds an array of numbers (very slowly) and returns the result.
-
-    Written by: DTS
-
-    Copyright:  Copyright (c) 2010 Apple Inc. All Rights Reserved.
-
-    Disclaimer: IMPORTANT: This Apple software is supplied to you by Apple Inc.
-                ("Apple") in consideration of your agreement to the following
-                terms, and your use, installation, modification or
-                redistribution of this Apple software constitutes acceptance of
-                these terms.  If you do not agree with these terms, please do
-                not use, install, modify or redistribute this Apple software.
-
-                In consideration of your agreement to abide by the following
-                terms, and subject to these terms, Apple grants you a personal,
-                non-exclusive license, under Apple's copyrights in this
-                original Apple software (the "Apple Software"), to use,
-                reproduce, modify and redistribute the Apple Software, with or
-                without modifications, in source and/or binary forms; provided
-                that if you redistribute the Apple Software in its entirety and
-                without modifications, you must retain this notice and the
-                following text and disclaimers in all such redistributions of
-                the Apple Software. Neither the name, trademarks, service marks
-                or logos of Apple Inc. may be used to endorse or promote
-                products derived from the Apple Software without specific prior
-                written permission from Apple.  Except as expressly stated in
-                this notice, no other rights or licenses, express or implied,
-                are granted by Apple herein, including but not limited to any
-                patent rights that may be infringed by your derivative works or
-                by other works in which the Apple Software may be incorporated.
-
-                The Apple Software is provided by Apple on an "AS IS" basis. 
-                APPLE MAKES NO WARRANTIES, EXPRESS OR IMPLIED, INCLUDING
-                WITHOUT LIMITATION THE IMPLIED WARRANTIES OF NON-INFRINGEMENT,
-                MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE, REGARDING
-                THE APPLE SOFTWARE OR ITS USE AND OPERATION ALONE OR IN
-                COMBINATION WITH YOUR PRODUCTS.
-
-                IN NO EVENT SHALL APPLE BE LIABLE FOR ANY SPECIAL, INDIRECT,
-                INCIDENTAL OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
-                TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-                DATA, OR PROFITS; OR BUSINESS INTERRUPTION) ARISING IN ANY WAY
-                OUT OF THE USE, REPRODUCTION, MODIFICATION AND/OR DISTRIBUTION
-                OF THE APPLE SOFTWARE, HOWEVER CAUSED AND WHETHER UNDER THEORY
-                OF CONTRACT, TORT (INCLUDING NEGLIGENCE), STRICT LIABILITY OR
-                OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE POSSIBILITY OF
-                SUCH DAMAGE.
-
-*/
+     File: AdderOperation.m
+ Abstract: Adds an array of numbers (very slowly) and returns the result.
+  Version: 1.1
+ 
+ Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
+ Inc. ("Apple") in consideration of your agreement to the following
+ terms, and your use, installation, modification or redistribution of
+ this Apple software constitutes acceptance of these terms.  If you do
+ not agree with these terms, please do not use, install, modify or
+ redistribute this Apple software.
+ 
+ In consideration of your agreement to abide by the following terms, and
+ subject to these terms, Apple grants you a personal, non-exclusive
+ license, under Apple's copyrights in this original Apple software (the
+ "Apple Software"), to use, reproduce, modify and redistribute the Apple
+ Software, with or without modifications, in source and/or binary forms;
+ provided that if you redistribute the Apple Software in its entirety and
+ without modifications, you must retain this notice and the following
+ text and disclaimers in all such redistributions of the Apple Software.
+ Neither the name, trademarks, service marks or logos of Apple Inc. may
+ be used to endorse or promote products derived from the Apple Software
+ without specific prior written permission from Apple.  Except as
+ expressly stated in this notice, no other rights or licenses, express or
+ implied, are granted by Apple herein, including but not limited to any
+ patent rights that may be infringed by your derivative works or by other
+ works in which the Apple Software may be incorporated.
+ 
+ The Apple Software is provided by Apple on an "AS IS" basis.  APPLE
+ MAKES NO WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
+ THE IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY AND FITNESS
+ FOR A PARTICULAR PURPOSE, REGARDING THE APPLE SOFTWARE OR ITS USE AND
+ OPERATION ALONE OR IN COMBINATION WITH YOUR PRODUCTS.
+ 
+ IN NO EVENT SHALL APPLE BE LIABLE FOR ANY SPECIAL, INDIRECT, INCIDENTAL
+ OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ INTERRUPTION) ARISING IN ANY WAY OUT OF THE USE, REPRODUCTION,
+ MODIFICATION AND/OR DISTRIBUTION OF THE APPLE SOFTWARE, HOWEVER CAUSED
+ AND WHETHER UNDER THEORY OF CONTRACT, TORT (INCLUDING NEGLIGENCE),
+ STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
+ POSSIBILITY OF SUCH DAMAGE.
+ 
+ Copyright (C) 2014 Apple Inc. All Rights Reserved.
+ 
+ */
 
 #import "AdderOperation.h"
 
@@ -57,18 +51,18 @@
 
 // only accessed by the operation thread
 
-@property (retain, readwrite) NSNumberFormatter *   formatter;
+@property (atomic, strong, readwrite) NSNumberFormatter *   formatter;
 
 // read/write versions of public properties
 
-@property (assign, readwrite) NSInteger             total;
-@property (copy,   readwrite) NSString *            formattedTotal;
+@property (atomic, assign, readwrite) NSInteger             total;
+@property (atomic, copy,   readwrite) NSString *            formattedTotal;
 
 @end
 
 @implementation AdderOperation
 
-- (id)initWithNumbers:(NSArray *)numbers
+- (instancetype)initWithNumbers:(NSArray *)numbers
 {
     // can be called on any thread
     
@@ -88,7 +82,7 @@
         // and can then mutate it behind our back.
 
         if ( [[NSUserDefaults standardUserDefaults] boolForKey:@"retainNotCopy"] ) {
-            self->_numbers = [numbers retain];
+            self->_numbers = numbers;
         } else {
             self->_numbers = [numbers copy];
         }
@@ -112,7 +106,7 @@
     return self;
 }
 
-- (id)initWithNumbers2:(NSArray *)numbers
+- (instancetype)initWithNumbers2:(NSArray *)numbers
 {
     // IMPORTANT: This is method is not actually used.  It is here because it's a code 
     // snippet in the technote, and i wanted to make sure it compiles.
@@ -136,19 +130,9 @@
     // formatter, which are meant to only be accessed by the operation's thread. 
     // That's because -retain and -release are always fully thread safe, even in 
     // situations where other methods on an object are not.
-    
-    [self->_numbers release];
-    [self->_formatter release];
-    [self->_formattedTotal release];
-    [super dealloc];
+    // 
+    // Of course, the actual work to release the objects is now done by ARC.
 }
-
-@synthesize numbers          = _numbers;
-@synthesize sequenceNumber   = _sequenceNumber;
-@synthesize interNumberDelay = _interNumberDelay;
-@synthesize total            = _total;
-@synthesize formatter        = _formatter;
-@synthesize formattedTotal   = _formattedTotal;
 
 - (void)main
 {
@@ -170,7 +154,7 @@
     // Set up the formatter.  This is a private property that's only accessed by 
     // the operation thread, so we don't have to worry about synchronising access to it.
     
-    self.formatter = [[[NSNumberFormatter alloc] init] autorelease];
+    self.formatter = [[NSNumberFormatter alloc] init];
     assert(self.formatter != nil);
     
     [self.formatter setNumberStyle:NSNumberFormatterDecimalStyle];
@@ -189,14 +173,14 @@
             break;
         }
         
-        // Sleep for the inter-number delay.  This makes it easiest to 
+        // Sleep for the inter-number delay.  This makes it easier to 
         // test cancellation and so on.
         
         [NSThread sleepForTimeInterval:localInterNumberDelay];
         
         // Do the maths (but they said there'd be no maths!).
         
-        numberObj = [self.numbers objectAtIndex:numberIndex];
+        numberObj = self.numbers[numberIndex];
         assert([numberObj isKindOfClass:[NSNumber class]]);
         
         localTotal += [numberObj integerValue];
@@ -207,7 +191,7 @@
     // we return from this method).
     
     self.total = localTotal;
-    self.formattedTotal = [self.formatter stringFromNumber:[NSNumber numberWithInteger:localTotal]];
+    self.formattedTotal = [self.formatter stringFromNumber:@(localTotal)];
 }
 
 - (void)main2
@@ -238,14 +222,14 @@
             break;
         }
         
-        // Sleep for a second.  This makes it easiest to test cancellation 
+        // Sleep for a second.  This makes it easier to test cancellation 
         // and so on.
         
         [NSThread sleepForTimeInterval:1.0];
         
         // Do the maths (but they said there'd be no maths!).
         
-        numberObj = [self.numbers objectAtIndex:numberIndex];
+        numberObj = self.numbers[numberIndex];
         assert([numberObj isKindOfClass:[NSNumber class]]);
         
         total += [numberObj integerValue];
@@ -255,7 +239,7 @@
     // shouldn't look at these until -isFinished goes to YES (which happens when 
     // we return from this method).
     
-    self.formattedTotal = [self.formatter stringFromNumber:[NSNumber numberWithInteger:total]];
+    self.formattedTotal = [self.formatter stringFromNumber:@(total)];
 }
 
 @end

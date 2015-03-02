@@ -1,7 +1,7 @@
 /*
      File: Calculator.m
  Abstract: This file implements the Calculator class.
-  Version: 1.1
+  Version: 1.2
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
  Inc. ("Apple") in consideration of your agreement to the following
@@ -41,10 +41,9 @@
  STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
  POSSIBILITY OF SUCH DAMAGE.
  
- Copyright (C) 2012 Apple Inc. All Rights Reserved.
+ Copyright (C) 2014 Apple Inc. All Rights Reserved.
  
  */
-
 
 #import "Calculator.h"
 
@@ -55,6 +54,15 @@ const NSString *Digits    = @"0123456789.";
 const NSString *Period    = @".";
 const NSString *Delete    = @"D";
 const NSString *Clear     = @"C";
+
+
+@interface Calculator ()
+@property double operand;
+@property (nonatomic, copy) NSString *operator;
+// The calculator display (the value a harwdare-based calculator shows on its LCD screen).
+@property (nonatomic, copy) NSMutableString *display;
+
+@end
 
 
 @implementation Calculator
@@ -77,7 +85,7 @@ const NSString *Clear     = @"C";
  * Operators, Equals, Digits, Period Delete, and Clear.
  *
  * The results of this method's computations are stored in _display.
- * This method uses _operand, and _operator in its calculations.
+ * This method uses operand and operator in its calculations.
  */
 - (void) input:(NSString *) input_character {
    static BOOL last_character_is_operator = NO;
@@ -90,72 +98,72 @@ const NSString *Clear     = @"C";
       if ([Digits rangeOfString: input_character].length) {
          if (last_character_is_operator) {
             // Set the display to input_character.
-            [_display setString: input_character];
+            [self.display setString: input_character];
             
             last_character_is_operator = NO;
          }
          // Is input_character a digit, or is a period while a period has not been added to _display?
-         else if (![input_character isEqualToString: (NSString *)Period] || [_display rangeOfString: (NSString *)Period].location == NSNotFound) {
+         else if (![input_character isEqualToString: (NSString *)Period] || [self.display rangeOfString: (NSString *)Period].location == NSNotFound) {
             // Add input_character to _display.
-            [_display appendString:input_character];
+            [self.display appendString:input_character];
          }
       }
       
       // Is input_character in Operators or is it Equals?
       else if ([Operators rangeOfString:input_character].length || [input_character isEqualToString:(NSString *)Equals]) {
-         if (!_operator && ![input_character isEqualToString:(NSString *)Equals]) {
+         if (!self.operator && ![input_character isEqualToString:(NSString *)Equals]) {
             // input_character is this calculation's operator.
             //
             // Save the operand and the operator.
-            _operand  = [[self displayValue] doubleValue];
-            _operator = input_character;
+            self.operand  = [[self displayValue] doubleValue];
+            self.operator = input_character;
          }
          else {
             // input_character is in Operators or Equals.
             //
             // Perform the computation indicated by the saved operator between the saved operand and _display.
             // Place the result in _display.
-            if (_operator) {
+            if (self.operator) {
                double operand2 = [[self displayValue] doubleValue];
                switch ([Operators rangeOfString: _operator].location) {
                   case 0:
-                     _operand = _operand + operand2;
+                     self.operand = self.operand + operand2;
                      break;
                   case 1:
-                     _operand = _operand - operand2;
+                     self.operand = self.operand - operand2;
                      break;
                   case 2:
-                     _operand = _operand * operand2;
+                     self.operand = self.operand * operand2;
                      break;
                   case 3:
-                     _operand = _operand / operand2;
+                     self.operand = self.operand / operand2;
                      break;
                }
-               [_display setString: [[NSNumber numberWithDouble: _operand] stringValue]];
+               [self.display setString: [@(self.operand) stringValue]];
             }
             // Save the operation (if this is a chained computation).
-            _operator = ([input_character isEqualToString:(NSString *)Equals])? nil : input_character;
+            self.operator = ([input_character isEqualToString:(NSString *)Equals])? nil : input_character;
          }
          last_character_is_operator = YES;
       }
       // Is input_character Delete?
       else if ([input_character isEqualToString:(NSString *)Delete]) {
          // Remove the rightmost character from _display.
-         NSInteger index_of_char_to_remove = [_display length] - 1;
+         NSInteger index_of_char_to_remove = [self.display length] - 1;
          if (index_of_char_to_remove >= 0) {
-            [_display deleteCharactersInRange:NSMakeRange(index_of_char_to_remove, 1)];
+            [self.display deleteCharactersInRange:NSMakeRange(index_of_char_to_remove, 1)];
             last_character_is_operator = NO;
          }
       }
       // Is input_character Clear?
       else if ([input_character isEqualToString:(NSString *)Clear]) {
          // If there's something in _display, clear it.
-         if ([_display length]) {
-            [_display setString:[NSString string]];
+         if ([self.display length]) {
+            [self.display setString:[NSString string]];
          }
          // Otherwise, clear the saved operator.
          else {
-            _operator = nil;
+            self.operator = nil;
          }
       }
       else {
@@ -167,20 +175,18 @@ const NSString *Clear     = @"C";
       // Raise exception for unexpected character.
       NSException *exception = [NSException exceptionWithName:NSInvalidArgumentException
                                                        reason:@"The input_character parameter contains an unexpected value."
-                                                     userInfo:[NSDictionary dictionaryWithObjectsAndKeys: input_character, @"arg0", nil]];
+                                                     userInfo:@{@"arg0": input_character}];
       [exception raise];
    }
 }
 
 
-#pragma mark Outlets
-
 /*
- * The displayValue method rerutns a copy of _display.
+ * The displayValue method retuns a copy of display.
  */
 - (NSString *) displayValue {
-   if ([_display length]) {
-      return [_display copy];
+   if ([self.display length]) {
+      return [self.display copy];
    }
    return @"0";
 }

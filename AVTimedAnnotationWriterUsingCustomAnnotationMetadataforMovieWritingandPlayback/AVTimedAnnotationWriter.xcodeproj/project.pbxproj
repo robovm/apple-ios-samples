@@ -1,0 +1,330 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FE1EC13919330769007F9D5A /* AAPLPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1EC13819330769007F9D5A /* AAPLPlayerView.m */; };
+		FE58FE7C192D7E5A00F476D9 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE58FE7B192D7E5A00F476D9 /* CoreMedia.framework */; };
+		FEB060261900A3DD00FB86D8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FEB060241900A3DD00FB86D8 /* InfoPlist.strings */; };
+		FEB060281900A3DD00FB86D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB060271900A3DD00FB86D8 /* main.m */; };
+		FEB0602C1900A3DD00FB86D8 /* AAPLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB0602B1900A3DD00FB86D8 /* AAPLAppDelegate.m */; };
+		FEB060321900A3DD00FB86D8 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEB060301900A3DD00FB86D8 /* Main_iPad.storyboard */; };
+		FEB060351900A3DD00FB86D8 /* AAPLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB060341900A3DD00FB86D8 /* AAPLViewController.m */; };
+		FEB060371900A3DD00FB86D8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEB060361900A3DD00FB86D8 /* Images.xcassets */; };
+		FED5313219182C3700B80770 /* AAPLPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FED5313119182C3700B80770 /* AAPLPlayerViewController.m */; };
+		FED626931915FAEF009F0E76 /* AAPLTimedAnnotationWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = FED626921915FAEF009F0E76 /* AAPLTimedAnnotationWriter.m */; };
+		FEE0C9171979DAE5002DED00 /* sample.m4v in Resources */ = {isa = PBXBuildFile; fileRef = FEE0C9161979DAE5002DED00 /* sample.m4v */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FE1EC13719330769007F9D5A /* AAPLPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLPlayerView.h; sourceTree = "<group>"; };
+		FE1EC13819330769007F9D5A /* AAPLPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLPlayerView.m; sourceTree = "<group>"; };
+		FE58FE7B192D7E5A00F476D9 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		FEB0601F1900A3DD00FB86D8 /* AVTimedAnnotationWriter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVTimedAnnotationWriter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEB060231900A3DD00FB86D8 /* AVTimedAnnotationWriter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AVTimedAnnotationWriter-Info.plist"; sourceTree = "<group>"; };
+		FEB060251900A3DD00FB86D8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FEB060271900A3DD00FB86D8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FEB060291900A3DD00FB86D8 /* AVTimedAnnotationWriter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AVTimedAnnotationWriter-Prefix.pch"; sourceTree = "<group>"; };
+		FEB0602A1900A3DD00FB86D8 /* AAPLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAPLAppDelegate.h; sourceTree = "<group>"; };
+		FEB0602B1900A3DD00FB86D8 /* AAPLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAPLAppDelegate.m; sourceTree = "<group>"; };
+		FEB060311900A3DD00FB86D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		FEB060331900A3DD00FB86D8 /* AAPLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAPLViewController.h; sourceTree = "<group>"; };
+		FEB060341900A3DD00FB86D8 /* AAPLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAPLViewController.m; sourceTree = "<group>"; };
+		FEB060361900A3DD00FB86D8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FED5313019182C3700B80770 /* AAPLPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLPlayerViewController.h; sourceTree = "<group>"; };
+		FED5313119182C3700B80770 /* AAPLPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLPlayerViewController.m; sourceTree = "<group>"; };
+		FED626911915FAEF009F0E76 /* AAPLTimedAnnotationWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLTimedAnnotationWriter.h; sourceTree = "<group>"; };
+		FED626921915FAEF009F0E76 /* AAPLTimedAnnotationWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLTimedAnnotationWriter.m; sourceTree = "<group>"; };
+		FEE0C9161979DAE5002DED00 /* sample.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample.m4v; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FEB0601C1900A3DD00FB86D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE58FE7C192D7E5A00F476D9 /* CoreMedia.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FEB060161900A3DD00FB86D8 = {
+			isa = PBXGroup;
+			children = (
+				FE58FE7B192D7E5A00F476D9 /* CoreMedia.framework */,
+				FEB060211900A3DD00FB86D8 /* AVTimedAnnotationWriter */,
+				FEB060201900A3DD00FB86D8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FEB060201900A3DD00FB86D8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FEB0601F1900A3DD00FB86D8 /* AVTimedAnnotationWriter.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FEB060211900A3DD00FB86D8 /* AVTimedAnnotationWriter */ = {
+			isa = PBXGroup;
+			children = (
+				FEB0602A1900A3DD00FB86D8 /* AAPLAppDelegate.h */,
+				FEB0602B1900A3DD00FB86D8 /* AAPLAppDelegate.m */,
+				FEB060331900A3DD00FB86D8 /* AAPLViewController.h */,
+				FEB060341900A3DD00FB86D8 /* AAPLViewController.m */,
+				FE1EC13719330769007F9D5A /* AAPLPlayerView.h */,
+				FE1EC13819330769007F9D5A /* AAPLPlayerView.m */,
+				FED5313019182C3700B80770 /* AAPLPlayerViewController.h */,
+				FED5313119182C3700B80770 /* AAPLPlayerViewController.m */,
+				FED626911915FAEF009F0E76 /* AAPLTimedAnnotationWriter.h */,
+				FED626921915FAEF009F0E76 /* AAPLTimedAnnotationWriter.m */,
+				FEB060301900A3DD00FB86D8 /* Main_iPad.storyboard */,
+				FEB060361900A3DD00FB86D8 /* Images.xcassets */,
+				FEB060221900A3DD00FB86D8 /* Supporting Files */,
+			);
+			path = AVTimedAnnotationWriter;
+			sourceTree = "<group>";
+		};
+		FEB060221900A3DD00FB86D8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FEE0C9161979DAE5002DED00 /* sample.m4v */,
+				FEB060231900A3DD00FB86D8 /* AVTimedAnnotationWriter-Info.plist */,
+				FEB060241900A3DD00FB86D8 /* InfoPlist.strings */,
+				FEB060271900A3DD00FB86D8 /* main.m */,
+				FEB060291900A3DD00FB86D8 /* AVTimedAnnotationWriter-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FEB0601E1900A3DD00FB86D8 /* AVTimedAnnotationWriter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FEB060491900A3DD00FB86D8 /* Build configuration list for PBXNativeTarget "AVTimedAnnotationWriter" */;
+			buildPhases = (
+				FEB0601B1900A3DD00FB86D8 /* Sources */,
+				FEB0601C1900A3DD00FB86D8 /* Frameworks */,
+				FEB0601D1900A3DD00FB86D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AVTimedAnnotationWriter;
+			productName = AVTimedAnnotationWriter;
+			productReference = FEB0601F1900A3DD00FB86D8 /* AVTimedAnnotationWriter.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FEB060171900A3DD00FB86D8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = AAPL;
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = Apple;
+			};
+			buildConfigurationList = FEB0601A1900A3DD00FB86D8 /* Build configuration list for PBXProject "AVTimedAnnotationWriter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FEB060161900A3DD00FB86D8;
+			productRefGroup = FEB060201900A3DD00FB86D8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FEB0601E1900A3DD00FB86D8 /* AVTimedAnnotationWriter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FEB0601D1900A3DD00FB86D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEB060321900A3DD00FB86D8 /* Main_iPad.storyboard in Resources */,
+				FEE0C9171979DAE5002DED00 /* sample.m4v in Resources */,
+				FEB060371900A3DD00FB86D8 /* Images.xcassets in Resources */,
+				FEB060261900A3DD00FB86D8 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FEB0601B1900A3DD00FB86D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEB0602C1900A3DD00FB86D8 /* AAPLAppDelegate.m in Sources */,
+				FEB060351900A3DD00FB86D8 /* AAPLViewController.m in Sources */,
+				FEB060281900A3DD00FB86D8 /* main.m in Sources */,
+				FED626931915FAEF009F0E76 /* AAPLTimedAnnotationWriter.m in Sources */,
+				FED5313219182C3700B80770 /* AAPLPlayerViewController.m in Sources */,
+				FE1EC13919330769007F9D5A /* AAPLPlayerView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FEB060241900A3DD00FB86D8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FEB060251900A3DD00FB86D8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FEB060301900A3DD00FB86D8 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FEB060311900A3DD00FB86D8 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FEB060471900A3DD00FB86D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FEB060481900A3DD00FB86D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FEB0604A1900A3DD00FB86D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AVTimedAnnotationWriter/AVTimedAnnotationWriter-Prefix.pch";
+				INFOPLIST_FILE = "AVTimedAnnotationWriter/AVTimedAnnotationWriter-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		FEB0604B1900A3DD00FB86D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AVTimedAnnotationWriter/AVTimedAnnotationWriter-Prefix.pch";
+				INFOPLIST_FILE = "AVTimedAnnotationWriter/AVTimedAnnotationWriter-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FEB0601A1900A3DD00FB86D8 /* Build configuration list for PBXProject "AVTimedAnnotationWriter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEB060471900A3DD00FB86D8 /* Debug */,
+				FEB060481900A3DD00FB86D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FEB060491900A3DD00FB86D8 /* Build configuration list for PBXNativeTarget "AVTimedAnnotationWriter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEB0604A1900A3DD00FB86D8 /* Debug */,
+				FEB0604B1900A3DD00FB86D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FEB060171900A3DD00FB86D8 /* Project object */;
+}

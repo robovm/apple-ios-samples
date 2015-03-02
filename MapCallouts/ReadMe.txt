@@ -3,7 +3,24 @@ MapCallouts
 ===========================================================================
 ABSTRACT
 
-Demonstrates the use of the MapKit framework, displaying a map view with custom MKAnnotations each with custom callouts or custom MKAnnotationViews.  An annotation object on a map is any object that conforms to the MKAnnotation protocol and is displayed on the screen as a MKAnnotationView.  Through the use of the MKAnnotation protocol and MKAnnotationView, this application shows how you can extend annotations with custom strings and left/right calloutAccessoryViews.
+Demonstrates the use of the MapKit framework for iOS and OS X, displaying a map view with custom MKAnnotations each with custom callouts or custom MKAnnotationViews.  An annotation object on a map is any object that conforms to the MKAnnotation protocol and is displayed on the screen as a MKAnnotationView.  Through the use of the MKAnnotation protocol and MKAnnotationView, this application shows how you can extend annotations with custom strings and left/right calloutAccessoryViews.
+
+
+Building and Linking with MapKit Framework for OS X:
+————————————————————————————————————————————————————
+If you don’t have the right entitlements to use MapKit framework, at runtime you will not see map detail and you will get this message in the console:
+
+“Your Application has attempted to access the Map Kit API. You cannot access this API without an entitlement. You may receive an entitlement from the Mac Developer Program for use by you only with your Mac App Store Apps. For more information about Apple's Mac Developer Program, please visit developer.apple.com.”
+
+In the Portal: 
+1) Create an AppID with “Maps” enabled for both Development and Distribution.
+2) Create the Mac Provisioning Profiles for Development and Distribution, that use this new AppID.
+
+Then in Xcode:
+3) Set the target’s CFBundleIdentifier to match the new AppID.
+4) Select the appropriate “Team” for your target, in the “General” tab, under the “Identity” section.
+5) In the “Capabilities” tab, turn on “App Sandbox” and “Maps”.  This will create and include an entitlements file in your project called “MapCallouts.entitlements” in order to link and run with MapKit.framework.
+
 
 ===========================================================================
 DISCUSSION
@@ -14,39 +31,23 @@ This sample implements two different variations of MKPinAnnotationViews each wit
 ===========================================================================
 BUILD REQUIREMENTS
 
-iOS 6.0 SDK or later
+iOS 7.0 SDK or later
+OS X 10.9 SDK or later
+
 
 ===========================================================================
 RUNTIME REQUIREMENTS
 
-iOS 5.0 or later, Automatic Reference Counting (ARC)
+iOS 7.0 or later (as a universal app)
+OS X 10.9 or later
 
-===========================================================================
-PACKAGING LIST
+Both use Automatic Reference Counting (ARC).
 
-AppDelegate
-Configures and displays the application window and navigation controller.
-
-MapViewController
-The primary view controller containing the MKMapView, adding and removing both MKPinAnnotationViews through its toolbar.
-
-BridgeAnnotation
-The custom MKAnnotation object representing the Golden Gate Bridge.
-
-SFAnnotation
-The custom MKAnnotation object representing the city of San Francisco.
-
-CustomMapItem
-The custom MKAnnotation object representing a generic location, hosting a title and image.
-
-CustomAnnotationView
-The custom MKAnnotationView object representing a generic location, displaying a title and image.
-
-DetailViewController
-The detail view controller used for displaying the Golden Gate Bridge.
 
 ===========================================================================
 CHANGES FROM PREVIOUS VERSIONS
+
+1.5 - Added OS X version to this sample.
 
 1.4 - Now shows use of MKMapView's "calloutAccessoryControlTapped" delegate method.
 
@@ -57,4 +58,4 @@ CHANGES FROM PREVIOUS VERSIONS
 1.0 - Initial version published.
 
 ===========================================================================
-Copyright (C) 2010-2013 Apple Inc. All rights reserved.
+Copyright (C) 2010-2014 Apple Inc. All rights reserved.

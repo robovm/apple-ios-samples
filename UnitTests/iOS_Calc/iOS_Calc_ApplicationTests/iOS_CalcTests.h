@@ -1,7 +1,7 @@
 /*
      File: iOS_CalcTests.h
  Abstract: This file declares the interface for the application unit tests for the Calc iOS app.
-  Version: 1.1
+  Version: 1.2
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
  Inc. ("Apple") in consideration of your agreement to the following
@@ -41,23 +41,21 @@
  STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
  POSSIBILITY OF SUCH DAMAGE.
  
- Copyright (C) 2012 Apple Inc. All Rights Reserved.
+ Copyright (C) 2014 Apple Inc. All Rights Reserved.
  
 */
 
-#import <SenTestingKit/SenTestingKit.h>
-
+#import <XCTest/XCTest.h>
 #import <UIKit/UIKit.h>
 
 // Test-subject headers.
 #import "iOS_CalcAppDelegate.h"
 #import "iOS_CalcViewController.h"
 
-
-@interface iOS_CalcTests : SenTestCase {
+@interface iOS_CalcTests : XCTestCase {
 @private
    CalcAppDelegate    *app_delegate;
-   CalcViewController *calc_view_controller;
+   iOS_CalcViewController *calc_view_controller;
    UIView             *calc_view;
     
 }

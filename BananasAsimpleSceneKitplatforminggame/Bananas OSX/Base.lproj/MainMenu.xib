@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6167" systemVersion="14A238t" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6167"/>
+        <plugIn identifier="com.apple.SceneKitIBPlugin" version="6167"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="494" id="495"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application"/>
+        <menu title="AMainMenu" systemMenu="main" id="29">
+            <items>
+                <menuItem title="Bananas" id="56">
+                    <menu key="submenu" title="Bananas" systemMenu="apple" id="57">
+                        <items>
+                            <menuItem title="About Bananas" id="58">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="orderFrontStandardAboutPanel:" target="-2" id="142"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="144">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Pause" keyEquivalent="." id="wm4-Xu-EHM">
+                                <connections>
+                                    <action selector="pause:" target="494" id="n46-jv-yRV"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="e0r-6g-hvr">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Hide Bananas" keyEquivalent="h" id="134">
+                                <connections>
+                                    <action selector="hide:" target="-1" id="367"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Hide Others" keyEquivalent="h" id="145">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="hideOtherApplications:" target="-1" id="368"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Show All" id="150">
+                                <connections>
+                                    <action selector="unhideAllApplications:" target="-1" id="370"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="149">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Quit Bananas" keyEquivalent="q" id="136">
+                                <connections>
+                                    <action selector="terminate:" target="-3" id="449"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Window" id="19">
+                    <menu key="submenu" title="Window" systemMenu="window" id="24">
+                        <items>
+                            <menuItem title="Close" keyEquivalent="w" id="Kpa-ET-KDx">
+                                <connections>
+                                    <action selector="performClose:" target="-1" id="xDN-XE-ly1"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Minimize" keyEquivalent="m" id="23">
+                                <connections>
+                                    <action selector="performMiniaturize:" target="-1" id="37"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Zoom" id="239">
+                                <connections>
+                                    <action selector="performZoom:" target="-1" id="240"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="92">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Bring All to Front" id="5">
+                                <connections>
+                                    <action selector="arrangeInFront:" target="-1" id="39"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+            </items>
+        </menu>
+        <window title="Bananas" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="371">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowCollectionBehavior key="collectionBehavior" fullScreenPrimary="YES"/>
+            <rect key="contentRect" x="335" y="390" width="1024" height="768"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
+            <view key="contentView" id="372">
+                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <sceneView loops="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hic-d6-2U3" customClass="AAPLSceneView">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                    </sceneView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Hic-d6-2U3" firstAttribute="top" secondItem="372" secondAttribute="top" id="1RI-iZ-juX"/>
+                    <constraint firstAttribute="bottom" secondItem="Hic-d6-2U3" secondAttribute="bottom" id="Nrb-0d-mVn"/>
+                    <constraint firstAttribute="trailing" secondItem="Hic-d6-2U3" secondAttribute="trailing" id="nfs-0Z-xVu"/>
+                    <constraint firstItem="Hic-d6-2U3" firstAttribute="leading" secondItem="372" secondAttribute="leading" id="t1z-dx-c1B"/>
+                </constraints>
+            </view>
+        </window>
+        <customObject id="494" customClass="AAPLAppDelegateOSX">
+            <connections>
+                <outlet property="scnView" destination="Hic-d6-2U3" id="qfv-xy-jOm"/>
+                <outlet property="window" destination="371" id="532"/>
+            </connections>
+        </customObject>
+        <customObject id="420" customClass="NSFontManager"/>
+    </objects>
+</document>

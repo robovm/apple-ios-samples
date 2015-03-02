@@ -1,7 +1,7 @@
 /*
      File: iOS_CalcAppDelegate.h
  Abstract: This file declares the interface for the Calc application delegate.
-  Version: 1.1
+  Version: 1.2
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
  Inc. ("Apple") in consideration of your agreement to the following
@@ -41,21 +41,14 @@
  STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
  POSSIBILITY OF SUCH DAMAGE.
  
- Copyright (C) 2012 Apple Inc. All Rights Reserved.
+ Copyright (C) 2014 Apple Inc. All Rights Reserved.
  
 */
 
 #import <UIKit/UIKit.h>
 
-@class CalcViewController;
-
-@interface CalcAppDelegate : NSObject <UIApplicationDelegate> {
-   UIWindow           *window;
-   CalcViewController *calcViewController;
-}
-
-@property (nonatomic) IBOutlet UIWindow  *window;
-@property (nonatomic) CalcViewController *calcViewController;
+@interface CalcAppDelegate :UIResponder <UIApplicationDelegate>
+@property (strong, nonatomic) UIWindow *window;
 
 @end
 

@@ -1,0 +1,101 @@
+
+/*
+     File: RosyWriterCPURenderer.m
+ Abstract: The RosyWriter CPU-based effect renderer
+  Version: 2.1
+ 
+ Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
+ Inc. ("Apple") in consideration of your agreement to the following
+ terms, and your use, installation, modification or redistribution of
+ this Apple software constitutes acceptance of these terms.  If you do
+ not agree with these terms, please do not use, install, modify or
+ redistribute this Apple software.
+ 
+ In consideration of your agreement to abide by the following terms, and
+ subject to these terms, Apple grants you a personal, non-exclusive
+ license, under Apple's copyrights in this original Apple software (the
+ "Apple Software"), to use, reproduce, modify and redistribute the Apple
+ Software, with or without modifications, in source and/or binary forms;
+ provided that if you redistribute the Apple Software in its entirety and
+ without modifications, you must retain this notice and the following
+ text and disclaimers in all such redistributions of the Apple Software.
+ Neither the name, trademarks, service marks or logos of Apple Inc. may
+ be used to endorse or promote products derived from the Apple Software
+ without specific prior written permission from Apple.  Except as
+ expressly stated in this notice, no other rights or licenses, express or
+ implied, are granted by Apple herein, including but not limited to any
+ patent rights that may be infringed by your derivative works or by other
+ works in which the Apple Software may be incorporated.
+ 
+ The Apple Software is provided by Apple on an "AS IS" basis.  APPLE
+ MAKES NO WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
+ THE IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY AND FITNESS
+ FOR A PARTICULAR PURPOSE, REGARDING THE APPLE SOFTWARE OR ITS USE AND
+ OPERATION ALONE OR IN COMBINATION WITH YOUR PRODUCTS.
+ 
+ IN NO EVENT SHALL APPLE BE LIABLE FOR ANY SPECIAL, INDIRECT, INCIDENTAL
+ OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ INTERRUPTION) ARISING IN ANY WAY OUT OF THE USE, REPRODUCTION,
+ MODIFICATION AND/OR DISTRIBUTION OF THE APPLE SOFTWARE, HOWEVER CAUSED
+ AND WHETHER UNDER THEORY OF CONTRACT, TORT (INCLUDING NEGLIGENCE),
+ STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
+ POSSIBILITY OF SUCH DAMAGE.
+ 
+ Copyright (C) 2014 Apple Inc. All Rights Reserved.
+ 
+ */
+
+#import "RosyWriterCPURenderer.h"
+
+@implementation RosyWriterCPURenderer
+
+#pragma mark RosyWriterRenderer
+
+- (BOOL)operatesInPlace
+{
+	return YES;
+}
+
+- (FourCharCode)inputPixelFormat
+{
+	return kCVPixelFormatType_32BGRA;
+}
+
+- (void)prepareForInputWithFormatDescription:(CMFormatDescriptionRef)inputFormatDescription outputRetainedBufferCountHint:(size_t)outputRetainedBufferCountHint
+{
+	// nothing to do, we are stateless
+}
+
+- (void)reset
+{
+	// nothing to do, we are stateless
+}
+
+- (CVPixelBufferRef)copyRenderedPixelBuffer:(CVPixelBufferRef)pixelBuffer
+{	
+	const int kBytesPerPixel = 4;
+	
+	CVPixelBufferLockBaseAddress( pixelBuffer, 0 );
+	
+	int bufferWidth = (int)CVPixelBufferGetWidth( pixelBuffer );
+	int bufferHeight = (int)CVPixelBufferGetHeight( pixelBuffer );
+	size_t bytesPerRow = CVPixelBufferGetBytesPerRow( pixelBuffer );
+	uint8_t *baseAddress = CVPixelBufferGetBaseAddress( pixelBuffer );
+	
+	for ( int row = 0; row < bufferHeight; row++ )
+	{
+		uint8_t *pixel = baseAddress + row * bytesPerRow;
+		for ( int column = 0; column < bufferWidth; column++ )
+		{
+			pixel[1] = 0; // De-green (second pixel in BGRA is green)
+			pixel += kBytesPerPixel;
+		}
+	}
+	
+	CVPixelBufferUnlockBaseAddress( pixelBuffer, 0 );
+	
+	return (CVPixelBufferRef)CFRetain( pixelBuffer );
+}
+
+@end

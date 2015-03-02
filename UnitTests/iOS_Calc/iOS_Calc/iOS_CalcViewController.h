@@ -1,7 +1,7 @@
 /*
      File: iOS_CalcViewController.h
  Abstract: This file declares the interface for the CalcViewController class.
-  Version: 1.1
+  Version: 1.2
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
  Inc. ("Apple") in consideration of your agreement to the following
@@ -41,20 +41,15 @@
  STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
  POSSIBILITY OF SUCH DAMAGE.
  
- Copyright (C) 2012 Apple Inc. All Rights Reserved.
+ Copyright (C) 2014 Apple Inc. All Rights Reserved.
  
 */
 
 #import <UIKit/UIKit.h>
-#import "Calculator.h"
 
-@interface CalcViewController : UIViewController {
-   id          displayField;
-   Calculator *calculator;
-}
+@interface iOS_CalcViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *displayField;
 
-@property (nonatomic) IBOutlet id displayField;
-
-- (IBAction) press:(id)sender;
+- (IBAction)press:(id)sender;
 
 @end

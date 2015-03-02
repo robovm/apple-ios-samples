@@ -13,7 +13,7 @@
     Images are scaled to the desired height.
     If rapid scrolling is in progress, downloads do not begin until scrolling has ended.
   
-  Version: 1.4 
+  Version: 1.5 
   
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple 
  Inc. ("Apple") in consideration of your agreement to the following 
@@ -53,7 +53,7 @@
  STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE 
  POSSIBILITY OF SUCH DAMAGE. 
   
- Copyright (C) 2013 Apple Inc. All Rights Reserved. 
+ Copyright (C) 2014 Apple Inc. All Rights Reserved. 
   
  */
 
@@ -61,18 +61,32 @@
 #import "AppRecord.h"
 #import "IconDownloader.h"
 
-#define kCustomRowCount     7
+#define kCustomRowCount 7
 
+static NSString *CellIdentifier = @"LazyTableCell";
+static NSString *PlaceholderCellIdentifier = @"PlaceholderCell";
+
+@interface MyTableViewCell : UITableViewCell
+@end
+@implementation MyTableViewCell
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+    // ignore the style argument and force the creation with style UITableViewCellStyleSubtitle
+    return [super initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseIdentifier];
+}
+@end
+
+
+#pragma mark -
 
 @interface RootViewController () <UIScrollViewDelegate>
 // the set of IconDownloader objects for each app
 @property (nonatomic, strong) NSMutableDictionary *imageDownloadsInProgress;
 @end
 
+#pragma mark -
 
 @implementation RootViewController
-
-#pragma mark 
 
 // -------------------------------------------------------------------------------
 //	viewDidLoad
@@ -81,7 +95,32 @@
 {
     [super viewDidLoad];
     
+    [self.tableView registerClass:[MyTableViewCell class] forCellReuseIdentifier:CellIdentifier];
+    [self.tableView registerClass:[MyTableViewCell class] forCellReuseIdentifier:PlaceholderCellIdentifier];
+    
     self.imageDownloadsInProgress = [NSMutableDictionary dictionary];
+}
+
+// -------------------------------------------------------------------------------
+//	terminateAllDownloads
+// -------------------------------------------------------------------------------
+- (void)terminateAllDownloads
+{
+    // terminate all pending download connections
+    NSArray *allDownloads = [self.imageDownloadsInProgress allValues];
+    [allDownloads makeObjectsPerformSelector:@selector(cancelDownload)];
+    
+    [self.imageDownloadsInProgress removeAllObjects];
+}
+
+// -------------------------------------------------------------------------------
+//	dealloc
+//  If this view controller is going away, we need to cancel all outstanding downloads.
+// -------------------------------------------------------------------------------
+- (void)dealloc
+{
+    // terminate all pending download connections
+    [self terminateAllDownloads];
 }
 
 // -------------------------------------------------------------------------------
@@ -92,23 +131,9 @@
     [super didReceiveMemoryWarning];
     
     // terminate all pending download connections
-    NSArray *allDownloads = [self.imageDownloadsInProgress allValues];
-    [allDownloads makeObjectsPerformSelector:@selector(cancelDownload)];
-    
-    [self.imageDownloadsInProgress removeAllObjects];
+    [self terminateAllDownloads];
 }
 
-#if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_6_0
-// -------------------------------------------------------------------------------
-//	shouldAutorotateToInterfaceOrientation:
-//  Rotation support for iOS 5.x and earlier, note for iOS 6.0 and later all you
-//  need is "UISupportedInterfaceOrientations" defined in your Info.plist.
-// -------------------------------------------------------------------------------
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-}
-#endif
 
 #pragma mark - UITableViewDataSource
 
@@ -118,7 +143,7 @@
 // -------------------------------------------------------------------------------
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-	NSUInteger count = [self.entries count];
+	NSUInteger count = self.entries.count;
 	
 	// if there's no data yet, return enough rows to fill the screen
     if (count == 0)
@@ -133,53 +158,50 @@
 // -------------------------------------------------------------------------------
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	// customize the appearance of table view cells
-	//
-	static NSString *CellIdentifier = @"LazyTableCell";
-    static NSString *PlaceholderCellIdentifier = @"PlaceholderCell";
+    MyTableViewCell *cell = nil;
     
-    // add a placeholder cell while waiting on table data
-    NSUInteger nodeCount = [self.entries count];
+    NSUInteger nodeCount = self.entries.count;
 	
 	if (nodeCount == 0 && indexPath.row == 0)
 	{
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:PlaceholderCellIdentifier];
+        // add a placeholder cell while waiting on table data
+        cell = [tableView dequeueReusableCellWithIdentifier:PlaceholderCellIdentifier forIndexPath:indexPath];
 
 		cell.detailTextLabel.text = @"Loading…";
-		
-		return cell;
     }
-	
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+	else
+    {
+        cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
 
-    // Leave cells empty if there's no data yet
-    if (nodeCount > 0)
-	{
-        // Set up the cell...
-        AppRecord *appRecord = [self.entries objectAtIndex:indexPath.row];
-        
-		cell.textLabel.text = appRecord.appName;
-        cell.detailTextLabel.text = appRecord.artist;
-		
-        // Only load cached images; defer new downloads until scrolling ends
-        if (!appRecord.appIcon)
+        // Leave cells empty if there's no data yet
+        if (nodeCount > 0)
         {
-            if (self.tableView.dragging == NO && self.tableView.decelerating == NO)
+            // Set up the cell representing the app
+            AppRecord *appRecord = (self.entries)[indexPath.row];
+            
+            cell.textLabel.text = appRecord.appName;
+            cell.detailTextLabel.text = appRecord.artist;
+            
+            // Only load cached images; defer new downloads until scrolling ends
+            if (!appRecord.appIcon)
             {
-                [self startIconDownload:appRecord forIndexPath:indexPath];
+                if (self.tableView.dragging == NO && self.tableView.decelerating == NO)
+                {
+                    [self startIconDownload:appRecord forIndexPath:indexPath];
+                }
+                // if a download is deferred or in progress, return a placeholder image
+                cell.imageView.image = [UIImage imageNamed:@"Placeholder.png"];                
             }
-            // if a download is deferred or in progress, return a placeholder image
-            cell.imageView.image = [UIImage imageNamed:@"Placeholder.png"];                
+            else
+            {
+               cell.imageView.image = appRecord.appIcon;
+            }
         }
-        else
-        {
-           cell.imageView.image = appRecord.appIcon;
-        }
-
     }
     
     return cell;
 }
+
 
 #pragma mark - Table cell image support
 
@@ -188,7 +210,7 @@
 // -------------------------------------------------------------------------------
 - (void)startIconDownload:(AppRecord *)appRecord forIndexPath:(NSIndexPath *)indexPath
 {
-    IconDownloader *iconDownloader = [self.imageDownloadsInProgress objectForKey:indexPath];
+    IconDownloader *iconDownloader = (self.imageDownloadsInProgress)[indexPath];
     if (iconDownloader == nil) 
     {
         iconDownloader = [[IconDownloader alloc] init];
@@ -205,7 +227,7 @@
             [self.imageDownloadsInProgress removeObjectForKey:indexPath];
             
         }];
-        [self.imageDownloadsInProgress setObject:iconDownloader forKey:indexPath];
+        (self.imageDownloadsInProgress)[indexPath] = iconDownloader;
         [iconDownloader startDownload];  
     }
 }
@@ -217,12 +239,12 @@
 // -------------------------------------------------------------------------------
 - (void)loadImagesForOnscreenRows
 {
-    if ([self.entries count] > 0)
+    if (self.entries.count > 0)
     {
         NSArray *visiblePaths = [self.tableView indexPathsForVisibleRows];
         for (NSIndexPath *indexPath in visiblePaths)
         {
-            AppRecord *appRecord = [self.entries objectAtIndex:indexPath.row];
+            AppRecord *appRecord = (self.entries)[indexPath.row];
             
             if (!appRecord.appIcon)
             // Avoid the app icon download if the app already has an icon
@@ -232,6 +254,7 @@
         }
     }
 }
+
 
 #pragma mark - UIScrollViewDelegate
 
@@ -248,7 +271,8 @@
 }
 
 // -------------------------------------------------------------------------------
-//	scrollViewDidEndDecelerating:
+//	scrollViewDidEndDecelerating:scrollView
+//  When scrolling stops, proceed to load the app icons that are on screen.
 // -------------------------------------------------------------------------------
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {

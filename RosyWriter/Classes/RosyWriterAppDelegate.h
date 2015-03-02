@@ -1,7 +1,8 @@
+
 /*
      File: RosyWriterAppDelegate.h
  Abstract: Application delegate
-  Version: 1.2
+  Version: 2.1
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
  Inc. ("Apple") in consideration of your agreement to the following
@@ -41,21 +42,15 @@
  STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
  POSSIBILITY OF SUCH DAMAGE.
  
- Copyright (C) 2011 Apple Inc. All Rights Reserved.
+ Copyright (C) 2014 Apple Inc. All Rights Reserved.
  
  */
 
+
 #import <UIKit/UIKit.h>
 
-@class RosyWriterViewController;
+@interface RosyWriterAppDelegate : UIResponder <UIApplicationDelegate>
 
-@interface RosyWriterAppDelegate : NSObject <UIApplicationDelegate> {
-    UIWindow *window;
-    RosyWriterViewController *mainViewController;
-}
-
-@property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) IBOutlet RosyWriterViewController *mainViewController;
+@property(nonatomic, retain) UIWindow *window;
 
 @end
-

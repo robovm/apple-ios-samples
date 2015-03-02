@@ -2,7 +2,7 @@
      File: ParseOperation.m 
  Abstract: NSOperation subclass for parsing the RSS feed.
   
-  Version: 1.4 
+  Version: 1.5 
   
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple 
  Inc. ("Apple") in consideration of your agreement to the following 
@@ -42,7 +42,7 @@
  STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE 
  POSSIBILITY OF SUCH DAMAGE. 
   
- Copyright (C) 2013 Apple Inc. All Rights Reserved. 
+ Copyright (C) 2014 Apple Inc. All Rights Reserved. 
   
  */
 
@@ -58,29 +58,34 @@ static NSString *kEntryStr  = @"entry";
 
 
 @interface ParseOperation () <NSXMLParserDelegate>
-// Redeclare appRecordList so we can modify it.
+
+// Redeclare appRecordList so we can modify it within this class
 @property (nonatomic, strong) NSArray *appRecordList;
+
 @property (nonatomic, strong) NSData *dataToParse;
 @property (nonatomic, strong) NSMutableArray *workingArray;
-@property (nonatomic, strong) AppRecord *workingEntry;
+@property (nonatomic, strong) AppRecord *workingEntry;  // the current app record or XML entry being parsed
 @property (nonatomic, strong) NSMutableString *workingPropertyString;
 @property (nonatomic, strong) NSArray *elementsToParse;
 @property (nonatomic, readwrite) BOOL storingCharacterData;
+
 @end
 
+
+#pragma mark -
 
 @implementation ParseOperation
 
 // -------------------------------------------------------------------------------
 //	initWithData:
 // -------------------------------------------------------------------------------
-- (id)initWithData:(NSData *)data
+- (instancetype)initWithData:(NSData *)data
 {
     self = [super init];
     if (self != nil)
     {
         _dataToParse = data;
-        _elementsToParse = [[NSArray alloc] initWithObjects:kIDStr, kNameStr, kImageStr, kArtistStr, nil];
+        _elementsToParse = @[kIDStr, kNameStr, kImageStr, kArtistStr];
     }
     return self;
 }
@@ -97,8 +102,8 @@ static NSString *kEntryStr  = @"entry";
     // before invoking -main.  If an exception is thrown here, the app will be
     // terminated.
     
-    self.workingArray = [NSMutableArray array];
-    self.workingPropertyString = [NSMutableString string];
+    _workingArray = [NSMutableArray array];
+    _workingPropertyString = [NSMutableString string];
     
     // It's also possible to have NSXMLParser download the data, by passing it a URL, but this is not
     // desirable because it gives less control over the network, particularly in responding to
@@ -118,6 +123,7 @@ static NSString *kEntryStr  = @"entry";
     self.workingPropertyString = nil;
     self.dataToParse = nil;
 }
+
 
 #pragma mark - RSS processing
 
@@ -145,7 +151,7 @@ static NSString *kEntryStr  = @"entry";
                                       namespaceURI:(NSString *)namespaceURI
                                      qualifiedName:(NSString *)qName
 {
-    if (self.workingEntry)
+    if (self.workingEntry != nil)
 	{
         if (self.storingCharacterData)
         {
@@ -175,7 +181,6 @@ static NSString *kEntryStr  = @"entry";
             self.workingEntry = nil;
         }
     }
-    
 }
 
 // -------------------------------------------------------------------------------
@@ -195,7 +200,9 @@ static NSString *kEntryStr  = @"entry";
 - (void)parser:(NSXMLParser *)parser parseErrorOccurred:(NSError *)parseError
 {
     if (self.errorHandler)
+    {
         self.errorHandler(parseError);
+    }
 }
 
 @end

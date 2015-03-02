@@ -1,7 +1,7 @@
 /*
      File: CalcViewController.m
  Abstract: This file implements the CalcViewController class.
-  Version: 1.1
+  Version: 1.2
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
  Inc. ("Apple") in consideration of your agreement to the following
@@ -41,7 +41,7 @@
  STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
  POSSIBILITY OF SUCH DAMAGE.
  
- Copyright (C) 2012 Apple Inc. All Rights Reserved.
+ Copyright (C) 2014 Apple Inc. All Rights Reserved.
  
  */
 
@@ -60,10 +60,11 @@
 }
 
 # pragma mark Event Handling
+
 - (IBAction)press:(id) sender {
    if ([sender isKindOfClass: [NSButton class]]) {
       [calculator input:[sender title]];
-      [displayField setStringValue: [calculator displayValue]];
+      [self.displayField setStringValue: [calculator displayValue]];
 	}
 }
 

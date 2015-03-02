@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.21" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.13"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="AAPLViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wKM-50-wav"/>
+                        <viewControllerLayoutGuide type="bottom" id="BSO-b2-nar"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JIg-XY-Nu0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FLOORPLAN_IMAGE_PORTRAIT" translatesAutoresizingMaskIntoConstraints="NO" id="Gk1-8e-5tu">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="radius" translatesAutoresizingMaskIntoConstraints="NO" id="avJ-F8-Gai">
+                                <rect key="frame" x="6" y="7" width="62" height="62"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pin" translatesAutoresizingMaskIntoConstraints="NO" id="5yS-V7-hCw">
+                                <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Gk1-8e-5tu" secondAttribute="trailing" id="Vsq-QW-AQq"/>
+                            <constraint firstAttribute="bottom" secondItem="Gk1-8e-5tu" secondAttribute="bottom" id="hUg-xj-j3X"/>
+                            <constraint firstItem="Gk1-8e-5tu" firstAttribute="top" secondItem="JIg-XY-Nu0" secondAttribute="top" id="jKG-tp-kaQ"/>
+                            <constraint firstItem="Gk1-8e-5tu" firstAttribute="leading" secondItem="JIg-XY-Nu0" secondAttribute="leading" id="pWb-Vu-ztm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Gk1-8e-5tu" id="5Dx-Mk-i07"/>
+                        <outlet property="pinView" destination="5yS-V7-hCw" id="RQB-Ze-6Dq"/>
+                        <outlet property="radiusView" destination="avJ-F8-Gai" id="FW6-82-6cM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="691"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="FLOORPLAN_IMAGE_PORTRAIT" width="510" height="826"/>
+        <image name="pin" width="150" height="150"/>
+        <image name="radius" width="62" height="62"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

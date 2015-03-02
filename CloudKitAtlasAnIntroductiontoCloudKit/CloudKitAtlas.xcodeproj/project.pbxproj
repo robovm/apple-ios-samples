@@ -1,0 +1,427 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5F3D4AA4197867E900611700 /* one.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F3D4AA2197867E900611700 /* one.png */; };
+		5F3D4AA5197867E900611700 /* two.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F3D4AA3197867E900611700 /* two.png */; };
+		5F99737B193078540067845B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F99737A193078540067845B /* main.m */; };
+		5F99737D193078540067845B /* AAPLAppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F99737C193078540067845B /* AAPLAppDelegate.h */; };
+		5F99737F193078540067845B /* AAPLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F99737E193078540067845B /* AAPLAppDelegate.m */; };
+		5F997381193078540067845B /* AAPLMasterViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F997380193078540067845B /* AAPLMasterViewController.h */; };
+		5F997383193078540067845B /* AAPLMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F997382193078540067845B /* AAPLMasterViewController.m */; };
+		5F99738A193078540067845B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F997388193078540067845B /* Main.storyboard */; };
+		5F99738C193078540067845B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F99738B193078540067845B /* Images.xcassets */; };
+		5F9973A319307E0B0067845B /* AAPLDiscoverabilityViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F9973A119307E0B0067845B /* AAPLDiscoverabilityViewController.h */; };
+		5F9973A419307E0B0067845B /* AAPLDiscoverabilityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9973A219307E0B0067845B /* AAPLDiscoverabilityViewController.m */; };
+		5F9973A719307F260067845B /* AAPLCKAssetViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F9973A519307F260067845B /* AAPLCKAssetViewController.h */; };
+		5F9973A819307F260067845B /* AAPLCKAssetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9973A619307F260067845B /* AAPLCKAssetViewController.m */; };
+		5F9973AB193087340067845B /* AAPLCloudManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F9973A9193087340067845B /* AAPLCloudManager.h */; };
+		5F9973AC193087340067845B /* AAPLCloudManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9973AA193087340067845B /* AAPLCloudManager.m */; };
+		5F9F4CC919316D5F005DA1DA /* AAPLCKSubscriptionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F9F4CC719316D5F005DA1DA /* AAPLCKSubscriptionViewController.h */; };
+		5F9F4CCA19316D5F005DA1DA /* AAPLCKSubscriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9F4CC819316D5F005DA1DA /* AAPLCKSubscriptionViewController.m */; };
+		5F9F4CCD193170AD005DA1DA /* AAPLLocationQueryViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F9F4CCB193170AD005DA1DA /* AAPLLocationQueryViewController.h */; };
+		5F9F4CCE193170AD005DA1DA /* AAPLLocationQueryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9F4CCC193170AD005DA1DA /* AAPLLocationQueryViewController.m */; };
+		5F9F4CD1193181DA005DA1DA /* AAPLCKRecordViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F9F4CCF193181DA005DA1DA /* AAPLCKRecordViewController.h */; };
+		5F9F4CD2193181DA005DA1DA /* AAPLCKRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9F4CD0193181DA005DA1DA /* AAPLCKRecordViewController.m */; };
+		5F9F4CD5193184DC005DA1DA /* AAPLCKReferenceViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F9F4CD3193184DC005DA1DA /* AAPLCKReferenceViewController.h */; };
+		5F9F4CD6193184DC005DA1DA /* AAPLCKReferenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9F4CD4193184DC005DA1DA /* AAPLCKReferenceViewController.m */; };
+		5F9F4CD919318589005DA1DA /* AAPLCKReferenceDetailViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F9F4CD719318589005DA1DA /* AAPLCKReferenceDetailViewController.h */; };
+		5F9F4CDA19318589005DA1DA /* AAPLCKReferenceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9F4CD819318589005DA1DA /* AAPLCKReferenceDetailViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5F3D4AA2197867E900611700 /* one.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = one.png; sourceTree = "<group>"; };
+		5F3D4AA3197867E900611700 /* two.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = two.png; sourceTree = "<group>"; };
+		5F997375193078540067845B /* CloudKitAtlas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudKitAtlas.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F997379193078540067845B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F99737A193078540067845B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5F99737C193078540067845B /* AAPLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAPLAppDelegate.h; sourceTree = "<group>"; };
+		5F99737E193078540067845B /* AAPLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAPLAppDelegate.m; sourceTree = "<group>"; };
+		5F997380193078540067845B /* AAPLMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAPLMasterViewController.h; sourceTree = "<group>"; };
+		5F997382193078540067845B /* AAPLMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAPLMasterViewController.m; sourceTree = "<group>"; };
+		5F997389193078540067845B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5F99738B193078540067845B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5F997391193078550067845B /* CloudAtlasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloudAtlasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F9973A119307E0B0067845B /* AAPLDiscoverabilityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLDiscoverabilityViewController.h; sourceTree = "<group>"; };
+		5F9973A219307E0B0067845B /* AAPLDiscoverabilityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLDiscoverabilityViewController.m; sourceTree = "<group>"; };
+		5F9973A519307F260067845B /* AAPLCKAssetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLCKAssetViewController.h; sourceTree = "<group>"; };
+		5F9973A619307F260067845B /* AAPLCKAssetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLCKAssetViewController.m; sourceTree = "<group>"; };
+		5F9973A9193087340067845B /* AAPLCloudManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLCloudManager.h; sourceTree = "<group>"; };
+		5F9973AA193087340067845B /* AAPLCloudManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLCloudManager.m; sourceTree = "<group>"; };
+		5F9F4CC719316D5F005DA1DA /* AAPLCKSubscriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLCKSubscriptionViewController.h; sourceTree = "<group>"; };
+		5F9F4CC819316D5F005DA1DA /* AAPLCKSubscriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLCKSubscriptionViewController.m; sourceTree = "<group>"; };
+		5F9F4CCB193170AD005DA1DA /* AAPLLocationQueryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLLocationQueryViewController.h; sourceTree = "<group>"; };
+		5F9F4CCC193170AD005DA1DA /* AAPLLocationQueryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLLocationQueryViewController.m; sourceTree = "<group>"; };
+		5F9F4CCF193181DA005DA1DA /* AAPLCKRecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLCKRecordViewController.h; sourceTree = "<group>"; };
+		5F9F4CD0193181DA005DA1DA /* AAPLCKRecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLCKRecordViewController.m; sourceTree = "<group>"; };
+		5F9F4CD3193184DC005DA1DA /* AAPLCKReferenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLCKReferenceViewController.h; sourceTree = "<group>"; };
+		5F9F4CD4193184DC005DA1DA /* AAPLCKReferenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLCKReferenceViewController.m; sourceTree = "<group>"; };
+		5F9F4CD719318589005DA1DA /* AAPLCKReferenceDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLCKReferenceDetailViewController.h; sourceTree = "<group>"; };
+		5F9F4CD819318589005DA1DA /* AAPLCKReferenceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLCKReferenceDetailViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5F997371193078540067845B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5F3D4AA1197867D400611700 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5F3D4AA2197867E900611700 /* one.png */,
+				5F3D4AA3197867E900611700 /* two.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		5F99736B193078540067845B = {
+			isa = PBXGroup;
+			children = (
+				5F997377193078540067845B /* CloudKitAtlas */,
+				5F997376193078540067845B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5F997376193078540067845B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5F997375193078540067845B /* CloudKitAtlas.app */,
+				5F997391193078550067845B /* CloudAtlasTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5F997377193078540067845B /* CloudKitAtlas */ = {
+			isa = PBXGroup;
+			children = (
+				5F99737C193078540067845B /* AAPLAppDelegate.h */,
+				5F99737E193078540067845B /* AAPLAppDelegate.m */,
+				5F9973B319308F540067845B /* CloudKit */,
+				5F997380193078540067845B /* AAPLMasterViewController.h */,
+				5F997382193078540067845B /* AAPLMasterViewController.m */,
+				5F9973A119307E0B0067845B /* AAPLDiscoverabilityViewController.h */,
+				5F9973A219307E0B0067845B /* AAPLDiscoverabilityViewController.m */,
+				5F9F4CCF193181DA005DA1DA /* AAPLCKRecordViewController.h */,
+				5F9F4CD0193181DA005DA1DA /* AAPLCKRecordViewController.m */,
+				5F9973A519307F260067845B /* AAPLCKAssetViewController.h */,
+				5F9973A619307F260067845B /* AAPLCKAssetViewController.m */,
+				5F9F4CCB193170AD005DA1DA /* AAPLLocationQueryViewController.h */,
+				5F9F4CCC193170AD005DA1DA /* AAPLLocationQueryViewController.m */,
+				5F9F4CD3193184DC005DA1DA /* AAPLCKReferenceViewController.h */,
+				5F9F4CD4193184DC005DA1DA /* AAPLCKReferenceViewController.m */,
+				5F9F4CD719318589005DA1DA /* AAPLCKReferenceDetailViewController.h */,
+				5F9F4CD819318589005DA1DA /* AAPLCKReferenceDetailViewController.m */,
+				5F9F4CC719316D5F005DA1DA /* AAPLCKSubscriptionViewController.h */,
+				5F9F4CC819316D5F005DA1DA /* AAPLCKSubscriptionViewController.m */,
+				5F997388193078540067845B /* Main.storyboard */,
+				5F99738B193078540067845B /* Images.xcassets */,
+				5F997378193078540067845B /* Supporting Files */,
+			);
+			path = CloudKitAtlas;
+			sourceTree = "<group>";
+		};
+		5F997378193078540067845B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5F3D4AA1197867D400611700 /* Resources */,
+				5F997379193078540067845B /* Info.plist */,
+				5F99737A193078540067845B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5F9973B319308F540067845B /* CloudKit */ = {
+			isa = PBXGroup;
+			children = (
+				5F9973A9193087340067845B /* AAPLCloudManager.h */,
+				5F9973AA193087340067845B /* AAPLCloudManager.m */,
+			);
+			name = CloudKit;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		5F997372193078540067845B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F9F4CC919316D5F005DA1DA /* AAPLCKSubscriptionViewController.h in Headers */,
+				5F9F4CD5193184DC005DA1DA /* AAPLCKReferenceViewController.h in Headers */,
+				5F9F4CD919318589005DA1DA /* AAPLCKReferenceDetailViewController.h in Headers */,
+				5F9F4CCD193170AD005DA1DA /* AAPLLocationQueryViewController.h in Headers */,
+				5F99737D193078540067845B /* AAPLAppDelegate.h in Headers */,
+				5F9973A319307E0B0067845B /* AAPLDiscoverabilityViewController.h in Headers */,
+				5F9973A719307F260067845B /* AAPLCKAssetViewController.h in Headers */,
+				5F9973AB193087340067845B /* AAPLCloudManager.h in Headers */,
+				5F997381193078540067845B /* AAPLMasterViewController.h in Headers */,
+				5F9F4CD1193181DA005DA1DA /* AAPLCKRecordViewController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5F997374193078540067845B /* CloudKitAtlas */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F99739B193078550067845B /* Build configuration list for PBXNativeTarget "CloudKitAtlas" */;
+			buildPhases = (
+				5F997370193078540067845B /* Sources */,
+				5F997371193078540067845B /* Frameworks */,
+				5F997372193078540067845B /* Headers */,
+				5F997373193078540067845B /* Resources */,
+				5FA09494193123020092E043 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CloudKitAtlas;
+			productName = CloudKitAtlas;
+			productReference = 5F997375193078540067845B /* CloudKitAtlas.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5F99736C193078540067845B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Apple Inc.";
+				TargetAttributes = {
+					5F997374193078540067845B = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 5F99736F193078540067845B /* Build configuration list for PBXProject "CloudKitAtlas" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5F99736B193078540067845B;
+			productRefGroup = 5F997376193078540067845B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5F997374193078540067845B /* CloudKitAtlas */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5F997373193078540067845B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F3D4AA5197867E900611700 /* two.png in Resources */,
+				5F3D4AA4197867E900611700 /* one.png in Resources */,
+				5F99738A193078540067845B /* Main.storyboard in Resources */,
+				5F99738C193078540067845B /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5FA09494193123020092E043 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "BUNDLE_IDENTIFIER=$(/usr/libexec/PlistBuddy -c \"Print CFBundleIdentifier\" \"$BUILT_PRODUCTS_DIR/$PRODUCT_NAME.app/Info.plist\")\n\nif [[ $BUNDLE_IDENTIFIER == com.example.* ]]\nthen\necho \"$BUILT_PRODUCTS_DIR/$PRODUCT_NAME.app/Info.plist:1: error: Change your bundle identifier to use your own CloudKit container\"\nexit -1\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5F997370193078540067845B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F9F4CCE193170AD005DA1DA /* AAPLLocationQueryViewController.m in Sources */,
+				5F9F4CDA19318589005DA1DA /* AAPLCKReferenceDetailViewController.m in Sources */,
+				5F9F4CD6193184DC005DA1DA /* AAPLCKReferenceViewController.m in Sources */,
+				5F9F4CCA19316D5F005DA1DA /* AAPLCKSubscriptionViewController.m in Sources */,
+				5F99737F193078540067845B /* AAPLAppDelegate.m in Sources */,
+				5F997383193078540067845B /* AAPLMasterViewController.m in Sources */,
+				5F99737B193078540067845B /* main.m in Sources */,
+				5F9973A419307E0B0067845B /* AAPLDiscoverabilityViewController.m in Sources */,
+				5F9973A819307F260067845B /* AAPLCKAssetViewController.m in Sources */,
+				5F9973AC193087340067845B /* AAPLCloudManager.m in Sources */,
+				5F9F4CD2193181DA005DA1DA /* AAPLCKRecordViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5F997388193078540067845B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5F997389193078540067845B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5F997399193078550067845B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				AXLE_ENABLE_DEBUG_INFO = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_ASSIGN_ENUM = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5F99739A193078550067845B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				AXLE_ENABLE_DEBUG_INFO = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_ASSIGN_ENUM = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5F99739C193078550067845B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = CloudKitAtlas/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = CloudKitAtlas;
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		5F99739D193078550067845B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = CloudKitAtlas/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = CloudKitAtlas;
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5F99736F193078540067845B /* Build configuration list for PBXProject "CloudKitAtlas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F997399193078550067845B /* Debug */,
+				5F99739A193078550067845B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F99739B193078550067845B /* Build configuration list for PBXNativeTarget "CloudKitAtlas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F99739C193078550067845B /* Debug */,
+				5F99739D193078550067845B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5F99736C193078540067845B /* Project object */;
+}

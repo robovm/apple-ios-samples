@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6119.1" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="lAj-MB-GcU">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6123.2"/>
+    </dependencies>
+    <scenes>
+        <!--Camera View Controller-->
+        <scene sceneID="LUh-NQ-xbF">
+            <objects>
+                <viewController id="lAj-MB-GcU" customClass="AAPLCameraViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="319-x6-7nj"/>
+                        <viewControllerLayoutGuide type="bottom" id="MwQ-J2-gqh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Y0u-cV-AAo" userLabel="ContainerView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rPM-zY-Rdy" userLabel="CameraPreviewView" customClass="AAPLCapturePreviewView">
+                                <rect key="frame" x="-6" y="0.0" width="326" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HSl-rK-Rah">
+                                <rect key="frame" x="105" y="512" width="110" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="MYk-Tq-fiQ"/>
+                                    <constraint firstAttribute="height" constant="36" id="cOl-s1-1CE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Shutter">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="_cameraShutterDidPress:" destination="lAj-MB-GcU" eventType="touchUpInside" id="mvn-Az-Qnp"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8JW-ua-9mB">
+                                <rect key="frame" x="56" y="20" width="208" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Auto Exposure"/>
+                                    <segment title="Duration/ISO"/>
+                                </segments>
+                                <connections>
+                                    <action selector="_bracketModeDidChange:" destination="lAj-MB-GcU" eventType="valueChanged" id="7pw-S3-XNC"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rPM-zY-Rdy" firstAttribute="centerX" secondItem="8JW-ua-9mB" secondAttribute="centerX" id="JP0-Rm-raW"/>
+                            <constraint firstItem="8JW-ua-9mB" firstAttribute="top" secondItem="Y0u-cV-AAo" secondAttribute="top" constant="20" symbolic="YES" id="b1f-2P-3O2"/>
+                            <constraint firstAttribute="bottom" secondItem="HSl-rK-Rah" secondAttribute="bottom" constant="20" symbolic="YES" id="imH-PX-0rj"/>
+                            <constraint firstItem="rPM-zY-Rdy" firstAttribute="leading" secondItem="Y0u-cV-AAo" secondAttribute="leading" constant="-6" id="yV1-GF-v4z"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="_bracketModeControl" destination="8JW-ua-9mB" id="lDk-OH-h3i"/>
+                        <outlet property="_cameraPreviewView" destination="rPM-zY-Rdy" id="zcO-vf-Fwz"/>
+                        <outlet property="_cameraShutterButton" destination="HSl-rK-Rah" id="IoX-77-WXH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dlg-Xp-R2Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="631" y="230"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

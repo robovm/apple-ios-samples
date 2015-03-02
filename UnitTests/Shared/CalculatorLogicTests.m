@@ -45,12 +45,10 @@
  
  */
 
-#import <SenTestingKit/SenTestingKit.h>
-
+#import <XCTest/XCTest.h>
 #import "Calculator.h"
 
-
-@interface CalculatorLogicTests : SenTestCase {
+@interface CalculatorLogicTests : XCTestCase {
 @private
    Calculator *calculator;
 }
@@ -64,7 +62,7 @@
 - (void) setUp {
    NSLog(@"%@ setUp", self.name);
    calculator = [[Calculator alloc] init];
-   STAssertNotNil(calculator, @"Cannot create Calculator instance");
+   XCTAssertNotNil(calculator, @"Cannot create Calculator instance");
 }
 
 
@@ -85,7 +83,7 @@
    [calculator input:@"+"];
    [calculator input:@"2"];
    [calculator input:@"="];
-   STAssertTrue([[calculator displayValue] isEqualToString:@"8"], @"");
+   XCTAssertTrue([[calculator displayValue] isEqualToString:@"8"], @"");
    NSLog(@"%@ end", self.name);
 }
 
@@ -101,7 +99,7 @@
    [calculator input:@"-"];
    [calculator input:@"2"];
    [calculator input:@"="];
-   STAssertTrue([[calculator displayValue] isEqualToString:@"17"], @"");
+   XCTAssertTrue([[calculator displayValue] isEqualToString:@"17"], @"");
    NSLog(@"%@ end", self.name);
 }
 
@@ -117,7 +115,7 @@
    [calculator input:@"/"];
    [calculator input:@"8"];
    [calculator input:@"="];
-   STAssertTrue([[calculator displayValue] isEqualToString:@"2.375"], @"");
+   XCTAssertTrue([[calculator displayValue] isEqualToString:@"2.375"], @"");
    NSLog(@"%@ end", self.name);
 }
 
@@ -132,7 +130,7 @@
    [calculator input:@"*"];
    [calculator input:@"2"];
    [calculator input:@"="];
-   STAssertTrue([[calculator displayValue] isEqualToString:@"12"], @"");
+   XCTAssertTrue([[calculator displayValue] isEqualToString:@"12"], @"");
    NSLog(@"%@ end", self.name);
 }
 
@@ -148,7 +146,7 @@
    [calculator input:@"2"];
    [calculator input:@"4"];
    [calculator input:@"="];
-   STAssertTrue([[calculator displayValue] isEqualToString:@"-18"], @"");
+   XCTAssertTrue([[calculator displayValue] isEqualToString:@"-18"], @"");
    NSLog(@"%@ end", self.name);
 }
 
@@ -162,7 +160,7 @@
    [calculator input:@"C"];
    [calculator input:@"4"];
    [calculator input:@"="];   
-   STAssertTrue([[calculator displayValue] isEqualToString:@"11"], @"");
+   XCTAssertTrue([[calculator displayValue] isEqualToString:@"11"], @"");
    NSLog(@"%@ end", self.name);
 }
 
@@ -176,7 +174,7 @@
    [calculator input:@"3"];
    [calculator input:@"C"];
    [calculator input:@"C"];
-   STAssertTrue([[calculator displayValue] isEqualToString:@"0"], @"");   
+   XCTAssertTrue([[calculator displayValue] isEqualToString:@"0"], @"");   
    NSLog(@"%@ end", self.name);
 }
 
@@ -187,9 +185,9 @@
  */
 - (void) testInputException {
    NSLog(@"%@ start", self.name);
-	STAssertThrows([calculator input:@"67"], @"No exception for multicharacter input.");
-	STAssertThrows([calculator input:@"j"],  @"No exception for invalid input.");
-	STAssertThrows([calculator input:nil],   @"No exception for nil input.");
+	XCTAssertThrows([calculator input:@"67"], @"No exception for multicharacter input.");
+	XCTAssertThrows([calculator input:@"j"],  @"No exception for invalid input.");
+	XCTAssertThrows([calculator input:nil],   @"No exception for nil input.");
    NSLog(@"%@ end", self.name);
 }
 

@@ -1,0 +1,435 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		531B1AB518A597BE00D43367 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 531B1AB218A597BE00D43367 /* AppDelegate.m */; };
+		531B1AB618A597BE00D43367 /* MyWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 531B1AB418A597BE00D43367 /* MyWindowController.m */; };
+		531B1AC718A59CF600D43367 /* BridgeAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 531B1AC218A59CF600D43367 /* BridgeAnnotation.m */; };
+		531B1AC918A59CF600D43367 /* SFAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 531B1AC618A59CF600D43367 /* SFAnnotation.m */; };
+		531B1AD118A5A10C00D43367 /* CustomAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 531B1AD018A5A10C00D43367 /* CustomAnnotationView.m */; };
+		531F25C318D0C85A00A442C8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 531F25C218D0C85A00A442C8 /* CoreLocation.framework */; };
+		5348109718D0E034009A0D84 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5348109518D0E034009A0D84 /* MainView.xib */; };
+		5348109C18D0F2BB009A0D84 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5348109B18D0F2BB009A0D84 /* MapViewController.m */; };
+		53928DF713009DA4004F1A72 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53928DF513009DA4004F1A72 /* MainMenu.xib */; };
+		53A1FA0818A9A022008EF6D5 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = 53A1FA0718A9A022008EF6D5 /* ReadMe.txt */; };
+		53A87F9719B79B860004C365 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53A87F9619B79B860004C365 /* Images.xcassets */; };
+		53B6FD9218A9712800B90785 /* PopoverView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53B6FD9018A9712800B90785 /* PopoverView.xib */; };
+		53B6FD9518A971B400B90785 /* BridgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53B6FD9418A971B400B90785 /* BridgeViewController.m */; };
+		53D0301919B78E6A00BE0B93 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 53D0301519B78E6A00BE0B93 /* Credits.rtf */; };
+		53D0301A19B78E6A00BE0B93 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53D0301719B78E6A00BE0B93 /* InfoPlist.strings */; };
+		53DA82BF19B78FE500714B7E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DA82BE19B78FE500714B7E /* MapKit.framework */; };
+		53F2E3E718D0F73C00CB7AA7 /* CustomAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F2E3E618D0F73C00CB7AA7 /* CustomAnnotation.m */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		531B1AB118A597BE00D43367 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
+		531B1AB218A597BE00D43367 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
+		531B1AB318A597BE00D43367 /* MyWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyWindowController.h; path = Classes/MyWindowController.h; sourceTree = "<group>"; };
+		531B1AB418A597BE00D43367 /* MyWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyWindowController.m; path = Classes/MyWindowController.m; sourceTree = "<group>"; };
+		531B1AC118A59CF600D43367 /* BridgeAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BridgeAnnotation.h; path = ../Shared/BridgeAnnotation.h; sourceTree = "<group>"; };
+		531B1AC218A59CF600D43367 /* BridgeAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BridgeAnnotation.m; path = ../Shared/BridgeAnnotation.m; sourceTree = "<group>"; };
+		531B1AC518A59CF600D43367 /* SFAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFAnnotation.h; path = ../Shared/SFAnnotation.h; sourceTree = "<group>"; };
+		531B1AC618A59CF600D43367 /* SFAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFAnnotation.m; path = ../Shared/SFAnnotation.m; sourceTree = "<group>"; };
+		531B1ACF18A5A10C00D43367 /* CustomAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomAnnotationView.h; path = ../Shared/CustomAnnotationView.h; sourceTree = "<group>"; };
+		531B1AD018A5A10C00D43367 /* CustomAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomAnnotationView.m; path = ../Shared/CustomAnnotationView.m; sourceTree = "<group>"; };
+		531F25C218D0C85A00A442C8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		5348109A18D0F2BB009A0D84 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = Classes/MapViewController.h; sourceTree = "<group>"; };
+		5348109B18D0F2BB009A0D84 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = Classes/MapViewController.m; sourceTree = "<group>"; };
+		53A1FA0718A9A022008EF6D5 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ReadMe.txt; path = ../ReadMe.txt; sourceTree = "<group>"; };
+		53A87F9619B79B860004C365 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		53B6FD9318A971B300B90785 /* BridgeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BridgeViewController.h; path = "../MapCallouts iOS/Classes/BridgeViewController.h"; sourceTree = "<group>"; };
+		53B6FD9418A971B400B90785 /* BridgeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BridgeViewController.m; path = "../MapCallouts iOS/Classes/BridgeViewController.m"; sourceTree = "<group>"; };
+		53D02FD219B78DD800BE0B93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		53D02FD319B78DD900BE0B93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainView.xib; sourceTree = "<group>"; };
+		53D02FD419B78DDA00BE0B93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/PopoverView.xib; sourceTree = "<group>"; };
+		53D0301619B78E6A00BE0B93 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		53D0301819B78E6A00BE0B93 /* en */ = {isa = PBXFileReference; explicitFileType = text.plist.strings; fileEncoding = 10; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		53DA82BE19B78FE500714B7E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		53E5B1B10B6021EF0087DD13 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
+		53F2E3E518D0F73C00CB7AA7 /* CustomAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomAnnotation.h; path = ../Shared/CustomAnnotation.h; sourceTree = "<group>"; };
+		53F2E3E618D0F73C00CB7AA7 /* CustomAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomAnnotation.m; path = ../Shared/CustomAnnotation.m; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* MapCallouts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapCallouts.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53DA82BF19B78FE500714B7E /* MapKit.framework in Frameworks */,
+				531F25C318D0C85A00A442C8 /* CoreLocation.framework in Frameworks */,
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* MapCallouts.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* TrackIt */ = {
+			isa = PBXGroup;
+			children = (
+				53A1FA0718A9A022008EF6D5 /* ReadMe.txt */,
+				29B97315FDCFA39411CA2CEA /* Classes */,
+				531B1ACA18A59D0900D43367 /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = TrackIt;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				531B1AB118A597BE00D43367 /* AppDelegate.h */,
+				531B1AB218A597BE00D43367 /* AppDelegate.m */,
+				531B1AB318A597BE00D43367 /* MyWindowController.h */,
+				531B1AB418A597BE00D43367 /* MyWindowController.m */,
+				5348109A18D0F2BB009A0D84 /* MapViewController.h */,
+				5348109B18D0F2BB009A0D84 /* MapViewController.m */,
+				53B6FD9318A971B300B90785 /* BridgeViewController.h */,
+				53B6FD9418A971B400B90785 /* BridgeViewController.m */,
+				531B1AC018A59CE800D43367 /* Annotations */,
+				531B1ACE18A5A0F600D43367 /* Custom View */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				53A87F9619B79B860004C365 /* Images.xcassets */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				53928DF513009DA4004F1A72 /* MainMenu.xib */,
+				5348109518D0E034009A0D84 /* MainView.xib */,
+				53B6FD9018A9712800B90785 /* PopoverView.xib */,
+				53D0301519B78E6A00BE0B93 /* Credits.rtf */,
+				53D0301719B78E6A00BE0B93 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53DA82BE19B78FE500714B7E /* MapKit.framework */,
+				531F25C218D0C85A00A442C8 /* CoreLocation.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		531B1AC018A59CE800D43367 /* Annotations */ = {
+			isa = PBXGroup;
+			children = (
+				531B1AC118A59CF600D43367 /* BridgeAnnotation.h */,
+				531B1AC218A59CF600D43367 /* BridgeAnnotation.m */,
+				53F2E3E518D0F73C00CB7AA7 /* CustomAnnotation.h */,
+				53F2E3E618D0F73C00CB7AA7 /* CustomAnnotation.m */,
+				531B1AC518A59CF600D43367 /* SFAnnotation.h */,
+				531B1AC618A59CF600D43367 /* SFAnnotation.m */,
+			);
+			name = Annotations;
+			sourceTree = "<group>";
+		};
+		531B1ACA18A59D0900D43367 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				53E5B1B10B6021EF0087DD13 /* Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		531B1ACE18A5A0F600D43367 /* Custom View */ = {
+			isa = PBXGroup;
+			children = (
+				531B1ACF18A5A10C00D43367 /* CustomAnnotationView.h */,
+				531B1AD018A5A10C00D43367 /* CustomAnnotationView.m */,
+			);
+			name = "Custom View";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* MapCallouts */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "MapCallouts" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MapCallouts;
+			productInstallPath = "$(HOME)/Applications";
+			productName = TrackIt;
+			productReference = 8D1107320486CEB800E47090 /* MapCallouts.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				TargetAttributes = {
+					8D1107260486CEB800E47090 = {
+						SystemCapabilities = {
+							com.apple.Mac = {
+								enabled = 0;
+							};
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "MapCallouts" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				Base,
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* TrackIt */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* MapCallouts */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53D0301A19B78E6A00BE0B93 /* InfoPlist.strings in Resources */,
+				53B6FD9218A9712800B90785 /* PopoverView.xib in Resources */,
+				53928DF713009DA4004F1A72 /* MainMenu.xib in Resources */,
+				53D0301919B78E6A00BE0B93 /* Credits.rtf in Resources */,
+				53A87F9719B79B860004C365 /* Images.xcassets in Resources */,
+				5348109718D0E034009A0D84 /* MainView.xib in Resources */,
+				53A1FA0818A9A022008EF6D5 /* ReadMe.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53F2E3E718D0F73C00CB7AA7 /* CustomAnnotation.m in Sources */,
+				531B1AB518A597BE00D43367 /* AppDelegate.m in Sources */,
+				531B1AC918A59CF600D43367 /* SFAnnotation.m in Sources */,
+				531B1AC718A59CF600D43367 /* BridgeAnnotation.m in Sources */,
+				5348109C18D0F2BB009A0D84 /* MapViewController.m in Sources */,
+				53B6FD9518A971B400B90785 /* BridgeViewController.m in Sources */,
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				531B1AD118A5A10C00D43367 /* CustomAnnotationView.m in Sources */,
+				531B1AB618A597BE00D43367 /* MyWindowController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5348109518D0E034009A0D84 /* MainView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53D02FD319B78DD900BE0B93 /* Base */,
+			);
+			name = MainView.xib;
+			sourceTree = "<group>";
+		};
+		53928DF513009DA4004F1A72 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53D02FD219B78DD800BE0B93 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		53B6FD9018A9712800B90785 /* PopoverView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53D02FD419B78DDA00BE0B93 /* Base */,
+			);
+			name = PopoverView.xib;
+			sourceTree = "<group>";
+		};
+		53D0301519B78E6A00BE0B93 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53D0301619B78E6A00BE0B93 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		53D0301719B78E6A00BE0B93 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53D0301819B78E6A00BE0B93 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = Prefix.pch;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = MapCallouts;
+				PROVISIONING_PROFILE = "";
+				STRIP_INSTALLED_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PREFIX_HEADER = Prefix.pch;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = MapCallouts;
+				PROVISIONING_PROFILE = "";
+				STRIP_INSTALLED_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "MapCallouts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "MapCallouts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

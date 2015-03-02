@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+ <asset>
+  <contributor>
+   <authoring_tool>SceneKit Collada Exporter v1.0</authoring_tool>
+  </contributor>
+  <created>2014-05-02T07:48:48Z</created>
+  <modified>2014-05-02T07:48:48Z</modified>
+  <unit meter="0.025400"/>
+  <up_axis>Z_UP</up_axis>
+ </asset>
+ <library_images>
+  <image id="image1">
+   <init_from>../textures/train_wood.jpg</init_from>
+  </image>
+ </library_images>
+ <library_materials>
+  <material id="_7_-_Default-material" name="_7_-_Default">
+   <instance_effect url="#effect__7_-_Default-material"/>
+  </material>
+ </library_materials>
+ <library_effects>
+  <effect id="effect__7_-_Default-material">
+   <profile_COMMON>
+    <newparam sid="ID2_image1_surface">
+     <surface type="2D">
+      <init_from>image1</init_from>
+     </surface>
+    </newparam>
+    <newparam sid="ID2_image1">
+     <sampler2D>
+      <source>ID2_image1_surface</source>
+      <wrap_s>CLAMP</wrap_s>
+      <wrap_t>CLAMP</wrap_t>
+      <minfilter>LINEAR</minfilter>
+      <magfilter>LINEAR</magfilter>
+      <mipfilter>NONE</mipfilter>
+     </sampler2D>
+    </newparam>
+    <technique sid="common">
+     <blinn>
+      <ambient>
+       <color>0 0 0 1</color>
+      </ambient>
+      <diffuse>
+       <texture texture="ID2_image1" texcoord="CHANNEL2"/>
+      </diffuse>
+      <specular>
+       <color>0 0 0 1</color>
+      </specular>
+      <shininess>
+       <float>0.463689</float>
+      </shininess>
+      <transparent opaque="A_ONE">
+       <color>1 1 1 1</color>
+      </transparent>
+      <transparency>
+       <float>1</float>
+      </transparency>
+      <index_of_refraction>
+       <float>1</float>
+      </index_of_refraction>
+     </blinn>
+    </technique>
+   </profile_COMMON>
+   <extra>
+    <technique profile="SceneKit">
+     <litPerPixel>1</litPerPixel>
+     <ambient_diffuse_lock>1</ambient_diffuse_lock>
+    </technique>
+   </extra>
+  </effect>
+ </library_effects>
+ <library_geometries>
+  <geometry id="geom-Box01" name="Box01">
+   <mesh>
+    <source id="geom-Box01-positions">
+     <float_array id="ID3-array" count="144">-40.3625 -29.8593 0 -40.3625 29.8593 0 40.3625 29.8593 0 40.3625 -29.8593 0 -40.3625 -29.8593 0 40.3625 -29.8593 0 40.3625 -29.8593 26.7083 -40.3625 -29.8593 26.7083 40.3625 -29.8593 0 40.3625 29.8593 0 40.3625 29.8593 26.7083 40.3625 -29.8593 26.7083 40.3625 29.8593 0 -40.3625 29.8593 0 -40.3625 29.8593 26.7083 40.3625 29.8593 26.7083 -40.3625 29.8593 0 -40.3625 -29.8593 0 -40.3625 -29.8593 26.7083 -40.3625 29.8593 26.7083 -37.027 -26.2941 26.7083 -37.027 25.9941 26.7083 -40.3625 29.8593 26.7083 -40.3625 -29.8593 26.7083 36.4268 -26.2941 26.7083 40.3625 -29.8593 26.7083 40.3625 29.8593 26.7083 36.4268 25.9941 26.7083 -37.027 -26.2941 3.11579 36.4268 -26.2941 3.11579 36.4268 25.9941 3.11579 -37.027 25.9941 3.11579 36.4268 -26.2941 3.11579 36.4268 -26.2941 26.7083 36.4268 25.9941 26.7083 36.4268 25.9941 3.11579 -37.027 -26.2941 3.11579 -37.027 -26.2941 26.7083 36.4268 -26.2941 26.7083 36.4268 -26.2941 3.11579 -37.027 25.9941 3.11579 -37.027 25.9941 26.7083 -37.027 -26.2941 26.7083 -37.027 -26.2941 3.11579 36.4268 25.9941 3.11579 36.4268 25.9941 26.7083 -37.027 25.9941 26.7083 -37.027 25.9941 3.11579 </float_array>
+     <technique_common>
+      <accessor source="#ID3-array" count="48" stride="3">
+       <param name="X" type="float"/>
+       <param name="Y" type="float"/>
+       <param name="Z" type="float"/>
+      </accessor>
+     </technique_common>
+    </source>
+    <source id="geom-Box01-normals">
+     <float_array id="ID4-array" count="144">0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 -1 0 0 -1 0 0 -1 0 0 -1 0 0 0 1 0 0 1 0 0 1 0 0 1 0 1 -5.32695e-08 4.36296e-08 1 -7.29552e-08 0 1 -1.96857e-08 1.18062e-07 1 0 1.61691e-07 0 -1 0 0 -1 0 0 -1 0 0 -1 0 </float_array>
+     <technique_common>
+      <accessor source="#ID4-array" count="48" stride="3">
+       <param name="X" type="float"/>
+       <param name="Y" type="float"/>
+       <param name="Z" type="float"/>
+      </accessor>
+     </technique_common>
+    </source>
+    <source id="geom-Box01-map1">
+     <float_array id="ID5-array" count="96">1 0 1 1 0 1 0 0 0 0 1 0 1 1 0 1 0 0 1 0 1 1 0 1 0 0 1 0 1 1 0 1 0 0 1 0 1 1 0 1 0.0413196 0.0596985 0.0413196 0.935276 0 1 0 0 0.951245 0.0596985 1 0 1 1 0.951245 0.935276 1 0 0 0 0 1 1 1 0 0 0 0.520644 1 0.520644 1 0 0 0 0 0.520644 1 0.520644 1 0 0 0 0 0.520644 1 0.520644 1 0 0 0 0 0.520644 1 0.520644 1 0 </float_array>
+     <technique_common>
+      <accessor source="#ID5-array" count="48" stride="2">
+       <param name="S" type="float"/>
+       <param name="T" type="float"/>
+      </accessor>
+     </technique_common>
+    </source>
+    <source id="geom-Box01-map1-textangents">
+     <float_array id="ID6-array" count="192">-1 0 0 1 -1 0 0 1 -1 0 0 1 -1 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 -1 0 0 1 -1 0 0 1 -1 0 0 1 -1 0 0 1 0 -1 0 1 0 -1 0 1 0 -1 0 1 0 -1 0 1 1 1.71732e-07 0 1 1 2.33554e-07 0 1 1 1.16685e-07 0 1 1 -1.2309e-10 0 1 1 1.33658e-07 0 1 1 1.56479e-10 0 1 1 1.78211e-07 0 1 1 1.61954e-07 0 1 -1 0 0 1 -1 0 0 1 -1 0 0 1 -1 0 0 1 0 1 -2.58273e-08 1 0 1 -5.16546e-08 1 0 1 -2.58273e-08 1 0 1 0 1 1 0 1.83852e-08 1 1 0 3.67704e-08 1 1 0 1.83852e-08 1 1 0 0 1 -5.32695e-08 -1 -2.58273e-08 1 -7.29552e-08 -1 -5.16546e-08 1 -1.96857e-08 -1 -2.58273e-08 1 0 -1 0 1 -1 0 1.83852e-08 1 -1 0 3.67704e-08 1 -1 0 1.83852e-08 1 -1 0 0 1 </float_array>
+     <technique_common>
+      <accessor source="#ID6-array" count="48" stride="4">
+       <param name="A" type="float"/>
+       <param name="B" type="float"/>
+       <param name="C" type="float"/>
+       <param name="D" type="float"/>
+      </accessor>
+     </technique_common>
+    </source>
+    <vertices id="geom-Box01-positions-vertices">
+     <input semantic="POSITION" source="#geom-Box01-positions"/>
+    </vertices>
+    <triangles count="28" material="geometryElement7">
+     <input semantic="VERTEX" offset="0" source="#geom-Box01-positions-vertices"/>
+     <input semantic="NORMAL" offset="0" source="#geom-Box01-normals"/>
+     <input semantic="TEXCOORD" offset="0" source="#geom-Box01-map1" set="1"/>
+     <input semantic="TEXTANGENT" offset="0" source="#geom-Box01-map1-textangents"/>
+     <p>0 1 2 2 3 0 4 5 6 6 7 4 8 9 10 10 11 8 12 13 14 14 15 12 16 17 18 18 19 16 20 21 22 20 22 23 24 20 23 24 23 25 24 25 26 27 24 26 27 26 22 27 22 21 28 29 30 30 31 28 32 33 34 34 35 32 36 37 38 38 39 36 40 41 42 42 43 40 44 45 46 46 47 44 </p>
+    </triangles>
+   </mesh>
+  </geometry>
+ </library_geometries>
+ <library_visual_scenes>
+  <visual_scene id="scene8">
+   <node id="node-Box01" name="box">
+    <matrix>1 0 0 0.4075203 0 1 0 0.1317787 0 0 1 0 0 0 0 1 </matrix>
+    <instance_geometry url="#geom-Box01">
+     <bind_material>
+      <technique_common>
+       <instance_material symbol="geometryElement7" target="#_7_-_Default-material">
+        <bind_vertex_input semantic="CHANNEL2" input_semantic="TEXCOORD" input_set="1"/>
+       </instance_material>
+      </technique_common>
+     </bind_material>
+    </instance_geometry>
+   </node>
+  </visual_scene>
+ </library_visual_scenes>
+ <scene>
+  <instance_visual_scene url="#scene8"/>
+ </scene>
+</COLLADA>

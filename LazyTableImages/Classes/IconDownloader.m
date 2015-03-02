@@ -4,7 +4,7 @@
  As a delegate "NSURLConnectionDelegate" is downloads the app icon in the background if it does not
  yet exist and works in conjunction with the RootViewController to manage which apps need their icon.
   
-  Version: 1.4 
+  Version: 1.5 
   
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple 
  Inc. ("Apple") in consideration of your agreement to the following 
@@ -44,7 +44,7 @@
  STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE 
  POSSIBILITY OF SUCH DAMAGE. 
   
- Copyright (C) 2013 Apple Inc. All Rights Reserved. 
+ Copyright (C) 2014 Apple Inc. All Rights Reserved. 
   
  */
 
@@ -59,10 +59,13 @@
 @end
 
 
+#pragma mark -
+
 @implementation IconDownloader
 
-#pragma mark
-
+// -------------------------------------------------------------------------------
+//	startDownload
+// -------------------------------------------------------------------------------
 - (void)startDownload
 {
     self.activeDownload = [NSMutableData data];
@@ -75,6 +78,9 @@
     self.imageConnection = conn;
 }
 
+// -------------------------------------------------------------------------------
+//	cancelDownload
+// -------------------------------------------------------------------------------
 - (void)cancelDownload
 {
     [self.imageConnection cancel];
@@ -82,13 +88,20 @@
     self.activeDownload = nil;
 }
 
+
 #pragma mark - NSURLConnectionDelegate
 
+// -------------------------------------------------------------------------------
+//	connection:didReceiveData:data
+// -------------------------------------------------------------------------------
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
     [self.activeDownload appendData:data];
 }
 
+// -------------------------------------------------------------------------------
+//	connection:didFailWithError:error
+// -------------------------------------------------------------------------------
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
 	// Clear the activeDownload property to allow later attempts
@@ -98,6 +111,9 @@
     self.imageConnection = nil;
 }
 
+// -------------------------------------------------------------------------------
+//	connectionDidFinishLoading:connection
+// -------------------------------------------------------------------------------
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
     // Set appIcon and clear temporary data/image
@@ -124,7 +140,9 @@
         
     // call our delegate and tell it that our icon is ready for display
     if (self.completionHandler)
+    {
         self.completionHandler();
+    }
 }
 
 @end

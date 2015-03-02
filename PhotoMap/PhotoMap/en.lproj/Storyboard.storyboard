@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Xmg-0k-Mtt">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--PhotoMapViewController-->
+        <scene sceneID="VDq-Hw-pGw">
+            <objects>
+                <viewController nibName="" id="k4c-uF-P7Y" userLabel="PhotoMapViewController" customClass="PhotoMapViewController" sceneMemberID="viewController">
+                    <mapView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="LbF-tx-z2y">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <connections>
+                            <outlet property="delegate" destination="k4c-uF-P7Y" id="HCu-Ay-B1k"/>
+                        </connections>
+                    </mapView>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <navigationItem key="navigationItem" title="PhotoMap" id="D74-Xq-BZM">
+                        <barButtonItem key="rightBarButtonItem" title="Go" id="42V-23-X8m">
+                            <connections>
+                                <action selector="zoomToCherryLake:" destination="k4c-uF-P7Y" id="LQe-5p-Wbe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <connections>
+                        <outlet property="mapView" destination="LbF-tx-z2y" id="Jaa-Y2-Zd3"/>
+                        <outlet property="view" destination="LbF-tx-z2y" id="8kL-gQ-DpT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sYR-Bs-X4D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="575" y="-5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Xi6-EJ-evj">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="Xmg-0k-Mtt" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="V59-Qx-PiH">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="k4c-uF-P7Y" kind="relationship" relationship="rootViewController" id="0MN-cq-ImX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QaG-Uf-mJ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="129" y="-5"/>
+        </scene>
+        <!--Data View Controller-->
+        <scene sceneID="hiI-UQ-HaK">
+            <objects>
+                <viewController storyboardIdentifier="DataViewController" id="gmh-Oe-wvr" customClass="DataViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1o5-x3-Enh"/>
+                        <viewControllerLayoutGuide type="bottom" id="Q6d-el-qex"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VAD-G4-pK8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u9L-1n-bRC">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="u9L-1n-bRC" secondAttribute="trailing" id="0n9-9r-X3g"/>
+                            <constraint firstItem="u9L-1n-bRC" firstAttribute="leading" secondItem="VAD-G4-pK8" secondAttribute="leading" id="85R-rM-otF"/>
+                            <constraint firstItem="u9L-1n-bRC" firstAttribute="top" secondItem="1o5-x3-Enh" secondAttribute="bottom" id="Fkk-UF-rhr"/>
+                            <constraint firstItem="Q6d-el-qex" firstAttribute="top" secondItem="u9L-1n-bRC" secondAttribute="bottom" id="sDj-2U-krB"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <connections>
+                        <outlet property="imageView" destination="u9L-1n-bRC" id="bF1-na-xhV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1ah-Kb-UzG" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="982" y="-5"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

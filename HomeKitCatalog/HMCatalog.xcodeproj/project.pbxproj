@@ -1,0 +1,643 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DC1EC2A51A37C4B700535EC6 /* HomeKitTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1EC2A41A37C4B700535EC6 /* HomeKitTableViewController.m */; };
+		DC2CC6351A0C2A3300B44BD5 /* HomeStore.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2CC6341A0C2A3300B44BD5 /* HomeStore.m */; };
+		DC5C8DBB1A0806FA00F7F0CC /* UIViewController+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5C8DBA1A0806FA00F7F0CC /* UIViewController+Convenience.m */; };
+		DC5C8DBF1A084A9300F7F0CC /* ServiceGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5C8DBE1A084A9300F7F0CC /* ServiceGroupViewController.m */; };
+		DC5C8DC21A084DE500F7F0CC /* HMHome+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5C8DC11A084DE500F7F0CC /* HMHome+Properties.m */; };
+		DC5C8DC61A084E9800F7F0CC /* AddServicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5C8DC51A084E9800F7F0CC /* AddServicesViewController.m */; };
+		DC5CFE4D1A3A1690007B6847 /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC5CFE4C1A3A1690007B6847 /* HomeKit.framework */; };
+		DC5CFE4F1A3A1691007B6847 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC5CFE4E1A3A1691007B6847 /* ExternalAccessory.framework */; };
+		DC78CC711A043861001D3547 /* HomeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC78CC701A043861001D3547 /* HomeListViewController.m */; };
+		DCC0612B1A2FBE0400627AF7 /* UITableView+Updating.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC0612A1A2FBE0400627AF7 /* UITableView+Updating.m */; };
+		DCC9AACB1A08568700B53A42 /* ServiceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC9AACA1A08568700B53A42 /* ServiceCell.m */; };
+		DCC9AACD1A087A3700B53A42 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DCC9AACC1A087A3700B53A42 /* Localizable.strings */; };
+		DCE93C0F19FEF77300894C8F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE93BBD19FEF77300894C8F /* AppDelegate.m */; };
+		DCE93C1019FEF77300894C8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCE93BBE19FEF77300894C8F /* Main.storyboard */; };
+		DCE93C1319FEF77300894C8F /* AccessoryBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE93BC719FEF77300894C8F /* AccessoryBrowserViewController.m */; };
+		DCE93C1419FEF77300894C8F /* ControlsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE93BC919FEF77300894C8F /* ControlsViewController.m */; };
+		DCE93C1519FEF77300894C8F /* ServicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE93BCC19FEF77300894C8F /* ServicesViewController.m */; };
+		DCE93C1619FEF77300894C8F /* CharacteristicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE93BCF19FEF77300894C8F /* CharacteristicCell.m */; };
+		DCE93C1719FEF77300894C8F /* CharacteristicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCE93BD019FEF77300894C8F /* CharacteristicCell.xib */; };
+		DCE93C1819FEF77300894C8F /* SegmentedControlCharacteristicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE93BD219FEF77300894C8F /* SegmentedControlCharacteristicCell.m */; };
+		DCE93C1919FEF77300894C8F /* SegmentedControlCharacteristicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCE93BD319FEF77300894C8F /* SegmentedControlCharacteristicCell.xib */; };
+		DCE93C1A19FEF77300894C8F /* SliderCharacteristicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE93BD519FEF77300894C8F /* SliderCharacteristicCell.m */; };
+		DCE93C1B19FEF77300894C8F /* SliderCharacteristicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCE93BD619FEF77300894C8F /* SliderCharacteristicCell.xib */; };
+		DCE93C1C19FEF77300894C8F /* SwitchCharacteristicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE93BD819FEF77300894C8F /* SwitchCharacteristicCell.m */; };
+		DCE93C1D19FEF77300894C8F /* SwitchCharacteristicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCE93BD919FEF77300894C8F /* SwitchCharacteristicCell.xib */; };
+		DCE93C1E19FEF77300894C8F /* CharacteristicsTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE93BDB19FEF77300894C8F /* CharacteristicsTableViewDataSource.m */; };
+		DCE93C1F19FEF77300894C8F /* CharacteristicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE93BDD19FEF77300894C8F /* CharacteristicsViewController.m */; };
+		DCE93C2019FEF77300894C8F /* ModifyAccessoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE93BDF19FEF77300894C8F /* ModifyAccessoryViewController.m */; };
+		DCE93C2119FEF77300894C8F /* ControlsTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE93BE119FEF77300894C8F /* ControlsTableViewDataSource.m */; };
+		DCE93C2219FEF77300894C8F /* ActionSetCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE93BE419FEF77300894C8F /* ActionSetCreator.m */; };
+		DCE93C2319FEF77300894C8F /* ActionSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE93BE619FEF77300894C8F /* ActionSetViewController.m */; };
+		DCE93C2419FEF77300894C8F /* AccessoryUpdateController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE93BE919FEF77300894C8F /* AccessoryUpdateController.m */; };
+		DCE93C2519FEF77300894C8F /* HomeListConfigurationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE93BEB19FEF77300894C8F /* HomeListConfigurationViewController.m */; };
+		DCE93C2619FEF77300894C8F /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE93BED19FEF77300894C8F /* HomeViewController.m */; };
+		DCE93C2719FEF77300894C8F /* RoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE93BF019FEF77300894C8F /* RoomViewController.m */; };
+		DCE93C2819FEF77300894C8F /* TriggerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE93BF319FEF77300894C8F /* TriggerViewController.m */; };
+		DCE93C2919FEF77300894C8F /* AddRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE93BF619FEF77300894C8F /* AddRoomViewController.m */; };
+		DCE93C2A19FEF77300894C8F /* ZoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE93BF819FEF77300894C8F /* ZoneViewController.m */; };
+		DCE93C2C19FEF77300894C8F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCE93BFA19FEF77300894C8F /* Images.xcassets */; };
+		DCE93C2E19FEF77300894C8F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE93BFD19FEF77300894C8F /* main.m */; };
+		DCE93C2F19FEF77300894C8F /* HMCharacteristic+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE93C0019FEF77300894C8F /* HMCharacteristic+Properties.m */; };
+		DCE93C3019FEF77300894C8F /* HMCharacteristic+Readability.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE93C0219FEF77300894C8F /* HMCharacteristic+Readability.m */; };
+		DCE93C3119FEF77300894C8F /* HMService+Readability.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE93C0419FEF77300894C8F /* HMService+Readability.m */; };
+		DCE93C3219FEF77300894C8F /* NSError+HomeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE93C0619FEF77300894C8F /* NSError+HomeKit.m */; };
+		DCE93C3319FEF77300894C8F /* NSIndexPath+ArrayIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE93C0819FEF77300894C8F /* NSIndexPath+ArrayIndex.m */; };
+		DCE93C3519FEF77300894C8F /* UIAlertController+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE93C0C19FEF77300894C8F /* UIAlertController+Convenience.m */; };
+		DCE93C3619FEF77300894C8F /* UITableView+EmptyMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE93C0E19FEF77300894C8F /* UITableView+EmptyMessage.m */; };
+		DCF652041A098CC6003E9484 /* ActionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF652031A098CC6003E9484 /* ActionCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DC1EC2A31A37C4B700535EC6 /* HomeKitTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeKitTableViewController.h; sourceTree = "<group>"; };
+		DC1EC2A41A37C4B700535EC6 /* HomeKitTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeKitTableViewController.m; sourceTree = "<group>"; };
+		DC2CC6331A0C2A3300B44BD5 /* HomeStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeStore.h; sourceTree = "<group>"; };
+		DC2CC6341A0C2A3300B44BD5 /* HomeStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeStore.m; sourceTree = "<group>"; };
+		DC5C8DB91A0806FA00F7F0CC /* UIViewController+Convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Convenience.h"; sourceTree = "<group>"; };
+		DC5C8DBA1A0806FA00F7F0CC /* UIViewController+Convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Convenience.m"; sourceTree = "<group>"; };
+		DC5C8DBD1A084A9300F7F0CC /* ServiceGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceGroupViewController.h; sourceTree = "<group>"; };
+		DC5C8DBE1A084A9300F7F0CC /* ServiceGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceGroupViewController.m; sourceTree = "<group>"; };
+		DC5C8DC01A084DE500F7F0CC /* HMHome+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HMHome+Properties.h"; sourceTree = "<group>"; };
+		DC5C8DC11A084DE500F7F0CC /* HMHome+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HMHome+Properties.m"; sourceTree = "<group>"; };
+		DC5C8DC41A084E9800F7F0CC /* AddServicesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddServicesViewController.h; sourceTree = "<group>"; };
+		DC5C8DC51A084E9800F7F0CC /* AddServicesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddServicesViewController.m; sourceTree = "<group>"; };
+		DC5CFE4C1A3A1690007B6847 /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
+		DC5CFE4E1A3A1691007B6847 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		DC78CC6F1A043861001D3547 /* HomeListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeListViewController.h; sourceTree = "<group>"; };
+		DC78CC701A043861001D3547 /* HomeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeListViewController.m; sourceTree = "<group>"; };
+		DC99261D1A13DC3B00C05CC0 /* HMCatalog.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = HMCatalog.entitlements; sourceTree = "<group>"; };
+		DCC061291A2FBE0400627AF7 /* UITableView+Updating.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+Updating.h"; sourceTree = "<group>"; };
+		DCC0612A1A2FBE0400627AF7 /* UITableView+Updating.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Updating.m"; sourceTree = "<group>"; };
+		DCC9AAC91A08568700B53A42 /* ServiceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceCell.h; sourceTree = "<group>"; };
+		DCC9AACA1A08568700B53A42 /* ServiceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceCell.m; sourceTree = "<group>"; };
+		DCC9AACC1A087A3700B53A42 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		DCE93B0519FEF5AD00894C8F /* HMCatalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HMCatalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCE93BBC19FEF77300894C8F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DCE93BBD19FEF77300894C8F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DCE93BBF19FEF77300894C8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DCE93BC619FEF77300894C8F /* AccessoryBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessoryBrowserViewController.h; sourceTree = "<group>"; };
+		DCE93BC719FEF77300894C8F /* AccessoryBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccessoryBrowserViewController.m; sourceTree = "<group>"; };
+		DCE93BC819FEF77300894C8F /* ControlsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlsViewController.h; sourceTree = "<group>"; };
+		DCE93BC919FEF77300894C8F /* ControlsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlsViewController.m; sourceTree = "<group>"; };
+		DCE93BCB19FEF77300894C8F /* ServicesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServicesViewController.h; sourceTree = "<group>"; };
+		DCE93BCC19FEF77300894C8F /* ServicesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServicesViewController.m; sourceTree = "<group>"; };
+		DCE93BCE19FEF77300894C8F /* CharacteristicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacteristicCell.h; sourceTree = "<group>"; };
+		DCE93BCF19FEF77300894C8F /* CharacteristicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacteristicCell.m; sourceTree = "<group>"; };
+		DCE93BD019FEF77300894C8F /* CharacteristicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharacteristicCell.xib; sourceTree = "<group>"; };
+		DCE93BD119FEF77300894C8F /* SegmentedControlCharacteristicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentedControlCharacteristicCell.h; sourceTree = "<group>"; };
+		DCE93BD219FEF77300894C8F /* SegmentedControlCharacteristicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentedControlCharacteristicCell.m; sourceTree = "<group>"; };
+		DCE93BD319FEF77300894C8F /* SegmentedControlCharacteristicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SegmentedControlCharacteristicCell.xib; sourceTree = "<group>"; };
+		DCE93BD419FEF77300894C8F /* SliderCharacteristicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderCharacteristicCell.h; sourceTree = "<group>"; };
+		DCE93BD519FEF77300894C8F /* SliderCharacteristicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderCharacteristicCell.m; sourceTree = "<group>"; };
+		DCE93BD619FEF77300894C8F /* SliderCharacteristicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SliderCharacteristicCell.xib; sourceTree = "<group>"; };
+		DCE93BD719FEF77300894C8F /* SwitchCharacteristicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchCharacteristicCell.h; sourceTree = "<group>"; };
+		DCE93BD819FEF77300894C8F /* SwitchCharacteristicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchCharacteristicCell.m; sourceTree = "<group>"; };
+		DCE93BD919FEF77300894C8F /* SwitchCharacteristicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwitchCharacteristicCell.xib; sourceTree = "<group>"; };
+		DCE93BDA19FEF77300894C8F /* CharacteristicsTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacteristicsTableViewDataSource.h; sourceTree = "<group>"; };
+		DCE93BDB19FEF77300894C8F /* CharacteristicsTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacteristicsTableViewDataSource.m; sourceTree = "<group>"; };
+		DCE93BDC19FEF77300894C8F /* CharacteristicsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacteristicsViewController.h; sourceTree = "<group>"; };
+		DCE93BDD19FEF77300894C8F /* CharacteristicsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacteristicsViewController.m; sourceTree = "<group>"; };
+		DCE93BDE19FEF77300894C8F /* ModifyAccessoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyAccessoryViewController.h; sourceTree = "<group>"; };
+		DCE93BDF19FEF77300894C8F /* ModifyAccessoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModifyAccessoryViewController.m; sourceTree = "<group>"; };
+		DCE93BE019FEF77300894C8F /* ControlsTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlsTableViewDataSource.h; sourceTree = "<group>"; };
+		DCE93BE119FEF77300894C8F /* ControlsTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlsTableViewDataSource.m; sourceTree = "<group>"; };
+		DCE93BE319FEF77300894C8F /* ActionSetCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSetCreator.h; sourceTree = "<group>"; };
+		DCE93BE419FEF77300894C8F /* ActionSetCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSetCreator.m; sourceTree = "<group>"; };
+		DCE93BE519FEF77300894C8F /* ActionSetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSetViewController.h; sourceTree = "<group>"; };
+		DCE93BE619FEF77300894C8F /* ActionSetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSetViewController.m; sourceTree = "<group>"; };
+		DCE93BE819FEF77300894C8F /* AccessoryUpdateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessoryUpdateController.h; sourceTree = "<group>"; };
+		DCE93BE919FEF77300894C8F /* AccessoryUpdateController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccessoryUpdateController.m; sourceTree = "<group>"; };
+		DCE93BEA19FEF77300894C8F /* HomeListConfigurationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeListConfigurationViewController.h; sourceTree = "<group>"; };
+		DCE93BEB19FEF77300894C8F /* HomeListConfigurationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeListConfigurationViewController.m; sourceTree = "<group>"; };
+		DCE93BEC19FEF77300894C8F /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		DCE93BED19FEF77300894C8F /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		DCE93BEF19FEF77300894C8F /* RoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomViewController.h; sourceTree = "<group>"; };
+		DCE93BF019FEF77300894C8F /* RoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomViewController.m; sourceTree = "<group>"; };
+		DCE93BF219FEF77300894C8F /* TriggerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TriggerViewController.h; sourceTree = "<group>"; };
+		DCE93BF319FEF77300894C8F /* TriggerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TriggerViewController.m; sourceTree = "<group>"; };
+		DCE93BF519FEF77300894C8F /* AddRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddRoomViewController.h; sourceTree = "<group>"; };
+		DCE93BF619FEF77300894C8F /* AddRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddRoomViewController.m; sourceTree = "<group>"; };
+		DCE93BF719FEF77300894C8F /* ZoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoneViewController.h; sourceTree = "<group>"; };
+		DCE93BF819FEF77300894C8F /* ZoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoneViewController.m; sourceTree = "<group>"; };
+		DCE93BFA19FEF77300894C8F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DCE93BFC19FEF77300894C8F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCE93BFD19FEF77300894C8F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DCE93BFF19FEF77300894C8F /* HMCharacteristic+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HMCharacteristic+Properties.h"; sourceTree = "<group>"; };
+		DCE93C0019FEF77300894C8F /* HMCharacteristic+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HMCharacteristic+Properties.m"; sourceTree = "<group>"; };
+		DCE93C0119FEF77300894C8F /* HMCharacteristic+Readability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HMCharacteristic+Readability.h"; sourceTree = "<group>"; };
+		DCE93C0219FEF77300894C8F /* HMCharacteristic+Readability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HMCharacteristic+Readability.m"; sourceTree = "<group>"; };
+		DCE93C0319FEF77300894C8F /* HMService+Readability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HMService+Readability.h"; sourceTree = "<group>"; };
+		DCE93C0419FEF77300894C8F /* HMService+Readability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HMService+Readability.m"; sourceTree = "<group>"; };
+		DCE93C0519FEF77300894C8F /* NSError+HomeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+HomeKit.h"; sourceTree = "<group>"; };
+		DCE93C0619FEF77300894C8F /* NSError+HomeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+HomeKit.m"; sourceTree = "<group>"; };
+		DCE93C0719FEF77300894C8F /* NSIndexPath+ArrayIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexPath+ArrayIndex.h"; sourceTree = "<group>"; };
+		DCE93C0819FEF77300894C8F /* NSIndexPath+ArrayIndex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexPath+ArrayIndex.m"; sourceTree = "<group>"; };
+		DCE93C0B19FEF77300894C8F /* UIAlertController+Convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Convenience.h"; sourceTree = "<group>"; };
+		DCE93C0C19FEF77300894C8F /* UIAlertController+Convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Convenience.m"; sourceTree = "<group>"; };
+		DCE93C0D19FEF77300894C8F /* UITableView+EmptyMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+EmptyMessage.h"; sourceTree = "<group>"; };
+		DCE93C0E19FEF77300894C8F /* UITableView+EmptyMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+EmptyMessage.m"; sourceTree = "<group>"; };
+		DCF652021A098CC6003E9484 /* ActionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionCell.h; sourceTree = "<group>"; };
+		DCF652031A098CC6003E9484 /* ActionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DCE93B0219FEF5AD00894C8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC5CFE4F1A3A1691007B6847 /* ExternalAccessory.framework in Frameworks */,
+				DC5CFE4D1A3A1690007B6847 /* HomeKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DC5C8DBC1A084A7700F7F0CC /* Service Groups */ = {
+			isa = PBXGroup;
+			children = (
+				DC5C8DBD1A084A9300F7F0CC /* ServiceGroupViewController.h */,
+				DC5C8DBE1A084A9300F7F0CC /* ServiceGroupViewController.m */,
+				DC5C8DC41A084E9800F7F0CC /* AddServicesViewController.h */,
+				DC5C8DC51A084E9800F7F0CC /* AddServicesViewController.m */,
+			);
+			name = "Service Groups";
+			path = "HomeKit Attributes/Homes/Service Groups";
+			sourceTree = "<group>";
+		};
+		DCE93AFC19FEF5AD00894C8F = {
+			isa = PBXGroup;
+			children = (
+				DC5CFE4E1A3A1691007B6847 /* ExternalAccessory.framework */,
+				DC5CFE4C1A3A1690007B6847 /* HomeKit.framework */,
+				DCE93BBB19FEF77300894C8F /* HMCatalog */,
+				DCE93B0619FEF5AD00894C8F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DCE93B0619FEF5AD00894C8F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DCE93B0519FEF5AD00894C8F /* HMCatalog.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DCE93BBB19FEF77300894C8F /* HMCatalog */ = {
+			isa = PBXGroup;
+			children = (
+				DC99261D1A13DC3B00C05CC0 /* HMCatalog.entitlements */,
+				DCE93BBC19FEF77300894C8F /* AppDelegate.h */,
+				DCE93BBD19FEF77300894C8F /* AppDelegate.m */,
+				DC1EC2A31A37C4B700535EC6 /* HomeKitTableViewController.h */,
+				DC1EC2A41A37C4B700535EC6 /* HomeKitTableViewController.m */,
+				DCE93BBE19FEF77300894C8F /* Main.storyboard */,
+				DCC9AACC1A087A3700B53A42 /* Localizable.strings */,
+				DCE93BE719FEF77300894C8F /* Homes */,
+				DCE93BC519FEF77300894C8F /* Accessories */,
+				DCE93BEE19FEF77300894C8F /* Rooms */,
+				DCE93BF419FEF77300894C8F /* Zones */,
+				DCE93BE219FEF77300894C8F /* Action Sets */,
+				DCE93BF119FEF77300894C8F /* Triggers */,
+				DC5C8DBC1A084A7700F7F0CC /* Service Groups */,
+				DCE93BFE19FEF77300894C8F /* Utilities */,
+				DCE93BFA19FEF77300894C8F /* Images.xcassets */,
+				DCE93BFB19FEF77300894C8F /* Supporting Files */,
+			);
+			path = HMCatalog;
+			sourceTree = "<group>";
+		};
+		DCE93BC519FEF77300894C8F /* Accessories */ = {
+			isa = PBXGroup;
+			children = (
+				DCE93BE819FEF77300894C8F /* AccessoryUpdateController.h */,
+				DCE93BE919FEF77300894C8F /* AccessoryUpdateController.m */,
+				DCE93BC619FEF77300894C8F /* AccessoryBrowserViewController.h */,
+				DCE93BC719FEF77300894C8F /* AccessoryBrowserViewController.m */,
+				DCE93BC819FEF77300894C8F /* ControlsViewController.h */,
+				DCE93BC919FEF77300894C8F /* ControlsViewController.m */,
+				DCE93BE019FEF77300894C8F /* ControlsTableViewDataSource.h */,
+				DCE93BE119FEF77300894C8F /* ControlsTableViewDataSource.m */,
+				DCE93BCA19FEF77300894C8F /* Services */,
+				DCE93BDE19FEF77300894C8F /* ModifyAccessoryViewController.h */,
+				DCE93BDF19FEF77300894C8F /* ModifyAccessoryViewController.m */,
+			);
+			name = Accessories;
+			path = "HomeKit Attributes/Homes/Accessories";
+			sourceTree = "<group>";
+		};
+		DCE93BCA19FEF77300894C8F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DCC9AAC91A08568700B53A42 /* ServiceCell.h */,
+				DCC9AACA1A08568700B53A42 /* ServiceCell.m */,
+				DCE93BCB19FEF77300894C8F /* ServicesViewController.h */,
+				DCE93BCC19FEF77300894C8F /* ServicesViewController.m */,
+				DCE93BCD19FEF77300894C8F /* Charcteristic Cells */,
+				DCE93BDC19FEF77300894C8F /* CharacteristicsViewController.h */,
+				DCE93BDD19FEF77300894C8F /* CharacteristicsViewController.m */,
+				DCE93BDA19FEF77300894C8F /* CharacteristicsTableViewDataSource.h */,
+				DCE93BDB19FEF77300894C8F /* CharacteristicsTableViewDataSource.m */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DCE93BCD19FEF77300894C8F /* Charcteristic Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DCE93BCE19FEF77300894C8F /* CharacteristicCell.h */,
+				DCE93BCF19FEF77300894C8F /* CharacteristicCell.m */,
+				DCE93BD019FEF77300894C8F /* CharacteristicCell.xib */,
+				DCE93BD119FEF77300894C8F /* SegmentedControlCharacteristicCell.h */,
+				DCE93BD219FEF77300894C8F /* SegmentedControlCharacteristicCell.m */,
+				DCE93BD319FEF77300894C8F /* SegmentedControlCharacteristicCell.xib */,
+				DCE93BD419FEF77300894C8F /* SliderCharacteristicCell.h */,
+				DCE93BD519FEF77300894C8F /* SliderCharacteristicCell.m */,
+				DCE93BD619FEF77300894C8F /* SliderCharacteristicCell.xib */,
+				DCE93BD719FEF77300894C8F /* SwitchCharacteristicCell.h */,
+				DCE93BD819FEF77300894C8F /* SwitchCharacteristicCell.m */,
+				DCE93BD919FEF77300894C8F /* SwitchCharacteristicCell.xib */,
+			);
+			path = "Charcteristic Cells";
+			sourceTree = "<group>";
+		};
+		DCE93BE219FEF77300894C8F /* Action Sets */ = {
+			isa = PBXGroup;
+			children = (
+				DCE93BE319FEF77300894C8F /* ActionSetCreator.h */,
+				DCE93BE419FEF77300894C8F /* ActionSetCreator.m */,
+				DCE93BE519FEF77300894C8F /* ActionSetViewController.h */,
+				DCE93BE619FEF77300894C8F /* ActionSetViewController.m */,
+				DCF652021A098CC6003E9484 /* ActionCell.h */,
+				DCF652031A098CC6003E9484 /* ActionCell.m */,
+			);
+			name = "Action Sets";
+			path = "HomeKit Attributes/Homes/Action Sets";
+			sourceTree = "<group>";
+		};
+		DCE93BE719FEF77300894C8F /* Homes */ = {
+			isa = PBXGroup;
+			children = (
+				DCE93BEA19FEF77300894C8F /* HomeListConfigurationViewController.h */,
+				DCE93BEB19FEF77300894C8F /* HomeListConfigurationViewController.m */,
+				DC78CC6F1A043861001D3547 /* HomeListViewController.h */,
+				DC78CC701A043861001D3547 /* HomeListViewController.m */,
+				DCE93BEC19FEF77300894C8F /* HomeViewController.h */,
+				DCE93BED19FEF77300894C8F /* HomeViewController.m */,
+				DC2CC6331A0C2A3300B44BD5 /* HomeStore.h */,
+				DC2CC6341A0C2A3300B44BD5 /* HomeStore.m */,
+			);
+			name = Homes;
+			path = "HomeKit Attributes/Homes";
+			sourceTree = "<group>";
+		};
+		DCE93BEE19FEF77300894C8F /* Rooms */ = {
+			isa = PBXGroup;
+			children = (
+				DCE93BEF19FEF77300894C8F /* RoomViewController.h */,
+				DCE93BF019FEF77300894C8F /* RoomViewController.m */,
+			);
+			name = Rooms;
+			path = "HomeKit Attributes/Homes/Rooms";
+			sourceTree = "<group>";
+		};
+		DCE93BF119FEF77300894C8F /* Triggers */ = {
+			isa = PBXGroup;
+			children = (
+				DCE93BF219FEF77300894C8F /* TriggerViewController.h */,
+				DCE93BF319FEF77300894C8F /* TriggerViewController.m */,
+			);
+			name = Triggers;
+			path = "HomeKit Attributes/Homes/Triggers";
+			sourceTree = "<group>";
+		};
+		DCE93BF419FEF77300894C8F /* Zones */ = {
+			isa = PBXGroup;
+			children = (
+				DCE93BF519FEF77300894C8F /* AddRoomViewController.h */,
+				DCE93BF619FEF77300894C8F /* AddRoomViewController.m */,
+				DCE93BF719FEF77300894C8F /* ZoneViewController.h */,
+				DCE93BF819FEF77300894C8F /* ZoneViewController.m */,
+			);
+			name = Zones;
+			path = "HomeKit Attributes/Homes/Zones";
+			sourceTree = "<group>";
+		};
+		DCE93BFB19FEF77300894C8F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DCE93BFC19FEF77300894C8F /* Info.plist */,
+				DCE93BFD19FEF77300894C8F /* main.m */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DCE93BFE19FEF77300894C8F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				DCE93BFF19FEF77300894C8F /* HMCharacteristic+Properties.h */,
+				DCE93C0019FEF77300894C8F /* HMCharacteristic+Properties.m */,
+				DCE93C0119FEF77300894C8F /* HMCharacteristic+Readability.h */,
+				DCE93C0219FEF77300894C8F /* HMCharacteristic+Readability.m */,
+				DCE93C0319FEF77300894C8F /* HMService+Readability.h */,
+				DCE93C0419FEF77300894C8F /* HMService+Readability.m */,
+				DCE93C0519FEF77300894C8F /* NSError+HomeKit.h */,
+				DCE93C0619FEF77300894C8F /* NSError+HomeKit.m */,
+				DCE93C0719FEF77300894C8F /* NSIndexPath+ArrayIndex.h */,
+				DCE93C0819FEF77300894C8F /* NSIndexPath+ArrayIndex.m */,
+				DCE93C0B19FEF77300894C8F /* UIAlertController+Convenience.h */,
+				DCE93C0C19FEF77300894C8F /* UIAlertController+Convenience.m */,
+				DC5C8DB91A0806FA00F7F0CC /* UIViewController+Convenience.h */,
+				DC5C8DBA1A0806FA00F7F0CC /* UIViewController+Convenience.m */,
+				DCE93C0D19FEF77300894C8F /* UITableView+EmptyMessage.h */,
+				DCE93C0E19FEF77300894C8F /* UITableView+EmptyMessage.m */,
+				DCC061291A2FBE0400627AF7 /* UITableView+Updating.h */,
+				DCC0612A1A2FBE0400627AF7 /* UITableView+Updating.m */,
+				DC5C8DC01A084DE500F7F0CC /* HMHome+Properties.h */,
+				DC5C8DC11A084DE500F7F0CC /* HMHome+Properties.m */,
+			);
+			name = Utilities;
+			path = "Supporting Files/Utilities";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DCE93B0419FEF5AD00894C8F /* HMCatalog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCE93B2819FEF5AD00894C8F /* Build configuration list for PBXNativeTarget "HMCatalog" */;
+			buildPhases = (
+				DCE93B0119FEF5AD00894C8F /* Sources */,
+				DCE93B0219FEF5AD00894C8F /* Frameworks */,
+				DCE93B0319FEF5AD00894C8F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HMCatalog;
+			productName = "HomeKit Sample";
+			productReference = DCE93B0519FEF5AD00894C8F /* HMCatalog.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DCE93AFD19FEF5AD00894C8F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				TargetAttributes = {
+					DCE93B0419FEF5AD00894C8F = {
+						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 6GQGH2Q533;
+						SystemCapabilities = {
+							com.apple.HomeKit = {
+								enabled = 1;
+							};
+							com.apple.WAC = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = DCE93B0019FEF5AD00894C8F /* Build configuration list for PBXProject "HMCatalog" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+			);
+			mainGroup = DCE93AFC19FEF5AD00894C8F;
+			productRefGroup = DCE93B0619FEF5AD00894C8F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DCE93B0419FEF5AD00894C8F /* HMCatalog */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DCE93B0319FEF5AD00894C8F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCE93C2C19FEF77300894C8F /* Images.xcassets in Resources */,
+				DCE93C1719FEF77300894C8F /* CharacteristicCell.xib in Resources */,
+				DCE93C1D19FEF77300894C8F /* SwitchCharacteristicCell.xib in Resources */,
+				DCC9AACD1A087A3700B53A42 /* Localizable.strings in Resources */,
+				DCE93C1019FEF77300894C8F /* Main.storyboard in Resources */,
+				DCE93C1919FEF77300894C8F /* SegmentedControlCharacteristicCell.xib in Resources */,
+				DCE93C1B19FEF77300894C8F /* SliderCharacteristicCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DCE93B0119FEF5AD00894C8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCE93C1C19FEF77300894C8F /* SwitchCharacteristicCell.m in Sources */,
+				DCE93C2719FEF77300894C8F /* RoomViewController.m in Sources */,
+				DC1EC2A51A37C4B700535EC6 /* HomeKitTableViewController.m in Sources */,
+				DCE93C1519FEF77300894C8F /* ServicesViewController.m in Sources */,
+				DCE93C1319FEF77300894C8F /* AccessoryBrowserViewController.m in Sources */,
+				DC78CC711A043861001D3547 /* HomeListViewController.m in Sources */,
+				DCE93C3319FEF77300894C8F /* NSIndexPath+ArrayIndex.m in Sources */,
+				DCE93C3019FEF77300894C8F /* HMCharacteristic+Readability.m in Sources */,
+				DCF652041A098CC6003E9484 /* ActionCell.m in Sources */,
+				DCE93C2119FEF77300894C8F /* ControlsTableViewDataSource.m in Sources */,
+				DCE93C1F19FEF77300894C8F /* CharacteristicsViewController.m in Sources */,
+				DCE93C3219FEF77300894C8F /* NSError+HomeKit.m in Sources */,
+				DCE93C2319FEF77300894C8F /* ActionSetViewController.m in Sources */,
+				DCE93C2F19FEF77300894C8F /* HMCharacteristic+Properties.m in Sources */,
+				DCE93C2419FEF77300894C8F /* AccessoryUpdateController.m in Sources */,
+				DCE93C3619FEF77300894C8F /* UITableView+EmptyMessage.m in Sources */,
+				DCE93C3119FEF77300894C8F /* HMService+Readability.m in Sources */,
+				DCE93C2519FEF77300894C8F /* HomeListConfigurationViewController.m in Sources */,
+				DCE93C2619FEF77300894C8F /* HomeViewController.m in Sources */,
+				DCC9AACB1A08568700B53A42 /* ServiceCell.m in Sources */,
+				DCE93C2819FEF77300894C8F /* TriggerViewController.m in Sources */,
+				DCE93C2A19FEF77300894C8F /* ZoneViewController.m in Sources */,
+				DCE93C1619FEF77300894C8F /* CharacteristicCell.m in Sources */,
+				DCE93C1A19FEF77300894C8F /* SliderCharacteristicCell.m in Sources */,
+				DCE93C1819FEF77300894C8F /* SegmentedControlCharacteristicCell.m in Sources */,
+				DC5C8DC61A084E9800F7F0CC /* AddServicesViewController.m in Sources */,
+				DCE93C3519FEF77300894C8F /* UIAlertController+Convenience.m in Sources */,
+				DCE93C2219FEF77300894C8F /* ActionSetCreator.m in Sources */,
+				DCE93C2919FEF77300894C8F /* AddRoomViewController.m in Sources */,
+				DCE93C0F19FEF77300894C8F /* AppDelegate.m in Sources */,
+				DCC0612B1A2FBE0400627AF7 /* UITableView+Updating.m in Sources */,
+				DCE93C1419FEF77300894C8F /* ControlsViewController.m in Sources */,
+				DC5C8DBB1A0806FA00F7F0CC /* UIViewController+Convenience.m in Sources */,
+				DCE93C1E19FEF77300894C8F /* CharacteristicsTableViewDataSource.m in Sources */,
+				DC2CC6351A0C2A3300B44BD5 /* HomeStore.m in Sources */,
+				DCE93C2E19FEF77300894C8F /* main.m in Sources */,
+				DCE93C2019FEF77300894C8F /* ModifyAccessoryViewController.m in Sources */,
+				DC5C8DC21A084DE500F7F0CC /* HMHome+Properties.m in Sources */,
+				DC5C8DBF1A084A9300F7F0CC /* ServiceGroupViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DCE93BBE19FEF77300894C8F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DCE93BBF19FEF77300894C8F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DCE93B2619FEF5AD00894C8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DCE93B2719FEF5AD00894C8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DCE93B2919FEF5AD00894C8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HMCatalog/HMCatalog.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "$(SRCROOT)/HMCatalog/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = HMCatalog;
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DCE93B2A19FEF5AD00894C8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HMCatalog/HMCatalog.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "$(SRCROOT)/HMCatalog/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = HMCatalog;
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DCE93B0019FEF5AD00894C8F /* Build configuration list for PBXProject "HMCatalog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCE93B2619FEF5AD00894C8F /* Debug */,
+				DCE93B2719FEF5AD00894C8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCE93B2819FEF5AD00894C8F /* Build configuration list for PBXNativeTarget "HMCatalog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCE93B2919FEF5AD00894C8F /* Debug */,
+				DCE93B2A19FEF5AD00894C8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DCE93AFD19FEF5AD00894C8F /* Project object */;
+}

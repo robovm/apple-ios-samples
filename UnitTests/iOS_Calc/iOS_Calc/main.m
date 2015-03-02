@@ -1,7 +1,7 @@
 /*
      File: main.m
  Abstract: This is the main source file of the app.
-  Version: 1.1
+  Version: 1.2
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
  Inc. ("Apple") in consideration of your agreement to the following
@@ -41,17 +41,18 @@
  STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
  POSSIBILITY OF SUCH DAMAGE.
  
- Copyright (C) 2012 Apple Inc. All Rights Reserved.
+ Copyright (C) 2014 Apple Inc. All Rights Reserved.
  
 */
 
 
 #import <UIKit/UIKit.h>
+#import "iOS_CalcAppDelegate.h"
 
-int main(int argc, char *argv[]) {
-    
+int main(int argc, char * argv[])
+{
     @autoreleasepool {
-        int retVal = UIApplicationMain(argc, argv, nil, nil);
-        return retVal;
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([CalcAppDelegate class]));
     }
 }
+

@@ -1,7 +1,7 @@
 /*
      File: CalcTests.m
  Abstract: This file implements the application unit tests for the Calc iOS app.
-  Version: 1.1
+  Version: 1.2
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
  Inc. ("Apple") in consideration of your agreement to the following
@@ -41,7 +41,7 @@
  STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
  POSSIBILITY OF SUCH DAMAGE.
  
- Copyright (C) 2012 Apple Inc. All Rights Reserved.
+ Copyright (C) 2014 Apple Inc. All Rights Reserved.
  
 */
 
@@ -58,15 +58,15 @@
 }
 
 - (void) testApp {
-   STAssertNotNil(app, @"Cannot find NSApplication instance");
+   XCTAssertNotNil(app, @"Cannot find NSApplication instance");
 }
 
 - (void) testCalcViewContoller {
-   STAssertNotNil(calc_view_controller, @"Cannot find CalcViewController instance");
+   XCTAssertNotNil(calc_view_controller, @"Cannot find CalcViewController instance");
 }
 
 - (void) testCalcView {
-   STAssertNotNil(calc_view, @"Cannot find CalcView instance");
+   XCTAssertNotNil(calc_view, @"Cannot find CalcView instance");
 }
 
 /* testAddition performs a chained addition test.
@@ -79,12 +79,12 @@
    [calc_view_controller press:[calc_view viewWithTag:13]];  // +
    [calc_view_controller press:[calc_view viewWithTag: 2]];  // 2
    [calc_view_controller press:[calc_view viewWithTag:12]];  // =   
-   STAssertTrue([[calc_view_controller.displayField stringValue] isEqualToString:@"8"], @"Part 1 failed.");
+   XCTAssertTrue([[calc_view_controller.displayField stringValue] isEqualToString:@"8"], @"Part 1 failed.");
    
    [calc_view_controller press:[calc_view viewWithTag:13]];  // +
    [calc_view_controller press:[calc_view viewWithTag: 2]];  // 2
    [calc_view_controller press:[calc_view viewWithTag:12]];  // =      
-   STAssertTrue([[calc_view_controller.displayField stringValue] isEqualToString:@"10"], @"Part 2 failed.");
+   XCTAssertTrue([[calc_view_controller.displayField stringValue] isEqualToString:@"10"], @"Part 2 failed.");
 }
 
 /* testSubtraction performs a simple subtraction test.
@@ -95,7 +95,7 @@
    [calc_view_controller press:[calc_view viewWithTag:14]];  // -
    [calc_view_controller press:[calc_view viewWithTag: 2]];  // 2
    [calc_view_controller press:[calc_view viewWithTag:12]];  // =   
-   STAssertTrue([[calc_view_controller.displayField stringValue] isEqualToString:@"4"], @"");
+   XCTAssertTrue([[calc_view_controller.displayField stringValue] isEqualToString:@"4"], @"");
 }
 
 /* testDivision performs a simple division test.
@@ -107,7 +107,7 @@
    [calc_view_controller press:[calc_view viewWithTag:16]];  // /
    [calc_view_controller press:[calc_view viewWithTag: 4]];  // 4
    [calc_view_controller press:[calc_view viewWithTag:12]];  // =   
-   STAssertTrue([[calc_view_controller.displayField stringValue] isEqualToString:@"6.25"], @"");
+   XCTAssertTrue([[calc_view_controller.displayField stringValue] isEqualToString:@"6.25"], @"");
 }
 
 /* testMultiplication performs a simple multiplication test.
@@ -119,7 +119,7 @@
    [calc_view_controller press:[calc_view viewWithTag:15]];  // x
    [calc_view_controller press:[calc_view viewWithTag: 8]];  // 8
    [calc_view_controller press:[calc_view viewWithTag:12]];  // =
-   STAssertTrue([[calc_view_controller.displayField stringValue] isEqualToString:@"152"], @"");
+   XCTAssertTrue([[calc_view_controller.displayField stringValue] isEqualToString:@"152"], @"");
 }
 
 /* testDelete tests the functionality of the D (Delete) key.
@@ -132,19 +132,19 @@
    [calc_view_controller press:[calc_view viewWithTag: 9]];  // 9
    [calc_view_controller press:[calc_view viewWithTag: 8]];  // 8
    [calc_view_controller press:[calc_view viewWithTag: 7]];  // 7
-   STAssertTrue([[calc_view_controller.displayField stringValue] isEqualToString:@"1987"], @"Part 1 failed.");
+   XCTAssertTrue([[calc_view_controller.displayField stringValue] isEqualToString:@"1987"], @"Part 1 failed.");
    
    [calc_view_controller press:[calc_view viewWithTag:19]];  // D (delete)
-   STAssertTrue([[calc_view_controller.displayField stringValue] isEqualToString:@"198"],  @"Part 2 failed.");      
+   XCTAssertTrue([[calc_view_controller.displayField stringValue] isEqualToString:@"198"],  @"Part 2 failed.");      
    
    [calc_view_controller press:[calc_view viewWithTag:19]];  // D (delete)
-   STAssertTrue([[calc_view_controller.displayField stringValue] isEqualToString:@"19"],   @"Part 3 failed.");      
+   XCTAssertTrue([[calc_view_controller.displayField stringValue] isEqualToString:@"19"],   @"Part 3 failed.");      
    
    [calc_view_controller press:[calc_view viewWithTag:19]];  // D (delete)
-   STAssertTrue([[calc_view_controller.displayField stringValue] isEqualToString:@"1"],    @"Part 4 failed.");      
+   XCTAssertTrue([[calc_view_controller.displayField stringValue] isEqualToString:@"1"],    @"Part 4 failed.");      
    
    [calc_view_controller press:[calc_view viewWithTag:19]];  // D (delete)
-   STAssertTrue([[calc_view_controller.displayField stringValue] isEqualToString:@"0"],    @"Part 5 failed.");
+   XCTAssertTrue([[calc_view_controller.displayField stringValue] isEqualToString:@"0"],    @"Part 5 failed.");
 }
 
 /* testClear tests the functionality of the C (Clear).
@@ -168,11 +168,11 @@
    [calc_view_controller press:[calc_view viewWithTag:16]];  // /
    [calc_view_controller press:[calc_view viewWithTag: 4]];  // 4
    [calc_view_controller press:[calc_view viewWithTag:11]];  // C (clear)
-   STAssertTrue([[calc_view_controller.displayField stringValue] isEqualToString:@"0"], @"Part 1 failed.");
+   XCTAssertTrue([[calc_view_controller.displayField stringValue] isEqualToString:@"0"], @"Part 1 failed.");
    
    [calc_view_controller press:[calc_view viewWithTag: 5]];  // 5
    [calc_view_controller press:[calc_view viewWithTag:12]];  // =
-   STAssertTrue([[calc_view_controller.displayField stringValue] isEqualToString:@"5"], @"Part 2 failed.");
+   XCTAssertTrue([[calc_view_controller.displayField stringValue] isEqualToString:@"5"], @"Part 2 failed.");
    
    [calc_view_controller press:[calc_view viewWithTag: 1]];  // 1
    [calc_view_controller press:[calc_view viewWithTag: 9]];  // 9
@@ -183,7 +183,7 @@
    [calc_view_controller press:[calc_view viewWithTag:13]];  // +
    [calc_view_controller press:[calc_view viewWithTag: 2]];  // 2
    [calc_view_controller press:[calc_view viewWithTag:12]];  // =   
-   STAssertTrue([[calc_view_controller.displayField stringValue] isEqualToString:@"2"], @"Part 3 failed.");
+   XCTAssertTrue([[calc_view_controller.displayField stringValue] isEqualToString:@"2"], @"Part 3 failed.");
 }
 
 @end

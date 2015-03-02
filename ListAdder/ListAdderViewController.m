@@ -1,55 +1,49 @@
 /*
-    File:       ListAdderViewController.m
-
-    Contains:   Main view controller.
-
-    Written by: DTS
-
-    Copyright:  Copyright (c) 2010 Apple Inc. All Rights Reserved.
-
-    Disclaimer: IMPORTANT: This Apple software is supplied to you by Apple Inc.
-                ("Apple") in consideration of your agreement to the following
-                terms, and your use, installation, modification or
-                redistribution of this Apple software constitutes acceptance of
-                these terms.  If you do not agree with these terms, please do
-                not use, install, modify or redistribute this Apple software.
-
-                In consideration of your agreement to abide by the following
-                terms, and subject to these terms, Apple grants you a personal,
-                non-exclusive license, under Apple's copyrights in this
-                original Apple software (the "Apple Software"), to use,
-                reproduce, modify and redistribute the Apple Software, with or
-                without modifications, in source and/or binary forms; provided
-                that if you redistribute the Apple Software in its entirety and
-                without modifications, you must retain this notice and the
-                following text and disclaimers in all such redistributions of
-                the Apple Software. Neither the name, trademarks, service marks
-                or logos of Apple Inc. may be used to endorse or promote
-                products derived from the Apple Software without specific prior
-                written permission from Apple.  Except as expressly stated in
-                this notice, no other rights or licenses, express or implied,
-                are granted by Apple herein, including but not limited to any
-                patent rights that may be infringed by your derivative works or
-                by other works in which the Apple Software may be incorporated.
-
-                The Apple Software is provided by Apple on an "AS IS" basis. 
-                APPLE MAKES NO WARRANTIES, EXPRESS OR IMPLIED, INCLUDING
-                WITHOUT LIMITATION THE IMPLIED WARRANTIES OF NON-INFRINGEMENT,
-                MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE, REGARDING
-                THE APPLE SOFTWARE OR ITS USE AND OPERATION ALONE OR IN
-                COMBINATION WITH YOUR PRODUCTS.
-
-                IN NO EVENT SHALL APPLE BE LIABLE FOR ANY SPECIAL, INDIRECT,
-                INCIDENTAL OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
-                TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-                DATA, OR PROFITS; OR BUSINESS INTERRUPTION) ARISING IN ANY WAY
-                OUT OF THE USE, REPRODUCTION, MODIFICATION AND/OR DISTRIBUTION
-                OF THE APPLE SOFTWARE, HOWEVER CAUSED AND WHETHER UNDER THEORY
-                OF CONTRACT, TORT (INCLUDING NEGLIGENCE), STRICT LIABILITY OR
-                OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE POSSIBILITY OF
-                SUCH DAMAGE.
-
-*/
+     File: ListAdderViewController.m
+ Abstract: Main view controller.
+  Version: 1.1
+ 
+ Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
+ Inc. ("Apple") in consideration of your agreement to the following
+ terms, and your use, installation, modification or redistribution of
+ this Apple software constitutes acceptance of these terms.  If you do
+ not agree with these terms, please do not use, install, modify or
+ redistribute this Apple software.
+ 
+ In consideration of your agreement to abide by the following terms, and
+ subject to these terms, Apple grants you a personal, non-exclusive
+ license, under Apple's copyrights in this original Apple software (the
+ "Apple Software"), to use, reproduce, modify and redistribute the Apple
+ Software, with or without modifications, in source and/or binary forms;
+ provided that if you redistribute the Apple Software in its entirety and
+ without modifications, you must retain this notice and the following
+ text and disclaimers in all such redistributions of the Apple Software.
+ Neither the name, trademarks, service marks or logos of Apple Inc. may
+ be used to endorse or promote products derived from the Apple Software
+ without specific prior written permission from Apple.  Except as
+ expressly stated in this notice, no other rights or licenses, express or
+ implied, are granted by Apple herein, including but not limited to any
+ patent rights that may be infringed by your derivative works or by other
+ works in which the Apple Software may be incorporated.
+ 
+ The Apple Software is provided by Apple on an "AS IS" basis.  APPLE
+ MAKES NO WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
+ THE IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY AND FITNESS
+ FOR A PARTICULAR PURPOSE, REGARDING THE APPLE SOFTWARE OR ITS USE AND
+ OPERATION ALONE OR IN COMBINATION WITH YOUR PRODUCTS.
+ 
+ IN NO EVENT SHALL APPLE BE LIABLE FOR ANY SPECIAL, INDIRECT, INCIDENTAL
+ OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ INTERRUPTION) ARISING IN ANY WAY OUT OF THE USE, REPRODUCTION,
+ MODIFICATION AND/OR DISTRIBUTION OF THE APPLE SOFTWARE, HOWEVER CAUSED
+ AND WHETHER UNDER THEORY OF CONTRACT, TORT (INCLUDING NEGLIGENCE),
+ STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
+ POSSIBILITY OF SUCH DAMAGE.
+ 
+ Copyright (C) 2014 Apple Inc. All Rights Reserved.
+ 
+ */
 
 #import "ListAdderViewController.h"
 
@@ -62,19 +56,11 @@
 
 // private properties
 
-@property (nonatomic, retain, readonly ) NSMutableArray *   numbers;
-@property (nonatomic, retain, readonly ) NSOperationQueue * queue;
+@property (nonatomic, strong, readwrite) NSMutableArray *   numbers;
+@property (nonatomic, strong, readwrite) NSOperationQueue * queue;
 @property (nonatomic, assign, readwrite) BOOL               recalculating;
-@property (nonatomic, retain, readwrite) AdderOperation *   inProgressAdder;
+@property (nonatomic, strong, readwrite) AdderOperation *   inProgressAdder;
 @property (nonatomic, copy,   readwrite) NSString *         formattedTotal;
-
-// forward declarations
-
-- (void)presentNumberPickerModally;
-- (void)recalculateTotal;
-- (void)recalculateTotalUsingThread;
-- (void)recalculateTotalUsingOperation;
-- (void)adderOperationDone:(AdderOperation *)op;
 
 @end
 
@@ -89,46 +75,34 @@ static char CharForCurrentThread(void)
 + (NSArray *)defaultNumbers
     // Returns the default numbers that we initialise the view with.
 {
-    return [NSArray arrayWithObjects:
-        [NSNumber numberWithInt:7], 
-        [NSNumber numberWithInt:5], 
-        [NSNumber numberWithInt:8], 
-        [NSNumber numberWithInt:9], 
-        [NSNumber numberWithInt:7], 
-        [NSNumber numberWithInt:6], 
-        nil
-    ];
+    return @[ @7, @5, @8, @9, @7, @6 ];
 }
 
-- (id)init
+- (void)awakeFromNib
 {
-    self = [super initWithStyle:UITableViewStyleGrouped];
-    if (self != nil) {
-        // Set up some private properties.
-        
-        self->_numbers = [[[self class] defaultNumbers] mutableCopy];
-        assert(self->_numbers != nil);
+    // Set up some private properties.
+    
+    self.numbers = [[[self class] defaultNumbers] mutableCopy];
+    assert(self.numbers != nil);
 
-        self->_queue = [[NSOperationQueue alloc] init];
-        assert(self->_queue != nil);
-        
-        // Set up our navigation bar.
-        
-        self.title = @"ListAdder";
-        self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithTitle:@"Options" style:UIBarButtonItemStyleBordered target:self action:@selector(optionsAction:)        ] autorelease];
-        self.navigationItem.leftBarButtonItem  = [[[UIBarButtonItem alloc] initWithTitle:@"Minimum" style:UIBarButtonItemStyleBordered target:self action:@selector(defaultsMinimumAction:)] autorelease];
-        self.navigationItem.leftBarButtonItem.possibleTitles = [NSSet setWithObjects:@"Defaults", @"Minimum", nil];
-    }
-    return self;
+    self.queue = [[NSOperationQueue alloc] init];
+    assert(self.queue != nil);
+    
+    // Observe .recalculating to trigger reloads of the cell in the first 
+    // section (kListAdderSectionIndexTotal).
+    
+    [self addObserver:self forKeyPath:@"recalculating" options:0 context:&self->_recalculating];
 }
 
 - (void)dealloc
 {
     // This is the root view controller of our application, so it can never be 
-    // deallocated.  Supporting -dealloc in the presence of threading, even highly 
-    // constrained threading as used by this example, is tricky.  My recommended 
-    // technique for doing this is the QWatchedOperationQueue class in the 
-    // LinkedImageFetcher sample code.
+    // deallocated.  Supporting -dealloc in a view controller in the presence of 
+    // threading, even highly constrained threading as used by this example, is 
+    // tricky.  I generally recommend that you avoid this, and confine your threads 
+    // to your model layer code.  If that's not possible, you can use a technique 
+    // like that shown in the QWatchedOperationQueue class in the LinkedImageFetcher 
+    // sample code.
     //
     // <http://developer.apple.com/mac/library/samplecode/LinkedImageFetcher/>
     // 
@@ -141,14 +115,8 @@ static char CharForCurrentThread(void)
 
     // Despite the above, I've left in the following just as an example of how you 
     // manage self observation in a view controller. 
-
-    // If we got -dealloc'd without ever releasing our observer, do that now.
     
-    if (self.isViewLoaded) {
-        [self removeObserver:self forKeyPath:@"recalculating"];
-    }
-
-    [super dealloc];
+    [self removeObserver:self forKeyPath:@"recalculating" context:&self->_recalculating];
 }
 
 - (void)syncLeftBarButtonTitle
@@ -160,14 +128,6 @@ static char CharForCurrentThread(void)
     }
 }
 
-#pragma mark * Properties
-
-@synthesize numbers         = _numbers;
-@synthesize formattedTotal  = _formattedTotal;
-@synthesize queue           = _queue;
-@synthesize recalculating   = _recalculating;
-@synthesize inProgressAdder = _inProgressAdder;
-
 #pragma mark * View controller stuff
 
 - (void)viewDidLoad
@@ -177,18 +137,6 @@ static char CharForCurrentThread(void)
     // Configure our table view.
     
     self.tableView.editing = YES;
-    self.tableView.allowsSelectionDuringEditing = YES;
-    
-    // Observe recalculating to trigger reloads of the cell in the first 
-    // section (kListAdderSectionIndexTotal).
-    
-    [self addObserver:self forKeyPath:@"recalculating" options:0 context:&self->_inProgressAdder];
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    [self removeObserver:self forKeyPath:@"recalculating"];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -201,6 +149,21 @@ static char CharForCurrentThread(void)
     
     if ( (self.formattedTotal == nil) && ! self.recalculating ) {
         [self recalculateTotal];
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    #pragma unused(sender)
+    
+    // Dispatch to our various segue-specific methods.
+    
+    if ([segue.identifier isEqual:@"numberPicker"]) {
+        [self prepareForNumberPickerSegue:segue];
+    } else if ([segue.identifier isEqual:@"options"]) {
+        [self prepareForOptionsSegue:segue];
+    } else {
+        assert(NO);     // What segue?
     }
 }
 
@@ -227,7 +190,15 @@ enum {
     assert(tv == self.tableView);
     assert(section < kListAdderSectionIndexCount);
 
-    return (section == kListAdderSectionIndexNumbers) ? [self.numbers count] : 1;
+    return (section == kListAdderSectionIndexNumbers) ? (NSInteger) [self.numbers count] : 1;
+}
+
+- (BOOL)isValidIndexPath:(NSIndexPath *)indexPath
+{
+    return (indexPath != NULL) &&
+        ((indexPath.section >= 0) && (indexPath.section < kListAdderSectionIndexCount)) &&
+        (indexPath.row >= 0) &&
+        (((NSUInteger) indexPath.row) < ((indexPath.section == kListAdderSectionIndexNumbers) ? [self.numbers count] : 1));
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tv cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -237,51 +208,45 @@ enum {
     UITableViewCell *	cell;
 
     assert(tv == self.tableView);
-    assert(indexPath != NULL);
-    assert(indexPath.section < kListAdderSectionIndexCount);
-    assert(indexPath.row < ((indexPath.section == kListAdderSectionIndexNumbers) ? [self.numbers count] : 1));
+    assert([self isValidIndexPath:indexPath]);
 
-    // Get a cell to work with.
-    
-    cell = [self.tableView dequeueReusableCellWithIdentifier:@"cell"];
-    if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"] autorelease];
-        assert(cell != nil);
-    }
-    
-    // Reset it to default values.
-    
-    cell.editingAccessoryView = nil;
-    cell.detailTextLabel.text = nil;
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    // Previously this code used a single prototype cell and configured it as needed. 
+    // This breaks on iOS 8.0, where the detailed text doesn't show up in some 
+    // circumstances <rdar://problem/17682058>.  To work around this I now use 
+    // multiple cell prototypes, one for each class of cell.  This had the added 
+    // advantage of making the code smaller, putting all the UI strings in the 
+    // storyboard, and so on.
     
     // Set it up based on the section and row.
     
     switch (indexPath.section) {
-        default:
-            assert(NO);
-            // fall through
         case kListAdderSectionIndexTotal: {
-            cell.textLabel.text = @"Total";
             if (self.recalculating) {
                 UIActivityIndicatorView *   activityView;
                 
-                activityView = [[[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray] autorelease];
-                assert(activityView != nil);
+                cell = [self.tableView dequeueReusableCellWithIdentifier:@"totalBusy"];
+                assert(cell != nil);
 
+                activityView = (UIActivityIndicatorView *) cell.editingAccessoryView;
+                assert([activityView isKindOfClass:[UIActivityIndicatorView class]]);
                 [activityView startAnimating];
-                
-                cell.editingAccessoryView = activityView;
             } else {
+                cell = [self.tableView dequeueReusableCellWithIdentifier:@"total"];
+                assert(cell != nil);
                 cell.detailTextLabel.text = self.formattedTotal;
             }
         } break;
+        default:
+            assert(NO);
+            // fall through
         case kListAdderSectionIndexAddNumber: {
-            cell.textLabel.text = @"Add Number…";
-            cell.selectionStyle = UITableViewCellSelectionStyleBlue;
+            cell = [self.tableView dequeueReusableCellWithIdentifier:@"add"];
+            assert(cell != nil);
         } break;
         case kListAdderSectionIndexNumbers: {
-            cell.textLabel.text = [[self.numbers objectAtIndex:indexPath.row] description];
+            cell = [self.tableView dequeueReusableCellWithIdentifier:@"number"];
+            assert(cell != nil);
+            cell.textLabel.text = [NSNumberFormatter localizedStringFromNumber:self.numbers[(NSUInteger) indexPath.row] numberStyle:NSNumberFormatterDecimalStyle];
         } break;
     }
 
@@ -294,8 +259,7 @@ enum {
 
     #pragma unused(tv)
     assert(tv == self.tableView);
-    assert(indexPath.section < kListAdderSectionIndexCount);
-    assert(indexPath.row < ((indexPath.section == kListAdderSectionIndexNumbers) ? [self.numbers count] : 1));
+    assert([self isValidIndexPath:indexPath]);
     
     switch (indexPath.section) {
         default:
@@ -326,8 +290,7 @@ enum {
 {
     #pragma unused(tv)
     assert(tv == self.tableView);
-    assert(indexPath.section < kListAdderSectionIndexCount);
-    assert(indexPath.row < ((indexPath.section == kListAdderSectionIndexNumbers) ? [self.numbers count] : 1));
+    assert([self isValidIndexPath:indexPath]);
 
     switch (indexPath.section) {
         default:
@@ -340,7 +303,8 @@ enum {
             #pragma unused(editingStyle)
             assert(editingStyle == UITableViewCellEditingStyleInsert);
             
-            // The user has tapped on the plus button.  Bring up the number picker.
+            // The user has tapped on the plus button itself (as opposed to the body 
+            // of that cell).  Bring up the number picker.
             
             [self presentNumberPickerModally];
         } break;
@@ -351,15 +315,15 @@ enum {
 
             // Remove the row from our model and the table view.
             
-            [self.numbers removeObjectAtIndex:indexPath.row];
-            [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            [self.numbers removeObjectAtIndex:(NSUInteger) indexPath.row];
+            [self.tableView deleteRowsAtIndexPaths:@[ indexPath ] withRowAnimation:UITableViewRowAnimationNone];
             
             // If we've transitioned from 2 rows to 1 row, remove the delete button for the 
             // remaining row; we don't want folks deleting that now, do we?  Also, set the 
             // title of the left bar button to "Defaults" to reflect its updated function.
             
             if ([self.numbers count] == 1) {
-                [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:kListAdderSectionIndexNumbers]] withRowAnimation:UITableViewRowAnimationNone];
+                [self.tableView reloadRowsAtIndexPaths:@[ [NSIndexPath indexPathForRow:0 inSection:kListAdderSectionIndexNumbers] ] withRowAnimation:UITableViewRowAnimationNone];
                 
                 [self syncLeftBarButtonTitle];
             }
@@ -377,11 +341,10 @@ enum {
     #pragma unused(indexPath)
 
     assert(tv == self.tableView);
-    assert(indexPath != NULL);
-    assert(indexPath.section < kListAdderSectionIndexCount);
-    assert(indexPath.row < ((indexPath.section == kListAdderSectionIndexNumbers) ? [self.numbers count] : 1));
+    assert([self isValidIndexPath:indexPath]);
 
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+
     switch (indexPath.section) {
         default:
             assert(NO);
@@ -405,17 +368,22 @@ enum {
 #pragma mark * Number picker management
 
 - (void)presentNumberPickerModally
-    // Displays the number picker so that the user can add a new number to the 
-    // list of numbers to add up.
 {
-    NumberPickerController *    vc;
-    
-    vc = [[[NumberPickerController alloc] init] autorelease];
-    assert(vc != nil);
-    
-    vc.delegate = self;
-    
-    [vc presentModallyOn:self];
+    [self performSegueWithIdentifier:@"numberPicker" sender:self];
+}
+
+- (void)prepareForNumberPickerSegue:(UIStoryboardSegue *)segue
+{
+    UINavigationController *    nav;
+    NumberPickerController *    numberPicker;
+
+    nav = segue.destinationViewController;
+    assert([nav isKindOfClass:[UINavigationController class]]);
+
+    numberPicker = nav.viewControllers[0];
+    assert([numberPicker isKindOfClass:[NumberPickerController class]]);
+
+    numberPicker.delegate = self;
 }
 
 - (void)numberPicker:(NumberPickerController *)controller didChooseNumber:(NSNumber *)number
@@ -431,13 +399,13 @@ enum {
         // Add the number to our model and the table view.
         
         [self.numbers addObject:number];
-        [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:[self.numbers count] - 1 inSection:kListAdderSectionIndexNumbers]] withRowAnimation:UITableViewRowAnimationFade];
+        [self.tableView insertRowsAtIndexPaths:@[ [NSIndexPath indexPathForRow:(NSInteger) [self.numbers count] - 1 inSection:kListAdderSectionIndexNumbers] ] withRowAnimation:UITableViewRowAnimationNone];
 
         // If we've transitioned from 1 row to 2 rows, add the delete button back for 
         // the first row.  Also change the left bar button item back to "Minimum".
         
         if ([self.numbers count] == 2) {
-            [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:kListAdderSectionIndexNumbers]] withRowAnimation:UITableViewRowAnimationNone];
+            [self.tableView reloadRowsAtIndexPaths:@[ [NSIndexPath indexPathForRow:0 inSection:kListAdderSectionIndexNumbers] ] withRowAnimation:UITableViewRowAnimationNone];
             
             [self syncLeftBarButtonTitle];
         }
@@ -446,23 +414,23 @@ enum {
         
         [self recalculateTotal];
     }
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark * Options management
 
-- (void)presentOptionsModally
-    // Displays the options view so that the user can add a new number to the 
-    // list of numbers to add up.
+- (void)prepareForOptionsSegue:(UIStoryboardSegue *)segue
 {
-    OptionsController * vc;
-    
-    vc = [[[OptionsController alloc] init] autorelease];
-    assert(vc != nil);
-    
-    vc.delegate = self;
-    
-    [vc presentModallyOn:self];
+    UINavigationController *    nav;
+    OptionsController *         options;
+
+    nav = segue.destinationViewController;
+    assert([nav isKindOfClass:[UINavigationController class]]);
+
+    options = nav.viewControllers[0];
+    assert([options isKindOfClass:[OptionsController class]]);
+
+    options.delegate = self;
 }
 
 - (void)didSaveOptions:(OptionsController *)controller
@@ -472,7 +440,7 @@ enum {
 {
     #pragma unused(controller)
     assert(controller != nil);
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didCancelOptions:(OptionsController *)controller
@@ -480,7 +448,7 @@ enum {
 {
     #pragma unused(controller)
     assert(controller != nil);
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark * Async recalculation
@@ -509,7 +477,7 @@ enum {
 
         self.recalculating = YES;
         
-        immutableNumbers = [[self.numbers copy] autorelease];
+        immutableNumbers = [self.numbers copy];
         assert(immutableNumbers != nil);
         [self performSelectorInBackground:@selector(threadRecalculateNumbers:) withObject:immutableNumbers];
     }
@@ -519,43 +487,39 @@ enum {
     // Does the actual recalculation when we're in threaded mode.  Always 
     // called on a secondary thread.
 {
-    NSAutoreleasePool *     pool;
-    NSInteger               total;
-    NSUInteger              numberCount;
-    NSUInteger              numberIndex;
-    NSString *              totalStr;
+    @autoreleasepool {
+        NSInteger               total;
+        NSUInteger              numberCount;
+        NSUInteger              numberIndex;
+        NSString *              totalStr;
 
-    assert( ! [NSThread isMainThread] );
+        assert( ! [NSThread isMainThread] );
 
-    pool = [[NSAutoreleasePool alloc] init];
-    assert(pool != nil);
-    
-    total = 0;
-    numberCount = [immutableNumbers count];
-    for (numberIndex = 0; numberIndex < numberCount; numberIndex++) {
-        NSNumber *  numberObj;
+        total = 0;
+        numberCount = [immutableNumbers count];
+        for (numberIndex = 0; numberIndex < numberCount; numberIndex++) {
+            NSNumber *  numberObj;
+            
+            // Sleep for a while.  This makes it easiest to test various problematic cases.
+            
+            [NSThread sleepForTimeInterval:1.0];
+            
+            // Do the maths.
+            
+            numberObj = immutableNumbers[numberIndex];
+            assert([numberObj isKindOfClass:[NSNumber class]]);
+            
+            total += [numberObj integerValue];
+        }
         
-        // Sleep for a while.  This makes it easiest to test various problematic cases.
-        
-        [NSThread sleepForTimeInterval:1.0];
-        
-        // Do the maths.
-        
-        numberObj = [immutableNumbers objectAtIndex:numberIndex];
-        assert([numberObj isKindOfClass:[NSNumber class]]);
-        
-        total += [numberObj integerValue];
+        totalStr = [NSString stringWithFormat:@"%ld", (long) total];
+        if ( [[NSUserDefaults standardUserDefaults] boolForKey:@"applyResultsFromThread"] ) {
+            self.formattedTotal = totalStr;
+            self.recalculating = NO;
+        } else {
+            [self performSelectorOnMainThread:@selector(threadRecalculateDone:) withObject:totalStr waitUntilDone:NO];
+        }
     }
-    
-    totalStr = [NSString stringWithFormat:@"%ld", (long) total];
-    if ( [[NSUserDefaults standardUserDefaults] boolForKey:@"applyResultsFromThread"] ) {
-        self.formattedTotal = totalStr;
-        self.recalculating = NO;
-    } else {
-        [self performSelectorOnMainThread:@selector(threadRecalculateDone:) withObject:totalStr waitUntilDone:NO];
-    }
-    
-    [pool drain];
 }
 
 - (void)threadRecalculateDone:(NSString *)result
@@ -571,85 +535,77 @@ enum {
 
 - (void)threadRecalculateNumbers
 {
-    NSAutoreleasePool *     pool;
-    NSInteger               total;
-    NSUInteger              numberCount;
-    NSUInteger              numberIndex;
-    NSString *              totalStr;
+    @autoreleasepool {
+        NSInteger               total;
+        NSUInteger              numberCount;
+        NSUInteger              numberIndex;
+        NSString *              totalStr;
 
-    // IMPORTANT: This method is not actually used.  It is here because it's a code 
-    // snippet in the technote, and i wanted to make sure it compiles.
-    
-    assert(NO);
-    
-    pool = [[NSAutoreleasePool alloc] init];
-    assert(pool != nil);
-    
-    total = 0;
-    numberCount = [self.numbers count];
-    for (numberIndex = 0; numberIndex < numberCount; numberIndex++) {
-        NSNumber *  numberObj;
+        // IMPORTANT: This method is not actually used.  It is here because it's a code 
+        // snippet in the technote, and i wanted to make sure it compiles.
         
-        // Sleep for a while.  This makes it easiest to test various problematic cases.
+        assert(NO);
         
-        [NSThread sleepForTimeInterval:1.0];
+        total = 0;
+        numberCount = [self.numbers count];
+        for (numberIndex = 0; numberIndex < numberCount; numberIndex++) {
+            NSNumber *  numberObj;
+            
+            // Sleep for a while.  This makes it easiest to test various problematic cases.
+            
+            [NSThread sleepForTimeInterval:1.0];
+            
+            // Do the maths.
+            
+            numberObj = self.numbers[numberIndex];
+            assert([numberObj isKindOfClass:[NSNumber class]]);
+            
+            total += [numberObj integerValue];
+        }
         
-        // Do the maths.
-        
-        numberObj = [self.numbers objectAtIndex:numberIndex];
-        assert([numberObj isKindOfClass:[NSNumber class]]);
-        
-        total += [numberObj integerValue];
+        // The user interface is adjusted by a KVO observer on recalculating.
+
+        totalStr = [NSString stringWithFormat:@"%ld", (long) total];
+        self.formattedTotal = totalStr;
+        self.recalculating = NO;
     }
-    
-    // The user interface is adjusted by a KVO observer on recalculating.
-
-    totalStr = [NSString stringWithFormat:@"%ld", (long) total];
-    self.formattedTotal = totalStr;
-    self.recalculating = NO;
-    
-    [pool drain];
 }
 
 - (void)threadRecalculateNumbers2
 {
-    NSAutoreleasePool *     pool;
-    NSInteger               total;
-    NSUInteger              numberCount;
-    NSUInteger              numberIndex;
-    NSString *              totalStr;
+    @autoreleasepool {
+        NSInteger               total;
+        NSUInteger              numberCount;
+        NSUInteger              numberIndex;
+        NSString *              totalStr;
 
-    // IMPORTANT: This method is not actually used.  It is here because it's a code 
-    // snippet in the technote, and i wanted to make sure it compiles.
-    
-    assert(NO);
-    
-    pool = [[NSAutoreleasePool alloc] init];
-    assert(pool != nil);
-    
-    total = 0;
-    numberCount = [self.numbers count];
-    for (numberIndex = 0; numberIndex < numberCount; numberIndex++) {
-        NSNumber *  numberObj;
+        // IMPORTANT: This method is not actually used.  It is here because it's a code 
+        // snippet in the technote, and i wanted to make sure it compiles.
         
-        // Sleep for a while.  This makes it easiest to test various problematic cases.
+        assert(NO);
         
-        [NSThread sleepForTimeInterval:1.0];
+        total = 0;
+        numberCount = [self.numbers count];
+        for (numberIndex = 0; numberIndex < numberCount; numberIndex++) {
+            NSNumber *  numberObj;
+            
+            // Sleep for a while.  This makes it easiest to test various problematic cases.
+            
+            [NSThread sleepForTimeInterval:1.0];
+            
+            // Do the maths.
+            
+            numberObj = self.numbers[numberIndex];
+            assert([numberObj isKindOfClass:[NSNumber class]]);
+            
+            total += [numberObj integerValue];
+        }
         
-        // Do the maths.
-        
-        numberObj = [self.numbers objectAtIndex:numberIndex];
-        assert([numberObj isKindOfClass:[NSNumber class]]);
-        
-        total += [numberObj integerValue];
+        // Update the user interface on the main thread.
+
+        totalStr = [NSString stringWithFormat:@"%ld", (long) total];
+        [self performSelectorOnMainThread:@selector(threadRecalculateDone:) withObject:totalStr waitUntilDone:NO];
     }
-    
-    // Update the user interface on the main thread.
-
-    totalStr = [NSString stringWithFormat:@"%ld", (long) total];
-    [self performSelectorOnMainThread:@selector(threadRecalculateDone:) withObject:totalStr waitUntilDone:NO];
-    
-    [pool drain];
 }
 
 #pragma mark - NSOperation
@@ -671,8 +627,12 @@ enum {
 
     // Start up a replacement operation.
     
-    self.inProgressAdder = [[[AdderOperation alloc] initWithNumbers:self.numbers] autorelease];
+    self.inProgressAdder = [[AdderOperation alloc] initWithNumbers:self.numbers];
     assert(self.inProgressAdder != nil);
+    
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"addFaster"]) {
+        self.inProgressAdder.interNumberDelay = 0.2;
+    }
     
     [self.inProgressAdder addObserver:self forKeyPath:@"isFinished"  options:0 context:&self->_formattedTotal];
     [self.inProgressAdder addObserver:self forKeyPath:@"isExecuting" options:0 context:&self->_queue];
@@ -723,7 +683,7 @@ enum {
         } else {
             fprintf(stderr, "%c %3lu stopped\n", CharForCurrentThread(), (unsigned long) op.sequenceNumber);
         }
-    } else if (context == &self->_inProgressAdder) {
+    } else if (context == &self->_recalculating) {
     
         // If recalculating changes, reload the first section (kListAdderSectionIndexTotal) 
         // which causes the activity indicator to come or go.
@@ -731,9 +691,10 @@ enum {
         assert([NSThread isMainThread]);
         assert([keyPath isEqual:@"recalculating"]);
         assert(object == self);
-        [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:kListAdderSectionIndexTotal]] withRowAnimation:UITableViewRowAnimationNone];
-    }
-    if (NO) {
+        if (self.isViewLoaded) {
+            [self.tableView reloadRowsAtIndexPaths:@[ [NSIndexPath indexPathForRow:0 inSection:kListAdderSectionIndexTotal] ] withRowAnimation:UITableViewRowAnimationNone];
+        }
+    } else {
         [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
     }
 }
@@ -749,8 +710,8 @@ enum {
     // the results of this operation.
     
     fprintf(stderr, "%c %3lu done\n", CharForCurrentThread(), (unsigned long) op.sequenceNumber);
-    [op removeObserver:self forKeyPath:@"isFinished"];
-    [op removeObserver:self forKeyPath:@"isExecuting"];
+    [op removeObserver:self forKeyPath:@"isFinished"  context:&self->_formattedTotal];
+    [op removeObserver:self forKeyPath:@"isExecuting" context:&self->_queue];
 
     // Check to see whether these are the results we're looking for. 
     // If not, we just discard the results; later on we'll be notified 
@@ -789,8 +750,8 @@ enum {
     // the results of this operation.
     
     fprintf(stderr, "%c %3lu done\n", CharForCurrentThread(), (unsigned long) op.sequenceNumber);
-    [op removeObserver:self forKeyPath:@"isFinished"];
-    [op removeObserver:self forKeyPath:@"isExecuting"];
+    [op removeObserver:self forKeyPath:@"isFinished"  context:&self->_formattedTotal];
+    [op removeObserver:self forKeyPath:@"isExecuting" context:&self->_queue];
 
     // Check to see whether these are the results we're looking for. 
     // If not, we just discard the results; later on we'll be notified 
@@ -816,7 +777,7 @@ enum {
 
 #pragma mark * UI actions
 
-- (void)defaultsMinimumAction:(id)sender
+- (IBAction)defaultsOrMinimumAction:(id)sender
     // Called when the user taps the left bar button ("Defaults" or "Minimum").  
     // If we have lots of numbers, set the list to contain a sigle entry.  If we have 
     // just one number, reset the list back to the defaults.  This allows us to easily 
@@ -825,7 +786,7 @@ enum {
     #pragma unused(sender)
     if ([self.numbers count] > 1) {
         [self.numbers removeAllObjects];
-        [self.numbers addObject:[NSNumber numberWithInteger:41]];
+        [self.numbers addObject:@41];
     } else {
         [self.numbers replaceObjectsInRange:NSMakeRange(0, [self.numbers count]) withObjectsFromArray:[[self class] defaultNumbers]];
     }
@@ -834,14 +795,6 @@ enum {
         [self.tableView reloadData];
     }
     [self recalculateTotal];
-}
-
-- (void)optionsAction:(id)sender
-    // Called when the user taps the option button.  We just bring up the 
-    // options view.
-{
-    #pragma unused(sender)
-    [self presentOptionsModally];
 }
 
 @end

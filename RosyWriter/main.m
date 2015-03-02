@@ -1,7 +1,7 @@
 /*
      File: main.m
- Abstract: Application's main entry point
-  Version: 1.2
+ Abstract: Standard main file.
+  Version: 2.1
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
  Inc. ("Apple") in consideration of your agreement to the following
@@ -41,16 +41,19 @@
  STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
  POSSIBILITY OF SUCH DAMAGE.
  
- Copyright (C) 2011 Apple Inc. All Rights Reserved.
+ Copyright (C) 2014 Apple Inc. All Rights Reserved.
  
  */
- 
+
 #import <UIKit/UIKit.h>
 
-int main(int argc, char *argv[]) {
-    
-    NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
-    int retVal = UIApplicationMain(argc, argv, nil, nil);
-    [pool release];
-    return retVal;
+#import "RosyWriterAppDelegate.h"
+
+int main(int argc, char *argv[])
+{
+	int retVal = 0;
+	@autoreleasepool {
+	    retVal = UIApplicationMain( argc, argv, nil, NSStringFromClass( [RosyWriterAppDelegate class] ) );
+	}
+	return retVal;
 }

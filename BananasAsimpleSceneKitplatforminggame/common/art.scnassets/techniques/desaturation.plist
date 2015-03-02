@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>sequence</key>
+	<array>
+		<string>desaturation</string>
+	</array>
+	<key>passes</key>
+	<dict>
+		<key>desaturation</key>
+		<dict>
+			<key>outputs</key>
+			<dict>
+				<key>color</key>
+				<string>COLOR</string>
+			</dict>
+			<key>inputs</key>
+			<dict>
+				<key>a_position</key>
+				<string>a_position-symbol</string>
+				<key>colorSampler</key>
+				<string>COLOR</string>
+				<key>Saturation</key>
+				<string>Saturation</string>
+			</dict>
+			<key>draw</key>
+			<string>DRAW_QUAD</string>
+			<key>program</key>
+			<string>art.scnassets/techniques/desaturation</string>
+		</dict>
+	</dict>
+	<key>symbols</key>
+	<dict>
+		<key>a_position-symbol</key>
+		<dict>
+			<key>semantic</key>
+			<string>vertex</string>
+		</dict>
+		<key>Saturation</key>
+		<dict>
+			<key>type</key>
+			<string>float</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

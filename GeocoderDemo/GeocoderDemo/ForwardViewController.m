@@ -1,55 +1,16 @@
 /*
-     File: ForwardViewController.m 
- Abstract: View controller in charge of forward geocoding.
-  
-  Version: 1.3 
-  
- Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple 
- Inc. ("Apple") in consideration of your agreement to the following 
- terms, and your use, installation, modification or redistribution of 
- this Apple software constitutes acceptance of these terms.  If you do 
- not agree with these terms, please do not use, install, modify or 
- redistribute this Apple software. 
-  
- In consideration of your agreement to abide by the following terms, and 
- subject to these terms, Apple grants you a personal, non-exclusive 
- license, under Apple's copyrights in this original Apple software (the 
- "Apple Software"), to use, reproduce, modify and redistribute the Apple 
- Software, with or without modifications, in source and/or binary forms; 
- provided that if you redistribute the Apple Software in its entirety and 
- without modifications, you must retain this notice and the following 
- text and disclaimers in all such redistributions of the Apple Software. 
- Neither the name, trademarks, service marks or logos of Apple Inc. may 
- be used to endorse or promote products derived from the Apple Software 
- without specific prior written permission from Apple.  Except as 
- expressly stated in this notice, no other rights or licenses, express or 
- implied, are granted by Apple herein, including but not limited to any 
- patent rights that may be infringed by your derivative works or by other 
- works in which the Apple Software may be incorporated. 
-  
- The Apple Software is provided by Apple on an "AS IS" basis.  APPLE 
- MAKES NO WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION 
- THE IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY AND FITNESS 
- FOR A PARTICULAR PURPOSE, REGARDING THE APPLE SOFTWARE OR ITS USE AND 
- OPERATION ALONE OR IN COMBINATION WITH YOUR PRODUCTS. 
-  
- IN NO EVENT SHALL APPLE BE LIABLE FOR ANY SPECIAL, INDIRECT, INCIDENTAL 
- OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF 
- SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS 
- INTERRUPTION) ARISING IN ANY WAY OUT OF THE USE, REPRODUCTION, 
- MODIFICATION AND/OR DISTRIBUTION OF THE APPLE SOFTWARE, HOWEVER CAUSED 
- AND WHETHER UNDER THEORY OF CONTRACT, TORT (INCLUDING NEGLIGENCE), 
- STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE 
- POSSIBILITY OF SUCH DAMAGE. 
-  
- Copyright (C) 2013 Apple Inc. All Rights Reserved. 
-  
+ Copyright (C) 2014 Apple Inc. All Rights Reserved.
+ See LICENSE.txt for this sample’s licensing information
+
  */
 
 #import "ForwardViewController.h"
 #import "PlacemarksListViewController.h"
 
-@interface ForwardViewController ()
+@interface ForwardViewController () <UITextFieldDelegate,
+                                     UITableViewDelegate,
+                                     UITableViewDataSource,
+                                     CLLocationManagerDelegate>
 
 @property (nonatomic, strong) CLLocationManager *locationManager; // location manager for current location
 
@@ -104,46 +65,6 @@
     { }];
 #endif
 }
-
-// viewDidUnload is not called on iOS 6.0 and later
-#if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_6_0
-- (void)viewDidUnload
-{
-    self.searchRadiusSlider = nil;
-    self.searchHintSwitch = nil;
-    self.searchRadiusCell = nil;
-    self.searchRadiusLabel = nil;
-    self.searchStringCell = nil;
-    self.searchStringTextField = nil;
-    
-    // if the view has gone away, so should we set our weak pointer
-    _spinner = nil;
-    _currentLocationActivityIndicatorView = nil;
-    
-    [super viewDidUnload];
-}
-#endif
-
-
-#pragma mark - View Controller Rotation
-
-// rotation support for iOS 5.x and earlier, note for iOS 6.0 and later all you need is
-// "UISupportedInterfaceOrientations" defined in your Info.plist
-//
-#if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_6_0
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    // return YES for supported orientations
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
-    {
-        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-    }
-    else
-    {
-        return YES;
-    }
-}
-#endif
 
 
 #pragma mark - UI Handling
@@ -350,7 +271,7 @@
     if (indexPath.section == 2 && indexPath.row == 0)
     {
         cell.textLabel.text = @"Geocode String";
-        cell.textLabel.textAlignment = UITextAlignmentCenter;
+        cell.textLabel.textAlignment = NSTextAlignmentCenter;
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         return cell;
     }
@@ -404,12 +325,22 @@
     }
     
     // if locationManager does not currently exist, create it
-    if (!_locationManager)
+    if (self.locationManager == nil)
     {
         _locationManager = [[CLLocationManager alloc] init];
-        [_locationManager setDelegate:self];
-        _locationManager.distanceFilter = 10.0f; // we don't need to be any more accurate than 10m 
-        _locationManager.purpose = @"This will be used as part of the hint region for forward geocoding.";
+        [self.locationManager setDelegate:self];
+        self.locationManager.distanceFilter = 10.0f; // we don't need to be any more accurate than 10m
+    }
+    
+    // for iOS 8, specific user level permission is required,
+    // "when-in-use" authorization grants access to the user's location
+    //
+    // important: be sure to include NSLocationWhenInUseUsageDescription along with its
+    // explanation string in your Info.plist or startUpdatingLocation will not work.
+    //
+    if ([_locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)])
+    {
+        [_locationManager requestWhenInUseAuthorization];
     }
     
     [_locationManager startUpdatingLocation];
@@ -504,7 +435,9 @@
         // use hint region
         CLLocationDistance dist = self.searchRadiusSlider.value; // 50,000m (50km)
         CLLocationCoordinate2D point = _selectedCoordinate;
-        CLRegion *region = [[CLRegion alloc] initCircularRegionWithCenter:point radius:dist identifier:@"Hint Region"];
+        CLCircularRegion *region = [[CLCircularRegion alloc] initWithCenter:point
+                                                                     radius:dist
+                                                                 identifier:@"Hint Region"];
         
         [geocoder geocodeAddressString:self.searchStringTextField.text inRegion:region completionHandler:^(NSArray *placemarks, NSError *error)
          {

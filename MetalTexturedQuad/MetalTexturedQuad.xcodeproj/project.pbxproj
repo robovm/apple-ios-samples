@@ -1,0 +1,406 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		362DE3EF1963319900E3E173 /* AAPLQuad.mm in Sources */ = {isa = PBXBuildFile; fileRef = 362DE3EE1963319900E3E173 /* AAPLQuad.mm */; };
+		3634F7DD196B1CDE00F3D263 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 623F27FC1934231C000FA88C /* Main.storyboard */; };
+		3682C3251981926F001B4714 /* Default.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3682C3241981926F001B4714 /* Default.jpg */; };
+		6218D85A19AFB62B005BC8AB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6218D85919AFB62B005BC8AB /* LaunchScreen.xib */; };
+		622A9BAD19AA7ADF007F8120 /* AAPLRenderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 622A9BAC19AA7ADF007F8120 /* AAPLRenderer.mm */; };
+		623F28001934231C000FA88C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 623F27FF1934231C000FA88C /* Images.xcassets */; };
+		623F281A1934240D000FA88C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 623F28191934240D000FA88C /* main.m */; };
+		623F283619342AC1000FA88C /* AAPLAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 623F283019342AC1000FA88C /* AAPLAppDelegate.mm */; };
+		623F283719342AC1000FA88C /* AAPLTransforms.mm in Sources */ = {isa = PBXBuildFile; fileRef = 623F283219342AC1000FA88C /* AAPLTransforms.mm */; };
+		623F283819342AC1000FA88C /* AAPLViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 623F283519342AC1000FA88C /* AAPLViewController.mm */; };
+		623F283A19342AD1000FA88C /* texturedQuad.metal in Resources */ = {isa = PBXBuildFile; fileRef = 623F283919342AD1000FA88C /* texturedQuad.metal */; };
+		623F283E19342D7A000FA88C /* AAPLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 623F283D19342D7A000FA88C /* AAPLView.mm */; };
+		623F2841193430AE000FA88C /* AAPLTexture.mm in Sources */ = {isa = PBXBuildFile; fileRef = 623F2840193430AE000FA88C /* AAPLTexture.mm */; };
+		623F2847193431B0000FA88C /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 623F2846193431B0000FA88C /* Metal.framework */; };
+		623F2849193431B6000FA88C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 623F2848193431B6000FA88C /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		362DE3ED1963319900E3E173 /* AAPLQuad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLQuad.h; sourceTree = "<group>"; };
+		362DE3EE1963319900E3E173 /* AAPLQuad.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AAPLQuad.mm; sourceTree = "<group>"; };
+		3682C3241981926F001B4714 /* Default.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Default.jpg; sourceTree = "<group>"; };
+		6218D85919AFB62B005BC8AB /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		622A9BAB19AA7ADF007F8120 /* AAPLRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLRenderer.h; sourceTree = "<group>"; };
+		622A9BAC19AA7ADF007F8120 /* AAPLRenderer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AAPLRenderer.mm; sourceTree = "<group>"; };
+		623F27ED1934231C000FA88C /* MetalTexturedQuad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalTexturedQuad.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		623F27F11934231C000FA88C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		623F27FD1934231C000FA88C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		623F27FF1934231C000FA88C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		623F28191934240D000FA88C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		623F282F19342AC1000FA88C /* AAPLAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLAppDelegate.h; sourceTree = "<group>"; };
+		623F283019342AC1000FA88C /* AAPLAppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AAPLAppDelegate.mm; sourceTree = "<group>"; };
+		623F283119342AC1000FA88C /* AAPLTransforms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLTransforms.h; sourceTree = "<group>"; };
+		623F283219342AC1000FA88C /* AAPLTransforms.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AAPLTransforms.mm; sourceTree = "<group>"; };
+		623F283419342AC1000FA88C /* AAPLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLViewController.h; sourceTree = "<group>"; };
+		623F283519342AC1000FA88C /* AAPLViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AAPLViewController.mm; sourceTree = "<group>"; };
+		623F283919342AD1000FA88C /* texturedQuad.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = texturedQuad.metal; sourceTree = "<group>"; };
+		623F283C19342D7A000FA88C /* AAPLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLView.h; sourceTree = "<group>"; };
+		623F283D19342D7A000FA88C /* AAPLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AAPLView.mm; sourceTree = "<group>"; };
+		623F283F193430AE000FA88C /* AAPLTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLTexture.h; sourceTree = "<group>"; };
+		623F2840193430AE000FA88C /* AAPLTexture.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AAPLTexture.mm; sourceTree = "<group>"; };
+		623F2846193431B0000FA88C /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		623F2848193431B6000FA88C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		623F27EA1934231C000FA88C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				623F2849193431B6000FA88C /* QuartzCore.framework in Frameworks */,
+				623F2847193431B0000FA88C /* Metal.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		362DE3E7196330D400E3E173 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				623F282F19342AC1000FA88C /* AAPLAppDelegate.h */,
+				623F283019342AC1000FA88C /* AAPLAppDelegate.mm */,
+				623F283C19342D7A000FA88C /* AAPLView.h */,
+				623F283D19342D7A000FA88C /* AAPLView.mm */,
+				623F283419342AC1000FA88C /* AAPLViewController.h */,
+				623F283519342AC1000FA88C /* AAPLViewController.mm */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		362DE3F0196331A200E3E173 /* Quad */ = {
+			isa = PBXGroup;
+			children = (
+				362DE3ED1963319900E3E173 /* AAPLQuad.h */,
+				362DE3EE1963319900E3E173 /* AAPLQuad.mm */,
+			);
+			name = Quad;
+			sourceTree = "<group>";
+		};
+		622A9BA919AA7A81007F8120 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				362DE3E7196330D400E3E173 /* App */,
+				623F283B19342B06000FA88C /* Math */,
+				623F2827193424C3000FA88C /* TextureLoader */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		622A9BAA19AA7AC6007F8120 /* Renderer */ = {
+			isa = PBXGroup;
+			children = (
+				622A9BAB19AA7ADF007F8120 /* AAPLRenderer.h */,
+				622A9BAC19AA7ADF007F8120 /* AAPLRenderer.mm */,
+				623F283919342AD1000FA88C /* texturedQuad.metal */,
+				362DE3F0196331A200E3E173 /* Quad */,
+			);
+			name = Renderer;
+			sourceTree = "<group>";
+		};
+		623F27E41934231C000FA88C = {
+			isa = PBXGroup;
+			children = (
+				623F27EF1934231C000FA88C /* Project */,
+				623F27EE1934231C000FA88C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		623F27EE1934231C000FA88C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				623F27ED1934231C000FA88C /* MetalTexturedQuad.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		623F27EF1934231C000FA88C /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				622A9BAA19AA7AC6007F8120 /* Renderer */,
+				622A9BA919AA7A81007F8120 /* Common */,
+				623F27F01934231C000FA88C /* Supporting Files */,
+				623F28431934314F000FA88C /* Frameworks */,
+			);
+			name = Project;
+			path = MetalTexturedQuad;
+			sourceTree = "<group>";
+		};
+		623F27F01934231C000FA88C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				623F28191934240D000FA88C /* main.m */,
+				3682C3241981926F001B4714 /* Default.jpg */,
+				623F27FC1934231C000FA88C /* Main.storyboard */,
+				6218D85919AFB62B005BC8AB /* LaunchScreen.xib */,
+				623F27FF1934231C000FA88C /* Images.xcassets */,
+				623F27F11934231C000FA88C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		623F2827193424C3000FA88C /* TextureLoader */ = {
+			isa = PBXGroup;
+			children = (
+				623F283F193430AE000FA88C /* AAPLTexture.h */,
+				623F2840193430AE000FA88C /* AAPLTexture.mm */,
+			);
+			name = TextureLoader;
+			sourceTree = "<group>";
+		};
+		623F283B19342B06000FA88C /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				623F283119342AC1000FA88C /* AAPLTransforms.h */,
+				623F283219342AC1000FA88C /* AAPLTransforms.mm */,
+			);
+			name = Math;
+			sourceTree = "<group>";
+		};
+		623F28431934314F000FA88C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				623F2848193431B6000FA88C /* QuartzCore.framework */,
+				623F2846193431B0000FA88C /* Metal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		623F27EC1934231C000FA88C /* MetalTexturedQuad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 623F280F1934231C000FA88C /* Build configuration list for PBXNativeTarget "MetalTexturedQuad" */;
+			buildPhases = (
+				623F27E91934231C000FA88C /* Sources */,
+				623F27EA1934231C000FA88C /* Frameworks */,
+				623F27EB1934231C000FA88C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MetalTexturedQuad;
+			productName = MetalTexturedQuad;
+			productReference = 623F27ED1934231C000FA88C /* MetalTexturedQuad.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		623F27E51934231C000FA88C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = Apple;
+				TargetAttributes = {
+					623F27EC1934231C000FA88C = {
+						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 9JA89QQLNQ;
+					};
+				};
+			};
+			buildConfigurationList = 623F27E81934231C000FA88C /* Build configuration list for PBXProject "MetalTexturedQuad" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 623F27E41934231C000FA88C;
+			productRefGroup = 623F27EE1934231C000FA88C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				623F27EC1934231C000FA88C /* MetalTexturedQuad */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		623F27EB1934231C000FA88C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6218D85A19AFB62B005BC8AB /* LaunchScreen.xib in Resources */,
+				623F28001934231C000FA88C /* Images.xcassets in Resources */,
+				3634F7DD196B1CDE00F3D263 /* Main.storyboard in Resources */,
+				623F283A19342AD1000FA88C /* texturedQuad.metal in Resources */,
+				3682C3251981926F001B4714 /* Default.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		623F27E91934231C000FA88C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				623F283E19342D7A000FA88C /* AAPLView.mm in Sources */,
+				362DE3EF1963319900E3E173 /* AAPLQuad.mm in Sources */,
+				623F283719342AC1000FA88C /* AAPLTransforms.mm in Sources */,
+				623F283819342AC1000FA88C /* AAPLViewController.mm in Sources */,
+				622A9BAD19AA7ADF007F8120 /* AAPLRenderer.mm in Sources */,
+				623F283619342AC1000FA88C /* AAPLAppDelegate.mm in Sources */,
+				623F2841193430AE000FA88C /* AAPLTexture.mm in Sources */,
+				623F281A1934240D000FA88C /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		623F27FC1934231C000FA88C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				623F27FD1934231C000FA88C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		623F280D1934231C000FA88C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LINKER_DISPLAYS_MANGLED_NAMES = YES;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				STRIP_INSTALLED_PRODUCT = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		623F280E1934231C000FA88C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_UNROLL_LOOPS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LLVM_LTO = YES;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		623F28101934231C000FA88C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = MetalTexturedQuad/Info.plist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TOOLCHAINS = Default;
+			};
+			name = Debug;
+		};
+		623F28111934231C000FA88C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = MetalTexturedQuad/Info.plist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TOOLCHAINS = Default;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		623F27E81934231C000FA88C /* Build configuration list for PBXProject "MetalTexturedQuad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				623F280D1934231C000FA88C /* Debug */,
+				623F280E1934231C000FA88C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		623F280F1934231C000FA88C /* Build configuration list for PBXNativeTarget "MetalTexturedQuad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				623F28101934231C000FA88C /* Debug */,
+				623F28111934231C000FA88C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 623F27E51934231C000FA88C /* Project object */;
+}

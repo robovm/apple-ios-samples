@@ -1,10 +1,10 @@
 Read Me About ListAdder
 =================
-1.0
+1.1
 
 This samples demonstrates the technique of thread confinement using NSOperation.  It was written to support Technote TN2109 "Simple and Reliable Threading with NSOperation".
 
-ListAdder requires iPhone OS 3.1.3, although the underlying will work on all versions of iOS and on Mac OS X 10.5 and later.
+ListAdder requires iOS 7.0, although the underlying technique will work on all versions of iOS and on OS X 10.5 and later.
 
 Packing List
 ------------
@@ -14,19 +14,21 @@ o Read Me About ListAdder.txt -- This file.
 
 o ListAdder.xcodeproj -- An Xcode project for the sample.
 
-o main.m, Info.plist, images, MainWindow.xib, and AppDelegate.[hm] -- Uninteresting boilerplate code.
+o main.m, Info.plist, "Default Images", Icons, and AppDelegate.{h,m} -- Uninteresting boilerplate code.
 
-o ListAdderViewController.[hm] -- A view controller for the main view.
+o Main.storyboard -- The storyboard for the app.
 
-o AdderOperation.[hm] -- The NSOperation subclass that does the asynchronous add.  Together with ListAdderViewController this represents the interesting part of the code.
+o ListAdderViewController.{h,m} -- A view controller for the main view.
 
-o NumberPickerController.[hm] -- A view controller that lets the user choose a number to add to the list.
+o AdderOperation.{h,m} -- The NSOperation subclass that does the asynchronous add.  Together with ListAdderViewController this represents the interesting part of the code.
 
-o OptionsController.[hm] -- A view controller that lets the user change various debugging options.
+o NumberPickerController.{h,m} -- A view controller that lets the user choose a number to add to the list.
+
+o OptionsController.{h,m} -- A view controller that lets the user change various debugging options.
 
 Building the Sample
 -------------------
-The sample was built using Xcode 3.2.3 on Mac OS X 10.6.4 with the iOS 4.0 SDK.  You should be able to just open the project and choose Build from the Build menu.
+The sample was built using Xcode 6.0 on OS X 10.9.4 with the iOS 8.0 SDK.  You should be able to just open the project and choose Build from the Build menu.
 
 Using the Sample
 ----------------
@@ -42,11 +44,17 @@ o "Use Threads Directly" -- If you enable this option ListAdderViewController wi
 
 o "Apply Results From Thread" -- If you enable this option ListAdderViewController will commit the results directly from its secondary thread rather than bouncing back to the main thread.  Needless to say, that generally ends badly.
 
+o "Add Faster" -- If you enable this the add operation runs faster, which is nice if you're testing the sample a lot.
+
 IMPORTANT: Because this sample was written to support Technote TN2109, it demonstrates various techniques that are incorrect.  Such code is either never executed (and commented as such) or executed conditionally based on the debugging options listed above.  If you enable these options, the code will do the wrong thing and, beyond that, it may crash.  Specifically, in the Debug build it may trip an assert, while in the Release build it's likely to crash in more subtle ways.
 
-How it Works
+How It Works
 ------------
-This sample was created to support TN 2109 "Simple and Reliable Threading with NSOperation".  You should read that technote to learn more about this code.
+This sample was created to support TN2109 "Simple and Reliable Threading with NSOperation".  You should read that technote to learn more about this code.
+
+Caveats
+-------
+Some techniques shown by the sample were deliberately not updated because that would put the code too far out of sync with the snippets in TN2109.  For example, the sample still uses -performSelectorOnMainThread:xxx rather than adding block operations on +[NSOperation mainQueue].
 
 Credits and Version History
 ---------------------------
@@ -56,9 +64,11 @@ If you find any problems with this sample, please file a bug against it.
 
 1.0 (Aug 2010) was the first shipping version.
 
+1.1 (Sep 2014) is an update to adopt modern coding techniques (storyboards, modern Objective-C, ARC, and so on).  It does not change the fundamentals outlined in TN2109.
+
 Share and Enjoy
 
 Apple Developer Technical Support
 Core OS/Hardware
 
-24 Aug 2010
+17 Sep 2014

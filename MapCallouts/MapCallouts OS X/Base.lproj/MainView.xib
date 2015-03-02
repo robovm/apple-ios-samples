@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="5053"/>
+        <plugIn identifier="com.apple.MapKitIBPlugin" version="5053"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="MapViewController">
+            <connections>
+                <outlet property="annotationStates" destination="UAy-XS-rYP" id="nxW-we-JU3"/>
+                <outlet property="bridgeViewController" destination="ouu-Oc-2Jx" id="pRm-rn-MaN"/>
+                <outlet property="mapView" destination="OGW-aC-Ew5" id="U8g-fw-5qt"/>
+                <outlet property="view" destination="TI7-s9-tAd" id="cPZ-Qr-Aqg"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application"/>
+        <view id="TI7-s9-tAd">
+            <rect key="frame" x="0.0" y="0.0" width="476" height="331"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <mapView translatesAutoresizingMaskIntoConstraints="NO" id="OGW-aC-Ew5">
+                    <rect key="frame" x="0.0" y="0.0" width="476" height="294"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <connections>
+                        <outlet property="delegate" destination="-2" id="G1f-wl-bwd"/>
+                    </connections>
+                </mapView>
+                <matrix verticalHuggingPriority="750" mode="highlight" allowsEmptySelection="NO" autorecalculatesCellSize="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UAy-XS-rYP">
+                    <rect key="frame" x="11" y="302" width="316" height="18"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    <size key="cellSize" width="76" height="18"/>
+                    <size key="intercellSpacing" width="4" height="2"/>
+                    <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" inset="2" id="ig5-EQ-gSR">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <cells>
+                        <column>
+                            <buttonCell type="check" title="City S.F. " bezelStyle="regularSquare" imagePosition="left" alignment="left" tag="1" inset="2" id="lR6-Pe-h5g">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                        </column>
+                        <column>
+                            <buttonCell type="check" title="Bridge" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="Fp2-DW-nme">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                        </column>
+                        <column>
+                            <buttonCell type="check" title="Garden " bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="0dP-jw-W5B">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                        </column>
+                        <column>
+                            <buttonCell type="check" title="All" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="NZC-fa-62k">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                        </column>
+                    </cells>
+                    <connections>
+                        <action selector="annotationsAction:" target="-2" id="hX2-Vk-ZIW"/>
+                    </connections>
+                </matrix>
+            </subviews>
+            <constraints>
+                <constraint firstItem="OGW-aC-Ew5" firstAttribute="leading" secondItem="TI7-s9-tAd" secondAttribute="leading" id="CJb-XQ-NcQ"/>
+                <constraint firstItem="UAy-XS-rYP" firstAttribute="leading" secondItem="TI7-s9-tAd" secondAttribute="leading" constant="11" id="GiC-uH-N0m"/>
+                <constraint firstAttribute="bottom" secondItem="OGW-aC-Ew5" secondAttribute="bottom" id="YF1-z1-5d4"/>
+                <constraint firstItem="OGW-aC-Ew5" firstAttribute="top" secondItem="TI7-s9-tAd" secondAttribute="top" constant="37" id="YqA-ZR-d3N"/>
+                <constraint firstItem="OGW-aC-Ew5" firstAttribute="top" secondItem="UAy-XS-rYP" secondAttribute="bottom" constant="8" symbolic="YES" id="b7S-1x-XSn"/>
+                <constraint firstAttribute="trailing" secondItem="OGW-aC-Ew5" secondAttribute="trailing" id="m5Y-ia-iYI"/>
+            </constraints>
+        </view>
+        <viewController nibName="PopoverView" id="ouu-Oc-2Jx" userLabel="BridgeViewController" customClass="BridgeViewController"/>
+    </objects>
+</document>

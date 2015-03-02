@@ -1,7 +1,7 @@
 /*
      File: Calculator.h
  Abstract: This file declares the interface for the Calculator class.
-  Version: 1.1
+  Version: 1.2
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
  Inc. ("Apple") in consideration of your agreement to the following
@@ -41,7 +41,7 @@
  STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
  POSSIBILITY OF SUCH DAMAGE.
  
- Copyright (C) 2012 Apple Inc. All Rights Reserved.
+ Copyright (C) 2014 Apple Inc. All Rights Reserved.
  
  */
 
@@ -53,15 +53,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Calculator : NSObject {
-@private
-   NSMutableString *_display;    // The calculator display (the value a harwdare-based calculator shows on its LCD screen).
-   double           _operand;
-   NSString        *_operator;
-}
-
-- init;
-
+@interface Calculator : NSObject
 
 /*!
  * @method input:

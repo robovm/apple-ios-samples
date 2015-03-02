@@ -3,7 +3,7 @@
  Abstract: Application delegate for the LazyTableImages sample.
  It also downloads in the background the "Top Paid iPhone Apps" RSS feed using NSURLConnection.
   
-  Version: 1.4 
+  Version: 1.5 
   
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple 
  Inc. ("Apple") in consideration of your agreement to the following 
@@ -43,7 +43,7 @@
  STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE 
  POSSIBILITY OF SUCH DAMAGE. 
   
- Copyright (C) 2013 Apple Inc. All Rights Reserved. 
+ Copyright (C) 2014 Apple Inc. All Rights Reserved. 
   
  */
 
@@ -55,23 +55,25 @@
 // This framework was imported so we could use the kCFURLErrorNotConnectedToInternet error code.
 #import <CFNetwork/CFNetwork.h>
 
-
+// the http URL used for fetching the top iOS paid apps on the App Store
 static NSString *const TopPaidAppsFeed =
 	@"http://phobos.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/toppaidapplications/limit=75/xml";
 
 
-@interface LazyTableAppDelegate () 
+@interface LazyTableAppDelegate ()
+
 // the queue to run our "ParseOperation"
 @property (nonatomic, strong) NSOperationQueue *queue;
 // RSS feed network connection to the App Store
 @property (nonatomic, strong) NSURLConnection *appListFeedConnection;
 @property (nonatomic, strong) NSMutableData *appListData;
+
 @end
 
 
-@implementation LazyTableAppDelegate
-
 #pragma mark -
+
+@implementation LazyTableAppDelegate
 
 // -------------------------------------------------------------------------------
 //	application:didFinishLaunchingWithOptions:
@@ -79,7 +81,7 @@ static NSString *const TopPaidAppsFeed =
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:TopPaidAppsFeed]];
-    self.appListFeedConnection = [[NSURLConnection alloc] initWithRequest:urlRequest delegate:self];
+    _appListFeedConnection = [[NSURLConnection alloc] initWithRequest:urlRequest delegate:self];
     
     // Test the validity of the connection object. The most likely reason for the connection object
     // to be nil is a malformed URL, which is a programmatic error easily detected during development
@@ -96,6 +98,7 @@ static NSString *const TopPaidAppsFeed =
 
 // -------------------------------------------------------------------------------
 //	handleError:error
+//  Reports any error with an alert which was received from connection or loading failures.
 // -------------------------------------------------------------------------------
 - (void)handleError:(NSError *)error
 {
@@ -108,14 +111,16 @@ static NSString *const TopPaidAppsFeed =
     [alertView show];
 }
 
+
 // The following are delegate methods for NSURLConnection. Similar to callback functions, this is how
 // the connection object,  which is working in the background, can asynchronously communicate back to
 // its delegate on the thread from which it was started - in this case, the main thread.
 //
-#pragma mark - NSURLConnectionDelegate methods
+#pragma mark - NSURLConnectionDelegate
 
 // -------------------------------------------------------------------------------
 //	connection:didReceiveResponse:response
+//  Called when enough data has been read to construct an NSURLResponse object.
 // -------------------------------------------------------------------------------
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
@@ -124,6 +129,8 @@ static NSString *const TopPaidAppsFeed =
 
 // -------------------------------------------------------------------------------
 //	connection:didReceiveData:data
+//  Called with a single immutable NSData object to the delegate, representing the next
+//  portion of the data loaded from the connection.
 // -------------------------------------------------------------------------------
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
@@ -132,16 +139,17 @@ static NSString *const TopPaidAppsFeed =
 
 // -------------------------------------------------------------------------------
 //	connection:didFailWithError:error
+//  Will be called at most once, if an error occurs during a resource load.
+//  No other callbacks will be made after.
 // -------------------------------------------------------------------------------
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     
-    if ([error code] == kCFURLErrorNotConnectedToInternet)
+    if (error.code == kCFURLErrorNotConnectedToInternet)
 	{
         // if we can identify the error, we can present a more precise message to the user.
-        NSDictionary *userInfo = [NSDictionary dictionaryWithObject:@"No Connection Error"
-															 forKey:NSLocalizedDescriptionKey];
+        NSDictionary *userInfo = @{NSLocalizedDescriptionKey:@"No Connection Error"};
         NSError *noConnectionError = [NSError errorWithDomain:NSCocoaErrorDomain
 														 code:kCFURLErrorNotConnectedToInternet
 													 userInfo:userInfo];
@@ -158,6 +166,8 @@ static NSString *const TopPaidAppsFeed =
 
 // -------------------------------------------------------------------------------
 //	connectionDidFinishLoading:connection
+//  Called when all connection processing has completed successfully, before the delegate
+//  is released by the connection.
 // -------------------------------------------------------------------------------
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
@@ -178,8 +188,7 @@ static NSString *const TopPaidAppsFeed =
         });
     };
     
-    // Referencing parser from within its completionBlock would create a retain
-    // cycle.
+    // Referencing parser from within its completionBlock would create a retain cycle.
     __weak ParseOperation *weakParser = parser;
     
     parser.completionBlock = ^(void) {

@@ -1,48 +1,7 @@
 /*
-     File: PlacemarkViewController.m 
- Abstract: UITableViewController that displays the propeties of a CLPlacemark. 
-  Version: 1.3 
-  
- Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple 
- Inc. ("Apple") in consideration of your agreement to the following 
- terms, and your use, installation, modification or redistribution of 
- this Apple software constitutes acceptance of these terms.  If you do 
- not agree with these terms, please do not use, install, modify or 
- redistribute this Apple software. 
-  
- In consideration of your agreement to abide by the following terms, and 
- subject to these terms, Apple grants you a personal, non-exclusive 
- license, under Apple's copyrights in this original Apple software (the 
- "Apple Software"), to use, reproduce, modify and redistribute the Apple 
- Software, with or without modifications, in source and/or binary forms; 
- provided that if you redistribute the Apple Software in its entirety and 
- without modifications, you must retain this notice and the following 
- text and disclaimers in all such redistributions of the Apple Software. 
- Neither the name, trademarks, service marks or logos of Apple Inc. may 
- be used to endorse or promote products derived from the Apple Software 
- without specific prior written permission from Apple.  Except as 
- expressly stated in this notice, no other rights or licenses, express or 
- implied, are granted by Apple herein, including but not limited to any 
- patent rights that may be infringed by your derivative works or by other 
- works in which the Apple Software may be incorporated. 
-  
- The Apple Software is provided by Apple on an "AS IS" basis.  APPLE 
- MAKES NO WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION 
- THE IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY AND FITNESS 
- FOR A PARTICULAR PURPOSE, REGARDING THE APPLE SOFTWARE OR ITS USE AND 
- OPERATION ALONE OR IN COMBINATION WITH YOUR PRODUCTS. 
-  
- IN NO EVENT SHALL APPLE BE LIABLE FOR ANY SPECIAL, INDIRECT, INCIDENTAL 
- OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF 
- SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS 
- INTERRUPTION) ARISING IN ANY WAY OUT OF THE USE, REPRODUCTION, 
- MODIFICATION AND/OR DISTRIBUTION OF THE APPLE SOFTWARE, HOWEVER CAUSED 
- AND WHETHER UNDER THEORY OF CONTRACT, TORT (INCLUDING NEGLIGENCE), 
- STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE 
- POSSIBILITY OF SUCH DAMAGE. 
-  
- Copyright (C) 2013 Apple Inc. All Rights Reserved. 
-  
+ Copyright (C) 2014 Apple Inc. All Rights Reserved.
+ See LICENSE.txt for this sample’s licensing information
+
  */
 
 #import "PlacemarkViewController.h"
@@ -66,7 +25,7 @@
 
 NSInteger const PlacemarkViewControllerNumberOfSections = 5;
 
-- (id)initWithPlacemark:(CLPlacemark*)placemark preferCoord:(BOOL)shouldPreferCoord
+- (instancetype)initWithPlacemark:(CLPlacemark *)placemark preferCoord:(BOOL)shouldPreferCoord
 {
     self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
@@ -76,12 +35,12 @@ NSInteger const PlacemarkViewControllerNumberOfSections = 5;
     return self;
 }
 
-- (id)initWithPlacemark:(CLPlacemark*)placemark
+- (instancetype)initWithPlacemark:(CLPlacemark *)placemark
 {
     return [self initWithPlacemark:placemark preferCoord:NO];
 }
 
-- (id)init
+- (instancetype)init
 {
     return [self initWithPlacemark:nil];
 }
@@ -105,19 +64,19 @@ NSInteger const PlacemarkViewControllerNumberOfSections = 5;
     NSArray *counts;
     if (_preferCoord)
     {
-        counts = @[[NSNumber numberWithInt:1],  //map
-                   [NSNumber numberWithInt:8],  //location
-                   [NSNumber numberWithInt:4],  //region
-                   [NSNumber numberWithInt:10], //dict
-                   [NSNumber numberWithInt:1]]; //map url
+        counts = @[@1,  //map
+                   @8,  //location
+                   @4,  //region
+                   @10, //dict
+                   @1]; //map url
     }
     else
     {
-        counts = @[[NSNumber numberWithInt:10], //dict
-                  [NSNumber numberWithInt:4],   //region
-                  [NSNumber numberWithInt:8],   //location
-                  [NSNumber numberWithInt:1],   //map
-                  [NSNumber numberWithInt:1]];  //map url
+        counts = @[@10, //dict
+                  @4,   //region
+                  @8,   //location
+                  @1,   //map
+                  @1];  //map url
     }
     
     return [counts[section] integerValue];
@@ -237,7 +196,7 @@ NSInteger const PlacemarkViewControllerNumberOfSections = 5;
     // setup
     NSString *key = keys[index];
     NSString *ivar = [self.placemark performSelector:NSSelectorFromString(key)];
-    NSString *dict = [[self.placemark addressDictionary] objectForKey:key];
+    NSString *dict = [self.placemark addressDictionary][key];
     if (dict)
     {
         // assert that ivar and dict values are the same
@@ -324,11 +283,11 @@ NSInteger const PlacemarkViewControllerNumberOfSections = 5;
     }
     else if ([key isEqualToString:@"center.latitude"])
     {
-        ivar = [self displayStringForDouble:[self.placemark.region center].latitude];
+        ivar = [self displayStringForDouble:self.placemark.location.coordinate.latitude];
     }
     else if ([key isEqualToString:@"center.longitude"])
     {
-        ivar = [self displayStringForDouble:[self.placemark.region center].longitude];
+        ivar = [self displayStringForDouble:self.placemark.location.coordinate.longitude];
     }
     else if ([key isEqualToString:@"identifier"])
     {
@@ -387,7 +346,7 @@ NSInteger const PlacemarkViewControllerNumberOfSections = 5;
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];   
     
     cell.textLabel.text = @"View in Maps";
-    cell.textLabel.textAlignment = UITextAlignmentCenter;
+    cell.textLabel.textAlignment = NSTextAlignmentCenter;
     
     return cell;
 }

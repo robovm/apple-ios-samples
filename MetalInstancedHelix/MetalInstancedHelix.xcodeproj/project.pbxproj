@@ -1,0 +1,350 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		62CBA6D91A5DB46E00BCAC01 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CBA6D81A5DB46E00BCAC01 /* main.m */; };
+		62CBA6E61A5DB46E00BCAC01 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62CBA6E51A5DB46E00BCAC01 /* Images.xcassets */; };
+		62CBA6E91A5DB46E00BCAC01 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62CBA6E71A5DB46E00BCAC01 /* LaunchScreen.xib */; };
+		62CBA7041A5DC04B00BCAC01 /* AAPLTransforms.mm in Sources */ = {isa = PBXBuildFile; fileRef = 62CBA7031A5DC04B00BCAC01 /* AAPLTransforms.mm */; };
+		62CBA70C1A5DC05500BCAC01 /* AAPLAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 62CBA7061A5DC05500BCAC01 /* AAPLAppDelegate.mm */; };
+		62CBA70D1A5DC05500BCAC01 /* AAPLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 62CBA7081A5DC05500BCAC01 /* AAPLView.mm */; };
+		62CBA70E1A5DC05500BCAC01 /* AAPLViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 62CBA70A1A5DC05500BCAC01 /* AAPLViewController.mm */; };
+		62CBA70F1A5DC05500BCAC01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62CBA70B1A5DC05500BCAC01 /* Main.storyboard */; };
+		62CBA7141A5DC09F00BCAC01 /* AAPLRenderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 62CBA7111A5DC09F00BCAC01 /* AAPLRenderer.mm */; };
+		62CBA7151A5DC09F00BCAC01 /* shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 62CBA7131A5DC09F00BCAC01 /* shaders.metal */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		62CBA6D31A5DB46E00BCAC01 /* MetalInstancedHelix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalInstancedHelix.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		62CBA6D71A5DB46E00BCAC01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62CBA6D81A5DB46E00BCAC01 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		62CBA6E51A5DB46E00BCAC01 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		62CBA6E81A5DB46E00BCAC01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		62CBA7021A5DC04B00BCAC01 /* AAPLTransforms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLTransforms.h; sourceTree = "<group>"; };
+		62CBA7031A5DC04B00BCAC01 /* AAPLTransforms.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AAPLTransforms.mm; sourceTree = "<group>"; };
+		62CBA7051A5DC05500BCAC01 /* AAPLAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLAppDelegate.h; sourceTree = "<group>"; };
+		62CBA7061A5DC05500BCAC01 /* AAPLAppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AAPLAppDelegate.mm; sourceTree = "<group>"; };
+		62CBA7071A5DC05500BCAC01 /* AAPLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLView.h; sourceTree = "<group>"; };
+		62CBA7081A5DC05500BCAC01 /* AAPLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AAPLView.mm; sourceTree = "<group>"; };
+		62CBA7091A5DC05500BCAC01 /* AAPLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLViewController.h; sourceTree = "<group>"; };
+		62CBA70A1A5DC05500BCAC01 /* AAPLViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AAPLViewController.mm; sourceTree = "<group>"; };
+		62CBA70B1A5DC05500BCAC01 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		62CBA7101A5DC09F00BCAC01 /* AAPLRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLRenderer.h; sourceTree = "<group>"; };
+		62CBA7111A5DC09F00BCAC01 /* AAPLRenderer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AAPLRenderer.mm; sourceTree = "<group>"; };
+		62CBA7121A5DC09F00BCAC01 /* AAPLSharedTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLSharedTypes.h; sourceTree = "<group>"; };
+		62CBA7131A5DC09F00BCAC01 /* shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = shaders.metal; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		62CBA6D01A5DB46E00BCAC01 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		62CBA6CA1A5DB46E00BCAC01 = {
+			isa = PBXGroup;
+			children = (
+				62CBA6D51A5DB46E00BCAC01 /* MetalInstancedHelix */,
+				62CBA6D41A5DB46E00BCAC01 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		62CBA6D41A5DB46E00BCAC01 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				62CBA6D31A5DB46E00BCAC01 /* MetalInstancedHelix.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		62CBA6D51A5DB46E00BCAC01 /* MetalInstancedHelix */ = {
+			isa = PBXGroup;
+			children = (
+				62CBA6FE1A5DC01100BCAC01 /* Renderer */,
+				62CBA6FF1A5DC01A00BCAC01 /* Common */,
+				62CBA6D61A5DB46E00BCAC01 /* Supporting Files */,
+			);
+			path = MetalInstancedHelix;
+			sourceTree = "<group>";
+		};
+		62CBA6D61A5DB46E00BCAC01 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				62CBA6E51A5DB46E00BCAC01 /* Images.xcassets */,
+				62CBA6E71A5DB46E00BCAC01 /* LaunchScreen.xib */,
+				62CBA6D71A5DB46E00BCAC01 /* Info.plist */,
+				62CBA6D81A5DB46E00BCAC01 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		62CBA6FE1A5DC01100BCAC01 /* Renderer */ = {
+			isa = PBXGroup;
+			children = (
+				62CBA7101A5DC09F00BCAC01 /* AAPLRenderer.h */,
+				62CBA7111A5DC09F00BCAC01 /* AAPLRenderer.mm */,
+				62CBA7121A5DC09F00BCAC01 /* AAPLSharedTypes.h */,
+				62CBA7131A5DC09F00BCAC01 /* shaders.metal */,
+			);
+			name = Renderer;
+			sourceTree = "<group>";
+		};
+		62CBA6FF1A5DC01A00BCAC01 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				62CBA7001A5DC03200BCAC01 /* App */,
+				62CBA7011A5DC03700BCAC01 /* Math */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		62CBA7001A5DC03200BCAC01 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				62CBA7051A5DC05500BCAC01 /* AAPLAppDelegate.h */,
+				62CBA7061A5DC05500BCAC01 /* AAPLAppDelegate.mm */,
+				62CBA7071A5DC05500BCAC01 /* AAPLView.h */,
+				62CBA7081A5DC05500BCAC01 /* AAPLView.mm */,
+				62CBA7091A5DC05500BCAC01 /* AAPLViewController.h */,
+				62CBA70A1A5DC05500BCAC01 /* AAPLViewController.mm */,
+				62CBA70B1A5DC05500BCAC01 /* Main.storyboard */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		62CBA7011A5DC03700BCAC01 /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				62CBA7021A5DC04B00BCAC01 /* AAPLTransforms.h */,
+				62CBA7031A5DC04B00BCAC01 /* AAPLTransforms.mm */,
+			);
+			name = Math;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		62CBA6D21A5DB46E00BCAC01 /* MetalInstancedHelix */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62CBA6F81A5DB46F00BCAC01 /* Build configuration list for PBXNativeTarget "MetalInstancedHelix" */;
+			buildPhases = (
+				62CBA6CF1A5DB46E00BCAC01 /* Sources */,
+				62CBA6D01A5DB46E00BCAC01 /* Frameworks */,
+				62CBA6D11A5DB46E00BCAC01 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MetalInstancedHelix;
+			productName = MetalInstancedHelix;
+			productReference = 62CBA6D31A5DB46E00BCAC01 /* MetalInstancedHelix.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		62CBA6CB1A5DB46E00BCAC01 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Apple Inc";
+				TargetAttributes = {
+					62CBA6D21A5DB46E00BCAC01 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+				};
+			};
+			buildConfigurationList = 62CBA6CE1A5DB46E00BCAC01 /* Build configuration list for PBXProject "MetalInstancedHelix" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 62CBA6CA1A5DB46E00BCAC01;
+			productRefGroup = 62CBA6D41A5DB46E00BCAC01 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				62CBA6D21A5DB46E00BCAC01 /* MetalInstancedHelix */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		62CBA6D11A5DB46E00BCAC01 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62CBA6E91A5DB46E00BCAC01 /* LaunchScreen.xib in Resources */,
+				62CBA6E61A5DB46E00BCAC01 /* Images.xcassets in Resources */,
+				62CBA70F1A5DC05500BCAC01 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		62CBA6CF1A5DB46E00BCAC01 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62CBA7141A5DC09F00BCAC01 /* AAPLRenderer.mm in Sources */,
+				62CBA70D1A5DC05500BCAC01 /* AAPLView.mm in Sources */,
+				62CBA7151A5DC09F00BCAC01 /* shaders.metal in Sources */,
+				62CBA70E1A5DC05500BCAC01 /* AAPLViewController.mm in Sources */,
+				62CBA7041A5DC04B00BCAC01 /* AAPLTransforms.mm in Sources */,
+				62CBA6D91A5DB46E00BCAC01 /* main.m in Sources */,
+				62CBA70C1A5DC05500BCAC01 /* AAPLAppDelegate.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		62CBA6E71A5DB46E00BCAC01 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				62CBA6E81A5DB46E00BCAC01 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		62CBA6F61A5DB46F00BCAC01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		62CBA6F71A5DB46F00BCAC01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		62CBA6F91A5DB46F00BCAC01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MetalInstancedHelix/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		62CBA6FA1A5DB46F00BCAC01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MetalInstancedHelix/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		62CBA6CE1A5DB46E00BCAC01 /* Build configuration list for PBXProject "MetalInstancedHelix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62CBA6F61A5DB46F00BCAC01 /* Debug */,
+				62CBA6F71A5DB46F00BCAC01 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		62CBA6F81A5DB46F00BCAC01 /* Build configuration list for PBXNativeTarget "MetalInstancedHelix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62CBA6F91A5DB46F00BCAC01 /* Debug */,
+				62CBA6FA1A5DB46F00BCAC01 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 62CBA6CB1A5DB46E00BCAC01 /* Project object */;
+}

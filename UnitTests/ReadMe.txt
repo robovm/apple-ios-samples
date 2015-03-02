@@ -115,9 +115,18 @@ Testing the Calc app using application unit tests
      to view the test log.
 
 
-===============================================================================
-Related Information
-- For more information, see the Xcode Unit Testing Guide document.
+Build Requirements
+Xcode 5, iOS 7 SDK or later, OS X 10.8 or later 
 
 
-Copyright © 2012 Apple Inc. All rights reserved.
+Runtime Requirements
+iOS 7 or later, OS X 10.8 or later
+
+
+Changes from Previous Versions
+1.1 Updated to use XCTest and Modern Objective-C syntax. iOS_Calc now supports Storyboards.
+
+1.0 First Release
+
+
+Copyright © 2014-2012 Apple Inc. All rights reserved.

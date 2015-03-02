@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="SaZ-74-Mqy">
+                    <rect key="frame" x="0.0" y="64" width="480" height="416"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wMl-nM-L9b">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="64"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="gWG-U7-z72"/>
+                        <constraint firstAttribute="height" constant="44" id="nGv-Ut-96E"/>
+                    </constraints>
+                    <items>
+                        <navigationItem title="iOS App Icons" id="g8x-Fe-Vbl"/>
+                    </items>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="nGv-Ut-96E"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=compact">
+                        <mask key="constraints">
+                            <exclude reference="gWG-U7-z72"/>
+                            <include reference="nGv-Ut-96E"/>
+                        </mask>
+                    </variation>
+                </navigationBar>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="SaZ-74-Mqy" firstAttribute="top" secondItem="wMl-nM-L9b" secondAttribute="bottom" id="Fbs-dM-R5g"/>
+                <constraint firstItem="wMl-nM-L9b" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Jom-2G-hT4"/>
+                <constraint firstAttribute="bottom" secondItem="SaZ-74-Mqy" secondAttribute="bottom" id="M5B-S7-Ddr"/>
+                <constraint firstAttribute="trailing" secondItem="SaZ-74-Mqy" secondAttribute="trailing" id="TCG-Pd-qcz"/>
+                <constraint firstItem="SaZ-74-Mqy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Wrm-0m-aBn"/>
+                <constraint firstItem="wMl-nM-L9b" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="lQo-jW-mek"/>
+                <constraint firstAttribute="trailing" secondItem="wMl-nM-L9b" secondAttribute="trailing" id="y6C-xE-AP7"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="404" y="445"/>
+        </view>
+    </objects>
+</document>

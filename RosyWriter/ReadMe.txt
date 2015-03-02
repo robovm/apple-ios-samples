@@ -1,36 +1,44 @@
-### RosyWriter ###
 
-===========================================================================
-DESCRIPTION:
+RosyWriter
 
-RosyWriter demonstrates the use of the AV Foundation framework to capture, process, preview, and save video on iOS devices. 
+This sample demonstrates how to use AVCaptureVideoDataOutput to bring frames from the camera into various processing pipelines, including CPU-based, OpenGL (i.e. on the GPU), CoreImage filters, and OpenCV. It also demonstrates best practices for writing the processed output of these pipelines to a movie file using AVAssetWriter.
 
-When RosyWriter launches, it creates an AVCaptureSession with audio and video device inputs, and outputs for audio and video data. These outputs continuously supply frames of audio and video to the app, via the captureOutput:didOutputSampleBuffer:fromConnection: delegate method.
+The project includes a different target for each of the different processing pipelines.
 
-The app applies a very simple processing step to each video frame. Specifically, it sets the green element of each pixel to zero, which gives the entire frame a purple tint. Audio frames are not processed.
+Classes
+RosyWriterViewController
+-- This file contains the view controller logic, including support for the Record button and video preview.
+RosyWriterCapturePipeline
+-- This file manages the audio and video capture pipelines, including the AVCaptureSession, the various queues, and resource management.
 
-After a frame of video is processed, RosyWriter uses OpenGL ES 2 to display it on the screen. This step uses the CVOpenGLESTextureCache API, new in iOS 5, for enhanced performance.
+Renderers
+RosyWriterRenderer
+-- This file defines a generic protocol for renderer objects used by RosyWriterCapturePipeline.
+RosyWriterOpenGLRenderer
+-- This file manages the OpenGL (GPU) processing for the "rosy" effect and delivers rendered buffers.
+RosyWriterCPURenderer
+-- This file manages the CPU processing for the "rosy" effect and delivers rendered buffers.
+RosyWriterCIFilterRenderer
+-- This file manages the CoreImage processing for the "rosy" effect and delivers rendered buffers.
+RosyWriterOpenCVRenderer
+-- This file manages the delivery of frames to an OpenCV processing block and delivers rendered buffers.
 
-When the user chooses to record a movie, an AVAssetWriter is used to write the processed video and un-processed audio to a QuickTime movie file.
+RosyWriterAppDelegate
+-- This file is a standard application delegate class.
 
-===========================================================================
-BUILD REQUIREMENTS:
+Shaders
+myFilter
+-- OpenGL shader code for the "rosy" effect
 
-Xcode 4 or later; iPhone iOS SDK 5.0 or later.
+Utilities
+MovieRecorder
+-- Illustrates real-time use of AVAssetWriter to record the displayed effect.
+OpenGLPixelBufferView
+-- This is a view that displays pixel buffers on the screen using OpenGL.
 
-===========================================================================
-RUNTIME REQUIREMENTS:
+GL
+-- Utilities used by the GL processing pipeline.
 
-iOS 5.0 or later. This app will not run on the iOS simulator.
 
-===========================================================================
-CHANGES FROM PREVIOUS VERSIONS:
-
-Version 1.2
-Corrected code for calculating the center of the preview view. Removed some unnecessary setNeedsDisplay calls.
-
-Version 1.1
-First public release.
-
-===========================================================================
-Copyright (C) 2011 Apple Inc. All rights reserved.
+===============================================================
+Copyright © 2014 Apple Inc. All rights reserved.

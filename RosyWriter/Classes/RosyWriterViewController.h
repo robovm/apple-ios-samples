@@ -1,7 +1,8 @@
+
 /*
      File: RosyWriterViewController.h
  Abstract: View controller for camera interface
-  Version: 1.2
+  Version: 2.1
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
  Inc. ("Apple") in consideration of your agreement to the following
@@ -41,35 +42,13 @@
  STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
  POSSIBILITY OF SUCH DAMAGE.
  
- Copyright (C) 2011 Apple Inc. All Rights Reserved.
+ Copyright (C) 2014 Apple Inc. All Rights Reserved.
  
  */
 
-#import <AVFoundation/AVFoundation.h>
-#import "RosyWriterPreviewView.h"
-#import "RosyWriterVideoProcessor.h"
 
-@interface RosyWriterViewController : UIViewController <RosyWriterVideoProcessorDelegate>
-{
-    RosyWriterVideoProcessor *videoProcessor;
-    
-	UIView *previewView;
-    RosyWriterPreviewView *oglView;
-    UIBarButtonItem *recordButton;
-	UILabel *frameRateLabel;
-	UILabel *dimensionsLabel;
-	UILabel *typeLabel;
- 
-    NSTimer *timer;
-    
-	BOOL shouldShowStats;
-	
-	UIBackgroundTaskIdentifier backgroundRecordingID;
-}
+#import <UIKit/UIKit.h>
 
-@property (nonatomic, retain) IBOutlet UIView *previewView;
-@property (nonatomic, retain) IBOutlet UIBarButtonItem *recordButton;
-
-- (IBAction)toggleRecording:(id)sender;
+@interface RosyWriterViewController : UIViewController
 
 @end

@@ -2,7 +2,7 @@
 /*
      File: VideoSnakeViewController.m
  Abstract: View controller for camera interface
-  Version: 2.1
+  Version: 2.2
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
  Inc. ("Apple") in consideration of your agreement to the following
@@ -42,7 +42,7 @@
  STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
  POSSIBILITY OF SUCH DAMAGE.
  
- Copyright (C) 2013 Apple Inc. All Rights Reserved.
+ Copyright (C) 2014 Apple Inc. All Rights Reserved.
  
  */
 
@@ -142,6 +142,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+	[super viewWillAppear:animated];
 	[self.videoSnakeSessionManager startRunning];
 	
 	self.labelTimer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(updateLabels) userInfo:nil repeats:YES];
@@ -149,6 +150,8 @@
 
 - (void)viewDidDisappear:(BOOL)animated
 {
+	[super viewDidDisappear:animated];
+	
 	[self.labelTimer invalidate];
 	self.labelTimer = nil;
 	
@@ -203,7 +206,7 @@
 	self.previewView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
 	
 	UIInterfaceOrientation currentInterfaceOrientation = [[UIApplication sharedApplication] statusBarOrientation];
-    self.previewView.transform = [self.videoSnakeSessionManager transformFromVideoBufferOrientationToOrientation:currentInterfaceOrientation withAutoMirroring:YES]; // Front camera preview should be mirrored
+    self.previewView.transform = [self.videoSnakeSessionManager transformFromVideoBufferOrientationToOrientation:(AVCaptureVideoOrientation)currentInterfaceOrientation withAutoMirroring:YES]; // Front camera preview should be mirrored
 
     [self.view insertSubview:self.previewView atIndex:0];
     CGRect bounds = CGRectZero;
