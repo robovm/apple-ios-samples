@@ -29,7 +29,7 @@ class AppLaunchContextTests: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        listURLs = NSBundle.mainBundle().URLsForResourcesWithExtension(AppConfiguration.listerFileExtension, subdirectory: "") as [NSURL]
+        listURLs = NSBundle.mainBundle().URLsForResourcesWithExtension(AppConfiguration.listerFileExtension, subdirectory: "") as! [NSURL]
     }
     
     // MARK: Initializers

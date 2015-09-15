@@ -89,7 +89,7 @@ class ListsInterfaceController: WKInterfaceController, ListsControllerDelegate {
     // MARK: Convenience
     
     func configureRowControllerAtIndex(index: Int) {
-        let ListRowController = interfaceTable.rowControllerAtIndex(index) as ColoredTextRowController
+        let ListRowController = interfaceTable.rowControllerAtIndex(index) as! ColoredTextRowController
         
         let listInfo = listsController[index]
         
@@ -101,7 +101,7 @@ class ListsInterfaceController: WKInterfaceController, ListsControllerDelegate {
                 queue, dispatch back to the main queue to make UI updates.
             */
             dispatch_async(dispatch_get_main_queue()) {
-                let ListRowController = self.interfaceTable.rowControllerAtIndex(index) as ColoredTextRowController
+                let ListRowController = self.interfaceTable.rowControllerAtIndex(index) as! ColoredTextRowController
 
                 ListRowController.setColor(listInfo.color!.colorValue)
             }

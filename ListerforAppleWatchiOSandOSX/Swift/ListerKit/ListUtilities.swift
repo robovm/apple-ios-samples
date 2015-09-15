@@ -42,7 +42,7 @@ public class ListUtilities {
     // MARK: List Handling Methods
     
     public class func copyInitialLists() {
-        let defaultListURLs = NSBundle.mainBundle().URLsForResourcesWithExtension(AppConfiguration.listerFileExtension, subdirectory: "") as [NSURL]
+        let defaultListURLs = NSBundle.mainBundle().URLsForResourcesWithExtension(AppConfiguration.listerFileExtension, subdirectory: "") as! [NSURL]
         
         for url in defaultListURLs {
             copyURLToDocumentsDirectory(url)

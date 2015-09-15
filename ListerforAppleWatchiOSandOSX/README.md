@@ -5,7 +5,7 @@
 2.0
 
 ## Build Requirements
-+ Xcode 6.2
++ Xcode 6.3 or later
 + iOS 8.2 SDK or later
 + OS X 10.10 SDK or later
 + iCloud–enabled provisioning profile
@@ -112,4 +112,4 @@ Lister has unit tests written for the List and ListItem classes. These tests are
 
 Lister does not currently support configuring a storage option before the iOS app is launched. Please launch the iOS app first. In your own projects, you should provide for the watch app being run prior to the iOS app that hosts it.
 
-Copyright (C) 2014 Apple Inc. All rights reserved.
+Copyright (C) 2014-2015 Apple Inc. All rights reserved.

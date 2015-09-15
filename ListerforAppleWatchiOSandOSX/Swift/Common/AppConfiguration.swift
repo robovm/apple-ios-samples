@@ -47,7 +47,7 @@ public class AppConfiguration {
         the user-defined value of `LISTER_BUNDLE_PREFIX` into several static string constants below.
     */
     private struct Bundle {
-        static var prefix = NSBundle.mainBundle().objectForInfoDictionaryKey("AAPLListerBundlePrefix") as String
+        static var prefix = NSBundle.mainBundle().objectForInfoDictionaryKey("AAPLListerBundlePrefix") as! String
     }
 
     struct ApplicationGroups {
@@ -249,7 +249,7 @@ public class AppConfiguration {
         let listCoordinator = listCoordinatorForCurrentConfigurationWithPathExtension(pathExtension, firstQueryHandler: firstQueryHandler)
         
         return ListsController(listCoordinator: listCoordinator, delegateQueue: NSOperationQueue.mainQueue()) { lhs, rhs in
-            return lhs.name.localizedCaseInsensitiveCompare(rhs.name) == .OrderedAscending
+            return lhs.name.localizedCaseInsensitiveCompare(rhs.name) == NSComparisonResult.OrderedAscending
         }
     }
 
@@ -262,7 +262,7 @@ public class AppConfiguration {
         let listCoordinator = listCoordinatorForCurrentConfigurationWithLastPathComponent(lastPathComponent, firstQueryHandler: firstQueryHandler)
         
         return ListsController(listCoordinator: listCoordinator, delegateQueue: NSOperationQueue.mainQueue()) { lhs, rhs in
-            return lhs.name.localizedCaseInsensitiveCompare(rhs.name) == .OrderedAscending
+            return lhs.name.localizedCaseInsensitiveCompare(rhs.name) == NSComparisonResult.OrderedAscending
         }
     }
     

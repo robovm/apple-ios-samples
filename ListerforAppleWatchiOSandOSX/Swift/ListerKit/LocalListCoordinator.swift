@@ -109,7 +109,7 @@ import Foundation
             let fileManager = NSFileManager.defaultManager()
             
             // Fetch the list documents from container documents directory.
-            let localDocumentURLs = fileManager.contentsOfDirectoryAtURL(ListUtilities.localDocumentsDirectory, includingPropertiesForKeys: nil, options: .SkipsPackageDescendants, error: nil) as [NSURL]
+            let localDocumentURLs = fileManager.contentsOfDirectoryAtURL(ListUtilities.localDocumentsDirectory, includingPropertiesForKeys: nil, options: .SkipsPackageDescendants, error: nil) as! [NSURL]
             
             var localListURLs = localDocumentURLs.filter { self.predicate.evaluateWithObject($0) }
             

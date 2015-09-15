@@ -165,7 +165,7 @@ class ListInterfaceController: WKInterfaceController, ListPresenterDelegate {
                 is passed instead of a URL because the `userInfo` dictionary of a WatchKit app's user activity
                 does not allow NSURL values.
             */
-            let userInfo = [
+            let userInfo: [NSObject: AnyObject] = [
                 AppConfiguration.UserActivity.listURLPathUserInfoKey: self.listDocument.fileURL.path!,
                 AppConfiguration.UserActivity.listColorUserInfoKey: self.listDocument.listPresenter!.color.rawValue
             ]
@@ -179,7 +179,7 @@ class ListInterfaceController: WKInterfaceController, ListPresenterDelegate {
     }
     
     func configureRowControllerAtIndex(index: Int) {
-        let listItemRowController = interfaceTable.rowControllerAtIndex(index) as ListItemRowController
+        let listItemRowController = interfaceTable.rowControllerAtIndex(index) as! ListItemRowController
         
         let listItem = listPresenter.presentedListItems[index]
         
@@ -198,7 +198,7 @@ class ListInterfaceController: WKInterfaceController, ListPresenterDelegate {
     override func awakeWithContext(context: AnyObject?) {
         precondition(context is ListInfo, "Expected class of `context` to be ListInfo.")
         
-        let listInfo = context as ListInfo
+        let listInfo = context as! ListInfo
         listDocument = ListDocument(fileURL: listInfo.URL)
         
         // Set the title of the interface controller based on the list's name.

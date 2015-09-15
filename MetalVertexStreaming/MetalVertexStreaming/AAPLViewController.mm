@@ -1,11 +1,9 @@
 /*
- Copyright (C) 2014 Apple Inc. All Rights Reserved.
+ Copyright (C) 2015 Apple Inc. All Rights Reserved.
  See LICENSE.txt for this sample’s licensing information
  
  Abstract:
- 
-  View Controller for Metal Sample Code. Maintains a CADisplayLink timer that runs on the main thread and triggers rendering in AAPLView. Provides update callbacks to its delegate on the timer, prior to triggering rendering.
-  
+ View Controller for Metal Sample Code. Maintains a CADisplayLink timer that runs on the main thread and triggers rendering in AAPLView. Provides update callbacks to its delegate on the timer, prior to triggering rendering.
  */
 
 #import "AAPLViewController.h"
@@ -51,7 +49,9 @@
 - (void)initCommon
 {
     _renderer = [AAPLRenderer new];
-    self.delegate = _renderer;
+    
+    // While this is standard across all the metal samples, this renderer doesn't use the view controller delegate.
+    //self.delegate = _renderer;
     
     //  Register notifications to start/stop drawing as this app moves into the background
     [[NSNotificationCenter defaultCenter] addObserver: self

@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		538F3AA91AD6F88200472C7A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 538F3AA21AD6F88200472C7A /* main.m */; };
+		538F3AB01AD6F90700472C7A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 538F3AAC1AD6F90700472C7A /* MainMenu.xib */; };
+		538F3AB41AD6F90F00472C7A /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 538F3AB21AD6F90F00472C7A /* Credits.rtf */; };
+		538F3ABA1AD6F97A00472C7A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 538F3AB81AD6F97A00472C7A /* Localizable.strings */; };
+		538F3AC31AD6F9E900472C7A /* HTML Document.html in Resources */ = {isa = PBXBuildFile; fileRef = 538F3ABD1AD6F9E900472C7A /* HTML Document.html */; };
+		538F3AC41AD6F9E900472C7A /* Image Document.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 538F3ABE1AD6F9E900472C7A /* Image Document.jpg */; };
+		538F3AC51AD6F9E900472C7A /* PDF Document.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 538F3ABF1AD6F9E900472C7A /* PDF Document.pdf */; };
+		538F3AC61AD6F9E900472C7A /* Text Document1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 538F3AC01AD6F9E900472C7A /* Text Document1.txt */; };
+		538F3AC71AD6F9E900472C7A /* Text Document2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 538F3AC11AD6F9E900472C7A /* Text Document2.txt */; };
+		538F3AC81AD6F9E900472C7A /* Text Document3.txt in Resources */ = {isa = PBXBuildFile; fileRef = 538F3AC21AD6F9E900472C7A /* Text Document3.txt */; };
+		538F3ACC1AD6FC9200472C7A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 538F3ACA1AD6FC9200472C7A /* InfoPlist.strings */; };
+		53A8DF431AEE9AFB006E55BB /* AAPLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A8DF401AEE9AFB006E55BB /* AAPLAppDelegate.m */; };
+		53A8DF441AEE9AFB006E55BB /* AAPLWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A8DF421AEE9AFB006E55BB /* AAPLWindowController.m */; };
+		53A8DF471AEE9B80006E55BB /* AAPLWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53A8DF451AEE9B80006E55BB /* AAPLWindowController.xib */; };
+		53F8B2A21AEE9A0800402E72 /* AAPLCloudDocumentsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F8B2A11AEE9A0800402E72 /* AAPLCloudDocumentsController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		534245ED1AD6F82A006AA0CF /* CloudSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		534245F11AD6F82A006AA0CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		538F3AA21AD6F88200472C7A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		538F3AA71AD6F88200472C7A /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
+		538F3AAD1AD6F90700472C7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		538F3AB31AD6F90F00472C7A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		538F3AB91AD6F97A00472C7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		538F3ABB1AD6F98400472C7A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		538F3ABD1AD6F9E900472C7A /* HTML Document.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "HTML Document.html"; sourceTree = "<group>"; };
+		538F3ABE1AD6F9E900472C7A /* Image Document.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Image Document.jpg"; sourceTree = "<group>"; };
+		538F3ABF1AD6F9E900472C7A /* PDF Document.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "PDF Document.pdf"; sourceTree = "<group>"; };
+		538F3AC01AD6F9E900472C7A /* Text Document1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Text Document1.txt"; sourceTree = "<group>"; };
+		538F3AC11AD6F9E900472C7A /* Text Document2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Text Document2.txt"; sourceTree = "<group>"; };
+		538F3AC21AD6F9E900472C7A /* Text Document3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Text Document3.txt"; sourceTree = "<group>"; };
+		538F3AC91AD6FA4000472C7A /* CloudSearch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = CloudSearch.entitlements; sourceTree = "<group>"; };
+		538F3ACB1AD6FC9200472C7A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		53A8DF3F1AEE9AFB006E55BB /* AAPLAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLAppDelegate.h; sourceTree = "<group>"; };
+		53A8DF401AEE9AFB006E55BB /* AAPLAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLAppDelegate.m; sourceTree = "<group>"; };
+		53A8DF411AEE9AFB006E55BB /* AAPLWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLWindowController.h; sourceTree = "<group>"; };
+		53A8DF421AEE9AFB006E55BB /* AAPLWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLWindowController.m; sourceTree = "<group>"; };
+		53A8DF461AEE9B80006E55BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AAPLWindowController.xib; sourceTree = "<group>"; };
+		53F8B2A01AEE9A0800402E72 /* AAPLCloudDocumentsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAPLCloudDocumentsController.h; path = ../../Shared/AAPLCloudDocumentsController.h; sourceTree = "<group>"; };
+		53F8B2A11AEE9A0800402E72 /* AAPLCloudDocumentsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AAPLCloudDocumentsController.m; path = ../../Shared/AAPLCloudDocumentsController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		534245EA1AD6F82A006AA0CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		533BCC621AE0489400183312 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				53F8B2A01AEE9A0800402E72 /* AAPLCloudDocumentsController.h */,
+				53F8B2A11AEE9A0800402E72 /* AAPLCloudDocumentsController.m */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
+		534245E41AD6F82A006AA0CF = {
+			isa = PBXGroup;
+			children = (
+				534245EF1AD6F82A006AA0CF /* CloudSearch */,
+				534245EE1AD6F82A006AA0CF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		534245EE1AD6F82A006AA0CF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				534245ED1AD6F82A006AA0CF /* CloudSearch.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		534245EF1AD6F82A006AA0CF /* CloudSearch */ = {
+			isa = PBXGroup;
+			children = (
+				538F3AC91AD6FA4000472C7A /* CloudSearch.entitlements */,
+				53A8DF3F1AEE9AFB006E55BB /* AAPLAppDelegate.h */,
+				53A8DF401AEE9AFB006E55BB /* AAPLAppDelegate.m */,
+				53A8DF411AEE9AFB006E55BB /* AAPLWindowController.h */,
+				53A8DF421AEE9AFB006E55BB /* AAPLWindowController.m */,
+				533BCC621AE0489400183312 /* Shared */,
+				534245F01AD6F82A006AA0CF /* Supporting Files */,
+			);
+			path = CloudSearch;
+			sourceTree = "<group>";
+		};
+		534245F01AD6F82A006AA0CF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				538F3AA71AD6F88200472C7A /* Prefix.pch */,
+				538F3AA21AD6F88200472C7A /* main.m */,
+				538F3AAC1AD6F90700472C7A /* MainMenu.xib */,
+				53A8DF451AEE9B80006E55BB /* AAPLWindowController.xib */,
+				538F3AB21AD6F90F00472C7A /* Credits.rtf */,
+				534245F11AD6F82A006AA0CF /* Info.plist */,
+				538F3ACA1AD6FC9200472C7A /* InfoPlist.strings */,
+				538F3AB81AD6F97A00472C7A /* Localizable.strings */,
+				538F3ABC1AD6F9E900472C7A /* SampleDocs */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		538F3ABC1AD6F9E900472C7A /* SampleDocs */ = {
+			isa = PBXGroup;
+			children = (
+				538F3ABD1AD6F9E900472C7A /* HTML Document.html */,
+				538F3ABE1AD6F9E900472C7A /* Image Document.jpg */,
+				538F3ABF1AD6F9E900472C7A /* PDF Document.pdf */,
+				538F3AC01AD6F9E900472C7A /* Text Document1.txt */,
+				538F3AC11AD6F9E900472C7A /* Text Document2.txt */,
+				538F3AC21AD6F9E900472C7A /* Text Document3.txt */,
+			);
+			name = SampleDocs;
+			path = ../../SampleDocs;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		534245EC1AD6F82A006AA0CF /* CloudSearch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5342460A1AD6F82A006AA0CF /* Build configuration list for PBXNativeTarget "CloudSearch" */;
+			buildPhases = (
+				534245E91AD6F82A006AA0CF /* Sources */,
+				534245EA1AD6F82A006AA0CF /* Frameworks */,
+				534245EB1AD6F82A006AA0CF /* Resources */,
+				538F3ACD1AD6FD2800472C7A /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CloudSearch;
+			productName = CloudSearch;
+			productReference = 534245ED1AD6F82A006AA0CF /* CloudSearch.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		534245E51AD6F82A006AA0CF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = keith;
+				TargetAttributes = {
+					534245EC1AD6F82A006AA0CF = {
+						CreatedOnToolsVersion = 6.3;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 534245E81AD6F82A006AA0CF /* Build configuration list for PBXProject "CloudSearch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 534245E41AD6F82A006AA0CF;
+			productRefGroup = 534245EE1AD6F82A006AA0CF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				534245EC1AD6F82A006AA0CF /* CloudSearch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		534245EB1AD6F82A006AA0CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				538F3AB01AD6F90700472C7A /* MainMenu.xib in Resources */,
+				538F3ABA1AD6F97A00472C7A /* Localizable.strings in Resources */,
+				538F3AB41AD6F90F00472C7A /* Credits.rtf in Resources */,
+				538F3AC81AD6F9E900472C7A /* Text Document3.txt in Resources */,
+				538F3AC71AD6F9E900472C7A /* Text Document2.txt in Resources */,
+				538F3AC41AD6F9E900472C7A /* Image Document.jpg in Resources */,
+				538F3AC51AD6F9E900472C7A /* PDF Document.pdf in Resources */,
+				538F3AC61AD6F9E900472C7A /* Text Document1.txt in Resources */,
+				538F3ACC1AD6FC9200472C7A /* InfoPlist.strings in Resources */,
+				53A8DF471AEE9B80006E55BB /* AAPLWindowController.xib in Resources */,
+				538F3AC31AD6F9E900472C7A /* HTML Document.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		538F3ACD1AD6FD2800472C7A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "BUNDLE_IDENTIFIER=$(/usr/libexec/PlistBuddy -c \"Print CFBundleIdentifier\" \"$BUILT_PRODUCTS_DIR/$PRODUCT_NAME.app/Info.plist\")\n\nif [[ $BUNDLE_IDENTIFIER == com.example.* ]]\nthen\necho \"$BUILT_PRODUCTS_DIR/$PRODUCT_NAME.app/Info.plist:1: error: Change your bundle identifier to use your own CloudKit container\"\nexit -1\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		534245E91AD6F82A006AA0CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53F8B2A21AEE9A0800402E72 /* AAPLCloudDocumentsController.m in Sources */,
+				53A8DF431AEE9AFB006E55BB /* AAPLAppDelegate.m in Sources */,
+				538F3AA91AD6F88200472C7A /* main.m in Sources */,
+				53A8DF441AEE9AFB006E55BB /* AAPLWindowController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		538F3AAC1AD6F90700472C7A /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				538F3AAD1AD6F90700472C7A /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		538F3AB21AD6F90F00472C7A /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				538F3AB31AD6F90F00472C7A /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		538F3AB81AD6F97A00472C7A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				538F3AB91AD6F97A00472C7A /* Base */,
+				538F3ABB1AD6F98400472C7A /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		538F3ACA1AD6FC9200472C7A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				538F3ACB1AD6FC9200472C7A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		53A8DF451AEE9B80006E55BB /* AAPLWindowController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53A8DF461AEE9B80006E55BB /* Base */,
+			);
+			name = AAPLWindowController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		534246081AD6F82A006AA0CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		534246091AD6F82A006AA0CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		5342460B1AD6F82A006AA0CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CloudSearch/CloudSearch.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CloudSearch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		5342460C1AD6F82A006AA0CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CloudSearch/CloudSearch.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CloudSearch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		534245E81AD6F82A006AA0CF /* Build configuration list for PBXProject "CloudSearch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				534246081AD6F82A006AA0CF /* Debug */,
+				534246091AD6F82A006AA0CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5342460A1AD6F82A006AA0CF /* Build configuration list for PBXNativeTarget "CloudSearch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5342460B1AD6F82A006AA0CF /* Debug */,
+				5342460C1AD6F82A006AA0CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 534245E51AD6F82A006AA0CF /* Project object */;
+}

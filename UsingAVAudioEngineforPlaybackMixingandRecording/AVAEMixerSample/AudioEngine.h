@@ -18,11 +18,12 @@
 @import Foundation;
 
 // effect strip 1 - Marimba Player -> Delay -> Mixer
-// effect strip 2 - Drum Player -> Distortion -> Mixer
+// effect strip 2 - Drum Player -> Reverb -> Mixer
 
 @protocol AudioEngineDelegate <NSObject>
 
 @optional
+- (void)engineWasInterrupted;
 - (void)engineConfigurationHasChanged;
 - (void)mixerOutputFilePlayerHasStopped;
 

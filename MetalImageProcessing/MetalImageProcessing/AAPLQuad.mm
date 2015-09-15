@@ -1,13 +1,11 @@
 /*
- Copyright (C) 2014 Apple Inc. All Rights Reserved.
+ Copyright (C) 2015 Apple Inc. All Rights Reserved.
  See LICENSE.txt for this sample’s licensing information
-
+ 
+ Abstract:
+ Utility class for creating a quad.
  */
 
-#import <UIKit/UIKit.h>
-#import <QuartzCore/QuartzCore.h>
-
-#import <Metal/Metal.h>
 #import <simd/simd.h>
 
 #import "AAPLQuad.h"
@@ -84,6 +82,7 @@ static const simd::float2 kQuadTexCoords[kCntQuadTexCoords] =
             
             return nil;
         } // if
+        
         m_VertexBuffer.label = @"quad vertices";
         
         m_TexCoordBuffer = [device newBufferWithBytes:kQuadTexCoords
@@ -96,6 +95,7 @@ static const simd::float2 kQuadTexCoords[kCntQuadTexCoords] =
             
             return nil;
         } // if
+        
         m_TexCoordBuffer.label = @"quad texcoords";
         
         _vertexIndex   = 0;
@@ -116,7 +116,7 @@ static const simd::float2 kQuadTexCoords[kCntQuadTexCoords] =
 - (void) setBounds:(CGRect)bounds
 {
     _bounds = bounds;
-    _aspect = fabsf(_bounds.size.width / _bounds.size.height);
+    _aspect = std::abs(_bounds.size.width / _bounds.size.height);
     
     float         aspect = 1.0f/_aspect;
     simd::float2  scale  = 0.0f;
@@ -124,11 +124,9 @@ static const simd::float2 kQuadTexCoords[kCntQuadTexCoords] =
     scale.x = aspect * _size.width / _bounds.size.width;
     scale.y = _size.height / _bounds.size.height;
     
-    // Did the scaling factor change
-    BOOL bNewScale = (scale.x != m_Scale.x) || (scale.y != m_Scale.y);
-    
-    // Set the (x,y) bounds of the quad
-    if(bNewScale)
+    // Did the scaling factor change? If so, then set the
+    // (x,y) bounds of the quad
+    if((scale.x != m_Scale.x) || (scale.y != m_Scale.y))
     {
         // Update the scaling factor
         m_Scale = scale;

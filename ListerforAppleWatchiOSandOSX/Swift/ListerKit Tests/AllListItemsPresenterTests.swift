@@ -676,7 +676,7 @@ class AllListItemsPresenterTests: XCTestCase {
         presenter.updatePresentedListItemsToCompletionState(true)
 
         testHelper.whenNextChangesOccur(assert: {
-            var presentedListItemsCopy = self.presentedListItems.map { $0.copy() as ListItem }
+            var presentedListItemsCopy = self.presentedListItems.map { $0.copy() as! ListItem }
 
             XCTAssertEqual(self.testHelper.didUpdateListItemCallbacks.count, self.initiallyIncompleteListItems.count, "The undo should perform \(self.presentedListItems.count) updates to revert the previous update for each modified item.")
 

@@ -123,7 +123,7 @@ class TodayViewController: UITableViewController, NCWidgetProviding, ListsContro
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if let listPresenter = listPresenter {
             if listPresenter.isEmpty {
-                let cell = tableView.dequeueReusableCellWithIdentifier(TableViewConstants.CellIdentifiers.message, forIndexPath: indexPath) as UITableViewCell
+                let cell = tableView.dequeueReusableCellWithIdentifier(TableViewConstants.CellIdentifiers.message, forIndexPath: indexPath) as! UITableViewCell
                 
                 cell.textLabel!.text = NSLocalizedString("No incomplete items in today's list.", comment: "")
                 
@@ -138,14 +138,14 @@ class TodayViewController: UITableViewController, NCWidgetProviding, ListsContro
                     diplay a message cell allowing the user to disclose all rows.
                 */
                 if (!showingAll && indexPath.row == TableViewConstants.baseRowCount && itemCount != TableViewConstants.baseRowCount + 1) {
-                    let cell = tableView.dequeueReusableCellWithIdentifier(TableViewConstants.CellIdentifiers.message, forIndexPath: indexPath) as UITableViewCell
+                    let cell = tableView.dequeueReusableCellWithIdentifier(TableViewConstants.CellIdentifiers.message, forIndexPath: indexPath) as! UITableViewCell
                     
                     cell.textLabel!.text = NSLocalizedString("Show All...", comment: "")
                     
                     return cell
                 }
                 else {
-                    let checkBoxCell = tableView.dequeueReusableCellWithIdentifier(TableViewConstants.CellIdentifiers.content, forIndexPath: indexPath) as CheckBoxCell
+                    let checkBoxCell = tableView.dequeueReusableCellWithIdentifier(TableViewConstants.CellIdentifiers.content, forIndexPath: indexPath) as! CheckBoxCell
                     
                     configureCheckBoxCell(checkBoxCell, forListItem: listPresenter.presentedListItems[indexPath.row])
                     
@@ -154,7 +154,7 @@ class TodayViewController: UITableViewController, NCWidgetProviding, ListsContro
             }
         }
         else {
-            let cell = tableView.dequeueReusableCellWithIdentifier(TableViewConstants.CellIdentifiers.message, forIndexPath: indexPath) as UITableViewCell
+            let cell = tableView.dequeueReusableCellWithIdentifier(TableViewConstants.CellIdentifiers.message, forIndexPath: indexPath) as! UITableViewCell
             
             cell.textLabel!.text = NSLocalizedString("Lister's Today widget is currently unavailable.", comment: "")
             

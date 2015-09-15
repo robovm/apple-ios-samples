@@ -137,9 +137,9 @@ import Foundation
     @objc private func metadataQueryDidFinishGathering(notifcation: NSNotification) {
         metadataQuery.disableUpdates()
 
-        let metadataItems = metadataQuery.results as [NSMetadataItem]
+        let metadataItems = metadataQuery.results as! [NSMetadataItem]
 
-        let insertedURLs = metadataItems.map { $0.valueForAttribute(NSMetadataItemURLKey) as NSURL }
+        let insertedURLs = metadataItems.map { $0.valueForAttribute(NSMetadataItemURLKey) as! NSURL }
 
         delegate?.listCoordinatorDidUpdateContents(insertedURLs: insertedURLs, removedURLs: [], updatedURLs: [])
         
@@ -165,7 +165,7 @@ import Foundation
         var updatedURLs = [NSURL]()
         
         let metadataItemToURLTransform: NSMetadataItem -> NSURL = { metadataItem in
-            return metadataItem.valueForAttribute(NSMetadataItemURLKey) as NSURL
+            return metadataItem.valueForAttribute(NSMetadataItemURLKey) as! NSURL
         }
 
         let insertedMetadataItemsOrNil: AnyObject? = notification.userInfo?[NSMetadataQueryUpdateAddedItemsKey]
@@ -181,7 +181,7 @@ import Foundation
         let updatedMetadataItemsOrNil: AnyObject? = notification.userInfo?[NSMetadataQueryUpdateChangedItemsKey]
         if let updatedMetadataItems = updatedMetadataItemsOrNil as? [NSMetadataItem] {
             let completelyDownloadedUpdatedMetadataItems = updatedMetadataItems.filter { updatedMetadataItem in
-                let downloadStatus = updatedMetadataItem.valueForAttribute(NSMetadataUbiquitousItemDownloadingStatusKey) as String
+                let downloadStatus = updatedMetadataItem.valueForAttribute(NSMetadataUbiquitousItemDownloadingStatusKey) as! String
 
                 return downloadStatus == NSMetadataUbiquitousItemDownloadingStatusCurrent
             }

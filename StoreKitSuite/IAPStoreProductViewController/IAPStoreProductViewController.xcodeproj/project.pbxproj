@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EB9C9221196B37A20009D041 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB9C9220196B37A20009D041 /* Foundation.framework */; };
-		EB9C9223196B37A20009D041 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB9C9222196B37A20009D041 /* CoreGraphics.framework */; };
-		EB9C9225196B37A20009D041 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB9C9224196B37A20009D041 /* UIKit.framework */; };
 		EB9C922B196B37A20009D041 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EB9C9229196B37A20009D041 /* InfoPlist.strings */; };
 		EB9C922D196B37A20009D041 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9C922C196B37A20009D041 /* main.m */; };
 		EB9C9231196B37A20009D041 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9C9230196B37A20009D041 /* AppDelegate.m */; };
@@ -21,10 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EB866F081AA67B6E00DD6CB5 /* ReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
 		EB9C921D196B37A20009D041 /* IAPStoreProductViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IAPStoreProductViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB9C9220196B37A20009D041 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		EB9C9222196B37A20009D041 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		EB9C9224196B37A20009D041 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EB9C9228196B37A20009D041 /* IAPStoreProductViewController-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IAPStoreProductViewController-Info.plist"; sourceTree = "<group>"; };
 		EB9C922A196B37A20009D041 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EB9C922C196B37A20009D041 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -33,7 +28,6 @@
 		EB9C9230196B37A20009D041 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		EB9C9232196B37A20009D041 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EBD87A251975B30E007E5E98 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/StoreProductViewController.storyboard; sourceTree = "<group>"; };
-		EBEBAE33196F59DC004C4FA4 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
 		EBF30CEE196B4CEA0055AF16 /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
 		EBF30CEF196B4CEA0055AF16 /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
 		EBF30CF1196B4CF70055AF16 /* StoreProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreProductViewController.h; sourceTree = "<group>"; };
@@ -46,9 +40,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB9C9223196B37A20009D041 /* CoreGraphics.framework in Frameworks */,
-				EB9C9225196B37A20009D041 /* UIKit.framework in Frameworks */,
-				EB9C9221196B37A20009D041 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,9 +49,8 @@
 		EB9C9214196B37A10009D041 = {
 			isa = PBXGroup;
 			children = (
-				EBEBAE33196F59DC004C4FA4 /* ReadMe.txt */,
+				EB866F081AA67B6E00DD6CB5 /* ReadMe.md */,
 				EB9C9226196B37A20009D041 /* IAPStoreProductViewController */,
-				EB9C921F196B37A20009D041 /* Frameworks */,
 				EB9C921E196B37A20009D041 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,16 +61,6 @@
 				EB9C921D196B37A20009D041 /* IAPStoreProductViewController.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		EB9C921F196B37A20009D041 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				EB9C9220196B37A20009D041 /* Foundation.framework */,
-				EB9C9222196B37A20009D041 /* CoreGraphics.framework */,
-				EB9C9224196B37A20009D041 /* UIKit.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		EB9C9226196B37A20009D041 /* IAPStoreProductViewController */ = {
@@ -137,7 +117,7 @@
 		EB9C9215196B37A10009D041 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0610;
 			};
 			buildConfigurationList = EB9C9218196B37A10009D041 /* Build configuration list for PBXProject "IAPStoreProductViewController" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -236,7 +216,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -268,7 +248,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

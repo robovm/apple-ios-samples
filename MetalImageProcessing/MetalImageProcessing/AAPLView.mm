@@ -1,11 +1,9 @@
 /*
- Copyright (C) 2014 Apple Inc. All Rights Reserved.
+ Copyright (C) 2015 Apple Inc. All Rights Reserved.
  See LICENSE.txt for this sample’s licensing information
  
  Abstract:
- 
-  View for Metal Sample Code. Manages screen drawable framebuffers and expects a delegate to repond to render commands to perform drawing.
-  
+ View for Metal Sample Code. Manages screen drawable framebuffers and expects a delegate to repond to render commands to perform drawing.
  */
 
 #import "AAPLView.h"
@@ -21,6 +19,7 @@
     id <MTLTexture>  _stencilTex;
     id <MTLTexture>  _msaaTex;
 }
+
 @synthesize currentDrawable      = _currentDrawable;
 @synthesize renderPassDescriptor = _renderPassDescriptor;
 
@@ -38,8 +37,8 @@
     
     _device = MTLCreateSystemDefaultDevice();
     
-    _metalLayer.device          = _device;
-    _metalLayer.pixelFormat     = MTLPixelFormatBGRA8Unorm;
+    _metalLayer.device      = _device;
+    _metalLayer.pixelFormat = MTLPixelFormatBGRA8Unorm;
     
     // this is the default but if we wanted to perform compute on the final rendering layer we could set this to no
     _metalLayer.framebufferOnly = YES;
@@ -83,8 +82,10 @@
 - (void)setupRenderPassDescriptorForTexture:(id <MTLTexture>) texture
 {
     // create lazily
-    if (_renderPassDescriptor == nil)
-    _renderPassDescriptor = [MTLRenderPassDescriptor renderPassDescriptor];
+    if(_renderPassDescriptor == nil)
+    {
+        _renderPassDescriptor = [MTLRenderPassDescriptor renderPassDescriptor];
+    }
     
     // create a color attachment every frame since we have to recreate the texture every frame
     MTLRenderPassColorAttachmentDescriptor *colorAttachment = _renderPassDescriptor.colorAttachments[0];
@@ -98,8 +99,8 @@
     if(_sampleCount > 1)
     {
         BOOL doUpdate =     ( _msaaTex.width       != texture.width  )
-        ||  ( _msaaTex.height      != texture.height )
-        ||  ( _msaaTex.sampleCount != _sampleCount   );
+                        ||  ( _msaaTex.height      != texture.height )
+                        ||  ( _msaaTex.sampleCount != _sampleCount   );
         
         if(!_msaaTex || (_msaaTex && doUpdate))
         {
@@ -135,8 +136,8 @@
     if(_depthPixelFormat != MTLPixelFormatInvalid)
     {
         BOOL doUpdate =     ( _depthTex.width       != texture.width  )
-        ||  ( _depthTex.height      != texture.height )
-        ||  ( _depthTex.sampleCount != _sampleCount   );
+                        ||  ( _depthTex.height      != texture.height )
+                        ||  ( _depthTex.sampleCount != _sampleCount   );
         
         if(!_depthTex || doUpdate)
         {
@@ -153,18 +154,19 @@
             _depthTex = [_device newTextureWithDescriptor: desc];
             
             MTLRenderPassDepthAttachmentDescriptor *depthAttachment = _renderPassDescriptor.depthAttachment;
-            depthAttachment.texture = _depthTex;
-            depthAttachment.loadAction = MTLLoadActionClear;
+            
+            depthAttachment.texture     = _depthTex;
+            depthAttachment.loadAction  = MTLLoadActionClear;
             depthAttachment.storeAction = MTLStoreActionDontCare;
-            depthAttachment.clearDepth = 1.0;
+            depthAttachment.clearDepth  = 1.0;
         }
     } // depth
     
     if(_stencilPixelFormat != MTLPixelFormatInvalid)
     {
         BOOL doUpdate  =    ( _stencilTex.width       != texture.width  )
-        ||  ( _stencilTex.height      != texture.height )
-        ||  ( _stencilTex.sampleCount != _sampleCount   );
+                        ||  ( _stencilTex.height      != texture.height )
+                        ||  ( _stencilTex.sampleCount != _sampleCount   );
         
         if(!_stencilTex || doUpdate)
         {
@@ -181,9 +183,10 @@
             _stencilTex = [_device newTextureWithDescriptor: desc];
             
             MTLRenderPassStencilAttachmentDescriptor* stencilAttachment = _renderPassDescriptor.stencilAttachment;
-            stencilAttachment.texture = _stencilTex;
-            stencilAttachment.loadAction = MTLLoadActionClear;
-            stencilAttachment.storeAction = MTLStoreActionDontCare;
+            
+            stencilAttachment.texture      = _stencilTex;
+            stencilAttachment.loadAction   = MTLLoadActionClear;
+            stencilAttachment.storeAction  = MTLStoreActionDontCare;
             stencilAttachment.clearStencil = 0;
         }
     } //stencil
@@ -192,9 +195,11 @@
 - (MTLRenderPassDescriptor *)renderPassDescriptor
 {
     id <CAMetalDrawable> drawable = self.currentDrawable;
+    
     if(!drawable)
     {
         NSLog(@">> ERROR: Failed to get a drawable!");
+        
         _renderPassDescriptor = nil;
     }
     else
@@ -209,7 +214,9 @@
 - (id <CAMetalDrawable>)currentDrawable
 {
     if (_currentDrawable == nil)
-    _currentDrawable = [_metalLayer nextDrawable];
+    {
+        _currentDrawable = [_metalLayer nextDrawable];
+    }
     
     return _currentDrawable;
 }
@@ -218,7 +225,6 @@
 {
     // Create autorelease pool per frame to avoid possible deadlock situations
     // because there are 3 CAMetalDrawables sitting in an autorelease pool.
-    
     @autoreleasepool
     {
         // handle display changes here
@@ -226,6 +232,7 @@
         {
             // set the metal layer to the drawable size in case orientation or size changes
             CGSize drawableSize = self.bounds.size;
+            
             drawableSize.width  *= self.contentScaleFactor;
             drawableSize.height *= self.contentScaleFactor;
             

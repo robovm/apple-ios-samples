@@ -22,6 +22,7 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD14FF0DC6FC520079059D /* OpenGLES.framework */; };
 		28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD15070DC6FC5B0079059D /* QuartzCore.framework */; };
+		AF2238AF19EF299500C4D0C9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF2238AE19EF299500C4D0C9 /* AVFoundation.framework */; };
 		AF62C673190997D50075DD39 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF62C671190997D50075DD39 /* MainStoryboard.storyboard */; };
 		AF62C676190998030075DD39 /* MusicCubeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF62C675190998030075DD39 /* MusicCubeViewController.m */; };
 		AF62C67819099B690075DD39 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF62C67719099B690075DD39 /* GLKit.framework */; };
@@ -52,6 +53,7 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* MusicCube_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicCube_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* MusicCube-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MusicCube-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		AF2238AE19EF299500C4D0C9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		AF28F9281061A52A00B93E5C /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
 		AF62C672190997D50075DD39 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		AF62C674190998030075DD39 /* MusicCubeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicCubeViewController.h; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF2238AF19EF299500C4D0C9 /* AVFoundation.framework in Frameworks */,
 				AF62C67819099B690075DD39 /* GLKit.framework in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
@@ -153,6 +156,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AF2238AE19EF299500C4D0C9 /* AVFoundation.framework */,
 				AF62C67719099B690075DD39 /* GLKit.framework */,
 				AF74CA530F8D8D1300A8C113 /* AudioToolbox.framework */,
 				AF74CA540F8D8D1300A8C113 /* CoreGraphics.framework */,
@@ -271,7 +275,7 @@
 				GCC_PREFIX_HEADER = MusicCube_Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = "MusicCube-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = MusicCube;
 			};
 			name = Debug;
@@ -285,7 +289,7 @@
 				GCC_PREFIX_HEADER = MusicCube_Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = "MusicCube-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = MusicCube;
 			};
 			name = Release;
@@ -297,7 +301,7 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
 				SDKROOT = iphoneos;
@@ -311,7 +315,7 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PREBINDING = NO;
 				SDKROOT = iphoneos;
 			};

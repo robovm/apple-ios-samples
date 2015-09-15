@@ -1,0 +1,398 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		36038AE41A2292E50051CD28 /* MatrixMultPerfTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 36038AE31A2292E50051CD28 /* MatrixMultPerfTest.mm */; };
+		364660E11A1D0E77007E98F3 /* BlasMatrixMult.mm in Sources */ = {isa = PBXBuildFile; fileRef = 364660E01A1D0E77007E98F3 /* BlasMatrixMult.mm */; };
+		364660E51A1D3E9A007E98F3 /* MachTImer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 364660E41A1D3E9A007E98F3 /* MachTImer.mm */; };
+		366346791AC93052007C7D74 /* MetalMatrixBuffers.mm in Sources */ = {isa = PBXBuildFile; fileRef = 366346781AC93052007C7D74 /* MetalMatrixBuffers.mm */; };
+		366BF9151AC78122004B3B94 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 366BF9131AC78122004B3B94 /* LaunchScreen.xib */; };
+		366BF9181AC78128004B3B94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 366BF9161AC78128004B3B94 /* Main.storyboard */; };
+		366BF91A1AC78434004B3B94 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 366BF9191AC78434004B3B94 /* Images.xcassets */; };
+		36A1F0CE1A1E7B3A00274D93 /* MatrixMultPTScheduler.mm in Sources */ = {isa = PBXBuildFile; fileRef = 36A1F0CD1A1E7B3A00274D93 /* MatrixMultPTScheduler.mm */; };
+		36A68BAA1A3228300053F087 /* MatrixRandomizer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 36A68BA91A3228300053F087 /* MatrixRandomizer.mm */; };
+		36F539661A045FA90017B3A1 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 36F539651A045FA90017B3A1 /* AppDelegate.mm */; };
+		36F539691A045FCC0017B3A1 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 36F539681A045FCC0017B3A1 /* ViewController.mm */; };
+		36F5396D1A045FF30017B3A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F5396C1A045FF30017B3A1 /* main.m */; };
+		36F5397D1A0463C00017B3A1 /* MetalMatrixMulti.metal in Sources */ = {isa = PBXBuildFile; fileRef = 36F5397C1A0463C00017B3A1 /* MetalMatrixMulti.metal */; };
+		36F5397F1A0464A00017B3A1 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36F5397E1A0464A00017B3A1 /* Metal.framework */; };
+		36F539811A0464DD0017B3A1 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36F539801A0464DD0017B3A1 /* Accelerate.framework */; };
+		36FBA6AB1A180D5A005646C1 /* MetalMatrixMult.mm in Sources */ = {isa = PBXBuildFile; fileRef = 36FBA6AA1A180D5A005646C1 /* MetalMatrixMult.mm */; };
+		93ED6422157544E8001AB34E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93ED6421157544E8001AB34E /* UIKit.framework */; };
+		93ED6424157544E8001AB34E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93ED6423157544E8001AB34E /* Foundation.framework */; };
+		93ED6426157544E8001AB34E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93ED6425157544E8001AB34E /* CoreGraphics.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		36038AE21A2292E50051CD28 /* MatrixMultPerfTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MatrixMultPerfTest.h; path = MetalMatrixMultply/MatrixMultPerfTest.h; sourceTree = SOURCE_ROOT; };
+		36038AE31A2292E50051CD28 /* MatrixMultPerfTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MatrixMultPerfTest.mm; path = MetalMatrixMultply/MatrixMultPerfTest.mm; sourceTree = SOURCE_ROOT; };
+		364660E01A1D0E77007E98F3 /* BlasMatrixMult.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = BlasMatrixMult.mm; path = MetalMatrixMultply/BlasMatrixMult.mm; sourceTree = SOURCE_ROOT; };
+		364660E21A1D0E98007E98F3 /* BlasMatrixMult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BlasMatrixMult.h; path = MetalMatrixMultply/BlasMatrixMult.h; sourceTree = SOURCE_ROOT; };
+		364660E31A1D3E7D007E98F3 /* MachTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MachTimer.h; path = MetalMatrixMultply/MachTimer.h; sourceTree = SOURCE_ROOT; };
+		364660E41A1D3E9A007E98F3 /* MachTImer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MachTImer.mm; path = MetalMatrixMultply/MachTImer.mm; sourceTree = SOURCE_ROOT; };
+		366346771AC93052007C7D74 /* MetalMatrixBuffers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MetalMatrixBuffers.h; path = MetalMatrixMultply/MetalMatrixBuffers.h; sourceTree = SOURCE_ROOT; };
+		366346781AC93052007C7D74 /* MetalMatrixBuffers.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MetalMatrixBuffers.mm; path = MetalMatrixMultply/MetalMatrixBuffers.mm; sourceTree = SOURCE_ROOT; };
+		366BF9141AC78122004B3B94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = MetalMatrixMultply/Base.lproj/LaunchScreen.xib; sourceTree = SOURCE_ROOT; };
+		366BF9171AC78128004B3B94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = MetalMatrixMultply/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
+		366BF9191AC78434004B3B94 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = MetalMatrixMultply/Images.xcassets; sourceTree = SOURCE_ROOT; };
+		369CFE901A1C4788005BBB94 /* MetalMatrixMult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MetalMatrixMult.h; path = MetalMatrixMultply/MetalMatrixMult.h; sourceTree = SOURCE_ROOT; };
+		36A1F0CD1A1E7B3A00274D93 /* MatrixMultPTScheduler.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MatrixMultPTScheduler.mm; path = MetalMatrixMultply/MatrixMultPTScheduler.mm; sourceTree = SOURCE_ROOT; };
+		36A1F0CF1A1E7B4C00274D93 /* MatrixMultPTScheduler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MatrixMultPTScheduler.h; path = MetalMatrixMultply/MatrixMultPTScheduler.h; sourceTree = SOURCE_ROOT; };
+		36A68BA81A3228160053F087 /* MatrixRandomizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MatrixRandomizer.h; path = MetalMatrixMultply/MatrixRandomizer.h; sourceTree = SOURCE_ROOT; };
+		36A68BA91A3228300053F087 /* MatrixRandomizer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MatrixRandomizer.mm; path = MetalMatrixMultply/MatrixRandomizer.mm; sourceTree = SOURCE_ROOT; };
+		36F5395D1A045F7F0017B3A1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = MetalMatrixMultply/AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		36F539651A045FA90017B3A1 /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = MetalMatrixMultply/AppDelegate.mm; sourceTree = SOURCE_ROOT; };
+		36F539671A045FCC0017B3A1 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = MetalMatrixMultply/ViewController.h; sourceTree = SOURCE_ROOT; };
+		36F539681A045FCC0017B3A1 /* ViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ViewController.mm; path = MetalMatrixMultply/ViewController.mm; sourceTree = SOURCE_ROOT; };
+		36F5396A1A045FE00017B3A1 /* MetalMatrixMultiply-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "MetalMatrixMultiply-Info.plist"; path = "MetalMatrixMultply/MetalMatrixMultiply-Info.plist"; sourceTree = SOURCE_ROOT; };
+		36F5396C1A045FF30017B3A1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = MetalMatrixMultply/main.m; sourceTree = SOURCE_ROOT; };
+		36F5397C1A0463C00017B3A1 /* MetalMatrixMulti.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; name = MetalMatrixMulti.metal; path = MetalMatrixMultply/MetalMatrixMulti.metal; sourceTree = SOURCE_ROOT; };
+		36F5397E1A0464A00017B3A1 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		36F539801A0464DD0017B3A1 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		36FBA6AA1A180D5A005646C1 /* MetalMatrixMult.mm */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 5; lastKnownFileType = sourcecode.cpp.objcpp; name = MetalMatrixMult.mm; path = MetalMatrixMultply/MetalMatrixMult.mm; sourceTree = SOURCE_ROOT; };
+		93ED641D157544E8001AB34E /* MetalMatrixMultiply.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalMatrixMultiply.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		93ED6421157544E8001AB34E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		93ED6423157544E8001AB34E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		93ED6425157544E8001AB34E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		93ED641A157544E8001AB34E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36F539811A0464DD0017B3A1 /* Accelerate.framework in Frameworks */,
+				36F5397F1A0464A00017B3A1 /* Metal.framework in Frameworks */,
+				93ED6422157544E8001AB34E /* UIKit.framework in Frameworks */,
+				93ED6424157544E8001AB34E /* Foundation.framework in Frameworks */,
+				93ED6426157544E8001AB34E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		36F5396E1A04600B0017B3A1 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				364660E31A1D3E7D007E98F3 /* MachTimer.h */,
+				364660E41A1D3E9A007E98F3 /* MachTImer.mm */,
+				36A68BA81A3228160053F087 /* MatrixRandomizer.h */,
+				36A68BA91A3228300053F087 /* MatrixRandomizer.mm */,
+				364660E21A1D0E98007E98F3 /* BlasMatrixMult.h */,
+				364660E01A1D0E77007E98F3 /* BlasMatrixMult.mm */,
+				36F5397C1A0463C00017B3A1 /* MetalMatrixMulti.metal */,
+				366346771AC93052007C7D74 /* MetalMatrixBuffers.h */,
+				366346781AC93052007C7D74 /* MetalMatrixBuffers.mm */,
+				369CFE901A1C4788005BBB94 /* MetalMatrixMult.h */,
+				36FBA6AA1A180D5A005646C1 /* MetalMatrixMult.mm */,
+				36038AE21A2292E50051CD28 /* MatrixMultPerfTest.h */,
+				36038AE31A2292E50051CD28 /* MatrixMultPerfTest.mm */,
+				36A1F0CF1A1E7B4C00274D93 /* MatrixMultPTScheduler.h */,
+				36A1F0CD1A1E7B3A00274D93 /* MatrixMultPTScheduler.mm */,
+				36F5395D1A045F7F0017B3A1 /* AppDelegate.h */,
+				36F539651A045FA90017B3A1 /* AppDelegate.mm */,
+				36F539671A045FCC0017B3A1 /* ViewController.h */,
+				36F539681A045FCC0017B3A1 /* ViewController.mm */,
+				36F5396C1A045FF30017B3A1 /* main.m */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		93ED6412157544E7001AB34E = {
+			isa = PBXGroup;
+			children = (
+				93ED6427157544E8001AB34E /* Metal Matrix Multiply */,
+				93ED6420157544E8001AB34E /* Frameworks */,
+				93ED641E157544E8001AB34E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		93ED641E157544E8001AB34E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				93ED641D157544E8001AB34E /* MetalMatrixMultiply.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		93ED6420157544E8001AB34E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				36F539801A0464DD0017B3A1 /* Accelerate.framework */,
+				36F5397E1A0464A00017B3A1 /* Metal.framework */,
+				93ED6421157544E8001AB34E /* UIKit.framework */,
+				93ED6423157544E8001AB34E /* Foundation.framework */,
+				93ED6425157544E8001AB34E /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		93ED6427157544E8001AB34E /* Metal Matrix Multiply */ = {
+			isa = PBXGroup;
+			children = (
+				36F5396E1A04600B0017B3A1 /* Sources */,
+				93ED6428157544E8001AB34E /* Supporting Files */,
+			);
+			name = "Metal Matrix Multiply";
+			path = TextViewARC;
+			sourceTree = "<group>";
+		};
+		93ED6428157544E8001AB34E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				366BF9131AC78122004B3B94 /* LaunchScreen.xib */,
+				366BF9161AC78128004B3B94 /* Main.storyboard */,
+				366BF9191AC78434004B3B94 /* Images.xcassets */,
+				36F5396A1A045FE00017B3A1 /* MetalMatrixMultiply-Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		93ED641C157544E8001AB34E /* MetalMatrixMultiply */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93ED643B157544E8001AB34E /* Build configuration list for PBXNativeTarget "MetalMatrixMultiply" */;
+			buildPhases = (
+				93ED6419157544E8001AB34E /* Sources */,
+				93ED641A157544E8001AB34E /* Frameworks */,
+				93ED641B157544E8001AB34E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MetalMatrixMultiply;
+			productName = TextViewARC;
+			productReference = 93ED641D157544E8001AB34E /* MetalMatrixMultiply.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		93ED6414157544E7001AB34E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Apple Inc.";
+				TargetAttributes = {
+					93ED641C157544E8001AB34E = {
+						DevelopmentTeam = Z7P62XVNWC;
+					};
+				};
+			};
+			buildConfigurationList = 93ED6417157544E7001AB34E /* Build configuration list for PBXProject "MetalMatrixMultiply" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 93ED6412157544E7001AB34E;
+			productRefGroup = 93ED641E157544E8001AB34E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				93ED641C157544E8001AB34E /* MetalMatrixMultiply */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		93ED641B157544E8001AB34E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				366BF91A1AC78434004B3B94 /* Images.xcassets in Resources */,
+				366BF9181AC78128004B3B94 /* Main.storyboard in Resources */,
+				366BF9151AC78122004B3B94 /* LaunchScreen.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		93ED6419157544E8001AB34E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36038AE41A2292E50051CD28 /* MatrixMultPerfTest.mm in Sources */,
+				36F539661A045FA90017B3A1 /* AppDelegate.mm in Sources */,
+				36FBA6AB1A180D5A005646C1 /* MetalMatrixMult.mm in Sources */,
+				364660E51A1D3E9A007E98F3 /* MachTImer.mm in Sources */,
+				36A1F0CE1A1E7B3A00274D93 /* MatrixMultPTScheduler.mm in Sources */,
+				36F539691A045FCC0017B3A1 /* ViewController.mm in Sources */,
+				366346791AC93052007C7D74 /* MetalMatrixBuffers.mm in Sources */,
+				36F5397D1A0463C00017B3A1 /* MetalMatrixMulti.metal in Sources */,
+				36A68BAA1A3228300053F087 /* MatrixRandomizer.mm in Sources */,
+				364660E11A1D0E77007E98F3 /* BlasMatrixMult.mm in Sources */,
+				36F5396D1A045FF30017B3A1 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		366BF9131AC78122004B3B94 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				366BF9141AC78122004B3B94 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		366BF9161AC78128004B3B94 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				366BF9171AC78128004B3B94 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		93ED6439157544E8001AB34E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LINKER_DISPLAYS_MANGLED_NAMES = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_LANGUAGE_REVISION = iOSMetal10;
+				MTL_OPTIMIZATION_LEVEL = 0;
+				ONLY_ACTIVE_ARCH = YES;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = iphoneos;
+				STRIP_INSTALLED_PRODUCT = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Debug;
+		};
+		93ED643A157544E8001AB34E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_UNROLL_LOOPS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LLVM_LTO = YES;
+				MTL_FAST_MATH = YES;
+				MTL_LANGUAGE_REVISION = iOSMetal10;
+				MTL_OPTIMIZATION_LEVEL = s;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		93ED643C157544E8001AB34E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MetalMatrixMultply/MetalMatrixMultiply-Prefix.pch";
+				INFOPLIST_FILE = "MetalMatrixMultply/MetalMatrixMultiply-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = MetalMatrixMultiply;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		93ED643D157544E8001AB34E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MetalMatrixMultply/MetalMatrixMultiply-Prefix.pch";
+				INFOPLIST_FILE = "MetalMatrixMultply/MetalMatrixMultiply-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = MetalMatrixMultiply;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		93ED6417157544E7001AB34E /* Build configuration list for PBXProject "MetalMatrixMultiply" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93ED6439157544E8001AB34E /* Debug */,
+				93ED643A157544E8001AB34E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93ED643B157544E8001AB34E /* Build configuration list for PBXNativeTarget "MetalMatrixMultiply" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93ED643C157544E8001AB34E /* Debug */,
+				93ED643D157544E8001AB34E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 93ED6414157544E7001AB34E /* Project object */;
+}

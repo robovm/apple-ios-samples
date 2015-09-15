@@ -58,6 +58,7 @@
 
 #import <QuartzCore/QuartzCore.h>
 #import <OpenGLES/EAGLDrawable.h>
+#import <OpenGLES/ES2/glext.h>
 
 #import "MusicCubeViewController.h"
 #import "teapot.h"

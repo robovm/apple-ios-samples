@@ -1,7 +1,9 @@
 /*
- Copyright (C) 2014 Apple Inc. All Rights Reserved.
+ Copyright (C) 2015 Apple Inc. All Rights Reserved.
  See LICENSE.txt for this sample’s licensing information
-
+ 
+ Abstract:
+ Metal Renderer for Metal Basic 3D. Acts as the update and render delegate for the view controller and performs rendering. In MetalBasic3D, the renderer draws N cubes, whos color values change every update.
  */
 
 #import <string>
@@ -16,6 +18,10 @@
 #import "AAPLView.h"
 
 #import "AAPLRenderer.h"
+
+static const NSUInteger kThreadgroupWidth  = 16;
+static const NSUInteger kThreadgroupHeight = 16;
+static const NSUInteger kThreadgroupDepth  = 1;
 
 static const float kUIInterfaceOrientationLandscapeAngle = 35.0f;
 static const float kUIInterfaceOrientationPortraitAngle  = 50.0f;
@@ -35,14 +41,17 @@ static const uint32_t kInFlightCommandBuffers = 3;
     UIInterfaceOrientation  mnOrientation;
     
     // Renderer globals
+    id <MTLDevice>             m_Device;
     id <MTLCommandQueue>       m_CommandQueue;
     id <MTLLibrary>            m_ShaderLibrary;
     id <MTLDepthStencilState>  m_DepthState;
     
     // Compute ivars
     id <MTLComputePipelineState>   m_Kernel;
-    MTLSize m_WorkgroupSize;
-    MTLSize m_LocalCount;
+    
+    // Compute kernel parameters
+    MTLSize m_ThreadgroupSize;
+    MTLSize m_ThreadgroupCount;
     
     // textured Quad
     AAPLTexture                   *mpInTexture;
@@ -77,88 +86,51 @@ static const uint32_t kInFlightCommandBuffers = 3;
     
     if (self)
     {
-        // initialize properties
-        _sampleCount             = 1;
-        _depthPixelFormat        = MTLPixelFormatDepth32Float;
-        _stencilPixelFormat      = MTLPixelFormatInvalid;
-        _constantDataBufferIndex = 0;
-        
-        // create a default system device
-        _device = MTLCreateSystemDefaultDevice();
-        
-        if(!_device)
-        {
-            NSLog(@">> ERROR: Failed creating a device!");
-            
-            // assert here becuase if the default system device isn't
-            //  created, then we shouldn't continue
-            assert(0);
-        } // if
-        
-        // create a new command queue
-        m_CommandQueue = [_device newCommandQueue];
-        
-        if(!m_CommandQueue)
-        {
-            NSLog(@">> ERROR: Failed creating a command queue!");
-            
-            // assert here becuase if the command queue isn't created,
-            // then we shouldn't continue
-            assert(0);
-        } // if
-        
-        m_ShaderLibrary = [_device newDefaultLibrary];
-        
-        if(!m_ShaderLibrary)
-        {
-            NSLog(@">> ERROR: Failed creating a default shader library!");
-            
-            // assert here becuase if the shader libary isn't loading,
-            // then we shouldn't contiue
-            assert(0);
-        } // if
-        
         m_InflightSemaphore = dispatch_semaphore_create(kInFlightCommandBuffers);
     }
     
     return self;
 }
 
-- (void)cleanup
-{
-    m_PipelineState   = nil;
-    m_Kernel          = nil;
-    m_ShaderLibrary   = nil;
-    m_TransformBuffer = nil;
-    m_DepthState      = nil;
-    m_CommandQueue    = nil;
-    mpInTexture       = nil;
-    m_OutTexture      = nil;
-    mpQuad            = nil;
-}
-
-#pragma mark Setup
+#pragma mark -
+#pragma mark - Setup
 
 - (void)configure:(AAPLView *)view
 {
-    view.depthPixelFormat   = _depthPixelFormat;
-    view.stencilPixelFormat = _stencilPixelFormat;
-    view.sampleCount        = _sampleCount;
+    // find a usable Device
+    m_Device = view.device;
+    
+    view.depthPixelFormat   = MTLPixelFormatInvalid;
+    view.stencilPixelFormat = MTLPixelFormatInvalid;
+    view.sampleCount        = 1;
     
     // we need to set the framebuffer only property of the layer to NO so we
     // can perform compute on the drawable's texture
-    
     CAMetalLayer *metalLayer = (CAMetalLayer *)view.layer;
-    
     metalLayer.framebufferOnly = NO;
     
-    if(![self preparePipelineState])
-    {
-        NSLog(@">> ERROR: Failed creating a depth stencil state descriptor!");
+    // create a new command queue
+    m_CommandQueue = [m_Device newCommandQueue];
+    if(!m_CommandQueue) {
+        NSLog(@">> ERROR: Couldnt create a command queue");
         
         assert(0);
     }
     
+    m_ShaderLibrary = [m_Device newDefaultLibrary];
+    if(!m_ShaderLibrary) {
+        NSLog(@">> ERROR: Couldnt create a default shader library");
+        
+        assert(0);
+    }
+    
+    if(![self preparePipelineState:view])
+    {
+        NSLog(@">> ERROR: Failed creating a compiled pipeline state object!");
+        
+        assert(0);
+    }
+
     if(![self prepareTexturedQuad:@"Default" ext:@"jpg"])
     {
         NSLog(@">> ERROR: Failed creating a textured quad!");
@@ -209,7 +181,7 @@ static const uint32_t kInFlightCommandBuffers = 3;
     } // if
     
     // Create a compute kernel
-    m_Kernel = [_device newComputePipelineStateWithFunction:function
+    m_Kernel = [m_Device newComputePipelineStateWithFunction:function
                                                       error:&pError];
     
     if(!m_Kernel)
@@ -220,8 +192,8 @@ static const uint32_t kInFlightCommandBuffers = 3;
     } // if
     
     MTLTextureDescriptor *pTexDesc = [MTLTextureDescriptor texture2DDescriptorWithPixelFormat:MTLPixelFormatRGBA8Unorm
-                                                                                        width:m_Size.width
-                                                                                       height:m_Size.height
+                                                                                        width:mpInTexture.width
+                                                                                       height:mpInTexture.height
                                                                                     mipmapped:NO];
     
     if(!pTexDesc)
@@ -231,7 +203,7 @@ static const uint32_t kInFlightCommandBuffers = 3;
         return NO;
     } // if
     
-    m_OutTexture = [_device newTextureWithDescriptor:pTexDesc];
+    m_OutTexture = [m_Device newTextureWithDescriptor:pTexDesc];
     
     if(!m_OutTexture)
     {
@@ -240,53 +212,38 @@ static const uint32_t kInFlightCommandBuffers = 3;
         return NO;
     } // if
     
-    // Set the compute kernel's workgroup size and count
-    m_WorkgroupSize = MTLSizeMake(1, 1, 1);
-    m_LocalCount    = MTLSizeMake(m_Size.width, m_Size.height, 1);
+    // Set the compute kernel's thread group size of 16x16
+    m_ThreadgroupSize = MTLSizeMake(kThreadgroupWidth, kThreadgroupHeight, kThreadgroupDepth);
+    
+    // Calculate the compute kernel's width and height
+    NSUInteger nThreadCountW = (mpInTexture.width  + m_ThreadgroupSize.width -  1) / m_ThreadgroupSize.width;
+    NSUInteger nThreadCountH = (mpInTexture.height + m_ThreadgroupSize.height - 1) / m_ThreadgroupSize.height;
+    
+    // Set the compute kernel's thread count
+    m_ThreadgroupCount = MTLSizeMake(nThreadCountW, nThreadCountH, 1);
     
     return YES;
 } // prepareCompute
 
-- (BOOL) preparePipelineState
+- (BOOL) preparePipelineState:(AAPLView *)view
 {
     // get the fragment function from the library
     id <MTLFunction> fragmentProgram = [m_ShaderLibrary newFunctionWithName:@"texturedQuadFragment"];
     
-    if(!fragmentProgram)
-    {
-        NSLog(@">> ERROR: Couldn't load fragment function from default library");
-    }
-    
     // get the vertex function from the library
     id <MTLFunction> vertexProgram = [m_ShaderLibrary newFunctionWithName:@"texturedQuadVertex"];
     
-    if(!vertexProgram)
-    {
-        NSLog(@">> ERROR: Couldn't load vertex function from default library");
-    }
-    
     //  create a pipeline state for the quad
     MTLRenderPipelineDescriptor *pQuadPipelineStateDescriptor = [MTLRenderPipelineDescriptor new];
-    
-    if(!pQuadPipelineStateDescriptor)
-    {
-        NSLog(@">> ERROR: Failed creating a pipeline state descriptor!");
-        
-        return NO;
-    } // if
-    
-    pQuadPipelineStateDescriptor.depthAttachmentPixelFormat      = _depthPixelFormat;
-    pQuadPipelineStateDescriptor.stencilAttachmentPixelFormat    = MTLPixelFormatInvalid;
+    pQuadPipelineStateDescriptor.depthAttachmentPixelFormat      = view.depthPixelFormat;
+    pQuadPipelineStateDescriptor.stencilAttachmentPixelFormat    = view.stencilPixelFormat;
     pQuadPipelineStateDescriptor.colorAttachments[0].pixelFormat = MTLPixelFormatBGRA8Unorm;
-    
-    pQuadPipelineStateDescriptor.sampleCount      = _sampleCount;
+    pQuadPipelineStateDescriptor.sampleCount      = view.sampleCount;
     pQuadPipelineStateDescriptor.vertexFunction   = vertexProgram;
     pQuadPipelineStateDescriptor.fragmentFunction = fragmentProgram;
     
     NSError *pError = nil;
-    
-    m_PipelineState = [_device newRenderPipelineStateWithDescriptor:pQuadPipelineStateDescriptor
-                                                              error:&pError];
+    m_PipelineState = [m_Device newRenderPipelineStateWithDescriptor:pQuadPipelineStateDescriptor error:&pError];
     if(!m_PipelineState)
     {
         NSLog(@">> ERROR: Failed acquiring pipeline state descriptor: %@", pError);
@@ -311,7 +268,7 @@ static const uint32_t kInFlightCommandBuffers = 3;
     pDepthStateDesc.depthCompareFunction = MTLCompareFunctionAlways;
     pDepthStateDesc.depthWriteEnabled    = YES;
     
-    m_DepthState = [_device newDepthStencilStateWithDescriptor:pDepthStateDesc];
+    m_DepthState = [m_Device newDepthStencilStateWithDescriptor:pDepthStateDesc];
     
     if(!m_DepthState)
     {
@@ -329,7 +286,7 @@ static const uint32_t kInFlightCommandBuffers = 3;
     
     mpInTexture.texture.label = texStr;
     
-    BOOL isAcquired = [mpInTexture finalize:_device];
+    BOOL isAcquired = [mpInTexture finalize:m_Device];
     
     if(!isAcquired)
     {
@@ -338,10 +295,10 @@ static const uint32_t kInFlightCommandBuffers = 3;
         return NO;
     } // if
     
-    m_Size.width  = mpInTexture.width;
-    m_Size.height = mpInTexture.height;
+    m_Size.width  = CGFloat(mpInTexture.width);
+    m_Size.height = CGFloat(mpInTexture.height);
     
-    mpQuad = [[AAPLQuad alloc] initWithDevice:_device];
+    mpQuad = [[AAPLQuad alloc] initWithDevice:m_Device];
     
     if(!mpQuad)
     {
@@ -358,7 +315,7 @@ static const uint32_t kInFlightCommandBuffers = 3;
 - (BOOL) prepareTransformBuffer
 {
     // allocate regions of memory for the constant buffer
-    m_TransformBuffer = [_device newBufferWithLength:kSzBufferLimitsPerFrame
+    m_TransformBuffer = [m_Device newBufferWithLength:kSzBufferLimitsPerFrame
                                              options:0];
     
     if(!m_TransformBuffer)
@@ -379,13 +336,14 @@ static const uint32_t kInFlightCommandBuffers = 3;
     simd::float3 center = {0.0, 0.0, 1.0};
     simd::float3 up     = {0.0, 1.0, 0.0};
     
-    m_LookAt = AAPL::Math::lookAt(eye, center, up);
+    m_LookAt = AAPL::Math::LHT::lookAt(eye, center, up);
     
     // Translate the object in (x,y,z) space.
     m_Translate = AAPL::Math::translate(0.0f, -0.25f, 2.0f);
 } // prepareTransforms
 
-#pragma mark Render
+#pragma mark -
+#pragma mark - Render
 
 - (void) compute:(id <MTLCommandBuffer>)commandBuffer
 {
@@ -401,8 +359,8 @@ static const uint32_t kInFlightCommandBuffers = 3;
         [computeEncoder setTexture:m_OutTexture
                            atIndex:1];
         
-        [computeEncoder dispatchThreadgroups:m_LocalCount
-                       threadsPerThreadgroup:m_WorkgroupSize];
+        [computeEncoder dispatchThreadgroups:m_ThreadgroupCount
+                       threadsPerThreadgroup:m_ThreadgroupSize];
         
         [computeEncoder endEncoding];
     } // if
@@ -487,7 +445,7 @@ static const uint32_t kInFlightCommandBuffers = 3;
         float top     = length;
         float bottom  = -top;
         
-        simd::float4x4 perspective = AAPL::Math::frustum_oc(left, right, bottom, top, near, far);
+        simd::float4x4 perspective = AAPL::Math::LHT::frustum_oc(left, right, bottom, top, near, far);
         
         // Create a viewing matrix derived from an eye point, a reference point
         // indicating the center of the scene, and an up vector.
@@ -524,30 +482,18 @@ static const uint32_t kInFlightCommandBuffers = 3;
         // render textured quad
         [self encode:renderEncoder];
         
-        // Dispatch the command buffer
-        __block dispatch_semaphore_t dispatchSemaphore = m_InflightSemaphore;
-        
-        [commandBuffer addCompletedHandler:^(id <MTLCommandBuffer> cmdb)
-         {
-             dispatch_semaphore_signal(dispatchSemaphore);
-         }];
-        
-        // Present and commit the command buffer
+        // Present command buffer
         [commandBuffer presentDrawable:view.currentDrawable];
-        [commandBuffer commit];
     }
-}
-
-// Note this method is called from the thread the main game loop is run
-- (void)update:(AAPLViewController *)controller
-{
-    // not used in this sample
-}
-
-// called whenever the main game loop is paused, such as when the app is backgrounded
-- (void)viewController:(AAPLViewController *)controller willPause:(BOOL)pause
-{
-    // not used in this sample
+    
+    // Dispatch the command buffer
+    __block dispatch_semaphore_t dispatchSemaphore = m_InflightSemaphore;
+    [commandBuffer addCompletedHandler:^(id <MTLCommandBuffer> cmdb)
+    {
+        dispatch_semaphore_signal(dispatchSemaphore);
+    }];
+    
+    [commandBuffer commit];
 }
 
 @end

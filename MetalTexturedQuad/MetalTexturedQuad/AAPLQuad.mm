@@ -1,7 +1,9 @@
 /*
- Copyright (C) 2014 Apple Inc. All Rights Reserved.
+ Copyright (C) 2015 Apple Inc. All Rights Reserved.
  See LICENSE.txt for this sample’s licensing information
-
+ 
+ Abstract:
+ Utility class for creating a quad.
  */
 
 #import <UIKit/UIKit.h>
@@ -116,7 +118,7 @@ static const simd::float2 kQuadTexCoords[kCntQuadTexCoords] =
 - (void) setBounds:(CGRect)bounds
 {
     _bounds = bounds;
-    _aspect = fabsf(_bounds.size.width / _bounds.size.height);
+    _aspect = std::abs(_bounds.size.width / _bounds.size.height);
     
     float         aspect = 1.0f/_aspect;
     simd::float2  scale  = 0.0f;

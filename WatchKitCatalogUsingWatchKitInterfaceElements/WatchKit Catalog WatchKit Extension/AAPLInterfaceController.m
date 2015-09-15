@@ -36,6 +36,10 @@
     return self;
 }
 
+- (void)awakeWithContext:(id)context {
+    NSLog(@"%@ awake with context: %@", self, context);
+}
+
 - (void)willActivate {
     // This method is called when the controller is about to be visible to the wearer.
     NSLog(@"%@ will activate", self);
@@ -44,6 +48,14 @@
 - (void)didDeactivate {
     // This method is called when the controller is no longer visible.
     NSLog(@"%@ did deactivate", self);
+}
+
+- (void)handleActionWithIdentifier:(NSString *)identifier forLocalNotification:(UILocalNotification *)localNotification {
+    NSLog(@"Handle action with identifier (Local): %@", identifier);
+}
+
+- (void)handleActionWithIdentifier:(NSString *)identifier forRemoteNotification:(NSDictionary *)remoteNotification {
+    NSLog(@"Handle action with identifier (Remote): %@", identifier);
 }
 
 - (void)handleUserActivity:(NSDictionary *)userInfo {

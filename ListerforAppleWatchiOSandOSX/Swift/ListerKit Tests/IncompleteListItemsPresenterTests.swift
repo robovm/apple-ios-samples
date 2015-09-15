@@ -65,7 +65,7 @@ class IncompleteListItemsPresenterTests: XCTestCase {
             Create a list that represents what should be the final archiveable list. We will compare this list
             against the presenter's archiveableList.
         */
-        let expectedList = list.copy() as List
+        let expectedList = list.copy() as! List
         let expectedChangeListItem = expectedList.items[indexOfListItemToToggle]
         expectedChangeListItem.isComplete = !expectedChangeListItem.isComplete
         

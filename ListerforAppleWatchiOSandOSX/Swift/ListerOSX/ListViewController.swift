@@ -70,10 +70,10 @@ class ListViewController: NSViewController, ColorPaletteViewDelegate, ListItemVi
     
     func tableView(tableView: NSTableView, viewForTableColumn: NSTableColumn, row: Int) -> NSView {
         if listPresenter.isEmpty {
-            return tableView.makeViewWithIdentifier(TableViewConstants.ViewIdentifiers.noListItemViewIdentifier, owner: nil) as NSView
+            return tableView.makeViewWithIdentifier(TableViewConstants.ViewIdentifiers.noListItemViewIdentifier, owner: nil) as! NSView
         }
         
-        var listItemView = tableView.makeViewWithIdentifier(TableViewConstants.ViewIdentifiers.listItemViewIdentifier, owner: nil) as ListItemView
+        var listItemView = tableView.makeViewWithIdentifier(TableViewConstants.ViewIdentifiers.listItemViewIdentifier, owner: nil) as! ListItemView
         
         let listItem = listPresenter.presentedListItems[row]
         
@@ -171,12 +171,12 @@ class ListViewController: NSViewController, ColorPaletteViewDelegate, ListItemVi
     
     func listItemsWithListerPasteboardType(pasteboard: NSPasteboard, refreshesItemIdentities: Bool = false) -> [ListItem]? {
         if pasteboard.canReadItemWithDataConformingToTypes([TableViewConstants.pasteboardType]) {
-            for pasteboardItem in pasteboard.pasteboardItems as [NSPasteboardItem] {
+            for pasteboardItem in pasteboard.pasteboardItems as! [NSPasteboardItem] {
 
                 if let itemsData = pasteboardItem.dataForType(TableViewConstants.pasteboardType) {
                     var allItems = [ListItem]()
 
-                    let pasteboardListItems = NSKeyedUnarchiver.unarchiveObjectWithData(itemsData) as [ListItem]
+                    let pasteboardListItems = NSKeyedUnarchiver.unarchiveObjectWithData(itemsData) as! [ListItem]
                     
                     for item in pasteboardListItems {
                         if refreshesItemIdentities {
@@ -199,7 +199,7 @@ class ListViewController: NSViewController, ColorPaletteViewDelegate, ListItemVi
         if pasteboard.canReadItemWithDataConformingToTypes([NSPasteboardTypeString]) {
             var allItems = [ListItem]()
 
-            for pasteboardItem in pasteboard.pasteboardItems as [NSPasteboardItem] {
+            for pasteboardItem in pasteboard.pasteboardItems as! [NSPasteboardItem] {
                 if let targetType = pasteboardItem.availableTypeFromArray([NSPasteboardTypeString]) {
                     if let pasteboardString = pasteboardItem.stringForType(targetType) {
                         allItems += ListFormatting.listItemsFromString(pasteboardString)

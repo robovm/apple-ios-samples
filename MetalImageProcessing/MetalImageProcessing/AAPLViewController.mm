@@ -1,11 +1,9 @@
 /*
- Copyright (C) 2014 Apple Inc. All Rights Reserved.
+ Copyright (C) 2015 Apple Inc. All Rights Reserved.
  See LICENSE.txt for this sample’s licensing information
  
  Abstract:
- 
-  View Controller for Metal Sample Code. Maintains a CADisplayLink timer that runs on the main thread and triggers rendering in AAPLView. Provides update callbacks to its delegate on the timer, prior to triggering rendering.
-  
+ View Controller for Metal Sample Code. Maintains a CADisplayLink timer that runs on the main thread and triggers rendering in AAPLView. Provides update callbacks to its delegate on the timer, prior to triggering rendering.
  */
 
 #import "AAPLViewController.h"
@@ -51,7 +49,9 @@
 - (void)initCommon
 {
     _renderer = [AAPLRenderer new];
-    self.delegate = _renderer;
+    
+    // while this is standard across all Metal samples, its not used in this one
+    //self.delegate = _renderer;
     
     //  Register notifications to start/stop drawing as this app moves into the background
     [[NSNotificationCenter defaultCenter] addObserver: self
@@ -75,6 +75,7 @@
     {
         [self initCommon];
     }
+    
     return self;
 }
 
@@ -111,6 +112,7 @@
     [super viewDidLoad];
     
     AAPLView *renderView = (AAPLView *)self.view;
+    
     renderView.delegate = _renderer;
     
     // load all renderer assets before starting game loop
@@ -122,7 +124,9 @@
     // create a game loop timer using a display link
     _timer = [[UIScreen mainScreen] displayLinkWithTarget:self
                                                  selector:@selector(gameloop)];
+    
     _timer.frameInterval = _interval;
+    
     [_timer addToRunLoop:[NSRunLoop mainRunLoop]
                  forMode:NSDefaultRunLoopMode];
 }
@@ -163,7 +167,9 @@
 - (void)stopGameLoop
 {
     if(_timer)
-    [_timer invalidate];
+    {
+        [_timer invalidate];
+    }
 }
 
 - (void)setPaused:(BOOL)pause

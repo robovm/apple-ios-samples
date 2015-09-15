@@ -83,8 +83,11 @@ The MusicCubeAppDelegate class defines the application delegate object.
 ================================================================================
 CHANGES FROM PREVIOUS VERSIONS:
 
+Version 1.4
+Updated for iOS 8. Imported the glext.h header. Replaced deprecated AudioSession C APIs with AVAudioSession calls.
+
 Version 1.3
-Removed compiler and Static Analyzer warnings.
+Updated with GLKit. Removed compiler and Static Analyzer warnings.
 
 Version 1.2
 Upgraded project to build with the iOS 4.0 SDK.

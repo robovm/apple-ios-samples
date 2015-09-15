@@ -24,6 +24,8 @@
 - (void)willActivate {
     // This method is called when the controller is about to be visible to the wearer.
     NSLog(@"%@ will activate", self);
+    
+    [self updateUserActivity:@"com.example.apple-samplecode.WatchKit-Catalog.notification" userInfo:@{@"Reason" : @"Notification"} webpageURL:nil];
 }
 
 - (void)didDeactivate {
@@ -31,7 +33,6 @@
     NSLog(@"%@ did deactivate", self);
 }
 
-/*
 - (void)didReceiveLocalNotification:(UILocalNotification *)localNotification withCompletion:(void (^)(WKUserNotificationInterfaceType))completionHandler {
     // This method is called when a local notification needs to be presented.
     // Implement it if you use a dynamic glance interface.
@@ -40,7 +41,6 @@
     // After populating your dynamic glance interface call the completion block.
     completionHandler(WKUserNotificationInterfaceTypeCustom);
 }
-*/
 
 - (void)didReceiveRemoteNotification:(NSDictionary *)remoteNotification withCompletion:(void (^)(WKUserNotificationInterfaceType))completionHandler {
     // This method is called when a remote notification needs to be presented.

@@ -65,7 +65,7 @@ class DirectoryMonitor {
             }
             
             // Start monitoring the directory via the source.
-            dispatch_resume(directoryMonitorSource)
+            dispatch_resume(directoryMonitorSource!)
         }
     }
     
@@ -73,7 +73,7 @@ class DirectoryMonitor {
         // Stop listening for changes to the directory, if the source has been created.
         if directoryMonitorSource != nil {
             // Stop monitoring the directory via the source.
-            dispatch_source_cancel(directoryMonitorSource)
+            dispatch_source_cancel(directoryMonitorSource!)
         }
     }
 }

@@ -48,6 +48,8 @@
 #import "MusicCubePlayback.h"
 #import "MyOpenALSupport.h"
 
+#import <AVFoundation/AVAudioSession.h>
+
 
 @implementation MusicCubePlayback
 
@@ -57,30 +59,34 @@
 
 #pragma mark Object Init / Maintenance
 
-void interruptionListener(	void *	inClientData,
-							UInt32	inInterruptionState)
+
+- (void)handleInterruption:(NSNotification *)notification
 {
-	MusicCubePlayback *THIS = (MusicCubePlayback*)inClientData;
-	if (inInterruptionState == kAudioSessionBeginInterruption)
-	{
-		// do nothing
-		[THIS teardownOpenAL];
-		if ([THIS isPlaying]) {
-			THIS->_wasInterrupted = YES;
-			THIS->_isPlaying = NO;
-		}
-	}
-	else if (inInterruptionState == kAudioSessionEndInterruption)
-	{
-		OSStatus result = AudioSessionSetActive(true);
-		if (result) printf("Error setting audio session active! %d\n", (int)result);
-		[THIS initOpenAL];
-		if (THIS->_wasInterrupted)
-		{
-			[THIS startSound];			
-			THIS->_wasInterrupted = NO;
-		}
-	}
+    AVAudioSessionInterruptionType interruptionType = [[[notification userInfo]
+                                                        objectForKey:AVAudioSessionInterruptionTypeKey] unsignedIntegerValue];
+    
+    if (AVAudioSessionInterruptionTypeBegan == interruptionType)
+    {
+        // do nothing
+        [self teardownOpenAL];
+        if (_isPlaying) {
+            _wasInterrupted = YES;
+            _isPlaying = NO;
+        }
+    }
+    else if (AVAudioSessionInterruptionTypeEnded == interruptionType)
+    {
+        NSError *error = nil;
+        [[AVAudioSession sharedInstance] setActive:YES error:&error];
+        if (nil != error) NSLog(@"Error setting audio session active! %@", error);
+        
+        [self initOpenAL];
+        if (_wasInterrupted)
+        {
+            [self startSound];
+            _wasInterrupted = NO;
+        }
+    }
 }
 
 - (id)init
@@ -91,17 +97,21 @@ void interruptionListener(	void *	inClientData,
 		// will be set by the view
 		
 		// setup our audio session
-		OSStatus result = AudioSessionInitialize(NULL, NULL, interruptionListener, self);
-		if (result) printf("Error initializing audio session! %d\n", (int)result);
-		else {
-			UInt32 category = kAudioSessionCategory_AmbientSound;
-			result = AudioSessionSetProperty(kAudioSessionProperty_AudioCategory, sizeof(category), &category);
-			if (result) printf("Error setting audio session category! %d\n", (int)result);
-			else {
-				result = AudioSessionSetActive(true);
-				if (result) printf("Error setting audio session active! %d\n", (int)result);
-			}
-		}
+        AVAudioSession *sessionInstance = [AVAudioSession sharedInstance];
+        
+        // add interruption handler
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(handleInterruption:)
+                                                     name:AVAudioSessionInterruptionNotification
+                                                    object:sessionInstance];
+        
+        NSError *error = nil;
+        [sessionInstance setCategory:AVAudioSessionCategoryAmbient error:&error];
+        if(nil != error) NSLog(@"Error setting audio session category! %@", error);
+        else {
+            [sessionInstance setActive:YES error:&error];
+            if (nil != error) NSLog(@"Error setting audio session active! %@", error);
+        }
 		
 		_wasInterrupted = NO;
 		

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6750" systemVersion="14C108" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6735"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
     </dependencies>
     <scenes>
@@ -68,6 +68,7 @@
                     <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf">
                         <color key="sashColor" red="0.80000001190000003" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </notificationCategory>
+                    <color key="backgroundColor" white="1" alpha="0.14000000000000001" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="notificationAlertLabel" destination="XG7-oj-wkh" id="gMR-p4-Z2l"/>
                         <segue destination="gdX-wl-uQE" kind="relationship" relationship="dynamicNotificationInterface" id="fKh-qV-3T2"/>
@@ -86,6 +87,7 @@
                             <color key="color" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         </separator>
                     </items>
+                    <color key="backgroundColor" white="1" alpha="0.14000000000000001" colorSpace="calibratedWhite"/>
                 </controller>
             </objects>
             <point key="canvasLocation" x="556" y="1755"/>
@@ -206,9 +208,6 @@
                         <label alignment="center" text="Headline" textAlignment="center" id="kVw-dP-ubT">
                             <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                         </label>
-                        <label alignment="center" text="Subhead" textAlignment="center" id="qFZ-uP-A1l">
-                            <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
-                        </label>
                         <label alignment="center" text="Body" textAlignment="center" id="1hX-5X-LH7">
                             <fontDescription key="font" style="UICTFontTextStyleBody"/>
                         </label>
@@ -319,7 +318,7 @@
                                 </button>
                             </items>
                         </group>
-                        <map alignment="center" id="KKt-Tm-wuD"/>
+                        <map height="100" alignment="center" id="KKt-Tm-wuD"/>
                         <group width="1" alignment="left" spacing="2" id="nmt-9i-hTK">
                             <items>
                                 <button width="0.5" alignment="left" title="Pins" id="nsf-EN-wP0">
@@ -355,7 +354,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="669" y="743"/>
+            <point key="canvasLocation" x="669" y="725.5"/>
         </scene>
         <!--Separator-->
         <scene sceneID="KgY-GF-oaX">
@@ -504,7 +503,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="458" y="1112.5"/>
+            <point key="canvasLocation" x="458" y="1084.5"/>
         </scene>
         <!--Controller-->
         <scene sceneID="vQD-To-ac3">

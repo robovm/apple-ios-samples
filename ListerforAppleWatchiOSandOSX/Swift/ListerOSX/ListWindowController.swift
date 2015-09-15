@@ -40,7 +40,7 @@ class ListWindowController: NSWindowController {
     
     override var document: AnyObject? {
         didSet {
-            let listViewController = window!.contentViewController as ListViewController
+            let listViewController = window!.contentViewController as! ListViewController
             
             listViewController.document = document as? ListDocument
         }
@@ -48,9 +48,9 @@ class ListWindowController: NSWindowController {
     
     override func prepareForSegue(segue: NSStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == SegueIdentifiers.showAddItemViewController {
-            let listViewController = window!.contentViewController as ListViewController
+            let listViewController = window!.contentViewController as! ListViewController
 
-            let addItemViewController = segue.destinationController as AddItemViewController
+            let addItemViewController = segue.destinationController as! AddItemViewController
 
             addItemViewController.delegate = listViewController
         }

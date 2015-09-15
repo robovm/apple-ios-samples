@@ -81,7 +81,7 @@ class ListItemTests: XCTestCase {
     // MARK: refreshIdentity()
     
     func testRefreshIdentity() {
-        let itemCopy = item.copy() as ListItem
+        let itemCopy = item.copy() as! ListItem
 
         XCTAssertEqual(item, itemCopy)
         

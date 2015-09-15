@@ -77,10 +77,10 @@ class NewListDocumentController: UIViewController, UITextFieldDelegate {
     
     // MARK: Touch Handling
     
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         super.touchesBegan(touches, withEvent: event)
         
-        let possibleTouch = touches.anyObject() as? UITouch
+        let possibleTouch = touches.first as? UITouch
         
         if let touch = possibleTouch {
             // The user has tapped outside the text field, resign first responder, if necessary.

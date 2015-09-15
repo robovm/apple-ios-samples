@@ -72,7 +72,6 @@
         
         _reverb = [[AVAudioUnitReverb alloc] init];
         
-        
         _mixerOutputFilePlayer = [[AVAudioPlayerNode alloc] init];
         
         _mixerOutputFileURL = nil;
@@ -215,12 +214,15 @@
 		2. An AVAudioSession error.
 		3. The driver failed to start the hardware. */
     
-    NSError *error;
-    NSAssert([_engine startAndReturnError:&error], @"couldn't start engine, %@", [error localizedDescription]);
+    if (!_engine.isRunning) {
+        NSError *error;
+        NSAssert([_engine startAndReturnError:&error], @"couldn't start engine, %@", [error localizedDescription]);
+    }
 }
 
 - (void)toggleMarimba {
     if (!self.marimbaPlayerIsPlaying) {
+        [self startEngine];
         [_marimbaPlayer scheduleBuffer:_marimbaLoopBuffer atTime:nil options:AVAudioPlayerNodeBufferLoops completionHandler:nil];
         [_marimbaPlayer play];
     } else
@@ -229,6 +231,7 @@
 
 - (void)toggleDrums {
     if (!self.drumPlayerIsPlaying) {
+        [self startEngine];
         [_drumPlayer scheduleBuffer:_drumLoopBuffer atTime:nil options:AVAudioPlayerNodeBufferLoops completionHandler:nil];
         [_drumPlayer play];
     } else
@@ -265,7 +268,7 @@
     AVAudioFile *mixerOutputFile = [[AVAudioFile alloc] initForWriting:_mixerOutputFileURL settings:[[mainMixer outputFormatForBus:0] settings] error:&error];
     NSAssert(mixerOutputFile != nil, @"mixerOutputFile is nil, %@", [error localizedDescription]);
     
-    if (!_engine.isRunning) [self startEngine];
+    [self startEngine];
     [mainMixer installTapOnBus:0 bufferSize:4096 format:[mainMixer outputFormatForBus:0] block:^(AVAudioPCMBuffer *buffer, AVAudioTime *when) {
         NSError *error;
         
@@ -287,6 +290,7 @@
 
 - (void)playRecordedFile
 {
+    [self startEngine];
     if (_mixerOutputFilePlayerIsPaused) {
         [_mixerOutputFilePlayer play];
     }
@@ -438,7 +442,7 @@
     NSError *error;
     
     // set the session category
-    bool success = [sessionInstance setCategory:AVAudioSessionCategoryPlayAndRecord error:&error];
+    bool success = [sessionInstance setCategory:AVAudioSessionCategoryPlayback error:&error];
     if (!success) NSLog(@"Error setting AVAudioSession category! %@\n", [error localizedDescription]);
     
     double hwSampleRate = 44100.0;
@@ -478,7 +482,14 @@
     NSLog(@"Session interrupted > --- %s ---\n", theInterruptionType == AVAudioSessionInterruptionTypeBegan ? "Begin Interruption" : "End Interruption");
     
     if (theInterruptionType == AVAudioSessionInterruptionTypeBegan) {
-        // the engine will pause itself
+        [_drumPlayer stop];
+        [_marimbaPlayer stop];
+        [self stopPlayingRecordedFile];
+        [self stopRecordingMixerOutput];
+        
+        if ([self.delegate respondsToSelector:@selector(engineWasInterrupted)]) {
+            [self.delegate engineWasInterrupted];
+        }
     }
     if (theInterruptionType == AVAudioSessionInterruptionTypeEnded) {
         // make sure to activate the session
@@ -531,11 +542,12 @@
     // re-wire all the connections and start the engine
     NSLog(@"Media services have been reset!");
     NSLog(@"Re-wiring connections and starting once again");
-    
+
     [self createEngineAndAttachNodes];
+	[self initAVAudioSession];
     [self makeEngineConnections];
     [self startEngine];
-    
+
     // post notification
     if ([self.delegate respondsToSelector:@selector(engineConfigurationHasChanged)]) {
         [self.delegate engineConfigurationHasChanged];

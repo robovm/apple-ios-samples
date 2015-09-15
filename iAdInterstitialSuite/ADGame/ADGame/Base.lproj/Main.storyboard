@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tqM-8o-iun">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Helvetica.ttc">
+            <string>Helvetica-Bold</string>
+            <string>Helvetica-Bold</string>
+            <string>Helvetica-Bold</string>
+            <string>Helvetica-Bold</string>
+            <string>Helvetica</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="91C-eV-ClW">
+            <objects>
+                <viewController storyboardIdentifier="GameViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tqM-8o-iun" customClass="GameViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vjC-HO-0j6"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xnu-rF-UNW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ckd-98-rFv">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1004"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dog-H1-aK1">
+                                <rect key="frame" x="369" y="916" width="30" height="68"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="48"/>
+                                <state key="normal" title="3">
+                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="scorePlayer3" destination="tqM-8o-iun" eventType="touchUpInside" id="4sq-N7-qCV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHd-s5-6CT">
+                                <rect key="frame" x="16" y="468" width="30" height="68"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="48"/>
+                                <state key="normal" title="2">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="scorePlayer2" destination="tqM-8o-iun" eventType="touchUpInside" id="2qx-Ra-N1f"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0VU-M2-ux2">
+                                <rect key="frame" x="722" y="468" width="30" height="68"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="48"/>
+                                <state key="normal" title="4">
+                                    <color key="titleColor" red="1" green="0.62745098040000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="scorePlayer4" destination="tqM-8o-iun" eventType="touchUpInside" id="HVZ-29-K6E"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQg-wP-FeM">
+                                <rect key="frame" x="369" y="28" width="30" height="68"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="48"/>
+                                <state key="normal" title="1">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="scorePlayer1" destination="tqM-8o-iun" eventType="touchUpInside" id="plU-lA-CbE"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Thumb Wars!" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="wX1-WN-e4E">
+                                <rect key="frame" x="100" y="480" width="568" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Kiv-Mo-0hl"/>
+                                    <constraint firstAttribute="width" constant="568" id="mtS-Wn-Q0m"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RbG-6v-Fzg" customClass="ScoreView">
+                                <rect key="frame" x="112" y="230" width="544" height="544"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="544" id="ctm-vd-bhm"/>
+                                    <constraint firstAttribute="height" constant="544" id="epu-6r-gch"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RbG-6v-Fzg" firstAttribute="centerY" secondItem="ckd-98-rFv" secondAttribute="centerY" id="5Hd-fa-dA0"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="FHd-s5-6CT" secondAttribute="leading" id="6yc-Yx-Zjn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0VU-M2-ux2" secondAttribute="trailing" id="DCE-r7-W8I"/>
+                            <constraint firstItem="Xnu-rF-UNW" firstAttribute="top" secondItem="Dog-H1-aK1" secondAttribute="bottom" constant="20" id="QFg-9X-8WT"/>
+                            <constraint firstItem="0VU-M2-ux2" firstAttribute="centerY" secondItem="ckd-98-rFv" secondAttribute="centerY" id="R1a-9J-PK1"/>
+                            <constraint firstItem="wX1-WN-e4E" firstAttribute="centerX" secondItem="pQg-wP-FeM" secondAttribute="centerX" id="VDp-FN-lqK"/>
+                            <constraint firstItem="pQg-wP-FeM" firstAttribute="top" secondItem="vjC-HO-0j6" secondAttribute="bottom" constant="8" id="VQD-3h-gwo"/>
+                            <constraint firstItem="FHd-s5-6CT" firstAttribute="centerY" secondItem="ckd-98-rFv" secondAttribute="centerY" id="fqD-kS-nhu"/>
+                            <constraint firstItem="RbG-6v-Fzg" firstAttribute="centerX" secondItem="ckd-98-rFv" secondAttribute="centerX" id="kzW-ef-d01"/>
+                            <constraint firstItem="Dog-H1-aK1" firstAttribute="centerX" secondItem="ckd-98-rFv" secondAttribute="centerX" id="q0k-wP-g4B"/>
+                            <constraint firstItem="wX1-WN-e4E" firstAttribute="centerY" secondItem="RbG-6v-Fzg" secondAttribute="centerY" id="uWa-5r-9ww"/>
+                            <constraint firstItem="pQg-wP-FeM" firstAttribute="centerX" secondItem="ckd-98-rFv" secondAttribute="centerX" id="zjZ-9i-WO7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="qS7-Nf-Etn"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="768" height="1004"/>
+                    <connections>
+                        <outlet property="scoreView" destination="RbG-6v-Fzg" id="Qbj-pz-pS1"/>
+                        <outlet property="titleLabel" destination="wX1-WN-e4E" id="usm-Oj-BkX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="148-Il-5p2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2101" y="559"/>
+        </scene>
+    </scenes>
+</document>

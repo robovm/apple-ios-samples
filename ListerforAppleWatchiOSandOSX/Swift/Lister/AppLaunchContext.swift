@@ -71,7 +71,7 @@ struct AppLaunchContext {
         
         // Extract the query items to initialize the `listColor` property from the `color` query item.
         let urlComponents = NSURLComponents(URL: listerURL, resolvingAgainstBaseURL: false)!
-        let queryItems = urlComponents.queryItems as [NSURLQueryItem]
+        let queryItems = urlComponents.queryItems as! [NSURLQueryItem]
         
         // Filter down to only the `color` query items. There should only be one.
         let colorQueryItems = queryItems.filter { $0.name == AppConfiguration.ListerScheme.colorQueryKey }

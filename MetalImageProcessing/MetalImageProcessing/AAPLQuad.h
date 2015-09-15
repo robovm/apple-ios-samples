@@ -1,13 +1,12 @@
 /*
- Copyright (C) 2014 Apple Inc. All Rights Reserved.
+ Copyright (C) 2015 Apple Inc. All Rights Reserved.
  See LICENSE.txt for this sample’s licensing information
  
  Abstract:
- 
-  Utility class for creating a quad.
-  
+ Utility class for creating a quad.
  */
 
+#import <QuartzCore/QuartzCore.h>
 #import <Metal/Metal.h>
 
 @interface AAPLQuad : NSObject

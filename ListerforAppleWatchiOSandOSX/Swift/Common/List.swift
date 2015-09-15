@@ -86,13 +86,13 @@ final public class List: NSObject, NSCoding, NSCopying, DebugPrintable {
     public init(color: Color = .Gray, items: [ListItem] = []) {
         self.color = color
         
-        self.items = items.map { $0.copy() as ListItem }
+        self.items = items.map { $0.copy() as! ListItem }
     }
 
     // MARK: NSCoding
     
     public required init(coder aDecoder: NSCoder) {
-        items = aDecoder.decodeObjectForKey(SerializationKeys.items) as [ListItem]
+        items = aDecoder.decodeObjectForKey(SerializationKeys.items) as! [ListItem]
         color = Color(rawValue: aDecoder.decodeIntegerForKey(SerializationKeys.color))!
     }
     

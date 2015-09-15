@@ -55,7 +55,7 @@ public class ListDocument: NSDocument {
         if makesCustomWindowControllers {
             let storyboard = NSStoryboard(name: "Main", bundle: nil)!
             
-            let windowController = storyboard.instantiateControllerWithIdentifier(StoryboardConstants.listWindowControllerStoryboardIdentifier) as NSWindowController
+            let windowController = storyboard.instantiateControllerWithIdentifier(StoryboardConstants.listWindowControllerStoryboardIdentifier) as! NSWindowController
 
             addWindowController(windowController)
         }

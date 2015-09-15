@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		362ADEF2195A0A5200CA3671 /* AAPLQuad.mm in Sources */ = {isa = PBXBuildFile; fileRef = 362ADEF1195A0A5200CA3671 /* AAPLQuad.mm */; };
-		36A654211965FBDD008E7BA2 /* processTexturedQuad.metal in Resources */ = {isa = PBXBuildFile; fileRef = 62B7763E193438980095A4D6 /* processTexturedQuad.metal */; };
+		368AEDE71A00562A002E4617 /* GrayscaleShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 368AEDE61A00562A002E4617 /* GrayscaleShader.metal */; };
+		368AEDE81A0056BF002E4617 /* TexturedQuadShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 62B7763E193438980095A4D6 /* TexturedQuadShader.metal */; };
+		36A654211965FBDD008E7BA2 /* TexturedQuadShader.metal in Resources */ = {isa = PBXBuildFile; fileRef = 62B7763E193438980095A4D6 /* TexturedQuadShader.metal */; };
 		6218D85E19AFB898005BC8AB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6218D85D19AFB898005BC8AB /* LaunchScreen.xib */; };
 		622A9BB219AAC7E4007F8120 /* AAPLRenderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 622A9BB119AAC7E4007F8120 /* AAPLRenderer.mm */; };
 		62B7760F193438100095A4D6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B7760E193438100095A4D6 /* main.m */; };
@@ -27,6 +29,7 @@
 /* Begin PBXFileReference section */
 		362ADEF0195A0A5200CA3671 /* AAPLQuad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLQuad.h; sourceTree = "<group>"; };
 		362ADEF1195A0A5200CA3671 /* AAPLQuad.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AAPLQuad.mm; sourceTree = "<group>"; };
+		368AEDE61A00562A002E4617 /* GrayscaleShader.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = GrayscaleShader.metal; sourceTree = "<group>"; };
 		6218D85D19AFB898005BC8AB /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		622A9BB019AAC7E4007F8120 /* AAPLRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLRenderer.h; sourceTree = "<group>"; };
 		622A9BB119AAC7E4007F8120 /* AAPLRenderer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AAPLRenderer.mm; sourceTree = "<group>"; };
@@ -46,7 +49,7 @@
 		62B7763B193438980095A4D6 /* AAPLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AAPLView.mm; sourceTree = "<group>"; };
 		62B7763C193438980095A4D6 /* AAPLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLViewController.h; sourceTree = "<group>"; };
 		62B7763D193438980095A4D6 /* AAPLViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AAPLViewController.mm; sourceTree = "<group>"; };
-		62B7763E193438980095A4D6 /* processTexturedQuad.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = processTexturedQuad.metal; sourceTree = "<group>"; };
+		62B7763E193438980095A4D6 /* TexturedQuadShader.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = TexturedQuadShader.metal; sourceTree = "<group>"; };
 		62B7764B19343A8A0095A4D6 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		62B7764D19343A900095A4D6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -73,11 +76,21 @@
 			name = Quad;
 			sourceTree = "<group>";
 		};
+		3672C3C319F9960C002BFB8D /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				368AEDE61A00562A002E4617 /* GrayscaleShader.metal */,
+				62B7763E193438980095A4D6 /* TexturedQuadShader.metal */,
+			);
+			name = Shaders;
+			sourceTree = "<group>";
+		};
 		622A9BAE19AAC75D007F8120 /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				62B776451934396C0095A4D6 /* App */,
 				62B7764819343A020095A4D6 /* Math */,
+				362ADEEF195A0A4C00CA3671 /* Quad */,
 				62B77646193439E90095A4D6 /* Texture Loader */,
 			);
 			name = Common;
@@ -88,8 +101,6 @@
 			children = (
 				622A9BB019AAC7E4007F8120 /* AAPLRenderer.h */,
 				622A9BB119AAC7E4007F8120 /* AAPLRenderer.mm */,
-				62B7763E193438980095A4D6 /* processTexturedQuad.metal */,
-				362ADEEF195A0A4C00CA3671 /* Quad */,
 			);
 			name = Renderer;
 			sourceTree = "<group>";
@@ -113,8 +124,9 @@
 		62B7760B193438100095A4D6 /* Project */ = {
 			isa = PBXGroup;
 			children = (
-				622A9BAF19AAC791007F8120 /* Renderer */,
 				622A9BAE19AAC75D007F8120 /* Common */,
+				622A9BAF19AAC791007F8120 /* Renderer */,
+				3672C3C319F9960C002BFB8D /* Shaders */,
 				62B7760C193438100095A4D6 /* Supporting Files */,
 				62B7764A19343A730095A4D6 /* Frameworks */,
 			);
@@ -206,7 +218,6 @@
 				TargetAttributes = {
 					62B77608193438100095A4D6 = {
 						CreatedOnToolsVersion = 6.0;
-						DevelopmentTeam = 9JA89QQLNQ;
 					};
 				};
 			};
@@ -235,7 +246,7 @@
 			files = (
 				6218D85E19AFB898005BC8AB /* LaunchScreen.xib in Resources */,
 				62B7761C193438100095A4D6 /* Images.xcassets in Resources */,
-				36A654211965FBDD008E7BA2 /* processTexturedQuad.metal in Resources */,
+				36A654211965FBDD008E7BA2 /* TexturedQuadShader.metal in Resources */,
 				62B776321934388B0095A4D6 /* Default.jpg in Resources */,
 				62B7761A193438100095A4D6 /* Main.storyboard in Resources */,
 			);
@@ -248,14 +259,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				368AEDE81A0056BF002E4617 /* TexturedQuadShader.metal in Sources */,
+				368AEDE71A00562A002E4617 /* GrayscaleShader.metal in Sources */,
 				62B7763F193438980095A4D6 /* AAPLAppDelegate.mm in Sources */,
 				362ADEF2195A0A5200CA3671 /* AAPLQuad.mm in Sources */,
-				62B77642193438980095A4D6 /* AAPLView.mm in Sources */,
-				62B7760F193438100095A4D6 /* main.m in Sources */,
-				622A9BB219AAC7E4007F8120 /* AAPLRenderer.mm in Sources */,
+				62B77640193438980095A4D6 /* AAPLTexture.mm in Sources */,
 				62B77641193438980095A4D6 /* AAPLTransforms.mm in Sources */,
 				62B77643193438980095A4D6 /* AAPLViewController.mm in Sources */,
-				62B77640193438980095A4D6 /* AAPLTexture.mm in Sources */,
+				62B77642193438980095A4D6 /* AAPLView.mm in Sources */,
+				622A9BB219AAC7E4007F8120 /* AAPLRenderer.mm in Sources */,
+				62B7760F193438100095A4D6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,7 +319,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LINKER_DISPLAYS_MANGLED_NAMES = YES;
 				METAL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -346,7 +358,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LLVM_LTO = YES;
 				METAL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
@@ -363,6 +374,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = MetalImageProcessing/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -375,6 +387,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = MetalImageProcessing/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

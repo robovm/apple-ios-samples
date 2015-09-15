@@ -88,9 +88,9 @@ final public class ListItem: NSObject, NSCoding, NSCopying, DebugPrintable {
     // MARK: NSCoding
     
     public required init(coder aDecoder: NSCoder) {
-        text = aDecoder.decodeObjectForKey(SerializationKeys.text) as String
+        text = aDecoder.decodeObjectForKey(SerializationKeys.text) as! String
         isComplete = aDecoder.decodeBoolForKey(SerializationKeys.complete)
-        UUID = aDecoder.decodeObjectForKey(SerializationKeys.uuid) as NSUUID
+        UUID = aDecoder.decodeObjectForKey(SerializationKeys.uuid) as! NSUUID
     }
     
     public func encodeWithCoder(encoder: NSCoder) {

@@ -24,14 +24,12 @@ WatchKit Catalog is an exploration of the UI elements available in the WatchKit 
 
 - AAPLTextInputController presents the text input controller with a set of suggestions. The result is sent to the parent iOS application and a confirmation message is sent back to the WatchKit app extension.
 
-### Release Notes for Beta 5.
+### Release Notes
 
-- Updated Handoff API in Glance.
-- Added WatchKit app icon.
-- Modified controllers to use images from the asset catalog in the WatchKit Extension.
-- Added example of setting the color and title for a switch.
-- Added example of a label using semibold font weight in Interface Builder.
-- Added example of a label using ultralight font weight programmatically.
+- Updated background color to 14% white for notification controllers.
+- Moved bus image sequence into a folder in the asset catalog.
+- Added Handoff example from the custom notification.
+- Added a background task when entering into application:handleWatchKitExtensionRequest:reply:.
 
 ## Requirements
 

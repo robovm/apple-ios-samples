@@ -30,7 +30,7 @@
         
         UIFont *font = [UIFont systemFontOfSize:16.0 weight:UIFontWeightUltraLight];
         NSDictionary *attrsDictionary = [NSDictionary dictionaryWithObject:font forKey:NSFontAttributeName];
-        NSAttributedString *attrString = [[NSAttributedString alloc] initWithString:@"Ultralight Label" attributes:attrsDictionary];
+        NSAttributedString *attrString = [[NSAttributedString alloc] initWithString:@"Ultra Light Label" attributes:attrsDictionary];
         [self.ultralightLabel setAttributedText:attrString];
         
         NSDateComponents *components = [[NSDateComponents alloc] init];

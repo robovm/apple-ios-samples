@@ -26,6 +26,10 @@ class TodayViewController: NSViewController, NCWidgetProviding, NCWidgetListView
         return "TodayViewController"
     }
     
+    var widgetAllowsEditing: Bool {
+        return false
+    }
+    
     // MARK: NCWidgetProviding
 
     func widgetPerformUpdateWithCompletionHandler(completionHandler: NCUpdateResult -> Void) {
@@ -67,10 +71,6 @@ class TodayViewController: NSViewController, NCWidgetProviding, NCWidgetListView
     
     func widgetMarginInsetsForProposedMarginInsets(defaultMarginInset: NSEdgeInsets) -> NSEdgeInsets {
         return NSEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-    }
-    
-    func widgetAllowsEditing() -> Bool {
-        return false
     }
     
     // MARK: NCWidgetListViewDelegate

@@ -138,11 +138,9 @@ final public class IncompleteListItemsPresenter: NSObject, ListPresenterType {
         */
         if !newPresentedToggledListItems.isEmpty || !newPresentedListItemsWithUpdatedText.isEmpty {
             // Find the unique list of list items that are updated.
-            let uniqueUpdatedListItemsSet = NSSet(array: newPresentedToggledListItems + newPresentedListItemsWithUpdatedText)
+            let uniqueUpdatedListItems = Set(newPresentedToggledListItems).union(newPresentedListItemsWithUpdatedText)
 
-            let uniqueUpdatedListItems = uniqueUpdatedListItemsSet.allObjects as [ListItem]
-
-            updateListItemsWithListItemsForListPresenter(self, presentedListItems: &_presentedListItems, newUpdatedListItems: uniqueUpdatedListItems)
+            updateListItemsWithListItemsForListPresenter(self, presentedListItems: &_presentedListItems, newUpdatedListItems: Array(uniqueUpdatedListItems))
         }
 
         /**

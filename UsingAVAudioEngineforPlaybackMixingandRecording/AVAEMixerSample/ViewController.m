@@ -95,6 +95,13 @@
     [self updateUIElements];
 }
 
+- (void)engineWasInterrupted
+{
+    _playing = NO;
+    _recording = NO;
+    [self updateUIElements];
+}
+
 - (IBAction)togglePlayMarimba:(id)sender {
     [engine toggleMarimba];
     

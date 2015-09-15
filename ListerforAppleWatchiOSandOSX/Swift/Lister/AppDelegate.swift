@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
     // MARK: Properties
 
-    var window: UIWindow!
+    var window: UIWindow?
 
     var listsController: ListsController!
     
@@ -40,12 +40,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         in the main storyboard.
     */
     var splitViewController: UISplitViewController {
-        return window.rootViewController as UISplitViewController
+        return window!.rootViewController as! UISplitViewController
     }
 
     /// The primary view controller of the split view controller defined in the main storyboard.
     var primaryViewController: UINavigationController {
-        return splitViewController.viewControllers.first as UINavigationController
+        return splitViewController.viewControllers.first as! UINavigationController
     }
     
     /**
@@ -89,7 +89,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         splitViewController.preferredDisplayMode = .AllVisible
         
         // Configure the detail controller in the `UISplitViewController` at the root of the view hierarchy.
-        let navigationController = splitViewController.viewControllers.last as UINavigationController
+        let navigationController = splitViewController.viewControllers.last as! UINavigationController
         navigationController.topViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem()
         navigationController.topViewController.navigationItem.leftItemsSupplementBackButton = true
         
@@ -103,7 +103,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         }
     }
     
-    func application(_: UIApplication, continueUserActivity: NSUserActivity, restorationHandler: [AnyObject] -> Void) -> Bool {
+    func application(_: UIApplication, continueUserActivity: NSUserActivity, restorationHandler: [AnyObject]! -> Void) -> Bool {
         // Lister only supports a single user activity type; if you support more than one the type is available from the `continueUserActivity` parameter.
         if let listDocumentsViewController = listDocumentsViewController {
             // Make sure that user activity continuation occurs after the app sandbox is extended. See `application(_:, willFinishLaunchingWithOptions:)` above.
@@ -146,9 +146,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
             Ensuring that the navigation bar takes on the appearance of the selected list requires the 
             transfer of the configuration of the navigation controller that was shown in the detail area.
         */
-        if secondaryViewController is UINavigationController && (secondaryViewController as UINavigationController).topViewController is ListViewController {
+        if secondaryViewController is UINavigationController && (secondaryViewController as! UINavigationController).topViewController is ListViewController {
             // Obtain a reference to the navigation controller currently displayed in the detail area.
-            let secondaryNavigationController = secondaryViewController as UINavigationController
+            let secondaryNavigationController = secondaryViewController as! UINavigationController
             
             // Transfer the settings for the `navigationBar` and the `toolbar` to the main navigation controller.
             primaryViewController.navigationBar.titleTextAttributes = secondaryNavigationController.navigationBar.titleTextAttributes
@@ -167,10 +167,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
             carried out if a list is being displayed. The appropriate controller to display in the detail area
             should be returned. If not, the standard behavior is obtained by returning nil.
         */
-        if primaryViewController.topViewController is UINavigationController && (primaryViewController.topViewController as UINavigationController).topViewController is ListViewController {
+        if primaryViewController.topViewController is UINavigationController && (primaryViewController.topViewController as! UINavigationController).topViewController is ListViewController {
             // Obtain a reference to the navigation controller containing the list controller to be separated.
-            let secondaryViewController = primaryViewController.popViewControllerAnimated(false) as UINavigationController
-            let listViewController = secondaryViewController.topViewController as ListViewController
+            let secondaryViewController = primaryViewController.popViewControllerAnimated(false) as! UINavigationController
+            let listViewController = secondaryViewController.topViewController as! ListViewController
             
             // Obtain the `textAttributes` and `tintColor` to setup the separated navigation controller.    
             let textAttributes = listViewController.textAttributes

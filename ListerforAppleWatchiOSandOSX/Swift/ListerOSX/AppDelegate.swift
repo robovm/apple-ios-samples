@@ -53,7 +53,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         TodayListManager.fetchTodayDocumentURLWithCompletionHandler { url in
             if let url = url {
                 dispatch_async(dispatch_get_main_queue()) {
-                    let documentController = NSDocumentController.sharedDocumentController() as NSDocumentController
+                    let documentController = NSDocumentController.sharedDocumentController() as! NSDocumentController
                     
                     documentController.openDocumentWithContentsOfURL(url, display: true) { _ in
                         // Configuration of the document can go here...
