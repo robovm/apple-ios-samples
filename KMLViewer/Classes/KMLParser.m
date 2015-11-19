@@ -1,91 +1,31 @@
 /*
-     File: KMLParser.m 
- Abstract: 
- Implements a limited KML parser.
- The following KML types are supported:
-         Style,
-         LineString,
-         Point,
-         Polygon,
-         Placemark.
-      All other types are ignored
-  
-  Version: 1.3 
-  
- Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple 
- Inc. ("Apple") in consideration of your agreement to the following 
- terms, and your use, installation, modification or redistribution of 
- this Apple software constitutes acceptance of these terms.  If you do 
- not agree with these terms, please do not use, install, modify or 
- redistribute this Apple software. 
-  
- In consideration of your agreement to abide by the following terms, and 
- subject to these terms, Apple grants you a personal, non-exclusive 
- license, under Apple's copyrights in this original Apple software (the 
- "Apple Software"), to use, reproduce, modify and redistribute the Apple 
- Software, with or without modifications, in source and/or binary forms; 
- provided that if you redistribute the Apple Software in its entirety and 
- without modifications, you must retain this notice and the following 
- text and disclaimers in all such redistributions of the Apple Software. 
- Neither the name, trademarks, service marks or logos of Apple Inc. may 
- be used to endorse or promote products derived from the Apple Software 
- without specific prior written permission from Apple.  Except as 
- expressly stated in this notice, no other rights or licenses, express or 
- implied, are granted by Apple herein, including but not limited to any 
- patent rights that may be infringed by your derivative works or by other 
- works in which the Apple Software may be incorporated. 
-  
- The Apple Software is provided by Apple on an "AS IS" basis.  APPLE 
- MAKES NO WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION 
- THE IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY AND FITNESS 
- FOR A PARTICULAR PURPOSE, REGARDING THE APPLE SOFTWARE OR ITS USE AND 
- OPERATION ALONE OR IN COMBINATION WITH YOUR PRODUCTS. 
-  
- IN NO EVENT SHALL APPLE BE LIABLE FOR ANY SPECIAL, INDIRECT, INCIDENTAL 
- OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF 
- SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS 
- INTERRUPTION) ARISING IN ANY WAY OUT OF THE USE, REPRODUCTION, 
- MODIFICATION AND/OR DISTRIBUTION OF THE APPLE SOFTWARE, HOWEVER CAUSED 
- AND WHETHER UNDER THEORY OF CONTRACT, TORT (INCLUDING NEGLIGENCE), 
- STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE 
- POSSIBILITY OF SUCH DAMAGE. 
-  
- Copyright (C) 2012 Apple Inc. All Rights Reserved. 
-  
+ Copyright (C) 2015 Apple Inc. All Rights Reserved.
+ See LICENSE.txt for this sample’s licensing information
+ 
+ Abstract:
+ KMLElement and subclasses declared here implement a class hierarchy for storing a KML document structure.  The actual KML file is parsed with a SAX parser and only the relevant document structure is retained in the object graph produced by the parser.  Data parsed is also transformed into appropriate UIKit and MapKit classes as necessary.
+ 
+      Abstract KMLElement type.  Handles storing an element identifier (id="...") as well as a buffer for accumulating character data parsed from the xml. In general, subclasses should have beginElement and endElement classes for keeping track of parsing state.  The parser will call beginElement when an interesting element is encountered, then all character data found in the element will be stored into accum, and then when endElement is called accum will be parsed according to the conventions for that particular element type in order to save the data from the element.  Finally, clearString will be called to reset the character data accumulator.
  */
 
 #import "KMLParser.h"
-
-// KMLElement and subclasses declared here implement a class hierarchy for
-// storing a KML document structure.  The actual KML file is parsed with a SAX
-// parser and only the relevant document structure is retained in the object
-// graph produced by the parser.  Data parsed is also transformed into
-// appropriate UIKit and MapKit classes as necessary.
-
-// Abstract KMLElement type.  Handles storing an element identifier (id="...")
-// as well as a buffer for accumulating character data parsed from the xml.
-// In general, subclasses should have beginElement and endElement classes for
-// keeping track of parsing state.  The parser will call beginElement when
-// an interesting element is encountered, then all character data found in the
-// element will be stored into accum, and then when endElement is called accum
-// will be parsed according to the conventions for that particular element type
-// in order to save the data from the element.  Finally, clearString will be
-// called to reset the character data accumulator.
 
 @interface KMLElement : NSObject {
     NSString *identifier;
     NSMutableString *accum;
 }
 
-- (id)initWithIdentifier:(NSString *)ident;
+- (instancetype)initWithIdentifier:(NSString *)ident;
 
 @property (nonatomic, readonly) NSString *identifier;
 
 // Returns YES if we're currently parsing an element that has character
 // data contents that we are interested in saving.
-- (BOOL)canAddString;
+@property (NS_NONATOMIC_IOSONLY, readonly) BOOL canAddString;
+
 // Add character data parsed from the xml
 - (void)addString:(NSString *)str;
+
 // Once the character data for an element has been parsed, use clearString to
 // reset the character buffer to get ready to parse another element.
 - (void)clearString;
@@ -132,7 +72,7 @@
 - (void)beginOutline;
 - (void)endOutline;
 
-- (void)applyToOverlayPathView:(MKOverlayPathView *)view;
+- (void)applyToOverlayPathRenderer:(MKOverlayPathRenderer *)renderer;
 
 @end
 
@@ -147,11 +87,11 @@
 
 // Create (if necessary) and return the corresponding Map Kit MKShape object
 // corresponding to this KML Geometry node.
-- (MKShape *)mapkitShape;
+@property (NS_NONATOMIC_IOSONLY, readonly, strong) MKShape *mapkitShape;
 
-// Create (if necessary) and return the corresponding MKOverlayPathView for
+// Create (if necessary) and return the corresponding MKOverlayPathRenderer for
 // the MKShape object.
-- (MKOverlayPathView *)createOverlayView:(MKShape *)shape;
+- (MKOverlayPathRenderer *)createOverlayPathRenderer:(MKShape *)shape;
 
 @end
 
@@ -209,7 +149,7 @@
     MKShape *mkShape;
     
     MKAnnotationView *annotationView;
-    MKOverlayPathView *overlayView;
+    MKOverlayPathRenderer *overlayPathRenderer;
     
     struct {
         int inName:1;
@@ -241,23 +181,22 @@
 @property (nonatomic, readonly) NSString *placemarkDescription;
 
 @property (nonatomic, readonly) KMLGeometry *geometry;
-@property (nonatomic, readonly) KMLPolygon *polygon;
+@property (unsafe_unretained, nonatomic, readonly) KMLPolygon *polygon;
 
-@property (nonatomic, retain) KMLStyle *style;
+@property (nonatomic, strong) KMLStyle *style;
 @property (nonatomic, readonly) NSString *styleUrl;
 
-- (id <MKOverlay>)overlay;
-- (id <MKAnnotation>)point;
+@property (NS_NONATOMIC_IOSONLY, readonly, strong) id<MKOverlay> overlay;
+@property (NS_NONATOMIC_IOSONLY, readonly, strong) id<MKAnnotation> point;
 
-- (MKOverlayView *)overlayView;
-- (MKAnnotationView *)annotationView;
+@property (NS_NONATOMIC_IOSONLY, readonly, strong) MKOverlayPathRenderer *overlayPathRenderer;
+@property (NS_NONATOMIC_IOSONLY, readonly, strong) MKAnnotationView *annotationView;
 
 @end
 
 // Convert a KML coordinate list string to a C array of CLLocationCoordinate2Ds.
 // KML coordinate lists are longitude,latitude[,altitude] tuples specified by whitespace.
-static void strToCoords(NSString *str, CLLocationCoordinate2D **coordsOut, NSUInteger *coordsLenOut)
-{
+static void strToCoords(NSString *str, CLLocationCoordinate2D **coordsOut, NSUInteger *coordsLenOut) {
     NSUInteger read = 0, space = 10;
     CLLocationCoordinate2D *coords = malloc(sizeof(CLLocationCoordinate2D) * space);
     
@@ -279,7 +218,6 @@ static void strToCoords(NSString *str, CLLocationCoordinate2D **coordsOut, NSUIn
             if (CLLocationCoordinate2DIsValid(c))
                 coords[read++] = c;
         }
-        [scanner release];
     }
     
     *coordsOut = coords;
@@ -298,23 +236,21 @@ static void strToCoords(NSString *str, CLLocationCoordinate2D **coordsOut, NSUIn
 // After parsing has completed, this method loops over all placemarks that have
 // been parsed and looks up their corresponding KMLStyle objects according to
 // the placemark's styleUrl property and the global KMLStyle object's identifier.
-- (void)_assignStyles
-{
+- (void)assignStyles {
     for (KMLPlacemark *placemark in _placemarks) {
         if (!placemark.style && placemark.styleUrl) {
             NSString *styleUrl = placemark.styleUrl;
             NSRange range = [styleUrl rangeOfString:@"#"];
             if (range.length == 1 && range.location == 0) {
                 NSString *styleID = [styleUrl substringFromIndex:1];
-                KMLStyle *style = [_styles objectForKey:styleID];
+                KMLStyle *style = _styles[styleID];
                 placemark.style = style;
             }
         }
     }
 }
 
-- (id)initWithURL:(NSURL *)url
-{
+- (instancetype)initWithURL:(NSURL *)url {
     if (self = [super init]) {
         _styles = [[NSMutableDictionary alloc] init];
         _placemarks = [[NSMutableArray alloc] init];
@@ -325,49 +261,37 @@ static void strToCoords(NSString *str, CLLocationCoordinate2D **coordsOut, NSUIn
     return self;
 }
 
-- (void)dealloc
-{
-    [_styles release];
-    [_placemarks release];
-    [_xmlParser release];
-    
-    [super dealloc];
-}
 
-- (void)parseKML
-{
+- (void)parseKML {
     [_xmlParser parse];
-    [self _assignStyles];
+    [self assignStyles];
 }
 
 // Return the list of KMLPlacemarks from the object graph that contain overlays
 // (as opposed to simply point annotations).
-- (NSArray *)overlays
-{
+- (NSArray *)overlays {
     NSMutableArray *overlays = [[NSMutableArray alloc] init];
     for (KMLPlacemark *placemark in _placemarks) {
         id <MKOverlay> overlay = [placemark overlay];
         if (overlay)
             [overlays addObject:overlay];
     }
-    return [overlays autorelease];
+    return overlays;
 }
 
 // Return the list of KMLPlacemarks from the object graph that are simply
 // MKPointAnnotations and are not MKOverlays.
-- (NSArray *)points
-{
+- (NSArray *)points {
     NSMutableArray *points = [[NSMutableArray alloc] init];
     for (KMLPlacemark *placemark in _placemarks) {
         id <MKAnnotation> point = [placemark point];
         if (point)
             [points addObject:point];
     }
-    return [points autorelease];
+    return points;
 }
 
-- (MKAnnotationView *)viewForAnnotation:(id <MKAnnotation>)point
-{
+- (MKAnnotationView *)viewForAnnotation:(id <MKAnnotation>)point {
     // Find the KMLPlacemark object that owns this point and get
     // the view from it.
     for (KMLPlacemark *placemark in _placemarks) {
@@ -377,13 +301,12 @@ static void strToCoords(NSString *str, CLLocationCoordinate2D **coordsOut, NSUIn
     return nil;
 }
 
-- (MKOverlayView *)viewForOverlay:(id <MKOverlay>)overlay
-{
+- (MKOverlayRenderer *)rendererForOverlay:(id <MKOverlay>)overlay {
     // Find the KMLPlacemark object that owns this overlay and get
     // the view from it.
     for (KMLPlacemark *placemark in _placemarks) {
         if ([placemark overlay] == overlay)
-            return [placemark overlayView];
+            return [placemark overlayPathRenderer];
     }
     return nil;
 }
@@ -395,9 +318,8 @@ static void strToCoords(NSString *str, CLLocationCoordinate2D **coordsOut, NSUIn
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName
                                         namespaceURI:(NSString *)namespaceURI
                                        qualifiedName:(NSString *)qName
-                                          attributes:(NSDictionary *)attributeDict
-{
-    NSString *ident = [attributeDict objectForKey:@"id"];
+                                          attributes:(NSDictionary *)attributeDict {
+    NSString *ident = attributeDict[@"id"];
     
     KMLStyle *style = [_placemark style] ? [_placemark style] : _style;
     
@@ -449,8 +371,7 @@ static void strToCoords(NSString *str, CLLocationCoordinate2D **coordsOut, NSUIn
 
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName
                                       namespaceURI:(NSString *)namespaceURI
-                                     qualifiedName:(NSString *)qName
-{
+                                     qualifiedName:(NSString *)qName {
     KMLStyle *style = [_placemark style] ? [_placemark style] : _style;
     
     // Style and sub-elements
@@ -458,8 +379,7 @@ static void strToCoords(NSString *str, CLLocationCoordinate2D **coordsOut, NSUIn
         if (_placemark) {
             [_placemark endStyle];
         } else if (_style) {
-            [_styles setObject:_style forKey:_style.identifier];
-            [_style release];
+            _styles[_style.identifier] = _style;
             _style = nil;
         }
     } else if (ELTYPE(PolyStyle)) {
@@ -479,7 +399,6 @@ static void strToCoords(NSString *str, CLLocationCoordinate2D **coordsOut, NSUIn
     else if (ELTYPE(Placemark)) {
         if (_placemark) {
             [_placemarks addObject:_placemark];
-            [_placemark release];
             _placemark = nil;
         }
     } else if (ELTYPE(Name)) {
@@ -506,8 +425,7 @@ static void strToCoords(NSString *str, CLLocationCoordinate2D **coordsOut, NSUIn
     
 }
 
-- (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string
-{
+- (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
     KMLElement *element = _placemark ? (KMLElement *)_placemark : (KMLElement *)_style;
     [element addString:string];
 }
@@ -523,38 +441,28 @@ static void strToCoords(NSString *str, CLLocationCoordinate2D **coordsOut, NSUIn
 
 @synthesize identifier;
 
-- (id)initWithIdentifier:(NSString *)ident
-{
+- (instancetype)initWithIdentifier:(NSString *)ident {
     if (self = [super init]) {
-        identifier = [ident retain];
+        identifier = ident;
     }
     return self;
 }
 
-- (void)dealloc
-{
-    [identifier release];
-    [accum release];
-    [super dealloc];
-}
 
-- (BOOL)canAddString
-{
+- (BOOL)canAddString {
     return NO;
 }
 
-- (void)addString:(NSString *)str
-{
+- (void)addString:(NSString *)str {
     if ([self canAddString]) {
-        if (!accum)
+        if (!accum) {
             accum = [[NSMutableString alloc] init];
+        }
         [accum appendString:str];
     }
 }
 
-- (void)clearString
-{
-    [accum release];
+- (void)clearString {
     accum = nil;
 }
 
@@ -562,113 +470,98 @@ static void strToCoords(NSString *str, CLLocationCoordinate2D **coordsOut, NSUIn
 
 @implementation KMLStyle 
 
-- (BOOL)canAddString
-{
+- (BOOL)canAddString {
     return flags.inColor || flags.inWidth || flags.inFill || flags.inOutline;
 }
 
-- (void)beginLineStyle
-{
+- (void)beginLineStyle {
     flags.inLineStyle = YES;
 }
-- (void)endLineStyle
-{
+
+- (void)endLineStyle {
     flags.inLineStyle = NO;
 }
 
-- (void)beginPolyStyle
-{
+- (void)beginPolyStyle {
     flags.inPolyStyle = YES;
 }
-- (void)endPolyStyle
-{
+
+- (void)endPolyStyle {
     flags.inPolyStyle = NO;
 }
 
-- (void)beginColor
-{
+- (void)beginColor {
     flags.inColor = YES;
 }
-- (void)endColor
-{
+
+- (void)endColor {
     flags.inColor = NO;
     
     if (flags.inLineStyle) {
-        [strokeColor release];
-        strokeColor = [[UIColor colorWithKMLString:accum] retain];
+        strokeColor = [UIColor colorWithKMLString:accum];
     } else if (flags.inPolyStyle) {
-        [fillColor release];
-        fillColor = [[UIColor colorWithKMLString:accum] retain];
+        fillColor = [UIColor colorWithKMLString:accum];
     }
     
     [self clearString];
 }
 
-- (void)beginWidth
-{
+- (void)beginWidth {
     flags.inWidth = YES;
 }
-- (void)endWidth
-{
+
+- (void)endWidth {
     flags.inWidth = NO;
     strokeWidth = [accum floatValue];
     [self clearString];
 }
 
-- (void)beginFill
-{
+- (void)beginFill {
     flags.inFill = YES;
 }
-- (void)endFill
-{
+
+- (void)endFill {
     flags.inFill = NO;
     fill = [accum boolValue];
     [self clearString];
 }
 
-- (void)beginOutline
-{
+- (void)beginOutline {
     flags.inOutline = YES;
 }
-- (void)endOutline
-{
+
+- (void)endOutline {
     stroke = [accum boolValue];
     [self clearString];
 }
 
-- (void)applyToOverlayPathView:(MKOverlayPathView *)view
-{
-    view.strokeColor = strokeColor;
-    view.fillColor = fillColor;
-    view.lineWidth = strokeWidth;
+- (void)applyToOverlayPathRenderer:(MKOverlayPathRenderer *)renderer {
+    renderer.strokeColor = strokeColor;
+    renderer.fillColor = fillColor;
+    renderer.lineWidth = strokeWidth;
 }
 
 @end
 
 @implementation KMLGeometry
 
-- (BOOL)canAddString
-{
+- (BOOL)canAddString {
     return flags.inCoords;
 }
 
-- (void)beginCoordinates
-{
+- (void)beginCoordinates {
     flags.inCoords = YES;
 }
 
-- (void)endCoordinates
-{
+- (void)endCoordinates {
     flags.inCoords = NO;
 }
 
-- (MKShape *)mapkitShape
-{
+- (MKShape *)mapkitShape {
     return nil;
 }
 
-- (MKOverlayPathView *)createOverlayView:(MKShape *)shape
-{
+- (MKOverlayPathRenderer *)createOverlayPathRenderer:(MKShape *)shape {
     return nil;
 }
 
@@ -678,8 +571,7 @@ static void strToCoords(NSString *str, CLLocationCoordinate2D **coordsOut, NSUIn
 
 @synthesize point;
 
-- (void)endCoordinates
-{
+- (void)endCoordinates {
     flags.inCoords = NO;
     
     CLLocationCoordinate2D *points = NULL;
@@ -694,15 +586,14 @@ static void strToCoords(NSString *str, CLLocationCoordinate2D **coordsOut, NSUIn
     [self clearString];
 }
 
-- (MKShape *)mapkitShape
-{
+- (MKShape *)mapkitShape {
     // KMLPoint corresponds to MKPointAnnotation
     MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
     annotation.coordinate = point;
-    return [annotation autorelease];
+    return annotation;
 }
 
-// KMLPoint does not override createOverlayView: because there is no such
+// KMLPoint does not override MKOverlayPathRenderer: because there is no such
 // thing as an overlay view for a point.  They use MKAnnotationViews which
 // are vended by the KMLPlacemark class.
 
@@ -710,56 +601,44 @@ static void strToCoords(NSString *str, CLLocationCoordinate2D **coordsOut, NSUIn
 
 @implementation KMLPolygon
 
-- (void)dealloc
-{
-    [outerRing release];
-    [innerRings release];
-    [super dealloc];
-}
 
-- (BOOL)canAddString
-{
+- (BOOL)canAddString {
     return polyFlags.inLinearRing && flags.inCoords;
 }
 
-- (void)beginOuterBoundary
-{
+- (void)beginOuterBoundary {
     polyFlags.inOuterBoundary = YES;
 }
-- (void)endOuterBoundary
-{
+
+- (void)endOuterBoundary {
     polyFlags.inOuterBoundary = NO;
     outerRing = [accum copy];
     [self clearString];
 }
 
-- (void)beginInnerBoundary
-{
+- (void)beginInnerBoundary {
     polyFlags.inInnerBoundary = YES;
 }
-- (void)endInnerBoundary
-{
+
+- (void)endInnerBoundary {
     polyFlags.inInnerBoundary = NO;
     NSString *ring = [accum copy];
     if (!innerRings) {
         innerRings = [[NSMutableArray alloc] init];
     }
     [innerRings addObject:ring];
-    [ring release];
     [self clearString];
 }
 
-- (void)beginLinearRing
-{
+- (void)beginLinearRing {
     polyFlags.inLinearRing = YES;
 }
-- (void)endLinearRing
-{
+
+- (void)endLinearRing {
     polyFlags.inLinearRing = NO;
 }
 
-- (MKShape *)mapkitShape
-{
+- (MKShape *)mapkitShape {
     // KMLPolygon corresponds to MKPolygon
     
     // The inner and outer rings of the polygon are stored as kml coordinate
@@ -787,16 +666,12 @@ static void strToCoords(NSString *str, CLLocationCoordinate2D **coordsOut, NSUIn
     // of interior polygons parsed.
     MKPolygon *poly = [MKPolygon polygonWithCoordinates:coords count:coordsLen interiorPolygons:innerPolys];
     free(coords);
-    [innerPolys release];
     return poly;
 }
 
-- (MKOverlayPathView *)createOverlayView:(MKShape *)shape
-{
-    // KMLPolygon corresponds to MKPolygonView
-    
-    MKPolygonView *polyView = [[MKPolygonView alloc] initWithPolygon:(MKPolygon *)shape];
-    return [polyView autorelease];
+- (MKOverlayPathRenderer *)createOverlayPathRenderer:(MKShape *)shape {
+    MKPolygonRenderer *polyPath = [[MKPolygonRenderer alloc] initWithPolygon:(MKPolygon *)shape];
+    return polyPath;
 }
 
 @end
@@ -805,36 +680,26 @@ static void strToCoords(NSString *str, CLLocationCoordinate2D **coordsOut, NSUIn
 
 @synthesize points, length;
 
-- (void)dealloc
-{
-    if (points)
-        free(points);
-    [super dealloc];
-}
-
-- (void)endCoordinates
-{
+- (void)endCoordinates {
     flags.inCoords = NO;
     
-    if (points)
+    if (points) {
         free(points);
+    }
     
     strToCoords(accum, &points, &length);
     
     [self clearString];
 }
 
-- (MKShape *)mapkitShape
-{
+- (MKShape *)mapkitShape {
     // KMLLineString corresponds to MKPolyline
     return [MKPolyline polylineWithCoordinates:points count:length];
 }
 
-- (MKOverlayPathView *)createOverlayView:(MKShape *)shape
-{
-    // KMLLineString corresponds to MKPolylineView
-    MKPolylineView *lineView = [[MKPolylineView alloc] initWithPolyline:(MKPolyline *)shape];
-    return [lineView autorelease];
+- (MKOverlayPathRenderer *)createOverlayPathRenderer:(MKShape *)shape {
+    MKPolylineRenderer *polyLine = [[MKPolylineRenderer alloc] initWithPolyline:(MKPolyline *)shape];
+    return polyLine;
 }
 
 @end
@@ -843,110 +708,85 @@ static void strToCoords(NSString *str, CLLocationCoordinate2D **coordsOut, NSUIn
 
 @synthesize style, styleUrl, geometry, name, placemarkDescription;
 
-- (void)dealloc
-{
-    [style release];
-    [geometry release];
-    [name release];
-    [placemarkDescription release];
-    [styleUrl release];
-    [mkShape release];
-    [overlayView release];
-    [annotationView release];
-    [super dealloc];
-}
-
-- (BOOL)canAddString
-{
+- (BOOL)canAddString {
     return flags.inName || flags.inStyleUrl || flags.inDescription;
 }
 
-- (void)addString:(NSString *)str
-{
-    if (flags.inStyle)
+- (void)addString:(NSString *)str {
+    if (flags.inStyle) {
         [style addString:str];
-    else if (flags.inGeometry)
+    } else if (flags.inGeometry) {
         [geometry addString:str];
-    else
+    } else {
         [super addString:str];
+    }
 }
 
-- (void)beginName
-{
+- (void)beginName {
     flags.inName = YES;
 }
-- (void)endName
-{
+
+- (void)endName {
     flags.inName = NO;
-    [name release];
     name = [accum copy];
     [self clearString];
 }
 
-- (void)beginDescription
-{
+- (void)beginDescription {
     flags.inDescription = YES;
 }
-- (void)endDescription
-{
+
+- (void)endDescription {
     flags.inDescription = NO;
-    [placemarkDescription release];
     placemarkDescription = [accum copy];
     [self clearString];
 }
 
-- (void)beginStyleUrl
-{
+- (void)beginStyleUrl {
     flags.inStyleUrl = YES;
 }
-- (void)endStyleUrl
-{
+
+- (void)endStyleUrl {
     flags.inStyleUrl = NO;
-    [styleUrl release];
     styleUrl = [accum copy];
     [self clearString];
 }
 
-- (void)beginStyleWithIdentifier:(NSString *)ident
-{
+- (void)beginStyleWithIdentifier:(NSString *)ident {
     flags.inStyle = YES;
-    [style release];
     style = [[KMLStyle alloc] initWithIdentifier:ident];
 }
-- (void)endStyle
-{
+
+- (void)endStyle {
     flags.inStyle = NO;
 }
 
-- (void)beginGeometryOfType:(NSString *)elementName withIdentifier:(NSString *)ident
-{
+- (void)beginGeometryOfType:(NSString *)elementName withIdentifier:(NSString *)ident {
     flags.inGeometry = YES;
-    if (ELTYPE(Point))
+    if (ELTYPE(Point)) {
         geometry = [[KMLPoint alloc] initWithIdentifier:ident];
-    else if (ELTYPE(Polygon))
+    } else if (ELTYPE(Polygon)) {
         geometry = [[KMLPolygon alloc] initWithIdentifier:ident];
-    else if (ELTYPE(LineString))
+    } else if (ELTYPE(LineString)) {
         geometry = [[KMLLineString alloc] initWithIdentifier:ident];
+    }
 }
-- (void)endGeometry
-{
+
+- (void)endGeometry {
     flags.inGeometry = NO;
 }
 
-- (KMLGeometry *)geometry
-{
+- (KMLGeometry *)geometry {
     return geometry;
 }
 
-- (KMLPolygon *)polygon
-{
+- (KMLPolygon *)polygon {
     return [geometry isKindOfClass:[KMLPolygon class]] ? (id)geometry : nil;
 }
 
-- (void)_createShape
-{
+- (void)_createShape {
     if (!mkShape) {
-        mkShape = [[geometry mapkitShape] retain];
+        mkShape = [geometry mapkitShape];
         mkShape.title = name;
         // Skip setting the subtitle for now because they're frequently
         // too verbose for viewing on in a callout in most kml files.
@@ -954,44 +794,41 @@ static void strToCoords(NSString *str, CLLocationCoordinate2D **coordsOut, NSUIn
     }
 }
 
-- (id <MKOverlay>)overlay
-{
+- (id <MKOverlay>)overlay {
     [self _createShape];
     
-    if ([mkShape conformsToProtocol:@protocol(MKOverlay)])
+    if ([mkShape conformsToProtocol:@protocol(MKOverlay)]) {
         return (id <MKOverlay>)mkShape;
+    }
     
     return nil;
 }
 
-- (id <MKAnnotation>)point
-{
+- (id <MKAnnotation>)point {
     [self _createShape];
     
     // Make sure to check if this is an MKPointAnnotation.  MKOverlays also
     // conform to MKAnnotation, so it isn't sufficient to just check to
     // conformance to MKAnnotation.
-    if ([mkShape isKindOfClass:[MKPointAnnotation class]])
+    if ([mkShape isKindOfClass:[MKPointAnnotation class]]) {
         return (id <MKAnnotation>)mkShape;
+    }
     
     return nil;
 }
 
-- (MKOverlayView *)overlayView
-{
-    if (!overlayView) {
+- (MKOverlayPathRenderer *)overlayPathRenderer {
+    if (!overlayPathRenderer) {
         id <MKOverlay> overlay = [self overlay];
         if (overlay) {
-            overlayView = [[geometry createOverlayView:overlay] retain];
-            [style applyToOverlayPathView:overlayView];
+            overlayPathRenderer = [geometry createOverlayPathRenderer:overlay];
+            [style applyToOverlayPathRenderer:overlayPathRenderer];
         }
     }
-    return overlayView;
+    return overlayPathRenderer;
 }
 
-
-- (MKAnnotationView *)annotationView
-{
+- (MKAnnotationView *)annotationView {
     if (!annotationView) {
         id <MKAnnotation> annotation = [self point];
         if (annotation) {
@@ -1009,8 +846,7 @@ static void strToCoords(NSString *str, CLLocationCoordinate2D **coordsOut, NSUIn
 
 @implementation UIColor (KMLExtras)
 
-+ (UIColor *)colorWithKMLString:(NSString *)kmlColorString
-{
++ (UIColor *)colorWithKMLString:(NSString *)kmlColorString {
     NSScanner *scanner = [[NSScanner alloc] initWithString:kmlColorString];
     unsigned color = 0;
     [scanner scanHexInt:&color];
@@ -1025,11 +861,7 @@ static void strToCoords(NSString *str, CLLocationCoordinate2D **coordsOut, NSUIn
     CGFloat bf = (CGFloat)b / 255.f;
     CGFloat af = (CGFloat)a / 255.f;
     
-    [scanner release];
-    
     return [UIColor colorWithRed:rf green:gf blue:bf alpha:af];
 }
 
 @end
-
-

@@ -1,0 +1,392 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		530CD3F41AB34649002573BF /* APLDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 530CD3F31AB34649002573BF /* APLDetailTableViewController.m */; };
+		532D56B71AB8A5CB00D33391 /* APLMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 532D56B61AB8A5CB00D33391 /* APLMapViewController.m */; };
+		5351CA541A927ADC000D5075 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5351CA531A927ADC000D5075 /* AssetsLibrary.framework */; };
+		5351CA561A927D3D000D5075 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5351CA551A927D3D000D5075 /* MapKit.framework */; };
+		537FA3F11AA77B7400B0C79A /* APLCloudManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 537FA3F01AA77B7400B0C79A /* APLCloudManager.m */; };
+		538E11D11A9FBF6D00271F31 /* CloudPhotos.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 538E11D01A9FBF6D00271F31 /* CloudPhotos.entitlements */; };
+		538E11D31A9FBF7B00271F31 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 538E11D21A9FBF7B00271F31 /* Images.xcassets */; };
+		538E11DD1A9FBF9700271F31 /* Hero.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 538E11DC1A9FBF9700271F31 /* Hero.aiff */; };
+		538E11ED1A9FBFA700271F31 /* APLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 538E11E11A9FBFA700271F31 /* APLAppDelegate.m */; };
+		538E11F01A9FBFA700271F31 /* APLMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 538E11E71A9FBFA700271F31 /* APLMainTableViewController.m */; };
+		538E11F21A9FBFA700271F31 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 538E11EA1A9FBFA700271F31 /* main.m */; };
+		53A026211AFD71520075BF98 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53A0261E1AFD71520075BF98 /* MainStoryboard.storyboard */; };
+		53A026341AFD724E0075BF98 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53A026321AFD724E0075BF98 /* Localizable.strings */; };
+		53A7E8671B0D027000D5D61D /* APLPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A7E8661B0D027000D5D61D /* APLPhotoViewController.m */; };
+		53A9D1AC19D2123800AFB6CF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A9D1AB19D2123800AFB6CF /* CoreGraphics.framework */; };
+		53DEBD4B1B41D15300630F0A /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DEBD4A1B41D15300630F0A /* CloudKit.framework */; };
+		53F77EF31B73B72D00961825 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53F77EF11B73B72D00961825 /* LaunchScreen.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D6058910D05DD3D006BFB54 /* CloudPhotos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudPhotos.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		530CD3F21AB34649002573BF /* APLDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APLDetailTableViewController.h; path = CloudPhotos/APLDetailTableViewController.h; sourceTree = "<group>"; };
+		530CD3F31AB34649002573BF /* APLDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APLDetailTableViewController.m; path = CloudPhotos/APLDetailTableViewController.m; sourceTree = "<group>"; };
+		532D56B51AB8A5CB00D33391 /* APLMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APLMapViewController.h; path = CloudPhotos/APLMapViewController.h; sourceTree = "<group>"; };
+		532D56B61AB8A5CB00D33391 /* APLMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APLMapViewController.m; path = CloudPhotos/APLMapViewController.m; sourceTree = "<group>"; };
+		5351CA531A927ADC000D5075 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		5351CA551A927D3D000D5075 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		536667E81B792D9A00628ED1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		537FA3EF1AA77B7400B0C79A /* APLCloudManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APLCloudManager.h; path = CloudPhotos/APLCloudManager.h; sourceTree = "<group>"; };
+		537FA3F01AA77B7400B0C79A /* APLCloudManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APLCloudManager.m; path = CloudPhotos/APLCloudManager.m; sourceTree = "<group>"; };
+		538E11D01A9FBF6D00271F31 /* CloudPhotos.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = CloudPhotos.entitlements; path = CloudPhotos/CloudPhotos.entitlements; sourceTree = "<group>"; };
+		538E11D21A9FBF7B00271F31 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = CloudPhotos/Images.xcassets; sourceTree = "<group>"; };
+		538E11D41A9FBF8200271F31 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = CloudPhotos/Info.plist; sourceTree = "<group>"; };
+		538E11DC1A9FBF9700271F31 /* Hero.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = Hero.aiff; path = CloudPhotos/Hero.aiff; sourceTree = "<group>"; };
+		538E11E01A9FBFA700271F31 /* APLAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APLAppDelegate.h; path = CloudPhotos/APLAppDelegate.h; sourceTree = "<group>"; };
+		538E11E11A9FBFA700271F31 /* APLAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APLAppDelegate.m; path = CloudPhotos/APLAppDelegate.m; sourceTree = "<group>"; };
+		538E11E61A9FBFA700271F31 /* APLMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APLMainTableViewController.h; path = CloudPhotos/APLMainTableViewController.h; sourceTree = "<group>"; };
+		538E11E71A9FBFA700271F31 /* APLMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APLMainTableViewController.m; path = CloudPhotos/APLMainTableViewController.m; sourceTree = "<group>"; };
+		538E11EA1A9FBFA700271F31 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = CloudPhotos/main.m; sourceTree = "<group>"; };
+		538E11EB1A9FBFA700271F31 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Prefix.pch; path = CloudPhotos/Prefix.pch; sourceTree = "<group>"; };
+		53A0261F1AFD71520075BF98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = CloudPhotos/Base.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		53A026331AFD724E0075BF98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = CloudPhotos/Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		53A7E8651B0D027000D5D61D /* APLPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APLPhotoViewController.h; path = CloudPhotos/APLPhotoViewController.h; sourceTree = "<group>"; };
+		53A7E8661B0D027000D5D61D /* APLPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APLPhotoViewController.m; path = CloudPhotos/APLPhotoViewController.m; sourceTree = "<group>"; };
+		53A9D1AB19D2123800AFB6CF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		53DEBD4A1B41D15300630F0A /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		53F77EF21B73B72D00961825 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = CloudPhotos/Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5351CA561A927D3D000D5075 /* MapKit.framework in Frameworks */,
+				5351CA541A927ADC000D5075 /* AssetsLibrary.framework in Frameworks */,
+				53A9D1AC19D2123800AFB6CF /* CoreGraphics.framework in Frameworks */,
+				53DEBD4B1B41D15300630F0A /* CloudKit.framework in Frameworks */,
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* CloudPhotos.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				536667E81B792D9A00628ED1 /* README.md */,
+				538E11D01A9FBF6D00271F31 /* CloudPhotos.entitlements */,
+				53AF8AEC0D9C50B700726DBA /* Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				53F77EF11B73B72D00961825 /* LaunchScreen.xib */,
+				53A0261E1AFD71520075BF98 /* MainStoryboard.storyboard */,
+				53A026321AFD724E0075BF98 /* Localizable.strings */,
+				538E11D21A9FBF7B00271F31 /* Images.xcassets */,
+				538E11D41A9FBF8200271F31 /* Info.plist */,
+				538E11DC1A9FBF9700271F31 /* Hero.aiff */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53DEBD4A1B41D15300630F0A /* CloudKit.framework */,
+				5351CA551A927D3D000D5075 /* MapKit.framework */,
+				5351CA531A927ADC000D5075 /* AssetsLibrary.framework */,
+				53A9D1AB19D2123800AFB6CF /* CoreGraphics.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		53AF8AEC0D9C50B700726DBA /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				538E11EB1A9FBFA700271F31 /* Prefix.pch */,
+				538E11EA1A9FBFA700271F31 /* main.m */,
+				538E11E01A9FBFA700271F31 /* APLAppDelegate.h */,
+				538E11E11A9FBFA700271F31 /* APLAppDelegate.m */,
+				537FA3EF1AA77B7400B0C79A /* APLCloudManager.h */,
+				537FA3F01AA77B7400B0C79A /* APLCloudManager.m */,
+				538E11E61A9FBFA700271F31 /* APLMainTableViewController.h */,
+				538E11E71A9FBFA700271F31 /* APLMainTableViewController.m */,
+				530CD3F21AB34649002573BF /* APLDetailTableViewController.h */,
+				530CD3F31AB34649002573BF /* APLDetailTableViewController.m */,
+				532D56B51AB8A5CB00D33391 /* APLMapViewController.h */,
+				532D56B61AB8A5CB00D33391 /* APLMapViewController.m */,
+				53A7E8651B0D027000D5D61D /* APLPhotoViewController.h */,
+				53A7E8661B0D027000D5D61D /* APLPhotoViewController.m */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* CloudPhotos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "CloudPhotos" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+				53050D5F194248EC00278721 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CloudPhotos;
+			productName = IBTest;
+			productReference = 1D6058910D05DD3D006BFB54 /* CloudPhotos.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					1D6058900D05DD3D006BFB54 = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "CloudPhotos" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				Base,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* CloudPhotos */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53A026341AFD724E0075BF98 /* Localizable.strings in Resources */,
+				538E11D11A9FBF6D00271F31 /* CloudPhotos.entitlements in Resources */,
+				53A026211AFD71520075BF98 /* MainStoryboard.storyboard in Resources */,
+				538E11D31A9FBF7B00271F31 /* Images.xcassets in Resources */,
+				53F77EF31B73B72D00961825 /* LaunchScreen.xib in Resources */,
+				538E11DD1A9FBF9700271F31 /* Hero.aiff in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		53050D5F194248EC00278721 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "BUNDLE_IDENTIFIER=$(/usr/libexec/PlistBuddy -c \"Print CFBundleIdentifier\" \"$BUILT_PRODUCTS_DIR/$PRODUCT_NAME.app/Info.plist\")\n\nif [[ $BUNDLE_IDENTIFIER == com.example.* ]]\nthen\necho \"$BUILT_PRODUCTS_DIR/$PRODUCT_NAME.app/Info.plist:1: error: Change your bundle identifier to use your own CloudKit container\"\nexit -1\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				538E11F01A9FBFA700271F31 /* APLMainTableViewController.m in Sources */,
+				538E11ED1A9FBFA700271F31 /* APLAppDelegate.m in Sources */,
+				537FA3F11AA77B7400B0C79A /* APLCloudManager.m in Sources */,
+				53A7E8671B0D027000D5D61D /* APLPhotoViewController.m in Sources */,
+				532D56B71AB8A5CB00D33391 /* APLMapViewController.m in Sources */,
+				538E11F21A9FBFA700271F31 /* main.m in Sources */,
+				530CD3F41AB34649002573BF /* APLDetailTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		53A0261E1AFD71520075BF98 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53A0261F1AFD71520075BF98 /* Base */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		53A026321AFD724E0075BF98 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53A026331AFD724E0075BF98 /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		53F77EF11B73B72D00961825 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53F77EF21B73B72D00961825 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = CloudPhotos/CloudPhotos.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CloudPhotos/Prefix.pch;
+				INFOPLIST_FILE = CloudPhotos/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.cloudphotos";
+				PRODUCT_NAME = CloudPhotos;
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = CloudPhotos/CloudPhotos.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CloudPhotos/Prefix.pch;
+				INFOPLIST_FILE = CloudPhotos/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.cloudphotos";
+				PRODUCT_NAME = CloudPhotos;
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Keith Mortensen (B9AN9MPJ2Q)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Keith Mortensen (B9AN9MPJ2Q)";
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Keith Mortensen (B9AN9MPJ2Q)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Keith Mortensen (B9AN9MPJ2Q)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "CloudPhotos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "CloudPhotos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

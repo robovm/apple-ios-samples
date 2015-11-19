@@ -10,6 +10,9 @@ The sample's application delegate.
 
 @implementation AppDelegate
 
+// The app delegate must implement the window @property
+// from UIApplicationDelegate @protocol to use a main storyboard file.
+//
 @synthesize window;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -44,6 +47,5 @@ The sample's application delegate.
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
-
 
 @end

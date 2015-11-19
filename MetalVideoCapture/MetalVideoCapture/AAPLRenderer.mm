@@ -455,7 +455,7 @@ static const simd::float4 cubeVertexData[] =
 - (void)reshape:(AAPLView *)view
 {
     // when reshape is called, update the view and projection matricies since this means the view orientation or size changed
-    float aspect = fabsf(view.bounds.size.width / view.bounds.size.height);
+    float aspect = std::abs(view.bounds.size.width / view.bounds.size.height);
     _projectionMatrix = AAPL::perspective_fov(kFOVY, aspect, 0.1f, 100.0f);
     _viewMatrix = AAPL::lookAt(kEye, kCenter, kUp);
 }

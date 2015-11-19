@@ -8,10 +8,10 @@ AAPLRenderer.mm is the core of the project and where the magic happens. The rend
 
 ### Build
 
-iOS 8 SDK
+iOS 9 SDK
 
 ### Runtime
 
-iOS 8, 64 bit device
+iOS 9, 64 bit device
 
 Copyright (C) 2015 Apple Inc. All rights reserved.

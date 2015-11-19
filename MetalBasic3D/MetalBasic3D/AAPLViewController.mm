@@ -5,7 +5,6 @@
  Abstract:
  View Controller for Metal Sample Code. Maintains a CADisplayLink timer that runs on the main thread and triggers rendering in AAPLView. Provides update callbacks to its delegate on the timer, prior to triggering rendering.
  */
-
 #import "AAPLViewController.h"
 #import "AAPLView.h"
 #import "AAPLRenderer.h"
@@ -16,7 +15,13 @@
 {
 @private
     // app control
-    CADisplayLink *_timer;
+
+#ifdef TARGET_IOS
+    CADisplayLink *_displayLink;
+#else
+    CVDisplayLinkRef _displayLink;
+    dispatch_source_t _displaySource;
+#endif
     
     // boolean to determine if the first draw has occured
     BOOL _firstDrawOccurred;
@@ -32,6 +37,7 @@
 
 - (void)dealloc
 {
+#ifdef TARGET_IOS
     [[NSNotificationCenter defaultCenter] removeObserver: self
                                                     name: UIApplicationDidEnterBackgroundNotification
                                                   object: nil];
@@ -39,31 +45,98 @@
     [[NSNotificationCenter defaultCenter] removeObserver: self
                                                     name: UIApplicationWillEnterForegroundNotification
                                                   object: nil];
-    
-    if(_timer)
+
+#endif
+    if(_displayLink)
     {
         [self stopGameLoop];
     }
 }
 
+#ifdef TARGET_IOS
+- (void)dispatchGameLoop
+{
+    // create a game loop timer using a display link
+    _displayLink = [[UIScreen mainScreen] displayLinkWithTarget:self
+                                                       selector:@selector(gameloop)];
+    _displayLink.frameInterval = _interval;
+    [_displayLink addToRunLoop:[NSRunLoop mainRunLoop]
+                       forMode:NSDefaultRunLoopMode];
+}
+
+#else
+// This is the renderer output callback function
+static CVReturn dispatchGameLoop(CVDisplayLinkRef displayLink,
+                                 const CVTimeStamp* now,
+                                 const CVTimeStamp* outputTime,
+                                 CVOptionFlags flagsIn,
+                                 CVOptionFlags* flagsOut,
+                                 void* displayLinkContext)
+{
+    __weak dispatch_source_t source = (__bridge dispatch_source_t)displayLinkContext;
+    dispatch_source_merge_data(source, 1);
+    return kCVReturnSuccess;
+}
+#endif // TARGET_OSX
+
 - (void)initCommon
 {
     _renderer = [AAPLRenderer new];
     self.delegate = _renderer;
-    
+
+#ifdef TARGET_IOS
+    NSNotificationCenter* notificationCenter = [NSNotificationCenter defaultCenter];
     //  Register notifications to start/stop drawing as this app moves into the background
-    [[NSNotificationCenter defaultCenter] addObserver: self
-                                             selector: @selector(didEnterBackground:)
-                                                 name: UIApplicationDidEnterBackgroundNotification
-                                               object: nil];
+    [notificationCenter addObserver: self
+                           selector: @selector(didEnterBackground:)
+                               name: UIApplicationDidEnterBackgroundNotification
+                             object: nil];
     
-    [[NSNotificationCenter defaultCenter] addObserver: self
-                                             selector: @selector(willEnterForeground:)
-                                                 name: UIApplicationWillEnterForegroundNotification
-                                               object: nil];
-    
+    [notificationCenter addObserver: self
+                           selector: @selector(willEnterForeground:)
+                               name: UIApplicationWillEnterForegroundNotification
+                             object: nil];
+
+#else
+    _displaySource = dispatch_source_create(DISPATCH_SOURCE_TYPE_DATA_ADD, 0, 0, dispatch_get_main_queue());
+    __block AAPLViewController* weakSelf = self;
+    dispatch_source_set_event_handler(_displaySource, ^(){
+        [weakSelf gameloop];
+    });
+    dispatch_resume(_displaySource);
+
+    CVReturn cvReturn;
+    // Create a display link capable of being used with all active displays
+    cvReturn = CVDisplayLinkCreateWithActiveCGDisplays(&_displayLink);
+
+    assert(cvReturn == kCVReturnSuccess);
+
+    cvReturn = CVDisplayLinkSetOutputCallback(_displayLink, &dispatchGameLoop, (__bridge void*)_displaySource);
+
+    assert(cvReturn == kCVReturnSuccess);
+
+    cvReturn = CVDisplayLinkSetCurrentCGDisplay(_displayLink, CGMainDisplayID () );
+
+    assert(cvReturn == kCVReturnSuccess);
+#endif
+
     _interval = 1;
 }
+
+#ifdef TARGET_OSX
+- (void)_windowWillClose:(NSNotification*)notification
+{
+    // Stop the display link when the window is closing because we will
+    // not be able to get a drawable, but the display link may continue
+    // to fire
+
+    if(notification.object == self.view.window)
+    {
+        CVDisplayLinkStop(_displayLink);
+        dispatch_source_cancel(_displaySource);
+    }
+}
+#endif
 
 - (id)init
 {
@@ -76,7 +149,7 @@
     return self;
 }
 
-// called when loaded from nib
+// Called when loaded from nib
 - (id)initWithNibName:(NSString *)nibNameOrNil
                bundle:(NSBundle *)nibBundleOrNil
 {
@@ -113,19 +186,23 @@
     
     // load all renderer assets before starting game loop
     [_renderer configure:renderView];
+
+#ifdef TARGET_OSX
+
+    NSNotificationCenter* notificationCenter = [NSNotificationCenter defaultCenter];
+    // Register to be notified when the window closes so we can stop the displaylink
+    [notificationCenter addObserver:self
+                           selector:@selector(_windowWillClose:)
+                               name:NSWindowWillCloseNotification
+                             object:self.view.window];
+
+
+    CVDisplayLinkStart(_displayLink);
+#endif
 }
 
-- (void)dispatchGameLoop
-{
-    // create a game loop timer using a display link
-    _timer = [[UIScreen mainScreen] displayLinkWithTarget:self
-                                                 selector:@selector(gameloop)];
-    _timer.frameInterval = _interval;
-    [_timer addToRunLoop:[NSRunLoop mainRunLoop]
-                 forMode:NSDefaultRunLoopMode];
-}
 
-// the main game loop called by the timer above
+// The main game loop called by the timer above
 - (void)gameloop
 {
     
@@ -160,8 +237,21 @@
 
 - (void)stopGameLoop
 {
-    if(_timer)
-        [_timer invalidate];
+    if(_displayLink)
+    {
+#ifdef TARGET_IOS
+        [_displayLink invalidate];
+#else
+        // Stop the display link BEFORE releasing anything in the view
+        // otherwise the display link thread may call into the view and crash
+        // when it encounters something that has been release
+        CVDisplayLinkStop(_displayLink);
+        dispatch_source_cancel(_displaySource);
+
+        CVDisplayLinkRelease(_displayLink);
+        _displaySource = nil;
+#endif
+    }
 }
 
 - (void)setPaused:(BOOL)pause
@@ -171,25 +261,38 @@
         return;
     }
     
-    if(_timer)
+    if(_displayLink)
     {
         // inform the delegate we are about to pause
         [_delegate viewController:self
                         willPause:pause];
-        
+
+#ifdef TARGET_IOS  
         if(pause == YES)
         {
             _gameLoopPaused = pause;
-            _timer.paused   = YES;
-            
+            _displayLink.paused   = YES;
+
             // ask the view to release textures until its resumed
             [(AAPLView *)self.view releaseTextures];
         }
         else
         {
             _gameLoopPaused = pause;
-            _timer.paused   = NO;
+            _displayLink.paused   = NO;
         }
+#else
+        if(pause)
+        {
+            CVDisplayLinkStop(_displayLink);
+        }
+        else
+        {
+            CVDisplayLinkStart(_displayLink);
+        }
+#endif
+
+
     }
 }
 
@@ -208,6 +311,7 @@
     [self setPaused:NO];
 }
 
+#ifdef TARGET_IOS
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -223,5 +327,6 @@
     // end the gameloop
     [self stopGameLoop];
 }
+#endif
 
 @end

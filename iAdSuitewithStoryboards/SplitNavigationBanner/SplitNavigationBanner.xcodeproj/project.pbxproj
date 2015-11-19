@@ -11,8 +11,6 @@
 		04001E2C1B4EDD7200E936EC /* ipsums.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04001E2A1B4EDD7200E936EC /* ipsums.plist */; };
 		046B36D01B45D5F600F93731 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046B36CE1B45D5F600F93731 /* LaunchScreen.xib */; };
 		049355401B4EF018002D3F2D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0493553E1B4EF018002D3F2D /* InfoPlist.strings */; };
-		53970DB817288B4E0083D776 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53970DB417288B4E0083D776 /* MainStoryboard_iPad.storyboard */; };
-		53970DB917288B4E0083D776 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53970DB617288B4E0083D776 /* MainStoryboard_iPhone.storyboard */; };
 		631EA7411402E87D003FB021 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 631EA7401402E87D003FB021 /* UIKit.framework */; };
 		631EA7431402E87D003FB021 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 631EA7421402E87D003FB021 /* Foundation.framework */; };
 		631EA7451402E87D003FB021 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 631EA7441402E87D003FB021 /* CoreGraphics.framework */; };
@@ -22,12 +20,11 @@
 		631EA7571402E87D003FB021 /* TextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 631EA7561402E87D003FB021 /* TextViewController.m */; };
 		631EA7701402E8B7003FB021 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 631EA76F1402E8B7003FB021 /* iAd.framework */; };
 		631EA7741402EA96003FB021 /* BannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 631EA7731402EA96003FB021 /* BannerViewController.m */; };
+		D8BD72471B965F9A003664CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8BD72451B965F9A003664CD /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		04001E251B4EDD4700E936EC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		04001E271B4EDD6000E936EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		04001E281B4EDD6000E936EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		04001E291B4EDD6000E936EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		04001E2B1B4EDD7200E936EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/ipsums.plist; sourceTree = "<group>"; };
 		0493553F1B4EF018002D3F2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -47,6 +44,7 @@
 		631EA76F1402E8B7003FB021 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		631EA7721402EA96003FB021 /* BannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerViewController.h; sourceTree = "<group>"; };
 		631EA7731402EA96003FB021 /* BannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerViewController.m; sourceTree = "<group>"; };
+		D8BD72461B965F9A003664CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,8 +114,7 @@
 				0493553E1B4EF018002D3F2D /* InfoPlist.strings */,
 				04001E251B4EDD4700E936EC /* Images.xcassets */,
 				631EA7481402E87D003FB021 /* SplitNavigationBanner-Info.plist */,
-				53970DB417288B4E0083D776 /* MainStoryboard_iPad.storyboard */,
-				53970DB617288B4E0083D776 /* MainStoryboard_iPhone.storyboard */,
+				D8BD72451B965F9A003664CD /* Main.storyboard */,
 				046B36CE1B45D5F600F93731 /* LaunchScreen.xib */,
 				631EA74E1402E87D003FB021 /* SplitNavigationBanner-Prefix.pch */,
 			);
@@ -175,11 +172,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8BD72471B965F9A003664CD /* Main.storyboard in Resources */,
 				04001E2C1B4EDD7200E936EC /* ipsums.plist in Resources */,
 				049355401B4EF018002D3F2D /* InfoPlist.strings in Resources */,
 				04001E261B4EDD4700E936EC /* Images.xcassets in Resources */,
-				53970DB817288B4E0083D776 /* MainStoryboard_iPad.storyboard in Resources */,
-				53970DB917288B4E0083D776 /* MainStoryboard_iPhone.storyboard in Resources */,
 				046B36D01B45D5F600F93731 /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -226,20 +222,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		53970DB417288B4E0083D776 /* MainStoryboard_iPad.storyboard */ = {
+		D8BD72451B965F9A003664CD /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				04001E271B4EDD6000E936EC /* Base */,
+				D8BD72461B965F9A003664CD /* Base */,
 			);
-			name = MainStoryboard_iPad.storyboard;
-			sourceTree = "<group>";
-		};
-		53970DB617288B4E0083D776 /* MainStoryboard_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				04001E281B4EDD6000E936EC /* Base */,
-			);
-			name = MainStoryboard_iPhone.storyboard;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

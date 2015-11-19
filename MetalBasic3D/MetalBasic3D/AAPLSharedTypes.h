@@ -15,14 +15,14 @@
 
 namespace AAPL
 {
-    typedef struct
+    struct constants_t
     {
         simd::float4x4 modelview_projection_matrix;
         simd::float4x4 normal_matrix;
         simd::float4   ambient_color;
         simd::float4   diffuse_color;
         int            multiplier;
-    } constants_t;
+    } __attribute__ ((aligned (256)));
 }
 
 #endif

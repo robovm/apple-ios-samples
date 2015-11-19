@@ -35,15 +35,15 @@ NSString * const BannerViewActionDidFinish = @"BannerViewActionDidFinish";
     else {
         _bannerView = [[ADBannerView alloc] init];
     }
-    _bannerView.delegate = self;
+    self.bannerView.delegate = self;
     
-    [self.view addSubview:_bannerView];
+    [self.view addSubview:self.bannerView];
     
-    _contentController = self.childViewControllers[0];  // remember who our content child is
+    self.contentController = self.childViewControllers[0];  // remember who our content child is
 }
 
 - (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
-    return [_contentController preferredInterfaceOrientationForPresentation];
+    return [self.contentController preferredInterfaceOrientationForPresentation];
 }
 
 - (void)viewDidLayoutSubviews {
@@ -51,17 +51,17 @@ NSString * const BannerViewActionDidFinish = @"BannerViewActionDidFinish";
 
     // All we need to do is ask the banner for a size that fits into the layout area we are using.
     // At this point in this method contentFrame=self.view.bounds, so we'll use that size for the layout.
-    bannerFrame.size = [_bannerView sizeThatFits:contentFrame.size];
+    bannerFrame.size = [self.bannerView sizeThatFits:contentFrame.size];
     
-    if (_bannerView.bannerLoaded) {
+    if (self.bannerView.bannerLoaded) {
         contentFrame.size.height -= bannerFrame.size.height;
         bannerFrame.origin.y = contentFrame.size.height;
     }
     else {
         bannerFrame.origin.y = contentFrame.size.height;
     }
-    _contentController.view.frame = contentFrame;
-    _bannerView.frame = bannerFrame;
+    self.contentController.view.frame = contentFrame;
+    self.bannerView.frame = bannerFrame;
 }
 
 - (void)bannerViewDidLoadAd:(ADBannerView *)banner {

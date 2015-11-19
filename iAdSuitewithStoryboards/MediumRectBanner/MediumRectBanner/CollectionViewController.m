@@ -26,8 +26,8 @@ A simple view controller that manages a collection view controller and a medium 
     self = [super initWithFrame:frame];
     if (self != nil) {
         _imageView = [[UIImageView alloc] initWithFrame:self.contentView.bounds];
-        _imageView.contentMode = UIViewContentModeScaleAspectFit;
-        [self.contentView addSubview:_imageView];
+        self.imageView.contentMode = UIViewContentModeScaleAspectFit;
+        [self.contentView addSubview:self.imageView];
     }
     return self;
 }
@@ -63,26 +63,25 @@ A simple view controller that manages a collection view controller and a medium 
 
 @interface CollectionViewController () <ADBannerViewDelegate>
 
+@property (nonatomic, strong) ADBannerView *banner;
+// We only want to insert/delete our banner if we are changing from Loaded to Non-loaded
+// and vice versa, so we use this ivar to track that state. If this wasn't a concern,
+// we wouldn't need this ivar at all.
+//
+@property (nonatomic, assign) BOOL bannerWasLoaded;
+
 @end
 
 
 #pragma mark -
 
 @implementation CollectionViewController
-{
-    ADBannerView *_banner;
-    // We only want to insert/delete our banner if we are changing from Loaded to Non-loaded
-    // and vice versa, so we use this ivar to track that state. If this wasn't a concern,
-    // we wouldn't need this ivar at all.
-    //
-    BOOL _bannerWasLoaded;
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     _banner = [[ADBannerView alloc] initWithAdType:ADAdTypeMediumRectangle];
-    _banner.delegate = self;
+    self.banner.delegate = self;
     [self.collectionView registerClass:[ImageViewCell class] forCellWithReuseIdentifier:@"ImageView"];
     [self.collectionView registerClass:[BannerViewCell class] forCellWithReuseIdentifier:@"BannerView"];
 }
@@ -96,7 +95,7 @@ A simple view controller that manages a collection view controller and a medium 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     // We only have 1 banner, but we display it in one of 3 locations, so if the banner is loaded, we add 3 more items.
-    return _banner.bannerLoaded ? kNumberOfItemsWithBanners : kBaseNumberOfItems;
+    return self.banner.bannerLoaded ? kNumberOfItemsWithBanners : kBaseNumberOfItems;
 }
 
 - (UIImage *)makeArt:(NSInteger)index
@@ -136,9 +135,9 @@ A simple view controller that manages a collection view controller and a medium 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     UICollectionViewCell *cell;
-    if (_banner.bannerLoaded && [self isBannerItem:indexPath]) {
+    if (self.banner.bannerLoaded && [self isBannerItem:indexPath]) {
         BannerViewCell *bannerCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"BannerView" forIndexPath:indexPath];
-        bannerCell.bannerView = _banner;
+        bannerCell.bannerView = self.banner;
         cell = bannerCell;
     } else {
         ImageViewCell *imageCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ImageView" forIndexPath:indexPath];
@@ -161,24 +160,24 @@ A simple view controller that manages a collection view controller and a medium 
 
 - (void)bannerViewDidLoadAd:(ADBannerView *)banner
 {
-    if (!_bannerWasLoaded) {
+    if (!self.bannerWasLoaded) {
         [self.collectionView performBatchUpdates:^{
             [self.collectionView insertItemsAtIndexPaths:@[ [NSIndexPath indexPathForItem:kBannerLocation1 inSection:0], [NSIndexPath indexPathForItem:kBannerLocation2 inSection:0], [NSIndexPath indexPathForItem:kBannerLocation3 inSection:0]]];
         } completion:nil];
     }
-    _bannerWasLoaded = YES;
+    self.bannerWasLoaded = YES;
 }
 
 - (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
 {
-    if (_bannerWasLoaded) {
+    if (self.bannerWasLoaded) {
         [self.collectionView performBatchUpdates:^{
             [self.collectionView deleteItemsAtIndexPaths:@[ [NSIndexPath indexPathForItem:kBannerLocation1 inSection:0], [NSIndexPath indexPathForItem:kBannerLocation2 inSection:0], [NSIndexPath indexPathForItem:kBannerLocation3 inSection:0]]];
         } completion:nil];
         
         NSLog(@"didFailToReceiveAdWithError: %@", error);
     }
-    _bannerWasLoaded = NO;
+    self.bannerWasLoaded = NO;
 }
 
 @end

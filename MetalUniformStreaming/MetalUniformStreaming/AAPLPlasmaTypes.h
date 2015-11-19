@@ -1,12 +1,10 @@
 /*
- Copyright (C) 2014 Apple Inc. All Rights Reserved.
+ Copyright (C) 2015 Apple Inc. All Rights Reserved.
  See LICENSE.txt for this sample’s licensing information
  
  Abstract:
- 
  Structure type definitions for plasma uniforms.
-
-*/
+ */
 
 #ifndef _METAL_PLASMA_TYPES_H_
 #define _METAL_PLASMA_TYPES_H_

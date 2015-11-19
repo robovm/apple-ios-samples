@@ -1,10 +1,10 @@
-/*Copyright (C) 2015 Apple Inc. All Rights Reserved.
-/*See LICENSE.txt for this sample’s licensing information
 /*
-/*Abstract:
-/*Main source file to this sample project.
-*/
+Copyright (C) 2015 Apple Inc. All Rights Reserved.
+See LICENSE.txt for this sample’s licensing information
 
+Abstract:
+Main source file to this sample project.
+*/
 
 @import UIKit;
 

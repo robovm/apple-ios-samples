@@ -7,334 +7,313 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
-		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
-		3555EF141182627100B1E48C /* PrintPhotoViewController-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3555EF111182627100B1E48C /* PrintPhotoViewController-iPad.xib */; };
-		3555EF151182627100B1E48C /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3555EF121182627100B1E48C /* MainWindow-iPad.xib */; };
-		3555EF161182627100B1E48C /* FirstImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3555EF131182627100B1E48C /* FirstImage.jpg */; };
-		355E6B231211C79B00942604 /* PrintPhotoPageRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 355E6B221211C79B00942604 /* PrintPhotoPageRenderer.m */; };
-		357846EF103F472F00F2E024 /* PrintPhotoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 357846EB103F472F00F2E024 /* PrintPhotoAppDelegate.m */; };
-		357846F0103F472F00F2E024 /* PrintPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 357846ED103F472F00F2E024 /* PrintPhotoViewController.m */; };
-		3578470C103F488A00F2E024 /* PrintPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3578470A103F488A00F2E024 /* PrintPhotoViewController.xib */; };
-		358CB8BA1094E07200FE7996 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 358CB8B91094E07200FE7996 /* Foundation.framework */; };
-		358CB8C01094E09800FE7996 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 358CB8BF1094E09800FE7996 /* UIKit.framework */; };
-		358CB8C61094E0B300FE7996 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 358CB8C51094E0B300FE7996 /* CoreGraphics.framework */; };
-		35A5638C12396941009DB1CB /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35A5638612396941009DB1CB /* Icon@2x.png */; };
-		35A5638D12396941009DB1CB /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 35A5638712396941009DB1CB /* Icon.png */; };
-		35A5638E12396941009DB1CB /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35A5638812396941009DB1CB /* Icon-Small@2x.png */; };
-		35A5638F12396941009DB1CB /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 35A5638912396941009DB1CB /* Icon-Small.png */; };
-		35A5639012396941009DB1CB /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 35A5638A12396941009DB1CB /* Icon-Small-50.png */; };
-		35A5639112396941009DB1CB /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 35A5638B12396941009DB1CB /* Icon-72.png */; };
-		35C35058120A37BB004BBFBF /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35C35057120A37BB004BBFBF /* AssetsLibrary.framework */; };
-		35F68B171208981000733A9C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35F68B161208981000733A9C /* MobileCoreServices.framework */; };
+		3E14C3D21B867219003F3591 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14C3D11B867219003F3591 /* AppDelegate.swift */; };
+		3E14C3D41B867219003F3591 /* CustomAssetPrintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14C3D31B867219003F3591 /* CustomAssetPrintViewController.swift */; };
+		3E14C3D71B867219003F3591 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E14C3D51B867219003F3591 /* Main.storyboard */; };
+		3E14C3D91B867219003F3591 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E14C3D81B867219003F3591 /* Assets.xcassets */; };
+		3E14C3DC1B867219003F3591 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E14C3DA1B867219003F3591 /* LaunchScreen.storyboard */; };
+		3E14C3E51B868126003F3591 /* CustomAssetPrintPageRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14C3E41B868126003F3591 /* CustomAssetPrintPageRenderer.swift */; settings = {ASSET_TAGS = (); }; };
+		3E1AC9721B8B75A2006FC729 /* StandardAssetPrintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1AC9711B8B75A2006FC729 /* StandardAssetPrintViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1D6058910D05DD3D006BFB54 /* PrintPhoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrintPhoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
-		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		3555EF111182627100B1E48C /* PrintPhotoViewController-iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "PrintPhotoViewController-iPad.xib"; sourceTree = "<group>"; };
-		3555EF121182627100B1E48C /* MainWindow-iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "MainWindow-iPad.xib"; sourceTree = "<group>"; };
-		3555EF131182627100B1E48C /* FirstImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FirstImage.jpg; sourceTree = "<group>"; };
-		355E6B211211C79B00942604 /* PrintPhotoPageRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrintPhotoPageRenderer.h; sourceTree = "<group>"; };
-		355E6B221211C79B00942604 /* PrintPhotoPageRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrintPhotoPageRenderer.m; sourceTree = "<group>"; };
-		357846EA103F472F00F2E024 /* PrintPhotoAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrintPhotoAppDelegate.h; sourceTree = "<group>"; };
-		357846EB103F472F00F2E024 /* PrintPhotoAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrintPhotoAppDelegate.m; sourceTree = "<group>"; };
-		357846EC103F472F00F2E024 /* PrintPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrintPhotoViewController.h; sourceTree = "<group>"; };
-		357846ED103F472F00F2E024 /* PrintPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrintPhotoViewController.m; sourceTree = "<group>"; };
-		35784708103F488A00F2E024 /* PrintPhoto-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "PrintPhoto-Info.plist"; sourceTree = "<group>"; };
-		35784709103F488A00F2E024 /* PrintPhoto_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrintPhoto_Prefix.pch; sourceTree = "<group>"; };
-		3578470A103F488A00F2E024 /* PrintPhotoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrintPhotoViewController.xib; sourceTree = "<group>"; };
-		358CB8B91094E07200FE7996 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		358CB8BF1094E09800FE7996 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		358CB8C51094E0B300FE7996 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		35A5638612396941009DB1CB /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Icons/Icon@2x.png"; sourceTree = "<group>"; };
-		35A5638712396941009DB1CB /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Icons/Icon.png; sourceTree = "<group>"; };
-		35A5638812396941009DB1CB /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "Icons/Icon-Small@2x.png"; sourceTree = "<group>"; };
-		35A5638912396941009DB1CB /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "Icons/Icon-Small.png"; sourceTree = "<group>"; };
-		35A5638A12396941009DB1CB /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50.png"; path = "Icons/Icon-Small-50.png"; sourceTree = "<group>"; };
-		35A5638B12396941009DB1CB /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "Icons/Icon-72.png"; sourceTree = "<group>"; };
-		35C35057120A37BB004BBFBF /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
-		35D3445912344D6800F2C216 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
-		35F68B161208981000733A9C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		3E14C3CE1B867219003F3591 /* PrintPhoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrintPhoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E14C3D11B867219003F3591 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3E14C3D31B867219003F3591 /* CustomAssetPrintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAssetPrintViewController.swift; sourceTree = "<group>"; };
+		3E14C3D61B867219003F3591 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3E14C3D81B867219003F3591 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3E14C3DB1B867219003F3591 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3E14C3DD1B867219003F3591 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E14C3E31B86723E003F3591 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3E14C3E41B868126003F3591 /* CustomAssetPrintPageRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomAssetPrintPageRenderer.swift; path = Assets.xcassets/CustomAssetPrintPageRenderer.swift; sourceTree = "<group>"; };
+		3E1AC9711B8B75A2006FC729 /* StandardAssetPrintViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardAssetPrintViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+		3E14C3CB1B867219003F3591 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				358CB8BA1094E07200FE7996 /* Foundation.framework in Frameworks */,
-				358CB8C01094E09800FE7996 /* UIKit.framework in Frameworks */,
-				358CB8C61094E0B300FE7996 /* CoreGraphics.framework in Frameworks */,
-				35F68B171208981000733A9C /* MobileCoreServices.framework in Frameworks */,
-				35C35058120A37BB004BBFBF /* AssetsLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		080E96DDFE201D6D7F000001 /* Classes */ = {
+		3E14C3C51B867219003F3591 = {
 			isa = PBXGroup;
 			children = (
-				357846EA103F472F00F2E024 /* PrintPhotoAppDelegate.h */,
-				357846EB103F472F00F2E024 /* PrintPhotoAppDelegate.m */,
-				355E6B211211C79B00942604 /* PrintPhotoPageRenderer.h */,
-				355E6B221211C79B00942604 /* PrintPhotoPageRenderer.m */,
-				357846EC103F472F00F2E024 /* PrintPhotoViewController.h */,
-				357846ED103F472F00F2E024 /* PrintPhotoViewController.m */,
+				3E14C3E31B86723E003F3591 /* README.md */,
+				3E14C3D01B867219003F3591 /* PrintPhoto */,
+				3E14C3CF1B867219003F3591 /* Products */,
 			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
-		19C28FACFE9D520D11CA2CBB /* Products */ = {
+		3E14C3CF1B867219003F3591 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D6058910D05DD3D006BFB54 /* PrintPhoto.app */,
+				3E14C3CE1B867219003F3591 /* PrintPhoto.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+		3E14C3D01B867219003F3591 /* PrintPhoto */ = {
 			isa = PBXGroup;
 			children = (
-				35D3445912344D6800F2C216 /* ReadMe.txt */,
-				080E96DDFE201D6D7F000001 /* Classes */,
-				29B97315FDCFA39411CA2CEA /* Other Sources */,
-				29B97317FDCFA39411CA2CEA /* Resources */,
-				29B97323FDCFA39411CA2CEA /* Frameworks */,
-				19C28FACFE9D520D11CA2CBB /* Products */,
+				3E14C3D11B867219003F3591 /* AppDelegate.swift */,
+				3E1AC9701B8B745E006FC729 /* Standard Printing */,
+				3E1AC96F1B8B7458006FC729 /* Custom Asset Print Rendering */,
+				3E14C3D51B867219003F3591 /* Main.storyboard */,
+				3E14C3D81B867219003F3591 /* Assets.xcassets */,
+				3E14C3DA1B867219003F3591 /* LaunchScreen.storyboard */,
+				3E14C3DD1B867219003F3591 /* Info.plist */,
 			);
-			name = CustomTemplate;
+			path = PrintPhoto;
 			sourceTree = "<group>";
 		};
-		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+		3E1AC96F1B8B7458006FC729 /* Custom Asset Print Rendering */ = {
 			isa = PBXGroup;
 			children = (
-				29B97316FDCFA39411CA2CEA /* main.m */,
-				35784709103F488A00F2E024 /* PrintPhoto_Prefix.pch */,
+				3E14C3D31B867219003F3591 /* CustomAssetPrintViewController.swift */,
+				3E14C3E41B868126003F3591 /* CustomAssetPrintPageRenderer.swift */,
 			);
-			name = "Other Sources";
+			name = "Custom Asset Print Rendering";
 			sourceTree = "<group>";
 		};
-		29B97317FDCFA39411CA2CEA /* Resources */ = {
+		3E1AC9701B8B745E006FC729 /* Standard Printing */ = {
 			isa = PBXGroup;
 			children = (
-				35A5645B1239B84D009DB1CB /* en.lproj */,
-				35784708103F488A00F2E024 /* PrintPhoto-Info.plist */,
-				35A563B112396996009DB1CB /* Icons */,
-				3555EF131182627100B1E48C /* FirstImage.jpg */,
+				3E1AC9711B8B75A2006FC729 /* StandardAssetPrintViewController.swift */,
 			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				35C35057120A37BB004BBFBF /* AssetsLibrary.framework */,
-				358CB8C51094E0B300FE7996 /* CoreGraphics.framework */,
-				358CB8B91094E07200FE7996 /* Foundation.framework */,
-				35F68B161208981000733A9C /* MobileCoreServices.framework */,
-				358CB8BF1094E09800FE7996 /* UIKit.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		35A563B112396996009DB1CB /* Icons */ = {
-			isa = PBXGroup;
-			children = (
-				35A5638612396941009DB1CB /* Icon@2x.png */,
-				35A5638712396941009DB1CB /* Icon.png */,
-				35A5638812396941009DB1CB /* Icon-Small@2x.png */,
-				35A5638912396941009DB1CB /* Icon-Small.png */,
-				35A5638A12396941009DB1CB /* Icon-Small-50.png */,
-				35A5638B12396941009DB1CB /* Icon-72.png */,
-			);
-			name = Icons;
-			sourceTree = "<group>";
-		};
-		35A5645B1239B84D009DB1CB /* en.lproj */ = {
-			isa = PBXGroup;
-			children = (
-				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
-				3555EF121182627100B1E48C /* MainWindow-iPad.xib */,
-				3578470A103F488A00F2E024 /* PrintPhotoViewController.xib */,
-				3555EF111182627100B1E48C /* PrintPhotoViewController-iPad.xib */,
-			);
-			name = en.lproj;
+			name = "Standard Printing";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1D6058900D05DD3D006BFB54 /* PrintPhoto */ = {
+		3E14C3CD1B867219003F3591 /* PrintPhoto */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "PrintPhoto" */;
+			buildConfigurationList = 3E14C3E01B867219003F3591 /* Build configuration list for PBXNativeTarget "PrintPhoto" */;
 			buildPhases = (
-				1D60588D0D05DD3D006BFB54 /* Resources */,
-				1D60588E0D05DD3D006BFB54 /* Sources */,
-				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+				3E14C3CA1B867219003F3591 /* Sources */,
+				3E14C3CB1B867219003F3591 /* Frameworks */,
+				3E14C3CC1B867219003F3591 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = PrintPhoto;
-			productName = ImagePrint;
-			productReference = 1D6058910D05DD3D006BFB54 /* PrintPhoto.app */;
+			productName = PrintPhoto;
+			productReference = 3E14C3CE1B867219003F3591 /* PrintPhoto.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		29B97313FDCFA39411CA2CEA /* Project object */ = {
+		3E14C3C61B867219003F3591 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Apple Inc";
+				TargetAttributes = {
+					3E14C3CD1B867219003F3591 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
 			};
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "PrintPhoto" */;
+			buildConfigurationList = 3E14C3C91B867219003F3591 /* Build configuration list for PBXProject "PrintPhoto" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
-			hasScannedForEncodings = 1;
+			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
-				Japanese,
-				French,
-				German,
+				en,
+				Base,
 			);
-			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			mainGroup = 3E14C3C51B867219003F3591;
+			productRefGroup = 3E14C3CF1B867219003F3591 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1D6058900D05DD3D006BFB54 /* PrintPhoto */,
+				3E14C3CD1B867219003F3591 /* PrintPhoto */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+		3E14C3CC1B867219003F3591 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
-				3578470C103F488A00F2E024 /* PrintPhotoViewController.xib in Resources */,
-				3555EF141182627100B1E48C /* PrintPhotoViewController-iPad.xib in Resources */,
-				3555EF151182627100B1E48C /* MainWindow-iPad.xib in Resources */,
-				3555EF161182627100B1E48C /* FirstImage.jpg in Resources */,
-				35A5638C12396941009DB1CB /* Icon@2x.png in Resources */,
-				35A5638D12396941009DB1CB /* Icon.png in Resources */,
-				35A5638E12396941009DB1CB /* Icon-Small@2x.png in Resources */,
-				35A5638F12396941009DB1CB /* Icon-Small.png in Resources */,
-				35A5639012396941009DB1CB /* Icon-Small-50.png in Resources */,
-				35A5639112396941009DB1CB /* Icon-72.png in Resources */,
+				3E14C3DC1B867219003F3591 /* LaunchScreen.storyboard in Resources */,
+				3E14C3D91B867219003F3591 /* Assets.xcassets in Resources */,
+				3E14C3D71B867219003F3591 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+		3E14C3CA1B867219003F3591 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
-				357846EF103F472F00F2E024 /* PrintPhotoAppDelegate.m in Sources */,
-				357846F0103F472F00F2E024 /* PrintPhotoViewController.m in Sources */,
-				355E6B231211C79B00942604 /* PrintPhotoPageRenderer.m in Sources */,
+				3E14C3D41B867219003F3591 /* CustomAssetPrintViewController.swift in Sources */,
+				3E14C3D21B867219003F3591 /* AppDelegate.swift in Sources */,
+				3E1AC9721B8B75A2006FC729 /* StandardAssetPrintViewController.swift in Sources */,
+				3E14C3E51B868126003F3591 /* CustomAssetPrintPageRenderer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		3E14C3D51B867219003F3591 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E14C3D61B867219003F3591 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3E14C3DA1B867219003F3591 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E14C3DB1B867219003F3591 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		1D6058940D05DD3E006BFB54 /* Debug */ = {
+		3E14C3DE1B867219003F3591 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_ID = .debug;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/Frameworks\"",
-				);
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = PrintPhoto_Prefix.pch;
-				HEADER_SEARCH_PATHS = ../;
-				INFOPLIST_FILE = "PrintPhoto-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = PrintPhoto;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		1D6058950D05DD3E006BFB54 /* Release */ = {
+		3E14C3DF1B867219003F3591 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = PrintPhoto_Prefix.pch;
-				INFOPLIST_FILE = "PrintPhoto-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		C01FCF4F08A954540054247B /* Debug */ = {
+		3E14C3E11B867219003F3591 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
-				PRODUCT_NAME = PrintPhoto;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PrintPhoto/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.PrintPhoto";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		C01FCF5008A954540054247B /* Release */ = {
+		3E14C3E21B867219003F3591 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
-				PRODUCT_NAME = PrintPhoto;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PrintPhoto/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.PrintPhoto";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "PrintPhoto" */ = {
+		3E14C3C91B867219003F3591 /* Build configuration list for PBXProject "PrintPhoto" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1D6058940D05DD3E006BFB54 /* Debug */,
-				1D6058950D05DD3E006BFB54 /* Release */,
+				3E14C3DE1B867219003F3591 /* Debug */,
+				3E14C3DF1B867219003F3591 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "PrintPhoto" */ = {
+		3E14C3E01B867219003F3591 /* Build configuration list for PBXNativeTarget "PrintPhoto" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C01FCF4F08A954540054247B /* Debug */,
-				C01FCF5008A954540054247B /* Release */,
+				3E14C3E11B867219003F3591 /* Debug */,
+				3E14C3E21B867219003F3591 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+	rootObject = 3E14C3C61B867219003F3591 /* Project object */;
 }

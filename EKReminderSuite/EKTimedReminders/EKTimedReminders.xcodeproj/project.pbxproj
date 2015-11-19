@@ -1,0 +1,432 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EB245F0F199406D000F35718 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EB245F0D199406D000F35718 /* InfoPlist.strings */; };
+		EB245F11199406D000F35718 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB245F10199406D000F35718 /* main.m */; };
+		EB245F15199406D000F35718 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB245F14199406D000F35718 /* AppDelegate.m */; };
+		EB245F17199406D000F35718 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB245F16199406D000F35718 /* Images.xcassets */; };
+		EB245F3F19940C7000F35718 /* TimedReminderStore.m in Sources */ = {isa = PBXBuildFile; fileRef = EB245F3E19940C7000F35718 /* TimedReminderStore.m */; };
+		EB245F4319940CB100F35718 /* TimedReminder.m in Sources */ = {isa = PBXBuildFile; fileRef = EB245F4219940CB100F35718 /* TimedReminder.m */; };
+		EB245F4919940D6F00F35718 /* Checkbox.m in Sources */ = {isa = PBXBuildFile; fileRef = EB245F4619940D6F00F35718 /* Checkbox.m */; };
+		EB245F4A19940D6F00F35718 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB245F4819940D6F00F35718 /* CustomCell.m */; };
+		EB245F5019940DDF00F35718 /* TimedTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB245F4D19940DDF00F35718 /* TimedTabBarController.m */; };
+		EB245F5119940DDF00F35718 /* UpcomingReminders.m in Sources */ = {isa = PBXBuildFile; fileRef = EB245F4F19940DDF00F35718 /* UpcomingReminders.m */; };
+		EB245F5619940DFC00F35718 /* PastDueReminders.m in Sources */ = {isa = PBXBuildFile; fileRef = EB245F5319940DFC00F35718 /* PastDueReminders.m */; };
+		EB245F5719940DFC00F35718 /* RepeatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB245F5519940DFC00F35718 /* RepeatViewController.m */; };
+		EB245F5A19940E1200F35718 /* AddTimedReminder.m in Sources */ = {isa = PBXBuildFile; fileRef = EB245F5919940E1200F35718 /* AddTimedReminder.m */; };
+		EB245F5C19940E4900F35718 /* FrequenciesList.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB245F5B19940E4900F35718 /* FrequenciesList.plist */; };
+		EB245F5F19940EEE00F35718 /* TimedReminders.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB245F6119940EEE00F35718 /* TimedReminders.storyboard */; };
+		EB245F641994122200F35718 /* CompletedReminders.m in Sources */ = {isa = PBXBuildFile; fileRef = EB245F631994122200F35718 /* CompletedReminders.m */; };
+		EB5F3EA51BC49134006D4513 /* EKRSConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5F3EA41BC49134006D4513 /* EKRSConstants.m */; };
+		EBC2E9341ABB6C5300A01D77 /* EKRSHelperClass.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC2E92F1ABB6C5300A01D77 /* EKRSHelperClass.m */; };
+		EBC2E9351ABB6C5300A01D77 /* EKRSReminderStore.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC2E9311ABB6C5300A01D77 /* EKRSReminderStore.m */; };
+		EBC2E9361ABB6C5300A01D77 /* EKRSReminderStoreUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC2E9331ABB6C5300A01D77 /* EKRSReminderStoreUtilities.m */; };
+		EBD937151BDEB5B7005D3410 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBD937141BDEB5B7005D3410 /* Launch Screen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EB245F01199406CF00F35718 /* EKTimedReminders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EKTimedReminders.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB245F0C199406D000F35718 /* EKTimedReminders-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EKTimedReminders-Info.plist"; sourceTree = "<group>"; };
+		EB245F0E199406D000F35718 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EB245F10199406D000F35718 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EB245F12199406D000F35718 /* EKTimedReminders-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EKTimedReminders-Prefix.pch"; sourceTree = "<group>"; };
+		EB245F13199406D000F35718 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EB245F14199406D000F35718 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EB245F16199406D000F35718 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = EKTimedReminders/Images.xcassets; sourceTree = "<group>"; };
+		EB245F3D19940C7000F35718 /* TimedReminderStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimedReminderStore.h; sourceTree = "<group>"; };
+		EB245F3E19940C7000F35718 /* TimedReminderStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimedReminderStore.m; sourceTree = "<group>"; };
+		EB245F4119940CB100F35718 /* TimedReminder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimedReminder.h; sourceTree = "<group>"; };
+		EB245F4219940CB100F35718 /* TimedReminder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimedReminder.m; sourceTree = "<group>"; };
+		EB245F4519940D6F00F35718 /* Checkbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Checkbox.h; sourceTree = "<group>"; };
+		EB245F4619940D6F00F35718 /* Checkbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Checkbox.m; sourceTree = "<group>"; };
+		EB245F4719940D6F00F35718 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
+		EB245F4819940D6F00F35718 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
+		EB245F4C19940DDF00F35718 /* TimedTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimedTabBarController.h; sourceTree = "<group>"; };
+		EB245F4D19940DDF00F35718 /* TimedTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimedTabBarController.m; sourceTree = "<group>"; };
+		EB245F4E19940DDF00F35718 /* UpcomingReminders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpcomingReminders.h; sourceTree = "<group>"; };
+		EB245F4F19940DDF00F35718 /* UpcomingReminders.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpcomingReminders.m; sourceTree = "<group>"; };
+		EB245F5219940DFC00F35718 /* PastDueReminders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PastDueReminders.h; sourceTree = "<group>"; };
+		EB245F5319940DFC00F35718 /* PastDueReminders.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PastDueReminders.m; sourceTree = "<group>"; };
+		EB245F5419940DFC00F35718 /* RepeatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepeatViewController.h; sourceTree = "<group>"; };
+		EB245F5519940DFC00F35718 /* RepeatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepeatViewController.m; sourceTree = "<group>"; };
+		EB245F5819940E1200F35718 /* AddTimedReminder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTimedReminder.h; sourceTree = "<group>"; };
+		EB245F5919940E1200F35718 /* AddTimedReminder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTimedReminder.m; sourceTree = "<group>"; };
+		EB245F5B19940E4900F35718 /* FrequenciesList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FrequenciesList.plist; sourceTree = "<group>"; };
+		EB245F621994122200F35718 /* CompletedReminders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompletedReminders.h; sourceTree = "<group>"; };
+		EB245F631994122200F35718 /* CompletedReminders.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompletedReminders.m; sourceTree = "<group>"; };
+		EB5F3EA31BC49134006D4513 /* EKRSConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EKRSConstants.h; path = "../../Shared Code/EKRSConstants.h"; sourceTree = "<group>"; };
+		EB5F3EA41BC49134006D4513 /* EKRSConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EKRSConstants.m; path = "../../Shared Code/EKRSConstants.m"; sourceTree = "<group>"; };
+		EB840A7C1BC495BE002CCC08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TimedReminders.storyboard; sourceTree = "<group>"; };
+		EBBCCA6F19A2A2360029953B /* ReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
+		EBC2E92E1ABB6C5300A01D77 /* EKRSHelperClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EKRSHelperClass.h; path = "../../Shared Code/EKRSHelperClass.h"; sourceTree = "<group>"; };
+		EBC2E92F1ABB6C5300A01D77 /* EKRSHelperClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EKRSHelperClass.m; path = "../../Shared Code/EKRSHelperClass.m"; sourceTree = "<group>"; };
+		EBC2E9301ABB6C5300A01D77 /* EKRSReminderStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EKRSReminderStore.h; path = "../../Shared Code/EKRSReminderStore.h"; sourceTree = "<group>"; };
+		EBC2E9311ABB6C5300A01D77 /* EKRSReminderStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EKRSReminderStore.m; path = "../../Shared Code/EKRSReminderStore.m"; sourceTree = "<group>"; };
+		EBC2E9321ABB6C5300A01D77 /* EKRSReminderStoreUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EKRSReminderStoreUtilities.h; path = "../../Shared Code/EKRSReminderStoreUtilities.h"; sourceTree = "<group>"; };
+		EBC2E9331ABB6C5300A01D77 /* EKRSReminderStoreUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EKRSReminderStoreUtilities.m; path = "../../Shared Code/EKRSReminderStoreUtilities.m"; sourceTree = "<group>"; };
+		EBD937141BDEB5B7005D3410 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EB245EFE199406CF00F35718 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EB245EF8199406CF00F35718 = {
+			isa = PBXGroup;
+			children = (
+				EBBCCA6F19A2A2360029953B /* ReadMe.md */,
+				EB245F0A199406D000F35718 /* EKTimedReminders */,
+				EB245F16199406D000F35718 /* Images.xcassets */,
+				EB245F02199406CF00F35718 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EB245F02199406CF00F35718 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EB245F01199406CF00F35718 /* EKTimedReminders.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EB245F0A199406D000F35718 /* EKTimedReminders */ = {
+			isa = PBXGroup;
+			children = (
+				EB245F13199406D000F35718 /* AppDelegate.h */,
+				EB245F14199406D000F35718 /* AppDelegate.m */,
+				EB245F3D19940C7000F35718 /* TimedReminderStore.h */,
+				EB245F3E19940C7000F35718 /* TimedReminderStore.m */,
+				EB245F4419940D2400F35718 /* Custom Cell */,
+				EB245F4019940C9100F35718 /* Model */,
+				EBC2E92D1ABB6C3D00A01D77 /* Shared Code  */,
+				EB245F4B19940D9C00F35718 /* View Controllers */,
+				EB245F0B199406D000F35718 /* Supporting Files */,
+			);
+			path = EKTimedReminders;
+			sourceTree = "<group>";
+		};
+		EB245F0B199406D000F35718 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EB245F6119940EEE00F35718 /* TimedReminders.storyboard */,
+				EB245F5B19940E4900F35718 /* FrequenciesList.plist */,
+				EB245F0C199406D000F35718 /* EKTimedReminders-Info.plist */,
+				EB245F0D199406D000F35718 /* InfoPlist.strings */,
+				EB245F10199406D000F35718 /* main.m */,
+				EB245F12199406D000F35718 /* EKTimedReminders-Prefix.pch */,
+				EBD937141BDEB5B7005D3410 /* Launch Screen.storyboard */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EB245F4019940C9100F35718 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EB245F4119940CB100F35718 /* TimedReminder.h */,
+				EB245F4219940CB100F35718 /* TimedReminder.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		EB245F4419940D2400F35718 /* Custom Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EB245F4519940D6F00F35718 /* Checkbox.h */,
+				EB245F4619940D6F00F35718 /* Checkbox.m */,
+				EB245F4719940D6F00F35718 /* CustomCell.h */,
+				EB245F4819940D6F00F35718 /* CustomCell.m */,
+			);
+			name = "Custom Cell";
+			sourceTree = "<group>";
+		};
+		EB245F4B19940D9C00F35718 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EB245F621994122200F35718 /* CompletedReminders.h */,
+				EB245F631994122200F35718 /* CompletedReminders.m */,
+				EB245F5819940E1200F35718 /* AddTimedReminder.h */,
+				EB245F5919940E1200F35718 /* AddTimedReminder.m */,
+				EB245F5219940DFC00F35718 /* PastDueReminders.h */,
+				EB245F5319940DFC00F35718 /* PastDueReminders.m */,
+				EB245F5419940DFC00F35718 /* RepeatViewController.h */,
+				EB245F5519940DFC00F35718 /* RepeatViewController.m */,
+				EB245F4C19940DDF00F35718 /* TimedTabBarController.h */,
+				EB245F4D19940DDF00F35718 /* TimedTabBarController.m */,
+				EB245F4E19940DDF00F35718 /* UpcomingReminders.h */,
+				EB245F4F19940DDF00F35718 /* UpcomingReminders.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		EBC2E92D1ABB6C3D00A01D77 /* Shared Code  */ = {
+			isa = PBXGroup;
+			children = (
+				EBC2E92E1ABB6C5300A01D77 /* EKRSHelperClass.h */,
+				EBC2E92F1ABB6C5300A01D77 /* EKRSHelperClass.m */,
+				EBC2E9301ABB6C5300A01D77 /* EKRSReminderStore.h */,
+				EBC2E9311ABB6C5300A01D77 /* EKRSReminderStore.m */,
+				EBC2E9321ABB6C5300A01D77 /* EKRSReminderStoreUtilities.h */,
+				EBC2E9331ABB6C5300A01D77 /* EKRSReminderStoreUtilities.m */,
+				EB5F3EA31BC49134006D4513 /* EKRSConstants.h */,
+				EB5F3EA41BC49134006D4513 /* EKRSConstants.m */,
+			);
+			name = "Shared Code ";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EB245F00199406CF00F35718 /* EKTimedReminders */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB245F2D199406D100F35718 /* Build configuration list for PBXNativeTarget "EKTimedReminders" */;
+			buildPhases = (
+				EB245EFD199406CF00F35718 /* Sources */,
+				EB245EFE199406CF00F35718 /* Frameworks */,
+				EB245EFF199406CF00F35718 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EKTimedReminders;
+			productName = EKTimedReminders;
+			productReference = EB245F01199406CF00F35718 /* EKTimedReminders.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EB245EF9199406CF00F35718 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "___FULLUSERNAME___";
+			};
+			buildConfigurationList = EB245EFC199406CF00F35718 /* Build configuration list for PBXProject "EKTimedReminders" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EB245EF8199406CF00F35718;
+			productRefGroup = EB245F02199406CF00F35718 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EB245F00199406CF00F35718 /* EKTimedReminders */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EB245EFF199406CF00F35718 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB245F5F19940EEE00F35718 /* TimedReminders.storyboard in Resources */,
+				EB245F0F199406D000F35718 /* InfoPlist.strings in Resources */,
+				EB245F17199406D000F35718 /* Images.xcassets in Resources */,
+				EBD937151BDEB5B7005D3410 /* Launch Screen.storyboard in Resources */,
+				EB245F5C19940E4900F35718 /* FrequenciesList.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EB245EFD199406CF00F35718 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB245F5619940DFC00F35718 /* PastDueReminders.m in Sources */,
+				EB245F5A19940E1200F35718 /* AddTimedReminder.m in Sources */,
+				EB245F641994122200F35718 /* CompletedReminders.m in Sources */,
+				EB245F15199406D000F35718 /* AppDelegate.m in Sources */,
+				EB245F3F19940C7000F35718 /* TimedReminderStore.m in Sources */,
+				EB245F4919940D6F00F35718 /* Checkbox.m in Sources */,
+				EB245F4319940CB100F35718 /* TimedReminder.m in Sources */,
+				EB245F11199406D000F35718 /* main.m in Sources */,
+				EBC2E9351ABB6C5300A01D77 /* EKRSReminderStore.m in Sources */,
+				EB245F4A19940D6F00F35718 /* CustomCell.m in Sources */,
+				EBC2E9341ABB6C5300A01D77 /* EKRSHelperClass.m in Sources */,
+				EB245F5119940DDF00F35718 /* UpcomingReminders.m in Sources */,
+				EB5F3EA51BC49134006D4513 /* EKRSConstants.m in Sources */,
+				EBC2E9361ABB6C5300A01D77 /* EKRSReminderStoreUtilities.m in Sources */,
+				EB245F5719940DFC00F35718 /* RepeatViewController.m in Sources */,
+				EB245F5019940DDF00F35718 /* TimedTabBarController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EB245F0D199406D000F35718 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB245F0E199406D000F35718 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EB245F6119940EEE00F35718 /* TimedReminders.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB840A7C1BC495BE002CCC08 /* Base */,
+			);
+			name = TimedReminders.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EB245F2B199406D100F35718 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EB245F2C199406D100F35718 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EB245F2E199406D100F35718 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EKTimedReminders/EKTimedReminders-Prefix.pch";
+				INFOPLIST_FILE = "EKTimedReminders/EKTimedReminders-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EB245F2F199406D100F35718 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EKTimedReminders/EKTimedReminders-Prefix.pch";
+				INFOPLIST_FILE = "EKTimedReminders/EKTimedReminders-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EB245EFC199406CF00F35718 /* Build configuration list for PBXProject "EKTimedReminders" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB245F2B199406D100F35718 /* Debug */,
+				EB245F2C199406D100F35718 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB245F2D199406D100F35718 /* Build configuration list for PBXNativeTarget "EKTimedReminders" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB245F2E199406D100F35718 /* Debug */,
+				EB245F2F199406D100F35718 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EB245EF9199406CF00F35718 /* Project object */;
+}

@@ -1,11 +1,9 @@
 /*
- Copyright (C) 2014 Apple Inc. All Rights Reserved.
+ Copyright (C) 2015 Apple Inc. All Rights Reserved.
  See LICENSE.txt for this sample’s licensing information
  
  Abstract:
- 
-  A view controller displaying an asset full screen.
-  
+ A view controller displaying an asset full screen.
  */
 
 @import UIKit;
@@ -14,7 +12,7 @@
 
 @interface AAPLAssetViewController : UIViewController
 
-@property (strong) PHAsset *asset;
-@property (strong) PHAssetCollection *assetCollection;
+@property (nonatomic, strong) PHAsset *asset;
+@property (nonatomic, strong) PHAssetCollection *assetCollection;
 
 @end

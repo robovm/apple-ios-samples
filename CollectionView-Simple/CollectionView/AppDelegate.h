@@ -10,6 +10,4 @@ The sample's application delegate.
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
-
-
 @end

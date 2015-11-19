@@ -13,14 +13,16 @@ container view controller that manages an ADBannerView and a content view contro
 NSString * const BannerViewActionWillBegin = @"BannerViewActionWillBegin";
 NSString * const BannerViewActionDidFinish = @"BannerViewActionDidFinish";
 
-@interface BannerViewController () <ADBannerViewDelegate>
+@interface BannerViewController () <ADBannerViewDelegate, UISplitViewControllerDelegate>
 
 @property (nonatomic, strong) ADBannerView *bannerView;
-@property (nonatomic, strong) UIViewController *contentController;
+@property (nonatomic, strong) UISplitViewController *splitViewController;
 
 @end
 
 @implementation BannerViewController
+
+#pragma mark - UIViewController Life Cycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,13 +36,15 @@ NSString * const BannerViewActionDidFinish = @"BannerViewActionDidFinish";
     }
     self.bannerView.delegate = self;
     
-    [self.view addSubview:_bannerView];
+    [self.view addSubview:self.bannerView];
     
-    _contentController = self.childViewControllers[0];  // remember who our content child is
+    self.splitViewController = self.childViewControllers[0];  // remember who our content child is
+    
+    self.splitViewController.delegate = self;
 }
 
 - (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
-    return [self.contentController preferredInterfaceOrientationForPresentation];
+    return [self.splitViewController preferredInterfaceOrientationForPresentation];
 }
 
 - (void)viewDidLayoutSubviews {
@@ -57,7 +61,7 @@ NSString * const BannerViewActionDidFinish = @"BannerViewActionDidFinish";
     else {
         bannerFrame.origin.y = contentFrame.size.height;
     }
-    self.contentController.view.frame = contentFrame;
+    self.splitViewController.view.frame = contentFrame;
     self.bannerView.frame = bannerFrame;
 }
 
@@ -97,6 +101,21 @@ NSString * const BannerViewActionDidFinish = @"BannerViewActionDidFinish";
 
 - (void)bannerViewActionDidFinish:(ADBannerView *)banner {
     [[NSNotificationCenter defaultCenter] postNotificationName:BannerViewActionDidFinish object:self];
+}
+
+#pragma mark - UISplitViewControllerDelegate
+
+- (UIViewController *)primaryViewControllerForCollapsingSplitViewController:(UISplitViewController *)splitViewController {
+    //  Identify the master view controller's navigation controller as the primary view controller
+    //  for collapsing the UISplitViewController on iPhone
+    return splitViewController.viewControllers.firstObject;
+}
+
+- (BOOL)splitViewController:(UISplitViewController *)splitViewController
+collapseSecondaryViewController:(UIViewController *)secondaryViewController
+  ontoPrimaryViewController:(UIViewController *)primaryViewController {
+    //  Return YES to indicate that you do not want the split view controller to do anything with the secondary view controller
+    return YES;
 }
 
 @end

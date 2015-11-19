@@ -1,0 +1,445 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		11D1E0E11AB9EC7200B51FA0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D1E0E01AB9EC7200B51FA0 /* main.m */; };
+		11D1E0E41AB9EC7200B51FA0 /* AAPLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D1E0E31AB9EC7200B51FA0 /* AAPLAppDelegate.m */; };
+		11D1E0E71AB9EC7200B51FA0 /* AAPLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D1E0E61AB9EC7200B51FA0 /* AAPLViewController.m */; };
+		11D1E0EA1AB9EC7200B51FA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11D1E0E81AB9EC7200B51FA0 /* Main.storyboard */; };
+		11D1E0EC1AB9EC7200B51FA0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11D1E0EB1AB9EC7200B51FA0 /* Images.xcassets */; };
+		11D1E0EF1AB9EC7200B51FA0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11D1E0ED1AB9EC7200B51FA0 /* LaunchScreen.xib */; };
+		11D1E0FA1AB9EC7200B51FA0 /* FourInARowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D1E0F91AB9EC7200B51FA0 /* FourInARowTests.m */; };
+		11D1E1061AB9ECA900B51FA0 /* AAPLBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D1E1051AB9ECA900B51FA0 /* AAPLBoard.m */; };
+		11D1E1091ABA2A7E00B51FA0 /* AAPLPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D1E1081ABA2A7E00B51FA0 /* AAPLPlayer.m */; };
+		11D1E10C1ABA31AF00B51FA0 /* AAPLMinmaxStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D1E10B1ABA31AF00B51FA0 /* AAPLMinmaxStrategy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		11D1E0F61AB9EC7200B51FA0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 11D1E0D41AB9EC7200B51FA0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 11D1E0DB1AB9EC7200B51FA0;
+			remoteInfo = Connect;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		11D1E0DC1AB9EC7200B51FA0 /* FourInARow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FourInARow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		11D1E0E01AB9EC7200B51FA0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		11D1E0E21AB9EC7200B51FA0 /* AAPLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AAPLAppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		11D1E0E31AB9EC7200B51FA0 /* AAPLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAPLAppDelegate.m; sourceTree = "<group>"; };
+		11D1E0E51AB9EC7200B51FA0 /* AAPLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AAPLViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		11D1E0E61AB9EC7200B51FA0 /* AAPLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AAPLViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		11D1E0E91AB9EC7200B51FA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		11D1E0EB1AB9EC7200B51FA0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		11D1E0EE1AB9EC7200B51FA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		11D1E0F01AB9EC7200B51FA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11D1E0F51AB9EC7200B51FA0 /* FourInARowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FourInARowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		11D1E0F91AB9EC7200B51FA0 /* FourInARowTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FourInARowTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		11D1E0FB1AB9EC7200B51FA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11D1E1041AB9ECA900B51FA0 /* AAPLBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AAPLBoard.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		11D1E1051AB9ECA900B51FA0 /* AAPLBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AAPLBoard.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		11D1E1071ABA2A7E00B51FA0 /* AAPLPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AAPLPlayer.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		11D1E1081ABA2A7E00B51FA0 /* AAPLPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AAPLPlayer.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		11D1E10A1ABA31AF00B51FA0 /* AAPLMinmaxStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AAPLMinmaxStrategy.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		11D1E10B1ABA31AF00B51FA0 /* AAPLMinmaxStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLMinmaxStrategy.m; sourceTree = "<group>"; };
+		3E70696F1B1D751D00246648 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		11D1E0D91AB9EC7200B51FA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11D1E0F21AB9EC7200B51FA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		118A92E01B166E92000C09B6 /* Game Model */ = {
+			isa = PBXGroup;
+			children = (
+				11D1E1041AB9ECA900B51FA0 /* AAPLBoard.h */,
+				11D1E1051AB9ECA900B51FA0 /* AAPLBoard.m */,
+				11D1E1071ABA2A7E00B51FA0 /* AAPLPlayer.h */,
+				11D1E1081ABA2A7E00B51FA0 /* AAPLPlayer.m */,
+				11D1E10A1ABA31AF00B51FA0 /* AAPLMinmaxStrategy.h */,
+				11D1E10B1ABA31AF00B51FA0 /* AAPLMinmaxStrategy.m */,
+			);
+			name = "Game Model";
+			sourceTree = "<group>";
+		};
+		11D1E0D31AB9EC7200B51FA0 = {
+			isa = PBXGroup;
+			children = (
+				3E70696F1B1D751D00246648 /* README.md */,
+				11D1E0DE1AB9EC7200B51FA0 /* FourInARow */,
+				11D1E0F81AB9EC7200B51FA0 /* FourInARowTests */,
+				11D1E0DD1AB9EC7200B51FA0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		11D1E0DD1AB9EC7200B51FA0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				11D1E0DC1AB9EC7200B51FA0 /* FourInARow.app */,
+				11D1E0F51AB9EC7200B51FA0 /* FourInARowTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		11D1E0DE1AB9EC7200B51FA0 /* FourInARow */ = {
+			isa = PBXGroup;
+			children = (
+				11D1E0E21AB9EC7200B51FA0 /* AAPLAppDelegate.h */,
+				11D1E0E31AB9EC7200B51FA0 /* AAPLAppDelegate.m */,
+				11D1E0E51AB9EC7200B51FA0 /* AAPLViewController.h */,
+				11D1E0E61AB9EC7200B51FA0 /* AAPLViewController.m */,
+				118A92E01B166E92000C09B6 /* Game Model */,
+				11D1E0E81AB9EC7200B51FA0 /* Main.storyboard */,
+				11D1E0EB1AB9EC7200B51FA0 /* Images.xcassets */,
+				11D1E0ED1AB9EC7200B51FA0 /* LaunchScreen.xib */,
+				11D1E0F01AB9EC7200B51FA0 /* Info.plist */,
+				11D1E0DF1AB9EC7200B51FA0 /* Supporting Files */,
+			);
+			path = FourInARow;
+			sourceTree = "<group>";
+		};
+		11D1E0DF1AB9EC7200B51FA0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				11D1E0E01AB9EC7200B51FA0 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		11D1E0F81AB9EC7200B51FA0 /* FourInARowTests */ = {
+			isa = PBXGroup;
+			children = (
+				11D1E0F91AB9EC7200B51FA0 /* FourInARowTests.m */,
+				11D1E0FB1AB9EC7200B51FA0 /* Info.plist */,
+			);
+			path = FourInARowTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		11D1E0DB1AB9EC7200B51FA0 /* FourInARow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11D1E0FE1AB9EC7200B51FA0 /* Build configuration list for PBXNativeTarget "FourInARow" */;
+			buildPhases = (
+				11D1E0D81AB9EC7200B51FA0 /* Sources */,
+				11D1E0D91AB9EC7200B51FA0 /* Frameworks */,
+				11D1E0DA1AB9EC7200B51FA0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FourInARow;
+			productName = Connect;
+			productReference = 11D1E0DC1AB9EC7200B51FA0 /* FourInARow.app */;
+			productType = "com.apple.product-type.application";
+		};
+		11D1E0F41AB9EC7200B51FA0 /* FourInARowTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11D1E1011AB9EC7200B51FA0 /* Build configuration list for PBXNativeTarget "FourInARowTests" */;
+			buildPhases = (
+				11D1E0F11AB9EC7200B51FA0 /* Sources */,
+				11D1E0F21AB9EC7200B51FA0 /* Frameworks */,
+				11D1E0F31AB9EC7200B51FA0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				11D1E0F71AB9EC7200B51FA0 /* PBXTargetDependency */,
+			);
+			name = FourInARowTests;
+			productName = ConnectTests;
+			productReference = 11D1E0F51AB9EC7200B51FA0 /* FourInARowTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		11D1E0D41AB9EC7200B51FA0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = Apple;
+				TargetAttributes = {
+					11D1E0DB1AB9EC7200B51FA0 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					11D1E0F41AB9EC7200B51FA0 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 11D1E0DB1AB9EC7200B51FA0;
+					};
+				};
+			};
+			buildConfigurationList = 11D1E0D71AB9EC7200B51FA0 /* Build configuration list for PBXProject "FourInARow" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 11D1E0D31AB9EC7200B51FA0;
+			productRefGroup = 11D1E0DD1AB9EC7200B51FA0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				11D1E0DB1AB9EC7200B51FA0 /* FourInARow */,
+				11D1E0F41AB9EC7200B51FA0 /* FourInARowTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		11D1E0DA1AB9EC7200B51FA0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11D1E0EA1AB9EC7200B51FA0 /* Main.storyboard in Resources */,
+				11D1E0EF1AB9EC7200B51FA0 /* LaunchScreen.xib in Resources */,
+				11D1E0EC1AB9EC7200B51FA0 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11D1E0F31AB9EC7200B51FA0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		11D1E0D81AB9EC7200B51FA0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11D1E0E71AB9EC7200B51FA0 /* AAPLViewController.m in Sources */,
+				11D1E0E41AB9EC7200B51FA0 /* AAPLAppDelegate.m in Sources */,
+				11D1E1061AB9ECA900B51FA0 /* AAPLBoard.m in Sources */,
+				11D1E0E11AB9EC7200B51FA0 /* main.m in Sources */,
+				11D1E10C1ABA31AF00B51FA0 /* AAPLMinmaxStrategy.m in Sources */,
+				11D1E1091ABA2A7E00B51FA0 /* AAPLPlayer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11D1E0F11AB9EC7200B51FA0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11D1E0FA1AB9EC7200B51FA0 /* FourInARowTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		11D1E0F71AB9EC7200B51FA0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 11D1E0DB1AB9EC7200B51FA0 /* FourInARow */;
+			targetProxy = 11D1E0F61AB9EC7200B51FA0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		11D1E0E81AB9EC7200B51FA0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				11D1E0E91AB9EC7200B51FA0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		11D1E0ED1AB9EC7200B51FA0 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				11D1E0EE1AB9EC7200B51FA0 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		11D1E0FC1AB9EC7200B51FA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		11D1E0FD1AB9EC7200B51FA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		11D1E0FF1AB9EC7200B51FA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "$(SRCROOT)/FourInARow/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		11D1E1001AB9EC7200B51FA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "$(SRCROOT)/FourInARow/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		11D1E1021AB9EC7200B51FA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FourInARowTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FourInARow.app/FourInARow";
+			};
+			name = Debug;
+		};
+		11D1E1031AB9EC7200B51FA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FourInARowTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FourInARow.app/FourInARow";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		11D1E0D71AB9EC7200B51FA0 /* Build configuration list for PBXProject "FourInARow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11D1E0FC1AB9EC7200B51FA0 /* Debug */,
+				11D1E0FD1AB9EC7200B51FA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		11D1E0FE1AB9EC7200B51FA0 /* Build configuration list for PBXNativeTarget "FourInARow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11D1E0FF1AB9EC7200B51FA0 /* Debug */,
+				11D1E1001AB9EC7200B51FA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		11D1E1011AB9EC7200B51FA0 /* Build configuration list for PBXNativeTarget "FourInARowTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11D1E1021AB9EC7200B51FA0 /* Debug */,
+				11D1E1031AB9EC7200B51FA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 11D1E0D41AB9EC7200B51FA0 /* Project object */;
+}

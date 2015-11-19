@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9019"/>
+    </dependencies>
+    <scenes>
+        <!--Activity Rings-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller identifier="mainController" title="Activity Rings" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Activity_Rings">
+                    <items>
+                        <group width="1" height="1" alignment="left" layout="vertical" id="zO5-JP-1Om">
+                            <items>
+                                <label alignment="left" text="Active energy burned:" numberOfLines="0" id="sa6-01-NdI"/>
+                                <label alignment="center" text="0" id="XQa-Ja-Wtu"/>
+                                <button width="1" alignment="left" verticalAlignment="bottom" title="Begin Workout" id="Qcm-UG-5RR">
+                                    <connections>
+                                        <action selector="toggleWorkout" destination="AgC-eL-Hgc" id="07N-X0-AJM"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="activeEnergyBurnedLabel" destination="XQa-Ja-Wtu" id="fvs-OH-6QO"/>
+                        <outlet property="workoutButton" destination="Qcm-UG-5RR" id="X7j-Ab-4dG"/>
+                    </connections>
+                </controller>
+            </objects>
+        </scene>
+    </scenes>
+</document>

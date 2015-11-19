@@ -39,7 +39,9 @@
         // Create an Product object to store its category, title, and identifier properties
         item = [[Product alloc] initWithCategory:dictionary[@"category"]
                                            title:dictionary[@"title"]
-                               productIdentifier:dictionary[@"identifier"]];
+                               productIdentifier:dictionary[@"identifier"]
+                                   campaignToken:dictionary[@"campaignToken"]
+                                   providerToken:dictionary[@"providerToken"]];
         
         // Keep track of all the products
         [self.myProducts addObject:item];
@@ -78,14 +80,16 @@
 }
 
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"productID" forIndexPath:indexPath];
-    
     Product *item = (Product *)(self.myProducts)[indexPath.section];
     cell.textLabel.text = item.title;
-    
-    return cell;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [tableView dequeueReusableCellWithIdentifier:@"productID" forIndexPath:indexPath];
 }
 
 
@@ -97,7 +101,16 @@
     Product *item = (Product *)(self.myProducts)[indexPath.section];
     
     // Create a product dictionary using the selected product's iTunes identifer
-    NSDictionary* parametersDict = @{SKStoreProductParameterITunesItemIdentifier: @([item.productID intValue])};
+    NSMutableDictionary* parametersDict = [[NSMutableDictionary alloc] init];
+    
+    [parametersDict setValue:@((item.productID).intValue) forKey:SKStoreProductParameterITunesItemIdentifier];
+    
+    // Campaign token and provider token are optional parameters to support campaign tracking in App Analytics
+    if([item.category isEqualToString:@"APPS"] && item.campaignToken != nil && item.providerToken != nil)
+    {
+        [parametersDict setValue:item.campaignToken forKey:SKStoreProductParameterCampaignToken];
+        [parametersDict setValue:item.providerToken forKey:SKStoreProductParameterProviderToken];
+    }
     
     // Create a store product view controller
     SKStoreProductViewController* storeProductViewController = [[SKStoreProductViewController alloc] init];
@@ -113,7 +126,7 @@
          }
          else
          {
-             NSLog(@"Error message: %@",[error localizedDescription]);
+             NSLog(@"Error message: %@",error.localizedDescription);
          }
      }];
 }

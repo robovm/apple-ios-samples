@@ -15,10 +15,10 @@ A basic Photos-like app which introduces the Photos framework.
 
 ## Build Requirements
 
-iOS 8 SDK
+Xcode 7.1 and iOS 9.1 SDK or later
 
 ## Runtime Requirements
 
-iOS 8 or later
+iOS 9.1 or later
 
-Copyright (C) 2014 Apple Inc. All rights reserved.
+Copyright (C) 2015 Apple Inc. All rights reserved.

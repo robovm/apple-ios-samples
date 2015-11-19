@@ -68,8 +68,7 @@
 }
 
 
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     MyModel *model = (self.products)[indexPath.section];
     NSArray *productRequestResponse = model.elements;
@@ -77,21 +76,33 @@
     
     if ([model.name isEqualToString:@"AVAILABLE PRODUCTS"])
     {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"availableProductID" forIndexPath:indexPath];
         SKProduct *aProduct = productRequestResponse[indexPath.row];
         // Show the localized title of the product
         cell.textLabel.text = aProduct.localizedTitle;
         // Show the product's price in the locale and currency returned by the App Store
-        cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ %@",[aProduct.priceLocale objectForKey:NSLocaleCurrencySymbol],[aProduct price]];
-        return cell;
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ %@",[aProduct.priceLocale objectForKey:NSLocaleCurrencySymbol],aProduct.price];
     }
     else
     {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"invalidIdentifierID" forIndexPath:indexPath];
         cell.textLabel.text = productRequestResponse[indexPath.row];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.textLabel.textColor = [UIColor grayColor];
-        return cell;
+    }
+}
+
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    MyModel *model = (self.products)[indexPath.section];
+    
+    if ([model.name isEqualToString:@"AVAILABLE PRODUCTS"])
+    {
+        return [tableView dequeueReusableCellWithIdentifier:@"availableProductID" forIndexPath:indexPath];;
+    }
+    else
+    {
+        return [tableView dequeueReusableCellWithIdentifier:@"invalidIdentifierID" forIndexPath:indexPath];
     }
 }
 

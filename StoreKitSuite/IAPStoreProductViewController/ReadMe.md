@@ -14,17 +14,19 @@ For instance, the URL link for iBooks is https://itunes.apple.com/us/app/ibooks/
 
 
 ## Build Requirements
-iOS SDK 8.0 or later
+Xcode 7.0, iOS SDK 9.0 or later
 
 
 ## Runtime Requirements
-iOS 8.0 or later
+iOS 9.0 or later
 
 
 ## Changes from Previous Versions
+3.0 - Added SKStoreProductParameterCampaignToken, SKStoreProductParameterProviderToken as optional parameters to Product. StoreProductViewController now recognizes if the product is an app and if campaign parameters are provided the StoreProductViewController is loaded appropriately.
+
 2.0 - Cleaned up code.
 
 1.0 - First Version
 
 
-Copyright (C) 2015-2014 Apple Inc. All rights reserved.
+Copyright (C) 2014-2015 Apple Inc. All rights reserved.

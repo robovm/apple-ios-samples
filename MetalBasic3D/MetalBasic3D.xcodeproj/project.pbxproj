@@ -7,13 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6218D85C19AFB63A005BC8AB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6218D85B19AFB63A005BC8AB /* LaunchScreen.xib */; };
-		622A9B5F19A97B0A007F8120 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 622A9B5E19A97B0A007F8120 /* Main.storyboard */; };
+		3A21792D1BCC5BD00073FB40 /* AAPLRenderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 626C60E71932F165007A3E00 /* AAPLRenderer.mm */; };
+		3A21792E1BCC5BDD0073FB40 /* AAPLTransforms.mm in Sources */ = {isa = PBXBuildFile; fileRef = 626C60EA1932F165007A3E00 /* AAPLTransforms.mm */; };
+		3A21792F1BCC63F90073FB40 /* shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 623F27DB19340FA2000FA88C /* shaders.metal */; };
+		3A2179311BCC652A0073FB40 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2179301BCC652A0073FB40 /* main.m */; };
+		3A2179351BCC65370073FB40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A2179331BCC65370073FB40 /* Main.storyboard */; };
+		3A2179371BCC653D0073FB40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A2179361BCC653D0073FB40 /* Assets.xcassets */; };
+		3A59133C1BCC46E600890143 /* AAPLAppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A59133A1BCC46E600890143 /* AAPLAppDelegate.h */; };
+		3A59133D1BCC46E600890143 /* AAPLAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3A59133B1BCC46E600890143 /* AAPLAppDelegate.mm */; };
+		3A5913451BCC47C000890143 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A5913441BCC47C000890143 /* Main.storyboard */; };
+		3A5913491BCC47E200890143 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A5913461BCC47E200890143 /* Images.xcassets */; };
+		3A59134A1BCC47E200890143 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A5913471BCC47E200890143 /* LaunchScreen.xib */; };
+		3A59134B1BCC47E200890143 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5913481BCC47E200890143 /* main.m */; };
+		3A59134D1BCC557900890143 /* AAPLViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 626C60EE1932F165007A3E00 /* AAPLViewController.mm */; };
+		3A59134E1BCC55CF00890143 /* AAPLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 626C60EC1932F165007A3E00 /* AAPLView.mm */; };
+		3A5913711BCC565D00890143 /* AAPLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5913701BCC565D00890143 /* AAPLAppDelegate.m */; };
 		623F27DC19340FA2000FA88C /* shaders.metal in Resources */ = {isa = PBXBuildFile; fileRef = 623F27DB19340FA2000FA88C /* shaders.metal */; };
-		626C60C91932F12C007A3E00 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 626C60C81932F12C007A3E00 /* Images.xcassets */; };
-		626C60DF1932F14E007A3E00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 626C60DE1932F14E007A3E00 /* main.m */; };
-		626C60F01932F165007A3E00 /* AAPLAppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 626C60E41932F165007A3E00 /* AAPLAppDelegate.h */; };
-		626C60F11932F165007A3E00 /* AAPLAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 626C60E51932F165007A3E00 /* AAPLAppDelegate.mm */; };
 		626C60F21932F165007A3E00 /* AAPLRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 626C60E61932F165007A3E00 /* AAPLRenderer.h */; };
 		626C60F31932F165007A3E00 /* AAPLRenderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 626C60E71932F165007A3E00 /* AAPLRenderer.mm */; };
 		626C60F41932F165007A3E00 /* AAPLSharedTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 626C60E81932F165007A3E00 /* AAPLSharedTypes.h */; };
@@ -21,22 +30,29 @@
 		626C60F61932F165007A3E00 /* AAPLTransforms.mm in Sources */ = {isa = PBXBuildFile; fileRef = 626C60EA1932F165007A3E00 /* AAPLTransforms.mm */; };
 		626C60F71932F165007A3E00 /* AAPLView.h in Headers */ = {isa = PBXBuildFile; fileRef = 626C60EB1932F165007A3E00 /* AAPLView.h */; };
 		626C60F81932F165007A3E00 /* AAPLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 626C60EC1932F165007A3E00 /* AAPLView.mm */; };
-		626C60F91932F165007A3E00 /* AAPLViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 626C60ED1932F165007A3E00 /* AAPLViewController.h */; };
 		626C60FA1932F165007A3E00 /* AAPLViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 626C60EE1932F165007A3E00 /* AAPLViewController.mm */; };
 		626C61091932F259007A3E00 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 626C61081932F259007A3E00 /* Metal.framework */; };
 		626C610B1932F25E007A3E00 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 626C610A1932F25E007A3E00 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6218D85B19AFB63A005BC8AB /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
-		622A9B5E19A97B0A007F8120 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		3A2179301BCC652A0073FB40 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = OSX/main.m; sourceTree = "<group>"; };
+		3A2179321BCC65310073FB40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = OSX/Info.plist; sourceTree = "<group>"; };
+		3A2179341BCC65370073FB40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = OSX/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3A2179361BCC653D0073FB40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = OSX/Assets.xcassets; sourceTree = "<group>"; };
+		3A5913251BCC43E900890143 /* MetalBasic3D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalBasic3D.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A59133A1BCC46E600890143 /* AAPLAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAPLAppDelegate.h; path = iOS/AAPLAppDelegate.h; sourceTree = "<group>"; };
+		3A59133B1BCC46E600890143 /* AAPLAppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AAPLAppDelegate.mm; path = iOS/AAPLAppDelegate.mm; sourceTree = "<group>"; };
+		3A5913441BCC47C000890143 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = iOS/Main.storyboard; sourceTree = "<group>"; };
+		3A5913461BCC47E200890143 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = iOS/Images.xcassets; sourceTree = "<group>"; };
+		3A5913471BCC47E200890143 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreen.xib; path = iOS/LaunchScreen.xib; sourceTree = "<group>"; };
+		3A5913481BCC47E200890143 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = iOS/main.m; sourceTree = "<group>"; };
+		3A59134C1BCC47ED00890143 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = iOS/Info.plist; sourceTree = "<group>"; };
+		3A59136F1BCC565D00890143 /* AAPLAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAPLAppDelegate.h; path = OSX/AAPLAppDelegate.h; sourceTree = "<group>"; };
+		3A5913701BCC565D00890143 /* AAPLAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AAPLAppDelegate.m; path = OSX/AAPLAppDelegate.m; sourceTree = "<group>"; };
+		3A77F5D91BED77A500F559E4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		623F27DB19340FA2000FA88C /* shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = shaders.metal; sourceTree = "<group>"; };
 		626C60B31932F12C007A3E00 /* MetalBasic3D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalBasic3D.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		626C60B71932F12C007A3E00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		626C60C81932F12C007A3E00 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		626C60DE1932F14E007A3E00 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		626C60E41932F165007A3E00 /* AAPLAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLAppDelegate.h; sourceTree = "<group>"; };
-		626C60E51932F165007A3E00 /* AAPLAppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AAPLAppDelegate.mm; sourceTree = "<group>"; };
 		626C60E61932F165007A3E00 /* AAPLRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLRenderer.h; sourceTree = "<group>"; };
 		626C60E71932F165007A3E00 /* AAPLRenderer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AAPLRenderer.mm; sourceTree = "<group>"; };
 		626C60E81932F165007A3E00 /* AAPLSharedTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLSharedTypes.h; sourceTree = "<group>"; };
@@ -51,6 +67,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3A5913221BCC43E900890143 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		626C60AF1932F12C007A3E00 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -63,6 +86,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A5913391BCC46D200890143 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3A5913441BCC47C000890143 /* Main.storyboard */,
+				3A59133A1BCC46E600890143 /* AAPLAppDelegate.h */,
+				3A59133B1BCC46E600890143 /* AAPLAppDelegate.mm */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		3A59133E1BCC475A00890143 /* OSX */ = {
+			isa = PBXGroup;
+			children = (
+				3A59136F1BCC565D00890143 /* AAPLAppDelegate.h */,
+				3A5913701BCC565D00890143 /* AAPLAppDelegate.m */,
+			);
+			name = OSX;
+			sourceTree = "<group>";
+		};
+		3A5913421BCC477700890143 /* OSX */ = {
+			isa = PBXGroup;
+			children = (
+				3A2179361BCC653D0073FB40 /* Assets.xcassets */,
+				3A2179321BCC65310073FB40 /* Info.plist */,
+				3A2179331BCC65370073FB40 /* Main.storyboard */,
+				3A2179301BCC652A0073FB40 /* main.m */,
+			);
+			name = OSX;
+			sourceTree = "<group>";
+		};
+		3A5913431BCC477D00890143 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3A59134C1BCC47ED00890143 /* Info.plist */,
+				3A5913461BCC47E200890143 /* Images.xcassets */,
+				3A5913471BCC47E200890143 /* LaunchScreen.xib */,
+				3A5913481BCC47E200890143 /* main.m */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
 		622A9BA319A983FC007F8120 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				626C60B31932F12C007A3E00 /* MetalBasic3D.app */,
+				3A5913251BCC43E900890143 /* MetalBasic3D.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -91,6 +156,7 @@
 		626C60B51932F12C007A3E00 /* MetalBasic3D */ = {
 			isa = PBXGroup;
 			children = (
+				3A77F5D91BED77A500F559E4 /* README.md */,
 				629ADF541933EBD100DEFFB1 /* Renderer */,
 				622A9BA319A983FC007F8120 /* Common */,
 				626C60B61932F12C007A3E00 /* Supporting Files */,
@@ -102,10 +168,8 @@
 		626C60B61932F12C007A3E00 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				6218D85B19AFB63A005BC8AB /* LaunchScreen.xib */,
-				626C60C81932F12C007A3E00 /* Images.xcassets */,
-				626C60DE1932F14E007A3E00 /* main.m */,
-				626C60B71932F12C007A3E00 /* Info.plist */,
+				3A5913431BCC477D00890143 /* iOS */,
+				3A5913421BCC477700890143 /* OSX */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -123,13 +187,12 @@
 		629ADF531933EBBC00DEFFB1 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				626C60E41932F165007A3E00 /* AAPLAppDelegate.h */,
-				626C60E51932F165007A3E00 /* AAPLAppDelegate.mm */,
+				3A59133E1BCC475A00890143 /* OSX */,
+				3A5913391BCC46D200890143 /* iOS */,
 				626C60EB1932F165007A3E00 /* AAPLView.h */,
 				626C60EC1932F165007A3E00 /* AAPLView.mm */,
 				626C60ED1932F165007A3E00 /* AAPLViewController.h */,
 				626C60EE1932F165007A3E00 /* AAPLViewController.mm */,
-				622A9B5E19A97B0A007F8120 /* Main.storyboard */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -161,8 +224,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				626C60F01932F165007A3E00 /* AAPLAppDelegate.h in Headers */,
-				626C60F91932F165007A3E00 /* AAPLViewController.h in Headers */,
+				3A59133C1BCC46E600890143 /* AAPLAppDelegate.h in Headers */,
 				626C60F41932F165007A3E00 /* AAPLSharedTypes.h in Headers */,
 				626C60F21932F165007A3E00 /* AAPLRenderer.h in Headers */,
 				626C60F51932F165007A3E00 /* AAPLTransforms.h in Headers */,
@@ -173,9 +235,26 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		626C60B21932F12C007A3E00 /* MetalBasic3D */ = {
+		3A5913241BCC43E900890143 /* MetalBasic3D-OSX */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 626C60D81932F12C007A3E00 /* Build configuration list for PBXNativeTarget "MetalBasic3D" */;
+			buildConfigurationList = 3A5913361BCC43E900890143 /* Build configuration list for PBXNativeTarget "MetalBasic3D-OSX" */;
+			buildPhases = (
+				3A5913211BCC43E900890143 /* Sources */,
+				3A5913221BCC43E900890143 /* Frameworks */,
+				3A5913231BCC43E900890143 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MetalBasic3D-OSX";
+			productName = "MetalBasic3D-OSX";
+			productReference = 3A5913251BCC43E900890143 /* MetalBasic3D.app */;
+			productType = "com.apple.product-type.application";
+		};
+		626C60B21932F12C007A3E00 /* MetalBasic3D-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 626C60D81932F12C007A3E00 /* Build configuration list for PBXNativeTarget "MetalBasic3D-iOS" */;
 			buildPhases = (
 				626C60AE1932F12C007A3E00 /* Sources */,
 				626C60AF1932F12C007A3E00 /* Frameworks */,
@@ -186,7 +265,7 @@
 			);
 			dependencies = (
 			);
-			name = MetalBasic3D;
+			name = "MetalBasic3D-iOS";
 			productName = MetalBasic3D;
 			productReference = 626C60B31932F12C007A3E00 /* MetalBasic3D.app */;
 			productType = "com.apple.product-type.application";
@@ -197,11 +276,11 @@
 		626C60AA1932F12C007A3E00 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Apple Inc";
 				TargetAttributes = {
-					626C60B21932F12C007A3E00 = {
-						DevelopmentTeam = 9JA89QQLNQ;
+					3A5913241BCC43E900890143 = {
+						CreatedOnToolsVersion = 7.0;
 					};
 				};
 			};
@@ -218,42 +297,119 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				626C60B21932F12C007A3E00 /* MetalBasic3D */,
+				3A5913241BCC43E900890143 /* MetalBasic3D-OSX */,
+				626C60B21932F12C007A3E00 /* MetalBasic3D-iOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3A5913231BCC43E900890143 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A2179371BCC653D0073FB40 /* Assets.xcassets in Resources */,
+				3A2179351BCC65370073FB40 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		626C60B11932F12C007A3E00 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6218D85C19AFB63A005BC8AB /* LaunchScreen.xib in Resources */,
-				622A9B5F19A97B0A007F8120 /* Main.storyboard in Resources */,
+				3A5913491BCC47E200890143 /* Images.xcassets in Resources */,
+				3A5913451BCC47C000890143 /* Main.storyboard in Resources */,
 				623F27DC19340FA2000FA88C /* shaders.metal in Resources */,
-				626C60C91932F12C007A3E00 /* Images.xcassets in Resources */,
+				3A59134A1BCC47E200890143 /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3A5913211BCC43E900890143 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A21792F1BCC63F90073FB40 /* shaders.metal in Sources */,
+				3A21792D1BCC5BD00073FB40 /* AAPLRenderer.mm in Sources */,
+				3A21792E1BCC5BDD0073FB40 /* AAPLTransforms.mm in Sources */,
+				3A59134E1BCC55CF00890143 /* AAPLView.mm in Sources */,
+				3A59134D1BCC557900890143 /* AAPLViewController.mm in Sources */,
+				3A2179311BCC652A0073FB40 /* main.m in Sources */,
+				3A5913711BCC565D00890143 /* AAPLAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		626C60AE1932F12C007A3E00 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				626C60F11932F165007A3E00 /* AAPLAppDelegate.mm in Sources */,
 				626C60F81932F165007A3E00 /* AAPLView.mm in Sources */,
 				626C60F31932F165007A3E00 /* AAPLRenderer.mm in Sources */,
+				3A59133D1BCC46E600890143 /* AAPLAppDelegate.mm in Sources */,
 				626C60F61932F165007A3E00 /* AAPLTransforms.mm in Sources */,
 				626C60FA1932F165007A3E00 /* AAPLViewController.mm in Sources */,
-				626C60DF1932F14E007A3E00 /* main.m in Sources */,
+				3A59134B1BCC47E200890143 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		3A2179331BCC65370073FB40 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A2179341BCC65370073FB40 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		3A5913371BCC43E900890143 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					TARGET_OSX,
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MetalBasic3D/OSX//Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.apple.apple-samplecode.MetalBasic3D";
+				PRODUCT_NAME = MetalBasic3D;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		3A5913381BCC43E900890143 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = TARGET_OSX;
+				INFOPLIST_FILE = "MetalBasic3D/OSX//Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.apple.apple-samplecode.MetalBasic3D";
+				PRODUCT_NAME = MetalBasic3D;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		626C60D61932F12C007A3E00 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -275,6 +431,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -289,7 +446,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -327,7 +485,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TOOLCHAINS = Default;
@@ -344,10 +503,16 @@
 				CLANG_MODULES_AUTOLINK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = MetalBasic3D/Info.plist;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					TARGET_IOS,
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MetalBasic3D/iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.apple.apple-samplecode.$(PRODUCT_NAME)";
+				PRODUCT_NAME = MetalBasic3D;
 				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -360,16 +525,28 @@
 				CLANG_MODULES_AUTOLINK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = MetalBasic3D/Info.plist;
+				INFOPLIST_FILE = MetalBasic3D/iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.apple.apple-samplecode.$(PRODUCT_NAME)";
+				PRODUCT_NAME = MetalBasic3D;
 				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3A5913361BCC43E900890143 /* Build configuration list for PBXNativeTarget "MetalBasic3D-OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A5913371BCC43E900890143 /* Debug */,
+				3A5913381BCC43E900890143 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		626C60AD1932F12C007A3E00 /* Build configuration list for PBXProject "MetalBasic3D" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -379,7 +556,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		626C60D81932F12C007A3E00 /* Build configuration list for PBXNativeTarget "MetalBasic3D" */ = {
+		626C60D81932F12C007A3E00 /* Build configuration list for PBXNativeTarget "MetalBasic3D-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				626C60D91932F12C007A3E00 /* Debug */,

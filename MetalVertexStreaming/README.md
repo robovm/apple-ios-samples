@@ -6,10 +6,10 @@ This sample shows how to stream vertex data between 3 command buffers using one 
 
 ### Build
 
-iOS 8
+iOS 9
 
 ### Runtime
 
-iOS 8, 64 bit devices
+iOS 9, 64 bit devices
 
-Copyright (C) 2014 Apple Inc. All rights reserved.
+Copyright (C) 2014~2015 Apple Inc. All rights reserved.

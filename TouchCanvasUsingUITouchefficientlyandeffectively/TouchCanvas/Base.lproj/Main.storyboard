@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9053" systemVersion="15B22" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3pu-ol-7ZX">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9042"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+    </dependencies>
+    <scenes>
+        <!--Touch Canvas-->
+        <scene sceneID="984-vW-kks">
+            <objects>
+                <viewController id="1fl-Ij-fK1" customClass="ViewController" customModule="TouchCanvas" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4h2-IA-tif"/>
+                        <viewControllerLayoutGuide type="bottom" id="y0f-7p-uuV"/>
+                    </layoutGuides>
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="l3J-kE-Vqx" customClass="CanvasView" customModule="TouchCanvas" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Touch Canvas" id="urh-QX-0ux">
+                        <leftBarButtonItems>
+                            <barButtonItem id="89a-qb-NJP">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="58x-qE-zXG">
+                                    <rect key="frame" x="20" y="7" width="46" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <animations/>
+                                    <state key="normal" title="Debug"/>
+                                    <connections>
+                                        <action selector="toggleDebugDrawing:" destination="1fl-Ij-fK1" eventType="touchUpInside" id="Sa3-gr-UId"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                            <barButtonItem id="piu-OG-cVi">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2yf-Ag-uEP">
+                                    <rect key="frame" x="74" y="7" width="51" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <animations/>
+                                    <state key="normal" title="Precise"/>
+                                    <connections>
+                                        <action selector="toggleUsePreciseLocations:" destination="1fl-Ij-fK1" eventType="touchUpInside" id="bla-0G-gQx"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                        </leftBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="Axn-KO-XMW">
+                            <connections>
+                                <action selector="clearView:" destination="1fl-Ij-fK1" id="PoK-f4-Igx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qCw-Nu-BUt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1647" y="423"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6oe-Q5-Z99">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3pu-ol-7ZX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mn5-Qr-252">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="1fl-Ij-fK1" kind="relationship" relationship="rootViewController" id="2AG-ft-4Zo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dIr-8x-wol" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="835" y="423"/>
+        </scene>
+    </scenes>
+</document>

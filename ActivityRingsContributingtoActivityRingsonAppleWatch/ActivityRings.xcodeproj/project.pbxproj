@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		167FB2A81BF3CB78004905E0 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 167FB2A71BF3CB78004905E0 /* HealthKit.framework */; };
+		CB99A0D41BE08F0B00AF8E3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB99A0D31BE08F0B00AF8E3A /* AppDelegate.swift */; };
+		CB99A0D61BE08F0B00AF8E3A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB99A0D51BE08F0B00AF8E3A /* ViewController.swift */; };
+		CB99A0D91BE08F0B00AF8E3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB99A0D71BE08F0B00AF8E3A /* Main.storyboard */; };
+		CB99A0DB1BE08F0B00AF8E3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB99A0DA1BE08F0B00AF8E3A /* Assets.xcassets */; };
+		CB99A0DE1BE08F0B00AF8E3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB99A0DC1BE08F0B00AF8E3A /* LaunchScreen.storyboard */; };
+		CB99A0E31BE08F0B00AF8E3A /* Activity Rings.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = CB99A0E21BE08F0B00AF8E3A /* Activity Rings.app */; };
+		CB99A0E91BE08F0B00AF8E3A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB99A0E71BE08F0B00AF8E3A /* Interface.storyboard */; };
+		CB99A0EB1BE08F0B00AF8E3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB99A0EA1BE08F0B00AF8E3A /* Assets.xcassets */; };
+		CB99A0F21BE08F0B00AF8E3A /* Activity Rings.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CB99A0F11BE08F0B00AF8E3A /* Activity Rings.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CB99A0F71BE08F0B00AF8E3A /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB99A0F61BE08F0B00AF8E3A /* InterfaceController.swift */; };
+		CB99A0F91BE08F0B00AF8E3A /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB99A0F81BE08F0B00AF8E3A /* ExtensionDelegate.swift */; };
+		CB99A0FB1BE08F0B00AF8E3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB99A0FA1BE08F0B00AF8E3A /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CB99A0E41BE08F0B00AF8E3A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB99A0C81BE08F0B00AF8E3A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB99A0E11BE08F0B00AF8E3A;
+			remoteInfo = "ActivityRings WatchKit App";
+		};
+		CB99A0F31BE08F0B00AF8E3A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB99A0C81BE08F0B00AF8E3A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB99A0F01BE08F0B00AF8E3A;
+			remoteInfo = "ActivityRings WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CB99A1021BE08F0B00AF8E3A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				CB99A0F21BE08F0B00AF8E3A /* Activity Rings.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB99A1061BE08F0B00AF8E3A /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				CB99A0E31BE08F0B00AF8E3A /* Activity Rings.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		167FB2A61BF3CB78004905E0 /* ActivityRings.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ActivityRings.entitlements; sourceTree = "<group>"; };
+		167FB2A71BF3CB78004905E0 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		167FB2A91BF3CC11004905E0 /* ActivityRings.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ActivityRings.entitlements; sourceTree = "<group>"; };
+		CB6F7E3E1BE7BA0300AD81C8 /* ReadMe.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
+		CB99A0D01BE08F0B00AF8E3A /* Activity Rings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Activity Rings.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB99A0D31BE08F0B00AF8E3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CB99A0D51BE08F0B00AF8E3A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CB99A0D81BE08F0B00AF8E3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CB99A0DA1BE08F0B00AF8E3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CB99A0DD1BE08F0B00AF8E3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CB99A0DF1BE08F0B00AF8E3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB99A0E21BE08F0B00AF8E3A /* Activity Rings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Activity Rings.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB99A0E81BE08F0B00AF8E3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		CB99A0EA1BE08F0B00AF8E3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CB99A0EC1BE08F0B00AF8E3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB99A0F11BE08F0B00AF8E3A /* Activity Rings.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Activity Rings.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB99A0F61BE08F0B00AF8E3A /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		CB99A0F81BE08F0B00AF8E3A /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		CB99A0FA1BE08F0B00AF8E3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CB99A0FC1BE08F0B00AF8E3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CB99A0CD1BE08F0B00AF8E3A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				167FB2A81BF3CB78004905E0 /* HealthKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB99A0EE1BE08F0B00AF8E3A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CB6F7E3D1BE7B83E00AD81C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				167FB2A71BF3CB78004905E0 /* HealthKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB99A0C71BE08F0B00AF8E3A = {
+			isa = PBXGroup;
+			children = (
+				CB6F7E3E1BE7BA0300AD81C8 /* ReadMe.md */,
+				CB99A0D21BE08F0B00AF8E3A /* ActivityRings */,
+				CB99A0E61BE08F0B00AF8E3A /* ActivityRings WatchKit App */,
+				CB99A0F51BE08F0B00AF8E3A /* ActivityRings WatchKit Extension */,
+				CB6F7E3D1BE7B83E00AD81C8 /* Frameworks */,
+				CB99A0D11BE08F0B00AF8E3A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CB99A0D11BE08F0B00AF8E3A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB99A0D01BE08F0B00AF8E3A /* Activity Rings.app */,
+				CB99A0E21BE08F0B00AF8E3A /* Activity Rings.app */,
+				CB99A0F11BE08F0B00AF8E3A /* Activity Rings.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CB99A0D21BE08F0B00AF8E3A /* ActivityRings */ = {
+			isa = PBXGroup;
+			children = (
+				167FB2A61BF3CB78004905E0 /* ActivityRings.entitlements */,
+				CB99A0D31BE08F0B00AF8E3A /* AppDelegate.swift */,
+				CB99A0D51BE08F0B00AF8E3A /* ViewController.swift */,
+				CB99A0D71BE08F0B00AF8E3A /* Main.storyboard */,
+				CB99A0DA1BE08F0B00AF8E3A /* Assets.xcassets */,
+				CB99A0DC1BE08F0B00AF8E3A /* LaunchScreen.storyboard */,
+				CB99A0DF1BE08F0B00AF8E3A /* Info.plist */,
+			);
+			path = ActivityRings;
+			sourceTree = "<group>";
+		};
+		CB99A0E61BE08F0B00AF8E3A /* ActivityRings WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				CB99A0E71BE08F0B00AF8E3A /* Interface.storyboard */,
+				CB99A0EA1BE08F0B00AF8E3A /* Assets.xcassets */,
+				CB99A0EC1BE08F0B00AF8E3A /* Info.plist */,
+			);
+			path = "ActivityRings WatchKit App";
+			sourceTree = "<group>";
+		};
+		CB99A0F51BE08F0B00AF8E3A /* ActivityRings WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				167FB2A91BF3CC11004905E0 /* ActivityRings.entitlements */,
+				CB99A0F61BE08F0B00AF8E3A /* InterfaceController.swift */,
+				CB99A0F81BE08F0B00AF8E3A /* ExtensionDelegate.swift */,
+				CB99A0FA1BE08F0B00AF8E3A /* Assets.xcassets */,
+				CB99A0FC1BE08F0B00AF8E3A /* Info.plist */,
+			);
+			path = "ActivityRings WatchKit Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CB99A0CF1BE08F0B00AF8E3A /* ActivityRings */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB99A1071BE08F0B00AF8E3A /* Build configuration list for PBXNativeTarget "ActivityRings" */;
+			buildPhases = (
+				CB99A0CC1BE08F0B00AF8E3A /* Sources */,
+				CB99A0CD1BE08F0B00AF8E3A /* Frameworks */,
+				CB99A0CE1BE08F0B00AF8E3A /* Resources */,
+				CB99A1061BE08F0B00AF8E3A /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CB99A0E51BE08F0B00AF8E3A /* PBXTargetDependency */,
+			);
+			name = ActivityRings;
+			productName = ActivityRings;
+			productReference = CB99A0D01BE08F0B00AF8E3A /* Activity Rings.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CB99A0E11BE08F0B00AF8E3A /* ActivityRings WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB99A1031BE08F0B00AF8E3A /* Build configuration list for PBXNativeTarget "ActivityRings WatchKit App" */;
+			buildPhases = (
+				CB99A0E01BE08F0B00AF8E3A /* Resources */,
+				CB99A1021BE08F0B00AF8E3A /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CB99A0F41BE08F0B00AF8E3A /* PBXTargetDependency */,
+			);
+			name = "ActivityRings WatchKit App";
+			productName = "ActivityRings WatchKit App";
+			productReference = CB99A0E21BE08F0B00AF8E3A /* Activity Rings.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		CB99A0F01BE08F0B00AF8E3A /* ActivityRings WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB99A0FF1BE08F0B00AF8E3A /* Build configuration list for PBXNativeTarget "ActivityRings WatchKit Extension" */;
+			buildPhases = (
+				CB99A0ED1BE08F0B00AF8E3A /* Sources */,
+				CB99A0EE1BE08F0B00AF8E3A /* Frameworks */,
+				CB99A0EF1BE08F0B00AF8E3A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ActivityRings WatchKit Extension";
+			productName = "ActivityRings WatchKit Extension";
+			productReference = CB99A0F11BE08F0B00AF8E3A /* Activity Rings.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CB99A0C81BE08F0B00AF8E3A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Apple Inc.";
+				TargetAttributes = {
+					CB99A0CF1BE08F0B00AF8E3A = {
+						CreatedOnToolsVersion = 7.1;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
+					};
+					CB99A0E11BE08F0B00AF8E3A = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					CB99A0F01BE08F0B00AF8E3A = {
+						CreatedOnToolsVersion = 7.1;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = CB99A0CB1BE08F0B00AF8E3A /* Build configuration list for PBXProject "ActivityRings" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CB99A0C71BE08F0B00AF8E3A;
+			productRefGroup = CB99A0D11BE08F0B00AF8E3A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CB99A0CF1BE08F0B00AF8E3A /* ActivityRings */,
+				CB99A0E11BE08F0B00AF8E3A /* ActivityRings WatchKit App */,
+				CB99A0F01BE08F0B00AF8E3A /* ActivityRings WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CB99A0CE1BE08F0B00AF8E3A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB99A0DE1BE08F0B00AF8E3A /* LaunchScreen.storyboard in Resources */,
+				CB99A0DB1BE08F0B00AF8E3A /* Assets.xcassets in Resources */,
+				CB99A0D91BE08F0B00AF8E3A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB99A0E01BE08F0B00AF8E3A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB99A0EB1BE08F0B00AF8E3A /* Assets.xcassets in Resources */,
+				CB99A0E91BE08F0B00AF8E3A /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB99A0EF1BE08F0B00AF8E3A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB99A0FB1BE08F0B00AF8E3A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CB99A0CC1BE08F0B00AF8E3A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB99A0D61BE08F0B00AF8E3A /* ViewController.swift in Sources */,
+				CB99A0D41BE08F0B00AF8E3A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB99A0ED1BE08F0B00AF8E3A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB99A0F91BE08F0B00AF8E3A /* ExtensionDelegate.swift in Sources */,
+				CB99A0F71BE08F0B00AF8E3A /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CB99A0E51BE08F0B00AF8E3A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CB99A0E11BE08F0B00AF8E3A /* ActivityRings WatchKit App */;
+			targetProxy = CB99A0E41BE08F0B00AF8E3A /* PBXContainerItemProxy */;
+		};
+		CB99A0F41BE08F0B00AF8E3A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CB99A0F01BE08F0B00AF8E3A /* ActivityRings WatchKit Extension */;
+			targetProxy = CB99A0F31BE08F0B00AF8E3A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CB99A0D71BE08F0B00AF8E3A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB99A0D81BE08F0B00AF8E3A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CB99A0DC1BE08F0B00AF8E3A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB99A0DD1BE08F0B00AF8E3A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CB99A0E71BE08F0B00AF8E3A /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB99A0E81BE08F0B00AF8E3A /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CB99A0FD1BE08F0B00AF8E3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "Activity Rings";
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CB99A0FE1BE08F0B00AF8E3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "Activity Rings";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CB99A1001BE08F0B00AF8E3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "ActivityRings WatchKit Extension/ActivityRings.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "ActivityRings WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple.sample-code.ActivityRings.watchkitapp.watchkitextension";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		CB99A1011BE08F0B00AF8E3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "ActivityRings WatchKit Extension/ActivityRings.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "ActivityRings WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple.sample-code.ActivityRings.watchkitapp.watchkitextension";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		CB99A1041BE08F0B00AF8E3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = ActivityRings_WatchKit_Extension;
+				INFOPLIST_FILE = "ActivityRings WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple.sample-code.ActivityRings.watchkitapp";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		CB99A1051BE08F0B00AF8E3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = ActivityRings_WatchKit_Extension;
+				INFOPLIST_FILE = "ActivityRings WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple.sample-code.ActivityRings.watchkitapp";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		CB99A1081BE08F0B00AF8E3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ActivityRings/ActivityRings.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = ActivityRings/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple.sample-code.ActivityRings";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		CB99A1091BE08F0B00AF8E3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ActivityRings/ActivityRings.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = ActivityRings/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple.sample-code.ActivityRings";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CB99A0CB1BE08F0B00AF8E3A /* Build configuration list for PBXProject "ActivityRings" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB99A0FD1BE08F0B00AF8E3A /* Debug */,
+				CB99A0FE1BE08F0B00AF8E3A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB99A0FF1BE08F0B00AF8E3A /* Build configuration list for PBXNativeTarget "ActivityRings WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB99A1001BE08F0B00AF8E3A /* Debug */,
+				CB99A1011BE08F0B00AF8E3A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB99A1031BE08F0B00AF8E3A /* Build configuration list for PBXNativeTarget "ActivityRings WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB99A1041BE08F0B00AF8E3A /* Debug */,
+				CB99A1051BE08F0B00AF8E3A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB99A1071BE08F0B00AF8E3A /* Build configuration list for PBXNativeTarget "ActivityRings" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB99A1081BE08F0B00AF8E3A /* Debug */,
+				CB99A1091BE08F0B00AF8E3A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CB99A0C81BE08F0B00AF8E3A /* Project object */;
+}

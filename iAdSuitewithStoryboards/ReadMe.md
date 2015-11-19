@@ -9,7 +9,7 @@ iAdSuite is a set of samples demonstrating how to manage an ADBannerView in many
     By using view controller containment, this sample abstracts the setup demonstrated in BasicBanner to a custom container view controller (BannerViewController). This view controller manages hiding and showing the banner view at the appropriate time, and resizing its contained view controller.
 
 ## SplitNavigationBanner
-    Using the approach demonstrated in ContainerBanner, this sample demonstrates adding an ADBannerView to an application that is based on UINavigationController (iPhone) or UISplitViewController (iPad). This sample replaces the NavigationBanner and SplitViewBanner samples.
+    Using the approach demonstrated in ContainerBanner, this sample demonstrates adding an ADBannerView to an application that is based on UISplitViewController. This sample replaces the NavigationBanner and SplitViewBanner samples.
     
 ## TabbedBanner
     When using a UITabBarController, the banner should appear above the tabs. This sample again builds upon the approach from ContainerBanner, modifying BannerViewController to allow for the existence of multiple instances that share the same ADBannerView.

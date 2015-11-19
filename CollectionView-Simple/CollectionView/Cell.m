@@ -11,7 +11,6 @@ Custom collection view cell for image and its label.
 
 @implementation Cell
 
-
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];

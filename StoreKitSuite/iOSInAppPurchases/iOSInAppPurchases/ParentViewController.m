@@ -154,7 +154,7 @@
 // Update the UI according to the product request notification result
 -(void)handleProductRequestNotification:(NSNotification *)notification
 {
-    StoreManager *productRequestNotification = (StoreManager*)[notification object];
+    StoreManager *productRequestNotification = (StoreManager*)notification.object;
     IAPProductRequestStatus result = (IAPProductRequestStatus)productRequestNotification.status;
     
     if (result == IAPProductRequestResponse)
@@ -173,7 +173,7 @@
 // Update the UI according to the purchase request notification result
 -(void)handlePurchasesNotification:(NSNotification *)notification
 {
-    StoreObserver *purchasesNotification = (StoreObserver *)[notification object];
+    StoreObserver *purchasesNotification = (StoreObserver *)notification.object;
     IAPPurchaseNotificationStatus status = (IAPPurchaseNotificationStatus)purchasesNotification.status;
     
     switch (status)

@@ -14,16 +14,14 @@ A simple view controller that manages a content view
 
 @property (nonatomic, weak) IBOutlet UITextView *textView;
 @property (nonatomic, weak) IBOutlet UILabel *timerLabel;
+@property (nonatomic, strong) NSTimer *timer;
+@property (nonatomic, assign) CFTimeInterval ticks;
 
 @end
 
-
 #pragma mark -
 
-@implementation TextViewController {
-    NSTimer *_timer;
-    CFTimeInterval _ticks;
-}
+@implementation TextViewController
 
 - (instancetype)init {
     self = [super initWithNibName:@"TextViewController" bundle:nil];
@@ -35,7 +33,8 @@ A simple view controller that manages a content view
 }
 
 - (void)dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:BannerViewActionWillBegin object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:BannerViewActionDidFinish object:nil];
 }
 
 - (void)setText:(NSString *)text {
@@ -44,23 +43,23 @@ A simple view controller that manages a content view
 }
 
 - (void)startTimer {
-    if (_timer == nil) {
-        _timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(timerTick:) userInfo:nil repeats:YES];
+    if (self.timer == nil) {
+        self.timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(timerTick:) userInfo:nil repeats:YES];
     }
 }
 
 - (void)stopTimer {
-    [_timer invalidate];
-    _timer = nil;
+    [self.timer invalidate];
+    self.timer = nil;
 }
 
 - (void)timerTick:(NSTimer *)timer {
     // Timers are not guaranteed to tick at the nominal rate specified, so this isn't technically accurate.
     // However, this is just an example to demonstrate how to stop some ongoing activity, so we can live with that inaccuracy.
-    _ticks += 0.1;
-    double seconds = fmod(_ticks, 60.0);
-    double minutes = fmod(trunc(_ticks / 60.0), 60.0);
-    double hours = trunc(_ticks / 3600.0);
+    self.ticks += 0.1;
+    double seconds = fmod(self.ticks, 60.0);
+    double minutes = fmod(trunc(self.ticks / 60.0), 60.0);
+    double hours = trunc(self.ticks / 3600.0);
     self.timerLabel.text = [NSString stringWithFormat:@"%02.0f:%02.0f:%04.1f", hours, minutes, seconds];
 }
 

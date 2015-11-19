@@ -16,16 +16,10 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		28D7ACF80DDB3853001CB0EB /* KMLViewerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* KMLViewerViewController.m */; };
-		533ECC0B11F63EA00067A265 /* KMLViewerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 533ECC0711F63EA00067A265 /* KMLViewerViewController.xib */; };
-		533ECC0C11F63EA00067A265 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 533ECC0911F63EA00067A265 /* MainWindow.xib */; };
 		535BE74414B7C82C00969FF3 /* KML_Sample.kml in Resources */ = {isa = PBXBuildFile; fileRef = 535BE74314B7C82C00969FF3 /* KML_Sample.kml */; };
-		5398E9ED11F640E0002BFB95 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 5398E9E611F640E0002BFB95 /* Icon-72.png */; };
-		5398E9EE11F640E0002BFB95 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 5398E9E711F640E0002BFB95 /* Icon-Small-50.png */; };
-		5398E9EF11F640E0002BFB95 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 5398E9E811F640E0002BFB95 /* Icon-Small.png */; };
-		5398E9F011F640E0002BFB95 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5398E9E911F640E0002BFB95 /* Icon-Small@2x.png */; };
-		5398E9F111F640E0002BFB95 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5398E9EA11F640E0002BFB95 /* Icon.png */; };
-		5398E9F211F640E0002BFB95 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5398E9EB11F640E0002BFB95 /* Icon@2x.png */; };
-		5398E9F311F640E0002BFB95 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 5398E9EC11F640E0002BFB95 /* iTunesArtwork */; };
+		D88278471B94F20400ADFFC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D88278491B94F20400ADFFC3 /* Main.storyboard */; };
+		D8BD72441B964F32003664CD /* Launch.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8BD72421B964F32003664CD /* Launch.xib */; };
+		D8DC65151B879F6A00C7C5C0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8DC65141B879F6A00C7C5C0 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,18 +37,12 @@
 		28D7ACF70DDB3853001CB0EB /* KMLViewerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMLViewerViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* KMLViewer_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMLViewer_Prefix.pch; sourceTree = "<group>"; };
-		533ECC0811F63EA00067A265 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/KMLViewerViewController.xib; sourceTree = "<group>"; };
-		533ECC0A11F63EA00067A265 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		535BE74314B7C82C00969FF3 /* KML_Sample.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = KML_Sample.kml; sourceTree = "<group>"; };
-		5398E9E611F640E0002BFB95 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
-		5398E9E711F640E0002BFB95 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
-		5398E9E811F640E0002BFB95 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
-		5398E9E911F640E0002BFB95 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
-		5398E9EA11F640E0002BFB95 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		5398E9EB11F640E0002BFB95 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
-		5398E9EC11F640E0002BFB95 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
-		53B57E68121C39C0004A1403 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		535BE74314B7C82C00969FF3 /* KML_Sample.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = KML_Sample.kml; path = ../KML_Sample.kml; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* KMLViewer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "KMLViewer-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		D882784A1B94F20E00ADFFC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D882784B1B94F71700ADFFC3 /* ReadMe.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
+		D8BD72431B964F32003664CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/Launch.xib; sourceTree = SOURCE_ROOT; };
+		D8DC65141B879F6A00C7C5C0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +70,9 @@
 				28D7ACF70DDB3853001CB0EB /* KMLViewerViewController.m */,
 				1A4B770811907E0300940A50 /* KMLParser.h */,
 				1A4B770911907E0300940A50 /* KMLParser.m */,
+				D88278491B94F20400ADFFC3 /* Main.storyboard */,
+				D8BD72421B964F32003664CD /* Launch.xib */,
+				D8DC65141B879F6A00C7C5C0 /* Images.xcassets */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -97,35 +88,24 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				53B57E68121C39C0004A1403 /* ReadMe.txt */,
+				D882784B1B94F71700ADFFC3 /* ReadMe.md */,
 				080E96DDFE201D6D7F000001 /* Classes */,
-				29B97315FDCFA39411CA2CEA /* Other Sources */,
-				29B97317FDCFA39411CA2CEA /* Resources */,
+				D8DC65161B87B6EA00C7C5C0 /* KML */,
+				29B97315FDCFA39411CA2CEA /* Supporting Files */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
 		};
-		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+		29B97315FDCFA39411CA2CEA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				32CA4F630368D1EE00C91783 /* KMLViewer_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
-			);
-			name = "Other Sources";
-			sourceTree = "<group>";
-		};
-		29B97317FDCFA39411CA2CEA /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				5398E9E511F640E0002BFB95 /* images */,
-				533ECC0711F63EA00067A265 /* KMLViewerViewController.xib */,
-				533ECC0911F63EA00067A265 /* MainWindow.xib */,
+				32CA4F630368D1EE00C91783 /* KMLViewer_Prefix.pch */,
 				8D1107310486CEB800E47090 /* KMLViewer-Info.plist */,
-				535BE74314B7C82C00969FF3 /* KML_Sample.kml */,
 			);
-			name = Resources;
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
@@ -140,18 +120,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5398E9E511F640E0002BFB95 /* images */ = {
+		D8DC65161B87B6EA00C7C5C0 /* KML */ = {
 			isa = PBXGroup;
 			children = (
-				5398E9E611F640E0002BFB95 /* Icon-72.png */,
-				5398E9E711F640E0002BFB95 /* Icon-Small-50.png */,
-				5398E9E811F640E0002BFB95 /* Icon-Small.png */,
-				5398E9E911F640E0002BFB95 /* Icon-Small@2x.png */,
-				5398E9EA11F640E0002BFB95 /* Icon.png */,
-				5398E9EB11F640E0002BFB95 /* Icon@2x.png */,
-				5398E9EC11F640E0002BFB95 /* iTunesArtwork */,
+				535BE74314B7C82C00969FF3 /* KML_Sample.kml */,
 			);
-			path = images;
+			name = KML;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,7 +155,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "KMLViewer" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -192,6 +167,7 @@
 				French,
 				German,
 				en,
+				Base,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
 			projectDirPath = "";
@@ -207,15 +183,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				533ECC0B11F63EA00067A265 /* KMLViewerViewController.xib in Resources */,
-				533ECC0C11F63EA00067A265 /* MainWindow.xib in Resources */,
-				5398E9ED11F640E0002BFB95 /* Icon-72.png in Resources */,
-				5398E9EE11F640E0002BFB95 /* Icon-Small-50.png in Resources */,
-				5398E9EF11F640E0002BFB95 /* Icon-Small.png in Resources */,
-				5398E9F011F640E0002BFB95 /* Icon-Small@2x.png in Resources */,
-				5398E9F111F640E0002BFB95 /* Icon.png in Resources */,
-				5398E9F211F640E0002BFB95 /* Icon@2x.png in Resources */,
-				5398E9F311F640E0002BFB95 /* iTunesArtwork in Resources */,
+				D8DC65151B879F6A00C7C5C0 /* Images.xcassets in Resources */,
+				D88278471B94F20400ADFFC3 /* Main.storyboard in Resources */,
+				D8BD72441B964F32003664CD /* Launch.xib in Resources */,
 				535BE74414B7C82C00969FF3 /* KML_Sample.kml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,20 +207,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		533ECC0711F63EA00067A265 /* KMLViewerViewController.xib */ = {
+		D88278491B94F20400ADFFC3 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				533ECC0811F63EA00067A265 /* en */,
+				D882784A1B94F20E00ADFFC3 /* Base */,
 			);
-			name = KMLViewerViewController.xib;
+			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
-		533ECC0911F63EA00067A265 /* MainWindow.xib */ = {
+		D8BD72421B964F32003664CD /* Launch.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				533ECC0A11F63EA00067A265 /* en */,
+				D8BD72431B964F32003664CD /* Base */,
 			);
-			name = MainWindow.xib;
+			name = Launch.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -260,17 +231,28 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					"$(ARCHS_STANDARD_32_BIT)",
-				);
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = KMLViewer_Prefix.pch;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
 				INFOPLIST_FILE = "KMLViewer-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = KMLViewer;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -278,15 +260,26 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					"$(ARCHS_STANDARD_32_BIT)",
-				);
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = KMLViewer_Prefix.pch;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
 				INFOPLIST_FILE = "KMLViewer-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = KMLViewer;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -294,12 +287,13 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -307,12 +301,11 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 			};

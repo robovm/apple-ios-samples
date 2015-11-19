@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB4AC7EB1B6C394E0072320B /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB4AC7EA1B6C394E0072320B /* Launch Screen.xib */; };
 		EB9C922B196B37A20009D041 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EB9C9229196B37A20009D041 /* InfoPlist.strings */; };
 		EB9C922D196B37A20009D041 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9C922C196B37A20009D041 /* main.m */; };
 		EB9C9231196B37A20009D041 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9C9230196B37A20009D041 /* AppDelegate.m */; };
@@ -18,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EB4AC7E51B6C38C00072320B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/StoreProductViewController.storyboard; sourceTree = "<group>"; };
+		EB4AC7E91B6C38FD0072320B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/StoreProductViewController.strings; sourceTree = "<group>"; };
+		EB4AC7EA1B6C394E0072320B /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		EB866F081AA67B6E00DD6CB5 /* ReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
 		EB9C921D196B37A20009D041 /* IAPStoreProductViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IAPStoreProductViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB9C9228196B37A20009D041 /* IAPStoreProductViewController-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IAPStoreProductViewController-Info.plist"; sourceTree = "<group>"; };
@@ -27,7 +31,6 @@
 		EB9C922F196B37A20009D041 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EB9C9230196B37A20009D041 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		EB9C9232196B37A20009D041 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		EBD87A251975B30E007E5E98 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/StoreProductViewController.storyboard; sourceTree = "<group>"; };
 		EBF30CEE196B4CEA0055AF16 /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
 		EBF30CEF196B4CEA0055AF16 /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
 		EBF30CF1196B4CF70055AF16 /* StoreProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreProductViewController.h; sourceTree = "<group>"; };
@@ -73,6 +76,7 @@
 				EBF30CF1196B4CF70055AF16 /* StoreProductViewController.h */,
 				EBF30CF2196B4CF70055AF16 /* StoreProductViewController.m */,
 				EB9C9232196B37A20009D041 /* Images.xcassets */,
+				EB4AC7EA1B6C394E0072320B /* Launch Screen.xib */,
 				EB9C9227196B37A20009D041 /* Supporting Files */,
 			);
 			path = IAPStoreProductViewController;
@@ -117,7 +121,7 @@
 		EB9C9215196B37A10009D041 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = EB9C9218196B37A10009D041 /* Build configuration list for PBXProject "IAPStoreProductViewController" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -125,6 +129,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = EB9C9214196B37A10009D041;
 			productRefGroup = EB9C921E196B37A20009D041 /* Products */;
@@ -145,6 +150,7 @@
 				EBD87A241975B30E007E5E98 /* StoreProductViewController.storyboard in Resources */,
 				EB9C922B196B37A20009D041 /* InfoPlist.strings in Resources */,
 				EB9C9233196B37A20009D041 /* Images.xcassets in Resources */,
+				EB4AC7EB1B6C394E0072320B /* Launch Screen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,7 +182,8 @@
 		EBD87A261975B30E007E5E98 /* StoreProductViewController.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				EBD87A251975B30E007E5E98 /* en */,
+				EB4AC7E51B6C38C00072320B /* Base */,
+				EB4AC7E91B6C38FD0072320B /* en */,
 			);
 			name = StoreProductViewController.storyboard;
 			sourceTree = "<group>";
@@ -202,6 +209,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -216,7 +224,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -248,7 +256,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -262,6 +270,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IAPStoreProductViewController/IAPStoreProductViewController-Prefix.pch";
 				INFOPLIST_FILE = "IAPStoreProductViewController/IAPStoreProductViewController-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -276,6 +286,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IAPStoreProductViewController/IAPStoreProductViewController-Prefix.pch";
 				INFOPLIST_FILE = "IAPStoreProductViewController/IAPStoreProductViewController-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

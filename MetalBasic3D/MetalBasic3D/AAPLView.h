@@ -4,15 +4,25 @@
  
  Abstract:
  View for Metal Sample Code. Manages screen drawable framebuffers and expects a delegate to repond to render commands to perform drawing.
-*/
+ */
 
 #import <QuartzCore/CAMetalLayer.h>
 #import <Metal/Metal.h>
+
+#ifdef TARGET_IOS
 #import <UIKit/UIKit.h>
+#else
+#import <AppKit/AppKit.h>
+#endif
+
 
 @protocol AAPLViewDelegate;
 
+#ifdef TARGET_IOS
 @interface AAPLView : UIView
+#else
+@interface AAPLView : NSView
+#endif
 @property (nonatomic, weak) id <AAPLViewDelegate> delegate;
 
 // view has a handle to the metal device when created

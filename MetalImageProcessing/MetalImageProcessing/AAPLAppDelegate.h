@@ -5,7 +5,6 @@
  Abstract:
  Application delegate for Metal uniform streaming.
  */
-
 #import <UIKit/UIKit.h>
 
 @interface AAPLAppDelegate : UIResponder <UIApplicationDelegate>

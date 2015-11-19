@@ -64,20 +64,22 @@
 }
 
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     MyModel *model = (self.allPurchases)[indexPath.section];
     
     NSArray *purchases = model.elements;
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"purchasedID" forIndexPath:indexPath];
-    
     SKPaymentTransaction *paymentTransaction = purchases[indexPath.row];
     NSString *title = ([[StoreManager sharedInstance] titleMatchingProductIdentifier:paymentTransaction.payment.productIdentifier]);
     
     // Display the product's title associated with the payment's product identifier if it exists or the product identifier, otherwise
     cell.textLabel.text = (title.length > 0) ? title : paymentTransaction.payment.productIdentifier;
-    
-    return cell;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [tableView dequeueReusableCellWithIdentifier:@"purchasedID" forIndexPath:indexPath];
 }
 
 
@@ -87,8 +89,8 @@
 -(NSDateFormatter *)dateFormatter
 {
     NSDateFormatter *myDateFormatter = [[NSDateFormatter alloc] init];
-    [myDateFormatter setDateStyle:NSDateFormatterShortStyle];
-    [myDateFormatter setTimeStyle:NSDateFormatterShortStyle];
+    myDateFormatter.dateStyle = NSDateFormatterShortStyle;
+    myDateFormatter.timeStyle = NSDateFormatterShortStyle;
     return myDateFormatter;
 }
 
@@ -98,14 +100,14 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    NSInteger selectedRowIndex = [self.tableView indexPathForSelectedRow].section;
+    NSInteger selectedRowIndex = (self.tableView).indexPathForSelectedRow.section;
     MyModel *model = self.allPurchases[selectedRowIndex];
     
-    if ([[segue identifier] isEqualToString:@"showPaymentTransaction"])
+    if ([segue.identifier isEqualToString:@"showPaymentTransaction"])
     {
         NSArray *purchases = model.elements;
         
-        SKPaymentTransaction *paymentTransaction = purchases[[self.tableView indexPathForSelectedRow].row];
+        SKPaymentTransaction *paymentTransaction = purchases[(self.tableView).indexPathForSelectedRow.row];
         NSMutableArray *purchaseDetails = [[NSMutableArray alloc] init];
         
         // Add the product identifier, transaction id, and transaction date to purchaseDetails
@@ -116,7 +118,7 @@
         
         NSArray *allDownloads = paymentTransaction.downloads;
         // If this product is hosted, add its first download to purchaseDetails
-        if ([allDownloads count] > 0)
+        if (allDownloads.count > 0)
         {
             // We are only showing the first download
             SKDownload *firstDownload = allDownloads[0];
@@ -138,7 +140,7 @@
             [purchaseDetails addObject:[[MyModel alloc] initWithName:@"ORIGINAL TRANSACTION" elements:[NSMutableArray arrayWithObjects:transactionID,transactionDate, nil]]];
         }
         
-        PaymentTransactionDetails *transactionDetails = (PaymentTransactionDetails *)[segue destinationViewController];
+        PaymentTransactionDetails *transactionDetails = (PaymentTransactionDetails *)segue.destinationViewController;
         transactionDetails.details = [NSArray arrayWithArray:purchaseDetails];
         transactionDetails.title = [[StoreManager sharedInstance] titleMatchingProductIdentifier:paymentTransaction.payment.productIdentifier];
     }

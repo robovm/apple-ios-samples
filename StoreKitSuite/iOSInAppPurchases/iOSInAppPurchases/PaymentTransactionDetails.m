@@ -41,16 +41,14 @@
 }
 
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     MyModel *model = (self.details)[indexPath.section];
     NSArray *transactions = model.elements;
     NSDictionary *dictionary = transactions[indexPath.row];
-    
+
     if ([model.name isEqualToString:@"DOWNLOAD"])
     {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"customCellID" forIndexPath:indexPath];
-        
         switch (indexPath.row)
         {
             case 0:
@@ -68,12 +66,9 @@
             default:
                 break;
         }
-        return cell;
     }
     else if ([model.name isEqualToString:@"ORIGINAL TRANSACTION"])
     {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"customCellID" forIndexPath:indexPath];
-        
         switch (indexPath.row)
         {
             case 0:
@@ -87,13 +82,30 @@
             default:
                 break;
         }
-        return cell;
     }
     else
     {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"basicCellID" forIndexPath:indexPath];
         cell.textLabel.text = transactions[0];
-        return cell;
+    }
+}
+
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    MyModel *model = (self.details)[indexPath.section];
+    
+    if ([model.name isEqualToString:@"DOWNLOAD"])
+    {
+        return [tableView dequeueReusableCellWithIdentifier:@"customCellID" forIndexPath:indexPath];
+    }
+    else if ([model.name isEqualToString:@"ORIGINAL TRANSACTION"])
+    {
+       return [tableView dequeueReusableCellWithIdentifier:@"customCellID" forIndexPath:indexPath];
+    }
+    else
+    {
+        return [tableView dequeueReusableCellWithIdentifier:@"basicCellID" forIndexPath:indexPath];
     }
 }
 

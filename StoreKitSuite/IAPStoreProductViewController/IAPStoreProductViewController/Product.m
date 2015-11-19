@@ -11,14 +11,26 @@
 
 @implementation Product
 
--(instancetype)initWithCategory: (NSString *)category title:(NSString *)title productIdentifier:(NSString *)productID
+-(instancetype)init
+{
+    self = [self initWithCategory:nil title:nil productIdentifier:nil campaignToken:nil providerToken:nil];
+    if (self != nil)
+    {
+        
+    }
+    return self;
+}
+
+-(instancetype)initWithCategory: (NSString *)category title:(NSString *)title productIdentifier:(NSString *)productID campaignToken:(NSString *) campaignToken providerToken:(NSString *) providerToken
 {
     self = [super init];
     if(self != nil)
     {
-        _category = category;
-        _title = title;
-        _productID = productID;
+        _category = [category copy];
+        _title = [title copy];
+        _productID = [productID copy];
+        _campaignToken = [campaignToken copy];
+        _providerToken = [providerToken copy];
     }
     return self;
 }

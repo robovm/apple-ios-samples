@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		362ADEF2195A0A5200CA3671 /* AAPLQuad.mm in Sources */ = {isa = PBXBuildFile; fileRef = 362ADEF1195A0A5200CA3671 /* AAPLQuad.mm */; };
-		368AEDE71A00562A002E4617 /* GrayscaleShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 368AEDE61A00562A002E4617 /* GrayscaleShader.metal */; };
-		368AEDE81A0056BF002E4617 /* TexturedQuadShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 62B7763E193438980095A4D6 /* TexturedQuadShader.metal */; };
+		368AEDE71A00562A002E4617 /* GrayscaleShader.metal in Resources */ = {isa = PBXBuildFile; fileRef = 368AEDE61A00562A002E4617 /* GrayscaleShader.metal */; };
 		36A654211965FBDD008E7BA2 /* TexturedQuadShader.metal in Resources */ = {isa = PBXBuildFile; fileRef = 62B7763E193438980095A4D6 /* TexturedQuadShader.metal */; };
 		6218D85E19AFB898005BC8AB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6218D85D19AFB898005BC8AB /* LaunchScreen.xib */; };
 		622A9BB219AAC7E4007F8120 /* AAPLRenderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 622A9BB119AAC7E4007F8120 /* AAPLRenderer.mm */; };
@@ -213,7 +212,7 @@
 		62B77601193438100095A4D6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = Apple;
 				TargetAttributes = {
 					62B77608193438100095A4D6 = {
@@ -247,6 +246,7 @@
 				6218D85E19AFB898005BC8AB /* LaunchScreen.xib in Resources */,
 				62B7761C193438100095A4D6 /* Images.xcassets in Resources */,
 				36A654211965FBDD008E7BA2 /* TexturedQuadShader.metal in Resources */,
+				368AEDE71A00562A002E4617 /* GrayscaleShader.metal in Resources */,
 				62B776321934388B0095A4D6 /* Default.jpg in Resources */,
 				62B7761A193438100095A4D6 /* Main.storyboard in Resources */,
 			);
@@ -259,8 +259,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				368AEDE81A0056BF002E4617 /* TexturedQuadShader.metal in Sources */,
-				368AEDE71A00562A002E4617 /* GrayscaleShader.metal in Sources */,
 				62B7763F193438980095A4D6 /* AAPLAppDelegate.mm in Sources */,
 				362ADEF2195A0A5200CA3671 /* AAPLQuad.mm in Sources */,
 				62B77640193438980095A4D6 /* AAPLTexture.mm in Sources */,
@@ -306,6 +304,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = c11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -319,6 +318,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LINKER_DISPLAYS_MANGLED_NAMES = YES;
 				METAL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -358,6 +358,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LLVM_LTO = YES;
 				METAL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
@@ -374,8 +375,9 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = MetalImageProcessing/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.MetalImageProcessing";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -387,7 +389,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = MetalImageProcessing/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.MetalImageProcessing";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

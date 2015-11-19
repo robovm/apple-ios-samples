@@ -15,7 +15,6 @@ The secondary detailed view controller for this app.
 
 @end
 
-
 @implementation DetailViewController
 
 - (void)viewWillAppear:(BOOL)animated

@@ -1,11 +1,9 @@
 /*
- Copyright (C) 2014 Apple Inc. All Rights Reserved.
+ Copyright (C) 2015 Apple Inc. All Rights Reserved.
  See LICENSE.txt for this sample’s licensing information
  
  Abstract:
- 
-  3d cube vertices, normals, texture coordinates, and indices.
-  
+ 3d cube vertices, normals, texture coordinates, and indices.
  */
 
 #import <Metal/Metal.h>

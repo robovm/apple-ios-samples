@@ -1,50 +1,64 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="13A397e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="aF4-4f-6LZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="aF4-4f-6LZ">
     <dependencies>
-        <deployment defaultVersion="1552" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="oIp-cI-zTt">
             <objects>
-                <viewController id="aF4-4f-6LZ" customClass="APLViewController" sceneMemberID="viewController">
+                <viewController id="aF4-4f-6LZ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="M4f-f1-ZcP"/>
+                        <viewControllerLayoutGuide type="bottom" id="NK7-iI-SrD"/>
+                    </layoutGuides>
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="bKF-qZ-xNF" customClass="APLMoveMeView">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view opaque="NO" contentMode="scaleToFill" id="Kcc-cR-JqT" customClass="APLPlacardView">
-                                <rect key="frame" x="43" y="131" width="228" height="98"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kcc-cR-JqT">
+                                <rect key="frame" x="46" y="181" width="228" height="118"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="center" image="Placard.png" id="chv-ZB-oFW">
-                                        <rect key="frame" x="0.0" y="0.0" width="228" height="98"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" image="Placard.png" translatesAutoresizingMaskIntoConstraints="NO" id="chv-ZB-oFW">
+                                        <rect key="frame" x="0.0" y="10" width="228" height="98"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="228" id="8Y4-Xg-Lch"/>
+                                            <constraint firstAttribute="height" constant="98" id="bHO-G6-6gT"/>
+                                        </constraints>
                                     </imageView>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="PlacardView" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="8Wi-cQ-Bdd">
-                                        <rect key="frame" x="20" y="38" width="188" height="22"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="MoveMe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8Wi-cQ-Bdd">
+                                        <rect key="frame" x="66" y="48" width="96" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="iaK-3K-Tmf"/>
+                                            <constraint firstAttribute="width" constant="96" id="oAw-LX-Ipt"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
-                                        <color key="shadowColor" cocoaTouchSystemColor="lightTextColor"/>
                                         <size key="shadowOffset" width="1" height="1"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="textLabel" destination="8Wi-cQ-Bdd" id="iWk-fO-pWX"/>
-                                </connections>
+                                <constraints>
+                                    <constraint firstItem="chv-ZB-oFW" firstAttribute="centerY" secondItem="Kcc-cR-JqT" secondAttribute="centerY" id="3mk-FC-k9y"/>
+                                    <constraint firstItem="8Wi-cQ-Bdd" firstAttribute="centerY" secondItem="chv-ZB-oFW" secondAttribute="centerY" id="5jw-rJ-T14"/>
+                                    <constraint firstItem="8Wi-cQ-Bdd" firstAttribute="centerX" secondItem="chv-ZB-oFW" secondAttribute="centerX" id="7g7-Mg-vew"/>
+                                    <constraint firstItem="chv-ZB-oFW" firstAttribute="centerX" secondItem="Kcc-cR-JqT" secondAttribute="centerX" id="M9k-AE-Ok8"/>
+                                    <constraint firstAttribute="height" constant="118" id="VOZ-wD-4xS"/>
+                                    <constraint firstAttribute="width" constant="228" id="qd0-TE-aag"/>
+                                </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Kcc-cR-JqT" firstAttribute="centerX" secondItem="bKF-qZ-xNF" secondAttribute="centerX" id="ExT-nZ-Ipg"/>
+                            <constraint firstItem="Kcc-cR-JqT" firstAttribute="centerY" secondItem="bKF-qZ-xNF" secondAttribute="centerY" id="RwU-MI-mGA"/>
+                        </constraints>
                         <connections>
-                            <outlet property="placardView" destination="Kcc-cR-JqT" id="dDc-HV-DOo"/>
+                            <outlet property="placardView" destination="Kcc-cR-JqT" id="Jym-qk-kgw"/>
                         </connections>
                     </view>
-                    <connections>
-                        <outlet property="moveMeView" destination="bKF-qZ-xNF" id="bvR-BS-fu2"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Yk-e7-KWD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -54,26 +68,6 @@
     <resources>
         <image name="Placard.png" width="228" height="98"/>
     </resources>
-    <classes>
-        <class className="APLMoveMeView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/APLMoveMeView.h"/>
-            <relationships>
-                <relationship kind="outlet" name="placardView" candidateClass="APLPlacardView"/>
-            </relationships>
-        </class>
-        <class className="APLPlacardView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/APLPlacardView.h"/>
-            <relationships>
-                <relationship kind="outlet" name="textLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="APLViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/APLViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="moveMeView" candidateClass="APLMoveMeView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -1,0 +1,393 @@
+<!--
+Copyright (C) 2015 Apple Inc. All Rights Reserved.
+See LICENSE.txt for this sample’s licensing information
+
+Abstract:
+The main HTML file of the CloudKit Catalog sample app.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CloudKit Catalog</title>
+    <link rel="stylesheet" href="css/cloudkit-catalog.css">
+</head>
+<body>
+    <div id="main" class="main-pane">
+        <div class="background-strip"></div>
+        <div class="left-pane">
+            <div class="home"><div class="icon"></div></div>
+            <div class="vertical-scroll-container">
+                <div class="menu-items">
+                    <div class="menu-item-container readme">
+                        <div class="border"></div>
+                        <a class="menu-item" href="#readme">
+                            <div class="icon"></div>
+                            <div class="name">README</div>
+                        </a>
+                    </div>
+                    <div class="menu-item-container authentication">
+                        <div class="border"></div>
+                        <a class="menu-item" href="#authentication">
+                            <div class="icon"></div>
+                            <div class="name">Authentication</div>
+                        </a>
+                    </div>
+                    <div class="menu-item-container discoverability">
+                        <div class="border"></div>
+                        <a class="menu-item" href="#discoverability">
+                            <div class="icon"></div>
+                            <div class="name">Discoverability</div>
+                        </a>
+                    </div>
+                    <div class="menu-item-container public-query">
+                        <div class="border"></div>
+                        <a class="menu-item" href="#public-query">
+                            <div class="icon"></div>
+                            <div class="name">Query</div>
+                        </a>
+                    </div>
+                    <div class="menu-item-container private-zones">
+                        <div class="border"></div>
+                        <a class="menu-item" href="#private-zones">
+                            <div class="icon"></div>
+                            <div class="name">Zones</div>
+                        </a>
+                    </div>
+                    <div class="menu-item-container private-records">
+                        <div class="border"></div>
+                        <a class="menu-item" href="#private-records">
+                            <div class="icon"></div>
+                            <div class="name">Records</div>
+                        </a>
+                    </div>
+                    <div class="menu-item-container private-sync">
+                        <div class="border"></div>
+                        <a class="menu-item" href="#private-sync">
+                            <div class="icon"></div>
+                            <div class="name">Sync</div>
+                        </a>
+                    </div>
+                    <div class="menu-item-container private-subscriptions">
+                        <div class="border"></div>
+                        <a class="menu-item" href="#private-subscriptions">
+                            <div class="icon"></div>
+                            <div class="name">Subscriptions</div>
+                        </a>
+                    </div>
+                    <div class="menu-item-container notifications">
+                        <div class="border"></div>
+                        <a class="menu-item" href="#notifications">
+                            <div class="icon"></div>
+                            <div class="name with-subtitle">Notifications</div>
+                            <div class="subtitle" id="connected-text">Disconnected</div>
+                            <div class="alert hide">
+                                <div id="number-of-alerts" class="alert-text">0</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a class="menu-item documentation" href="https://developer.apple.com/library/prerelease/ios/documentation/CloudKitJS/Reference/CloudKitJavaScriptReference/index.html
+" target="_blank">
+                <div class="icon"></div>
+                <div class="name">Documentation</div>
+            </a>
+        </div>
+        <div class="right-pane">
+            <div class="header">
+                <div class="left-button disabled">
+                    <div class="play-icon"></div>
+                    <button id="run-button" class="link" disabled>Run Code</button>
+                </div>
+                <span id="username"></span>
+            </div>
+            <div class="vertical-scroll-container">
+                <div class="page" id="page">
+                    <div class="page-segments"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="dialog" class="hide">
+        <div id="dialog-veil"></div>
+        <div id="dialog-text"></div>
+    </div>
+    <div class="hide">
+        <div id="authentication">
+            <div class="description">
+                <h4>Class: Container</h4>
+                <h1>.setUpAuth()</h1>
+                <p>This sample demonstrates how to authenticate a user with your app.
+                    There are two steps to authentication:</p>
+                <ol>
+                    <li><b>Setting up auth.</b> This step checks whether a user is signed in. If you have specified
+                    <code>auth.persist = true</code> in your configuration you could run <i>setUpAuth</i> while bootstrapping
+                    your app and this function will use the stored cookie. The promise resolves with a <code>userInfo</code> object or
+                    <code>null</code> and a sign-in or
+                    sign-out button will have been appended to the button container with id <code>apple-sign-in-button</code>
+                    or <code>apple-sign-out-button</code> (whichever is appropriate).
+                    These containers need to be in the DOM before executing the function and
+                    their IDs can be customized in <code>CloudKit.configure</code>.
+                    </li>
+                    <li><b>Binding handlers to the rendered button.</b> The promises <code>whenUserSignsIn</code> and <code>whenUserSignsOut</code>
+                    are resolved when the user signs-in/out respectively. The former resolves with a <code>userInfo</code> object.</li>
+                </ol>
+            </div>
+        </div>
+        <div id="discoverability">
+            <div class="description">
+                <h4>Class: Container</h4>
+                <h1>.fetchUserInfo()</h1>
+                <p>This sample demonstrates how to fetch the currently signed-in user&rsquo;s <code>userInfo</code> object.
+                If the current user has made himself discoverable to the app, this object will have the fields <code>firstName</code>
+                and <code>lastName</code> populated. You can check the property <code>userInfo.isDiscoverable</code> for
+                whether the user is discoverable.</p>
+            </div>
+            <div class="description">
+                <h4>Class: Container</h4>
+                <h1>.discoverAllContactUserInfos()</h1>
+                <p>This sample demonstrates how to obtain a list of <code>userInfo</code> objects corresponding to users of the app
+                in the signed-in user&rsquo;s iCloud Contacts who have made themselves discoverable to the app.</p>
+            </div>
+            <div class="description">
+                <h4>Class: Container</h4>
+                <h1>.discoverUserInfoWithEmailAddress()</h1>
+                <p>This sample demonstrates how to look up a discoverable user&rsquo;s name by email address. This method will
+                always return a <code>userInfo</code> object with the <code>emailAddress</code> field populated. The other fields will be
+                populated only if a matching discoverable user is found.</p>
+            </div>
+            <div class="description">
+                <h4>Class: Container</h4>
+                <h1>.discoverUserInfoWithUserRecordName()</h1>
+                <p>This sample demonstrates how to look up a discoverable user&rsquo;s info by userRecordName. The <code>.catch()</code> block is invoked
+                when no matching user is found.</p>
+            </div>
+        </div>
+        <div id="not-found">
+            <div class="description">
+                <h1>Page Not Found</h1>
+                <p>The page you were looking for was not found. Please use the menu on the left to navigate the app.</p>
+            </div>
+        </div>
+        <div id="notifications">
+            <div class="description">
+                <h4>Class: Container</h4>
+                <h1>.registerForNotifications()</h1>
+                <p>This sample shows how to add a notification listener to the container. The listener will get called
+                whenever the server sends us a notification of an update to a subscription. In order to receive notifications your app
+                must park a connection with the notification backend using <code>registerForNotifications</code>.</p>
+            </div>
+        </div>
+        <div id="private-records">
+            <div class="description">
+                <h4>Class: Database</h4>
+                <h1>.saveRecord()</h1>
+                <p>This sample demonstrates how an authenticated user can save a record to his/her private database. Our example
+                    records are of type <b>Items</b>.</p>
+            </div>
+            <div class="description">
+                <h4>Class: Database</h4>
+                <h1>.deleteRecord()</h1>
+                <p>This sample demonstrates how an authenticated user can delete a record from the private database.</p>
+            </div>
+            <div class="description">
+                <h4>Class: Database</h4>
+                <h1>.fetchRecord()</h1>
+                <p>This sample demonstrates how to fetch a record by record name from the private database.</p>
+            </div>
+        </div>
+        <div id="private-subscriptions">
+            <div class="description">
+                <h4>Class: Database</h4>
+                <h1>.saveSubscription()</h1>
+                <p>This sample demonstrates how a user can subscribe to a change to a record in a specific zone
+                (<i>zone subscription</i>) as well as to changes to records that match a query condition
+                (<i>query subscription</i>). Once subscribed, your app can register for <a href="#notifications">notifications</a>
+                of changes.
+                </p>
+            </div>
+            <div class="description">
+                <h4>Class: Database</h4>
+                <h1>.deleteSubscription()</h1>
+                <p>This sample shows how to delete a subscription by ID.</p>
+            </div>
+            <div class="description">
+                <h4>Class: Database</h4>
+                <h1>.fetchSubscription()</h1>
+                <p>This sample shows how to fetch a subscription by ID.</p>
+            </div>
+            <div class="description">
+                <h4>Class: Database</h4>
+                <h1>.fetchAllSubscriptions()</h1>
+                <p>This sample shows how to fetch all subscriptions.</p>
+            </div>
+        </div>
+        <div id="private-sync">
+            <div class="description">
+                <h4>Class: Database</h4>
+                <h1>.fetchChangedRecords()</h1>
+                <p>This sample demonstrates how an authenticated user can get all changes relative to a sync token in a custom zone.
+                If no sync token is provided all records in the zone are returned. The response will always contain a new sync token
+                which can be cached in the client and sent in a new sync request. The sync token can also be used for paginating a result
+                set. The <code>moreComing</code> boolean on the response indicates if the result set is incomplete.</p>
+                <p>When you have a zone-level <a href="#private-subscriptions">subscription</a> you can get
+                <a href="#notifications">notified</a> of changes to that zone and you would typically run <code>fetchChangedRecords</code>
+                to then fetch the latest changes and bring your client up-to-date.
+                </p>
+            </div>
+        </div>
+        <div id="private-zones">
+            <div class="description">
+                <h4>Class: Database</h4>
+                <h1>.saveRecordZone()</h1>
+                <p>This sample shows how to create a custom zone in the user&rsquo;s private database. Zones are useful for
+                    syncing a user&rsquo;s data. Once you have created a custom zone you will be able to
+                    <a href="#private-records">create records</a> in that zone and test the <a href="#private-sync">sync</a> feature.</p>
+            </div>
+            <div class="description">
+                <h4>Class: Database</h4>
+                <h1>.deleteRecordZone()</h1>
+                <p>This sample shows how to delete a custom zone by name from the private database.</p>
+            </div>
+            <div class="description">
+                <h4>Class: Database</h4>
+                <h1>.fetchRecordZone()</h1>
+                <p>This sample shows how to fetch a record zone by name from the private database.</p>
+            </div>
+            <div class="description">
+                <h4>Class: Database</h4>
+                <h1>.fetchAllRecordZones()</h1>
+                <p>This sample shows how to list all record zones in your private database. The response will always contain the default zone.</p>
+            </div>
+        </div>
+        <div id="public-query">
+            <div class="description">
+                <h4>Class: Database</h4>
+                <h1>.performQuery()</h1>
+                <p>This sample demonstrates how any user can query records in the public database. The same example will work equally well for
+                    querying records in a user&rsquo;s private database. We will query records of type
+                <b>Items</b> which has the following schema:</p>
+                <ul>
+                    <li><b>name</b> : String</li>
+                    <li><b>location</b> : Location</li>
+                    <li><b>asset</b> : Asset</li>
+                </ul>
+                <p>Our code sample gets the client&rsquo;s geolocation and asks for a list of Items sorted by closest distance from this
+                location.</p>
+            </div>
+        </div>
+        <div id="readme">
+            <div class="description">
+                <h1>Getting started with CloudKit JS</h1>
+                <p>This web application provides executable sample code for the core API methods provided by the CloudKit JS
+                    JavaScript library. While these methods cover many typical use cases, there are more flexible versions
+                    available if needed which allow for batch requests and more configuration. The user is advised to refer to the
+                    <a href="https://developer.apple.com/library/prerelease/ios/documentation/CloudKitJS/Reference/CloudKitJavaScriptReference/index.html">CloudKit JS Reference</a>
+                    for more information.</p>
+
+                <p>All code examples can be run by clicking the play button at the top of the page. The results will be displayed below
+                    the sample code block.</p>
+
+                <h2>Downloading and running CloudKit Catalog</h2>
+                <p>The static assets which make up this tutorial are available for download as a convenient zip package from the
+                    <a href="https://developer.apple.com/library/prerelease/ios/samplecode/CloudAtlas/Introduction/Intro.html">Apple Developer website</a>.
+                    The configuration code resides in the file <b>js/init.js</b>.</p>
+
+<pre><code>CloudKit.configure({
+  containers: [{
+
+    // Change this to a container identifier you own.
+    containerIdentifier: 'com.example.apple-samplecode.cloudkit-catalog',
+
+    // And generate an API token through CloudKit Dashboard.
+    apiToken: '&lt;insert your token here&gt;',
+
+    auth: {
+      persist: true // Store the session in a cookie.
+    },
+
+    environment: 'development'
+  }]
+});</code></pre>
+
+                <p>Change the container identifier to one that you own.
+                    For more information on how to create a container see <a href="https://developer.apple.com/library/etc/redirect/ios_cloudkit_dashboard_guide">CloudKit Quick Start</a>. Once you have a container, you will
+                    need to create an <b>Items</b> record type with fields:</p>
+                <ul>
+                    <li><b>name</b> : String</li>
+                    <li><b>location</b> : Location</li>
+                    <li><b>asset</b> : Asset</li>
+                </ul>
+                <p>You can do this as well as generate an API token through the
+                    <a href="https://icloud.developer.apple.com/dashboard/">CloudKit Dashboard</a>.
+                    CloudKit Web Services is only available for the development container until the release of iOS 9, so you should leave the config option
+                    <code>environment = 'development'</code> for now.</p>
+
+                <h2>Obtaining the CloudKit JS library</h2>
+                <p>CloudKit JS is hosted at
+                    <a href="https://cdn.apple-cloudkit.com/ck/1/cloudkit.js">https://cdn.apple-cloudkit.com/ck/1/cloudkit.js</a>.
+                    Include the library on your web page using either of the two methods below. You will
+                    automatically get updates and bug fixes as they are released.</p>
+
+                <h3>Option #1 - Load CloudKit JS synchronously</h3>
+                <pre><code>&lt;script src="https://cdn.apple-cloudkit.com/ck/1/cloudkit.js"&gt;&lt;/script&gt;</code></pre>
+
+                <h3>Option #2 - Load CloudKit JS asynchronously</h3>
+
+<pre><code>&lt;!-- Listen for the cloudkitloaded event on the window object. --&gt;
+&lt;script&gt;
+  window.addEventListener('cloudkitloaded', function() {
+    // Now the global namespace CloudKit is defined and you can proceed
+    // to configure your application.
+  });
+&lt;/script&gt;
+
+&lt;!-- Include the script with the &lsquo;async&rsquo; attribute. --&gt;
+&lt;script src="https://cdn.apple-cloudkit.com/ck/1/cloudkit.js" async&gt;&lt;/script&gt;</code></pre>
+                <h2>Browser support</h2>
+                <p>CloudKit JS is supported on Safari, Firefox, Chrome, Internet Explorer and Microsoft Edge, including embedded web views.
+                    For security reasons, a mobile web view must launch the Apple sign-in page in a native browser in order
+                    to use iCloud authentication.</p>
+                <br>
+            </div>
+        </div>
+    </div>
+    <script>
+        /*
+         * Initialize the global objects we will need.
+         */
+        if(typeof CKCatalog === 'undefined') {
+            CKCatalog = {};
+        }
+
+        if(typeof CKCatalog.tabs === 'undefined') {
+            CKCatalog.tabs = {
+                'readme': [{}],
+                'not-found': [{}]
+            };
+        }
+    </script>
+    <script src="js/ui-utils/dialog.js"></script>
+    <script src="js/ui-utils/table.js"></script>
+    <script src="js/ui-utils/form.js"></script>
+    <script src="js/cloudkit-code-samples/authentication.js"></script>
+    <script src="js/cloudkit-code-samples/discoverability.js"></script>
+    <script src="js/cloudkit-code-samples/public-query.js"></script>
+    <script src="js/cloudkit-code-samples/private-zones.js"></script>
+    <script src="js/cloudkit-code-samples/private-records.js"></script>
+    <script src="js/cloudkit-code-samples/private-sync.js"></script>
+    <script src="js/cloudkit-code-samples/private-subscriptions.js"></script>
+    <script src="js/cloudkit-code-samples/notifications.js"></script>
+    <script src="js/ui-utils/tab-manager.js"></script>
+    <script src="js/init.js"></script>
+    <script async src="https://cdn.apple-cloudkit.com/cloudkit-catalog/highlight.pack.js"
+            onload="CKCatalog.tabManager.initializeCodeHighlighting()">
+    </script>
+    <script>
+        window.addEventListener('cloudkitloaded',CKCatalog.init);
+    </script>
+    <script async src="https://cdn.apple-cloudkit.com/ck/1/cloudkit.js"></script>
+
+</body>
+</html>

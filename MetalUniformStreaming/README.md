@@ -6,10 +6,10 @@ Metal creates data buffer resources that can be read and written to on the CPU a
 
 ### Build
 
-iOS 8 SDK
+iOS 9 SDK
 
 ### Runtime
 
-iOS 8, 64 bit devices
+iOS 9, 64 bit devices
 
-Copyright (C) 2014 Apple Inc. All rights reserved.
+Copyright (C) 2014~2015 Apple Inc. All rights reserved.

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6095.4" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6100.2"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="AAPLViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zOf-aQ-Xsl"/>
+                        <viewControllerLayoutGuide type="bottom" id="p4B-wQ-cns"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="T8s-1h-33B">
+                                <rect key="frame" x="-5" y="524" width="325" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="EZX-7q-f4G"/>
+                                    <barButtonItem title="Record" style="plain" id="lLr-h1-7A8">
+                                        <connections>
+                                            <action selector="toggleRecording:" destination="vXZ-lx-hvc" id="iB8-Iw-lmo"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="69Y-Gf-4Hf"/>
+                                    <barButtonItem style="plain" id="89x-bk-heD">
+                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="Gc8-cC-bxW">
+                                            <rect key="frame" x="148" y="7" width="161" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <segments>
+                                                <segment title="Walk"/>
+                                                <segment title="Drive"/>
+                                            </segments>
+                                            <connections>
+                                                <action selector="toggleLocationUpdateMode:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Yws-sZ-Gpx"/>
+                                                <action selector="toggleLocationUpdateMode:" destination="vXZ-lx-hvc" eventType="touchDown" id="asZ-uj-dbe"/>
+                                                <action selector="toggleLocationUpdateMode:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="wKS-uV-08q"/>
+                                            </connections>
+                                        </segmentedControl>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Pi-nk-IUs" userLabel="Preview View">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xpi-t5-IXa">
+                                        <rect key="frame" x="20" y="490" width="67" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKM-5o-TTU">
+                                        <rect key="frame" x="108" y="490" width="192" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9Pi-nk-IUs" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="7cD-BG-9b6"/>
+                            <constraint firstItem="9Pi-nk-IUs" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="IZ5-pH-0gg"/>
+                            <constraint firstAttribute="trailing" secondItem="T8s-1h-33B" secondAttribute="trailing" id="Nwa-dx-azC"/>
+                            <constraint firstAttribute="bottom" secondItem="T8s-1h-33B" secondAttribute="bottom" id="Qsy-wO-esH"/>
+                            <constraint firstItem="9Pi-nk-IUs" firstAttribute="trailing" secondItem="T8s-1h-33B" secondAttribute="trailing" id="bxw-gz-yng"/>
+                            <constraint firstItem="T8s-1h-33B" firstAttribute="top" secondItem="9Pi-nk-IUs" secondAttribute="bottom" id="ckn-ym-yW4"/>
+                            <constraint firstItem="T8s-1h-33B" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="-5" id="rpl-ui-5TG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="currentLocation" destination="zKM-5o-TTU" id="ZD7-nc-TFt"/>
+                        <outlet property="locationUpdateModeButton" destination="Gc8-cC-bxW" id="jBS-ZE-68q"/>
+                        <outlet property="previewView" destination="9Pi-nk-IUs" id="t7h-4v-LTr"/>
+                        <outlet property="recordButton" destination="lLr-h1-7A8" id="tVp-Le-2T3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

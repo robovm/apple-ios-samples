@@ -4,13 +4,22 @@
  
  Abstract:
  View Controller for Metal Sample Code. Maintains a CADisplayLink timer that runs on the main thread and triggers rendering in AAPLView. Provides update callbacks to its delegate on the timer, prior to triggering rendering.
-*/
+ */
 
+#ifdef TARGET_IOS
 #import <UIKit/UIKit.h>
+#else
+#import <AppKit/AppKit.h>
+#endif
 
 @protocol AAPLViewControllerDelegate;
 
+#ifdef TARGET_IOS
 @interface AAPLViewController : UIViewController
+#else
+@interface AAPLViewController : NSViewController
+#endif
+
 @property (nonatomic, weak) id <AAPLViewControllerDelegate> delegate;
 
 // the time interval from the last draw
@@ -23,9 +32,6 @@
 
 // Used to pause and resume the controller.
 @property (nonatomic, getter=isPaused) BOOL paused;
-
-// used to fire off the main game loop
-- (void)dispatchGameLoop;
 
 // use invalidates the main game loop. when the app is set to terminate
 - (void)stopGameLoop;

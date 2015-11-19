@@ -6,10 +6,11 @@ MetalBasic3D renders a set of cubes using Metal and alternates their colors dire
 
 ### Build
 
-iOS 8 SDK
+iOS 9 SDK, OSX 10.11 SDK
 
 ### Runtime
 
-iOS 8, 64 bit devices
+iOS 9, 64 bit devices
+OSX 10.11
 
-Copyright (C) 2014 Apple Inc. All rights reserved.
+Copyright (C) 2014~2015 Apple Inc. All rights reserved.

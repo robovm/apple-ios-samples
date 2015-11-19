@@ -10,11 +10,11 @@ It displays purchase information and download progress using SKPaymentTransactio
 
 
 ## Build Requirements
-iOS SDK 8.0 or later
+Xcode 7.0, iOS SDK 9.0 or later
 
 
 ## Runtime Requirements
-iOS 8.0 or later
+iOS 9.0 or later
 
 
 ## Using the Sample
@@ -72,4 +72,4 @@ See TN2259 Adding In-App Purchase to your iOS and OS X Applications that describ
 1.0 - First Version
 
 
-Copyright (C) 2015-2014 Apple Inc. All rights reserved.
+Copyright (C) 2014-2015 Apple Inc. All rights reserved.

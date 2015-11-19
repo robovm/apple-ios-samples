@@ -1,11 +1,9 @@
 /*
- Copyright (C) 2014 Apple Inc. All Rights Reserved.
+ Copyright (C) 2015 Apple Inc. All Rights Reserved.
  See LICENSE.txt for this sample’s licensing information
  
  Abstract:
- 
-  Plasma structures, constants, and utility functions.
-  
+ Plasma structures, constants, and utility functions.
  */
 
 #ifndef _METAL_PLASMA_UTILITIES_H_

@@ -3,7 +3,7 @@
  See LICENSE.txt for this sample’s licensing information
  
  Abstract:
- Application delegate for Metal Sample Code
+ Application delegate for Metal uniform streaming.
  */
 
 #import "AAPLAppDelegate.h"

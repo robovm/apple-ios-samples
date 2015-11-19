@@ -12,12 +12,21 @@
 
 @implementation MyModel
 
+-(instancetype)init {
+    self = [self initWithName:nil elements:@[]];
+    if(self != nil)
+    {
+        
+    }
+    return self;
+}
+
 -(instancetype)initWithName:(NSString *)name elements:(NSArray *)elements
 {
     self = [super init];
     if(self != nil)
     {
-        _name = name;
+        _name = [name copy];
         _elements = elements;
     }
     return self;

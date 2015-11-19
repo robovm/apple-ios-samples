@@ -1,19 +1,19 @@
 /*
- Copyright (C) 2014 Apple Inc. All Rights Reserved.
- See LICENSE.txt for this sample’s licensing information
- 
- Abstract:
- 
-  Test view controller parent for implementing test pages in the test application.
-  
- */
+    Copyright (C) 2015 Apple Inc. All Rights Reserved.
+    See LICENSE.txt for this sample’s licensing information
+    
+    Abstract:
+    Test view controller parent for implementing test pages in the test application.
+*/
 
 @import UIKit;
+#import "AAPLTest.h"
+
 
 @interface AAPLBasicTestViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic)  NSArray *tests;
+@property (nonatomic, copy) NSArray<AAPLTest *> *tests;
 
--(void)printResult:(UITextView*)textView message:(NSString*)msg;
+- (void)printMessage:(NSString *)message inTextView:(UITextView *)textView;
 
 @end

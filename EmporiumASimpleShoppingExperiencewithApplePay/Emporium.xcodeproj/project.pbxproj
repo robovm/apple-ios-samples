@@ -1,0 +1,630 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		010F66BD1B18194300D201AB /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01151B131AE4309C00639360 /* Product.swift */; };
+		01151B0D1AE4210E00639360 /* ProductsList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01151B0C1AE4210E00639360 /* ProductsList.plist */; };
+		01151B121AE42AA400639360 /* ProductTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01151B111AE42AA400639360 /* ProductTableViewController.swift */; };
+		01151B141AE4309C00639360 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01151B131AE4309C00639360 /* Product.swift */; };
+		014EE7AB1A8BB6E500BF8E9D /* CatalogCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014EE7AA1A8BB6E500BF8E9D /* CatalogCollectionViewController.swift */; };
+		019EB7D31B180210009F2D5B /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019EB7D21B180210009F2D5B /* InterfaceController.swift */; };
+		019EB7D51B180210009F2D5B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 019EB7D41B180210009F2D5B /* Images.xcassets */; };
+		019EB7DA1B180210009F2D5B /* Emporium WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 019EB7D91B180210009F2D5B /* Emporium WatchKit App.app */; };
+		019EB7E01B180210009F2D5B /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 019EB7DE1B180210009F2D5B /* Interface.storyboard */; };
+		019EB7E21B180210009F2D5B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 019EB7E11B180210009F2D5B /* Images.xcassets */; };
+		019EB7E61B180210009F2D5B /* Emporium WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 019EB7D01B180210009F2D5B /* Emporium WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		01B8F7B81B13A7D6002CDA2B /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B8F7B71B13A7D6002CDA2B /* ConfirmationViewController.swift */; };
+		01C712881A8B0E6200BEACE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C712871A8B0E6200BEACE5 /* AppDelegate.swift */; };
+		01C7128D1A8B0E6200BEACE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01C7128B1A8B0E6200BEACE5 /* Main.storyboard */; };
+		01C7128F1A8B0E6200BEACE5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01C7128E1A8B0E6200BEACE5 /* Images.xcassets */; };
+		01C712921A8B0E6200BEACE5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01C712901A8B0E6200BEACE5 /* LaunchScreen.xib */; };
+		01FB55F51AE5F7A100F5B5AA /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FB55F41AE5F7A100F5B5AA /* ProductCell.swift */; };
+		3E4D0B101B1FB3520076878F /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4D0B0F1B1FB3520076878F /* AppConfiguration.swift */; };
+		3E4D0B111B1FB3520076878F /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4D0B0F1B1FB3520076878F /* AppConfiguration.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		019EB7DB1B180210009F2D5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01C7127A1A8B0E6200BEACE5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 019EB7D81B180210009F2D5B;
+			remoteInfo = "Emporium WatchKit App";
+		};
+		019EB7E41B180210009F2D5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01C7127A1A8B0E6200BEACE5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 019EB7CF1B180210009F2D5B;
+			remoteInfo = "Emporium WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		019EB7ED1B180211009F2D5B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				019EB7E61B180210009F2D5B /* Emporium WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		010F66BE1B181B4400D201AB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		01151B0C1AE4210E00639360 /* ProductsList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ProductsList.plist; sourceTree = "<group>"; };
+		01151B111AE42AA400639360 /* ProductTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTableViewController.swift; sourceTree = "<group>"; };
+		01151B131AE4309C00639360 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		014EE7AA1A8BB6E500BF8E9D /* CatalogCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogCollectionViewController.swift; sourceTree = "<group>"; };
+		019EB7D01B180210009F2D5B /* Emporium WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Emporium WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		019EB7D21B180210009F2D5B /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		019EB7D41B180210009F2D5B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		019EB7D61B180210009F2D5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		019EB7D91B180210009F2D5B /* Emporium WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Emporium WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		019EB7DF1B180210009F2D5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		019EB7E11B180210009F2D5B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		019EB7E31B180210009F2D5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01B4515C1AC4F775006E591D /* Emporium.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Emporium.entitlements; sourceTree = "<group>"; };
+		01B8F7B71B13A7D6002CDA2B /* ConfirmationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
+		01C712821A8B0E6200BEACE5 /* Emporium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Emporium.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		01C712861A8B0E6200BEACE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01C712871A8B0E6200BEACE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		01C7128C1A8B0E6200BEACE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		01C7128E1A8B0E6200BEACE5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		01C712911A8B0E6200BEACE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		01FB55F41AE5F7A100F5B5AA /* ProductCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		3E4D0B0F1B1FB3520076878F /* AppConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		019EB7CD1B180210009F2D5B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01C7127F1A8B0E6200BEACE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		019EB7D11B180210009F2D5B /* Emporium WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				019EB7D21B180210009F2D5B /* InterfaceController.swift */,
+				019EB7D41B180210009F2D5B /* Images.xcassets */,
+				019EB7D61B180210009F2D5B /* Info.plist */,
+			);
+			path = "Emporium WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		019EB7DD1B180210009F2D5B /* Emporium WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				019EB7DE1B180210009F2D5B /* Interface.storyboard */,
+				019EB7E11B180210009F2D5B /* Images.xcassets */,
+				019EB7E31B180210009F2D5B /* Info.plist */,
+			);
+			path = "Emporium WatchKit App";
+			sourceTree = "<group>";
+		};
+		01C712791A8B0E6200BEACE5 = {
+			isa = PBXGroup;
+			children = (
+				010F66BE1B181B4400D201AB /* README.md */,
+				3E4D0B0E1B1FB3440076878F /* Common Configuration */,
+				01C712841A8B0E6200BEACE5 /* Emporium */,
+				019EB7D11B180210009F2D5B /* Emporium WatchKit Extension */,
+				019EB7DD1B180210009F2D5B /* Emporium WatchKit App */,
+				01C712831A8B0E6200BEACE5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		01C712831A8B0E6200BEACE5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				01C712821A8B0E6200BEACE5 /* Emporium.app */,
+				019EB7D01B180210009F2D5B /* Emporium WatchKit Extension.appex */,
+				019EB7D91B180210009F2D5B /* Emporium WatchKit App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		01C712841A8B0E6200BEACE5 /* Emporium */ = {
+			isa = PBXGroup;
+			children = (
+				01C712871A8B0E6200BEACE5 /* AppDelegate.swift */,
+				014EE7AA1A8BB6E500BF8E9D /* CatalogCollectionViewController.swift */,
+				01151B111AE42AA400639360 /* ProductTableViewController.swift */,
+				01B8F7B71B13A7D6002CDA2B /* ConfirmationViewController.swift */,
+				01FB55F41AE5F7A100F5B5AA /* ProductCell.swift */,
+				01151B131AE4309C00639360 /* Product.swift */,
+				01C7128B1A8B0E6200BEACE5 /* Main.storyboard */,
+				01C7128E1A8B0E6200BEACE5 /* Images.xcassets */,
+				01C712901A8B0E6200BEACE5 /* LaunchScreen.xib */,
+				01C712851A8B0E6200BEACE5 /* Supporting Files */,
+			);
+			path = Emporium;
+			sourceTree = "<group>";
+		};
+		01C712851A8B0E6200BEACE5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				01B4515C1AC4F775006E591D /* Emporium.entitlements */,
+				01C712861A8B0E6200BEACE5 /* Info.plist */,
+				01151B0C1AE4210E00639360 /* ProductsList.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3E4D0B0E1B1FB3440076878F /* Common Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				3E4D0B0F1B1FB3520076878F /* AppConfiguration.swift */,
+			);
+			path = "Common Configuration";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		019EB7CF1B180210009F2D5B /* Emporium WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 019EB7EC1B180211009F2D5B /* Build configuration list for PBXNativeTarget "Emporium WatchKit Extension" */;
+			buildPhases = (
+				019EB7CC1B180210009F2D5B /* Sources */,
+				019EB7CD1B180210009F2D5B /* Frameworks */,
+				019EB7CE1B180210009F2D5B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				019EB7DC1B180210009F2D5B /* PBXTargetDependency */,
+			);
+			name = "Emporium WatchKit Extension";
+			productName = "Emporium WatchKit Extension";
+			productReference = 019EB7D01B180210009F2D5B /* Emporium WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		019EB7D81B180210009F2D5B /* Emporium WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 019EB7EB1B180211009F2D5B /* Build configuration list for PBXNativeTarget "Emporium WatchKit App" */;
+			buildPhases = (
+				019EB7D71B180210009F2D5B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Emporium WatchKit App";
+			productName = "Emporium WatchKit App";
+			productReference = 019EB7D91B180210009F2D5B /* Emporium WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
+		01C712811A8B0E6200BEACE5 /* Emporium */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01C712A11A8B0E6200BEACE5 /* Build configuration list for PBXNativeTarget "Emporium" */;
+			buildPhases = (
+				01C7127E1A8B0E6200BEACE5 /* Sources */,
+				01C7127F1A8B0E6200BEACE5 /* Frameworks */,
+				01C712801A8B0E6200BEACE5 /* Resources */,
+				019EB7ED1B180211009F2D5B /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				019EB7E51B180210009F2D5B /* PBXTargetDependency */,
+			);
+			name = Emporium;
+			productName = Emporium;
+			productReference = 01C712821A8B0E6200BEACE5 /* Emporium.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		01C7127A1A8B0E6200BEACE5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = Apple;
+				TargetAttributes = {
+					019EB7CF1B180210009F2D5B = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					019EB7D81B180210009F2D5B = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					01C712811A8B0E6200BEACE5 = {
+						CreatedOnToolsVersion = 7.0;
+						SystemCapabilities = {
+							com.apple.OMC = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 01C7127D1A8B0E6200BEACE5 /* Build configuration list for PBXProject "Emporium" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 01C712791A8B0E6200BEACE5;
+			productRefGroup = 01C712831A8B0E6200BEACE5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				01C712811A8B0E6200BEACE5 /* Emporium */,
+				019EB7CF1B180210009F2D5B /* Emporium WatchKit Extension */,
+				019EB7D81B180210009F2D5B /* Emporium WatchKit App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		019EB7CE1B180210009F2D5B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				019EB7DA1B180210009F2D5B /* Emporium WatchKit App.app in Resources */,
+				019EB7D51B180210009F2D5B /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		019EB7D71B180210009F2D5B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				019EB7E01B180210009F2D5B /* Interface.storyboard in Resources */,
+				019EB7E21B180210009F2D5B /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01C712801A8B0E6200BEACE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01151B0D1AE4210E00639360 /* ProductsList.plist in Resources */,
+				01C7128D1A8B0E6200BEACE5 /* Main.storyboard in Resources */,
+				01C712921A8B0E6200BEACE5 /* LaunchScreen.xib in Resources */,
+				01C7128F1A8B0E6200BEACE5 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		019EB7CC1B180210009F2D5B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E4D0B111B1FB3520076878F /* AppConfiguration.swift in Sources */,
+				019EB7D31B180210009F2D5B /* InterfaceController.swift in Sources */,
+				010F66BD1B18194300D201AB /* Product.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01C7127E1A8B0E6200BEACE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01B8F7B81B13A7D6002CDA2B /* ConfirmationViewController.swift in Sources */,
+				014EE7AB1A8BB6E500BF8E9D /* CatalogCollectionViewController.swift in Sources */,
+				01151B141AE4309C00639360 /* Product.swift in Sources */,
+				01FB55F51AE5F7A100F5B5AA /* ProductCell.swift in Sources */,
+				01151B121AE42AA400639360 /* ProductTableViewController.swift in Sources */,
+				3E4D0B101B1FB3520076878F /* AppConfiguration.swift in Sources */,
+				01C712881A8B0E6200BEACE5 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		019EB7DC1B180210009F2D5B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 019EB7D81B180210009F2D5B /* Emporium WatchKit App */;
+			targetProxy = 019EB7DB1B180210009F2D5B /* PBXContainerItemProxy */;
+		};
+		019EB7E51B180210009F2D5B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 019EB7CF1B180210009F2D5B /* Emporium WatchKit Extension */;
+			targetProxy = 019EB7E41B180210009F2D5B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		019EB7DE1B180210009F2D5B /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				019EB7DF1B180210009F2D5B /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+		01C7128B1A8B0E6200BEACE5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01C7128C1A8B0E6200BEACE5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		01C712901A8B0E6200BEACE5 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01C712911A8B0E6200BEACE5 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		019EB7E71B180210009F2D5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Emporium WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "${EMPORIUM_BUNDLE_PREFIX}.Emporium.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		019EB7E81B180210009F2D5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Emporium WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "${EMPORIUM_BUNDLE_PREFIX}.Emporium.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		019EB7E91B180210009F2D5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IBSC_MODULE = Emporium_WatchKit_Extension;
+				INFOPLIST_FILE = "Emporium WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "${EMPORIUM_BUNDLE_PREFIX}.Emporium.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		019EB7EA1B180210009F2D5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				IBSC_MODULE = Emporium_WatchKit_Extension;
+				INFOPLIST_FILE = "Emporium WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "${EMPORIUM_BUNDLE_PREFIX}.Emporium.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		01C7129F1A8B0E6200BEACE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				EMPORIUM_BUNDLE_PREFIX = "com.example.apple-samplecode";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		01C712A01A8B0E6200BEACE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				EMPORIUM_BUNDLE_PREFIX = "com.example.apple-samplecode";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		01C712A21A8B0E6200BEACE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Emporium/Emporium.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Emporium/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "${EMPORIUM_BUNDLE_PREFIX}.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		01C712A31A8B0E6200BEACE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Emporium/Emporium.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Emporium/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "${EMPORIUM_BUNDLE_PREFIX}.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		019EB7EB1B180211009F2D5B /* Build configuration list for PBXNativeTarget "Emporium WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				019EB7E91B180210009F2D5B /* Debug */,
+				019EB7EA1B180210009F2D5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		019EB7EC1B180211009F2D5B /* Build configuration list for PBXNativeTarget "Emporium WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				019EB7E71B180210009F2D5B /* Debug */,
+				019EB7E81B180210009F2D5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01C7127D1A8B0E6200BEACE5 /* Build configuration list for PBXProject "Emporium" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01C7129F1A8B0E6200BEACE5 /* Debug */,
+				01C712A01A8B0E6200BEACE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01C712A11A8B0E6200BEACE5 /* Build configuration list for PBXNativeTarget "Emporium" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01C712A21A8B0E6200BEACE5 /* Debug */,
+				01C712A31A8B0E6200BEACE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 01C7127A1A8B0E6200BEACE5 /* Project object */;
+}

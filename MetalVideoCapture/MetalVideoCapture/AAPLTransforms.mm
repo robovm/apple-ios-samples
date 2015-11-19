@@ -3,8 +3,7 @@
  See LICENSE.txt for this sample’s licensing information
  
  Abstract:
- Utility methods for linear transformations of projective
-  geometry of the left-handed coordinate system.
+ Texture Loading classes for Metal. Includes examples of how to load a 2D, and Cubemap textures.
  */
 
 #pragma mark -

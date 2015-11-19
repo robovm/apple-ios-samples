@@ -4,7 +4,7 @@
  
  Abstract:
  View for Metal Sample Code. Manages screen drawable framebuffers and expects a delegate to repond to render commands to perform drawing.
-*/
+ */
 
 #import "AAPLView.h"
 
@@ -29,11 +29,15 @@
 
 - (void)initCommon
 {
+#ifdef TARGET_IOS
     self.opaque          = YES;
     self.backgroundColor = nil;
-    
     _metalLayer = (CAMetalLayer *)self.layer;
-    
+#else
+    self.wantsLayer = YES;
+    self.layer = _metalLayer = [CAMetalLayer layer];
+#endif
+
     _device = MTLCreateSystemDefaultDevice();
     
     _metalLayer.device          = _device;
@@ -43,10 +47,12 @@
     _metalLayer.framebufferOnly = YES;
 }
 
+#ifdef TARGET_IOS
 - (void)didMoveToWindow
 {
     self.contentScaleFactor = self.window.screen.nativeScale;
 }
+#endif
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -147,6 +153,8 @@
             
             desc.textureType = (_sampleCount > 1) ? MTLTextureType2DMultisample : MTLTextureType2D;
             desc.sampleCount = _sampleCount;
+            desc.usage = MTLTextureUsageUnknown;
+            desc.storageMode = MTLStorageModePrivate;
             
             _depthTex = [_device newTextureWithDescriptor: desc];
         
@@ -224,8 +232,17 @@
         {
             // set the metal layer to the drawable size in case orientation or size changes
             CGSize drawableSize = self.bounds.size;
-            drawableSize.width  *= self.contentScaleFactor;
-            drawableSize.height *= self.contentScaleFactor;
+
+            // scale drawableSize so that drawable is 1:1 width pixels not 1:1 to points
+#ifdef TARGET_IOS
+            UIScreen* screen = self.window.screen ?: [UIScreen mainScreen];
+            drawableSize.width *= screen.nativeScale;
+            drawableSize.height *= screen.nativeScale;
+#else
+            NSScreen* screen = self.window.screen ?: [NSScreen mainScreen];
+            drawableSize.width *= screen.backingScaleFactor;
+            drawableSize.height *= screen.backingScaleFactor;
+#endif
             
             _metalLayer.drawableSize = drawableSize;
             
@@ -244,18 +261,35 @@
     }
 }
 
+#ifdef TARGET_IOS
 - (void)setContentScaleFactor:(CGFloat)contentScaleFactor
 {
     [super setContentScaleFactor:contentScaleFactor];
-    
     _layerSizeDidUpdate = YES;
 }
 
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    
     _layerSizeDidUpdate = YES;
 }
+#else
+- (void)setFrameSize:(NSSize)newSize
+{
+    [super setFrameSize:newSize];
+    _layerSizeDidUpdate = YES;
+}
+
+- (void)setBoundsSize:(NSSize)newSize
+{
+    [super setBoundsSize:newSize];
+    _layerSizeDidUpdate = YES;
+}
+- (void)viewDidChangeBackingProperties
+{
+    [super viewDidChangeBackingProperties];
+    _layerSizeDidUpdate = YES;
+    }
+#endif
 
 @end

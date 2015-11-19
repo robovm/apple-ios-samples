@@ -9,4 +9,5 @@ The primary view controller for this app.
 @import UIKit;
 
 @interface ViewController : UICollectionViewController
+
 @end

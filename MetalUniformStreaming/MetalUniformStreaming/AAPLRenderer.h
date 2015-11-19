@@ -1,12 +1,10 @@
 /*
- Copyright (C) 2014 Apple Inc. All Rights Reserved.
+ Copyright (C) 2015 Apple Inc. All Rights Reserved.
  See LICENSE.txt for this sample’s licensing information
  
  Abstract:
- 
-  A renderer class for visualizing 2 rotating 3d cubes bounded to
+ A renderer class for visualizing 2 rotating 3d cubes bounded to
   a plasma shader.
-  
  */
 
 #import "AAPLView.h"

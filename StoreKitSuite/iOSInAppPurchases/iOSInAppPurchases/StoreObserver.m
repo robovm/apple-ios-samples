@@ -222,7 +222,7 @@ NSString * const IAPPurchaseNotification = @"IAPPurchaseNotification";
     if (error.code != SKErrorPaymentCancelled)
     {
         self.status = IAPRestoredFailed;
-        self.message = [error localizedDescription];
+        self.message = error.localizedDescription;
         [[NSNotificationCenter defaultCenter] postNotificationName:IAPPurchaseNotification object:self];
     }
 }

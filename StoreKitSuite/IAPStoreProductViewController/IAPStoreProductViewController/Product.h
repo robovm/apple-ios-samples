@@ -8,9 +8,6 @@
  
 */
 
-
-#import <Foundation/Foundation.h>
-
 @interface Product : NSObject
 // Products are organized by category
 @property (nonatomic, copy) NSString *category;
@@ -18,7 +15,11 @@
 @property (nonatomic, copy) NSString *title;
 // iTunes identifier of the product
 @property (nonatomic, copy) NSString *productID;
+// App Analytics campagin token
+@property (nonatomic, copy) NSString *campaignToken;
+// App Analytics provider token
+@property (nonatomic, copy) NSString *providerToken;
 
--(instancetype)initWithCategory: (NSString *)category title:(NSString *)title productIdentifier:(NSString *)productID NS_DESIGNATED_INITIALIZER;
+-(instancetype)initWithCategory: (NSString *)category title:(NSString *)title productIdentifier:(NSString *)productID campaignToken:(NSString *)campaignToken providerToken:(NSString *)providerToken NS_DESIGNATED_INITIALIZER;
 
 @end

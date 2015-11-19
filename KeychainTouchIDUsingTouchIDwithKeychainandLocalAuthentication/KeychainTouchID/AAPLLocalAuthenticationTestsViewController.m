@@ -1,13 +1,10 @@
 /*
-Copyright (C) 2014 Apple Inc. All Rights Reserved.
-See LICENSE.txt for this sample’s licensing information
-
-Abstract:
-
- Implements LocalAuthentication framework demo
- 
+    Copyright (C) 2015 Apple Inc. All Rights Reserved.
+    See LICENSE.txt for this sample’s licensing information
+    
+    Abstract:
+    Implements LocalAuthentication framework demo.
 */
-
 
 #import "AAPLLocalAuthenticationTestsViewController.h"
 
@@ -15,28 +12,25 @@ Abstract:
 
 @implementation AAPLLocalAuthenticationTestsViewController
 
-
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     
-    // prepare the actions which can be tested in this class
+    // Prepare the actions which can be tested in this class.
     self.tests = @[
-       [[AAPLTest alloc] initWithName:NSLocalizedString(@"TOUCH_ID_PREFLIGHT", nil) details:@"Using canEvaluatePolicy:" selector:@selector(canEvaluatePolicy)],
-       [[AAPLTest alloc] initWithName:NSLocalizedString(@"TOUCH_ID", nil) details:@"Using evaluatePolicy:" selector:@selector(evaluatePolicy)],
-       [[AAPLTest alloc] initWithName:NSLocalizedString(@"TOUCH_ID_CUSTOM", nil) details:@"Using evaluatePolicy:" selector:@selector(evaluatePolicy2)]
-       ];
+       [[AAPLTest alloc] initWithName:@"Touch ID preflight" details:@"Using canEvaluatePolicy:" selector:@selector(canEvaluatePolicy)],
+       [[AAPLTest alloc] initWithName:@"Touch ID authentication" details:@"Using evaluatePolicy:" selector:@selector(evaluatePolicy)],
+       [[AAPLTest alloc] initWithName:@"Touch ID authentication with custom text" details:@"Using evaluatePolicy:" selector:@selector(evaluatePolicy2)]
+    ];
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
+- (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self.textView scrollRangeToVisible:NSMakeRange([self.textView.text length], 0)];
+    [self.textView scrollRangeToVisible:NSMakeRange(self.textView.text.length, 0)];
 }
 
 -(void)viewDidLayoutSubviews
 {
-    // just set the proper size for the table view based on its content
+    // Set the proper size for the table view based on its content.
     CGFloat height = MIN(self.view.bounds.size.height, self.tableView.contentSize.height);
     self.dynamicViewHeight.constant = height;
     [self.view layoutIfNeeded];
@@ -44,61 +38,59 @@ Abstract:
 
 #pragma mark - Tests
 
-- (void)canEvaluatePolicy
-{
+- (void)canEvaluatePolicy {
     LAContext *context = [[LAContext alloc] init];
-    __block  NSString *msg;
+    __block  NSString *message;
     NSError *error;
     BOOL success;
     
     // test if we can evaluate the policy, this test will tell us if Touch ID is available and enrolled
     success = [context canEvaluatePolicy: LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&error];
     if (success) {
-        msg =[NSString stringWithFormat:NSLocalizedString(@"TOUCH_ID_IS_AVAILABLE", nil)];
-    } else {
-        msg =[NSString stringWithFormat:NSLocalizedString(@"TOUCH_ID_IS_NOT_AVAILABLE", nil)];
+        message = [NSString stringWithFormat:@"Touch ID is available"];
     }
-    [super printResult:self.textView message:msg];
+    else {
+        message = [NSString stringWithFormat:@"Touch ID is not available"];
+    }
     
+    [super printMessage:message inTextView:self.textView];
 }
 
-- (void)evaluatePolicy
-{
+- (void)evaluatePolicy {
     LAContext *context = [[LAContext alloc] init];
-    __block  NSString *msg;
+    __block  NSString *message;
     
-    // show the authentication UI with our reason string
-    [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:NSLocalizedString(@"UNLOCK_ACCESS_TO_LOCKED_FATURE", nil) reply:
-     ^(BOOL success, NSError *authenticationError) {
+    // Show the authentication UI with our reason string.
+    [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:@"Unlock access to locked feature" reply:^(BOOL success, NSError *authenticationError) {
          if (success) {
-             msg =[NSString stringWithFormat:NSLocalizedString(@"EVALUATE_POLICY_SUCCESS", nil)];
-         } else {
-             msg = [NSString stringWithFormat:NSLocalizedString(@"EVALUATE_POLICY_WITH_ERROR", nil), authenticationError.localizedDescription];
+             message = @"evaluatePolicy: succes";
          }
-         [self printResult:self.textView message:msg];
+         else {
+             message = [NSString stringWithFormat:@"evaluatePolicy: %@", authenticationError.localizedDescription];
+         }
+
+         [self printMessage:message inTextView:self.textView];
      }];
-    
 }
 
-- (void)evaluatePolicy2
-{
+- (void)evaluatePolicy2 {
     LAContext *context = [[LAContext alloc] init];
-    __block  NSString *msg;
+    __block NSString *message;
     
-    // set text for the localized fallback button
-    context.localizedFallbackTitle = NSLocalizedString(@"TOUCH_ID_FALLBACK",nil);
+    // Set text for the localized fallback button.
+    context.localizedFallbackTitle = @"Enter PIN";
     
-    // show the authentication UI with our reason string
-    [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:NSLocalizedString(@"UNLOCK_ACCESS_TO_LOCKED_FATURE", nil) reply:
-     ^(BOOL success, NSError *authenticationError) {
+    // Show the authentication UI with our reason string.
+    [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:@"Unlock access to locked feature" reply:^(BOOL success, NSError *authenticationError) {
          if (success) {
-             msg =[NSString stringWithFormat:NSLocalizedString(@"EVALUATE_POLICY_SUCCESS", nil)];
-         } else {
-             msg = [NSString stringWithFormat:NSLocalizedString(@"EVALUATE_POLICY_WITH_ERROR", nil), authenticationError.localizedDescription];
+             message = @"evaluatePolicy: succes";
          }
-         [self printResult:self.textView message:msg];
+         else {
+             message = [NSString stringWithFormat:@"evaluatePolicy: %@", authenticationError.localizedDescription];
+         }
+         
+         [self printMessage:message inTextView:self.textView];
      }];
-    
 }
 
 @end

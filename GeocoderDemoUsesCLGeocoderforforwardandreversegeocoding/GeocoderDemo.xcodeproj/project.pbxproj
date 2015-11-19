@@ -1,0 +1,465 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5303D75913E9EE8400CDDE6C /* DistanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5303D75813E9EE8400CDDE6C /* DistanceViewController.m */; };
+		5303D75C13E9EEC300CDDE6C /* CoordinateSelectorTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5303D75B13E9EEC300CDDE6C /* CoordinateSelectorTableViewController.m */; };
+		53071E9D13E74C8A004DCA39 /* ForwardViewControllerCells.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53071E9B13E74C8A004DCA39 /* ForwardViewControllerCells.xib */; };
+		53071EA013E74F34004DCA39 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53071E9F13E74F34004DCA39 /* CoreLocation.framework */; };
+		5311007213E9F2AC00FB6FEF /* CoordinateSelectorTableViewCells.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5311007013E9F2AC00FB6FEF /* CoordinateSelectorTableViewCells.xib */; };
+		5314E40113E8622C006B8F85 /* PlacemarksListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5314E40013E8622C006B8F85 /* PlacemarksListViewController.m */; };
+		5314E40513E86267006B8F85 /* PlacemarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5314E40413E86267006B8F85 /* PlacemarkViewController.m */; };
+		5314E40713E86403006B8F85 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5314E40613E86403006B8F85 /* MapKit.framework */; };
+		53240F5219ABC6DC0091D98D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53240F5119ABC6DC0091D98D /* Images.xcassets */; };
+		534C79881BCD99D600607092 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 534C79861BCD99D600607092 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
+		534C798B1BCDA67100607092 /* MapCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 534C79891BCDA67100607092 /* MapCell.xib */; settings = {ASSET_TAGS = (); }; };
+		535649421BCD83440044E4BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 535649401BCD83440044E4BB /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
+		5383948A13E7445300F06E33 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5383948913E7445300F06E33 /* UIKit.framework */; };
+		5383948C13E7445300F06E33 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5383948B13E7445300F06E33 /* Foundation.framework */; };
+		5383948E13E7445300F06E33 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5383948D13E7445300F06E33 /* CoreGraphics.framework */; };
+		5383949613E7445300F06E33 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5383949513E7445300F06E33 /* main.m */; };
+		5383949A13E7445300F06E33 /* GeocoderDemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5383949913E7445300F06E33 /* GeocoderDemoAppDelegate.m */; };
+		5383949D13E7445300F06E33 /* ForwardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5383949C13E7445300F06E33 /* ForwardViewController.m */; };
+		538394A413E7445300F06E33 /* ReverseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 538394A313E7445300F06E33 /* ReverseViewController.m */; };
+		53DDF4A81BBB32860091FA97 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DDF4A61BBB32860091FA97 /* Contacts.framework */; };
+		53DDF4A91BBB32860091FA97 /* ContactsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DDF4A71BBB32860091FA97 /* ContactsUI.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5303D75713E9EE8400CDDE6C /* DistanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DistanceViewController.h; sourceTree = "<group>"; };
+		5303D75813E9EE8400CDDE6C /* DistanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DistanceViewController.m; sourceTree = "<group>"; };
+		5303D75A13E9EEC300CDDE6C /* CoordinateSelectorTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoordinateSelectorTableViewController.h; sourceTree = "<group>"; };
+		5303D75B13E9EEC300CDDE6C /* CoordinateSelectorTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoordinateSelectorTableViewController.m; sourceTree = "<group>"; };
+		53071E9F13E74F34004DCA39 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		5314E3FF13E8622C006B8F85 /* PlacemarksListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlacemarksListViewController.h; sourceTree = "<group>"; };
+		5314E40013E8622C006B8F85 /* PlacemarksListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlacemarksListViewController.m; sourceTree = "<group>"; };
+		5314E40313E86267006B8F85 /* PlacemarkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlacemarkViewController.h; sourceTree = "<group>"; };
+		5314E40413E86267006B8F85 /* PlacemarkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlacemarkViewController.m; sourceTree = "<group>"; };
+		5314E40613E86403006B8F85 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		53240F4E19ABBCA10091D98D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		53240F5119ABC6DC0091D98D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		534C79871BCD99D600607092 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = GeocoderDemo/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		534C798A1BCDA67100607092 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MapCell.xib; sourceTree = "<group>"; };
+		5356493C1BCD82F10044E4BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ForwardViewControllerCells.xib; sourceTree = "<group>"; };
+		5356493F1BCD82F10044E4BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/CoordinateSelectorTableViewCells.xib; sourceTree = "<group>"; };
+		535649411BCD83440044E4BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = GeocoderDemo/Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5383948513E7445300F06E33 /* Geocoder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Geocoder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5383948913E7445300F06E33 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5383948B13E7445300F06E33 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5383948D13E7445300F06E33 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5383949113E7445300F06E33 /* GeocoderDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GeocoderDemo-Info.plist"; sourceTree = "<group>"; };
+		5383949513E7445300F06E33 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5383949713E7445300F06E33 /* GeocoderDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GeocoderDemo-Prefix.pch"; sourceTree = "<group>"; };
+		5383949813E7445300F06E33 /* GeocoderDemoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeocoderDemoAppDelegate.h; sourceTree = "<group>"; };
+		5383949913E7445300F06E33 /* GeocoderDemoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeocoderDemoAppDelegate.m; sourceTree = "<group>"; };
+		5383949B13E7445300F06E33 /* ForwardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForwardViewController.h; sourceTree = "<group>"; };
+		5383949C13E7445300F06E33 /* ForwardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForwardViewController.m; sourceTree = "<group>"; };
+		538394A213E7445300F06E33 /* ReverseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReverseViewController.h; sourceTree = "<group>"; };
+		538394A313E7445300F06E33 /* ReverseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReverseViewController.m; sourceTree = "<group>"; };
+		53DDF4A61BBB32860091FA97 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
+		53DDF4A71BBB32860091FA97 /* ContactsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ContactsUI.framework; path = System/Library/Frameworks/ContactsUI.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5383948213E7445300F06E33 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53DDF4A81BBB32860091FA97 /* Contacts.framework in Frameworks */,
+				53DDF4A91BBB32860091FA97 /* ContactsUI.framework in Frameworks */,
+				5314E40713E86403006B8F85 /* MapKit.framework in Frameworks */,
+				53071EA013E74F34004DCA39 /* CoreLocation.framework in Frameworks */,
+				5383948A13E7445300F06E33 /* UIKit.framework in Frameworks */,
+				5383948C13E7445300F06E33 /* Foundation.framework in Frameworks */,
+				5383948E13E7445300F06E33 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5383947A13E7445200F06E33 = {
+			isa = PBXGroup;
+			children = (
+				53240F4E19ABBCA10091D98D /* README.md */,
+				5383948F13E7445300F06E33 /* GeocoderDemo */,
+				5383948813E7445300F06E33 /* Frameworks */,
+				5383948613E7445300F06E33 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5383948613E7445300F06E33 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5383948513E7445300F06E33 /* Geocoder.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5383948813E7445300F06E33 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5383948913E7445300F06E33 /* UIKit.framework */,
+				53DDF4A61BBB32860091FA97 /* Contacts.framework */,
+				53DDF4A71BBB32860091FA97 /* ContactsUI.framework */,
+				5314E40613E86403006B8F85 /* MapKit.framework */,
+				53071E9F13E74F34004DCA39 /* CoreLocation.framework */,
+				5383948B13E7445300F06E33 /* Foundation.framework */,
+				5383948D13E7445300F06E33 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5383948F13E7445300F06E33 /* GeocoderDemo */ = {
+			isa = PBXGroup;
+			children = (
+				5383949813E7445300F06E33 /* GeocoderDemoAppDelegate.h */,
+				5383949913E7445300F06E33 /* GeocoderDemoAppDelegate.m */,
+				538AE3D413F19B3500857AA4 /* Forward Geocode */,
+				538AE3D613F19B4100857AA4 /* Reverse Geocode */,
+				538AE3D713F19B5500857AA4 /* Distance */,
+				538AE3D813F19B6200857AA4 /* Shared */,
+				5383949013E7445300F06E33 /* Supporting Files */,
+			);
+			path = GeocoderDemo;
+			sourceTree = "<group>";
+		};
+		5383949013E7445300F06E33 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5383949113E7445300F06E33 /* GeocoderDemo-Info.plist */,
+				5383949713E7445300F06E33 /* GeocoderDemo-Prefix.pch */,
+				5383949513E7445300F06E33 /* main.m */,
+				53240F5119ABC6DC0091D98D /* Images.xcassets */,
+				534C79861BCD99D600607092 /* Main.storyboard */,
+				535649401BCD83440044E4BB /* LaunchScreen.storyboard */,
+				53071E9B13E74C8A004DCA39 /* ForwardViewControllerCells.xib */,
+				5311007013E9F2AC00FB6FEF /* CoordinateSelectorTableViewCells.xib */,
+				534C79891BCDA67100607092 /* MapCell.xib */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		538AE3D413F19B3500857AA4 /* Forward Geocode */ = {
+			isa = PBXGroup;
+			children = (
+				5383949B13E7445300F06E33 /* ForwardViewController.h */,
+				5383949C13E7445300F06E33 /* ForwardViewController.m */,
+			);
+			name = "Forward Geocode";
+			sourceTree = "<group>";
+		};
+		538AE3D613F19B4100857AA4 /* Reverse Geocode */ = {
+			isa = PBXGroup;
+			children = (
+				538394A213E7445300F06E33 /* ReverseViewController.h */,
+				538394A313E7445300F06E33 /* ReverseViewController.m */,
+			);
+			name = "Reverse Geocode";
+			sourceTree = "<group>";
+		};
+		538AE3D713F19B5500857AA4 /* Distance */ = {
+			isa = PBXGroup;
+			children = (
+				5303D75713E9EE8400CDDE6C /* DistanceViewController.h */,
+				5303D75813E9EE8400CDDE6C /* DistanceViewController.m */,
+				5303D75A13E9EEC300CDDE6C /* CoordinateSelectorTableViewController.h */,
+				5303D75B13E9EEC300CDDE6C /* CoordinateSelectorTableViewController.m */,
+			);
+			name = Distance;
+			sourceTree = "<group>";
+		};
+		538AE3D813F19B6200857AA4 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				5314E40313E86267006B8F85 /* PlacemarkViewController.h */,
+				5314E40413E86267006B8F85 /* PlacemarkViewController.m */,
+				5314E3FF13E8622C006B8F85 /* PlacemarksListViewController.h */,
+				5314E40013E8622C006B8F85 /* PlacemarksListViewController.m */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5383948413E7445300F06E33 /* Geocoder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 538394B713E7445300F06E33 /* Build configuration list for PBXNativeTarget "Geocoder" */;
+			buildPhases = (
+				5383948113E7445300F06E33 /* Sources */,
+				5383948213E7445300F06E33 /* Frameworks */,
+				5383948313E7445300F06E33 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Geocoder;
+			productName = GeocoderDemo;
+			productReference = 5383948513E7445300F06E33 /* Geocoder.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5383947C13E7445200F06E33 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 5383947F13E7445200F06E33 /* Build configuration list for PBXProject "GeocoderDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5383947A13E7445200F06E33;
+			productRefGroup = 5383948613E7445300F06E33 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5383948413E7445300F06E33 /* Geocoder */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5383948313E7445300F06E33 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				534C79881BCD99D600607092 /* Main.storyboard in Resources */,
+				53071E9D13E74C8A004DCA39 /* ForwardViewControllerCells.xib in Resources */,
+				534C798B1BCDA67100607092 /* MapCell.xib in Resources */,
+				535649421BCD83440044E4BB /* LaunchScreen.storyboard in Resources */,
+				53240F5219ABC6DC0091D98D /* Images.xcassets in Resources */,
+				5311007213E9F2AC00FB6FEF /* CoordinateSelectorTableViewCells.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5383948113E7445300F06E33 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5383949613E7445300F06E33 /* main.m in Sources */,
+				5383949A13E7445300F06E33 /* GeocoderDemoAppDelegate.m in Sources */,
+				5383949D13E7445300F06E33 /* ForwardViewController.m in Sources */,
+				538394A413E7445300F06E33 /* ReverseViewController.m in Sources */,
+				5314E40113E8622C006B8F85 /* PlacemarksListViewController.m in Sources */,
+				5314E40513E86267006B8F85 /* PlacemarkViewController.m in Sources */,
+				5303D75913E9EE8400CDDE6C /* DistanceViewController.m in Sources */,
+				5303D75C13E9EEC300CDDE6C /* CoordinateSelectorTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		53071E9B13E74C8A004DCA39 /* ForwardViewControllerCells.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5356493C1BCD82F10044E4BB /* Base */,
+			);
+			name = ForwardViewControllerCells.xib;
+			sourceTree = "<group>";
+		};
+		5311007013E9F2AC00FB6FEF /* CoordinateSelectorTableViewCells.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5356493F1BCD82F10044E4BB /* Base */,
+			);
+			name = CoordinateSelectorTableViewCells.xib;
+			sourceTree = "<group>";
+		};
+		534C79861BCD99D600607092 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				534C79871BCD99D600607092 /* Base */,
+			);
+			name = Main.storyboard;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		534C79891BCDA67100607092 /* MapCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				534C798A1BCDA67100607092 /* Base */,
+			);
+			name = MapCell.xib;
+			sourceTree = "<group>";
+		};
+		535649401BCD83440044E4BB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				535649411BCD83440044E4BB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			path = ..;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		538394B513E7445300F06E33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = YES;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				"WARNING_CFLAGS[arch=*]" = "-Wno-arc-performSelector-leaks";
+			};
+			name = Debug;
+		};
+		538394B613E7445300F06E33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				"WARNING_CFLAGS[arch=*]" = "-Wno-arc-performSelector-leaks";
+			};
+			name = Release;
+		};
+		538394B813E7445300F06E33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GeocoderDemo/GeocoderDemo-Prefix.pch";
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				INFOPLIST_FILE = "GeocoderDemo/GeocoderDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		538394B913E7445300F06E33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GeocoderDemo/GeocoderDemo-Prefix.pch";
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				INFOPLIST_FILE = "GeocoderDemo/GeocoderDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5383947F13E7445200F06E33 /* Build configuration list for PBXProject "GeocoderDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				538394B513E7445300F06E33 /* Debug */,
+				538394B613E7445300F06E33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		538394B713E7445300F06E33 /* Build configuration list for PBXNativeTarget "Geocoder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				538394B813E7445300F06E33 /* Debug */,
+				538394B913E7445300F06E33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5383947C13E7445200F06E33 /* Project object */;
+}

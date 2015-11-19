@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="af2-R1-wnZ">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Viewer View Controller-->
+        <scene sceneID="dTt-RO-jAM">
+            <objects>
+                <viewController id="af2-R1-wnZ" customClass="KMLViewerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="A1J-zj-62g"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tbz-Ra-Wi2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ldR-I2-srK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="msl-vq-smR">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <outlet property="delegate" destination="af2-R1-wnZ" id="xPZ-hc-6lT"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Tbz-Ra-Wi2" firstAttribute="top" secondItem="msl-vq-smR" secondAttribute="bottom" id="Pvp-7f-beq"/>
+                            <constraint firstItem="msl-vq-smR" firstAttribute="top" secondItem="A1J-zj-62g" secondAttribute="bottom" constant="-20" id="Rua-Uz-J89"/>
+                            <constraint firstItem="msl-vq-smR" firstAttribute="leading" secondItem="ldR-I2-srK" secondAttribute="leadingMargin" constant="-16" id="YrI-PJ-lID"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="msl-vq-smR" secondAttribute="trailing" constant="-16" id="wUE-uu-Ffe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="map" destination="msl-vq-smR" id="Qhv-Cj-CC0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="307-Zz-EFD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052" y="651"/>
+        </scene>
+    </scenes>
+</document>

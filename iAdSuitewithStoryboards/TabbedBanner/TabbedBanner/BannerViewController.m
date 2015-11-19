@@ -122,10 +122,14 @@ NSString * const BannerViewActionDidFinish = @"BannerViewActionDidFinish";
 
 #pragma mark -
 
-@implementation BannerViewManager {
-    ADBannerView *_bannerView;
-    NSMutableSet *_bannerViewControllers;
-}
+@interface BannerViewManager ()
+
+@property (nonatomic, strong) ADBannerView *bannerView;
+@property (nonatomic, strong) NSMutableSet *bannerViewControllers;
+
+@end
+
+@implementation BannerViewManager
 
 + (BannerViewManager *)sharedInstance
 {
@@ -143,31 +147,31 @@ NSString * const BannerViewActionDidFinish = @"BannerViewActionDidFinish";
     if (self != nil) {
         // On iOS 6 ADBannerView introduces a new initializer, use it when available.
         if ([ADBannerView instancesRespondToSelector:@selector(initWithAdType:)]) {
-            _bannerView = [[ADBannerView alloc] initWithAdType:ADAdTypeBanner];
+            self.bannerView = [[ADBannerView alloc] initWithAdType:ADAdTypeBanner];
         } else {
-            _bannerView = [[ADBannerView alloc] init];
+            self.bannerView = [[ADBannerView alloc] init];
         }
-        _bannerView.delegate = self;
-        _bannerViewControllers = [[NSMutableSet alloc] init];
+        self.bannerView.delegate = self;
+        self.bannerViewControllers = [[NSMutableSet alloc] init];
     }
     return self;
 }
 
 - (void)addBannerViewController:(BannerViewController *)controller
 {
-    [_bannerViewControllers addObject:controller];
+    [self.bannerViewControllers addObject:controller];
 }
 
 - (void)removeBannerViewController:(BannerViewController *)controller
 {
-    [_bannerViewControllers removeObject:controller];
+    [self.bannerViewControllers removeObject:controller];
 }
 
 - (void)bannerViewDidLoadAd:(ADBannerView *)banner
 {
     NSLog(@"bannerViewDidLoadAd");
     
-    for (BannerViewController *bvc in _bannerViewControllers) {
+    for (BannerViewController *bvc in self.bannerViewControllers) {
         [bvc updateLayout];
     }
 }
@@ -176,7 +180,7 @@ NSString * const BannerViewActionDidFinish = @"BannerViewActionDidFinish";
 {
     NSLog(@"didFailToReceiveAdWithError %@", error);
     
-    for (BannerViewController *bvc in _bannerViewControllers) {
+    for (BannerViewController *bvc in self.bannerViewControllers) {
         [bvc updateLayout];
     }
 }

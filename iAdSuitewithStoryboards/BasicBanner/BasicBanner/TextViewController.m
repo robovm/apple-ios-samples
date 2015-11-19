@@ -15,31 +15,30 @@ A simple view controller that manages a content view and an ADBannerView.
 @property (nonatomic, weak) IBOutlet UIView *contentView;
 
 // contentView's vertical bottom constraint, used to alter the contentView's vertical size when ads arrive
-@property (nonatomic, strong) IBOutlet NSLayoutConstraint *bottomConstraint;
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint *bottomConstraint;
 
 @property (nonatomic, weak) IBOutlet UITextView *textView;
 @property (nonatomic, weak) IBOutlet UILabel *timerLabel;
 
-@end
+@property (nonatomic, strong) ADBannerView *bannerView;
+@property (nonatomic, strong) NSTimer *timer;
+@property (nonatomic, assign) CFTimeInterval ticks;
 
+@end
 
 #pragma mark -
 
-@implementation TextViewController {
-    ADBannerView *_bannerView;
-    NSTimer *_timer;
-    CFTimeInterval _ticks;
-}
+@implementation TextViewController
 
 - (void)layoutAnimated:(BOOL)animated {
     CGRect contentFrame = self.view.bounds;
 
     // all we need to do is ask the banner for a size that fits into the layout area we are using
-    CGSize sizeForBanner = [_bannerView sizeThatFits:contentFrame.size];
+    CGSize sizeForBanner = [self.bannerView sizeThatFits:contentFrame.size];
     
     // compute the ad banner frame
-    CGRect bannerFrame = _bannerView.frame;
-    if (_bannerView.bannerLoaded) {
+    CGRect bannerFrame = self.bannerView.frame;
+    if (self.bannerView.bannerLoaded) {
         
         // bring the ad into view
         contentFrame.size.height -= sizeForBanner.height;   // shrink down content frame to fit the banner below it
@@ -61,8 +60,8 @@ A simple view controller that manages a content view and an ADBannerView.
     }
 
     [UIView animateWithDuration:animated ? 0.25 : 0.0 animations:^{
-        [_contentView layoutIfNeeded];
-        _bannerView.frame = bannerFrame;
+        [self.contentView layoutIfNeeded];
+        self.bannerView.frame = bannerFrame;
     }];
 }
 
@@ -72,8 +71,8 @@ A simple view controller that manages a content view and an ADBannerView.
 }
 
 - (void)startTimer {
-    if (_timer == nil) {
-        _timer = [NSTimer scheduledTimerWithTimeInterval:0.1
+    if (self.timer == nil) {
+        self.timer = [NSTimer scheduledTimerWithTimeInterval:0.1
                                                   target:self
                                                 selector:@selector(timerTick:)
                                                 userInfo:nil
@@ -82,17 +81,17 @@ A simple view controller that manages a content view and an ADBannerView.
 }
 
 - (void)stopTimer {
-    [_timer invalidate];
-    _timer = nil;
+    [self.timer invalidate];
+    self.timer = nil;
 }
 
 - (void)timerTick:(NSTimer *)timer {
     // Timers are not guaranteed to tick at the nominal rate specified, so this isn't technically accurate.
     // However, this is just an example to demonstrate how to stop some ongoing activity, so we can live with that inaccuracy.
-    _ticks += 0.1;
-    double seconds = fmod(_ticks, 60.0);
-    double minutes = fmod(trunc(_ticks / 60.0), 60.0);
-    double hours = trunc(_ticks / 3600.0);
+    self.ticks += 0.1;
+    double seconds = fmod(self.ticks, 60.0);
+    double minutes = fmod(trunc(self.ticks / 60.0), 60.0);
+    double hours = trunc(self.ticks / 3600.0);
     self.timerLabel.text = [NSString stringWithFormat:@"%02.0f:%02.0f:%04.1f", hours, minutes, seconds];
 }
 
@@ -106,8 +105,8 @@ A simple view controller that manages a content view and an ADBannerView.
     else {
         _bannerView = [[ADBannerView alloc] init];
     }
-    _bannerView.delegate = self;
-    [self.view addSubview:_bannerView];
+    self.bannerView.delegate = self;
+    [self.view addSubview:self.bannerView];
     
     NSDictionary *ipsums =
         [NSDictionary dictionaryWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"ipsums" withExtension:@"plist"]];

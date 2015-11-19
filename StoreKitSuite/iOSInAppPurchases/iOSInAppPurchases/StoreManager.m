@@ -71,7 +71,7 @@ NSString * const IAPProductRequestNotification = @"IAPProductRequestNotification
     
     // The products array contains products whose identifiers have been recognized by the App Store.
     // As such, they can be purchased. Create an "AVAILABLE PRODUCTS" model object.
-    if ([response.products count] > 0)
+    if ((response.products).count > 0)
     {
         model = [[MyModel alloc] initWithName:@"AVAILABLE PRODUCTS" elements:response.products];
         [self.productRequestResponse addObject:model];
@@ -80,7 +80,7 @@ NSString * const IAPProductRequestNotification = @"IAPProductRequestNotification
     
     // The invalidProductIdentifiers array contains all product identifiers not recognized by the App Store.
     // Create an "INVALID PRODUCT IDS" model object.
-    if ([response.invalidProductIdentifiers count] > 0)
+    if ((response.invalidProductIdentifiers).count > 0)
     {
         model = [[MyModel alloc] initWithName:@"INVALID PRODUCT IDS" elements:response.invalidProductIdentifiers];
         [self.productRequestResponse addObject:model];
@@ -97,7 +97,7 @@ NSString * const IAPProductRequestNotification = @"IAPProductRequestNotification
 - (void)request:(SKRequest *)request didFailWithError:(NSError *)error
 {
     // Prints the cause of the product request failure
-    NSLog(@"Product Request Status: %@",[error localizedDescription]);
+    NSLog(@"Product Request Status: %@",error.localizedDescription);
 }
 
 

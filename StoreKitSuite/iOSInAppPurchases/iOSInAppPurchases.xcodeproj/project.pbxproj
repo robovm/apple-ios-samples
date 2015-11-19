@@ -11,6 +11,7 @@
 		EB062A03196B3BAC00F73A79 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB062A02196B3BAC00F73A79 /* main.m */; };
 		EB062A07196B3BAC00F73A79 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB062A06196B3BAC00F73A79 /* AppDelegate.m */; };
 		EB062A09196B3BAC00F73A79 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB062A08196B3BAC00F73A79 /* Images.xcassets */; };
+		EB4AC7ED1B6C3A3C0072320B /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB4AC7EC1B6C3A3C0072320B /* Launch Screen.xib */; };
 		EBD87A271975B319007E5E98 /* iOSInAppPurchases.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBD87A291975B319007E5E98 /* iOSInAppPurchases.storyboard */; };
 		EBF30CFC196B4DB60055AF16 /* iOSProductsList.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF30CFB196B4DB60055AF16 /* iOSProductsList.m */; };
 		EBF30CFF196B4DC00055AF16 /* iOSPurchasesList.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF30CFE196B4DC00055AF16 /* iOSPurchasesList.m */; };
@@ -32,8 +33,10 @@
 		EB062A06196B3BAC00F73A79 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		EB062A08196B3BAC00F73A79 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EB45BB901AA67B2000BAB061 /* ReadMe.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
+		EB4AC7EC1B6C3A3C0072320B /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
+		EB4AC7EE1B6C3A460072320B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/iOSInAppPurchases.storyboard; sourceTree = "<group>"; };
+		EB4AC7F01B6C3A4B0072320B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/iOSInAppPurchases.strings; sourceTree = "<group>"; };
 		EBAA3C091B02BFFA00519D40 /* IAPTableViewDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IAPTableViewDataSource.h; sourceTree = "<group>"; };
-		EBD87A281975B319007E5E98 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/iOSInAppPurchases.storyboard; sourceTree = "<group>"; };
 		EBF30CFA196B4DB60055AF16 /* iOSProductsList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iOSProductsList.h; sourceTree = "<group>"; };
 		EBF30CFB196B4DB60055AF16 /* iOSProductsList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iOSProductsList.m; sourceTree = "<group>"; };
 		EBF30CFD196B4DC00055AF16 /* iOSPurchasesList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iOSPurchasesList.h; sourceTree = "<group>"; };
@@ -99,6 +102,7 @@
 				EBF30D0B196B4DD50055AF16 /* StoreObserver.h */,
 				EBF30D0C196B4DD50055AF16 /* StoreObserver.m */,
 				EBAA3C091B02BFFA00519D40 /* IAPTableViewDataSource.h */,
+				EB4AC7EC1B6C3A3C0072320B /* Launch Screen.xib */,
 				EB062A08196B3BAC00F73A79 /* Images.xcassets */,
 				EB0629FD196B3BAC00F73A79 /* Supporting Files */,
 			);
@@ -144,7 +148,7 @@
 		EB0629EB196B3BAC00F73A79 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = EB0629EE196B3BAC00F73A79 /* Build configuration list for PBXProject "iOSInAppPurchases" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -152,6 +156,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = EB0629EA196B3BAC00F73A79;
 			productRefGroup = EB0629F4196B3BAC00F73A79 /* Products */;
@@ -172,6 +177,7 @@
 				EB062A01196B3BAC00F73A79 /* InfoPlist.strings in Resources */,
 				EB062A09196B3BAC00F73A79 /* Images.xcassets in Resources */,
 				EBF30D10196B4DE20055AF16 /* ProductIds.plist in Resources */,
+				EB4AC7ED1B6C3A3C0072320B /* Launch Screen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,7 +214,8 @@
 		EBD87A291975B319007E5E98 /* iOSInAppPurchases.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				EBD87A281975B319007E5E98 /* en */,
+				EB4AC7EE1B6C3A460072320B /* Base */,
+				EB4AC7F01B6C3A4B0072320B /* en */,
 			);
 			name = iOSInAppPurchases.storyboard;
 			sourceTree = "<group>";
@@ -234,6 +241,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -248,7 +256,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -280,7 +288,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -296,7 +304,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOSInAppPurchases/iOSInAppPurchases-Prefix.pch";
 				INFOPLIST_FILE = "iOSInAppPurchases/iOSInAppPurchases-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -312,7 +321,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOSInAppPurchases/iOSInAppPurchases-Prefix.pch";
 				INFOPLIST_FILE = "iOSInAppPurchases/iOSInAppPurchases-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
