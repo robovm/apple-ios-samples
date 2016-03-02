@@ -1,52 +1,23 @@
 /*
-     File: AppDelegate.m
- Abstract: Configures the Core Data persistence stack and starts the RSS importer.
-  Version: 1.4
+ Copyright (C) 2015 Apple Inc. All Rights Reserved.
+ See LICENSE.txt for this sample’s licensing information
  
- Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
- Inc. ("Apple") in consideration of your agreement to the following
- terms, and your use, installation, modification or redistribution of
- this Apple software constitutes acceptance of these terms.  If you do
- not agree with these terms, please do not use, install, modify or
- redistribute this Apple software.
- 
- In consideration of your agreement to abide by the following terms, and
- subject to these terms, Apple grants you a personal, non-exclusive
- license, under Apple's copyrights in this original Apple software (the
- "Apple Software"), to use, reproduce, modify and redistribute the Apple
- Software, with or without modifications, in source and/or binary forms;
- provided that if you redistribute the Apple Software in its entirety and
- without modifications, you must retain this notice and the following
- text and disclaimers in all such redistributions of the Apple Software.
- Neither the name, trademarks, service marks or logos of Apple Inc. may
- be used to endorse or promote products derived from the Apple Software
- without specific prior written permission from Apple.  Except as
- expressly stated in this notice, no other rights or licenses, express or
- implied, are granted by Apple herein, including but not limited to any
- patent rights that may be infringed by your derivative works or by other
- works in which the Apple Software may be incorporated.
- 
- The Apple Software is provided by Apple on an "AS IS" basis.  APPLE
- MAKES NO WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
- THE IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY AND FITNESS
- FOR A PARTICULAR PURPOSE, REGARDING THE APPLE SOFTWARE OR ITS USE AND
- OPERATION ALONE OR IN COMBINATION WITH YOUR PRODUCTS.
- 
- IN NO EVENT SHALL APPLE BE LIABLE FOR ANY SPECIAL, INDIRECT, INCIDENTAL
- OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
- SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
- INTERRUPTION) ARISING IN ANY WAY OUT OF THE USE, REPRODUCTION,
- MODIFICATION AND/OR DISTRIBUTION OF THE APPLE SOFTWARE, HOWEVER CAUSED
- AND WHETHER UNDER THEORY OF CONTRACT, TORT (INCLUDING NEGLIGENCE),
- STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
- POSSIBILITY OF SUCH DAMAGE.
- 
- Copyright (C) 2013 Apple Inc. All Rights Reserved.
- 
+ Abstract:
+ Configures the Core Data persistence stack and starts the RSS importer.
  */
 
 #import "AppDelegate.h"
 #import "SongsViewController.h"
+
+
+// String used to identify the update object in the user defaults storage.
+static NSString * const kLastStoreUpdateKey = @"LastStoreUpdate";
+
+// Get the RSS feed for the first time or if the store is older than kRefreshTimeInterval seconds.
+static NSTimeInterval const kRefreshTimeInterval = 3600;
+
+// The number of songs to be retrieved from the RSS feed.
+static NSUInteger const kImportSize = 300;
 
 @interface AppDelegate()
 
@@ -68,20 +39,16 @@
 
 @implementation AppDelegate
 
-// String used to identify the update object in the user defaults storage.
-static NSString * const kLastStoreUpdateKey = @"LastStoreUpdate";
+// The app delegate must implement the window @property
+// from UIApplicationDelegate @protocol to use a main storyboard file.
+//
+@synthesize window;
 
-// Get the RSS feed for the first time or if the store is older than kRefreshTimeInterval seconds.
-static NSTimeInterval const kRefreshTimeInterval = 3600;
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(nullable NSDictionary *)launchOptions {
 
-// The number of songs to be retrieved from the RSS feed.
-static NSUInteger const kImportSize = 300;
-
-- (void)applicationDidFinishLaunching:(UIApplication *)application {
-    
     // check the last update, stored in NSUserDefaults
     NSDate *lastUpdate = [[NSUserDefaults standardUserDefaults] objectForKey:kLastStoreUpdateKey];
-    if (lastUpdate == nil || -[lastUpdate timeIntervalSinceNow] > kRefreshTimeInterval) {
+    if (lastUpdate == nil || -lastUpdate.timeIntervalSinceNow > kRefreshTimeInterval) {
         
         // remove the old store; easier than deleting every object
         // first, test for an existing store
@@ -96,7 +63,7 @@ static NSUInteger const kImportSize = 300;
         self.importer.delegate = self;
         // pass the coordinator so the importer can create its own managed object context
         self.importer.persistentStoreCoordinator = self.persistentStoreCoordinator;
-        self.importer.iTunesURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://ax.phobos.apple.com.edgesuite.net/WebObjects/MZStore.woa/wpa/MRSS/newreleases/limit=%d/rss.xml", kImportSize]];
+        self.importer.iTunesURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://ax.phobos.apple.com.edgesuite.net/WebObjects/MZStore.woa/wpa/MRSS/newreleases/limit=%ld/rss.xml", (unsigned long)kImportSize]];
         [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
         
         // add the importer to an operation queue for background processing (works on a separate thread)
@@ -107,6 +74,8 @@ static NSUInteger const kImportSize = 300;
     UINavigationController *navController = (UINavigationController *)self.window.rootViewController;
     _songsViewController = (SongsViewController *)navController.visibleViewController;
     self.songsViewController.managedObjectContext = self.managedObjectContext;
+    
+    return YES;
 }
 
 - (NSOperationQueue *)operationQueue {
@@ -126,7 +95,6 @@ static NSUInteger const kImportSize = 300;
 // in the following article: 
 // http://developer.apple.com/iphone/library/documentation/DataManagement/Conceptual/iPhoneCoreData01/Articles/01_StartingOut.html
 //
-
 - (NSPersistentStoreCoordinator *)persistentStoreCoordinator {
     
     if (_persistentStoreCoordinator == nil) {
@@ -143,7 +111,7 @@ static NSUInteger const kImportSize = 300;
     
     if (_managedObjectContext == nil) {
         _managedObjectContext = [[NSManagedObjectContext alloc] init];
-        [self.managedObjectContext setPersistentStoreCoordinator:self.persistentStoreCoordinator];
+        (self.managedObjectContext).persistentStoreCoordinator = self.persistentStoreCoordinator;
     }
     return _managedObjectContext;
 }
@@ -152,7 +120,7 @@ static NSUInteger const kImportSize = 300;
     
     if (_persistentStorePath == nil) {
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        NSString *documentsDirectory = [paths lastObject];
+        NSString *documentsDirectory = paths.lastObject;
         _persistentStorePath = [documentsDirectory stringByAppendingPathComponent:@"TopSongs.sqlite"];
     }
     return _persistentStorePath;
@@ -175,9 +143,10 @@ static NSUInteger const kImportSize = 300;
 // Helper method for main-thread processing of import completion.
 - (void)handleImportCompletion {
     
-    // Store the current time as the time of the last import. This will be used to determine whether an
-    // import is necessary when the application runs.
+    // Store the current time as the time of the last import.
+    // This will be used to determine whether an import is necessary when the application runs.
     [[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:kLastStoreUpdateKey];
+    
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     self.importer = nil;
 }
@@ -195,17 +164,19 @@ static NSUInteger const kImportSize = 300;
     self.importer = nil;
     
     // handle errors as appropriate to your application, here we just alert the user
-    //
-    NSString *errorMessage = [error localizedDescription];
+    NSString *errorMessage = error.localizedDescription;
     NSString *alertTitle = NSLocalizedString(@"Error", @"Title for alert displayed when download or parse error occurs.");
-    NSString *okTitle = NSLocalizedString(@"OK ", @"OK Title for alert displayed when download or parse error occurs.");
+    NSString *okTitle = NSLocalizedString(@"OK", @"OK");
     
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:alertTitle
-                                                        message:errorMessage
-                                                       delegate:nil
-                                              cancelButtonTitle:okTitle
-                                              otherButtonTitles:nil];
-    [alertView show];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:alertTitle message:errorMessage preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *action = [UIAlertAction actionWithTitle:okTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction *act) {
+        [self.window.rootViewController dismissViewControllerAnimated:YES completion:nil];
+    }];
+    
+    [alert addAction:action];
+    
+    [self.window.rootViewController presentViewController:alert animated:YES completion:nil];
 }
 
 // This method will be called on a secondary thread. Forward to the main thread for safe handling of UIKit objects.

@@ -1,5 +1,5 @@
 <!--
-Copyright (C) 2015 Apple Inc. All Rights Reserved.
+Copyright (C) 2016 Apple Inc. All Rights Reserved.
 See LICENSE.txt for this sample’s licensing information
 
 Abstract:
@@ -15,69 +15,77 @@ The main HTML file of the CloudKit Catalog sample app.
 <body>
     <div id="main" class="main-pane">
         <div class="background-strip"></div>
-        <div class="left-pane">
-            <div class="home"><div class="icon"></div></div>
-            <div class="vertical-scroll-container">
+        <div class="left-pane" id="left-pane">
+            <div class="home">
+                <div class="icon" id="home-icon"></div>
+                <div class="toggle-buttons">
+                    <div class="expand-button left-pane-toggle-button" id="expand-left-column">&#9002;</div>
+                    <div class="contract-button left-pane-toggle-button hide" id="contract-left-column">&#9001;</div>
+                </div>
+                <div class="mask"></div>
+            </div>
+            <div class="left-bar-wrapper">
+                <div class="vertical-scroll-container">
                 <div class="menu-items">
                     <div class="menu-item-container readme">
                         <div class="border"></div>
-                        <a class="menu-item" href="#readme">
+                        <a class="menu-item" href="#readme" title="README">
                             <div class="icon"></div>
                             <div class="name">README</div>
                         </a>
                     </div>
                     <div class="menu-item-container authentication">
                         <div class="border"></div>
-                        <a class="menu-item" href="#authentication">
+                        <a class="menu-item" href="#authentication" title="Authentication">
                             <div class="icon"></div>
                             <div class="name">Authentication</div>
                         </a>
                     </div>
                     <div class="menu-item-container discoverability">
                         <div class="border"></div>
-                        <a class="menu-item" href="#discoverability">
+                        <a class="menu-item" href="#discoverability" title="Discoverability">
                             <div class="icon"></div>
                             <div class="name">Discoverability</div>
                         </a>
                     </div>
                     <div class="menu-item-container public-query">
                         <div class="border"></div>
-                        <a class="menu-item" href="#public-query">
+                        <a class="menu-item" href="#public-query" title="Query">
                             <div class="icon"></div>
                             <div class="name">Query</div>
                         </a>
                     </div>
                     <div class="menu-item-container private-zones">
                         <div class="border"></div>
-                        <a class="menu-item" href="#private-zones">
+                        <a class="menu-item" href="#private-zones" title="Zones">
                             <div class="icon"></div>
                             <div class="name">Zones</div>
                         </a>
                     </div>
                     <div class="menu-item-container private-records">
                         <div class="border"></div>
-                        <a class="menu-item" href="#private-records">
+                        <a class="menu-item" href="#private-records" title="Records">
                             <div class="icon"></div>
                             <div class="name">Records</div>
                         </a>
                     </div>
                     <div class="menu-item-container private-sync">
                         <div class="border"></div>
-                        <a class="menu-item" href="#private-sync">
+                        <a class="menu-item" href="#private-sync" title="Sync">
                             <div class="icon"></div>
                             <div class="name">Sync</div>
                         </a>
                     </div>
                     <div class="menu-item-container private-subscriptions">
                         <div class="border"></div>
-                        <a class="menu-item" href="#private-subscriptions">
+                        <a class="menu-item" href="#private-subscriptions" title="Subscriptions">
                             <div class="icon"></div>
                             <div class="name">Subscriptions</div>
                         </a>
                     </div>
                     <div class="menu-item-container notifications">
                         <div class="border"></div>
-                        <a class="menu-item" href="#notifications">
+                        <a class="menu-item" href="#notifications" title="Notifications">
                             <div class="icon"></div>
                             <div class="name with-subtitle">Notifications</div>
                             <div class="subtitle" id="connected-text">Disconnected</div>
@@ -88,11 +96,12 @@ The main HTML file of the CloudKit Catalog sample app.
                     </div>
                 </div>
             </div>
-            <a class="menu-item documentation" href="https://developer.apple.com/library/prerelease/ios/documentation/CloudKitJS/Reference/CloudKitJavaScriptReference/index.html
-" target="_blank">
-                <div class="icon"></div>
-                <div class="name">Documentation</div>
-            </a>
+                <a class="menu-item documentation" href="https://developer.apple.com/library/prerelease/ios/documentation/CloudKitJS/Reference/CloudKitJavaScriptReference/index.html
+" target="_blank" title="Documentation">
+                    <div class="icon"></div>
+                    <div class="name">Documentation</div>
+                </a>
+            </div>
         </div>
         <div class="right-pane">
             <div class="header">
@@ -184,7 +193,9 @@ The main HTML file of the CloudKit Catalog sample app.
                 <h4>Class: Database</h4>
                 <h1>.saveRecord()</h1>
                 <p>This sample demonstrates how an authenticated user can save a record to his/her private database. Our example
-                    records are of type <b>Items</b>.</p>
+                    records are of type <b>Items</b>. Leave the recordName field blank to let the server generate a record name. Leave the
+                    recordChangeTag field blank when creating a new record and supply the latest server change tag when modifying an existing
+                    record.</p>
             </div>
             <div class="description">
                 <h4>Class: Database</h4>
@@ -300,11 +311,11 @@ The main HTML file of the CloudKit Catalog sample app.
     // Change this to a container identifier you own.
     containerIdentifier: 'com.example.apple-samplecode.cloudkit-catalog',
 
-    // And generate an API token through CloudKit Dashboard.
-    apiToken: '&lt;insert your token here&gt;',
+    apiTokenAuth: {
+      // And generate a web token through CloudKit Dashboard.
+      webToken: '&lt;insert your token here&gt;',
 
-    auth: {
-      persist: true // Store the session in a cookie.
+      persist: true // Sets a cookie.
     },
 
     environment: 'development'
@@ -321,8 +332,7 @@ The main HTML file of the CloudKit Catalog sample app.
                 </ul>
                 <p>You can do this as well as generate an API token through the
                     <a href="https://icloud.developer.apple.com/dashboard/">CloudKit Dashboard</a>.
-                    CloudKit Web Services is only available for the development container until the release of iOS 9, so you should leave the config option
-                    <code>environment = 'development'</code> for now.</p>
+                </p>
 
                 <h2>Obtaining the CloudKit JS library</h2>
                 <p>CloudKit JS is hosted at

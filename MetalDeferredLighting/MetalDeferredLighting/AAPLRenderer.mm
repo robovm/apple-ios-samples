@@ -31,81 +31,82 @@ static const int kMaxFrameLag = 3;
 
 @implementation AAPLRenderer
 {
-    id <MTLCommandQueue>        _commandQueue;
-    id <MTLLibrary>             _defaultLibrary;
-    CFTimeInterval              _frameTime;
-    dispatch_semaphore_t        _inflight_semaphore;
+    id <MTLCommandQueue>           _commandQueue;
+    id <MTLLibrary>                _defaultLibrary;
+    CFTimeInterval                 _frameTime;
+    dispatch_semaphore_t           _inflight_semaphore;
+    
+    float4                         _fairyColors[kNumFairies];
+    float                          _fairyAngles[kNumFairies];
+    float                          _fairyPhases[kNumFairies];
+    float                          _fairySpeeds[kNumFairies];
+    
+    LightFragmentInputs            _lightData[kNumFairies+1];
+    
+    float3                         _sunColor;
+    ClearColorBuffers              _clear_color_buffers;
+    float                          _structureCameraRotationRate;
+    float                          _skyboxCameraRotationRate;
+    float                          _skyboxScale;
+    float                          _structureScale;
+    float4x4                       _projectionMatrix;
+    
+    id<MTLDepthStencilState>       _noDepthStencilState;
+    id<MTLDepthStencilState>       _lightMaskStencilState;
+    id<MTLDepthStencilState>       _lightColorStencilState;
+    id<MTLDepthStencilState>       _lightColorStencilStateNoDepth;
+    id<MTLDepthStencilState>       _gBufferDepthStencilState;
+    id<MTLDepthStencilState>       _shadowDepthStencilState;
+    id<MTLDepthStencilState>       _compositionDepthState;
+    
+    MTLRenderPassDescriptor*       _shadowRenderPassDescriptor;
+    id<MTLTexture>                 _shadow_texture;
+    
+    id<MTLRenderPipelineState>     _shadow_render_pipeline;
+    id<MTLRenderPipelineState>     _skybox_render_pipeline;
+    id<MTLRenderPipelineState>     _gbuffer_render_pipeline;
+    id<MTLRenderPipelineState>     _light_mask_pipeline;
+    id<MTLRenderPipelineState>     _light_color_pipeline;
+    id<MTLRenderPipelineState>     _composition_pipeline;
+    id<MTLRenderPipelineState>     _fairy_pipeline;
+    id<MTLRenderPipelineState>     _texture_copy_pipeline;
+    
+    id<MTLTexture>                 _skyboxTexture;
+    id<MTLTexture>                 _fairyTexture;
+    NSMutableArray*                _structureModelGroupDiffuseTextures;
+    NSMutableArray*                _structureModelGroupSpecularTextures;
+    NSMutableArray*                _structureModelGroupBumpTextures;
+    
+    NSMutableDictionary*           _texture2DCache;
 
-    float4                      _fairyColors[kNumFairies];
-    float                       _fairyAngles[kNumFairies];
-    float                       _fairyPhases[kNumFairies];
-    float                       _fairySpeeds[kNumFairies];
+    id<MTLBuffer>                  _skyboxVertexBuffer;
+    id<MTLBuffer>                  _quadPositionBuffer;
+    id<MTLBuffer>                  _quadTexcoordBuffer;
+    id<MTLBuffer>                  _structureVertexBuffer;
+    id<MTLBuffer>                  _structureIndexBuffer;
+    id<MTLBuffer>                  _lightModelVertexBuffer;
+    id<MTLBuffer>                  _lightModelIndexBuffer;
+    id<MTLBuffer>                  _spriteBuffer;
     
-    LightFragmentInputs         _lightData[kNumFairies+1];
+    NSMutableArray<id<MTLBuffer>>* _lightModelMatrixBuffers;
+    NSMutableArray<id<MTLBuffer>>* _lightDataBuffers;
+    NSMutableArray<id<MTLBuffer>>* _sunDataBuffers;
+    NSMutableArray<id<MTLBuffer>>* _skyboxMatrixBuffers;
+    NSMutableArray<id<MTLBuffer>>* _modelMatricesBuffers;
+    NSMutableArray<id<MTLBuffer>>* _zOnlyProjectionBuffers;
+    NSMutableArray<id<MTLBuffer>>* _fairySpriteBuffers;
     
-    float3                      _sunColor;
-    ClearColorBuffers           _clear_color_buffers;
-    float                       _structureCameraRotationRate;
-    float                       _skyboxCameraRotationRate;
-    float                       _skyboxScale;
-    float                       _structureScale;
-    float4x4                    _projectionMatrix;
+    id<MTLBuffer>                  _clearColorBuffer1;
+    id<MTLBuffer>                  _clearColorBuffer2;
     
-    id<MTLDepthStencilState>    _noDepthStencilState;
-    id<MTLDepthStencilState>    _lightMaskStencilState;
-    id<MTLDepthStencilState>    _lightColorStencilState;
-    id<MTLDepthStencilState>    _lightColorStencilStateNoDepth;
-    id<MTLDepthStencilState>    _gBufferDepthStencilState;
-    id<MTLDepthStencilState>    _shadowDepthStencilState;
-    id<MTLDepthStencilState>    _compositionDepthState;
+    AAPLOBJModel*                  _structureModel;
+    AAPLOBJModelGroup*             _structureModelGroup;
     
-    MTLRenderPassDescriptor*    _shadowRenderPassDescriptor;
-    id<MTLTexture>              _shadow_texture;
+    MTLIndexType                   _structureModelGroupIndexDataType;
+    int                            _fairyCount;
     
-    id<MTLRenderPipelineState>  _shadow_render_pipeline;
-    id<MTLRenderPipelineState>  _skybox_render_pipeline;
-    id<MTLRenderPipelineState>  _gbuffer_render_pipeline;
-    id<MTLRenderPipelineState>  _light_mask_pipeline;
-    id<MTLRenderPipelineState>  _light_color_pipeline;
-    id<MTLRenderPipelineState>  _composition_pipeline;
-    id<MTLRenderPipelineState>  _fairy_pipeline;
-    id<MTLRenderPipelineState>  _texture_copy_pipeline;
-    
-    id<MTLTexture>              _skyboxTexture;
-    id<MTLTexture>              _fairyTexture;
-    NSMutableArray*             _structureModelGroupDiffuseTextures;
-    NSMutableArray*             _structureModelGroupSpecularTextures;
-    NSMutableArray*             _structureModelGroupBumpTextures;
-    
-    id<MTLBuffer>               _skyboxVertexBuffer;
-    id<MTLBuffer>               _quadPositionBuffer;
-    id<MTLBuffer>               _quadTexcoordBuffer;
-    id<MTLBuffer>               _structureVertexBuffer;
-    id<MTLBuffer>               _structureIndexBuffer;
-    id<MTLBuffer>               _lightModelVertexBuffer;
-    id<MTLBuffer>               _lightModelIndexBuffer;
-    id<MTLBuffer>               _spriteBuffer;
-    
-    NSMutableArray*             _lightModelMatrixBuffers;
-    NSMutableArray*             _lightDataBuffers;
-    NSMutableArray*             _sunDataBuffers;
-    NSMutableArray*             _skyboxMatrixBuffers;
-    NSMutableArray*             _modelMatricesBuffers;
-    NSMutableArray*             _zOnlyProjectionBuffers;
-    NSMutableArray*             _fairySpriteBuffers;
-    
-    id<MTLBuffer>               _clearColorBuffer1;
-    id<MTLBuffer>               _clearColorBuffer2;
-    
-    AAPLOBJModel*               _structureModel;
-    AAPLOBJModelGroup*          _structureModelGroup;
-    
-    MTLIndexType                _structureModelGroupIndexDataType;
-    int                         _fairyCount;
-    
-    int                         _numFrames;
-    int                         _currFrameIndex;
-}
+    int                            _numFrames;
+    int                            _currFrameIndex;}
 
 - (instancetype)init
 {
@@ -144,6 +145,8 @@ static const int kMaxFrameLag = 3;
         _structureModelGroupBumpTextures = [[NSMutableArray alloc] initWithCapacity: 10];
         _structureModelGroupDiffuseTextures = [[NSMutableArray alloc] initWithCapacity: 10];
         _structureModelGroupSpecularTextures = [[NSMutableArray alloc] initWithCapacity: 10];
+        
+        _texture2DCache = [NSMutableDictionary dictionaryWithCapacity:8];
         
         _lightDataBuffers = [[NSMutableArray alloc] initWithCapacity: kMaxFrameLag];
         _lightModelMatrixBuffers = [[NSMutableArray alloc] initWithCapacity: kMaxFrameLag];
@@ -199,6 +202,7 @@ static const int kMaxFrameLag = 3;
     
     MTLTextureDescriptor *shadowTextureDesc = [MTLTextureDescriptor texture2DDescriptorWithPixelFormat: MTLPixelFormatDepth32Float width: 1024 height: 1024 mipmapped: NO];
     _shadow_texture   =  [_device newTextureWithDescriptor: shadowTextureDesc];
+    [_shadow_texture setLabel:@"shadow map"];
     
     _shadowRenderPassDescriptor = [MTLRenderPassDescriptor new];
     MTLRenderPassDepthAttachmentDescriptor *shadow_attachment = _shadowRenderPassDescriptor.depthAttachment;
@@ -367,6 +371,7 @@ static const int kMaxFrameLag = 3;
     sprite.con_scale_intensity[2] = 2.0f;
     
     _spriteBuffer = [_device newBufferWithBytes:&sprite length:sizeof(SpriteData) options:0];
+    [_spriteBuffer setLabel:@"sprite data"];
     
     float texcoords[] =
     {
@@ -420,7 +425,9 @@ static const int kMaxFrameLag = 3;
     };
     
     _quadPositionBuffer = [_device newBufferWithBytes:quadVerts length:sizeof(quadVerts) options:0];
+    [_quadPositionBuffer setLabel:@"quad vertices"];
     _quadTexcoordBuffer = [_device newBufferWithBytes:texcoords length:sizeof(texcoords) options:0];
+    [_quadTexcoordBuffer setLabel:@"quad texcoords"];
     
     NSBundle *bundle = [NSBundle mainBundle];
     NSString *bundlePath = [bundle pathForResource: @"Temple" ofType: @"obj"];
@@ -431,7 +438,9 @@ static const int kMaxFrameLag = 3;
     assert(_structureModelGroup);
     
     _structureVertexBuffer   =  [_device newBufferWithBytes:[[_structureModel vertexData] bytes] length:[[_structureModel vertexData] length] options:0];
+    [_structureVertexBuffer setLabel:@"structure vertices"];
     _structureIndexBuffer    =  [_device newBufferWithBytes:[[_structureModelGroup indexData] bytes] length:[[_structureModelGroup indexData] length] options:0];
+    [_structureIndexBuffer setLabel:@"structure indices"];
     
     _structureModelGroupIndexDataType = MTLIndexTypeUInt16;
     if([_structureModelGroup bytesPerIndex] == 4)
@@ -503,6 +512,7 @@ static const int kMaxFrameLag = 3;
     };
     
     _skyboxVertexBuffer = [_device newBufferWithBytes:vdata length:sizeof(vdata) options:0];
+    [_skyboxVertexBuffer setLabel:@"skybox vertices"];
     
     // set up icosahedron for point lights
     float X = 0.5 / Utilities::inscribe;
@@ -577,36 +587,55 @@ static const int kMaxFrameLag = 3;
     };
     
     _lightModelVertexBuffer = [_device newBufferWithBytes:lightVdata length:sizeof(lightVdata) options:0];
+    [_lightModelVertexBuffer setLabel:@"light model vertices"];
     _lightModelIndexBuffer = [_device newBufferWithBytes:tindices length:sizeof(tindices) options:0];
+    [_lightModelIndexBuffer setLabel:@"light model indices"];
     
     //Constant Buffers
     _clearColorBuffer1 = [_device newBufferWithBytes:&((float&)_clear_color_buffers) length:sizeof(_clear_color_buffers) options:0];
+    [_clearColorBuffer1 setLabel:@"clear color buffer 1"];
     _clearColorBuffer2 = [_device newBufferWithBytes:&((float&)_clear_color_buffers.light_buffer_clear_color.x) length:sizeof(_clear_color_buffers.light_buffer_clear_color) options:0];
+    [_clearColorBuffer2 setLabel:@"clear color buffer 2"];
     
     //Setup dynamic constant buffers
     for(int i = 0; i < _numFrames; i++)
     {
         [_zOnlyProjectionBuffers addObject: [_device newBufferWithLength: sizeof(float4x4) options:0]];
+        [[_zOnlyProjectionBuffers lastObject] setLabel:@"z-only projection"];
         [_skyboxMatrixBuffers addObject: [_device newBufferWithLength: sizeof(float4x4) options:0]];
+        [[_skyboxMatrixBuffers lastObject] setLabel:@"skybox matrix"];
         [_modelMatricesBuffers addObject: [_device newBufferWithLength: sizeof(ModelMatrices) options:0]];
+        [[_modelMatricesBuffers lastObject] setLabel:@"model matrices"];
         [_lightModelMatrixBuffers addObject: [_device newBufferWithLength: sizeof(LightModelMatrices)* _fairyCount options:0]];
+        [[_lightModelMatrixBuffers lastObject] setLabel:@"light model matrices"];
         [_lightDataBuffers addObject: [_device newBufferWithLength: sizeof(LightFragmentInputs)*(_fairyCount + 1) options:0]];
+        [[_lightDataBuffers lastObject] setLabel:@"light fragment inputs"];
         [_sunDataBuffers addObject: [_device newBufferWithLength: sizeof(MaterialSunData) options:0]];
+        [[_sunDataBuffers lastObject] setLabel:@"sun data"];
         [_fairySpriteBuffers addObject: [_device newBufferWithLength: sizeof(float4x4) options:0]];
+        [[_fairySpriteBuffers lastObject] setLabel:@"fairy sprite transform"];
     }
     
     //Load other model data and textures
     bundlePath = [bundle pathForResource:@"skybox" ofType:@"png"];
     _skyboxTexture = [self loadCubeTextureWithName:[bundlePath UTF8String]];
+    [_skyboxTexture setLabel:@"skybox"];
     
     bundlePath = [bundle pathForResource:@"fairy" ofType:@"png"];
     _fairyTexture = [self load2DTextureWithName:[bundlePath UTF8String] pixelFormat:MTLPixelFormatR8Unorm];
+    [_fairyTexture setLabel:@"fairy"];
     
     [self loadModel];
 }
 
 - (id<MTLTexture>)load2DTextureWithName:(const char *)name pixelFormat:(MTLPixelFormat) format
 {
+    NSString *hashKey = [NSString stringWithFormat:@"%s@%d", name, (int)format];
+    id<MTLTexture> texture = _texture2DCache[hashKey];
+    if (texture)
+    {
+        return texture;
+    }
     
     ImageInfo tex_info;
     CreateImageInfo(name, tex_info);
@@ -618,7 +647,7 @@ static const int kMaxFrameLag = 3;
         RGB8ImageToRGBA8(&tex_info);
     }
     
-    id<MTLTexture> texture = [_device newTextureWithDescriptor: [MTLTextureDescriptor texture2DDescriptorWithPixelFormat: format width: tex_info.width height: tex_info.height mipmapped: NO]];
+    texture =[_device newTextureWithDescriptor: [MTLTextureDescriptor texture2DDescriptorWithPixelFormat: format width: tex_info.width height: tex_info.height mipmapped: NO]];
     
     [texture replaceRegion:MTLRegionMake2D(0, 0, tex_info.width, tex_info.height)
                mipmapLevel:0
@@ -626,6 +655,8 @@ static const int kMaxFrameLag = 3;
                bytesPerRow:tex_info.width * tex_info.bitsPerPixel / 8];
     
     free(tex_info.bitmapData);
+    
+    _texture2DCache[hashKey] = texture;
     
     return texture;
 }
@@ -683,7 +714,9 @@ static const int kMaxFrameLag = 3;
                 NSArray *compAry = [diffuseMapResourceNameAndType componentsSeparatedByString: @"."];
                 NSBundle *bundle = [NSBundle mainBundle];
                 NSString *bundlePath = [bundle pathForResource: [compAry objectAtIndex: 0] ofType: [compAry objectAtIndex: 1]];
-                [_structureModelGroupDiffuseTextures addObject: [self load2DTextureWithName:[bundlePath UTF8String] pixelFormat:MTLPixelFormatRGBA8Unorm]];
+                id<MTLTexture> texture = [self load2DTextureWithName:[bundlePath UTF8String] pixelFormat:MTLPixelFormatRGBA8Unorm];
+                [texture setLabel:[[bundlePath lastPathComponent] stringByDeletingPathExtension]];
+                [_structureModelGroupDiffuseTextures addObject: texture];
             }
             
             if ([[materialUsage material] specularMapName])
@@ -692,7 +725,9 @@ static const int kMaxFrameLag = 3;
                 NSArray *compAry = [specularMapResourceNameAndType componentsSeparatedByString: @"."];
                 NSBundle *bundle = [NSBundle mainBundle];
                 NSString *bundlePath = [bundle pathForResource: [compAry objectAtIndex: 0] ofType: [compAry objectAtIndex: 1]];
-                [_structureModelGroupSpecularTextures addObject: [self load2DTextureWithName:[bundlePath UTF8String] pixelFormat:MTLPixelFormatRGBA8Unorm]];
+                id<MTLTexture> texture = [self load2DTextureWithName:[bundlePath UTF8String] pixelFormat:MTLPixelFormatRGBA8Unorm];
+                [texture setLabel:[[bundlePath lastPathComponent] stringByDeletingPathExtension]];
+                [_structureModelGroupSpecularTextures addObject: texture];
             }
             
             if ([[materialUsage material] bumpMapName])
@@ -701,8 +736,9 @@ static const int kMaxFrameLag = 3;
                 NSArray *compAry = [bumpMapResourceNameAndType componentsSeparatedByString: @"."];
                 NSBundle *bundle = [NSBundle mainBundle];
                 NSString *bundlePath = [bundle pathForResource: [compAry objectAtIndex: 0] ofType: [compAry objectAtIndex: 1]];
-                
-                [_structureModelGroupBumpTextures addObject: [self load2DTextureWithName:[bundlePath UTF8String] pixelFormat:MTLPixelFormatRGBA8Unorm]];
+                id<MTLTexture> texture = [self load2DTextureWithName:[bundlePath UTF8String] pixelFormat:MTLPixelFormatRGBA8Unorm];
+                [texture setLabel:[[bundlePath lastPathComponent] stringByDeletingPathExtension]];
+                [_structureModelGroupBumpTextures addObject: texture];
                 
             }
             i++;
@@ -966,7 +1002,7 @@ static const int kMaxFrameLag = 3;
 {
     // called by the view when orientation changes or layer is updated
     
-    float aspect = fabsf(view.bounds.size.width / view.bounds.size.height);
+    float aspect = fabs(view.bounds.size.width / view.bounds.size.height);
     _projectionMatrix = perspective_fov(75.0f, aspect, 0.1f, 25.0f);
 }
 
@@ -1036,7 +1072,7 @@ static const int kMaxFrameLag = 3;
         double fairyTime = time / _fairySpeeds[i] + _fairyPhases[i];
         fairyTime -= floor(fairyTime);
         
-        float fairyAlpha = MIN((0.5 - fabsf(0.5f - fairyTime)) * 8.0f, 1.0f);
+        float fairyAlpha = MIN((0.5 - fabs(0.5f - fairyTime)) * 8.0f, 1.0f);
         float r = 0.5 + 2.0 * powf(fairyTime, 5.0f);
         
         _lightData[i].light_position = {cosf(_fairyAngles[i]) * r, (float)(fairyTime * 6.0f), sinf(_fairyAngles[i]) * r, 1.0f};

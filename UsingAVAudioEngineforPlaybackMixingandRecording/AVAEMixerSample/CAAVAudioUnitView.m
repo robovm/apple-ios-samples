@@ -3,7 +3,7 @@
     See LICENSE.txt for this sample’s licensing information
     
     Abstract:
-    AVAudioUnitView
+    This subclass of UIView adds rounded corners to the view
 */
 
 #import "CAAVAudioUnitView.h"
@@ -11,18 +11,17 @@
 
 @implementation CAAVAudioUnitView
 
-- (instancetype)initWithCoder:(NSCoder *)aDecoder {
-    self = [super initWithCoder: aDecoder];
-    if (self) {
-        UIBezierPath *fillPath = [UIBezierPath bezierPathWithRoundedRect: self.bounds byRoundingCorners:(UIRectCorner)(UIRectCornerTopLeft | UIRectCornerTopRight) cornerRadii:CGSizeMake(kRoundedCornerRadius, kRoundedCornerRadius)];
-            
-        CAShapeLayer *pathLayer = [[CAShapeLayer alloc] init];
-        pathLayer.path = fillPath.CGPath;
-        pathLayer.frame = fillPath.bounds;
-            
-        self.layer.mask = pathLayer;       
-    }
-    return self;
+- (void)setNeedsLayout
+{
+    [super setNeedsLayout];
+    
+    UIBezierPath *fillPath = [UIBezierPath bezierPathWithRoundedRect: self.bounds byRoundingCorners:(UIRectCorner)(UIRectCornerAllCorners) cornerRadii:CGSizeMake(kRoundedCornerRadius, kRoundedCornerRadius)];
+    
+    CAShapeLayer *pathLayer = [[CAShapeLayer alloc] init];
+    pathLayer.path = fillPath.CGPath;
+    pathLayer.frame = fillPath.bounds;
+    
+    self.layer.mask = pathLayer;
 }
 
 @end

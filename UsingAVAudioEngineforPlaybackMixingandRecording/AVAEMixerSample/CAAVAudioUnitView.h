@@ -3,7 +3,7 @@
     See LICENSE.txt for this sample’s licensing information
     
     Abstract:
-    AVAudioUnitView
+    This subclass of UIView adds rounded corners to the view
 */
 
 @import UIKit;

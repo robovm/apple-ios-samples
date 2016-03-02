@@ -1,5 +1,5 @@
 /*
-    Copyright (C) 2015 Apple Inc. All Rights Reserved.
+    Copyright (C) 2016 Apple Inc. All Rights Reserved.
     See LICENSE.txt for this sample’s licensing information
     
     Abstract:
@@ -18,7 +18,7 @@ import Foundation
     version of Lister to unarchive a `ListItem` instance that was archived in the Swift version.
 */
 @objc(AAPLListItem)
-final public class ListItem: NSObject, NSCoding, NSCopying, CustomDebugStringConvertible {
+final public class ListItem: NSObject, NSCoding, NSCopying {
     // MARK: Types
     
     /**

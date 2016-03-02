@@ -1,7 +1,9 @@
 /*
- Copyright (C) 2015 Apple Inc. All Rights Reserved.
+ Copyright (C) 2016 Apple Inc. All Rights Reserved.
  See LICENSE.txt for this sample’s licensing information
-
+ 
+ Abstract:
+ The primary view controller containing the MKMapView, adding and removing both MKPinAnnotationViews through its toolbar.
  */
 
 #import "MapViewController.h"
@@ -9,6 +11,7 @@
 
 #import "SFAnnotation.h"            // annotation for the city of San Francisco
 #import "BridgeAnnotation.h"        // annotation for the Golden Gate bridge
+#import "WharfAnnotation.h"         // annotation for Fisherman's Wharf
 #import "CustomAnnotation.h"        // annotation for the Tea Garden
 
 @interface MapViewController () <MKMapViewDelegate, UIPopoverPresentationControllerDelegate>
@@ -53,8 +56,8 @@
 	temporaryBarButtonItem.title = @"Back";
 	self.navigationItem.backBarButtonItem = temporaryBarButtonItem;
     
-    // create out annotations array (in this example only 3)
-    self.mapAnnotations = [[NSMutableArray alloc] initWithCapacity:3];
+    // create out annotations array
+    self.mapAnnotations = [[NSMutableArray alloc] init];
     
     // annotation for the City of San Francisco
     SFAnnotation *sfAnnotation = [[SFAnnotation alloc] init];
@@ -63,6 +66,10 @@
     // annotation for Golden Gate Bridge
     BridgeAnnotation *bridgeAnnotation = [[BridgeAnnotation alloc] init];
     [self.mapAnnotations addObject:bridgeAnnotation];
+    
+    // annotation for Fisherman's Wharf
+    WharfAnnotation *wharfAnnotation = [[WharfAnnotation alloc] init];
+    [self.mapAnnotations addObject:wharfAnnotation];
     
     // annotation for Japanese Tea Garden
     CustomAnnotation *item = [[CustomAnnotation alloc] init];
@@ -106,6 +113,12 @@
     [self gotoByAnnotationClass:[BridgeAnnotation class]];
 }
 
+- (IBAction)wharfAction:(id)sender
+{
+    // user tapped "Wharf" button in the bottom toolbar
+    [self gotoByAnnotationClass:[WharfAnnotation class]];
+}
+
 - (IBAction)teaGardenAction:(id)sender
 {
     // user tapped "Tea Gardon" button in the bottom toolbar
@@ -119,7 +132,7 @@
     // remove any annotations that exist
     [self.mapView removeAnnotations:self.mapView.annotations];
     
-    // add all 3 annotations
+    // add all the custom annotations
     [self.mapView addAnnotations:self.mapAnnotations];
     
     [self gotoDefaultLocation];
@@ -206,7 +219,7 @@
     // in case it's the user location, we already have an annotation, so just return nil
     if (![annotation isKindOfClass:[MKUserLocation class]])
     {
-        // handle our three custom annotations
+        // handle our custom annotations
         //
         if ([annotation isKindOfClass:[BridgeAnnotation class]]) // for Golden Gate Bridge
         {
@@ -222,6 +235,14 @@
             UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
             [rightButton addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
             returnedAnnotationView.rightCalloutAccessoryView = rightButton;
+        }
+        else if ([annotation isKindOfClass:[WharfAnnotation class]]) // for Fisherman's Wharf
+        {
+            returnedAnnotationView = [WharfAnnotation createViewAnnotationForMapView:self.mapView annotation:annotation];
+            
+            // provide an image view to use as the accessory view's detail view.
+            UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"wharf"]];
+            returnedAnnotationView.detailCalloutAccessoryView = imageView;
         }
         else if ([annotation isKindOfClass:[SFAnnotation class]])   // for City of San Francisco
         {

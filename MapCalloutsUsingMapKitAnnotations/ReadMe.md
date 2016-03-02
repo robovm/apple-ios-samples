@@ -2,11 +2,19 @@
 
 ## Abstract
 
-Demonstrates the use of the MapKit framework for iOS and OS X, displaying a map view with custom MKAnnotations each with custom callouts or custom MKAnnotationViews.  An annotation object on a map is any object that conforms to the MKAnnotation protocol and is displayed on the screen as a MKAnnotationView.  Through the use of the MKAnnotation protocol and MKAnnotationView, this application shows how you can extend annotations with custom strings and left/right calloutAccessoryViews.
+Demonstrates the use of the MapKit framework for iOS and OS X, displaying a map view with custom MKAnnotations each with custom callouts or custom MKAnnotationViews.  An annotation object on a map is any object that conforms to the MKAnnotation protocol and is displayed on the screen as a MKAnnotationView.  Through the use of the MKAnnotation protocol and MKAnnotationView, this application shows how you can extend annotations with custom views, strings and callout accessory views.
 
 ## Discussion
 
-This sample implements two different variations of MKPinAnnotationViews each with their own specific information.  One shows how to use a rightCalloutAccessoryView with a UIButtonTypeDetailDisclosure button and other with leftCalloutAccessoryView containing an image.
+This sample implements different variations of MKPinAnnotationView each with their own specific information:
+
+  - BridgeAnnotation - shows a button in the rightCalloutAccessoryView.
+
+  - WharfAnnotation - shows an image view in the detailCalloutAccessoryView.
+
+  - SFAnnotation - uses a a custom flag image as its annotation and shows an image view in the leftCalloutAccessoryView.
+  
+  - CustomAnnotation - uses a custom view subclass, CustomAnnotationView, as its annotation.
 
 ## Building the Sample
 

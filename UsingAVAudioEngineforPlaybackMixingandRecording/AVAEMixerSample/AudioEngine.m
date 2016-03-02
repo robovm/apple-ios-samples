@@ -1,41 +1,50 @@
 /*
-    Copyright (C) 2015 Apple Inc. All Rights Reserved.
-    See LICENSE.txt for this sample’s licensing information
-    
-    Abstract:
-    AudioEngine is the main controller class that creates the following objects:
-                    AVAudioEngine       *_engine;
-                    AVAudioPlayerNode   *_marimbaPlayer;
-                    AVAudioPlayerNode   *_drumPlayer;
-                    AVAudioUnitDelay    *_delay;
-                    AVAudioUnitReverb   *_reverb;
-                    AVAudioPCMBuffer    *_marimbaLoopBuffer;
-                    AVAudioPCMBuffer    *_drumLoopBuffer;
-                    
-                 It connects all the nodes, loads the buffers as well as controls the AVAudioEngine object itself.
-*/
+ Copyright (C) 2015 Apple Inc. All Rights Reserved.
+ See LICENSE.txt for this sample’s licensing information
+ 
+ Abstract:
+ AudioEngine is the main controller class that creates the following objects:
+                 AVAudioEngine               *_engine;
+                 AVAudioUnitSampler          *_sampler;
+                 AVAudioUnitDistortion       *_distortion;
+                 AVAudioUnitReverb           *_reverb;
+                 AVAudioPlayerNode           *_player;
+  
+                 AVAudioSequencer            *_sequencer;
+                 AVAudioPCMBuffer            *_playerLoopBuffer;
+  
+             It connects all the nodes, loads the buffers as well as controls the AVAudioEngine object itself.
+ */
 
 #import "AudioEngine.h"
 
 @import AVFoundation;
-@import Accelerate;
 
 #pragma mark AudioEngine class extensions
 
 @interface AudioEngine() {
-    AVAudioEngine       *_engine;
-    AVAudioPlayerNode   *_marimbaPlayer;
-    AVAudioPlayerNode   *_drumPlayer;
-    AVAudioUnitDelay    *_delay;
-    AVAudioUnitReverb   *_reverb;
-    AVAudioPCMBuffer    *_marimbaLoopBuffer;
-    AVAudioPCMBuffer    *_drumLoopBuffer;
+    // AVAudioEngine and AVAudioNodes
+    AVAudioEngine           *_engine;
+    AVAudioUnitSampler      *_sampler;
+    AVAudioUnitDistortion   *_distortion;
+    AVAudioUnitReverb       *_reverb;
+    AVAudioPlayerNode       *_player;
+    
+    // the sequencer
+    AVAudioSequencer        *_sequencer;
+    double                  _sequencerTrackLengthSeconds;
+    
+    // buffer for the player
+    AVAudioPCMBuffer        *_playerLoopBuffer;
     
     // for the node tap
-    NSURL               *_mixerOutputFileURL;
-    AVAudioPlayerNode   *_mixerOutputFilePlayer;
-    BOOL                _mixerOutputFilePlayerIsPaused;
-    BOOL                _isRecording;
+    NSURL                   *_mixerOutputFileURL;
+    BOOL                    _isRecording;
+    BOOL                    _isRecordingSelected;
+    
+    // mananging session and configuration changes
+    BOOL                    _isSessionInterrupted;
+    BOOL                    _isConfigChangePending;
 }
 
 - (void)handleInterruption:(NSNotification *)notification;
@@ -50,60 +59,84 @@
 - (instancetype)init
 {
     if (self = [super init]) {
+        NSError *error;
+        BOOL success = NO;
+        
+        // AVAudioSession setup
+        [self initAVAudioSession];
+        
+        _isSessionInterrupted = NO;
+        _isConfigChangePending = NO;
+        
         // create the various nodes
         
         /*  AVAudioPlayerNode supports scheduling the playback of AVAudioBuffer instances,
-            or segments of audio files opened via AVAudioFile. Buffers and segments may be
-            scheduled at specific points in time, or to play immediately following preceding segments. */
+         or segments of audio files opened via AVAudioFile. Buffers and segments may be
+         scheduled at specific points in time, or to play immediately following preceding segments. */
         
-        _marimbaPlayer = [[AVAudioPlayerNode alloc] init];
-        _drumPlayer = [[AVAudioPlayerNode alloc] init];
+        _player = [[AVAudioPlayerNode alloc] init];
         
-        /*  A delay unit delays the input signal by the specified time interval
-            and then blends it with the input signal. The amount of high frequency
-            roll-off can also be controlled in order to simulate the effect of
-            a tape delay. */
+        /* The AVAudioUnitSampler class encapsulates Apple's Sampler Audio Unit. The sampler audio unit can be configured by loading different types of instruments such as an “.aupreset” file, a DLS or SF2 sound bank, an EXS24 instrument, a single audio file or with an array of audio files. The output is a single stereo bus. */
         
-        _delay = [[AVAudioUnitDelay alloc] init];
+        NSURL *bankURL = [NSURL fileURLWithPath:[[NSBundle bundleForClass:[self class]] pathForResource:@"gs_instruments" ofType:@"dls"]];
+        _sampler = [[AVAudioUnitSampler alloc] init];
+        [_sampler loadSoundBankInstrumentAtURL:bankURL program:0 bankMSB:0x79 bankLSB:0 error:&error];
+        
+        /* An AVAudioUnitEffect that implements a multi-stage distortion effect */
+
+        _distortion = [[AVAudioUnitDistortion alloc] init];
         
         /*  A reverb simulates the acoustic characteristics of a particular environment.
-            Use the different presets to simulate a particular space and blend it in with
-            the original signal using the wetDryMix parameter. */
+         Use the different presets to simulate a particular space and blend it in with
+         the original signal using the wetDryMix parameter. */
         
         _reverb = [[AVAudioUnitReverb alloc] init];
         
-        _mixerOutputFilePlayer = [[AVAudioPlayerNode alloc] init];
-        
-        _mixerOutputFileURL = nil;
-        _mixerOutputFilePlayerIsPaused = NO;
-        _isRecording = NO;
-        
-        // create an instance of the engine and attach the nodes
-        [self createEngineAndAttachNodes];
-        
-        NSError *error;
-        
-        // load marimba loop
-        NSURL *marimbaLoopURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"marimbaLoop" ofType:@"caf"]];
-        AVAudioFile *marimbaLoopFile = [[AVAudioFile alloc] initForReading:marimbaLoopURL error:&error];
-        _marimbaLoopBuffer = [[AVAudioPCMBuffer alloc] initWithPCMFormat:[marimbaLoopFile processingFormat] frameCapacity:(AVAudioFrameCount)[marimbaLoopFile length]];
-        NSAssert([marimbaLoopFile readIntoBuffer:_marimbaLoopBuffer error:&error], @"couldn't read marimbaLoopFile into buffer, %@", [error localizedDescription]);
-        
-        // load drum loop
+        // load drumloop into a buffer for the playernode
         NSURL *drumLoopURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"drumLoop" ofType:@"caf"]];
         AVAudioFile *drumLoopFile = [[AVAudioFile alloc] initForReading:drumLoopURL error:&error];
-        _drumLoopBuffer = [[AVAudioPCMBuffer alloc] initWithPCMFormat:[drumLoopFile processingFormat] frameCapacity:(AVAudioFrameCount)[drumLoopFile length]];
-        NSAssert([drumLoopFile readIntoBuffer:_drumLoopBuffer error:&error], @"couldn't read drumLoopFile into buffer, %@", [error localizedDescription]);
+        _playerLoopBuffer = [[AVAudioPCMBuffer alloc] initWithPCMFormat:[drumLoopFile processingFormat] frameCapacity:(AVAudioFrameCount)[drumLoopFile length]];
+        success = [drumLoopFile readIntoBuffer:_playerLoopBuffer error:&error];
+        NSAssert(success, @"couldn't read drumLoopFile into buffer, %@", [error localizedDescription]);
+        
+        _mixerOutputFileURL = nil;
+        _isRecording = NO;
+        _isRecordingSelected = NO;
+        
+        // create engine and attach nodes
+        [self createEngineAndAttachNodes];
+        
+        // make engine connections
+        [self makeEngineConnections];
+        
+        //create the audio sequencer
+        [self createAndSetupSequencer];
+        
+        // settings for effects units
+        _reverb.wetDryMix = 100;
+        [_reverb loadFactoryPreset:AVAudioUnitReverbPresetMediumHall];
+        
+        [_distortion loadFactoryPreset:AVAudioUnitDistortionPresetDrumsBitBrush];
+        _distortion.wetDryMix = 100;
+        self.samplerEffectVolume = 0.0;
         
         // sign up for notifications from the engine if there's a hardware config change
         [[NSNotificationCenter defaultCenter] addObserverForName:AVAudioEngineConfigurationChangeNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
             
             // if we've received this notification, something has changed and the engine has been stopped
             // re-wire all the connections and start the engine
-            NSLog(@"Received a %@ notification!", AVAudioEngineConfigurationChangeNotification);
-            NSLog(@"Re-wiring connections and starting once again");
-            [self makeEngineConnections];
-            [self startEngine];
+            
+            _isConfigChangePending = YES;
+            
+            if (!_isSessionInterrupted) {
+                NSLog(@"Received a %@ notification!", AVAudioEngineConfigurationChangeNotification);
+                NSLog(@"Re-wiring connections and starting once again");
+                [self makeEngineConnections];
+                [self startEngine];
+            }
+            else {
+                NSLog(@"Session is interrupted, deferring changes");
+            }
             
             // post notification
             if ([self.delegate respondsToSelector:@selector(engineConfigurationHasChanged)]) {
@@ -111,48 +144,70 @@
             }
         }];
         
-        // AVAudioSession setup
-        [self initAVAudioSession];
-        
-        // make engine connections
-        [self makeEngineConnections];
-        
-        // settings for effects units
-        [_reverb loadFactoryPreset:AVAudioUnitReverbPresetMediumHall3];
-        _delay.delayTime = 0.5;
-        _delay.wetDryMix = 0.0;
-        
         // start the engine
         [self startEngine];
     }
     return self;
 }
 
+#pragma mark AVAudioSequencer Setup
+
+- (void)createAndSetupSequencer
+{
+    BOOL success = NO;
+    NSError *error;
+    /* A collection of MIDI events organized into AVMusicTracks, plus a player to play back the events.
+     NOTE: The sequencer must be created after the engine is initialized and an instrument node is attached and connected
+     */
+    _sequencer = [[AVAudioSequencer alloc] initWithAudioEngine:_engine];
+    
+    // load sequencer loop
+    NSURL *midiFileURL = [NSURL fileURLWithPath:[[NSBundle bundleForClass:[self class]] pathForResource:@"bluesyRiff" ofType:@"mid"]];
+    NSAssert(midiFileURL, @"couldn't find midi file");
+    success = [_sequencer loadFromURL:midiFileURL options:AVMusicSequenceLoadSMF_PreserveTracks error:&error];
+    NSAssert(success, @"couldn't load midi file, %@", error.localizedDescription);
+    
+    // enable looping on all the sequencer tracks
+    _sequencerTrackLengthSeconds = 0;
+    [_sequencer.tracks enumerateObjectsUsingBlock:^(AVMusicTrack * __nonnull track, NSUInteger idx, BOOL * __nonnull stop) {
+        track.loopingEnabled = true;
+        track.numberOfLoops = AVMusicTrackLoopCountForever;
+        const float trackLengthInSeconds = track.lengthInSeconds;
+        if (_sequencerTrackLengthSeconds < trackLengthInSeconds) {
+            _sequencerTrackLengthSeconds = trackLengthInSeconds;
+        }
+    }];
+    
+    [_sequencer prepareToPlay];
+
+}
+
+#pragma mark AVAudioEngine Setup
+
 - (void)createEngineAndAttachNodes
 {
     /*  An AVAudioEngine contains a group of connected AVAudioNodes ("nodes"), each of which performs
-		an audio signal generation, processing, or input/output task.
-		
-		Nodes are created separately and attached to the engine.
-
-		The engine supports dynamic connection, disconnection and removal of nodes while running,
-		with only minor limitations:
-		- all dynamic reconnections must occur upstream of a mixer
-		- while removals of effects will normally result in the automatic connection of the adjacent
-			nodes, removal of a node which has differing input vs. output channel counts, or which
-			is a mixer, is likely to result in a broken graph. */
-
+     an audio signal generation, processing, or input/output task.
+     
+     Nodes are created separately and attached to the engine.
+     
+     The engine supports dynamic connection, disconnection and removal of nodes while running,
+     with only minor limitations:
+     - all dynamic reconnections must occur upstream of a mixer
+     - while removals of effects will normally result in the automatic connection of the adjacent
+     nodes, removal of a node which has differing input vs. output channel counts, or which
+     is a mixer, is likely to result in a broken graph. */
+    
     _engine = [[AVAudioEngine alloc] init];
     
     /*  To support the instantiation of arbitrary AVAudioNode subclasses, instances are created
-		externally to the engine, but are not usable until they are attached to the engine via
-		the attachNode method. */
+     externally to the engine, but are not usable until they are attached to the engine via
+     the attachNode method. */
     
-    [_engine attachNode:_marimbaPlayer];
-    [_engine attachNode:_drumPlayer];
-    [_engine attachNode:_delay];
+    [_engine attachNode:_sampler];
+    [_engine attachNode:_distortion];
     [_engine attachNode:_reverb];
-    [_engine attachNode:_mixerOutputFilePlayer];
+    [_engine attachNode:_player];
 }
 
 - (void)makeEngineConnections
@@ -166,34 +221,38 @@
     // get the engine's optional singleton main mixer node
     AVAudioMixerNode *mainMixer = [_engine mainMixerNode];
     
+    /*  Nodes have input and output buses (AVAudioNodeBus). Use connect:to:fromBus:toBus:format: to
+     establish connections betweeen nodes. Connections are always one-to-one, never one-to-many or
+     many-to-one.
+     
+     Note that any pre-existing connection(s) involving the source's output bus or the
+     destination's input bus will be broken.
+     
+     @method connect:to:fromBus:toBus:format:
+     @param node1 the source node
+     @param node2 the destination node
+     @param bus1 the output bus on the source node
+     @param bus2 the input bus on the destination node
+     @param format if non-null, the format of the source node's output bus is set to this
+     format. In all cases, the format of the destination node's input bus is set to
+     match that of the source node's output bus. */
+    
+    AVAudioFormat *stereoFormat = [[AVAudioFormat alloc] initStandardFormatWithSampleRate:44100 channels:2];
+    
     // establish a connection between nodes
     
-    /*  Nodes have input and output buses (AVAudioNodeBus). Use connect:to:fromBus:toBus:format: to
-        establish connections betweeen nodes. Connections are always one-to-one, never one-to-many or
-		many-to-one.
-	
-		Note that any pre-existing connection(s) involving the source's output bus or the
-		destination's input bus will be broken.
+    // connect the player to the reverb
+    [_engine connect:_player to:_reverb format:stereoFormat];
     
-        @method connect:to:fromBus:toBus:format:
-        @param node1 the source node
-        @param node2 the destination node
-        @param bus1 the output bus on the source node
-        @param bus2 the input bus on the destination node
-        @param format if non-null, the format of the source node's output bus is set to this
-            format. In all cases, the format of the destination node's input bus is set to
-            match that of the source node's output bus. */
+    // connect the reverb effect to mixer input bus 0
+    [_engine connect:_reverb to:mainMixer fromBus:0 toBus:0 format:stereoFormat];
     
-    // marimba player -> delay -> main mixer
-    [_engine connect: _marimbaPlayer to:_delay format:_marimbaLoopBuffer.format];
-    [_engine connect:_delay to:mainMixer format:_marimbaLoopBuffer.format];
+    // connect the distortion effect to mixer input bus 2
+    [_engine connect:_distortion to:mainMixer fromBus:0 toBus:2 format:stereoFormat];
     
-    // drum player -> reverb -> main mixer
-    [_engine connect:_drumPlayer to:_reverb format:_drumLoopBuffer.format];
-    [_engine connect:_reverb to:mainMixer format:_drumLoopBuffer.format];
-    
-    // node tap player
-    [_engine connect:_mixerOutputFilePlayer to:mainMixer format:[mainMixer outputFormatForBus:0]];
+    // fan out the sampler to mixer input 1 and distortion effect
+    NSArray<AVAudioConnectionPoint *> *destinationNodes = [NSArray arrayWithObjects:[[AVAudioConnectionPoint alloc] initWithNode:_engine.mainMixerNode bus:1], [[AVAudioConnectionPoint alloc] initWithNode:_distortion bus:0], nil];
+    [_engine connect:_sampler toConnectionPoints:destinationNodes fromBus:0 format:stereoFormat];
 }
 
 - (void)startEngine
@@ -205,7 +264,7 @@
 		Starts the audio hardware via the AVAudioInputNode and/or AVAudioOutputNode instances in
 		the engine. Audio begins flowing through the engine.
 	
-        This method will return YES for sucess.
+        This method will return YES for success.
      
 		Reasons for potential failure include:
 		
@@ -216,27 +275,248 @@
     
     if (!_engine.isRunning) {
         NSError *error;
-        NSAssert([_engine startAndReturnError:&error], @"couldn't start engine, %@", [error localizedDescription]);
+        BOOL success;
+        success = [_engine startAndReturnError:&error];
+        NSAssert(success, @"couldn't start engine, %@", [error localizedDescription]);
     }
 }
 
-- (void)toggleMarimba {
-    if (!self.marimbaPlayerIsPlaying) {
+#pragma mark AVAudioSequencer Methods
+
+- (void)toggleSequencer {
+    if (!self.sequencerIsPlaying) {
         [self startEngine];
-        [_marimbaPlayer scheduleBuffer:_marimbaLoopBuffer atTime:nil options:AVAudioPlayerNodeBufferLoops completionHandler:nil];
-        [_marimbaPlayer play];
+        NSError *error;
+        BOOL success = NO;
+        [_sequencer setCurrentPositionInSeconds:0];
+        success = [_sequencer startAndReturnError:&error];
+        NSAssert(success, @"couldn't start sequencer", [error localizedDescription]);
     } else
-        [_marimbaPlayer stop];
+        [_sequencer stop];
 }
 
-- (void)toggleDrums {
-    if (!self.drumPlayerIsPlaying) {
-        [self startEngine];
-        [_drumPlayer scheduleBuffer:_drumLoopBuffer atTime:nil options:AVAudioPlayerNodeBufferLoops completionHandler:nil];
-        [_drumPlayer play];
-    } else
-        [_drumPlayer stop];
+- (BOOL)sequencerIsPlaying
+{
+    return _sequencer.isPlaying;
 }
+
+- (float)sequencerCurrentPosition
+{
+    return fmodf(_sequencer.currentPositionInSeconds, _sequencerTrackLengthSeconds) / _sequencerTrackLengthSeconds;
+}
+
+- (void)setSequencerCurrentPosition:(float)sequencerCurrentPosition
+{
+    _sequencer.currentPositionInSeconds = sequencerCurrentPosition * _sequencerTrackLengthSeconds;
+}
+
+- (float)sequencerPlaybackRate
+{
+    return _sequencer.rate;
+}
+
+- (void)setSequencerPlaybackRate:(float)sequencerPlaybackRate
+{
+    _sequencer.rate = sequencerPlaybackRate;
+}
+
+#pragma mark AudioMixinDestination Methods
+
+- (void)setSamplerDirectVolume:(float)samplerDirectVolume
+{
+    // get all output connection points from sampler bus 0
+    NSArray<AVAudioConnectionPoint *> *connectionPoints = [_engine outputConnectionPointsForNode:_sampler outputBus:0];
+    [connectionPoints enumerateObjectsUsingBlock:^(AVAudioConnectionPoint * __nonnull conn, NSUInteger idx, BOOL * __nonnull stop) {
+        // if the destination node represents the main mixer, then this is the direct path
+        if (conn.node == _engine.mainMixerNode) {
+            *stop = true;
+            // get the corresponding mixing destination object and set the mixer input bus volume
+            AVAudioMixingDestination *mixingDestination = [_sampler destinationForMixer:conn.node bus:conn.bus];
+            if (mixingDestination) {
+                mixingDestination.volume = samplerDirectVolume;
+            }
+        }
+    }];
+}
+
+- (float)samplerDirectVolume
+{
+    __block float samplerDirectVolume = 0.0;
+    NSArray<AVAudioConnectionPoint *> *connectionPoint = [_engine outputConnectionPointsForNode:_sampler outputBus:0];
+    [connectionPoint enumerateObjectsUsingBlock:^(AVAudioConnectionPoint * __nonnull conn, NSUInteger idx, BOOL * __nonnull stop) {
+        if (conn.node == _engine.mainMixerNode) {
+            *stop = true;
+            AVAudioMixingDestination *mixingDestination = [_sampler destinationForMixer:conn.node bus:conn.bus];
+            if (mixingDestination) {
+                samplerDirectVolume = mixingDestination.volume;
+            }
+        }
+    }];
+    return samplerDirectVolume;
+}
+
+- (void)setSamplerEffectVolume:(float)samplerEffectVolume
+{
+    // get all output connection points from sampler bus 0
+    NSArray<AVAudioConnectionPoint *> *connectionPoints = [_engine outputConnectionPointsForNode:_distortion outputBus:0];
+    [connectionPoints enumerateObjectsUsingBlock:^(AVAudioConnectionPoint * __nonnull conn, NSUInteger idx, BOOL * __nonnull stop) {
+        // if the destination node represents the distortion effect, then this is the effect path
+        if (conn.node == _engine.mainMixerNode) {
+            *stop = true;
+            // get the corresponding mixing destination object and set the mixer input bus volume
+            AVAudioMixingDestination *mixingDestination = [_sampler destinationForMixer:conn.node bus:conn.bus];
+            if (mixingDestination) {
+                mixingDestination.volume = samplerEffectVolume;
+            }
+        }
+    }];
+}
+
+- (float)samplerEffectVolume
+{
+    __block float distortionVolume = 0.0;
+    NSArray<AVAudioConnectionPoint *> *connectionPoint = [_engine outputConnectionPointsForNode:_distortion outputBus:0];
+    [connectionPoint enumerateObjectsUsingBlock:^(AVAudioConnectionPoint * __nonnull conn, NSUInteger idx, BOOL * __nonnull stop) {
+        if (conn.node == _engine.mainMixerNode) {
+            *stop = true;
+            AVAudioMixingDestination *mixingDestination = [_sampler destinationForMixer:conn.node bus:conn.bus];
+            if (mixingDestination) {
+                distortionVolume = mixingDestination.volume;
+            }
+        }
+    }];
+    return distortionVolume;
+}
+
+#pragma mark Mixer Methods
+
+- (void)setOutputVolume:(float)outputVolume
+{
+    _engine.mainMixerNode.outputVolume = outputVolume;
+}
+
+- (float)outputVolume
+{
+    return _engine.mainMixerNode.outputVolume;
+}
+
+#pragma mark Effect Methods
+
+- (void)setDistortionWetDryMix:(float)distortionWetDryMix
+{
+    _distortion.wetDryMix = distortionWetDryMix * 100.0;
+}
+
+- (float)distortionWetDryMix
+{
+    return _distortion.wetDryMix/100.0;
+}
+
+- (void)setDistortionPreset:(NSInteger)distortionPreset
+{
+    if (_distortion) {
+        [_distortion loadFactoryPreset:distortionPreset];
+    }
+}
+
+- (void)setReverbWetDryMix:(float)reverbWetDryMix
+{
+    _reverb.wetDryMix = reverbWetDryMix * 100.0;
+}
+
+- (float)reverbWetDryMix
+{
+    return _reverb.wetDryMix/100.0;
+}
+
+- (void)setReverbPreset:(NSInteger)reverbPreset
+{
+    if (_reverb) {
+        [_reverb loadFactoryPreset:reverbPreset];
+    }
+}
+
+#pragma mark player Methods
+
+- (BOOL)playerIsPlaying
+{
+    return _player.isPlaying;
+}
+
+- (void)setPlayerVolume:(float)playerVolume
+{
+    _player.volume = playerVolume;
+}
+
+- (void)setPlayerPan:(float)playerPan
+{
+    _player.pan = playerPan;
+}
+
+- (float)playerVolume
+{
+    return _player.volume;
+}
+
+- (float)playerPan
+{
+    return _player.pan;
+}
+
+- (void)togglePlayer
+{
+    if (!self.playerIsPlaying)
+    {
+        [self startEngine];
+        [self schedulePlayerContent];
+        [_player play];
+    }
+    else
+    {
+        [_player stop];
+    }
+}
+
+- (void)toggleBuffer:(BOOL)recordBuffer
+{
+    _isRecordingSelected = recordBuffer;
+    
+    if (self.playerIsPlaying)
+    {
+        [_player stop];
+        [self startEngine]; //start the engine if it's not already started
+        [self schedulePlayerContent];
+        [_player play];
+    }
+    else
+    {
+        [self schedulePlayerContent];
+    }
+}
+
+- (void)schedulePlayerContent
+{
+    //schedule the appropriate content
+    if (_isRecordingSelected)
+    {
+        AVAudioFile *recording = [self createAudioFileForPlayback];
+        [_player scheduleFile:recording atTime:nil completionHandler:nil];
+    }
+    else
+    {
+        [_player scheduleBuffer:_playerLoopBuffer atTime:nil options:AVAudioPlayerNodeBufferLoops completionHandler:nil];
+    }
+}
+
+- (AVAudioFile*)createAudioFileForPlayback
+{
+    NSError *error = nil;
+    AVAudioFile *recording =[[AVAudioFile alloc] initForReading:_mixerOutputFileURL error:&error];
+    NSAssert(recording, @"couldn't create AVAudioFile, %@", [error localizedDescription]);
+    return recording;
+}
+
+#pragma mark Recording Methods
 
 - (void)startRecordingMixerOutput
 {
@@ -271,172 +551,39 @@
     [self startEngine];
     [mainMixer installTapOnBus:0 bufferSize:4096 format:[mainMixer outputFormatForBus:0] block:^(AVAudioPCMBuffer *buffer, AVAudioTime *when) {
         NSError *error;
+        BOOL success = NO;
         
         // as AVAudioPCMBuffer's are delivered this will write sequentially. The buffer's frameLength signifies how much of the buffer is to be written
         // IMPORTANT: The buffer format MUST match the file's processing format which is why outputFormatForBus: was used when creating the AVAudioFile object above
-        NSAssert([mixerOutputFile writeFromBuffer:buffer error:&error], @"error writing buffer data to file, %@", [error localizedDescription]);
+        success = [mixerOutputFile writeFromBuffer:buffer error:&error];
+        NSAssert(success, @"error writing buffer data to file, %@", [error localizedDescription]);
     }];
-    _isRecording = true;
+    _isRecording = YES;
 }
 
 - (void)stopRecordingMixerOutput
 {
-    // stop recording really means remove the tap on the main mixer that was created in startRecordingMixerOutput
     if (_isRecording) {
         [[_engine mainMixerNode] removeTapOnBus:0];
         _isRecording = NO;
-    }
-}
-
-- (void)playRecordedFile
-{
-    [self startEngine];
-    if (_mixerOutputFilePlayerIsPaused) {
-        [_mixerOutputFilePlayer play];
-    }
-    else {
-        if (_mixerOutputFileURL) {
-            NSError *error;
-            AVAudioFile *recordedFile = [[AVAudioFile alloc] initForReading:_mixerOutputFileURL error:&error];
-            NSAssert(recordedFile != nil, @"recordedFile is nil, %@", [error localizedDescription]);
-            [_mixerOutputFilePlayer scheduleFile:recordedFile atTime:nil completionHandler:^{
-                _mixerOutputFilePlayerIsPaused = NO;
-                
-                // the data in the file has been scheduled but the player isn't actually done playing yet
-                // calculate the approximate time remaining for the player to finish playing and then dispatch the notification to the main thread
-                AVAudioTime *playerTime = [_mixerOutputFilePlayer playerTimeForNodeTime:_mixerOutputFilePlayer.lastRenderTime];
-                double delayInSecs = (recordedFile.length - playerTime.sampleTime) / recordedFile.processingFormat.sampleRate;
-                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSecs * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                    if ([self.delegate respondsToSelector:@selector(mixerOutputFilePlayerHasStopped)])
-                        [self.delegate mixerOutputFilePlayerHasStopped];
-                    [_mixerOutputFilePlayer stop];
-                });
-            }];
-            [_mixerOutputFilePlayer play];
-            _mixerOutputFilePlayerIsPaused = NO;
+        
+        if (self.recordingIsAvailable) {            
+            //Post a notificaiton that the record is complete
+            //Other nodes/objects can listen to this update accordingly
+            [[NSNotificationCenter defaultCenter] postNotificationName:kRecordingCompletedNotification object:nil];
         }
     }
 }
 
-- (void)stopPlayingRecordedFile
+- (BOOL)recordingIsAvailable
 {
-    [_mixerOutputFilePlayer stop];
-    _mixerOutputFilePlayerIsPaused = NO;
-}
-
-- (void)pausePlayingRecordedFile
-{
-    [_mixerOutputFilePlayer pause];
-    _mixerOutputFilePlayerIsPaused = YES;
-}
-
-- (BOOL)marimbaPlayerIsPlaying
-{
-    return _marimbaPlayer.isPlaying;
-}
-
-- (BOOL)drumPlayerIsPlaying
-{
-    return _drumPlayer.isPlaying;
-}
-
-- (void)setMarimbaPlayerVolume:(float)marimbaPlayerVolume
-{
-    _marimbaPlayer.volume = marimbaPlayerVolume;
-}
-
-- (float)marimbaPlayerVolume
-{
-    return _marimbaPlayer.volume;
-}
-
-- (void)setDrumPlayerVolume:(float)drumPlayerVolume
-{
-    _drumPlayer.volume = drumPlayerVolume;
-}
-
-- (float)drumPlayerVolume
-{
-    return _drumPlayer.volume;
-}
-
-- (void)setOutputVolume:(float)outputVolume
-{
-    _engine.mainMixerNode.outputVolume = outputVolume;
-}
-
-- (float)outputVolume
-{
-    return _engine.mainMixerNode.outputVolume;
-}
-
-- (void)setMarimbaPlayerPan:(float)marimbaPlayerPan
-{
-    _marimbaPlayer.pan = marimbaPlayerPan;
-}
-
-- (float)marimbaPlayerPan
-{
-    return _marimbaPlayer.pan;
-}
-
-- (void)setDrumPlayerPan:(float)drumPlayerPan
-{
-    _drumPlayer.pan = drumPlayerPan;
-}
-
-- (float)drumPlayerPan
-{
-    return _drumPlayer.pan;
-}
-
-- (void)setDelayWetDryMix:(float)delayWetDryMix
-{
-    _delay.wetDryMix = delayWetDryMix * 100.0;
-}
-
-- (float)delayWetDryMix
-{
-    return _delay.wetDryMix/100.0;
-}
-
-- (void)setReverbWetDryMix:(float)reverbWetDryMix
-{
-    _reverb.wetDryMix = reverbWetDryMix * 100.0;
-}
-
-- (float)reverbWetDryMix
-{
-    return _reverb.wetDryMix/100.0;
-}
-
-- (void)setBypassDelay:(BOOL)bypassDelay
-{
-    _delay.bypass = bypassDelay;
-}
-
-- (BOOL)bypassDelay
-{
-    return _delay.bypass;
-}
-
-- (void)setBypassReverb:(BOOL)bypassReverb
-{
-    _reverb.bypass = bypassReverb;
-}
-
-- (BOOL)bypassReverb
-{
-    return _reverb.bypass;
+    return (_mixerOutputFileURL != nil);
 }
 
 #pragma mark AVAudioSession
 
 - (void)initAVAudioSession
 {
-    // For complete details regarding the use of AVAudioSession see the AVAudioSession Programming Guide
-    // https://developer.apple.com/library/ios/documentation/Audio/Conceptual/AudioSessionProgrammingGuide/Introduction/Introduction.html
-    
     // Configure the audio session
     AVAudioSession *sessionInstance = [AVAudioSession sharedInstance];
     NSError *error;
@@ -482,11 +629,11 @@
     NSLog(@"Session interrupted > --- %s ---\n", theInterruptionType == AVAudioSessionInterruptionTypeBegan ? "Begin Interruption" : "End Interruption");
     
     if (theInterruptionType == AVAudioSessionInterruptionTypeBegan) {
-        [_drumPlayer stop];
-        [_marimbaPlayer stop];
-        [self stopPlayingRecordedFile];
+        _isSessionInterrupted = YES;
+        [_player stop];
+        [_sequencer stop];
         [self stopRecordingMixerOutput];
-        
+    
         if ([self.delegate respondsToSelector:@selector(engineWasInterrupted)]) {
             [self.delegate engineWasInterrupted];
         }
@@ -495,10 +642,23 @@
         // make sure to activate the session
         NSError *error;
         bool success = [[AVAudioSession sharedInstance] setActive:YES error:&error];
-        if (!success) NSLog(@"AVAudioSession set active failed with error: %@", [error localizedDescription]);
-        
-        // start the engine once again
-        [self startEngine];
+        if (!success)
+            NSLog(@"AVAudioSession set active failed with error: %@", [error localizedDescription]);
+        else {
+            _isSessionInterrupted = NO;
+            if (_isConfigChangePending) {
+                //there is a pending config changed notification
+                NSLog(@"Responding to earlier engine config changed notification. Re-wiring connections and starting once again");
+                [self makeEngineConnections];
+                [self startEngine];
+                
+                _isConfigChangePending = NO;
+            }
+            else {
+                // start the engine once again
+                [self startEngine];
+            }
+        }
     }
 }
 
@@ -517,7 +677,7 @@
             break;
         case AVAudioSessionRouteChangeReasonCategoryChange:
             NSLog(@"     CategoryChange");
-            NSLog(@" New Category: %@", [[AVAudioSession sharedInstance] category]);
+            NSLog(@"     New Category: %@", [[AVAudioSession sharedInstance] category]);
             break;
         case AVAudioSessionRouteChangeReasonOverride:
             NSLog(@"     Override");
@@ -543,12 +703,14 @@
     NSLog(@"Media services have been reset!");
     NSLog(@"Re-wiring connections and starting once again");
 
+    _sequencer = nil; //remove this sequencer since it's linked to the old AVAudioEngine
+    [self initAVAudioSession];
     [self createEngineAndAttachNodes];
-	[self initAVAudioSession];
     [self makeEngineConnections];
+    [self createAndSetupSequencer]; //recreate the sequencer with the new AVAudioEngine
     [self startEngine];
 
-    // post notification
+    // notify the delegate
     if ([self.delegate respondsToSelector:@selector(engineConfigurationHasChanged)]) {
         [self.delegate engineConfigurationHasChanged];
     }

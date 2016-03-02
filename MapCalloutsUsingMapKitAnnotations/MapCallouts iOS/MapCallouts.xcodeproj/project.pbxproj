@@ -19,11 +19,12 @@
 		531B1ACD18A5A0EF00D43367 /* CustomAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 531B1ACC18A5A0EF00D43367 /* CustomAnnotationView.m */; };
 		531F25C118D0C50400A442C8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 533D38CB10B352230057E53B /* CoreLocation.framework */; };
 		532FC49C19B7978500CACA46 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 532FC49B19B7978500CACA46 /* Images.xcassets */; };
-		533671A01BC84DE100009B67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5336719E1BC84DE100009B67 /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
+		533671A01BC84DE100009B67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5336719E1BC84DE100009B67 /* LaunchScreen.storyboard */; };
 		5371BB9C18D0F57100D1A992 /* CustomAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5371BB9B18D0F57100D1A992 /* CustomAnnotation.m */; };
 		5376EF070F7AE77A005C5273 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5376EF060F7AE77A005C5273 /* MapKit.framework */; };
-		5395AA3E1BC862DC00FD2B0E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5395AA3C1BC862DC00FD2B0E /* InfoPlist.strings */; settings = {ASSET_TAGS = (); }; };
-		53FB22B91BCC430F004E7195 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53FB22B71BCC430F004E7195 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
+		5395AA3E1BC862DC00FD2B0E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5395AA3C1BC862DC00FD2B0E /* InfoPlist.strings */; };
+		53FB22B91BCC430F004E7195 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53FB22B71BCC430F004E7195 /* Main.storyboard */; };
+		B5C126A11C1738DD0080ACD8 /* WharfAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C126A01C1738DD0080ACD8 /* WharfAnnotation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,8 @@
 		5376EF060F7AE77A005C5273 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		5395AA3D1BC862DC00FD2B0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		53FB22B81BCC430F004E7195 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B5C1269F1C1738DD0080ACD8 /* WharfAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WharfAnnotation.h; path = ../Shared/WharfAnnotation.h; sourceTree = "<group>"; };
+		B5C126A01C1738DD0080ACD8 /* WharfAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WharfAnnotation.m; path = ../Shared/WharfAnnotation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +139,8 @@
 				531B1ABC18A5997E00D43367 /* SFAnnotation.m */,
 				5371BB9A18D0F57100D1A992 /* CustomAnnotation.h */,
 				5371BB9B18D0F57100D1A992 /* CustomAnnotation.m */,
+				B5C1269F1C1738DD0080ACD8 /* WharfAnnotation.h */,
+				B5C126A01C1738DD0080ACD8 /* WharfAnnotation.m */,
 			);
 			name = Annotations;
 			sourceTree = "<group>";
@@ -236,6 +241,7 @@
 				5304A8C0166D4F5C005CC8AA /* AppDelegate.m in Sources */,
 				531B1ACD18A5A0EF00D43367 /* CustomAnnotationView.m in Sources */,
 				5371BB9C18D0F57100D1A992 /* CustomAnnotation.m in Sources */,
+				B5C126A11C1738DD0080ACD8 /* WharfAnnotation.m in Sources */,
 				5304A8C2166D4F5C005CC8AA /* DetailViewController.m in Sources */,
 				5304A8C3166D4F5C005CC8AA /* MapViewController.m in Sources */,
 				531B1ABF18A5997E00D43367 /* SFAnnotation.m in Sources */,

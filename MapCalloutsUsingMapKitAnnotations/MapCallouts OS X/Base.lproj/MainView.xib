@@ -10,6 +10,7 @@
                 <outlet property="annotationStates" destination="UAy-XS-rYP" id="nxW-we-JU3"/>
                 <outlet property="bridgeViewController" destination="ouu-Oc-2Jx" id="pRm-rn-MaN"/>
                 <outlet property="mapView" destination="OGW-aC-Ew5" id="U8g-fw-5qt"/>
+                <outlet property="toggleAllCheckBox" destination="dWJ-dt-wGF" id="s84-85-4k6"/>
                 <outlet property="view" destination="TI7-s9-tAd" id="cPZ-Qr-Aqg"/>
             </connections>
         </customObject>
@@ -27,7 +28,7 @@
                     </connections>
                 </mapView>
                 <matrix verticalHuggingPriority="750" mode="highlight" allowsEmptySelection="NO" autorecalculatesCellSize="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UAy-XS-rYP">
-                    <rect key="frame" x="11" y="302" width="316" height="18"/>
+                    <rect key="frame" x="11" y="302" width="396" height="18"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     <size key="cellSize" width="76" height="18"/>
@@ -56,7 +57,13 @@
                             </buttonCell>
                         </column>
                         <column>
-                            <buttonCell type="check" title="All" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="NZC-fa-62k">
+                            <buttonCell type="check" title="Wharf" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="NZC-fa-62k">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                        </column>
+                        <column>
+                            <buttonCell type="check" title="All" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="dWJ-dt-wGF">
                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                 <font key="font" metaFont="system"/>
                             </buttonCell>

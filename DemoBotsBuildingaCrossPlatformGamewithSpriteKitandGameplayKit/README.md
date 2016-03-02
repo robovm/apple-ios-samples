@@ -83,6 +83,8 @@ On iOS, you control the PlayerBot with on-screen thumbstick touch pads that emul
 
 DemoBots uses the GameController framework to support game controllers on iOS, OS X, and tvOS.
 
+Note: A physical controller paired to the Mac is required to play DemoBots in the tvOS simulator.
+
 When using a controller that matches the Micro Gamepad profile:
 
 - The d-pad controls the PlayerBot's movement.

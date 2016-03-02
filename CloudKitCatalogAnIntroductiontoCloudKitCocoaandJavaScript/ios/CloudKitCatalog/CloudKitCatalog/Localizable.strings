@@ -1,0 +1,33 @@
+/* 
+  Localizable.strings
+  CloudKitCatalog
+
+  Created by Ravi Rajani on 22/09/2015.
+  Copyright © 2015 Apple Inc. All rights reserved.
+*/
+
+"Discoverability.RequestApplicationPermission" = "Requests permission from the user to make him/her discoverable to other users of the app.";
+"Discoverability.FetchUserRecordID" = "Fetches the signed-in user’s CKRecordID. If the user has granted discoverability permission to the app, you can fetch his/her user info using this ID.";
+"Discoverability.DiscoverUserInfoWithUserRecordID" = "Fetches the discoverable user info for the given CKRecordID.";
+"Discoverability.DiscoverUserInfoWithEmailAddress" = "Fetches the discoverable user info for the given email address.";
+"Discoverability.DiscoverAllContactUserInfos" = "Fetches the user info of every contact in the signed-in user’s address book who has granted discoverability permission to the app.";
+
+"Query.PerformQuery" = "Gets all public “Items” records sorted by distance from the given location.";
+
+"Zones.FetchAllRecordZones" = "Fetches all record zones in the user’s private database.";
+"Zones.SaveRecordZone" = "Saves a private record zone with the given name.";
+"Zones.DeleteRecordZone" = "Deletes the private record zone with the given name.";
+"Zones.FetchRecordZone" = "Fetches the private record zone with the given name.";
+
+"Records.SaveRecord" = "Saves a record to a private record zone. Leave the recordName field blank to have the server generate one. If the record already exists, we fetch the existing record using fetchRecordWithID() and update it with the new values.";
+"Records.DeleteRecord" = "Deletes the record with the given name from the given private zone.";
+"Records.FetchRecord" = "Fetches the record with the given name from the given private zone.";
+
+"Sync.FetchRecordChanges" = "Fetches the changed records from the server. If “cache” is enabled the fetched records are stored in memory along with the server syncToken which is then used to fetch changes since that syncToken on the next run.";
+
+"Subscriptions.SaveSubscription" = "Saves a subscription with the given parameters to the user‘s private database.";
+"Subscriptions.DeleteSubscription" = "Deletes the subscription with the given ID from the private database.";
+"Subscriptions.FetchSubscription" = "Fetches the subscription with the given ID from the private database.";
+"Subscriptions.FetchAllSubscriptions" = "Fetches all subscriptions for the current user.";
+
+"Notifications.MarkAsRead" = "Marks the newly added notifications as read. Note that the user will only receive notifications if he/she accepts to receive incoming notifications on startup. This is set in the file “AppDelegate.swift”. The notifications are kept in memory and displayed in a list.";

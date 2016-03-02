@@ -2,17 +2,21 @@
 
 ## Version
 
-3.1
+3.2
+
+## Known Issues
+
++ The Objective-C version of Lister's watchOS framework will not build as a dependency of the iOS app. Building the framework separately will enable the iOS target to be built.
 
 ## Build Requirements
-+ Xcode 7.0 or later
-+ iOS 9.0 SDK or later
++ Xcode 7.3 or later
++ iOS 9.1 SDK or later
 + OS X 10.11 SDK or later
 + iCloud–enabled provisioning profile
 + App Groups–enabled provisioning profile
 
 ## Runtime Requirements
-+ iOS 9.0 or later
++ iOS 9.1 or later
 + OS X 10.11 or later
 
 ## About Lister
@@ -112,4 +116,4 @@ Lister has unit tests written for the List and ListItem classes. These tests are
 
 Lister does not currently support configuring a storage option before the iOS app is launched. Please launch the iOS app first. In your own projects, you should provide for the watch app being run prior to the iOS app that hosts it.
 
-Copyright (C) 2014-2015 Apple Inc. All rights reserved.
+Copyright (C) 2014-2016 Apple Inc. All rights reserved.

@@ -1,5 +1,5 @@
 /*
-    Copyright (C) 2015 Apple Inc. All Rights Reserved.
+    Copyright (C) 2016 Apple Inc. All Rights Reserved.
     See LICENSE.txt for this sample’s licensing information
     
     Abstract:
@@ -9,7 +9,7 @@
 #import "AAPLGlanceInterfaceController.h"
 #import "AAPLWatchStoryboardConstants.h"
 #import "AAPLGlanceBadge.h"
-@import ListerWatchKit;
+@import ListerKit;
 
 @interface AAPLGlanceInterfaceController() <AAPLConnectivityListsControllerDelegate, AAPLListPresenterDelegate, NSFilePresenter>
 

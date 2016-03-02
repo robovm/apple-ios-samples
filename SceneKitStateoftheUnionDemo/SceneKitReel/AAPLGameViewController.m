@@ -1,7 +1,9 @@
 /*
- Copyright (C) 2014 Apple Inc. All Rights Reserved.
+ Copyright (C) 2015 Apple Inc. All Rights Reserved.
  See LICENSE.txt for this sample’s licensing information
-
+ 
+ Abstract:
+ Game View Controller declaration.
 */
 
 #import <GLKit/GLKit.h>
@@ -114,8 +116,8 @@ static CGFloat randFloat(CGFloat min, CGFloat max)
 #if TARGET_OS_IPHONE
 - (void)viewDidAppear:(BOOL)animated
 {
+    [super viewDidAppear:animated];
     [self setup];
-    [super viewDidLoad];
 }
 #else
 - (void)awakeFromNib
@@ -628,7 +630,7 @@ static CGFloat randFloat(CGFloat min, CGFloat max)
     return YES;
 }
 
-- (NSUInteger)supportedInterfaceOrientations
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
 {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         return UIInterfaceOrientationMaskAllButUpsideDown;

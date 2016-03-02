@@ -99,6 +99,10 @@
     return self;
 }
 
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
+
 - (void)dispatch
 {
     // create a game loop timer using a dispatch source and fire it on the game loop queue

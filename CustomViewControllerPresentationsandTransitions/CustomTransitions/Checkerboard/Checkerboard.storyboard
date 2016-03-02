@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="71c-Tg-haI">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="B8F-Op-1cj">
+            <objects>
+                <navigationController id="71c-Tg-haI" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VHx-z2-gVn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="e8D-we-HPa" kind="relationship" relationship="rootViewController" id="dYl-Ph-CH6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nXI-r1-OT9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="381" y="528"/>
+        </scene>
+        <!--Checkerboard-->
+        <scene sceneID="6fR-gd-9WY">
+            <objects>
+                <viewController id="e8D-we-HPa" customClass="AAPLCheckerboardFirstViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LMw-qI-bCv"/>
+                        <viewControllerLayoutGuide type="bottom" id="IpY-nH-yZ0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Dle-ho-gI3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9X-Iy-367">
+                                <rect key="frame" x="262" y="228" width="76" height="144"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="120"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.25" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Rf-6d-bwD">
+                                <rect key="frame" x="202" y="550" width="196" height="30"/>
+                                <state key="normal" title="Push with Custom Transition">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Qht-ZA-eyi" kind="show" id="nkf-HL-Tsl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="c9X-Iy-367" secondAttribute="centerY" id="9KS-x8-BdW"/>
+                            <constraint firstItem="IpY-nH-yZ0" firstAttribute="top" secondItem="5Rf-6d-bwD" secondAttribute="bottom" constant="20" id="BiA-Ci-FIN"/>
+                            <constraint firstAttribute="centerX" secondItem="5Rf-6d-bwD" secondAttribute="centerX" id="bCb-sg-jNB"/>
+                            <constraint firstAttribute="centerX" secondItem="c9X-Iy-367" secondAttribute="centerX" id="oGg-ek-Ree"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Checkerboard" id="cq5-uy-Ykt">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="5aB-Cc-nC6">
+                            <connections>
+                                <segue destination="vKG-QN-IDu" kind="unwind" unwindAction="unwindToMenuViewController:" id="nS5-qX-1e3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0bF-BR-Au8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="vKG-QN-IDu" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1132" y="528"/>
+        </scene>
+        <!--SecondViewController-->
+        <scene sceneID="Ah1-F6-hAE">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" id="Qht-ZA-eyi" userLabel="SecondViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="efl-eS-d9X"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ze4-5Z-W9Y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JfE-gs-HxA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mGa-tL-cVJ">
+                                <rect key="frame" x="263" y="228" width="74" height="144"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="120"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.25" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="mGa-tL-cVJ" secondAttribute="centerX" id="Via-9v-PNo"/>
+                            <constraint firstAttribute="centerY" secondItem="mGa-tL-cVJ" secondAttribute="centerY" id="kyq-hn-r1z"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KMT-j1-pad" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1892" y="528"/>
+        </scene>
+    </scenes>
+</document>

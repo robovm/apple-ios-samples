@@ -1,5 +1,5 @@
 /*
-Copyright (C) 2015 Apple Inc. All Rights Reserved.
+Copyright (C) 2016 Apple Inc. All Rights Reserved.
 See LICENSE.txt for this sample’s licensing information
 
 Abstract:
@@ -35,15 +35,16 @@ CKCatalog.tabs['private-sync'] = (function() {
     if(recordsTable) {
       records.forEach(function (record) {
         var fields = record.fields;
-        var name = fields['name'];
-        var location = fields['location'];
+        var name = fields ? fields['name'] : undefined;
+        var location = fields ? fields['location'] : undefined;
         recordsTable.appendRow([
           record.recordName,
-          record.recordType,
-          record.recordChangeTag,
-          new Date(record.modified.timestamp),
+          record.recordType || '',
+          record.recordChangeTag || '',
+          record.modified ? new Date(record.modified.timestamp) : '',
           name ? name.value : '',
-          location ? location.value : ''
+          location ? location.value : '',
+          record.deleted !== undefined ? record.deleted : ''
         ]);
       });
     }
@@ -65,7 +66,7 @@ CKCatalog.tabs['private-sync'] = (function() {
     p.appendChild(deleteSyncTokenButton);
     heading.innerHTML = 'Records' + (moreComing ? '<span id="more-coming">' + ' (incomplete)' + '</span>:' : ':');
     recordsTable = new CKCatalog.Table([
-      'recordName', 'recordType','recordChangeTag', 'modified','name', 'location'
+      'recordName','recordType','recordChangeTag','modified','name','location','deleted'
     ])
       .setTextForEmptyRow('No new records');
     if(records.length === 0) {

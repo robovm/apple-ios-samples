@@ -1,5 +1,5 @@
 /*
-Copyright (C) 2015 Apple Inc. All Rights Reserved.
+Copyright (C) 2016 Apple Inc. All Rights Reserved.
 See LICENSE.txt for this sample’s licensing information
 
 Abstract:
@@ -60,11 +60,17 @@ CKCatalog.dialog = (function() {
   };
 
   self.showError = function(error) {
+    // First log to the console in case anyone needs a stack trace.
+    console.error(error);
+
+    // Show the message in a dialog.
     el.classList.remove('hide');
     textEl.classList.remove('no-actions');
     if(error.ckErrorCode) {
       textEl.innerHTML = '<h2>Error: <span class="error-code">' + error.ckErrorCode + '</span></h2>' +
-        '<p class="error">Reason: ' + (error.reason ? error.reason : 'An error occurred.') + '</p>';
+        '<p class="error">' +
+          (error.reason ? 'Reason: '+error.reason : (error.message || 'An error occurred.')) +
+        '</p>';
     } else {
       var message = error.message || 'An unexpected error occurred.';
       textEl.innerHTML = '<h2>Error</h2>' +

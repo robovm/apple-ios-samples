@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZIc-sQ-6Nu">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="FVw-5K-Diy">
+            <objects>
+                <navigationController id="ZIc-sQ-6Nu" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eEw-0Y-fVd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="puZ-7d-WSV" kind="relationship" relationship="rootViewController" id="BVJ-Do-ygT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K6M-yM-v49" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="425" y="578"/>
+        </scene>
+        <!--FirstViewController-->
+        <scene sceneID="gcj-mB-cWa">
+            <objects>
+                <viewController storyboardIdentifier="FirstViewController" id="puZ-7d-WSV" userLabel="FirstViewController" customClass="AAPLSwipeFirstViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="04d-kI-oXk"/>
+                        <viewControllerLayoutGuide type="bottom" id="kCm-Z4-6an"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LS8-cJ-iJd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="to2-UR-X5W">
+                                <rect key="frame" x="262" y="228" width="76" height="144"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="120"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.25" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QAh-eI-szS">
+                                <rect key="frame" x="192" y="550" width="217" height="30"/>
+                                <state key="normal" title="Present With Custom Transition">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="phA-vT-NZO" kind="presentation" identifier="CustomTransition" id="0km-sa-32K"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90146998359999997" green="0.90003083880000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="to2-UR-X5W" secondAttribute="centerX" id="1ww-KI-Jm4"/>
+                            <constraint firstAttribute="centerY" secondItem="to2-UR-X5W" secondAttribute="centerY" id="43M-Jl-5eu"/>
+                            <constraint firstAttribute="centerX" secondItem="QAh-eI-szS" secondAttribute="centerX" id="FlN-MR-SRz"/>
+                            <constraint firstItem="kCm-Z4-6an" firstAttribute="top" secondItem="QAh-eI-szS" secondAttribute="bottom" constant="20" id="NPj-6n-SJ3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Swipe" id="Ts4-50-TCR">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="za2-6u-Fb3">
+                            <connections>
+                                <segue destination="oHl-Df-ads" kind="unwind" identifier="" unwindAction="unwindToMenuViewController:" id="MOH-Xf-C8s"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HN4-wr-hgE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="oHl-Df-ads" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1178" y="578"/>
+        </scene>
+        <!--SecondViewController-->
+        <scene sceneID="yhZ-hV-rsu">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" id="phA-vT-NZO" userLabel="SecondViewController" customClass="AAPLSwipeSecondViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cFc-TN-3wc"/>
+                        <viewControllerLayoutGuide type="bottom" id="dsQ-4U-qoi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WLg-ql-2ZP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8K-z5-YGJ">
+                                <rect key="frame" x="263" y="228" width="74" height="144"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="120"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.25" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ipu-Q6-Qxl">
+                                <rect key="frame" x="273" y="550" width="54" height="30"/>
+                                <state key="normal" title="Dismiss">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="zYl-Xd-zrG" kind="unwind" identifier="BackToFirstViewController" unwindAction="unwindToSwipeFirstViewController:" id="Jmt-Z3-bag"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="ipu-Q6-Qxl" secondAttribute="centerX" id="7lo-gj-HEH"/>
+                            <constraint firstAttribute="centerY" secondItem="f8K-z5-YGJ" secondAttribute="centerY" id="Hta-JT-l0A"/>
+                            <constraint firstAttribute="centerX" secondItem="f8K-z5-YGJ" secondAttribute="centerX" id="S22-t2-KWW"/>
+                            <constraint firstItem="dsQ-4U-qoi" firstAttribute="top" secondItem="ipu-Q6-Qxl" secondAttribute="bottom" constant="20" id="lg2-qO-h6h"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LfI-0e-ddH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="zYl-Xd-zrG" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1934" y="578"/>
+        </scene>
+    </scenes>
+</document>

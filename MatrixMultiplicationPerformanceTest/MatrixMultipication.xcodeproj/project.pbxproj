@@ -1,0 +1,396 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 47;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		361FE8B11BD6FCE6005846ED /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 361FE8B01BD6FCE6005846ED /* Media.xcassets */; };
+		362103BB1A89781200803CFA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 362103BA1A89781200803CFA /* main.m */; };
+		362103BE1A89781300803CFA /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 362103BD1A89781300803CFA /* AppDelegate.mm */; };
+		362103C11A89781300803CFA /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 362103C01A89781300803CFA /* ViewController.mm */; };
+		362103C41A89781300803CFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 362103C21A89781300803CFA /* Main.storyboard */; };
+		362103EB1A898FA200803CFA /* BlasMatrixMult.mm in Sources */ = {isa = PBXBuildFile; fileRef = 362103DF1A898FA200803CFA /* BlasMatrixMult.mm */; };
+		362103EC1A898FA200803CFA /* MachTImer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 362103E11A898FA200803CFA /* MachTImer.mm */; };
+		362103ED1A898FA200803CFA /* MatrixMultPerfTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 362103E31A898FA200803CFA /* MatrixMultPerfTest.mm */; };
+		362103EE1A898FA200803CFA /* MatrixMultPTScheduler.mm in Sources */ = {isa = PBXBuildFile; fileRef = 362103E51A898FA200803CFA /* MatrixMultPTScheduler.mm */; };
+		362103EF1A898FA200803CFA /* MatrixRandomizer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 362103E71A898FA200803CFA /* MatrixRandomizer.mm */; };
+		362103F01A898FA200803CFA /* MetalMatrixMult.mm in Sources */ = {isa = PBXBuildFile; fileRef = 362103E91A898FA200803CFA /* MetalMatrixMult.mm */; };
+		362103F11A898FA200803CFA /* MetalMatrixMulti.metal in Sources */ = {isa = PBXBuildFile; fileRef = 362103EA1A898FA200803CFA /* MetalMatrixMulti.metal */; };
+		362103F31A89911500803CFA /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 362103F21A89911500803CFA /* Accelerate.framework */; };
+		362103F51A89912E00803CFA /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 362103F41A89912E00803CFA /* Metal.framework */; };
+		362103F71A89914600803CFA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 362103F61A89914600803CFA /* UIKit.framework */; };
+		362103F91A89915400803CFA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 362103F81A89915400803CFA /* Foundation.framework */; };
+		362103FB1A89915E00803CFA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 362103FA1A89915E00803CFA /* CoreGraphics.framework */; };
+		3663467C1AC93244007C7D74 /* MetalMatrixBuffers.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3663467B1AC93244007C7D74 /* MetalMatrixBuffers.mm */; };
+		36B0BF5F1BD70E64005F4828 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36B0BF5D1BD70E64005F4828 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		361FE8B01BD6FCE6005846ED /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		362103B51A89781200803CFA /* MatrixMultipication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatrixMultipication.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		362103B91A89781200803CFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		362103BA1A89781200803CFA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		362103BC1A89781200803CFA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		362103BD1A89781300803CFA /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
+		362103BF1A89781300803CFA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		362103C01A89781300803CFA /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		362103C31A89781300803CFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		362103DE1A898FA200803CFA /* BlasMatrixMult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlasMatrixMult.h; sourceTree = "<group>"; };
+		362103DF1A898FA200803CFA /* BlasMatrixMult.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BlasMatrixMult.mm; sourceTree = "<group>"; };
+		362103E01A898FA200803CFA /* MachTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MachTimer.h; sourceTree = "<group>"; };
+		362103E11A898FA200803CFA /* MachTImer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MachTImer.mm; sourceTree = "<group>"; };
+		362103E21A898FA200803CFA /* MatrixMultPerfTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatrixMultPerfTest.h; sourceTree = "<group>"; };
+		362103E31A898FA200803CFA /* MatrixMultPerfTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MatrixMultPerfTest.mm; sourceTree = "<group>"; };
+		362103E41A898FA200803CFA /* MatrixMultPTScheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatrixMultPTScheduler.h; sourceTree = "<group>"; };
+		362103E51A898FA200803CFA /* MatrixMultPTScheduler.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MatrixMultPTScheduler.mm; sourceTree = "<group>"; };
+		362103E61A898FA200803CFA /* MatrixRandomizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatrixRandomizer.h; sourceTree = "<group>"; };
+		362103E71A898FA200803CFA /* MatrixRandomizer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MatrixRandomizer.mm; sourceTree = "<group>"; };
+		362103E81A898FA200803CFA /* MetalMatrixMult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetalMatrixMult.h; sourceTree = "<group>"; };
+		362103E91A898FA200803CFA /* MetalMatrixMult.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MetalMatrixMult.mm; sourceTree = "<group>"; };
+		362103EA1A898FA200803CFA /* MetalMatrixMulti.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MetalMatrixMulti.metal; sourceTree = "<group>"; };
+		362103F21A89911500803CFA /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		362103F41A89912E00803CFA /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		362103F61A89914600803CFA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		362103F81A89915400803CFA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		362103FA1A89915E00803CFA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3663467A1AC93244007C7D74 /* MetalMatrixBuffers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetalMatrixBuffers.h; sourceTree = "<group>"; };
+		3663467B1AC93244007C7D74 /* MetalMatrixBuffers.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MetalMatrixBuffers.mm; sourceTree = "<group>"; };
+		36B0BF5E1BD70E64005F4828 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		362103B21A89781200803CFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				362103F31A89911500803CFA /* Accelerate.framework in Frameworks */,
+				362103FB1A89915E00803CFA /* CoreGraphics.framework in Frameworks */,
+				362103F91A89915400803CFA /* Foundation.framework in Frameworks */,
+				362103F51A89912E00803CFA /* Metal.framework in Frameworks */,
+				362103F71A89914600803CFA /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		362103AC1A89781200803CFA = {
+			isa = PBXGroup;
+			children = (
+				362103B71A89781200803CFA /* Sources */,
+				362103B81A89781200803CFA /* Supporting Files */,
+				362103FC1A89918B00803CFA /* Frameworks */,
+				362103B61A89781200803CFA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		362103B61A89781200803CFA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				362103B51A89781200803CFA /* MatrixMultipication.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		362103B71A89781200803CFA /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				362103E01A898FA200803CFA /* MachTimer.h */,
+				362103E11A898FA200803CFA /* MachTImer.mm */,
+				362103E61A898FA200803CFA /* MatrixRandomizer.h */,
+				362103E71A898FA200803CFA /* MatrixRandomizer.mm */,
+				362103DE1A898FA200803CFA /* BlasMatrixMult.h */,
+				362103DF1A898FA200803CFA /* BlasMatrixMult.mm */,
+				362103EA1A898FA200803CFA /* MetalMatrixMulti.metal */,
+				3663467A1AC93244007C7D74 /* MetalMatrixBuffers.h */,
+				3663467B1AC93244007C7D74 /* MetalMatrixBuffers.mm */,
+				362103E81A898FA200803CFA /* MetalMatrixMult.h */,
+				362103E91A898FA200803CFA /* MetalMatrixMult.mm */,
+				362103E21A898FA200803CFA /* MatrixMultPerfTest.h */,
+				362103E31A898FA200803CFA /* MatrixMultPerfTest.mm */,
+				362103E41A898FA200803CFA /* MatrixMultPTScheduler.h */,
+				362103E51A898FA200803CFA /* MatrixMultPTScheduler.mm */,
+				362103BC1A89781200803CFA /* AppDelegate.h */,
+				362103BD1A89781300803CFA /* AppDelegate.mm */,
+				362103BF1A89781300803CFA /* ViewController.h */,
+				362103C01A89781300803CFA /* ViewController.mm */,
+				362103BA1A89781200803CFA /* main.m */,
+			);
+			name = Sources;
+			path = MatrixMultipication;
+			sourceTree = "<group>";
+		};
+		362103B81A89781200803CFA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				36B0BF5D1BD70E64005F4828 /* LaunchScreen.storyboard */,
+				362103C21A89781300803CFA /* Main.storyboard */,
+				361FE8B01BD6FCE6005846ED /* Media.xcassets */,
+				362103B91A89781200803CFA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			path = MatrixMultipication;
+			sourceTree = "<group>";
+		};
+		362103FC1A89918B00803CFA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				362103FA1A89915E00803CFA /* CoreGraphics.framework */,
+				362103F81A89915400803CFA /* Foundation.framework */,
+				362103F61A89914600803CFA /* UIKit.framework */,
+				362103F41A89912E00803CFA /* Metal.framework */,
+				362103F21A89911500803CFA /* Accelerate.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		362103B41A89781200803CFA /* MatrixMultipication */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 362103D81A89781300803CFA /* Build configuration list for PBXNativeTarget "MatrixMultipication" */;
+			buildPhases = (
+				362103B11A89781200803CFA /* Sources */,
+				362103B21A89781200803CFA /* Frameworks */,
+				362103B31A89781200803CFA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MatrixMultipication;
+			productName = MatrixMultipication;
+			productReference = 362103B51A89781200803CFA /* MatrixMultipication.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		362103AD1A89781200803CFA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Apple Inc.";
+				TargetAttributes = {
+					362103B41A89781200803CFA = {
+						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = Z7P62XVNWC;
+					};
+				};
+			};
+			buildConfigurationList = 362103B01A89781200803CFA /* Build configuration list for PBXProject "MatrixMultipication" */;
+			compatibilityVersion = "Xcode 6.3";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 362103AC1A89781200803CFA;
+			productRefGroup = 362103B61A89781200803CFA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				362103B41A89781200803CFA /* MatrixMultipication */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		362103B31A89781200803CFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				362103C41A89781300803CFA /* Main.storyboard in Resources */,
+				36B0BF5F1BD70E64005F4828 /* LaunchScreen.storyboard in Resources */,
+				361FE8B11BD6FCE6005846ED /* Media.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		362103B11A89781200803CFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				362103F01A898FA200803CFA /* MetalMatrixMult.mm in Sources */,
+				362103EE1A898FA200803CFA /* MatrixMultPTScheduler.mm in Sources */,
+				362103EC1A898FA200803CFA /* MachTImer.mm in Sources */,
+				362103ED1A898FA200803CFA /* MatrixMultPerfTest.mm in Sources */,
+				362103EF1A898FA200803CFA /* MatrixRandomizer.mm in Sources */,
+				362103C11A89781300803CFA /* ViewController.mm in Sources */,
+				3663467C1AC93244007C7D74 /* MetalMatrixBuffers.mm in Sources */,
+				362103BE1A89781300803CFA /* AppDelegate.mm in Sources */,
+				362103EB1A898FA200803CFA /* BlasMatrixMult.mm in Sources */,
+				362103F11A898FA200803CFA /* MetalMatrixMulti.metal in Sources */,
+				362103BB1A89781200803CFA /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		362103C21A89781300803CFA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				362103C31A89781300803CFA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		36B0BF5D1BD70E64005F4828 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				36B0BF5E1BD70E64005F4828 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		362103D61A89781300803CFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LINKER_DISPLAYS_MANGLED_NAMES = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_LANGUAGE_REVISION = Metal11;
+				MTL_OPTIMIZATION_LEVEL = 0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				STRIP_INSTALLED_PRODUCT = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		362103D71A89781300803CFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_UNROLL_LOOPS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LLVM_LTO = YES;
+				MTL_FAST_MATH = YES;
+				MTL_LANGUAGE_REVISION = Metal11;
+				MTL_OPTIMIZATION_LEVEL = s;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		362103D91A89781300803CFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = MatrixMultipication/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.apple.sample.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		362103DA1A89781300803CFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = MatrixMultipication/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.apple.sample.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		362103B01A89781200803CFA /* Build configuration list for PBXProject "MatrixMultipication" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				362103D61A89781300803CFA /* Debug */,
+				362103D71A89781300803CFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		362103D81A89781300803CFA /* Build configuration list for PBXNativeTarget "MatrixMultipication" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				362103D91A89781300803CFA /* Debug */,
+				362103DA1A89781300803CFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 362103AD1A89781200803CFA /* Project object */;
+}

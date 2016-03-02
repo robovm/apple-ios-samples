@@ -1,5 +1,5 @@
 /*
-Copyright (C) 2015 Apple Inc. All Rights Reserved.
+Copyright (C) 2016 Apple Inc. All Rights Reserved.
 See LICENSE.txt for this sample’s licensing information
 
 Abstract:
@@ -77,7 +77,14 @@ CKCatalog.tabs['private-records'] = (function() {
       placeholder: 'Record ID',
       name: 'record-id',
       label: 'recordName:',
-      value: 'NewItem'
+      value: ''
+    })
+    .addInputField({
+      type: 'text',
+      placeholder: 'Change tag',
+      name: 'change-tag',
+      label: 'recordChangeTag',
+      value: ''
     })
     .addInputField({
       type: 'text',
@@ -110,6 +117,7 @@ CKCatalog.tabs['private-records'] = (function() {
     form: createItemForm,
     run: function() {
       var recordName = this.form.fields['record-id'].value;
+      var changeTag = this.form.fields['change-tag'].value;
       var name = this.form.fields['name'].value;
       var zoneName = this.form.fields['zone'].value;
       var latLong = this.form.fields['location'].value.split(',').map(function(string) {
@@ -120,9 +128,9 @@ CKCatalog.tabs['private-records'] = (function() {
         longitude: latLong[1]
       };
       var asset = this.form.fields['asset'].files[0];
-      return this.sampleCode(recordName,zoneName,name,location,asset);
+      return this.sampleCode(recordName,changeTag,zoneName,name,location,asset);
     },
-    sampleCode: function demoSaveRecord(recordName,zoneName,name,location,asset) {
+    sampleCode: function demoSaveRecord(recordName,recordChangeTag,zoneName,name,location,asset) {
       var container = CloudKit.getDefaultContainer();
       var privateDB = container.privateCloudDatabase;
 
@@ -130,7 +138,6 @@ CKCatalog.tabs['private-records'] = (function() {
       var options = zoneName ? { zoneID: zoneName } : undefined;
 
       var record = {
-        recordName: recordName,
 
         recordType: 'Items',
 
@@ -146,6 +153,16 @@ CKCatalog.tabs['private-records'] = (function() {
           }
         }
       };
+
+      // To modify an existing record, supply a recordChangeTag.
+      if(recordChangeTag) {
+        record.recordChangeTag = recordChangeTag;
+      }
+
+      // If no recordName is supplied the server will generate one.
+      if(recordName) {
+        record.recordName = recordName;
+      }
 
       return privateDB.saveRecord(record,options)
         .then(function(response) {

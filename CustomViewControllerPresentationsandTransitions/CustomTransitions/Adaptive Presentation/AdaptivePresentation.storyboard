@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sLR-bb-3Vh">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="3jC-ur-vTu">
+            <objects>
+                <navigationController id="sLR-bb-3Vh" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PJe-0n-zSB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9Ry-Lg-bRZ" kind="relationship" relationship="rootViewController" id="rGL-BR-ZEv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mW3-Z6-q2n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="425" y="578"/>
+        </scene>
+        <!--FirstViewController-->
+        <scene sceneID="CfZ-z9-9E0">
+            <objects>
+                <viewController storyboardIdentifier="FirstViewController" id="9Ry-Lg-bRZ" userLabel="FirstViewController" customClass="AAPLAdaptivePresentationFirstViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lTp-qi-gpP"/>
+                        <viewControllerLayoutGuide type="bottom" id="25U-MB-ZTX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hab-Vv-wx4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0q-wq-uBL">
+                                <rect key="frame" x="262" y="228" width="76" height="144"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="120"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.25" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sDw-I8-B5a">
+                                <rect key="frame" x="179" y="550" width="243" height="30"/>
+                                <state key="normal" title="Present With Adaptive Presentation">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Ddd-0G-t9T" kind="custom" customClass="AAPLAdaptivePresentationSegue" id="glq-Sr-Od4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90146998359999997" green="0.90003083880000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="a0q-wq-uBL" secondAttribute="centerX" id="Mb1-IC-seL"/>
+                            <constraint firstAttribute="centerX" secondItem="sDw-I8-B5a" secondAttribute="centerX" id="d38-UM-DvB"/>
+                            <constraint firstAttribute="centerY" secondItem="a0q-wq-uBL" secondAttribute="centerY" id="fPG-sv-CRp"/>
+                            <constraint firstItem="25U-MB-ZTX" firstAttribute="top" secondItem="sDw-I8-B5a" secondAttribute="bottom" constant="20" id="mxw-D3-ND6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Adaptive Presentation" id="OKt-Hc-X5X">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="IFW-Cy-K84">
+                            <connections>
+                                <segue destination="qye-bW-kAo" kind="unwind" identifier="" unwindAction="unwindToMenuViewController:" id="Myq-sc-DAM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sdg-Zj-4NF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="qye-bW-kAo" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1178" y="578"/>
+        </scene>
+        <!--SecondViewController-->
+        <scene sceneID="IPr-1t-oUg">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" title="Adaptive Presentation" id="Ddd-0G-t9T" userLabel="SecondViewController" customClass="AAPLAdaptivePresentationSecondViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XlH-rD-VXz"/>
+                        <viewControllerLayoutGuide type="bottom" id="leU-E9-UKW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jlJ-ke-oNs">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZ1-Q6-rte">
+                                <rect key="frame" x="263" y="228" width="74" height="144"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="120"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.25" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="HZ1-Q6-rte" secondAttribute="centerX" id="0mL-Bl-bxZ"/>
+                            <constraint firstAttribute="centerY" secondItem="HZ1-Q6-rte" secondAttribute="centerY" id="H2E-O5-o7j"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="fAJ-8z-SI3" kind="unwind" identifier="unwindToFirstViewController" unwindAction="unwindToAdaptivePresentationFirstViewController:" id="M9y-ma-xyJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HUH-9j-ceb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="fAJ-8z-SI3" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1934" y="578"/>
+        </scene>
+    </scenes>
+</document>

@@ -4,21 +4,22 @@
     
     Abstract:
     AudioEngine is the main controller class that creates the following objects:
-                    AVAudioEngine       *_engine;
-                    AVAudioPlayerNode   *_marimbaPlayer;
-                    AVAudioPlayerNode   *_drumPlayer;
-                    AVAudioUnitDelay    *_delay;
-                    AVAudioUnitReverb   *_reverb;
-                    AVAudioPCMBuffer    *_marimbaLoopBuffer;
-                    AVAudioPCMBuffer    *_drumLoopBuffer;
-                    
-                 It connects all the nodes, loads the buffers as well as controls the AVAudioEngine object itself.
+                    AVAudioEngine               *_engine;
+                    AVAudioUnitSampler          *_sampler;
+                    AVAudioUnitDistortion       *_distortion;
+                    AVAudioUnitReverb           *_reverb;
+                    AVAudioPlayerNode           *_player;
+     
+                    AVAudioSequencer            *_sequencer;
+                    AVAudioPCMBuffer            *_playerLoopBuffer;
+     
+                It connects all the nodes, loads the buffers as well as controls the AVAudioEngine object itself.
 */
 
 @import Foundation;
 
-// effect strip 1 - Marimba Player -> Delay -> Mixer
-// effect strip 2 - Drum Player -> Reverb -> Mixer
+//Other nodes/objects can listen to this to determine when the user finishes a recording
+static NSString *kRecordingCompletedNotification = @"RecordingCompletedNotification";
 
 @protocol AudioEngineDelegate <NSObject>
 
@@ -26,38 +27,37 @@
 - (void)engineWasInterrupted;
 - (void)engineConfigurationHasChanged;
 - (void)mixerOutputFilePlayerHasStopped;
-
 @end
 
 @interface AudioEngine : NSObject
 
-@property (nonatomic, readonly) BOOL marimbaPlayerIsPlaying;
-@property (nonatomic, readonly) BOOL drumPlayerIsPlaying;
+@property (nonatomic, readonly) BOOL recordingIsAvailable;
+@property (nonatomic, readonly) BOOL playerIsPlaying;
+@property (nonatomic, readonly) BOOL sequencerIsPlaying;
 
-@property (nonatomic) float marimbaPlayerVolume;    // 0.0 - 1.0
-@property (nonatomic) float drumPlayerVolume;       // 0.0 - 1.0
+@property (nonatomic) float sequencerCurrentPosition;
+@property (nonatomic) float sequencerPlaybackRate;
 
-@property (nonatomic) float marimbaPlayerPan;       // -1.0 - 1.0
-@property (nonatomic) float drumPlayerPan;          // -1.0 - 1.0
+@property (nonatomic) float playerVolume;           //  0.0 - 1.0
+@property (nonatomic) float playerPan;              // -1.0 - 1.0
 
-@property (nonatomic) float delayWetDryMix;         // 0.0 - 1.0
-@property (nonatomic) BOOL bypassDelay;
+@property (nonatomic) float samplerDirectVolume;  // 0.0 - 1.0
+@property (nonatomic) float samplerEffectVolume;  // 0.0 - 1.0
 
+@property (nonatomic) float distortionWetDryMix;    // 0.0 - 1.0
+@property (nonatomic) NSInteger distortionPreset;
 @property (nonatomic) float reverbWetDryMix;        // 0.0 - 1.0
-@property (nonatomic) BOOL bypassReverb;
+@property (nonatomic) NSInteger reverbPreset;
 
 @property (nonatomic) float outputVolume;           // 0.0 - 1.0
 
 @property (weak) id<AudioEngineDelegate> delegate;
 
-
-- (void)toggleMarimba;
-- (void)toggleDrums;
+- (void)toggleSequencer;
+- (void)togglePlayer;
+- (void)toggleBuffer:(BOOL)recordBuffer;
 
 - (void)startRecordingMixerOutput;
 - (void)stopRecordingMixerOutput;
-- (void)playRecordedFile;
-- (void)pausePlayingRecordedFile;
-- (void)stopPlayingRecordedFile;
 
 @end

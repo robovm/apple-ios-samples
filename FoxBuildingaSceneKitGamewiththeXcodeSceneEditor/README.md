@@ -8,10 +8,10 @@ This sample app also show how to use SpriteKit to achieve the 2D game overlays (
 
 ### Build
 
-Xcode 7.0, iOS 9.0 SDK, OS X 10.11 SDK
+Xcode 7.1, iOS 9.0 SDK, tvOS 9.0 SDK, OS X 10.11 SDK
 
 ### Runtime
 
-iOS 9.0, OS X 10.11
+iOS 9.0, tvOS 9.0, OS X 10.11
 
 Copyright (C) 2015 Apple Inc. All rights reserved.

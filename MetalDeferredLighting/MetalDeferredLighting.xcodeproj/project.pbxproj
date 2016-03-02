@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		303B4DC31C59C9EF000A2A40 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 303B4DC21C59C9EF000A2A40 /* README.md */; };
 		62AE78A01935B44C004EB001 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62AE789F1935B44C004EB001 /* Metal.framework */; };
 		62AE78A21935B454004EB001 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62AE78A11935B454004EB001 /* QuartzCore.framework */; };
 		62D382FD19358508003FF3EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62D382FB19358508003FF3EA /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		303B4DC21C59C9EF000A2A40 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		62AE789F1935B44C004EB001 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		62AE78A11935B454004EB001 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		62D382EC19358508003FF3EA /* MetalDeferredLighting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalDeferredLighting.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +120,7 @@
 		62D382E319358508003FF3EA = {
 			isa = PBXGroup;
 			children = (
+				303B4DC21C59C9EF000A2A40 /* README.md */,
 				62D382EE19358508003FF3EA /* MetalDeferredLighting */,
 				62D382ED19358508003FF3EA /* Products */,
 			);
@@ -255,7 +258,7 @@
 		62D382E419358508003FF3EA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Apple Inc";
 				TargetAttributes = {
 					62D382EB19358508003FF3EA = {
@@ -328,6 +331,7 @@
 				62D38323193585BD003FF3EA /* main.m in Sources */,
 				62D3836119358675003FF3EA /* AAPLObjModel.mm in Sources */,
 				62D3831F19358581003FF3EA /* AAPLAppDelegate.mm in Sources */,
+				303B4DC31C59C9EF000A2A40 /* README.md in Sources */,
 				62D3832919358609003FF3EA /* AAPLTransforms.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,6 +370,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = c11;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -385,6 +390,7 @@
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TOOLCHAIN = default;
+				WARNING_CFLAGS = "-Wno-attributes";
 			};
 			name = Debug;
 		};
@@ -426,6 +432,7 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TOOLCHAIN = default;
 				VALIDATE_PRODUCT = YES;
+				WARNING_CFLAGS = "-Wno-attributes";
 			};
 			name = Release;
 		};
@@ -435,6 +442,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = MetalDeferredLighting/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.MetalDeferredLighting";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -445,6 +453,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = MetalDeferredLighting/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.MetalDeferredLighting";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

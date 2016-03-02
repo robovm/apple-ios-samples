@@ -1,5 +1,5 @@
 /*
-Copyright (C) 2015 Apple Inc. All Rights Reserved.
+Copyright (C) 2016 Apple Inc. All Rights Reserved.
 See LICENSE.txt for this sample’s licensing information
 
 Abstract:
@@ -20,6 +20,7 @@ CKCatalog.tabs['public-query'] = (function() {
     var imageEl = document.createElement('img');
     imageEl.src = assetUrl;
     imageEl.setAttribute('width', '300');
+    imageEl.setAttribute('height','225');
     imageEl.className = 'item-asset';
 
     // Build the name element.
@@ -141,10 +142,11 @@ CKCatalog.tabs['public-query'] = (function() {
                   + (numberOfRecords > 1 ? 's' : ''));
                 records.forEach(function (record) {
                   var fields = record.fields;
+                  var asset = fields['asset'];
                   el.appendChild(renderItem(
                     fields['name'].value,
                     fields['location'].value,
-                    fields['asset'].value.downloadURL
+                    asset && asset.value && asset.value.downloadURL
                   ));
                 });
                 return el;

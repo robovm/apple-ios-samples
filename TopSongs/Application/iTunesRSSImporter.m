@@ -1,48 +1,9 @@
 /*
-     File: iTunesRSSImporter.m
- Abstract: Downloads, parses, and imports the iTunes top songs RSS feed into Core Data.
-  Version: 1.4
+ Copyright (C) 2015 Apple Inc. All Rights Reserved.
+ See LICENSE.txt for this sample’s licensing information
  
- Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
- Inc. ("Apple") in consideration of your agreement to the following
- terms, and your use, installation, modification or redistribution of
- this Apple software constitutes acceptance of these terms.  If you do
- not agree with these terms, please do not use, install, modify or
- redistribute this Apple software.
- 
- In consideration of your agreement to abide by the following terms, and
- subject to these terms, Apple grants you a personal, non-exclusive
- license, under Apple's copyrights in this original Apple software (the
- "Apple Software"), to use, reproduce, modify and redistribute the Apple
- Software, with or without modifications, in source and/or binary forms;
- provided that if you redistribute the Apple Software in its entirety and
- without modifications, you must retain this notice and the following
- text and disclaimers in all such redistributions of the Apple Software.
- Neither the name, trademarks, service marks or logos of Apple Inc. may
- be used to endorse or promote products derived from the Apple Software
- without specific prior written permission from Apple.  Except as
- expressly stated in this notice, no other rights or licenses, express or
- implied, are granted by Apple herein, including but not limited to any
- patent rights that may be infringed by your derivative works or by other
- works in which the Apple Software may be incorporated.
- 
- The Apple Software is provided by Apple on an "AS IS" basis.  APPLE
- MAKES NO WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
- THE IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY AND FITNESS
- FOR A PARTICULAR PURPOSE, REGARDING THE APPLE SOFTWARE OR ITS USE AND
- OPERATION ALONE OR IN COMBINATION WITH YOUR PRODUCTS.
- 
- IN NO EVENT SHALL APPLE BE LIABLE FOR ANY SPECIAL, INDIRECT, INCIDENTAL
- OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
- SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
- INTERRUPTION) ARISING IN ANY WAY OUT OF THE USE, REPRODUCTION,
- MODIFICATION AND/OR DISTRIBUTION OF THE APPLE SOFTWARE, HOWEVER CAUSED
- AND WHETHER UNDER THEORY OF CONTRACT, TORT (INCLUDING NEGLIGENCE),
- STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
- POSSIBILITY OF SUCH DAMAGE.
- 
- Copyright (C) 2013 Apple Inc. All Rights Reserved.
- 
+ Abstract:
+ Downloads, parses, and imports the iTunes top songs RSS feed into Core Data.
  */
 
 #import "iTunesRSSImporter.h"
@@ -61,80 +22,123 @@ static void errorEncounteredSAX(void *context, const char *errorMessage, ...);
 // Forward reference. The structure is defined in full at the end of the file.
 static xmlSAXHandler simpleSAXHandlerStruct;
 
-// Class extension for private properties and methods.
-@interface iTunesRSSImporter ()
 
+#pragma mark -
+
+// Class extension for private properties and methods.
+@interface iTunesRSSImporter () <NSURLSessionDataDelegate>
+
+// Reference to the libxml parser context
+@property xmlParserCtxtPtr context;
+
+// The following state variables deal with getting character data from XML elements. This is a potentially expensive
+// operation. The character data in a given element may be delivered over the course of multiple callbacks, so that
+// data must be appended to a buffer. The optimal way of doing this is to use a C string buffer that grows exponentially.
+// When all the characters have been delivered, an NSString is constructed and the buffer is reset.
 @property BOOL storingCharacters;
-@property (nonatomic, retain) NSMutableData *characterBuffer;
+@property (nonatomic, strong) NSMutableData *characterBuffer;
+
+// Overall state of the importer, used to exit the run loop.
 @property BOOL done;
+
+// State variable used to determine whether or not to ignore a given XML element
 @property BOOL parsingASong;
+
+// The number of parsed songs is tracked so that the autorelease pool for the parsing thread can be periodically
+// emptied to keep the memory footprint under control.
 @property NSUInteger countForCurrentBatch;
-@property (nonatomic, retain) Song *currentSong;
-@property (nonatomic, retain) NSURLConnection *rssConnection;
-@property (nonatomic, retain) NSDateFormatter *dateFormatter;
+
+// A reference to the current song the importer is working with.
+@property (nonatomic, strong) Song *currentSong;
+
+@property (nonatomic, strong) NSURLSession *session;
+@property (nonatomic, strong) NSURLSessionDataTask *sessionTask;
+
+@property (nonatomic, strong) NSDateFormatter *dateFormatter;
+
+@property NSUInteger rankOfCurrentSong;
+
+@property (nonatomic, strong) NSManagedObjectContext *insertionContext;
+@property (nonatomic, strong) NSEntityDescription *songEntityDescription;
+@property (nonatomic, strong) CategoryCache *theCache;
 
 @end
+
+
+#pragma mark -
 
 static double lookuptime = 0;
 
 @implementation iTunesRSSImporter
 
-@synthesize iTunesURL, delegate, persistentStoreCoordinator;
-@synthesize rssConnection, done, parsingASong, storingCharacters, currentSong, countForCurrentBatch, characterBuffer, dateFormatter;
-
 - (void)main {
 
-    if (delegate && [delegate respondsToSelector:@selector(importerDidSave:)]) {
-        [[NSNotificationCenter defaultCenter] addObserver:delegate selector:@selector(importerDidSave:) name:NSManagedObjectContextDidSaveNotification object:self.insertionContext];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(importerDidSave:)]) {
+        [[NSNotificationCenter defaultCenter] addObserver:self.delegate
+                                                 selector:@selector(importerDidSave:)
+                                                     name:NSManagedObjectContextDidSaveNotification
+                                                   object:self.insertionContext];
     }
-    done = NO;
-    self.dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateStyle:NSDateFormatterLongStyle];
-    [dateFormatter setTimeStyle:NSDateFormatterNoStyle];
+    self.done = NO;
+    _dateFormatter = [[NSDateFormatter alloc] init];
+    self.dateFormatter.dateStyle = NSDateFormatterLongStyle;
+    self.dateFormatter.timeStyle = NSDateFormatterNoStyle;
     // necessary because iTunes RSS feed is not localized, so if the device region has been set to other than US
     // the date formatter must be set to US locale in order to parse the dates
-    [dateFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"US"]];
-    self.characterBuffer = [NSMutableData data];
-    NSURLRequest *theRequest = [NSURLRequest requestWithURL:iTunesURL];
-    // create the connection with the request and start loading the data
-    rssConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-    // This creates a context for "push" parsing in which chunks of data that are not "well balanced" can be passed
-    // to the context for streaming parsing. The handler structure defined above will be used for all the parsing. 
-    // The second argument, self, will be passed as user data to each of the SAX handlers. The last three arguments
-    // are left blank to avoid creating a tree in memory.
-    context = xmlCreatePushParserCtxt(&simpleSAXHandlerStruct, (__bridge void *)(self), NULL, 0, NULL);
-    if (rssConnection != nil) {
+    self.dateFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"US"];
+    _characterBuffer = [NSMutableData data];
+    
+    // create the session with the request and start loading the data
+    NSURLRequest *request = [NSURLRequest requestWithURL:self.iTunesURL];
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    _session = [NSURLSession sessionWithConfiguration:configuration delegate:self delegateQueue:[NSOperationQueue mainQueue]];
+    _sessionTask = [self.session dataTaskWithRequest:request];
+    if (self.sessionTask != nil) {
+        
+        [self.sessionTask resume];
+
+        // This creates a context for "push" parsing in which chunks of data that are not "well balanced" can be passed
+        // to the context for streaming parsing. The handler structure defined above will be used for all the parsing. 
+        // The second argument, self, will be passed as user data to each of the SAX handlers. The last three arguments
+        // are left blank to avoid creating a tree in memory.
+        //
+        _context = xmlCreatePushParserCtxt(&simpleSAXHandlerStruct, (__bridge void *)(self), NULL, 0, NULL);
         do {
             [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
-        } while (!done);
-    }
-    // Display the total time spent finding a specific object for a relationship
-    NSLog(@"lookup time %f", lookuptime);
-    // Release resources used only in this thread.
-    xmlFreeParserCtxt(context);
-    self.characterBuffer = nil;
-    self.dateFormatter = nil;
-    self.rssConnection = nil;
-    self.currentSong = nil;
-    theCache = nil;
-    
-    NSError *saveError = nil;
-    NSAssert1([insertionContext save:&saveError], @"Unhandled error saving managed object context in import thread: %@", [saveError localizedDescription]);
-    if (delegate && [delegate respondsToSelector:@selector(importerDidSave:)]) {
-        [[NSNotificationCenter defaultCenter] removeObserver:delegate name:NSManagedObjectContextDidSaveNotification object:self.insertionContext];
-    }
-    if (self.delegate != nil && [self.delegate respondsToSelector:@selector(importerDidFinishParsingData:)]) {
-        [self.delegate importerDidFinishParsingData:self];
+        } while (!self.done);
+        
+        // Display the total time spent finding a specific object for a relationship
+        NSLog(@"lookup time %f", lookuptime);
+        
+        // Release resources used only in this thread.
+        xmlFreeParserCtxt(self.context);
+        _characterBuffer = nil;
+        self.dateFormatter = nil;
+        self.currentSong = nil;
+        _theCache = nil;
+        
+        NSError *saveError = nil;
+        NSAssert1([self.insertionContext save:&saveError], @"Unhandled error saving managed object context in import thread: %@", [saveError localizedDescription]);
+        if (self.delegate && [self.delegate respondsToSelector:@selector(importerDidSave:)]) {
+            [[NSNotificationCenter defaultCenter] removeObserver:self.delegate
+                                                            name:NSManagedObjectContextDidSaveNotification
+                                                          object:self.insertionContext];
+        }
+        
+        // call our delegate to signify parse completion
+        if (self.delegate != nil && [self.delegate respondsToSelector:@selector(importerDidFinishParsingData:)]) {
+            [self.delegate importerDidFinishParsingData:self];
+        }
     }
 }
 
 - (NSManagedObjectContext *)insertionContext {
     
-    if (insertionContext == nil) {
-        insertionContext = [[NSManagedObjectContext alloc] init];
-        [insertionContext setPersistentStoreCoordinator:self.persistentStoreCoordinator];
+    if (_insertionContext == nil) {
+        _insertionContext = [[NSManagedObjectContext alloc] init];
+        _insertionContext.persistentStoreCoordinator = self.persistentStoreCoordinator;
     }
-    return insertionContext;
+    return _insertionContext;
 }
 
 - (void)forwardError:(NSError *)error {
@@ -146,73 +150,82 @@ static double lookuptime = 0;
 
 - (NSEntityDescription *)songEntityDescription {
     
-    if (songEntityDescription == nil) {
-        songEntityDescription = [NSEntityDescription entityForName:@"Song" inManagedObjectContext:self.insertionContext];
+    if (_songEntityDescription == nil) {
+        _songEntityDescription = [NSEntityDescription entityForName:@"Song" inManagedObjectContext:self.insertionContext];
     }
-    return songEntityDescription;
+    return _songEntityDescription;
 }
 
 - (CategoryCache *)theCache {
     
-    if (theCache == nil) {
-        theCache = [[CategoryCache alloc] init];
-        theCache.managedObjectContext = self.insertionContext;
+    if (_theCache == nil) {
+        _theCache = [[CategoryCache alloc] init];
+        _theCache.managedObjectContext = self.insertionContext;
     }
-    return theCache;
+    return _theCache;
 }
 
 - (Song *)currentSong {
     
-    if (currentSong == nil) {
-        currentSong = [[Song alloc] initWithEntity:self.songEntityDescription insertIntoManagedObjectContext:self.insertionContext];
-        currentSong.rank = [NSNumber numberWithUnsignedInteger:++rankOfCurrentSong];
+    if (_currentSong == nil) {
+        _currentSong = [[Song alloc] initWithEntity:self.songEntityDescription insertIntoManagedObjectContext:self.insertionContext];
+        _currentSong.rank = @(++_rankOfCurrentSong);
     }
-    return currentSong;
+    return _currentSong;
 }
 
 
-#pragma mark NSURLConnection Delegate methods
+#pragma mark - NSURLSessionDataDelegate methods
 
-// Forward errors to the delegate.
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
-    
-    [self performSelectorOnMainThread:@selector(forwardError:) withObject:error waitUntilDone:NO];
-    // Set the condition which ends the run loop.
-    done = YES;
-}
-
-// Called when a chunk of data has been downloaded.
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+// Sent when data is available for the delegate to consume.
+//
+- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data {
     
     // Process the downloaded chunk of data.
-    xmlParseChunk(context, (const char *)[data bytes], [data length], 0);
+    xmlParseChunk(self.context, (const char *)data.bytes, (int)data.length, 0);
 }
 
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+// Sent as the last message related to a specific task.
+// Error may be nil, which implies that no error occurred and this task is complete.
+//
+- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error {
+    
+    if (error != nil) {
+
+        if ([error code] == NSURLErrorAppTransportSecurityRequiresSecureConnection)
+        {
+            // if you get error NSURLErrorAppTransportSecurityRequiresSecureConnection (-1022),
+            // then your Info.plist has not been properly configured to match the target server.
+            //
+            abort();
+        }
+        
+        [self performSelectorOnMainThread:@selector(forwardError:) withObject:error waitUntilDone:NO];
+    }
     
     // Signal the context that parsing is complete by passing "1" as the last parameter.
-    xmlParseChunk(context, NULL, 0, 1);
-    context = NULL;
+    xmlParseChunk(self.context, NULL, 0, 1);
+    _context = NULL;
     // Set the condition which ends the run loop.
-    done = YES; 
+    self.done = YES;
 }
 
 
-#pragma mark Parsing support methods
+#pragma mark - Parsing support methods
 
 static const NSUInteger kImportBatchSize = 20;
 
 - (void)finishedCurrentSong {
     
-    parsingASong = NO;
+    self.parsingASong = NO;
     self.currentSong = nil;
-    countForCurrentBatch++;
+    self.countForCurrentBatch++;
 
-    if (countForCurrentBatch == kImportBatchSize) {
+    if (self.countForCurrentBatch == kImportBatchSize) {
         
         NSError *saveError = nil;
-        NSAssert1([insertionContext save:&saveError], @"Unhandled error saving managed object context in import thread: %@", [saveError localizedDescription]);
-        countForCurrentBatch = 0;
+        NSAssert1([self.insertionContext save:&saveError], @"Unhandled error saving managed object context in import thread: %@", [saveError localizedDescription]);
+        self.countForCurrentBatch = 0;
     }
 }
 
@@ -221,20 +234,21 @@ static const NSUInteger kImportBatchSize = 20;
  */
 - (void)appendCharacters:(const char *)charactersFound length:(NSInteger)length {
     
-    [characterBuffer appendBytes:charactersFound length:length];
+    [self.characterBuffer appendBytes:charactersFound length:length];
 }
 
 - (NSString *)currentString {
     
     // Create a string with the character data using UTF-8 encoding. UTF-8 is the default XML data encoding.
-    NSString *currentString = [[NSString alloc] initWithData:characterBuffer encoding:NSUTF8StringEncoding];
-    [characterBuffer setLength:0];
+    NSString *currentString = [[NSString alloc] initWithData:self.characterBuffer encoding:NSUTF8StringEncoding];
+    self.characterBuffer.length = 0;
     return currentString;
 }
 
 @end
 
-#pragma mark SAX Parsing Callbacks
+
+#pragma mark - SAX Parsing Callbacks
 
 // The following constants are the XML element names and their string lengths for parsing comparison.
 // The lengths include the null terminator, to ensure exact matches.

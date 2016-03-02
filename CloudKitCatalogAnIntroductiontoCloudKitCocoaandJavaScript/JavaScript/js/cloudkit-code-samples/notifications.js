@@ -1,5 +1,5 @@
 /*
-Copyright (C) 2015 Apple Inc. All Rights Reserved.
+Copyright (C) 2016 Apple Inc. All Rights Reserved.
 See LICENSE.txt for this sample’s licensing information
 
 Abstract:
@@ -25,8 +25,10 @@ CKCatalog.tabs['notifications'] = (function() {
   var showOrHideAlert = function() {
     if(areNotificationsVisible() || unseenNotifications === 0) {
       notificationsAlertContainer.classList.add('hide');
+      notificationsAlertContainer.parentNode.classList.remove('notify');
     } else {
       notificationsAlertContainer.classList.remove('hide');
+      notificationsAlertContainer.parentNode.classList.add('notify');
     }
   };
 

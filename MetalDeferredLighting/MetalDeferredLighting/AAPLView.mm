@@ -112,6 +112,7 @@
                                                                                      loadAction:MTLLoadActionClear
                                                                                     storeAction:MTLStoreActionStore];
     [_renderPassDescriptor.colorAttachments setObject:colorAttachment0 atIndexedSubscript:0];
+    [texture setLabel:@"color 0"];
 
     // we only need to update the other attachments if something has changed (ie, rotation or layer changed size)
     BOOL doUpdate = (!_colorTextures[0]) || ( _colorTextures[0].width != texture.width  ) ||  (  _colorTextures[0].height != texture.height );
@@ -127,6 +128,7 @@
                                                                                            height: texture.height
                                                                                         mipmapped: NO];
             _colorTextures[i-1] = [_device newTextureWithDescriptor: desc];
+            [_colorTextures[i-1] setLabel:[NSString stringWithFormat:@"color %d", i]];
             
             MTLRenderPassColorAttachmentDescriptor *colorAttachment = [self colorAttachmentDescriptorWithTexture:_colorTextures[i-1]
                                                                                             clearColor:colorAttachmentClearValue[i]
@@ -149,6 +151,7 @@
                                                                                         mipmapped: NO];
             desc.textureType = MTLTextureType2D;
             _depthTex = [_device newTextureWithDescriptor: desc];
+            [_depthTex setLabel:@"depth"];
             
             MTLRenderPassDepthAttachmentDescriptor *depthAttachment = _renderPassDescriptor.depthAttachment;
             depthAttachment.texture = _depthTex;
@@ -173,6 +176,7 @@
             
             desc.textureType =  MTLTextureType2D;
             _stencilTex = [_device newTextureWithDescriptor: desc];
+            [_stencilTex setLabel:@"stencil"];
             
             MTLRenderPassStencilAttachmentDescriptor* stencilAttachment = _renderPassDescriptor.stencilAttachment;
             stencilAttachment.texture = _stencilTex;

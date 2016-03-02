@@ -1,5 +1,5 @@
 /*
-Copyright (C) 2015 Apple Inc. All Rights Reserved.
+Copyright (C) 2016 Apple Inc. All Rights Reserved.
 See LICENSE.txt for this sample’s licensing information
 
 Abstract:
@@ -29,10 +29,10 @@ CKCatalog.tabs['authentication'] = (function() {
     var html = '<h2>Unable to set a cookie</h2><p>';
 
     if(window.location.protocol === 'file:') {
-      html += 'The configuration option <code>auth.persist = true</code> is not compatible with the <i>file://</i> protocol. ';
+      html += 'The authentication option <code>persist = true</code> is not compatible with the <i>file://</i> protocol. ';
     }
 
-    html += 'Please edit <i>js/init.js</i> and set <code>auth.persist = false</code> in <i>CloudKit.configure()</i>.</p>';
+    html += 'Please edit <i>js/init.js</i> and set <code>persist = false</code> in <i>CloudKit.configure()</i>.</p>';
 
     CKCatalog.dialog.show(html, { title: 'Close' });
   };

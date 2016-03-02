@@ -1,0 +1,306 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CBA9F15312F76264005BB61E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBA9F15212F76264005BB61E /* UIKit.framework */; };
+		CBA9F15512F76264005BB61E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBA9F15412F76264005BB61E /* Foundation.framework */; };
+		CBA9F15712F76264005BB61E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBA9F15612F76264005BB61E /* CoreGraphics.framework */; };
+		CBA9F15D12F76264005BB61E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CBA9F15B12F76264005BB61E /* InfoPlist.strings */; };
+		CBA9F16012F76264005BB61E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA9F15F12F76264005BB61E /* main.m */; };
+		CBA9F16312F76264005BB61E /* RegionsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA9F16212F76264005BB61E /* RegionsAppDelegate.m */; };
+		CBA9F16912F76264005BB61E /* RegionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA9F16812F76264005BB61E /* RegionsViewController.m */; };
+		CBA9F17312F7628B005BB61E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBA9F17212F7628B005BB61E /* CoreLocation.framework */; };
+		CBA9F17512F76292005BB61E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBA9F17412F76292005BB61E /* MapKit.framework */; };
+		CBA9F17D12F763D8005BB61E /* RegionAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA9F17A12F763D8005BB61E /* RegionAnnotation.m */; };
+		CBA9F17E12F763D8005BB61E /* RegionAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA9F17C12F763D8005BB61E /* RegionAnnotationView.m */; };
+		E0064A4C1B6051EF001EA236 /* AssetCatalog.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0064A4B1B6051EF001EA236 /* AssetCatalog.xcassets */; };
+		E01AF0EB1B619146007A8B92 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E01AF0EA1B619146007A8B92 /* Launch.storyboard */; };
+		E0282BE11B0AA1AC00DFB605 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0282BE01B0AA1AC00DFB605 /* Main.storyboard */; };
+		E088A24D1BEE971500DB9234 /* ReadMe.md in Sources */ = {isa = PBXBuildFile; fileRef = E088A24C1BEE971500DB9234 /* ReadMe.md */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CBA9F14E12F76264005BB61E /* Regions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Regions.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBA9F15212F76264005BB61E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CBA9F15412F76264005BB61E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CBA9F15612F76264005BB61E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CBA9F15A12F76264005BB61E /* Regions-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Regions-Info.plist"; sourceTree = "<group>"; };
+		CBA9F15C12F76264005BB61E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CBA9F15E12F76264005BB61E /* Regions-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Regions-Prefix.pch"; sourceTree = "<group>"; };
+		CBA9F15F12F76264005BB61E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CBA9F16112F76264005BB61E /* RegionsAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegionsAppDelegate.h; sourceTree = "<group>"; };
+		CBA9F16212F76264005BB61E /* RegionsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegionsAppDelegate.m; sourceTree = "<group>"; };
+		CBA9F16712F76264005BB61E /* RegionsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegionsViewController.h; sourceTree = "<group>"; };
+		CBA9F16812F76264005BB61E /* RegionsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegionsViewController.m; sourceTree = "<group>"; };
+		CBA9F17212F7628B005BB61E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		CBA9F17412F76292005BB61E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		CBA9F17912F763D8005BB61E /* RegionAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegionAnnotation.h; sourceTree = "<group>"; };
+		CBA9F17A12F763D8005BB61E /* RegionAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegionAnnotation.m; sourceTree = "<group>"; };
+		CBA9F17B12F763D8005BB61E /* RegionAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegionAnnotationView.h; sourceTree = "<group>"; };
+		CBA9F17C12F763D8005BB61E /* RegionAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegionAnnotationView.m; sourceTree = "<group>"; };
+		E0064A4B1B6051EF001EA236 /* AssetCatalog.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AssetCatalog.xcassets; sourceTree = "<group>"; };
+		E01AF0EA1B619146007A8B92 /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
+		E0282BE01B0AA1AC00DFB605 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		E088A24C1BEE971500DB9234 /* ReadMe.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CBA9F14B12F76264005BB61E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBA9F17512F76292005BB61E /* MapKit.framework in Frameworks */,
+				CBA9F17312F7628B005BB61E /* CoreLocation.framework in Frameworks */,
+				CBA9F15312F76264005BB61E /* UIKit.framework in Frameworks */,
+				CBA9F15512F76264005BB61E /* Foundation.framework in Frameworks */,
+				CBA9F15712F76264005BB61E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CBA9F14312F76263005BB61E = {
+			isa = PBXGroup;
+			children = (
+				E088A24C1BEE971500DB9234 /* ReadMe.md */,
+				CBA9F15812F76264005BB61E /* Regions */,
+				CBA9F15112F76264005BB61E /* Frameworks */,
+				CBA9F14F12F76264005BB61E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CBA9F14F12F76264005BB61E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CBA9F14E12F76264005BB61E /* Regions.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CBA9F15112F76264005BB61E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CBA9F17412F76292005BB61E /* MapKit.framework */,
+				CBA9F17212F7628B005BB61E /* CoreLocation.framework */,
+				CBA9F15212F76264005BB61E /* UIKit.framework */,
+				CBA9F15412F76264005BB61E /* Foundation.framework */,
+				CBA9F15612F76264005BB61E /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CBA9F15812F76264005BB61E /* Regions */ = {
+			isa = PBXGroup;
+			children = (
+				CBA9F16112F76264005BB61E /* RegionsAppDelegate.h */,
+				CBA9F16212F76264005BB61E /* RegionsAppDelegate.m */,
+				CBA9F16712F76264005BB61E /* RegionsViewController.h */,
+				CBA9F16812F76264005BB61E /* RegionsViewController.m */,
+				CBA9F17912F763D8005BB61E /* RegionAnnotation.h */,
+				CBA9F17A12F763D8005BB61E /* RegionAnnotation.m */,
+				CBA9F17B12F763D8005BB61E /* RegionAnnotationView.h */,
+				CBA9F17C12F763D8005BB61E /* RegionAnnotationView.m */,
+				E0282BE01B0AA1AC00DFB605 /* Main.storyboard */,
+				E01AF0EA1B619146007A8B92 /* Launch.storyboard */,
+				CBA9F15912F76264005BB61E /* Supporting Files */,
+			);
+			path = Regions;
+			sourceTree = "<group>";
+		};
+		CBA9F15912F76264005BB61E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CBA9F15A12F76264005BB61E /* Regions-Info.plist */,
+				CBA9F15B12F76264005BB61E /* InfoPlist.strings */,
+				CBA9F15E12F76264005BB61E /* Regions-Prefix.pch */,
+				CBA9F15F12F76264005BB61E /* main.m */,
+				E0064A4B1B6051EF001EA236 /* AssetCatalog.xcassets */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CBA9F14D12F76264005BB61E /* Regions */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBA9F16F12F76264005BB61E /* Build configuration list for PBXNativeTarget "Regions" */;
+			buildPhases = (
+				CBA9F14A12F76264005BB61E /* Sources */,
+				CBA9F14B12F76264005BB61E /* Frameworks */,
+				CBA9F14C12F76264005BB61E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Regions;
+			productName = Regions;
+			productReference = CBA9F14E12F76264005BB61E /* Regions.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CBA9F14512F76263005BB61E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Apple Inc.";
+			};
+			buildConfigurationList = CBA9F14812F76263005BB61E /* Build configuration list for PBXProject "Regions" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CBA9F14312F76263005BB61E;
+			productRefGroup = CBA9F14F12F76264005BB61E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CBA9F14D12F76264005BB61E /* Regions */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CBA9F14C12F76264005BB61E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBA9F15D12F76264005BB61E /* InfoPlist.strings in Resources */,
+				E01AF0EB1B619146007A8B92 /* Launch.storyboard in Resources */,
+				E0282BE11B0AA1AC00DFB605 /* Main.storyboard in Resources */,
+				E0064A4C1B6051EF001EA236 /* AssetCatalog.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CBA9F14A12F76264005BB61E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBA9F16012F76264005BB61E /* main.m in Sources */,
+				CBA9F16312F76264005BB61E /* RegionsAppDelegate.m in Sources */,
+				E088A24D1BEE971500DB9234 /* ReadMe.md in Sources */,
+				CBA9F16912F76264005BB61E /* RegionsViewController.m in Sources */,
+				CBA9F17D12F763D8005BB61E /* RegionAnnotation.m in Sources */,
+				CBA9F17E12F763D8005BB61E /* RegionAnnotationView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CBA9F15B12F76264005BB61E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBA9F15C12F76264005BB61E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CBA9F16D12F76264005BB61E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CBA9F16E12F76264005BB61E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		CBA9F17012F76264005BB61E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Regions/Regions-Prefix.pch";
+				INFOPLIST_FILE = "Regions/Regions-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CBA9F17112F76264005BB61E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Regions/Regions-Prefix.pch";
+				INFOPLIST_FILE = "Regions/Regions-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CBA9F14812F76263005BB61E /* Build configuration list for PBXProject "Regions" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBA9F16D12F76264005BB61E /* Debug */,
+				CBA9F16E12F76264005BB61E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBA9F16F12F76264005BB61E /* Build configuration list for PBXNativeTarget "Regions" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBA9F17012F76264005BB61E /* Debug */,
+				CBA9F17112F76264005BB61E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CBA9F14512F76263005BB61E /* Project object */;
+}

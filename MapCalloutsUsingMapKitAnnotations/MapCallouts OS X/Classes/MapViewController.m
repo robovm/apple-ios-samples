@@ -1,5 +1,5 @@
 /*
- Copyright (C) 2015 Apple Inc. All Rights Reserved.
+ Copyright (C) 2016 Apple Inc. All Rights Reserved.
  See LICENSE.txt for this sample’s licensing information
  
  Abstract:
@@ -11,6 +11,7 @@
 
 #import "SFAnnotation.h"            // annotation for the city of San Francisco
 #import "BridgeAnnotation.h"        // annotation for the Golden Gate bridge
+#import "WharfAnnotation.h"         // annotation for Fisherman's Wharf
 
 #import "CustomAnnotation.h"        // annotation for the Tea Garden
 #import "CustomAnnotationView.h"    // annotation view for the Tea Carbon
@@ -22,7 +23,8 @@
 
 @property (strong) IBOutlet MKMapView *mapView;
 
-@property (strong) IBOutlet NSMatrix *annotationStates; // series of radio buttons to hide/show annotations
+@property (strong) IBOutlet NSMatrix *annotationStates; // series of check boxes to hide/show annotations
+@property (strong) IBOutlet NSButtonCell *toggleAllCheckBox;
 @property (strong) NSMutableArray *mapAnnotations;
 
 @property (strong) NSPopover *myPopover;    // popover to display Golden Gate bridge (or BridgeViewController)
@@ -52,8 +54,8 @@
 
 - (void)awakeFromNib
 {
-	// create our annotations array (in this example only 3)
-    self.mapAnnotations = [[NSMutableArray alloc] initWithCapacity:3];
+	// create our annotations array
+    self.mapAnnotations = [[NSMutableArray alloc] init];
     
     // annotation for the City of San Francisco
     SFAnnotation *sfAnnotation = [[SFAnnotation alloc] init];
@@ -70,6 +72,10 @@
     item.coordinate = CLLocationCoordinate2DMake(37.770, -122.4701);
     [self.mapAnnotations addObject:item];
     
+    // annotation for Fisherman's Wharf
+    WharfAnnotation *wharfAnnotation = [[WharfAnnotation alloc] init];
+    [self.mapAnnotations addObject:wharfAnnotation];
+    
     [self gotoDefaultLocation];    // go to San Francisco
     
     // default by showing all annotations
@@ -84,28 +90,26 @@
 
 - (IBAction)annotationsAction:(id)sender
 {
-    NSMatrix *annotationStates = (NSMatrix *)sender;
-    
-    NSInteger colIdx = [annotationStates selectedColumn];
-    NSInteger rowIdx = [annotationStates selectedRow];
-    NSButtonCell *checkCheckBox = [annotationStates cellAtRow:rowIdx column:colIdx];
+    NSInteger colIdx = [self.annotationStates selectedColumn];
+    NSInteger rowIdx = [self.annotationStates selectedRow];
+    NSButtonCell *selectedCheckBox = [self.annotationStates cellAtRow:rowIdx column:colIdx];
     
     [self gotoDefaultLocation];
     
-    if (colIdx > 2)
+    if (selectedCheckBox == self.toggleAllCheckBox)
     {
         // user chose "All" checkbox
         [self.mapView removeAnnotations:self.mapView.annotations];  // remove any annotations that exist
         
-        NSButtonCell *allCheckbox = [annotationStates cellAtRow:rowIdx column:colIdx];
+        NSButtonCell *allCheckbox = [self.annotationStates cellAtRow:rowIdx column:colIdx];
         if ([allCheckbox state])
         {
-            [annotationStates selectAll:self];
+            [self.annotationStates selectAll:self];
             [self.mapView addAnnotations:self.mapAnnotations];
         }
         else
         {
-            [annotationStates deselectAllCells];
+            [self.annotationStates deselectAllCells];
         }
     }
     else
@@ -113,10 +117,9 @@
         // user chose an individual checkbox
         //
         // uncheck "All" checkbox
-        NSButtonCell *allCheckbox = [annotationStates cellAtRow:0 column:3];
-        [allCheckbox setState: NSOffState];
+        [self.toggleAllCheckBox setState: NSOffState];
         
-        if ([checkCheckBox state])
+        if ([selectedCheckBox state])
             [self.mapView addAnnotation:[self.mapAnnotations objectAtIndex:colIdx]];
         else
             [self.mapView removeAnnotation:[self.mapAnnotations objectAtIndex:colIdx]];
@@ -164,7 +167,7 @@
     // in case it's the user location, we already have an annotation, so just return nil
     if (![annotation isKindOfClass:[MKUserLocation class]])
     {
-        // handle our three custom annotations
+        // handle our custom annotations
         //
         if ([annotation isKindOfClass:[BridgeAnnotation class]]) // for Golden Gate Bridge
         {
@@ -179,6 +182,21 @@
             [rightButton setBezelStyle:NSShadowlessSquareBezelStyle];
             returnedAnnotationView.rightCalloutAccessoryView = rightButton;
         }
+        else if ([annotation isKindOfClass:[WharfAnnotation class]]) // for Fisherman's Wharf
+        {
+            returnedAnnotationView = [WharfAnnotation createViewAnnotationForMapView:self.mapView annotation:annotation];
+            
+            // provide an image view to use as the accessory view's detail view.
+            NSImage *image = [NSImage imageNamed:@"wharf"];
+            NSRect imageRect = NSMakeRect(0.0, 0.0, image.size.width, image.size.height);
+            
+            NSImageView *imageView = [[NSImageView alloc] initWithFrame:imageRect];
+            [imageView setImage:image];
+            NSView *custView = [[NSView alloc] initWithFrame:imageRect];
+            [custView addSubview:imageView];
+
+            returnedAnnotationView.detailCalloutAccessoryView = custView;
+        }
         else if ([annotation isKindOfClass:[SFAnnotation class]])   // for City of San Francisco
         {
             // create/dequeue the city annotation
@@ -190,10 +208,12 @@
             // provide the left image icon for the annotation
             NSImage *sfImage = [NSImage imageNamed:@"SFIcon"];
             NSRect imageRect = NSMakeRect(0.0, 0.0, sfImage.size.width, sfImage.size.height);
+            
             NSImageView *sfIconView = [[NSImageView alloc] initWithFrame:imageRect];
             [sfIconView setImage:sfImage];
-            NSView *custView = [[NSView alloc] initWithFrame:NSMakeRect(imageRect.origin.x, imageRect.origin.y, imageRect.size.width+10, imageRect.size.height)];
+            NSView *custView = [[NSView alloc] initWithFrame:imageRect];
             [custView addSubview:sfIconView];
+            
             returnedAnnotationView.leftCalloutAccessoryView = custView;
         }
         else if ([annotation isKindOfClass:[CustomAnnotation class]])  // for Japanese Tea Garden

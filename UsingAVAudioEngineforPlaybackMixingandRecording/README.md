@@ -10,12 +10,11 @@ For more information refer to AVAudioEngine in Practice WWDC 2014: https://devel
 
 ### Build
 
-iOS 8 SDK, Xcode Version 6.1.1 or greater
+iOS 9 SDK, Xcode Version 7.1 or greater
 
 ### Runtime
 
-iOS 8 SDK
-iPad only
+iOS 9.x
 
 ## Version History
 1.0 First public version
@@ -27,4 +26,9 @@ iPad only
 * fixed a bug in handleMediaServicesReset: method
 * corrected some old comments
 
-Copyright (C) 2015 Apple Inc. All rights reserved.
+2.0 Major update:
+* (new) Demonstrates use of AVAudioSequencer, AVAudioMixing, AVAudioDestinationMixing
+* (new) Added support for iPhone, iPad using Size Classes
+* (modified) Useage of a single AVAudioPlayerNode that toggles between a recorded AVAudioFile and a AVAudioPCMBuffer
+
+Copyright (C) 2015-2016 Apple Inc. All rights reserved.

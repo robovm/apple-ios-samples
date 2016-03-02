@@ -1,0 +1,685 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 47;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9C1315441BA8667B001E29CC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C1315431BA8667B001E29CC /* Images.xcassets */; };
+		9C1315451BA8668F001E29CC /* game.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CFCF16D1B68E61200686987 /* game.scnassets */; };
+		9C1315461BA86694001E29CC /* congratulations.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CFCF1731B68E61200686987 /* congratulations.png */; };
+		9C1315471BA86694001E29CC /* congratulations_pandaMax.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CFCF1741B68E61200686987 /* congratulations_pandaMax.png */; };
+		9C1315481BA86694001E29CC /* dpad.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CFCF1751B68E61200686987 /* dpad.png */; };
+		9C1315491BA86694001E29CC /* FlowerEmpty.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CFCF1761B68E61200686987 /* FlowerEmpty.png */; };
+		9C13154A1BA86694001E29CC /* FlowerFull.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CFCF1771B68E61200686987 /* FlowerFull.png */; };
+		9C13154B1BA86694001E29CC /* ItemsPearl.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CFCF1781B68E61200686987 /* ItemsPearl.png */; };
+		9C13154C1BA86694001E29CC /* MaxIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CFCF1791B68E61200686987 /* MaxIcon.png */; };
+		9C13154D1BA8669C001E29CC /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB2D9051B67DA0200EC4C98 /* Character.swift */; };
+		9C13154E1BA8669C001E29CC /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB2D9061B67DA0200EC4C98 /* GameView.swift */; };
+		9C13154F1BA8669C001E29CC /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB2D9071B67DA0200EC4C98 /* GameViewController.swift */; };
+		9C1315501BA8669C001E29CC /* SceneKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB2D9081B67DA0200EC4C98 /* SceneKitExtensions.swift */; };
+		9C1515ED1BAABAE200A3419A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C1515EB1BAABAE200A3419A /* Main.storyboard */; };
+		9C1515F31BAABB7700A3419A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1515F21BAABB7700A3419A /* AppDelegate.swift */; };
+		9C1515F51BAABB8300A3419A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C1515F41BAABB8300A3419A /* Images.xcassets */; };
+		9C1515F61BAABB8800A3419A /* game.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CFCF16D1B68E61200686987 /* game.scnassets */; };
+		9C1515F71BAABB8C00A3419A /* congratulations.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CFCF1731B68E61200686987 /* congratulations.png */; };
+		9C1515F81BAABB8C00A3419A /* congratulations_pandaMax.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CFCF1741B68E61200686987 /* congratulations_pandaMax.png */; };
+		9C1515F91BAABB8C00A3419A /* dpad.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CFCF1751B68E61200686987 /* dpad.png */; };
+		9C1515FA1BAABB8C00A3419A /* FlowerEmpty.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CFCF1761B68E61200686987 /* FlowerEmpty.png */; };
+		9C1515FB1BAABB8C00A3419A /* FlowerFull.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CFCF1771B68E61200686987 /* FlowerFull.png */; };
+		9C1515FC1BAABB8C00A3419A /* ItemsPearl.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CFCF1781B68E61200686987 /* ItemsPearl.png */; };
+		9C1515FD1BAABB8C00A3419A /* MaxIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CFCF1791B68E61200686987 /* MaxIcon.png */; };
+		9C25F2B01BECE9D30018B67F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C25F2AF1BECE9D30018B67F /* Launch Screen.storyboard */; };
+		9C5EC6331BAAC15400BF4D1F /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB2D9051B67DA0200EC4C98 /* Character.swift */; };
+		9C5EC6341BAAC15400BF4D1F /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB2D9061B67DA0200EC4C98 /* GameView.swift */; };
+		9C5EC6351BAAC15400BF4D1F /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB2D9071B67DA0200EC4C98 /* GameViewController.swift */; };
+		9C5EC6361BAAC15400BF4D1F /* SceneKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB2D9081B67DA0200EC4C98 /* SceneKitExtensions.swift */; };
+		9C73B8C91BA8625800F5D836 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C73B8C71BA8625800F5D836 /* Main.storyboard */; };
+		9C8180A61BDA674800FE8C68 /* collect.scnp in Resources */ = {isa = PBXBuildFile; fileRef = 9C8180A21BDA674800FE8C68 /* collect.scnp */; };
+		9C8180A71BDA674800FE8C68 /* collect.scnp in Resources */ = {isa = PBXBuildFile; fileRef = 9C8180A21BDA674800FE8C68 /* collect.scnp */; };
+		9C8180A81BDA674800FE8C68 /* collect.scnp in Resources */ = {isa = PBXBuildFile; fileRef = 9C8180A21BDA674800FE8C68 /* collect.scnp */; };
+		9C8180A91BDA674800FE8C68 /* confetti.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C8180A31BDA674800FE8C68 /* confetti.png */; };
+		9C8180AA1BDA674800FE8C68 /* confetti.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C8180A31BDA674800FE8C68 /* confetti.png */; };
+		9C8180AB1BDA674800FE8C68 /* confetti.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C8180A31BDA674800FE8C68 /* confetti.png */; };
+		9C8180AC1BDA674800FE8C68 /* confetti.scnp in Resources */ = {isa = PBXBuildFile; fileRef = 9C8180A41BDA674800FE8C68 /* confetti.scnp */; };
+		9C8180AD1BDA674800FE8C68 /* confetti.scnp in Resources */ = {isa = PBXBuildFile; fileRef = 9C8180A41BDA674800FE8C68 /* confetti.scnp */; };
+		9C8180AE1BDA674800FE8C68 /* confetti.scnp in Resources */ = {isa = PBXBuildFile; fileRef = 9C8180A41BDA674800FE8C68 /* confetti.scnp */; };
+		9C8180AF1BDA674800FE8C68 /* glow01.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C8180A51BDA674800FE8C68 /* glow01.png */; };
+		9C8180B01BDA674800FE8C68 /* glow01.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C8180A51BDA674800FE8C68 /* glow01.png */; };
+		9C8180B11BDA674800FE8C68 /* glow01.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C8180A51BDA674800FE8C68 /* glow01.png */; };
+		9C8B331C1BAC4E2C000BC0FB /* GameControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8B331B1BAC4E2C000BC0FB /* GameControls.swift */; };
+		9C8B331D1BAC4E2C000BC0FB /* GameControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8B331B1BAC4E2C000BC0FB /* GameControls.swift */; };
+		9C8B331E1BAC4E2C000BC0FB /* GameControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8B331B1BAC4E2C000BC0FB /* GameControls.swift */; };
+		9CB2D91E1B67DB2E00EC4C98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB2D91D1B67DB2E00EC4C98 /* AppDelegate.swift */; };
+		9CB2D9251B67DB2E00EC4C98 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CB2D9241B67DB2E00EC4C98 /* Images.xcassets */; };
+		9CB408881BA8637700577F11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB408871BA8637700577F11 /* AppDelegate.swift */; };
+		9CE71E571BA8948B00B93270 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CB2D9211B67DB2E00EC4C98 /* Main.storyboard */; };
+		9CFCF17A1B68E61200686987 /* game.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CFCF16D1B68E61200686987 /* game.scnassets */; };
+		9CFCF1841B68E61200686987 /* congratulations.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CFCF1731B68E61200686987 /* congratulations.png */; };
+		9CFCF1861B68E61200686987 /* congratulations_pandaMax.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CFCF1741B68E61200686987 /* congratulations_pandaMax.png */; };
+		9CFCF1881B68E61200686987 /* dpad.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CFCF1751B68E61200686987 /* dpad.png */; };
+		9CFCF18A1B68E61200686987 /* FlowerEmpty.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CFCF1761B68E61200686987 /* FlowerEmpty.png */; };
+		9CFCF18C1B68E61200686987 /* FlowerFull.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CFCF1771B68E61200686987 /* FlowerFull.png */; };
+		9CFCF18E1B68E61200686987 /* ItemsPearl.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CFCF1781B68E61200686987 /* ItemsPearl.png */; };
+		9CFCF1901B68E61200686987 /* MaxIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CFCF1791B68E61200686987 /* MaxIcon.png */; };
+		9CFCF1941B69005D00686987 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB2D9051B67DA0200EC4C98 /* Character.swift */; };
+		9CFCF1951B69005D00686987 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB2D9061B67DA0200EC4C98 /* GameView.swift */; };
+		9CFCF1961B69005D00686987 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB2D9071B67DA0200EC4C98 /* GameViewController.swift */; };
+		9CFCF1971B69005D00686987 /* SceneKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB2D9081B67DA0200EC4C98 /* SceneKitExtensions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9C1315431BA8667B001E29CC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9C1515E31BAABAE200A3419A /* Fox (Swift).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fox (Swift).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C1515EC1BAABAE200A3419A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9C1515EE1BAABAE200A3419A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C1515F21BAABB7700A3419A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9C1515F41BAABB8300A3419A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9C25F2AF1BECE9D30018B67F /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		9C73B8BF1BA8625800F5D836 /* Fox (Swift).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fox (Swift).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C73B8C81BA8625800F5D836 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9C73B8CC1BA8625900F5D836 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C8180A21BDA674800FE8C68 /* collect.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = collect.scnp; sourceTree = "<group>"; };
+		9C8180A31BDA674800FE8C68 /* confetti.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = confetti.png; sourceTree = "<group>"; };
+		9C8180A41BDA674800FE8C68 /* confetti.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = confetti.scnp; sourceTree = "<group>"; };
+		9C8180A51BDA674800FE8C68 /* glow01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glow01.png; sourceTree = "<group>"; };
+		9C8B331B1BAC4E2C000BC0FB /* GameControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameControls.swift; path = Common/GameControls.swift; sourceTree = "<group>"; };
+		9CB2D9051B67DA0200EC4C98 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Character.swift; path = Common/Character.swift; sourceTree = "<group>"; };
+		9CB2D9061B67DA0200EC4C98 /* GameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameView.swift; path = Common/GameView.swift; sourceTree = "<group>"; };
+		9CB2D9071B67DA0200EC4C98 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameViewController.swift; path = Common/GameViewController.swift; sourceTree = "<group>"; };
+		9CB2D9081B67DA0200EC4C98 /* SceneKitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneKitExtensions.swift; path = Common/SceneKitExtensions.swift; sourceTree = "<group>"; };
+		9CB2D91B1B67DB2E00EC4C98 /* Fox (Swift).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fox (Swift).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CB2D91D1B67DB2E00EC4C98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9CB2D9221B67DB2E00EC4C98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9CB2D9241B67DB2E00EC4C98 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9CB2D9291B67DB2E00EC4C98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CB408871BA8637700577F11 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9CFCF16D1B68E61200686987 /* game.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = game.scnassets; sourceTree = "<group>"; };
+		9CFCF1731B68E61200686987 /* congratulations.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = congratulations.png; sourceTree = "<group>"; };
+		9CFCF1741B68E61200686987 /* congratulations_pandaMax.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = congratulations_pandaMax.png; sourceTree = "<group>"; };
+		9CFCF1751B68E61200686987 /* dpad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dpad.png; sourceTree = "<group>"; };
+		9CFCF1761B68E61200686987 /* FlowerEmpty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlowerEmpty.png; sourceTree = "<group>"; };
+		9CFCF1771B68E61200686987 /* FlowerFull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlowerFull.png; sourceTree = "<group>"; };
+		9CFCF1781B68E61200686987 /* ItemsPearl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ItemsPearl.png; sourceTree = "<group>"; };
+		9CFCF1791B68E61200686987 /* MaxIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MaxIcon.png; sourceTree = "<group>"; };
+		9CFEBECF1B1F80F7002C687D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9C1515E01BAABAE200A3419A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C73B8BC1BA8625800F5D836 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CB2D9181B67DB2E00EC4C98 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		94CA651B1ADBF90F006293CF = {
+			isa = PBXGroup;
+			children = (
+				9CFEBECF1B1F80F7002C687D /* README.md */,
+				9CFCF16C1B68E61200686987 /* Game assets */,
+				9CB2D9041B67D9F000EC4C98 /* Common */,
+				9CB2D91C1B67DB2E00EC4C98 /* iOS */,
+				9C73B8C01BA8625800F5D836 /* tvOS */,
+				9C1515E41BAABAE200A3419A /* OS X */,
+				9CB2D9381B67F3EC00EC4C98 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9C1515E41BAABAE200A3419A /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				9C1515F21BAABB7700A3419A /* AppDelegate.swift */,
+				9C1515F41BAABB8300A3419A /* Images.xcassets */,
+				9C1515EB1BAABAE200A3419A /* Main.storyboard */,
+				9C1515EE1BAABAE200A3419A /* Info.plist */,
+			);
+			name = "OS X";
+			path = OSX;
+			sourceTree = "<group>";
+		};
+		9C73B8C01BA8625800F5D836 /* tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				9CB408871BA8637700577F11 /* AppDelegate.swift */,
+				9C73B8C71BA8625800F5D836 /* Main.storyboard */,
+				9C1315431BA8667B001E29CC /* Images.xcassets */,
+				9C73B8CC1BA8625900F5D836 /* Info.plist */,
+			);
+			path = tvOS;
+			sourceTree = "<group>";
+		};
+		9C8180A11BDA674800FE8C68 /* Particle systems */ = {
+			isa = PBXGroup;
+			children = (
+				9C8180A21BDA674800FE8C68 /* collect.scnp */,
+				9C8180A31BDA674800FE8C68 /* confetti.png */,
+				9C8180A41BDA674800FE8C68 /* confetti.scnp */,
+				9C8180A51BDA674800FE8C68 /* glow01.png */,
+			);
+			path = "Particle systems";
+			sourceTree = "<group>";
+		};
+		9CB2D9041B67D9F000EC4C98 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9CB2D9051B67DA0200EC4C98 /* Character.swift */,
+				9CB2D9061B67DA0200EC4C98 /* GameView.swift */,
+				9CB2D9071B67DA0200EC4C98 /* GameViewController.swift */,
+				9C8B331B1BAC4E2C000BC0FB /* GameControls.swift */,
+				9CB2D9081B67DA0200EC4C98 /* SceneKitExtensions.swift */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		9CB2D91C1B67DB2E00EC4C98 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				9CB2D91D1B67DB2E00EC4C98 /* AppDelegate.swift */,
+				9CB2D9211B67DB2E00EC4C98 /* Main.storyboard */,
+				9C25F2AF1BECE9D30018B67F /* Launch Screen.storyboard */,
+				9CB2D9241B67DB2E00EC4C98 /* Images.xcassets */,
+				9CB2D9291B67DB2E00EC4C98 /* Info.plist */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		9CB2D9381B67F3EC00EC4C98 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9CB2D91B1B67DB2E00EC4C98 /* Fox (Swift).app */,
+				9C73B8BF1BA8625800F5D836 /* Fox (Swift).app */,
+				9C1515E31BAABAE200A3419A /* Fox (Swift).app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9CFCF16C1B68E61200686987 /* Game assets */ = {
+			isa = PBXGroup;
+			children = (
+				9CFCF16D1B68E61200686987 /* game.scnassets */,
+				9CFCF1721B68E61200686987 /* Overlays */,
+				9C8180A11BDA674800FE8C68 /* Particle systems */,
+			);
+			name = "Game assets";
+			path = "../Game assets";
+			sourceTree = "<group>";
+		};
+		9CFCF1721B68E61200686987 /* Overlays */ = {
+			isa = PBXGroup;
+			children = (
+				9CFCF1731B68E61200686987 /* congratulations.png */,
+				9CFCF1741B68E61200686987 /* congratulations_pandaMax.png */,
+				9CFCF1751B68E61200686987 /* dpad.png */,
+				9CFCF1761B68E61200686987 /* FlowerEmpty.png */,
+				9CFCF1771B68E61200686987 /* FlowerFull.png */,
+				9CFCF1781B68E61200686987 /* ItemsPearl.png */,
+				9CFCF1791B68E61200686987 /* MaxIcon.png */,
+			);
+			path = Overlays;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9C1515E21BAABAE200A3419A /* Fox OS X (Swift) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C1515EF1BAABAE200A3419A /* Build configuration list for PBXNativeTarget "Fox OS X (Swift)" */;
+			buildPhases = (
+				9C1515DF1BAABAE200A3419A /* Sources */,
+				9C1515E01BAABAE200A3419A /* Frameworks */,
+				9C1515E11BAABAE200A3419A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Fox OS X (Swift)";
+			productName = "Fox (Swift)";
+			productReference = 9C1515E31BAABAE200A3419A /* Fox (Swift).app */;
+			productType = "com.apple.product-type.application";
+		};
+		9C73B8BE1BA8625800F5D836 /* Fox tvOS (Swift) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C73B8CD1BA8625900F5D836 /* Build configuration list for PBXNativeTarget "Fox tvOS (Swift)" */;
+			buildPhases = (
+				9C73B8BB1BA8625800F5D836 /* Sources */,
+				9C73B8BC1BA8625800F5D836 /* Frameworks */,
+				9C73B8BD1BA8625800F5D836 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Fox tvOS (Swift)";
+			productName = "Fox tvOS (Swift)";
+			productReference = 9C73B8BF1BA8625800F5D836 /* Fox (Swift).app */;
+			productType = "com.apple.product-type.application";
+		};
+		9CB2D91A1B67DB2E00EC4C98 /* Fox iOS (Swift) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CB2D92A1B67DB2E00EC4C98 /* Build configuration list for PBXNativeTarget "Fox iOS (Swift)" */;
+			buildPhases = (
+				9CB2D9171B67DB2E00EC4C98 /* Sources */,
+				9CB2D9181B67DB2E00EC4C98 /* Frameworks */,
+				9CB2D9191B67DB2E00EC4C98 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Fox iOS (Swift)";
+			productName = "Fox iOS (Swift)";
+			productReference = 9CB2D91B1B67DB2E00EC4C98 /* Fox (Swift).app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		94CA651C1ADBF90F006293CF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = AAPL;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Apple Inc.";
+				TargetAttributes = {
+					9C1515E21BAABAE200A3419A = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					9C73B8BE1BA8625800F5D836 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					9CB2D91A1B67DB2E00EC4C98 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = 94CA651F1ADBF90F006293CF /* Build configuration list for PBXProject "Fox" */;
+			compatibilityVersion = "Xcode 6.3";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 94CA651B1ADBF90F006293CF;
+			productRefGroup = 94CA651B1ADBF90F006293CF;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9CB2D91A1B67DB2E00EC4C98 /* Fox iOS (Swift) */,
+				9C73B8BE1BA8625800F5D836 /* Fox tvOS (Swift) */,
+				9C1515E21BAABAE200A3419A /* Fox OS X (Swift) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9C1515E11BAABAE200A3419A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C1515F81BAABB8C00A3419A /* congratulations_pandaMax.png in Resources */,
+				9C8180AE1BDA674800FE8C68 /* confetti.scnp in Resources */,
+				9C1515ED1BAABAE200A3419A /* Main.storyboard in Resources */,
+				9C1515FC1BAABB8C00A3419A /* ItemsPearl.png in Resources */,
+				9C1515F91BAABB8C00A3419A /* dpad.png in Resources */,
+				9C1515FB1BAABB8C00A3419A /* FlowerFull.png in Resources */,
+				9C1515FA1BAABB8C00A3419A /* FlowerEmpty.png in Resources */,
+				9C1515F51BAABB8300A3419A /* Images.xcassets in Resources */,
+				9C1515F61BAABB8800A3419A /* game.scnassets in Resources */,
+				9C8180B11BDA674800FE8C68 /* glow01.png in Resources */,
+				9C8180A81BDA674800FE8C68 /* collect.scnp in Resources */,
+				9C1515F71BAABB8C00A3419A /* congratulations.png in Resources */,
+				9C1515FD1BAABB8C00A3419A /* MaxIcon.png in Resources */,
+				9C8180AB1BDA674800FE8C68 /* confetti.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C73B8BD1BA8625800F5D836 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C1315471BA86694001E29CC /* congratulations_pandaMax.png in Resources */,
+				9C8180AD1BDA674800FE8C68 /* confetti.scnp in Resources */,
+				9C73B8C91BA8625800F5D836 /* Main.storyboard in Resources */,
+				9C13154B1BA86694001E29CC /* ItemsPearl.png in Resources */,
+				9C1315481BA86694001E29CC /* dpad.png in Resources */,
+				9C13154A1BA86694001E29CC /* FlowerFull.png in Resources */,
+				9C1315491BA86694001E29CC /* FlowerEmpty.png in Resources */,
+				9C1315441BA8667B001E29CC /* Images.xcassets in Resources */,
+				9C1315451BA8668F001E29CC /* game.scnassets in Resources */,
+				9C8180B01BDA674800FE8C68 /* glow01.png in Resources */,
+				9C8180A71BDA674800FE8C68 /* collect.scnp in Resources */,
+				9C1315461BA86694001E29CC /* congratulations.png in Resources */,
+				9C13154C1BA86694001E29CC /* MaxIcon.png in Resources */,
+				9C8180AA1BDA674800FE8C68 /* confetti.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CB2D9191B67DB2E00EC4C98 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CFCF17A1B68E61200686987 /* game.scnassets in Resources */,
+				9C8180AC1BDA674800FE8C68 /* confetti.scnp in Resources */,
+				9CE71E571BA8948B00B93270 /* Main.storyboard in Resources */,
+				9C25F2B01BECE9D30018B67F /* Launch Screen.storyboard in Resources */,
+				9CFCF18E1B68E61200686987 /* ItemsPearl.png in Resources */,
+				9CFCF1861B68E61200686987 /* congratulations_pandaMax.png in Resources */,
+				9CFCF1881B68E61200686987 /* dpad.png in Resources */,
+				9CB2D9251B67DB2E00EC4C98 /* Images.xcassets in Resources */,
+				9CFCF18A1B68E61200686987 /* FlowerEmpty.png in Resources */,
+				9CFCF1841B68E61200686987 /* congratulations.png in Resources */,
+				9C8180AF1BDA674800FE8C68 /* glow01.png in Resources */,
+				9C8180A61BDA674800FE8C68 /* collect.scnp in Resources */,
+				9CFCF1901B68E61200686987 /* MaxIcon.png in Resources */,
+				9CFCF18C1B68E61200686987 /* FlowerFull.png in Resources */,
+				9C8180A91BDA674800FE8C68 /* confetti.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9C1515DF1BAABAE200A3419A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C1515F31BAABB7700A3419A /* AppDelegate.swift in Sources */,
+				9C5EC6331BAAC15400BF4D1F /* Character.swift in Sources */,
+				9C5EC6361BAAC15400BF4D1F /* SceneKitExtensions.swift in Sources */,
+				9C5EC6351BAAC15400BF4D1F /* GameViewController.swift in Sources */,
+				9C5EC6341BAAC15400BF4D1F /* GameView.swift in Sources */,
+				9C8B331E1BAC4E2C000BC0FB /* GameControls.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C73B8BB1BA8625800F5D836 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CB408881BA8637700577F11 /* AppDelegate.swift in Sources */,
+				9C13154D1BA8669C001E29CC /* Character.swift in Sources */,
+				9C1315501BA8669C001E29CC /* SceneKitExtensions.swift in Sources */,
+				9C13154F1BA8669C001E29CC /* GameViewController.swift in Sources */,
+				9C13154E1BA8669C001E29CC /* GameView.swift in Sources */,
+				9C8B331D1BAC4E2C000BC0FB /* GameControls.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CB2D9171B67DB2E00EC4C98 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CFCF1951B69005D00686987 /* GameView.swift in Sources */,
+				9CFCF1961B69005D00686987 /* GameViewController.swift in Sources */,
+				9CFCF1941B69005D00686987 /* Character.swift in Sources */,
+				9CB2D91E1B67DB2E00EC4C98 /* AppDelegate.swift in Sources */,
+				9CFCF1971B69005D00686987 /* SceneKitExtensions.swift in Sources */,
+				9C8B331C1BAC4E2C000BC0FB /* GameControls.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9C1515EB1BAABAE200A3419A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C1515EC1BAABAE200A3419A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9C73B8C71BA8625800F5D836 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C73B8C81BA8625800F5D836 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9CB2D9211B67DB2E00EC4C98 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9CB2D9221B67DB2E00EC4C98 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		94CA65461ADBF90F006293CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				TOOLCHAINS = default;
+			};
+			name = Debug;
+		};
+		94CA65471ADBF90F006293CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				TOOLCHAINS = default;
+			};
+			name = Release;
+		};
+		9C1515F01BAABAE200A3419A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = OSX/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.fox.swift";
+				PRODUCT_MODULE_NAME = AAPLFoxSwift;
+				PRODUCT_NAME = "Fox (Swift)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		9C1515F11BAABAE200A3419A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = OSX/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.fox.swift";
+				PRODUCT_MODULE_NAME = AAPLFoxSwift;
+				PRODUCT_NAME = "Fox (Swift)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		9C73B8CE1BA8625900F5D836 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = tvOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.fox.swift";
+				PRODUCT_MODULE_NAME = AAPLFoxSwift;
+				PRODUCT_NAME = "Fox (Swift)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		9C73B8CF1BA8625900F5D836 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = tvOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.fox.swift";
+				PRODUCT_MODULE_NAME = AAPLFoxSwift;
+				PRODUCT_NAME = "Fox (Swift)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
+		9CB2D92B1B67DB2E00EC4C98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.fox.swift";
+				PRODUCT_MODULE_NAME = AAPLFoxSwift;
+				PRODUCT_NAME = "Fox (Swift)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9CB2D92C1B67DB2E00EC4C98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.fox.swift";
+				PRODUCT_MODULE_NAME = AAPLFoxSwift;
+				PRODUCT_NAME = "Fox (Swift)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		94CA651F1ADBF90F006293CF /* Build configuration list for PBXProject "Fox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94CA65461ADBF90F006293CF /* Debug */,
+				94CA65471ADBF90F006293CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C1515EF1BAABAE200A3419A /* Build configuration list for PBXNativeTarget "Fox OS X (Swift)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C1515F01BAABAE200A3419A /* Debug */,
+				9C1515F11BAABAE200A3419A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C73B8CD1BA8625900F5D836 /* Build configuration list for PBXNativeTarget "Fox tvOS (Swift)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C73B8CE1BA8625900F5D836 /* Debug */,
+				9C73B8CF1BA8625900F5D836 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9CB2D92A1B67DB2E00EC4C98 /* Build configuration list for PBXNativeTarget "Fox iOS (Swift)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CB2D92B1B67DB2E00EC4C98 /* Debug */,
+				9CB2D92C1B67DB2E00EC4C98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 94CA651C1ADBF90F006293CF /* Project object */;
+}

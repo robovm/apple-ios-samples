@@ -1,5 +1,5 @@
 /*
-Copyright (C) 2015 Apple Inc. All Rights Reserved.
+Copyright (C) 2016 Apple Inc. All Rights Reserved.
 See LICENSE.txt for this sample’s licensing information
 
 Abstract:
@@ -19,13 +19,11 @@ CKCatalog.init = function() {
         // Change this to a container identifier you own.
         containerIdentifier: 'com.example.apple-samplecode.cloudkit-catalog',
 
-        // And generate an API token through CloudKit Dashboard.
-        apiToken: '<insert your token here>',
+        apiTokenAuth: {
+          // And generate a web token through CloudKit Dashboard.
+          apiToken: '<insert your token here>',
 
-        auth: {
-          // Set a cookie when running on http(s) and a hostname that is either localhost or
-          // has at least one subdomain.
-          persist: true
+          persist: true // Sets a cookie.
         },
 
         environment: 'development'

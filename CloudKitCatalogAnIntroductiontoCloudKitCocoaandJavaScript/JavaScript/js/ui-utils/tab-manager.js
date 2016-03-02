@@ -1,5 +1,5 @@
 /*
-Copyright (C) 2015 Apple Inc. All Rights Reserved.
+Copyright (C) 2016 Apple Inc. All Rights Reserved.
 See LICENSE.txt for this sample’s licensing information
 
 Abstract:
@@ -16,13 +16,64 @@ CKCatalog.tabManager = (function() {
   var scrollView = page.parentNode;
   var menuItems = document.querySelectorAll('.menu-item');
   var runButton = document.getElementById('run-button');
-  var defaultRoute = 'readme';
+  var expandButton = document.getElementById('expand-left-column');
+  var contractButton = document.getElementById('contract-left-column');
+  var leftPane = document.getElementById('left-pane');
 
-  var subTabs;
   var subTabMenuItems;
-  var selectedTab;
+  var selectedTabName;
   var selectedSubTabIndex = 0;
   var subTabMenus = {};
+  var tabs = {};
+
+  var defaultRoute = ['readme'];
+
+  leftPane.addEventListener('transitionend', function() {
+    if(leftPane.classList.contains('expanded')) {
+      contractButton.classList.remove('hide');
+      leftPane.style.overflow = 'visible';
+    } else {
+      expandButton.classList.remove('hide');
+    }
+  });
+
+  var expandLeftPane = function() {
+    leftPane.classList.add('expanded');
+    expandButton.classList.add('hide');
+  };
+
+  var contractLeftPane = function() {
+    leftPane.classList.remove('expanded');
+    contractButton.classList.add('hide');
+    leftPane.style.overflow = 'hidden';
+    for(var i=0; i < menuItems.length; i++) {
+      menuItems[i].parentNode.classList.remove('expanded');
+    }
+  };
+
+  window.addEventListener('resize',function(){
+    if(window.outerWidth < 1140) {
+      contractLeftPane();
+    }
+  });
+
+  expandButton.onclick = expandLeftPane;
+  contractButton.onclick = contractLeftPane;
+
+  leftPane.addEventListener('click',function(e){
+    var node = e.target;
+    if(!e.target.classList.contains('caret') && !e.target.classList.contains('tab-menu-item')) {
+      node = e.target.parentNode.parentNode;
+    }
+    if(node.classList.contains('caret')) {
+      node.classList.toggle('expanded');
+      e.preventDefault();
+      if(leftPane.offsetWidth < 50) {
+        expandLeftPane();
+      }
+    }
+
+  });
 
   var codeHighlightingIsInitialized = false;
 
@@ -48,7 +99,8 @@ CKCatalog.tabManager = (function() {
       ));
       return;
     }
-    if(selectedTab) {
+    if(selectedTabName) {
+      var selectedTab = CKCatalog.tabs[selectedTabName];
       var subTab = selectedTab[selectedSubTabIndex];
       CKCatalog.dialog.show('Executing…');
       var run = subTab.run ? subTab.run : subTab.sampleCode;
@@ -147,34 +199,27 @@ CKCatalog.tabManager = (function() {
     return el;
   };
 
-  var createSubTabMenu = function() {
+  var createSubTabMenu = function(tabName) {
     var menu = document.createElement('div');
-    menu.className = 'tab-menu';
+    menu.className = 'tab-menu ';
+    menu.setAttribute('data-tab',tabName);
     return menu;
   };
 
   var createSubTabMenuItem = function(name,index) {
     var item = document.createElement('div');
-    item.className = 'tab-menu-item' + (index === selectedSubTabIndex ? ' selected': '');
+    item.className = 'tab-menu-item';
+    item.setAttribute('data-subtab',index);
     item.textContent = name;
     item.onclick = function() {
-      selectedSubTabIndex = index;
-      subTabMenuItems.forEach(function(menuItem,i) {
-        if(index === i) {
-          menuItem.classList.add('selected');
-        } else {
-          menuItem.classList.remove('selected');
-        }
-      });
-      subTabs.forEach(function(tagSegment,i) {
-        if(index === i) {
-          tagSegment.classList.add('selected');
-        } else {
-          tagSegment.classList.remove('selected');
-        }
-      });
+      var currentTabName = getRoute();
+      var targetTabName = item.parentNode.getAttribute('data-tab');
+      if(currentTabName !== targetTabName) {
+        window.location.hash = targetTabName + '/' + item.getAttribute('data-subtab');
+      }
       // Scroll to top.
       scrollView.scrollTop = 0;
+
     };
     return item;
   };
@@ -184,7 +229,7 @@ CKCatalog.tabManager = (function() {
     if(CKCatalog.tabs.hasOwnProperty(tabName)) {
       if(CKCatalog.tabs[tabName].length > 1) {
         var subMenuContainer = document.querySelector('.left-pane .menu-items .menu-item-container.' + tabName);
-        var subTabMenu = createSubTabMenu();
+        var subTabMenu = createSubTabMenu(tabName);
         subTabMenus[tabName] = [];
         CKCatalog.tabs[tabName].forEach(function(subTab,index) {
           subTabMenus[tabName].push(subTabMenu.appendChild(createSubTabMenuItem(subTab.title,index)));
@@ -198,50 +243,87 @@ CKCatalog.tabManager = (function() {
   var getRoute = function() {
     var hash = window.location.hash;
     if(!hash || hash[0] !== '#') return defaultRoute;
-    return hash.substr(1) || defaultRoute;
+    return hash.substr(1).split('/') || defaultRoute;
   };
 
   var selectTab = function() {
-    var tabName = getRoute();
-    var tab = CKCatalog.tabs[tabName];
-    if(!tab) {
-      tabName = 'not-found';
-      tab = CKCatalog.tabs[tabName];
-    }
-    for(var i=0; i<menuItems.length; i++) {
-      var menuItem = menuItems[i];
-      if(menuItem.attributes.href.value === '#' + tabName) {
-        menuItem.parentNode.classList.add('selected');
-      } else {
-        menuItem.parentNode.classList.remove('selected');
+    var route = getRoute();
+    var tabName = route[0];
+    var subTabIndex = parseInt(route[1]) || 0;
+    if(tabName !== selectedTabName) {
+      var tab = CKCatalog.tabs[tabName];
+      if (!tab) {
+        tabName = 'not-found';
+        tab = CKCatalog.tabs[tabName];
       }
-    }
-    // Scroll to top.
-    scrollView.scrollTop = 0;
+      for (var i = 0; i < menuItems.length; i++) {
+        var menuItem = menuItems[i];
+        if (menuItem.attributes.href.value === '#' + tabName) {
+          menuItem.parentNode.classList.add('selected');
+        } else {
+          menuItem.parentNode.classList.remove('selected');
+        }
+      }
 
-    var pageSegments = document.createElement('div');
-    pageSegments.className = 'page-segments';
-    subTabs = [];
-    subTabMenuItems = subTabMenus[tabName];
-    selectedSubTabIndex = 0;
-    selectedTab = tab;
-    var descriptions = document.getElementById(tabName);
-    tab.forEach(function(tabSegment,index) {
-      if(!tabSegment.description) {
-        tabSegment.description = descriptions.firstElementChild;
+      subTabMenuItems = subTabMenus[tabName];
+
+      if(!tabs.hasOwnProperty(tabName)) {
+
+        tabs[tabName] = document.createElement('div');
+
+        var pageSegments = tabs[tabName];
+        pageSegments.className = 'page-segments';
+        var descriptions = document.getElementById(tabName);
+        tab.forEach(function (tabSegment, index) {
+          if (!tabSegment.description) {
+            tabSegment.description = descriptions.firstElementChild;
+          }
+          pageSegments.appendChild(createSampleCodeSegment(tabSegment, index === selectedSubTabIndex));
+        });
+
+        page.replaceChild(pageSegments, page.firstElementChild);
+        highlightCode();
+
+      } else {
+        page.replaceChild(tabs[tabName], page.firstElementChild);
+      }
+
+
+
+      selectedTabName = tabName;
+    }
+
+    if(subTabIndex >= tabs[tabName].childElementCount || subTabIndex < 0) {
+      subTabIndex = 0;
+    }
+
+    var subTabs = tabs[tabName].childNodes;
+
+    for(var index=0; index<subTabs.length; index++) {
+      if (index === subTabIndex) {
+        subTabs[index].classList.add('selected');
+      } else {
+        subTabs[index].classList.remove('selected');
       }
       if(subTabMenuItems) {
-        if(index === selectedSubTabIndex) {
-          subTabMenuItems[index].classList.add('selected');
+        var subTabMenuItem = subTabMenuItems[index];
+        if (index === subTabIndex) {
+          subTabMenuItem.classList.add('selected');
         } else {
-          subTabMenuItems[index].classList.remove('selected');
+          subTabMenuItem.classList.remove('selected');
 
         }
       }
-      subTabs.push(pageSegments.appendChild(createSampleCodeSegment(tabSegment,index === selectedSubTabIndex)));
-    });
-    page.replaceChild(pageSegments,page.firstElementChild);
-    highlightCode();
+    }
+
+    selectedSubTabIndex = subTabIndex;
+
+    if(leftPane.classList.contains('expanded')) {
+      setTimeout(contractLeftPane,300);
+    }
+
+    // Scroll to top.
+    scrollView.scrollTop = 0;
   };
 
   // Set up URL routing.
